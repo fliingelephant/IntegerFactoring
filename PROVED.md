@@ -1422,3 +1422,98 @@ Bertrand's postulate supplies infinitely many prime pairs \(p<q<2p\). Along this
 **Scope.** P22 kills the premise that exponentiation by \(N\) preserves a freely sampled principal input digit, and it rules out inverse-polynomial success for direct gcds of any fixed polynomial-size collection of canonical high digits from a uniform base on an infinite balanced family. It exactly characterizes the displayed consecutive and additive carriers. It does not cover deliberately engineered or adaptive nonuniform bases, cross-base combinations, other uses of the output digits, or all constructions over \(\mathbb Z/N^2\mathbb Z\); it is neither a hardness theorem nor a factoring algorithm.
 
 The candidate analysis, hostile audit, and proof-blind reconstruction are preserved under `experiments/F13_teichmuller_lift_kill`, `experiments/F13_teichmuller_lift_audit`, and `experiments/F13_teichmuller_lift_reconstruct`.
+
+## P23 — small affine bases still require exponential faithful permutation degree
+
+**Status:** promoted.
+
+**Verification record:** the corrected prime-cycle, normal-subgroup, minimum-degree, base-size, and vector-stabilizer claims passed a focused hostile audit and a proof-blind end-to-end reconstruction. No cross-family audit has run.
+
+For a nontrivial finite group \(G\), let \(\mu(G)\) be its minimum faithful permutation degree.
+
+**Prime-order and cyclic obstructions.** If \(G\) contains an element of prime order \(p\), every faithful permutation action has degree at least \(p\): the image of that element must contain a \(p\)-cycle. If a diagonal family of actions is faithful, at least one component sees that element and therefore has degree at least \(p\).
+
+More generally, if
+
+\[
+r=\prod_i\ell_i^{e_i}\ge2,
+\]
+
+then
+
+\[
+\mu(C_r)=\sum_i\ell_i^{e_i}.
+\]
+
+Disjoint cycles of the displayed prime-power lengths give the upper bound. For the lower bound, the cycle lengths in a faithful action must have least common multiple \(r\). Assign each maximal prime power \(\ell_i^{e_i}\) to a cycle whose length it divides. The prime powers assigned to one cycle are pairwise coprime, their product divides that cycle length, and their product is at least their sum. Summing over cycles proves the formula.
+
+**Local affine group.** Let
+
+\[
+G_p=\operatorname{AGL}_1(\mathbb F_p)
+=T_p\rtimes\mathbb F_p^\times,
+\qquad T_p\cong C_p.
+\]
+
+The translation subgroup and the prime-cycle bound give \(\mu(G_p)\ge p\), while the natural action on \(\mathbb F_p\) is faithful, so
+
+\[
+\mu(G_p)=p.
+\]
+
+That natural action has base size 2 for \(p>2\): fixing 0 and 1 fixes an affine map. At \(p=2\), its base size is 1 because \(G_2\cong C_2\) acts regularly. Thus constant base size and permutation degree are different invariants.
+
+Every nontrivial normal subgroup of \(G_p\) contains \(T_p\). Indeed, a nonidentity translation generates \(T_p\); if a normal subgroup instead contains \(g=(a,b)\) with \(a\ne1\), then its commutator with translation by \(c\ne0\) is translation by \((a-1)c\), again generating \(T_p\). Consequently every nonfaithful local action kills every translation. A faithful diagonal family of \(G_p\)-actions must therefore contain an individually faithful component of degree at least \(p\). This last conclusion is special to \(G_p\), not to arbitrary groups or CRT products.
+
+**Exact degree over composite rings.** For every \(N\ge2\) with prime-power decomposition
+
+\[
+N=\prod_i\ell_i^{e_i},
+\]
+
+one has the abstract group identity
+
+\[
+\boxed{
+\mu\!\left(\operatorname{AGL}_1(\mathbb Z/N\mathbb Z)\right)
+=\sum_i\ell_i^{e_i}.}
+\]
+
+The translation by 1 has order \(N\), so restriction to its cyclic subgroup and the cyclic theorem give the lower bound. CRT identifies the affine group with the product of its prime-power local affine groups; their faithful natural actions on disjoint sets of sizes \(\ell_i^{e_i}\) give the upper bound. This upper construction uses the prime-power factorization and is not a factor-free algorithm. Its existence also does not show that every minimum-degree presentation exposes the factors.
+
+For a distinct semiprime \(N=pq\), the minimum degree is \(p+q\). On balanced inputs it is \(2^{\Theta(\log N)}\). The natural degree-\(N\) action has base \((0,1)\); the factor-aware disjoint local action has base size 4 for odd \(p,q\), and 3 for \(N=2q\). Ordinary explicit-permutation Schreier–Sims or Luks-style orbit work is polynomial in this degree, and even reading a generator costs linear time in it. A constant-size base therefore does not make that explicit workflow polynomial in the input bit length.
+
+**Succinct action boundary.** Affine maps still have the factor-free two-dimensional representation
+
+\[
+(a,b)\longmapsto
+\begin{pmatrix}a&b\\0&1\end{pmatrix}.
+\]
+
+The affine point \(x\) is the homogeneous vector \((x,1)^T\); the zero vector is fixed by the whole matrix group. Separately, for a unit \(a\pmod N\), put
+
+\[
+M_a=\operatorname{diag}(a,1),
+\qquad e_1=(1,0)^T.
+\]
+
+Literal vector equality gives
+
+\[
+M_a^ke_1=e_1
+\quad\Longleftrightarrow\quad
+a^k=1\pmod N,
+\]
+
+so
+
+\[
+\operatorname{Stab}_{\mathbb Z}(e_1)
+=\operatorname{ord}_N(a)\mathbb Z.
+\]
+
+Computing the least positive stabilizing exponent in this formulation is exactly modular order finding. This is a vector statement; projectivizing \(e_1\) changes the stabilizer.
+
+**Scope.** P23 closes only the inference that a small affine base yields a polynomial-size ordinary explicit-permutation stabilizer chain. It does not rule out a factor-sufficient quotient that discards translations, succinct/circuit actions, new matrix or module stabilizer algorithms, resampling arguments, or nonabelian lifts with a different mechanism. The displayed matrix formulation remains succinct but has not removed the order-finding dependency.
+
+The candidate proof, hostile audit, and proof-blind reconstruction are preserved under `experiments/F16_affine_stabilizer_kill`, `experiments/F16_affine_stabilizer_audit`, and `experiments/F16_affine_stabilizer_reconstruct`.

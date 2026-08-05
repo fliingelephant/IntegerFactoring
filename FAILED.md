@@ -576,3 +576,33 @@ K\left(\frac2{q-1}+\frac1{p-1}\right)
 Bertrand supplies an infinite balanced family, so polynomial \(K\) in the input length gives exponentially small success. The hostile audit corrected the twin theorem to require \(p>3\) and independently reproduced the formulas and fibre bound. The proof-blind reconstruction recovered the corrected structure, the exceptional twin, the exact carrier formulas, and the nonadaptive uniformity scope. The promoted theorem is P22.
 
 **What would make a retry materially new.** A component-selective construction using engineered or adaptive nonuniform bases, cross-base relations, or a different \(N^2\)-adic operation with a proved inverse-polynomial success probability. Merely resampling uniform principal digits, taking more fixed iterates, or dividing a consecutive full-gcd difference by \(N\) is not new.
+
+## X17 — ordinary affine stabilizer chains on a small base
+
+**Status:** promoted as P23 after hostile audit and proof-blind reconstruction.
+
+**Family:** F13.
+
+**Classification:** method failure for converting the natural affine/nonabelian lift into an ordinary explicit-permutation Schreier–Sims or Luks computation merely because the action has a constant-size base. This does not close quotient certificates, succinct/circuit actions, direct matrix algorithms, or other nonabelian lifts.
+
+**Closest prior route and material difference.** F07/P12 studies dense spectral and moment representations of modular multiplication. X17 instead embeds the period in an affine action and tests explicit faithful permutation degree and stabilizer-chain orbit size.
+
+**Exact obstruction.** Although \(\operatorname{AGL}_1(\mathbb F_p)\) has natural base size 2 for \(p>2\) and 1 for \(p=2\), its minimum faithful permutation degree is \(p\). Every nontrivial normal subgroup contains the translation \(C_p\), so every nonfaithful local action kills all translations and a faithful diagonal local family must contain a faithful degree-\(p\) component. For arbitrary \(N=\prod\ell^e\),
+
+\[
+\mu\!\left(\operatorname{AGL}_1(\mathbb Z/N\mathbb Z)\right)
+=\sum_{\ell^e\parallel N}\ell^e.
+\]
+
+In particular, the exact degree for a distinct semiprime is \(p+q\), exponential in the bit length on balanced inputs. The matching disjoint CRT action is factor-aware and proves no factor-free construction. The hostile audit corrected the \(p=2\) base sizes and homogeneous-vector conventions; the proof-blind reconstruction independently recovered the prime-power theorem, local normal-subgroup lemma, exact edge cases, and explicit-action scope.
+
+The succinct \(2\times2\) affine representation is not excluded. Its most direct cyclic vector test has
+
+\[
+\operatorname{Stab}_{\mathbb Z}((1,0)^T)
+=\operatorname{ord}_N(a)\mathbb Z
+\]
+
+under \(\operatorname{diag}(a,1)\), so asking for the least positive stabilizer is exactly order finding, not a new stabilizer algorithm.
+
+**What would make a retry materially new.** A factor-sufficient quotient whose kernel may discard translations, a proved algorithm polynomial in a succinct action description rather than its expanded degree, or a factor-free matrix/module stabilizer whose computation is not merely modular order finding. Reusing an ordinary explicit permutation chain under the label "small base" is not new.

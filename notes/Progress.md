@@ -282,3 +282,20 @@ For canonical high digits \(H_r\), every odd balanced pair \(p<q<2p\), uniform u
 \]
 
 Thus \(K=\operatorname{poly}(\log N)\) has exponentially small success on the infinite balanced family supplied by Bertrand. Adaptive/engineered nonuniform bases, cross-base constructions, and other \(N^2\)-adic observables remain open.
+
+### C20 — a small affine base does not give a small explicit action
+
+**Status:** promoted as P23 after hostile audit and proof-blind reconstruction.
+
+**Closest prior route and material difference.** F07/P12 blocks natural dense order-spectrum reconstructions. C20 instead tests the B7 affine/nonabelian lift through faithful permutation degree and ordinary stabilizer chains.
+
+**Verified theorem.** For \(N=\prod\ell^e\ge2\),
+
+\[
+\mu\!\left(\operatorname{AGL}_1(\mathbb Z/N\mathbb Z)\right)
+=\sum_{\ell^e\parallel N}\ell^e.
+\]
+
+The cyclic translation gives the lower bound, and factor-aware disjoint CRT actions give the upper bound. Thus a balanced semiprime needs explicit degree \(p+q=2^{\Theta(\log N)}\), even though the natural local affine action has base size 2 for odd primes. Ordinary explicit-permutation stabilizer chains remain exponential-size in the input bit length.
+
+The \(2\times2\) matrix action remains succinct. For \(M_a=\operatorname{diag}(a,1)\), however, the literal-vector stabilizer of \((1,0)^T\) is exactly \(\operatorname{ord}_N(a)\mathbb Z\). A materially new retry needs a factor-sufficient quotient, a justified succinct-action algorithm, or a different matrix/module stabilizer; none is ruled out by the degree theorem.
