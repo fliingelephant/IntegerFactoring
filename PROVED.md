@@ -1876,3 +1876,90 @@ If \(\lambda(G)=2^am\) with \(m\) odd, \(X^{\lambda(G)/2}\) is uniform on \(T\) 
 For a supplied split prime \(\ell\nmid\Delta\), the congruence \(b^2\equiv\Delta\pmod{4\ell}\) has four literal roots modulo \(4\ell\), two classes modulo \(2\ell\), and the two signs give inverse form classes. Constructing and reducing those forms is polynomial in \(\log|\Delta|+\log\ell\), but choosing signs or auxiliary primes does not yield exact-uniform class samples without a separate distribution theorem.
 
 The candidate, corrected hostile audit and retained finite checks, and proof-blind reconstruction are preserved under `experiments/F17_classgroup_ambiguity_kill`, `experiments/F17_classgroup_ambiguity_audit`, and `experiments/F17_classgroup_ambiguity_reconstruct`.
+
+## P28 — the Lipschitz Hurwitz slice is orientation-uniform, while a single unit orbit has an exact stabilizer criterion
+
+**Status:** promoted.
+
+**Verification record:** the two-handed unit-orbit count, projective-fibre theorem, exact rejection sampler including zero last coordinate, random-bit and bit-complexity bounds, memoryless and transcript-dependent finite-menu bounds, actual-unit quotient and handedness, characteristic-(3) faithfulness, Euclidean-gcd cost, and the (N=15,39) certificates passed a corrected hostile audit and a proof-blind end-to-end reconstruction. No cross-family audit has run.
+
+Let
+
+\[
+\mathcal H=\mathbb Z^4\sqcup(\mathbb Z+\tfrac12)^4
+\]
+
+be the Hurwitz order, let (N=pq) for distinct odd primes, and let
+
+\[
+L_N=\{a+bi+cj+dk\in\mathbb Z^4:a^2+b^2+c^2+d^2=N\}.
+\]
+
+**A strict coordinate slice does not bias either projective quotient.** Every left- and every right-unit orbit of odd norm contains exactly eight elements of (L_N). If an orbit contains an integral element, precisely the eight Lipschitz units preserve integrality. If it contains an all-half-integral element, a signed-sum parity argument shows that exactly eight half units send it into the integral coset. Consequently
+
+\[
+|L_N|=8(p+1)(q+1),
+\]
+
+and a uniform element of (L_N) has independent uniform row lines in
+(mathbf P^1(mathbb F_p)\timesmathbf P^1(mathbb F_q)); separately, its image lines have the same law. This does not assert independence between the row and image of one element. Thus iid samples have the same one-sided-gcd law as P25, and (K) all-pairs tests have proper-right-gcd probability at most
+
+\[
+{K\choose2}\frac{p+q}{(p+1)(q+1)}.
+\]
+
+**The direct exact sampler is exponentially slow in input length.** Put (B=\lfloor\sqrt N\rfloor) and (M=2B+1). Draw (a,b,c\) uniformly from ([-B,B]), square-test (N-a^2-b^2-c^2), and choose one of the two signs of the fourth coordinate; when that coordinate is zero, accept on only one value of the sign bit. Every element of (L_N) is emitted per outer trial with probability (1/(2M^3)). Hence the expected number of trials is
+
+\[
+\frac{M^3}{4(p+1)(q+1)}=\Theta(\sqrt N)
+\]
+
+on balanced semiprimes. Exact interval draws use (Theta(\sqrt N\log N)) expected random bits in total, and the expected bit cost is
+(sqrt N\operatorname{polylog}N). The sampler terminates almost surely but is not polynomial in (log N).
+
+**Polynomial fixed transform menus do not repair the distribution.** Suppose a menu (mathcal T) of (C) transforms sends, at each local prime, the input row or image line through a fixed projective bijection. This includes the unit/conjugation maps used in the candidate. A memoryless sample-dependent selector has every output-line atom at most (C/(r+1)), and two independently selected outputs collide with probability at most
+
+\[
+\min\!\left(1,\frac C{r+1}\right).
+\]
+
+Even if a joint or stateful selector inspects all (K) iid raw samples before choosing their transforms, one specified selected pair collides locally with probability at most
+
+\[
+\min\!\left(1,\frac{C^2}{r+1}\right).
+\]
+
+A union bound over pairs and (r=p,q) is exponentially small on balanced inputs for (C,K=\operatorname{poly}(\log N)). This theorem does not cover a transform that combines samples, an exponential menu, or an unrestricted nonlinear construction.
+
+**One right-unit orbit has a constant-success criterion.** Fix a norm-(N) element (alpha\in\mathcal H). Draw actual units (U_1,U_2) independently and uniformly from the 24 Hurwitz units, set (Y_i=\alpha U_i), and write
+
+\[
+G=\mathcal H^\times/\{\pm1\}\simeq A_4,
+\qquad
+H_r(\alpha)=\operatorname{Stab}_G(R_r(\alpha)).
+\]
+
+The relative projective unit is uniform on the 12 elements of (G), so row equality at (r) is membership in (H_r(\alpha)). Therefore
+
+\[
+\Pr\!\left(1<\operatorname{nrd}\operatorname{gcrd}_R(Y_1,Y_2)<N\right)
+=\frac{|H_p(\alpha)\triangle H_q(\alpha)|}{12}.
+\]
+
+The projective (A_4)-action is faithful for every odd prime, including (3), and at most 22 projective lines have nontrivial stabilizer; this bounded-exception statement does not promise a trivial-stabilizer line in small characteristic. If (H_p(\alpha)\ne H_q(\alpha)), repetition gives a conditional Las Vegas splitter with at most 12 unit pairs in expectation. Hurwitz nearest-lattice Euclidean division contracts the norm by a constant factor, so the one-sided gcd and its reduced norm cost (operatorname{poly}(\log N)) bits. On success that norm itself is (p) or (q); an integer gcd is optional verification, not the source of the separation.
+
+The condition is not pointwise. For
+
+\[
+N=15,\qquad \alpha=1+i+2j+3k,
+\]
+
+the stabilizers have symmetric difference of size (3), giving success (1/4). For
+
+\[
+N=39,\qquad \alpha=1+i+j+6k,
+\]
+
+they are the same order-(3) subgroup, giving success (0). No factor-free expected-polynomial method is known for finding a mismatch-stratum (alpha) with inverse-polynomial probability. Thus the exact conditional extractor is not a top-level factoring algorithm.
+
+The candidate, corrected hostile audit and complete finite scan, and proof-blind reconstruction are preserved under `experiments/F15_hurwitz_bias_kill`, `experiments/F15_hurwitz_bias_audit`, and `experiments/F15_hurwitz_bias_reconstruct`.
