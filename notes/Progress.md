@@ -371,3 +371,13 @@ This gives conditional expected-polynomial direct prime extraction whenever the 
 lies in \(M_2(\Gamma_0(2))\). For distinct odd \(N=pq\), its arithmetic Hecke coefficient is \(b_N=N+p+q+1\). Exact \(b_N\), \(24b_N\) modulo a caller-supplied \(O(\log N)\)-bit modulus, or a known additive polynomial approximation therefore recovers \(p+q\) and factors by the integer discriminant in deterministic polynomial bit complexity. Conversely, the factors compute every such output.
 
 **Verification result and remaining gap.** The hostile audit checked modularity at both cusps, normalization, decoding inequalities, promise scope, and bit lengths; the proof-blind reconstruction independently recovered the complete proof. The result constructs no evaluator and is false as stated for repeated or even semiprimes. Coarse or fixed-small-modulus data, cusp forms, twists, other levels and weights, Brandt or modular-symbol invariants, and any genuinely different metric information remain open.
+
+### C27 — an unconditional four-square finder remains diffuse in both matched hands
+
+**Status:** promoted as P30 after hostile audit and proof-blind reconstruction.
+
+**Closest prior route and material difference.** P25 assumes exact-uniform full-shell samples and P28 studies the Lipschitz slice. C27 analyzes the actual unconditional Pollack--Treviño finder. Its outputs are not asserted to be shell-uniform; instead, the accepted residual conic maps exactly and bijectively to the supported projective row and image lines.
+
+**Verified boundary.** Conditional on the residual and fresh completion data, both local lines are uniform on \(\mathcal S_r=\{[u:v]:u^2+v^2\ne0\}\), of size \(r-(-1/r)\). A left-normalized gcrd inherits the row, and a separately computed right-normalized gcld inherits the image. Polynomially many matched-handed pair tests, all fixed unit translates, and the matched within-output stabilizer test therefore have exponentially small success on an infinite balanced family. The exact auxiliary modulus \(M=nP/\gcd(n,P)\), primitivity argument, rejection distribution, and expected bit/random-bit complexity all survive audit and blind reconstruction.
+
+**Verification result and remaining gap.** The theorem deliberately does not identify the image of a gcrd output or the row of a gcld output. Mixed-handed tests, nonlinear combinations of multiple samples, fibre-point-dependent completions, even or repeated-prime norms, and non-collision invariants remain open. This is also the precise place to test whether “many lucky relations” means only a union of rare events, already blocked, or a genuinely joint decoder that accumulates partial constraints.

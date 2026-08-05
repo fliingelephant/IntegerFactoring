@@ -777,3 +777,34 @@ Exact \(b_N\) reveals \(p+q\). So does \(24b_N\bmod 24\cdot2^n\), where \(n=\lce
 The promise is essential: \(b_9=13\) and \(b_6=4\) do not obey the distinct-prime trace formula. The theorem packages the familiar divisor sum in an Eisenstein series; it supplies no factor-free evaluator and no lower bound.
 
 **What would make a retry materially new.** A fixed-small-modulus or coarse-relative interface, a cusp form or nontrivial twist, another level or weight, low-index Hecke data, Brandt or modular-symbol data, or any automorphic observable with a proved polynomial evaluator and an information path not already equal to \(\sigma_1\). Re-presenting the exact divisor sum as a metric or spectral oracle is covered by P29.
+
+## X24 — matched-handed collisions from a residual-only four-square finder
+
+**Status:** promoted as P30 after hostile audit and proof-blind reconstruction.
+
+**Family:** F14.
+
+**Classification:** method failure for polynomially many independent outputs of the unconditional Pollack--Treviño residual-only four-square finder, tested by right gcds of right-gcd outputs, left gcds of separately computed left-gcd outputs, fixed projective unit translates, or within-output matched stabilizers. This does not cover mixed handedness, genuine sample-combining maps, or other completion laws.
+
+**Closest prior route and material difference.** X19/P25 grants exact-uniform samples from the full Hurwitz norm shell, while X22/P28 tests the integral-coordinate slice and a direct rejection sampler. X24 uses an actual unconditional expected-polynomial four-square algorithm. Its conditional law is not full-shell uniform, but each residual conic fibre has an exact projective bijection.
+
+**Exact obstruction.** Conditional on the accepted residual and fresh completion randomness, both the row and image of \(\beta\bmod r\) are uniform on
+
+\[
+\mathcal S_r=
+\{[u:v]:u^2+v^2\ne0\},
+\qquad
+|\mathcal S_r|=r-\left(\frac{-1}{r}\right).
+\]
+
+A left-normalized gcrd inherits the row; a separately computed right-normalized gcld inherits the image. Thus \(K\) independent outputs have all-pairs proper collision probability at most
+
+\[
+\binom K2\left(
+\frac1{p-(-1/p)}+\frac1{q-(-1/q)}
+\right)
+\]
+
+per matched hand. All fixed unit classes add only a constant. Exact supported-line stabilizer counts bound the within-output survivor by \(O(1/p+1/q)\). The Pollack--Treviño modulus is exactly \(\operatorname{lcm}(n,P)\), its kernel has the required residual-only interface, and its expected bit and exact-random-bit costs are polynomial. Hence every named direct test is exponentially sparse on an infinite balanced family.
+
+**What would make a retry materially new.** A mixed row/image or mixed-gcd construction with an exact law; a nonlinear map that combines several finder outputs and accumulates information jointly rather than unioning rare pair events; a completion allowed to depend on the fibre point with a proved useful bias; or a non-collision quaternion observable. Resampling the same finder and amortizing only by testing more independent matched-handed pairs is covered by P30.

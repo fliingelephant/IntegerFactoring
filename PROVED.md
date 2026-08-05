@@ -2069,3 +2069,114 @@ b_6=\sigma_1(3)=4\ne6+2+3+1.
 This theorem is exactly the familiar divisor-sum trace identity packaged in a fixed Eisenstein series. It does not construct any coefficient evaluator, factor arbitrary integers, or prove a lower bound. It says nothing adverse about cusp forms, character twists, other levels or weights, fixed-small-modulus or coarse data, low-index Hecke data, Brandt or modular-symbol invariants, or any automorphic invariant with a genuinely different information path.
 
 The candidate, corrected hostile audit, and proof-blind reconstruction are preserved under `experiments/F19_hecke_metric_kill`, `experiments/F19_hecke_metric_audit`, and `experiments/F19_hecke_metric_reconstruct`.
+
+## P30 — a residual-only four-square finder is exactly diffuse in both matched handednesses
+
+**Status:** promoted.
+
+**Verification record:** the residual-fibre law, both exceptional-point bijections, the primitive one-sided-gcd lemma, handed normalization, collision and unit-orbit bounds, characteristic-\(3\) faithfulness and exact exceptional counts, the precise Pollack--Treviño interface, and expected bit and random-bit complexity passed a focused hostile audit and a proof-blind end-to-end reconstruction. No cross-family audit has run.
+
+Let \(n=pq\) for distinct odd primes, and let \(M\) be an odd squarefree multiple of \(n\). Draw \(x,y\) exactly uniformly modulo \(M\), put
+
+\[
+R=-x^2-y^2\pmod M,
+\]
+
+and suppose that acceptance and completion inspect \((x,y)\) only through \(R\) and fresh randomness. Assume every accepted \(R\) is a unit, completion gives \(z,w\) with
+
+\[
+z^2+w^2\equiv R\pmod M,
+\]
+
+and \(\beta=x+yi+zj+wk\) is primitive.
+
+Fix \(r\in\{p,q\}\), write \(\chi_r=(-1/r)\), and define
+
+\[
+\mathcal S_r=
+\{[u:v]\in\mathbf P^1(\mathbf F_r):u^2+v^2\ne0\},
+\qquad |\mathcal S_r|=r-\chi_r.
+\]
+
+Conditional on the accepted residual and the completion randomness, the row line and, separately, the image line of \(\beta\bmod r\) are exactly uniform on \(\mathcal S_r\).
+
+**Exact local bijections.** Choose \(s,t\in\mathbf F_r\) with \(s^2+t^2=-1\), split the Hurwitz algebra by
+
+\[
+i\mapsto
+\begin{pmatrix}0&1\\-1&0\end{pmatrix},
+\qquad
+j\mapsto
+\begin{pmatrix}s&t\\t&-s\end{pmatrix},
+\]
+
+and put \(A=zs+wt\), \(B=zt-ws\). Then
+
+\[
+\beta_r=
+\begin{pmatrix}
+x+A&y+B\\
+-y+B&x-A
+\end{pmatrix},
+\qquad A^2+B^2=-(z^2+w^2).
+\]
+
+The nonzero conic \(x^2+y^2=-(z^2+w^2)\) maps bijectively to \(\mathcal S_r\) through its row line and also through its image line. For rows, the usual first-row formula misses exactly \([-B:A]\), supplied by the point \((-A,-B)\) where that row vanishes. For images, the first-column formula misses the same line, supplied by \((-A,B)\). This proves exact uniformity, not merely a character-count estimate. It does not assert independence between the row and image of one matrix.
+
+**Matched handedness.** A greatest common right divisor \(D_R\) of \(n\) and \(\beta\) has norm \(n\). Its generator is ambiguous by a left unit; normalize on the left, preserving its local row lines. A separately computed greatest common left divisor \(D_L\) also has norm \(n\); normalize on the right, preserving its image lines. Consequently, two independent right-gcd outputs have local right-gcd collision probability
+
+\[
+\Pr(\operatorname{row}_r(D_1)=\operatorname{row}_r(D_2))
+=\frac1{r-\chi_r},
+\]
+
+and the same formula holds for the image lines of two independently computed left-gcd outputs tested by a left gcd. No independence between the \(p\)- and \(q\)-events is needed. With \(K\) calls, every-pair proper-divisor probability in either matched hand is at most
+
+\[
+\binom K2
+\left(
+\frac1{p-\chi_p}+\frac1{q-\chi_q}
+\right).
+\]
+
+Testing both matched hands and every fixed projective Hurwitz-unit class changes this only by an absolute constant.
+
+For a single right-gcd output, all right-unit pairs succeed exactly on a mismatch of the two row stabilizers in \(G=\mathcal H^\times/\{\pm1\}\cong A_4\). The projective action is faithful for every odd \(r\), including \(3\), and the number \(e_r\) of supported lines with nontrivial stabilizer is
+
+\[
+e_3=4,
+\qquad
+e_r=4\mathbf1_{(-1/r)=1}+8\mathbf1_{(-3/r)=1}
+\quad(r\ge5).
+\]
+
+Thus
+
+\[
+\Pr(H_p\ne H_q)
+\le
+\frac{e_p}{p-\chi_p}+\frac{e_q}{q-\chi_q}
+=O(1/p+1/q),
+\]
+
+with the dual statement for a separately computed left-gcd output and left units.
+
+**The unconditional arithmetic source fits exactly.** After its preprocessing, the Pollack--Treviño four-square algorithm uses
+
+\[
+P=\prod_{\substack{\ell\le\log n\\\ell\equiv3\pmod4}}\ell,
+\qquad
+M=\frac{nP}{\gcd(n,P)}=\operatorname{lcm}(n,P),
+\]
+
+which is an odd squarefree multiple of the reduced distinct-prime semiprime. Its acceptance, modular square-root test, Gaussian gcd, and completion depend on \((x,y)\) only through \(R\) and fresh randomness; its output is primitive. Exact rejection sampling costs \(O(\log n)\) expected random bits per trial, and the source success bound gives \(O(\log n/\log\log n)\) trials. A crude fixed polynomial bounds the expected bit cost, with \(O(\log n)\)-bit intermediates.
+
+Along an infinite balanced family \(p<q<2p\), every fixed polynomial number of independent calls, all pair tests in both matched hands, all fixed unit classes, and all within-output unit-orbit tests therefore have success
+
+\[
+2^{-\frac12\log_2 n+O(\log\log n)}.
+\]
+
+This does not control the image of a left-normalized right-gcd output, the row of a right-normalized left-gcd output, mixed-handed comparisons, sample-dependent nonlinear combinations, even or repeated-prime norms, completions that inspect the particular fibre point, or non-collision quaternion invariants.
+
+The candidate, corrected hostile audit, and proof-blind reconstruction are preserved under `experiments/F20_four_square_fibre_kill`, `experiments/F20_four_square_fibre_audit`, and `experiments/F20_four_square_fibre_reconstruct`.
