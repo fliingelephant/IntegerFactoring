@@ -106,7 +106,7 @@ Report a result to me only on a significant update: a complete proof of the top-
 
 ## Computation rules
 
-Only write programs when essential; most work here should be proofs. When a computation is justified, it is a named finite question whose output is a small witness, certificate, or table. Never run computation through inline stdin. Every run gets a named source file, the approach-family ID it serves, a timeout, a log, and an output location, recorded in `REGISTRY.md`. A computation can refute a lemma or discover a certificate; it cannot prove an unbounded theorem — preserve the smallest exact certificate and then prove the resulting claim.
+Use computation to discover candidate structures, test precise finite questions, or produce witnesses, certificates, and tables. Exploratory outputs are candidate evidence: they may guide research but cannot prove an unbounded theorem. Never run computation through inline stdin. Every run gets a named source file, the approach-family ID it serves, a timeout, a log, and an output location, recorded in `REGISTRY.md`. Preserve the smallest exact certificate and then prove any resulting unbounded claim.
 
 Finite experiments, benchmark factorizations, and fitted runtime curves are sanity checks only. They may expose an error or refute a universal claim, but they do not prove polynomial running time.
 
