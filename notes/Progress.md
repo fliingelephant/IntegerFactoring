@@ -256,3 +256,13 @@ S_m(a)=\prod_{d=1}^{m-1}(1-a^d)^{m-d},
 \]
 
 local vanishing is exactly the order test \(\operatorname{ord}(a)\le m-1\). If \(S_m(a)\bmod N\) had a uniform exact evaluator polynomial in \(\log N+\log m\), scanning exact integer-root thresholds and sampling a residue primitive modulo the largest unknown prime would split every non-perfect-power composite with inverse-polynomial probability. Perfect-power handling and recursion then give complete Las Vegas factoring in expected \(O(n^3T(O(n))+\operatorname{poly}(n))\) bit operations. The known recurrence is linear in \(m\), and the cyclotomic identity merely redisplays \(m-1\) factors; the polylogarithmic evaluator remains missing. The hostile audit and proof-blind reconstruction verified this exact conditional boundary.
+
+### C18 — natural torus-product compressions fail narrowly, not generally
+
+**Status:** promoted as P21 after hostile audit and proof-blind reconstruction.
+
+**Closest prior route and material difference.** C17/P20 makes a polylogarithmic evaluator for the weighted torus product sufficient for complete factoring. C18 tests concrete fixed-binomial, lcm, recursive-block, and equal-floor compression mechanisms without assuming a general circuit lower bound.
+
+**Verified result.** A positive product \(\prod_h(1-a^{L_h})^{w_h}\) with the exact all-finite-field order-threshold zero set must literally contain every exponent in \((M/2,M]\), so it has at least \(\lceil M/2\rceil\) distinct exponents. The one-lcm version has an order-12 false positive at \(M=4\) over \(\mathbb F_{13}\). The exact shifted \(Q/T\) addition identities create \(M\) leaves only for their literal two-child evaluator. Equal-floor grouping has \(\Omega(\sqrt M)\) groups, and explicit characteristic-zero root-set polynomials have large degree; neither statement is a general circuit lower bound.
+
+The unweighted and weighted products have identical prime support but not identical prime-power gcds: for \(N=875,a=631,m=3\), they yield gcds 175 and 875. Thus the unweighted product can be a better splitter but is not an evaluator for the weighted residue. P20's general evaluator gap remains open.

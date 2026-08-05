@@ -535,3 +535,19 @@ For a unit modulo a prime, \(S_m(a)=0\) exactly when its order is at most \(m-1\
 **Evidence.** The discovery, all failed-run dispositions, and exact certificate are in `experiments/F12_elliptic_collision_kill`; the hostile audit in `experiments/F12_elliptic_collision_audit` corrected the real \(m\ge3\) restriction, the full-discriminant-gcd case, and the recursive complexity bound; the proof-blind reconstruction in `experiments/F12_elliptic_collision_reconstruct` independently recovered the identities, certificate, all-input conditional reduction, success bound, and complete recursion. The corrected theorem is P20 in `PROVED.md`. No cross-family audit has run.
 
 **What would make a retry materially new.** A uniform factor-free polylogarithmic evaluator for the weighted torus product, or a different dynamical observable with both a proved polylogarithmic evaluation rule and inverse-polynomial asymmetric local behavior. Faster evaluation alone cannot repair the elliptic separator on the balanced obstruction.
+
+## X15 — natural fixed-binomial compression of the torus threshold product
+
+**Status:** promoted as P21 after hostile audit and proof-blind reconstruction.
+
+**Family:** F02.
+
+**Classification:** method failure for fixed positive-binomial/lcm compression, the literal two-child q-Pochhammer evaluator, and constant-work-per-equal-floor grouping. This is not evidence against every arithmetic circuit or exact evaluator for the torus product.
+
+**Closest prior route and material difference.** X14/P20 isolates the weighted torus product as a sufficient evaluator target but supplies only a recurrence linear in the threshold. X15 tests several proposed ways to compress that exact product to polylogarithmic work.
+
+**Exact obstruction.** Any positive binomial product whose zero set over every finite field is exactly the set of units of order at most \(M\) must contain every exponent strictly between \(M/2\) and \(M\), hence at least \(\lceil M/2\rceil\) distinct exponents. The one-lcm shortcut fails already for \(M=4\): 2 has order 12 modulo 13, so \(1-2^{12}=0\), while the true unweighted and weighted products are 3 and 7. The exact shifted addition law has two independent children and therefore \(M\) leaves in its literal recursive evaluator. Equal-floor cyclotomic grouping has at least \(2\lfloor\sqrt M\rfloor-1\) groups; an unweighted aggregate also loses the nonconstant weights. Explicit root-set polynomials have large degree, but none of these facts lower-bounds arbitrary circuit size.
+
+The hostile audit also corrected the relationship between the unweighted and weighted products. They have the same prime support, and the unweighted gcd divides the weighted gcd, but the gcds can differ on prime powers: \(N=875,a=631,m=3\) gives 175 versus 875. The proof-blind reconstruction independently recovered the corrected theorem, counterexamples, recurrence identities, and all stated scope limits. The promoted statement is P21.
+
+**What would make a retry materially new.** A shared division-free circuit, fast weighted interval-product identity, characteristic-sensitive representation, or other evaluator with a symbolic polylogarithmic bit-complexity proof. Repackaging the factors in a fixed binomial list, a literal two-child tree, or one unweighted aggregate per equal-floor group is not new.

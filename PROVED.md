@@ -1176,3 +1176,108 @@ S_{d+1}=S_dP_d
 take \(O(m)\) explicit iterations. The cyclotomic factorization of \(S_m\) still displays \(m-1\) factors. Neither observation is a lower bound, but neither proves the evaluator hypothesis. Thus P20 contains an unconditional elliptic obstruction and torus order theorem plus an exact conditional reduction; it is not an unconditional factoring algorithm.
 
 The discovery, hostile audit, proof-blind reconstruction, named sources, timeouts, logs, outputs, and failed-run dispositions are preserved under `experiments/F12_elliptic_collision_kill`, `experiments/F12_elliptic_collision_audit`, and `experiments/F12_elliptic_collision_reconstruct`.
+
+## P21 — fixed-binomial shortcuts do not supply the torus threshold evaluator
+
+**Status:** promoted.
+
+**Verification record:** the corrected threshold theorem, valuation statement, explicit counterexamples, recurrence accounting, and scope passed a focused hostile audit and a proof-blind end-to-end reconstruction. No cross-family audit has run.
+
+Put \(M=m-1\) and
+
+\[
+P_M(a)=\prod_{d=1}^{M}(1-a^d),
+\qquad
+S_m(a)=\prod_{d=1}^{M}(1-a^d)^{m-d}.
+\]
+
+For every prime \(\ell\), the two products have the same zero set modulo \(\ell\). Over an arbitrary integer modulus they need not give the same gcd: integer valuations instead give
+
+\[
+v_\ell(P_M(a))\le v_\ell(S_m(a)),
+\qquad
+\gcd(P_M(a),N)\mid\gcd(S_m(a),N).
+\]
+
+The distinction is operationally real. For
+
+\[
+N=875=5^3\cdot7,
+\qquad a=631,
+\qquad m=3,
+\]
+
+one has
+
+\[
+\gcd(P_2(a),875)=175,
+\qquad
+\gcd(S_3(a),875)=875.
+\]
+
+Thus the unweighted product is at least as useful for obtaining a proper split, but it is neither the requested weighted residue nor a gcd-preserving replacement on nonsquarefree inputs.
+
+**Threshold-binomial obstruction.** Fix \(M\ge2\), and suppose
+
+\[
+F(a)=\prod_{h=1}^{r}(1-a^{L_h})^{w_h},
+\qquad L_h,w_h\in\mathbb Z_{>0},
+\]
+
+has, over every finite field and every unit \(a\), the exact zero predicate
+
+\[
+F(a)=0
+\quad\Longleftrightarrow\quad
+\operatorname{ord}(a)\le M.
+\]
+
+Every positive integer \(t\) occurs as the order of a unit in some finite field: choose a prime \(q\nmid t\), use \(t\mid q^{\varphi(t)}-1\), and use cyclicity of the resulting finite-field unit group. Applying this first with \(t=L_h\) forces every \(L_h\le M\). Applying it with \(M/2<t\le M\) forces \(t\mid L_h\) for some \(h\), and \(t\le L_h\le M<2t\) then forces \(L_h=t\). Hence the exponent list contains every integer
+
+\[
+\lfloor M/2\rfloor+1,\ldots,M
+\]
+
+and therefore at least \(\lceil M/2\rceil\) distinct exponents. This rules out replacing the exact universal threshold predicate by a polylogarithmic number of positive binomial factors. It says nothing about sums, rational functions, characteristic-dependent formulas, or arbitrary arithmetic circuits.
+
+The simplest lcm compression already has a concrete false positive. With \(M=4\), the proposed exponent is \(\operatorname{lcm}(1,2,3,4)=12\). The element 2 has order 12 in \(\mathbb F_{13}^{\times}\), so \(1-2^{12}=0\), even though
+
+\[
+P_4(2)=3\pmod {13},
+\qquad
+S_5(2)=7\pmod {13}.
+\]
+
+**Other exact but narrow boundaries.** For shifted blocks
+
+\[
+Q(s,n)=\prod_{d=1}^{n}(1-a^{s+d}),
+\qquad
+T(s,n)=\prod_{d=1}^{n}(1-a^{s+d})^{n+1-d},
+\]
+
+direct splitting gives
+
+\[
+Q(s,n+k)=Q(s,n)Q(s+n,k),
+\]
+
+\[
+T(s,n+k)=T(s,n)Q(s,n)^kT(s+n,k).
+\]
+
+The literal syntax-directed evaluator recursively computes two shifted children, so its tree has \(n\) singleton leaves and linear ring-operation cost. This is an accounting theorem for that evaluator, not a lower bound for a shared or differently represented circuit.
+
+The quotient set \(\{\lfloor M/d\rfloor:1\le d\le M\}\) has at least \(2\lfloor\sqrt M\rfloor-1\) elements, so a literal constant-work-per-equal-floor cyclotomic grouping is not polylogarithmic. Nonconstant weights show that an unweighted group aggregate loses information, but do not exclude a succinct weighted aggregate. Finally, every nonzero characteristic-zero polynomial vanishing at all roots of unity of order at most \(M\) has degree at least
+
+\[
+\sum_{t=1}^{M}\varphi(t)
+\ge
+\frac{M^2}{4(1+\log_2 M)}.
+\]
+
+Degree and dense materialization are not arithmetic-circuit lower bounds.
+
+**Scope.** P21 closes the fixed positive-binomial/lcm compression, the literal two-child recursion, and the displayed grouping/materialization shortcuts. It does not prove an evaluation-time or circuit-size lower bound for \(P_M\) or \(S_m\), and it does not provide the evaluator assumed in P20. The general polylogarithmic torus evaluator remains open.
+
+The candidate analysis, hostile audit, and proof-blind reconstruction are preserved under `experiments/F14_torus_qfactorial_evaluator`, `experiments/F14_torus_qfactorial_audit`, and `experiments/F14_torus_qfactorial_reconstruct`.
