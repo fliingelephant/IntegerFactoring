@@ -354,15 +354,17 @@ For \(a\ne0\), the leading \(Y^{24}\) terms cancel and the \(Y^{23}\) coefficien
 
 **Evidence.** Named Sage runs R01–R07 and their dispositions are in `experiments/F04_rankkill/RUN_MANIFEST.md`. That discovery manifest did not retain exact command/environment strings despite previously implying it did, and R04 used binary64 thresholds for its “first in the box” ordering; neither is authoritative evidence for provenance or minimality. R05 directly checked the small witness and R07 matched the analytic distributions. A fresh hostile auditor independently proved the exact parameters and algebra and reran all local residues under the fully specified timeout-bounded A02 in `experiments/F04_rank_audit`. A proof-blind reconstruction then independently recovered the exact logarithmic bounds, minimal \(r\), shift bound, nullity identity, local factor degrees, degree-23 obstruction, and exceptional shifts without reading either experiment directory. The displayed algebra, not a finite-search minimality claim, is P14 in `PROVED.md`.
 
+**PSC follow-up candidate.** The mandatory canonical-PSC kill test did not extend this obstruction. With a fixed determinant convention applied to the same globally formed \(H_a\), candidate C13 finds \(D_{47}=0\pmod{271}\) and \(173\pmod{293}\) already at \(a=1\). A raw leading coefficient separates the same instance, so this supplies no PSC advantage; it only confirms that equal full ranks do not control intermediate determinants. Hostile audit and proof-blind reconstruction are pending.
+
 **What would make a retry materially new.** A proved choice of polynomially many nonstandard \(r\), a different group-algebra element or joint invariant, or an asymptotic shift distribution with inverse-polynomial mismatch probability that is not contradicted by this standard-parameter witness.
 
 ## X10 — factor-symmetric scalar higher-residue phase carriers
 
-**Status:** candidate from the mandatory F09 kill test; hostile audit and proof-blind reconstruction pending.
+**Status:** promoted as P15 after a focused hostile audit and proof-blind end-to-end reconstruction.
 
 **Family:** F09.
 
-**Classification:** method failure for the precisely defined scalar, multiplicative, factor-swap-invariant carrier with multiplicative twists and additive/subtractive combining. This does not close vector/ring-valued, oriented, additive, or general higher-residue mechanisms.
+**Classification:** method failure for the precisely defined scalar, multiplicative carrier whose **individual scalar labels** are factor-swap invariant, with fixed public unit twists, integer powers, multiplicative/divisive combining, transcript-internal adaptivity, and label-only postselection. This does not close vector/multiset transcripts that are merely swap-equivariant, vector/ring-valued or factor-oriented labels, additive/nonmultiplicative queries, externally informed twists, or general higher-residue mechanisms.
 
 **Diagonal quotient theorem.** Let \(\ell\) be an odd prime and \(N=pq\) with \(p,q\equiv1\pmod\ell\). Fix local order-\(\ell\) characters and write a unit's hidden exponent vector as
 
@@ -370,13 +372,13 @@ For \(a\ne0\), the leading \(Y^{24}\) terms cancel and the \(Y^{23}\) coefficien
 u(a)=(u_p(a),u_q(a))\in\mathbb F_\ell^2.
 \]
 
-A multiplicative scalar character has exponent \(L(x,y)=\alpha x+\beta y\). Invariance under swapping the two unlabeled factors forces \(\alpha=\beta\), so every such carrier is a multiple of
+A multiplicative scalar character has exponent \(L(x,y)=\alpha x+\beta y\). Requiring that this individual scalar value be invariant under swapping the two unlabeled factors forces \(\alpha=\beta\), so every such carrier is a multiple of
 
 \[
 \Sigma(x,y)=x+y.
 \]
 
-Arbitrarily many labels still have joint rank one and common kernel \(\{(t,-t):t\in\mathbb F_\ell\}\). A twist \(a\mapsto t_j a^{k_j}\) only adds a constant and rescales \(\Sigma(u(a))\). Inductively, every \(+/-\) combination and every decision based solely on exposed labels remains in this quotient. Thus an exposed zero phase does not certify either local phase is zero.
+A family of such labels has joint rank at most one. If at least one label is nontrivial, its common kernel is exactly \(\{(t,-t):t\in\mathbb F_\ell\}\); if all are trivial, the rank is zero. A fixed public unit twist \(a\mapsto t_j a^{k_j}\) only adds a constant and rescales \(\Sigma(u(a))\). Inductively, multiplication/division, choices based only on public randomness and earlier admissible labels, and postselection solely on those labels remain in this quotient. Thus an exposed zero phase does not certify either local phase is zero. Mere swap-equivariance of a vector or multiset transcript is insufficient: the unordered pair of coordinate characters is swap-equivariant and retains rank two.
 
 **Exact cubic certificate.** For \(\ell=3\), \(N=91=7\cdot13\), choose primitive roots 3 modulo 7 and 2 modulo 13 and reduce their discrete-log exponents modulo 3. Then
 
@@ -392,20 +394,46 @@ so both scalar sums equal 1, yet
 
 The combined scalar phase is zero while neither local phase is zero. All nine local pairs occur and each diagonal fiber contains 24 units.
 
-**Cyclotomic orientation.** In \(K=\mathbb Q(\zeta_\ell)\), the product of the local \(\ell\)-th power-residue symbols over every prime ideal above a rational split prime is trivial on rational numerators: the Galois exponents sum to
+**Cyclotomic orientation.** In \(K=\mathbb Q(\zeta_\ell)\), for odd \(\ell\), the product of the local \(\ell\)-th power-residue symbols over every prime ideal above a rational split prime \(p\) is trivial on rational numerators \(a\) with \(p\nmid a\): the Galois exponents sum to
 
 \[
 1+\cdots+(\ell-1)\equiv0\pmod\ell.
 \]
 
-Obtaining a nontrivial odd-power symbol therefore requires selecting prime ideals above the rational factors rather than taking the fully symmetric product. For \(\ell=3,N=91\), an oriented norm-\(N\) ideal can be written \((N,\zeta-\rho)\) for a root \(\rho\) of \(\Phi_3\) modulo \(N\). The four roots have CRT pairs
+A conventional nontrivial one-valued ideal-symbol evaluation therefore must supply or compute a choice of prime above each rational factor rather than take the fully symmetric product; this selection may be implicit. For \(\ell=3,N=91\), a root \(\rho\) of \(\Phi_3\) modulo \(N\) supplies such orientation data through the norm-\(N\) ideal \((N,\zeta-\rho)\). The four roots have CRT pairs
 
 \[
 (2,9),(2,3),(4,9),(4,3).
 \]
 
-Globally conjugate orientations have unit differences, while roots agreeing in exactly one component have difference gcd 7 or 13 with \(N\). Multiple independent orientations can therefore factor this input. This does not prove that one orientation is factoring-equivalent or that no canonical factor-free orientation exists.
+Globally conjugate orientations have unit differences, while roots agreeing in exactly one component have difference gcd 7 or 13 with \(N\). Two roots from different global-conjugacy orbits can therefore factor this input. Existence of the ideal proves neither that an orientation is hard or noncanonical to compute from \(N\), nor that one orientation is factoring-equivalent.
 
-**Evidence.** The exact enumeration and all failed-run dispositions are recorded in `experiments/F09_phasekill/RUN_MANIFEST.md`; R04 verifies all phase fibers and root-difference gcds. The linear-algebra and Galois-symmetry arguments are the proof candidate; finite computation only certifies the displayed example.
+**Evidence.** The exact enumeration and all failed-run dispositions are recorded in `experiments/F09_phasekill/RUN_MANIFEST.md`; R04 verifies all phase fibers and root-difference gcds. The hostile audit in `experiments/F09_phase_audit/RESULT.md` independently reproved the corrected theorem and reran the exact certificate: A01's mathematical assertions passed but its JSON serialization failed and is retained, while timeout-bounded A02 passed. A proof-blind reconstruction in `experiments/F09_phase_reconstruct/RESULT.md` independently recovered the theorem, adaptive closure, cyclotomic norm proof, orientation scope, and exact certificate; it additionally exhibited the rank-two ordered-vector and anti-diagonal-sensitive multiset boundaries. Finite computation certifies only the displayed examples. The corrected unbounded statements are P15 in `PROVED.md`.
 
 **What would make a retry materially new.** A factor-free polynomial-time construction of a vector/ring-valued or consistently oriented carrier with more than diagonal rank, or a nonmultiplicative/additive probe with a proved combining law and inverse-polynomial separation probability. Merely adding scalar symmetric twists or postselection on their labels is not new.
+
+## X11 — order-filtered automorphisms of squarefree cubic algebras
+
+**Status:** candidate from the mandatory F10/B1 kill test; hostile audit and proof-blind reconstruction pending.
+
+**Family:** F10.
+
+**Classification:** method failure for the natural cubic construction that asks for a globally nonidentity automorphism of order 2 or 3 when that order occurs in exactly one local automorphism group. This does not close other fixed-degree rings, richer local certificates, or canonization mechanisms.
+
+**Exact local structure.** If \(f\) is a monic squarefree cubic over \(\mathbb F_\ell\), Frobenius has type \((111),(12)\), or \((3)\) on the three geometric roots, and
+
+\[
+\operatorname{Aut}_{\mathbb F_\ell}(\mathbb F_\ell[X]/(f))
+=C_{S_3}(\operatorname{Frob})
+=S_3,\ C_2,\ C_3
+\]
+
+respectively. The exact type counts are \(\binom{\ell}{3}\), \(\ell(\ell^2-\ell)/2\), and \((\ell^3-\ell)/3\), giving conditional probabilities \((\ell-2)/(6\ell),1/2,(\ell+1)/(3\ell)\). Thus order-3 existence differs across two independently sampled squarefree local cubics with probability \(1/2\). For odd characteristic, type \((12)\) is exactly the nonsquare-discriminant type, so the mismatch is the unit Jacobi-minus-one condition. A raw monic cubic reaches it with probability \((p-1)(q-1)/(2pq)\).
+
+**Why construction is the factoring step.** On the order-3 mismatch promise, one local group is \(C_2\), whose only solution to \(\sigma^3=1\) is identity; the other local group has a nonidentity order-3 element. Therefore any globally nonidentity solution is identity in exactly one component. If \(\sigma(X)=a+bX+cX^2\), at least one of \(a,b-1,c\) is zero in exactly one component and its gcd with \(N\) splits the semiprime. Given the factors, fixed-degree finite-field factorization, Frobenius or root interpolation, and CRT construct such a solution in expected polynomial bit complexity. Rejection sampling plus this promise solver therefore factors every distinct odd semiprime; factoring trivially solves every promise instance.
+
+**Why elimination rank does not fix it.** Geometrically, the order-dividing-3 locus is always the identity and two 3-cycles, hence rank 3. In types \((111),(3)\) all three descend, while in type \((12)\) the two nonidentity points form a quadratic orbit. The order-dividing-2 locus analogously has rank 4 in every type. Rank/resultant tests of geometric nonemptiness see no type drop; rational-point descent or a mixed CRT choice is exactly the hidden idempotent problem.
+
+**Exact equations and evidence.** The coefficient equations for endomorphism, the unit Jacobian determinant, and \(\sigma^2=1,\sigma^3=1\) are derived in experiments/F10_autkill/REPORT.md. Named runs R01–R06 and every failure are in its manifest. The authoritative \(N=35,f=X^3+2\) enumeration finds exactly six global automorphisms; the selective order-3 maps \(X\mapsto11X\) and \(X\mapsto16X\) both expose 5 through \(\gcd(b-1,35)\). Finite computation certifies only this example.
+
+**What would make a retry materially new.** A fixed-degree family whose local certificate has a division-free geometric rank or determinant mismatch rather than only a rational-point-count mismatch, or a factor-free polynomial-time descent/canonization algorithm whose output is not already component-selective by definition. Merely shrinking the automorphism base does not address the \(N^3\)-sized image search.

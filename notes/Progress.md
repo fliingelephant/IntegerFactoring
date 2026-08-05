@@ -4,7 +4,7 @@ This is working state for nontrivial intermediate statements and the current syn
 
 ## Current synthesis
 
-The source material has been read in full. Nine approach families have been opened, primarily from materially different mechanisms in `notes/Inspirations.md`; promoted narrow results and exact open gaps are tracked below and in the registry. `notes/Zhihu.md` supplies background and motivation only.
+The source material has been read in full. Ten approach families have been opened, primarily from materially different mechanisms in `notes/Inspirations.md`; promoted narrow results and exact open gaps are tracked below and in the registry. `notes/Zhihu.md` supplies background and motivation only.
 
 ## Working claims
 
@@ -133,8 +133,48 @@ then a nontrivial factor of \(N\) is recoverable deterministically in \(\operato
 
 ### C12 — scalar symmetric higher-residue carriers collapse to the diagonal
 
-**Status:** candidate from the mandatory F09 kill test; hostile audit and proof-blind reconstruction pending.
+**Status:** promoted as P15 after hostile audit and proof-blind reconstruction.
 
-**Claim.** X10 proves, for a precisely defined multiplicative scalar carrier class, that factor-swap invariance forces every local phase functional through \(u_p+u_q\); twists and \(+/-\) combining retain the anti-diagonal kernel. An exact cubic example shows a canceled global phase with neither local phase canceled. The fully Galois-symmetric odd-power residue-symbol product is trivial, while nontrivial symbols require a cyclotomic orientation.
+**Claim.** X10 proves that if each individual multiplicative scalar label is factor-swap invariant, then every label factors through \(u_p+u_q\), so a nontrivial family has the anti-diagonal kernel. Fixed public unit twists, integer powers, transcript-internal adaptivity, multiplication/division, and label-only postselection preserve that quotient. An exact cubic example shows a canceled global phase with neither local phase canceled. For rational numerators coprime to the split prime, the fully Galois-symmetric odd-power residue-symbol product is trivial; a conventional nontrivial one-valued ideal-symbol evaluation must supply or compute an orientation, possibly implicitly.
 
-**Exact remaining gap.** The carrier-class quantifiers, postselection claim, cyclotomic Galois product, and orientation formulation require hostile audit and proof-blind reconstruction. Even if verified, vector/ring-valued, factor-oriented, additive, and other higher-residue carriers remain open; no factoring-equivalence claim for one orientation is made.
+**Verification result and remaining gap.** The hostile audit independently proved the rank-at-most-one statement, adaptive transcript factorization, corrected coprime Galois-product proposition, and exact \(N=91\) certificate. The proof-blind reconstruction recovered all of these and sharpened the boundary: a swap-invariant multiset can reveal the anti-diagonal up to sign, while a nonlinear symmetric scalar can reveal its magnitude. P15 therefore applies only to individually invariant scalar characters. It makes no hardness, noncanonicity, or one-root factoring inference about orientation. Vector/ring-valued, factor-oriented, additive/nonmultiplicative, externally informed, and other higher-residue carriers remain open.
+
+### C13 — P14's full-rank witness is not a canonical-PSC witness
+
+**Status:** candidate from the mandatory F04 PSC kill test; hostile audit and proof-blind reconstruction pending.
+
+**Closest prior route and material difference.** The closest route is X09/P14, which proves equality of the two local nullity/gcd-degree invariants for every standard shift. Canonical intermediate principal Sylvester determinants are materially different because they need not be invariant under the component-dependent cyclic substitutions used in P14's local reduction.
+
+**Claim.** Fix the determinant convention in `experiments/F04_psckill/RESULT.md` for the principal coefficient \(D_j(P,Q)\) of \(P=X^{269}-1\) and the globally formed AKS error \(Q=H_a\). At \(N=79403=271\cdot293\), the first shift \(a=1\) has \(\deg H_1=268\) globally but local degrees 46 and 268. Direct defining matrices give no zero mismatch for \(0\le j\le46\), while
+
+\[
+D_{47}\equiv0\pmod{271},\qquad D_{47}\equiv173\pmod{293}.
+\]
+
+The factor-free global determinant is \(30352\pmod{79403}\), whose gcd with \(N\) is 271. Its matrix dimension is 443. Division-free determinant computation makes every such fixed coefficient polynomial-time computable when the AKS parameters are polynomial in \(\log N\).
+
+**Exact remaining gap.** This is not evidence that PSCs improve on coefficient localization: the same input and shift already have \([X^{268}]H_1=31978\) with gcd 271. It only shows that P14 cannot refute PSC refinement. The finite certificate needs hostile audit and proof-blind reconstruction. The decisive next family-level test is a canonical-PSC scan on an input that is already hard for every individual coefficient, such as P11's witness; even success or failure there would remain finite evidence rather than a uniform theorem.
+
+### C14 — cubic order-filtered automorphism search hides the split
+
+**Status:** candidate from the mandatory F10/B1 kill test; hostile audit and proof-blind reconstruction pending.
+
+**Closest prior route and material difference.** The closest route is X08/P13, which blocks automorphism-**count** interpolation in natural fixed-degree families. C14 instead exploits a constant-probability mismatch in the **existence and construction** of order-2 or order-3 automorphisms of squarefree cubic algebras.
+
+**Claim.** For a monic squarefree cubic over \(\mathbb F_\ell\), the factorization types \((111),(12),(3)\) have automorphism groups \(S_3,C_2,C_3\) and exact conditional probabilities
+
+\[
+\frac{\ell-2}{6\ell},\qquad \frac12,\qquad \frac{\ell+1}{3\ell}.
+\]
+
+For independently sampled reductions modulo distinct odd primes \(p,q\), order-3 existence differs with conditional probability \(1/2\), exactly when the unit discriminant has Jacobi symbol \(-1\). Raw random monic cubics reach this promise with probability \((p-1)(q-1)/(2pq)\), so rejection sampling costs at most \(15/4\) trials in expectation.
+
+Under that promise, the \((12)\) component has no nonidentity cube-torsion automorphism. Hence every globally nonidentity \(\sigma\) with \(\sigma^3=1\), written \(\sigma(X)=a+bX+cX^2\), is identity in exactly that component, and one of
+
+\[
+\gcd(a,N),\qquad \gcd(b-1,N),\qquad \gcd(c,N)
+\]
+
+is a proper factor. Conversely, known factors construct such a map by using identity on the \((12)\) side, Frobenius on a \((3)\) side, or an interpolated root 3-cycle on a \((111)\) side, then CRT-lifting. Thus a uniform solver for this order-3 promise is Las Vegas polynomial-time equivalent to factoring distinct odd semiprimes. The order-2 mismatch is analogous.
+
+**Descent obstruction and scope.** The order-dividing-3 automorphism scheme has geometric rank 3 for every type: its rational-point counts are 3 for \((111),(3)\) but 1 for \((12)\). The order-dividing-2 locus has geometric rank 4 with rational-point counts 4, 2, 1. A resultant or quotient rank therefore does not automatically localize the mismatch; choosing a rational or mixed CRT point is the component-selective step. The explicit certificate \(N=35,f=X^3+2\) has types \((12)/(3)\), with \(X\mapsto11X,16X\) exposing 5. This blocks only the natural cubic order-filter construction, not all B1 rings or canonization mechanisms.

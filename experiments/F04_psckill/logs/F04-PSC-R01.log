@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F04_psckill/scan_psc_sequences.sage.py", line 235, in <module>
+    main()
+    ~~~~^^
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F04_psckill/scan_psc_sequences.sage.py", line 161, in main
+    p_poly, h_mod_p, p_residues = psc_sequence_via_prs(P_FACTOR, shift)
+                                  ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F04_psckill/scan_psc_sequences.sage.py", line 92, in psc_sequence_via_prs
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: formal-degree drop at characteristic=271, shift=1: degree=46
