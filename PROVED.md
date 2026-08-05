@@ -1771,3 +1771,108 @@ Let \(L=\Theta(\sqrt N)\) be the number of integers in the public balanced trace
 The regime qualifications are essential. A fixed small \(m\) has only constantly many materialized states, while an enormous factor-aware tailored product can reject every false interval trace and leave one lift. Thus P26 is only an explicit-state, explicit-lift, and unconditioned-uniform-sampling obstruction. It is not a lower bound against compressed character solvers, adaptive auxiliary primes, biased or interval-conditioned generation, or another way for bare \(N\) to manufacture metric information.
 
 The candidate, hostile audit, and proof-blind reconstruction are preserved under `experiments/F18_metric_hint_kill`, `experiments/F18_metric_hint_audit`, and `experiments/F18_metric_hint_reconstruct`.
+
+## P27 — exact-uniform imaginary-class ambiguity hunting has an exponential class-number barrier
+
+**Status:** promoted.
+
+**Verification record:** the form/class distinction, complete ambiguous-form lists, primitivity and extraction identities, direct and collision laws, inverse-orbit qualification, class-number asymptotic, public genus character, displayed powers, split-prime root count, and bit-complexity scope passed a focused hostile audit and a proof-blind reconstruction. No cross-family audit has run.
+
+Let \(N=pq\) with distinct odd primes \(p<q\), and use the fundamental discriminant
+
+\[
+\Delta=\begin{cases}-N,&N\equiv3\pmod4,\\-4N,&N\equiv1\pmod4.\end{cases}
+\]
+
+Write \(G=\operatorname{Cl}(\Delta)\), \(h=|G|\), \(T=G[2]\), and \(t=|T|\). A canonical reduced primitive positive form \([a,b,c]\) represents a class fixed by inversion exactly when
+
+\[
+b=0,\qquad b=a,\qquad\text{or}\qquad a=c.
+\]
+
+**Complete ambiguity classification.** If \(\Delta=-N\), then \(t=2\). Besides the principal form
+
+\[
+[1,1,(N+1)/4],
+\]
+
+there is exactly one useful ambiguous form:
+
+\[
+\begin{cases}
+[p,p,(p+q)/4],&q>3p,\\
+[(p+q)/4,(q-p)/2,(p+q)/4],&q<3p.
+\end{cases}
+\]
+
+If \(\Delta=-4N\), then \(t=4\). The complete list is
+
+\[
+[1,0,N],\quad [2,2,(N+1)/2],\quad [p,0,q],
+\]
+
+and
+
+\[
+\begin{cases}
+[2p,2p,(p+q)/2],&q>3p,\\
+[(p+q)/2,q-p,(p+q)/2],&q<3p.
+\end{cases}
+\]
+
+The first two even-discriminant forms are useless; \([2,2,(N+1)/2]\) is a public nonprincipal decoy. The other two expose \(p,q\). Extraction uses
+
+\[
+N=ac,\qquad
+N=(a/2)(2c-a/2),\qquad
+N=(a-b/2)(a+b/2)
+\]
+
+in the three boundary cases. Equality \(q=3p\) is impossible for distinct primes. In either discriminant branch, the useless classes form an index-two subgroup \(T_0\le T\), and the useful classes are its other coset.
+
+**Exact iid-uniform laws.** Grant independent exact-uniform classes of \(G\); this is an oracle premise, not a supplied sampler. One direct sample is useful with probability
+
+\[
+\frac{t}{2h},
+\]
+
+so its expected stopping count is \(2h/t\). An ordinary collision modulo inversion is redundant but not always empty: it can reveal \(X^2\), with exact useful probability
+
+\[
+\Pr(X^2\text{ useful})=\frac{t\,|(T\setminus T_0)\cap G^2|}{h}
+\le\frac{t^2}{2h}.
+\]
+
+Thus \(4\)-torsion must not be discarded.
+
+For square collisions \(X_i^2=X_j^2\), a specified pair has a useful quotient with probability \(t/(2h)\). Put \(H=h/t\). Each square fiber is a \(T\)-coset split into two \(T_0\)-halves, so after \(m\) samples the exact success probability is
+
+\[
+1-\frac1{(2H)^m}
+\sum_{k=0}^{\min(m,H)}
+\binom Hk2^k k!S(m,k).
+\]
+
+The expected and constant-success sample scale is \(\Theta(\sqrt H)\). Canonical form arithmetic only contributes polynomial factors in \(\log|\Delta|\); it does not repair the sample count.
+
+**Unconditional asymptotic barrier.** The analytic class-number formula and Siegel's theorem give, for every fixed \(\varepsilon>0\),
+
+\[
+h(\Delta)\ge c_\varepsilon|\Delta|^{1/2-\varepsilon},
+\]
+
+with an ineffective positive constant. Taking \(\varepsilon=1/4\) proves that every fixed polynomial number of exact-iid direct samples or square-collision pairs has success \(2^{-\Omega(\log N)}\). Prime number theory in fixed residue classes supplies infinite balanced families in both discriminant branches. This says nothing about an unspecified “near-uniform” or deliberately biased distribution.
+
+**Genus and powering qualifications.** For \(\Delta=-4N=(-4)N\), the public factorization of the discriminant gives a factor-free genus character
+
+\[
+\chi_{-4}=\chi_N.
+\]
+
+Thus it is false that every individual genus character needs \(p\) or \(q\). Nevertheless, there are exactly \(t\le4\) genera of size \(h/t\), so even free complete genus labels and exact uniform sampling from a chosen genus increase useful mass by at most the constant factor \(t\). The aggregate identity \((\Delta/r)=1\) for a primitively represented \(r\) is only the product relation among constituent characters.
+
+If \(\lambda(G)=2^am\) with \(m\) odd, \(X^{\lambda(G)/2}\) is uniform on \(T\) when \(t=2\). When \(t=4\) and the Sylow subgroup is \(C_{2^a}\times C_{2^b}\), it is uniform on \(T\) if \(a=b\), and on an order-two subgroup—possibly the decoy direction—if \(a>b\). The different power \(X^{h/2}\) is uniform on \(T\) for \(t=2\) and identically the identity for \(t=4\). These statements analyze only the displayed powers; they assume unavailable class exponent or order data and do not prove such data necessary for every powering rule.
+
+For a supplied split prime \(\ell\nmid\Delta\), the congruence \(b^2\equiv\Delta\pmod{4\ell}\) has four literal roots modulo \(4\ell\), two classes modulo \(2\ell\), and the two signs give inverse form classes. Constructing and reducing those forms is polynomial in \(\log|\Delta|+\log\ell\), but choosing signs or auxiliary primes does not yield exact-uniform class samples without a separate distribution theorem.
+
+The candidate, corrected hostile audit and retained finite checks, and proof-blind reconstruction are preserved under `experiments/F17_classgroup_ambiguity_kill`, `experiments/F17_classgroup_ambiguity_audit`, and `experiments/F17_classgroup_ambiguity_reconstruct`.

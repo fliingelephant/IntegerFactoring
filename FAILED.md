@@ -693,3 +693,27 @@ The family depends on \(K,T\), all allocations and parity cases are covered, and
 **Corrections and evidence.** The hostile audit corrected the fixed-\(K,T\) quantifiers, factors-of-\(kN\) wording, allocation/parity certificate, and implicit-decoder scope. The proof-blind reconstruction independently recovered the complete proof and showed why broader claims are false: small fixed \(m\) has few states, and a huge tailored \(m>L\) can leave exactly one accepted interval lift. No computation supports the theorem; all three reports are proof-only. P26 records only their corrected common result.
 
 **What would make a retry materially new.** A polynomial-size list of \(N\)-dependent exponentially large multipliers with a proved close allocation, a compressed character-condition interval solver, a biased trace sampler with inverse-polynomial target mass, or another factor-free metric observable. Merely enlarging the fixed numerical polynomial cap or explicitly adding more wheel primes is covered.
+
+## X21 — exact-iid imaginary-quadratic ambiguity hunting
+
+**Status:** promoted as P27 after hostile audit and proof-blind reconstruction.
+
+**Family:** F16.
+
+**Classification:** method failure for direct exact-uniform ambiguous-class hits, exact-iid square-collision birthday amplification, ordinary inverse-orbit collisions using only their group relations, free genus postselection of an otherwise uniform law, and the displayed \(\lambda/2\) and \(h/2\) powers without their missing data. This is not evidence against designed nonuniform class distributions, other powers, real infrastructure, or arbitrary class-group methods.
+
+**Closest prior route and material difference.** F14/P25 uses noncommutative quaternion ideals and outputs a one-sided divisor norm. X21 uses canonical reduced imaginary-quadratic forms; a useful ambiguous form exposes \(p,q\) directly through its integer coefficients, without first constructing a zero divisor over \(\mathbb Z/N\mathbb Z\).
+
+**Exact obstruction.** There are two ambiguous classes for \(\Delta=-N\) and four for \(\Delta=-4N\), exactly half useful. The public even-discriminant class
+
+\[
+[2,2,(N+1)/2]
+\]
+
+is a nonprincipal but useless counterexample to universal extraction. With class number \(h\) and \(t=|G[2]|\in\{2,4\}\), direct exact-uniform success is \(t/(2h)\). The complete square-collision scheme has exact occupancy formula P27 and birthday scale \(\Theta(\sqrt{h/t})\). Siegel's lower bound makes polynomially many samples exponentially unlikely on infinite balanced families.
+
+Ordinary inverse-orbit collisions can retain \(X^2\); useful \(4\)-torsion occurs with probability at most \(t^2/(2h)\), so the original zero-contribution shorthand was false but no birthday gain results. For \(\Delta=-4N\), the public character \(\chi_{-4}=\chi_N\) disproves the claim that every individual genus character needs a hidden prime-discriminant factor. Complete chosen-genus access still improves useful mass by only \(t\le4\).
+
+**Corrections and evidence.** The hostile audit corrected the public genus character, \(4\)-torsion channel, undefined near-uniform scope, four-versus-two split-prime root count, and universal powering overclaim. Its authoritative Sage A02 checked 630 semiprimes, 21 exact occupancy cases, and nine finite abelian powering groups; the cache failure, JSON failure, and noncompliant diagnostic are retained and excluded. The proof-blind reconstruction independently recovered the corrected classification, exact probabilities, asymptotics, genus and powering scope, and auxiliary-prime construction without computation. P27 records only the corrected common theorem.
+
+**What would make a retry materially new.** A fully specified factor-free distribution on split-prime forms or a class-group walk with proved polynomial bit cost and inverse-polynomial useful mass; a computable order/exponent surrogate that makes a useful power without assuming the target data; a factor-revealing composition failure; or a real-quadratic/infrastructure mechanism. Merely resampling exact-uniform classes, adding inverse-orbit comparisons, or conditioning on the constant genus vector is covered.
