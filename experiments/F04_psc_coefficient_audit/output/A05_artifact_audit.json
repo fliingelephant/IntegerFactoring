@@ -1,0 +1,61 @@
+{
+  "artifact_sha256": {
+    "experiments/F04_psc_coefficient_audit/output/A03_theorem_stress.json": "f6fa8e986fee07c7b8c248ca3015da3ff1400bb2271f64d1df355ad026f10f5e",
+    "experiments/F04_psc_coefficient_audit/output/A03_theorem_stress_status.json": "faf1eade49ddd80cc773d214f5c78fce0d8650aff43ab150028b50fb57f5124f",
+    "experiments/F04_psc_coefficient_audit/output/A04_endpoints.json": "9fb793aefbeaddd1901ed612eb4a2a9fa9f9ec74ec526f3d0b46b93dea65b5d2",
+    "experiments/F04_psc_coefficient_audit/output/A04_full_exhaustion.json": "120ef676892e2165a50c78044dc8e3d149fc10b383ea78c0cb780db5fa8e4e2e",
+    "experiments/F04_psc_coefficient_audit/output/A04_full_exhaustion_status.json": "680ec814038ab46d4f286fb56ba85293960efd3bb3c82651a7df76785202f780",
+    "experiments/F04_psc_coefficient_audit/output/A04_rows.jsonl": "7b1d411243e808e199d8bdd9e89b63f48aecfd344f650d80cc1dcae3a4298cb7",
+    "experiments/F04_psc_coefficient_hard/output/R05_shift_1.json": "fc3e44e399550acc280045b83bfb0998aab0fbf93e637d192c58f1fb9f7f6a30",
+    "experiments/F04_psc_coefficient_hard/output/R08_full_degree_rows.jsonl": "93f611868864f43d914e0a53778a89950e8ae5610294a95b576e61b641728e40",
+    "experiments/F04_psc_coefficient_hard/output/R09_shift_2942.json": "5aa5bc417a139e4d6d978cbf1892e2d6c9cc9ac112c6725d22cfa0bf9bfc15f3"
+  },
+  "audit_passed": true,
+  "authoritative_full_exhaustion_run": "A04",
+  "authoritative_theorem_stress_run": "A03",
+  "boundary_values": [
+    {
+      "D_0": {
+        "mod_N": 18571362511521147,
+        "mod_factor_1": 11525863,
+        "mod_factor_2": 147232491
+      },
+      "D_2952": {
+        "mod_N": 14008969419013858,
+        "mod_factor_1": 38386070,
+        "mod_factor_2": 49417508
+      },
+      "global_residue_hash": "db82eb9b8ee3642792ec99af73f7dc07640e4d17ef176f1eaba22e4e169bd4ce",
+      "local_residue_hashes": [
+        "96c5cd358a44da272ad2420a0aac033527abff5eb00a598600f2d2cafb2697c3",
+        "1def7324bd999e1030ff8b299de1742a3ca6ab0f06e46dcfefeb4d4ae4d91f23"
+      ],
+      "shift": 1
+    },
+    {
+      "D_0": {
+        "mod_N": 3545270833081422,
+        "mod_factor_1": 84912487,
+        "mod_factor_2": 192618608
+      },
+      "D_2952": {
+        "mod_N": 12336691767860509,
+        "mod_factor_1": 4292146,
+        "mod_factor_2": 123011658
+      },
+      "global_residue_hash": "b7ce968d860b7ff84cb1eed0052ed18ea29e0b2a65f2cb9d0513d718b7f2a8a2",
+      "local_residue_hashes": [
+        "f4423d6e4a8f256089b48859a321b348b15b5f896b3d9e1482e392825c861358",
+        "9a9b40b09a656bcf4885197e9c001f2cf0e4dbe405e9c82c2ec6c0e82068c57e"
+      ],
+      "shift": 2942
+    }
+  ],
+  "elapsed_seconds": 0.030743750001420267,
+  "endpoint_exact_residue_vectors_match_reference": true,
+  "exact_local_determinant_statuses": 17375452,
+  "fresh_global_hashes_matching_reference_rows": 2942,
+  "fresh_rows_checked": 2942,
+  "global_coefficients_checked": 8687726,
+  "source_sha256": "08294257a9bcb9dddaa7c3a8fbed4ecab06770f3d7338a6c4bd66e46dd5d6c1f"
+}

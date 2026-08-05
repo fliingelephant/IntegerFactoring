@@ -1,0 +1,48 @@
+{
+  "abnormal_gap_case_count": 1788,
+  "case_count": 4932,
+  "constant_second_case_count": 182,
+  "direct_determinant_count": 17556,
+  "elapsed_seconds": 0.3118392920005135,
+  "examples": {
+    "abnormal_gap": {
+      "D": [
+        1,
+        0,
+        1
+      ],
+      "F": "x^3",
+      "G": "x^2 + x + 1",
+      "degrees": [
+        3,
+        2,
+        0
+      ],
+      "field": 2
+    },
+    "positive_gcd": {
+      "D": [
+        0,
+        1
+      ],
+      "F": "x^2",
+      "G": "x",
+      "degrees": [
+        2,
+        1
+      ],
+      "field": 2
+    }
+  },
+  "fields_and_max_first_degree": {
+    "2": 5,
+    "3": 4
+  },
+  "first_counterexample": null,
+  "normalization": "exhaustive monic inputs; nonzero rescaling preserves both degree chains and determinant vanishing",
+  "positive_gcd_case_count": 1790,
+  "source": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F04_psc_coefficient_audit/stress_field_theorem.sage",
+  "source_sha256": "2eae2b3d3a28c550ab26805519c79028c59e653dbeedd1e2244fe8768897b334",
+  "theorem_under_test": "D_j != 0 iff j is a nonzero Euclidean-remainder degree, including G",
+  "top_formula_checked_every_case": true
+}

@@ -181,7 +181,7 @@ is a proper factor. Conversely, known factors construct such a map by using iden
 
 ### C15 — the coefficient-hard AKS witness is also canonical-PSC-hard
 
-**Status:** candidate from the mandatory follow-up F04 kill test; hostile audit and proof-blind reconstruction pending.
+**Status:** promoted as P18 after hostile audit and proof-blind reconstruction.
 
 **Closest prior route and material difference.** The closest results are P11, which makes every standard AKS error coefficient a unit, and C13, whose canonical PSC separates P14 only because a raw leading coefficient already separates. C15 tests the strictly richer canonical determinant family on P11's coefficient-hard witness.
 
@@ -200,7 +200,13 @@ j\in\{d_1,\ldots,d_s\}
 \qquad(0\le j\le n).
 \]
 
-The candidate proof identifies \(D_j\) with the principal coefficient of the \(j\)-th subresultant and inducts through the Euclidean remainder chain, including the positive-gcd and top-index cases. This convention-sensitive lemma requires hostile verification.
+The hostile audit replaced the candidate's informal PRS block-scaling step by a direct kernel proof. The defining matrix is singular exactly when a nonzero bounded pair \((U,V)\) makes \(UF+VG\) have degree below \(j\). Extended-Euclidean cofactors supply such a pair inside every gap and below the gcd degree. At a remainder degree \(j=d_i\), the identity
+
+\[
+V R_i-T_i(UF+VG)=(VS_i-T_iU)F
+\]
+
+and the cofactor degree bounds force \((U,V)\) to be a polynomial multiple of \((S_i,T_i)\), which cannot lower \(R_i\)'s degree unless the pair is zero. This also covers positive gcd; at the top index \(D_n=\operatorname{lc}(G)^{m-n}\). An exhaustive stress test checked 17,556 defining determinants, including abnormal gaps and positive gcds, without a counterexample. Generic Sage `subresultants()` output is sparse on some inputs, so no proof relies on dense list indexing.
 
 **Finite obstruction.** On
 
@@ -215,6 +221,16 @@ for every standard shift \(1\le a\le2942\), the globally formed error has degree
 2953,2952,\ldots,1,0.
 \]
 
-The lemma therefore makes all \(2942\cdot2953=8{,}687{,}726\) canonical PSCs nonzero in each field, so every global PSC is a unit. R08 completed the entire standard range under a 900-second timeout; exact full PSC residues at shifts 1 and 2942 and R10's artifact audit cross-check the shortcut.
+The lemma therefore makes all \(2942\cdot2953=8{,}687{,}726\) canonical PSCs nonzero in each field, so every global PSC is a unit. The hostile A04 independently formed every global coefficient vector before local reduction, exhausted the entire range under a 900-second timeout, and checked 8,687,726 unit coefficients and 17,375,452 nonzero local determinant statuses. A05 matched all 2,942 fresh row hashes and both complete endpoint residue vectors against the discovery artifacts.
 
-**Exact remaining gap.** If verified, this refutes universal localization only for the fixed canonical PSCs in the standard minimal-\(r\), standard-shift AKS scan. It does not cover arbitrary Sylvester minors, other elimination transcripts, nonstandard moduli/shifts, or other group-algebra elements, and finite exhaustion supplies no top-level factoring theorem.
+**Verification result and remaining gap.** The proof-blind reconstruction recovered the determinant theorem from the defining kernel map, exhaustively checked 231,494 small-field determinants, materialized all 8,687,726 global coefficients independently, verified both complete local chains, and reconciled all 17,375,452 determinant statuses. It used a separate direct-composite exponentiation spot audit and generic FLINT remainder checks; its incidental pre-source diagnostic, failed build launch, and self-referential manifest failure are disclosed and non-authoritative. P18 refutes universal localization only for the fixed canonical PSCs in the standard minimal-\(r\), standard-shift AKS scan. It does not cover arbitrary Sylvester minors, other elimination transcripts, nonstandard moduli/shifts, joint-shift column matroids, or other group-algebra elements, and finite exhaustion supplies no top-level factoring theorem.
+
+### C16 — an exact multiplication-CVP reduction misses the tractable lattice classes
+
+**Status:** promoted as P19 after hostile audit and proof-blind reconstruction.
+
+**Closest prior route and material difference.** The closest route is F06/P10, which compresses low-to-high multiplication histories by scalar carry. C16 instead retains the full Boolean multiplication CSP, converts its affine integer solution set to a lattice, and asks for an exact closest vector.
+
+**Verified reduction.** For each of \(O(n)\) feasible factor-bit length pairs, introduce factor bits, one-hot truth-table variables for every product bit pair, and binary carry digits. The affine equations enforce marginal consistency and every schoolbook multiplication column, including the essential final carry equation. With \(M=O(n^2)\) integer coordinates, the affine solution lattice and an integral particular solution are computable by polynomial-bit HNF/SNF. The all-\(1/2\) target has squared distance at least \(M/4\) from every integer point, with equality exactly at binary points. Hence a valid factor witness gives optimum \(M/4\), while an affine system with no binary witness has optimum at least \(M/4+2\). An exact search-CVP answer at the baseline decodes and verifies a factor; rational targets can be scaled to an integer target, and embedded- or full-rank conventions have polynomial-size normalizations. The relative gap is only \(1+\Theta(1/M)\).
+
+**Verified structural boundary.** The exact constraint-incidence graph contains internally disjoint paths from every factor bit \(x_i\) to every factor bit \(y_j\), hence a subdivision of \(K_{a,b}\) and treewidth at least \(\min(a,b)\). The disjoint one-hot equations give codimension at least \(ab\). Dropping the truth-table consistency leaves a Toeplitz-like convolution system but loses Boolean rank one: for \(N=25\), the true outer-product matrix and a binary rank-3 matrix have identical anti-diagonal sums and carry sequence, so both attain the absolute half-target minimum. This only proves that not every relaxed closest matrix is itself a factor outer product. It does not rule out postprocessing that matrix—the displayed convolution polynomial actually retains the factor—or prove high width for every alternative rank-one encoding. The exact reduction therefore does not yet land in a class with a proved polynomial-time exact-CVP algorithm.

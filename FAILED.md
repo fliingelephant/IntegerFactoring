@@ -442,7 +442,7 @@ respectively. The exact type counts are \(\binom{\ell}{3}\), \(\ell(\ell^2-\ell)
 
 ## X12 — canonical PSC localization on the coefficient-hard AKS witness
 
-**Status:** candidate from the mandatory F04 follow-up kill test; hostile audit and proof-blind reconstruction pending.
+**Status:** promoted as P18 after hostile audit and proof-blind reconstruction.
 
 **Family:** F04.
 
@@ -450,7 +450,7 @@ respectively. The exact type counts are \(\binom{\ell}{3}\), \(\ell(\ell^2-\ell)
 
 **Closest prior route and material difference.** P11 closes raw coefficient gcds on the same input. C13 shows a canonical PSC can separate P14, but only where a raw coefficient already does. X12 applies the richer determinant family to the genuinely coefficient-hard P11 witness.
 
-**Candidate theorem and certificate.** Under C13's fixed determinant convention, a principal coefficient \(D_j(F,G)\) over a field is nonzero exactly when \(j\) occurs in the ordinary Euclidean remainder-degree sequence of \(F,G\). On
+**Hostile-audited theorem and certificate.** Under C13's fixed determinant convention, \(D_j(F,G)\) over a field is nonzero exactly when \(j\) occurs in the nonzero ordinary Euclidean remainder-degree sequence of \(F,G\), excluding the initial degree \(\deg F\) and including \(\deg G\) and the gcd degree. The audit replaced the discovery proof's unsupported informal PRS block-scaling step with a direct determinant-kernel and extended-Euclid argument, covering gaps, positive gcd, and \(D_{\deg G}=\operatorname{lc}(G)^{\deg F-\deg G}\). On
 
 \[
 N=20000000499999937
@@ -459,6 +459,26 @@ N=20000000499999937
 
 every globally formed standard error \(H_a\), \(1\le a\le2942\), has degree 2952 and unit coefficients. In both local fields, every Euclidean degree chain is the complete sequence \(2953,2952,\ldots,0\). Hence all 8,687,726 canonical determinants per field are nonzero and every global gcd is 1.
 
-**Evidence and scope.** Exact named R08 exhausts all shifts under a 900-second timeout; R05/R09 materialize all 2953 local PSC residues at the endpoint shifts, and R10 checks every row and artifact hash. R01/R02 failures and the noncompliant pre-source X00 probe are retained and excluded in experiments/F04_psc_coefficient_hard/RUN_MANIFEST.md. The degree-sequence theorem and full scan still require hostile audit and proof-blind reconstruction. Finite computation refutes a universal auxiliary claim but proves no asymptotic factoring statement.
+**Evidence and scope.** Exact named R08 exhausts all shifts under a 900-second timeout; R05/R09 materialize all 2953 local PSC residues at the endpoint shifts, and R10 checks every row and artifact hash. The hostile audit's A03 checked 4,932 field pairs and 17,556 direct defining determinants; A04 independently reran every global coefficient and local degree chain; A05 passed every count/hash/endpoint/CRT check. The proof-blind reconstruction independently proved the theorem, checked 231,494 literal small-field determinants, materialized every global coefficient in a separate 69,513,632-byte artifact, verified both complete field chains, and reconciled every count and hash. All failed launches, source-retention limitations, sparse-Sage-list errors, the discovery's noncompliant X00, and the reconstruction's incidental pre-source diagnostic and packaging failure are disclosed and excluded. The corrected theorem and finite obstruction are P18 in `PROVED.md`. Finite computation refutes a universal auxiliary claim but proves no asymptotic factoring statement.
 
 **What would make a retry materially new.** A specified noncanonical minor family or elimination invariant with polynomially many globally computable entries and a proved inverse-polynomial local mismatch probability; or a nonstandard AKS modulus/error family not covered by this exact witness.
+
+## X13 — one-hot schoolbook multiplication as structured exact CVP
+
+**Status:** promoted as P19 after hostile audit and proof-blind reconstruction.
+
+**Family:** F11.
+
+**Classification:** method failure for landing the natural exact multiplication-CSP lattice in bounded-treewidth, fixed/low-codimension, or the naive Toeplitz convolution class. The exact factoring-to-CVP reduction itself survives as promoted theorem P19, and no lower bound against all structured lattice encodings is claimed.
+
+**Exact promoted reduction.** For each factor-length pair \(2\le a\le b\) with \(a+b\in\{n,n+1\}\), use factor bits, four one-hot tuple indicators for each \((i,j)\), and binary carry digits. Affine equations enforce tuple choice, shared marginals, all multiplication columns, and the final carry. Their binary solutions are exactly length-\((a,b)\) factorizations. If the system \(Az=d\) is integrally feasible, polynomial-bit HNF/SNF computes an integral point and a basis of \(\ker_{\mathbb Z}A\). In its \(M=O(n^2)\) integer coordinates, every point has squared distance at least \(M/4\) from the all-\(1/2\) target, with equality exactly for a binary solution; the next possible contribution raises squared distance by at least 2. Exact search CVP at the baseline therefore yields a verified factor, while prime, even, repeated-factor, prime-power, unbalanced, and arbitrary-composite handling and recursive cost are explicit. The approximation ratio tends to 1, so standard constant-factor approximation does not suffice.
+
+**Why the proposed structure fails.** The exact incidence graph contains a subdivision of \(K_{a,b}\), giving treewidth at least \(\min(a,b)\), and \(ab\) linearly independent one-hot equations give codimension at least \(ab\). The linear convolution relaxation omits \(Z=xy^T\). At \(N=25,a=b=3\), the true matrix from \((1,0,1)^T(1,0,1)\) and
+
+\[
+\begin{pmatrix}1&0&1\\0&1&0\\0&0&1\end{pmatrix}
+\]
+
+have the same padded anti-diagonal sums \((1,0,2,0,1,0)\) and carry sequence \((0,0,0,1,0,0,0)\), while the second has determinant 1 and rank 3. Both are binary and tie at the absolute half-target minimum, so not every relaxed optimum is certified as a factor outer product. This does not prove that all postprocessing fails; in this example the shared convolution polynomial is \((1+T^2)^2\) and still exposes 5.
+
+**Verification and exact remaining gap.** The hostile audit repaired the normal-form justification, fixed the scope to search CVP, and removed the two overclaims above. The proof-blind reconstruction independently recovered the final-carry convention, carry bound, polynomial-bit normal forms, embedded and full-rank CVP normalizations, gap, recursion, graph minor, codimension, and narrow \(N=25\) certificate. These corrected statements are P19 in `PROVED.md`. A polynomial-time exact-CVP algorithm for the high-width, high-codimension multiplication-gadget lattices would already imply arbitrary integer factoring through this reduction. A materially new retry needs an exact encoding that both preserves Boolean rank one and provably belongs to an independently tractable lattice class, or a new exact-CVP algorithm exploiting structure not captured by width or codimension.

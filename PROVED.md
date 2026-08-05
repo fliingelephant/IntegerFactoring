@@ -775,3 +775,227 @@ Calling an order-2 promise solver on every Jacobi-minus-one sample is therefore 
 **Geometric scope and certificates.** Over a separable closure, the order-dividing-3 and order-dividing-2 automorphism subschemes have constant ranks 3 and 4. Their varying rational-point counts are a descent phenomenon, including in characteristic 3. Hence full geometric nonemptiness or rank cannot detect the local mismatch, but this says nothing universal about coordinate projections or eliminants. On the promised example \(N=35,f=X^3+2\), the maps \(x\mapsto11x\) and \(x\mapsto16x\) expose 5. The proof-blind verifier also checked a characteristic-3 promised example over \(N=15\) and the order-2 counterexample above. Exact sources, timeouts, logs, outputs, and failed-run dispositions are preserved under `experiments/F10_autkill`, `experiments/F10_aut_audit`, and `experiments/F10_aut_reconstruct`.
 
 P17 is a method failure for obtaining a factoring advantage by directly searching for this natural component-selective cubic automorphism. It does not rule out other fixed-degree algebras, other certificates, or a factor-free descent mechanism that is not already the hidden CRT choice.
+
+## P18 — the coefficient-hard AKS witness is also hard for every fixed canonical PSC
+
+**Status:** promoted.
+
+**Verification record:** the field theorem and complete finite obstruction passed a focused hostile audit and a proof-blind end-to-end reconstruction. No cross-family audit has run.
+
+**Fixed determinant theorem.** Let \(K\) be a field and let nonzero \(F,G\in K[X]\) have degrees \(m>n\). For \(0\le j\le n\), define \(D_j(F,G)\) as the determinant of
+
+\[
+(U,V)\longmapsto UF+VG,
+\qquad \deg U<n-j,\quad \deg V<m-j,
+\]
+
+projected to coefficient degrees \(j,\ldots,m+n-j-1\), using increasing output rows, increasing shifts of \(F\) first, and then increasing shifts of \(G\). Run ordinary Euclidean division
+
+\[
+R_0=F,\quad R_1=G,\quad
+R_{i-1}=Q_iR_i+R_{i+1}
+\]
+
+through the last nonzero remainder \(R_s\), and write
+
+\[
+m=d_0>d_1=n>d_2>\cdots>d_s=g.
+\]
+
+Then
+
+\[
+D_j(F,G)\ne0
+\quad\Longleftrightarrow\quad
+j\in\{d_1,\ldots,d_s\}.
+\]
+
+This includes a positive-degree gcd, arbitrary abnormal degree gaps, a constant second polynomial, and the top formula
+
+\[
+D_n(F,G)=\operatorname{lc}(G)^{m-n}.
+\]
+
+**Proof.** Write \(R_i=S_iF+T_iG\). Extended Euclid gives coprime \(S_i,T_i\) and, for \(i\ge2\),
+
+\[
+\deg S_i=n-d_{i-1},\qquad
+\deg T_i=m-d_{i-1}.
+\]
+
+The defining matrix is singular exactly when a nonzero bounded pair makes \(UF+VG\) have degree below \(j\). If \(d_{i+1}<j<d_i\), the pair \((S_{i+1},T_{i+1})\) is within both bounds and maps to \(R_{i+1}\), whose degree is below \(j\). If \(j<g\), the exact syzygy \((G/R_s,-F/R_s)\) is within both bounds. Hence all indices outside the displayed remainder-degree set give zero determinants.
+
+Now take \(j=d_i\) and suppose a bounded pair gives \(L=UF+VG\) with \(\deg L<d_i\). The identity
+
+\[
+V R_i-T_iL=(VS_i-T_iU)F
+\]
+
+has both terms on its left of degree below \(m\); therefore its right side must be zero. Coprimality forces \((U,V)=C(S_i,T_i)\), whence \(L=CR_i\), which cannot have degree below \(d_i\) unless \(C=0\). Thus the square map is injective and \(D_{d_i}\ne0\). At \(i=1\), the \(U\)-space is zero and multiplication by \(G\) gives the same conclusion; its increasing-order matrix is triangular with the displayed top determinant. This proves the theorem without any PRS normalization or dense-list convention.
+
+**Finite AKS obstruction.** Set
+
+\[
+N=20000000499999937
+=100000007\cdot199999991,\qquad r=2953,\qquad
+P=X^{2953}-1.
+\]
+
+For every standard shift \(1\le a\le2942\), first form the degree-below-2953 global vector
+
+\[
+H_a=(X+a)^N-X^N-a
+\quad\text{in}\quad
+(\mathbb Z/N\mathbb Z)[X]/(P).
+\]
+
+Every \(H_a\) has degree 2952, and every one of the
+
+\[
+2942\cdot2953=8{,}687{,}726
+\]
+
+global coefficients is a unit modulo \(N\). Reducing those same global vectors to either factor field gives the complete ordinary Euclidean chain
+
+\[
+2953,2952,2951,\ldots,1,0
+\]
+
+for every shift. The theorem therefore makes all 8,687,726 fixed canonical determinants nonzero in each field, for 17,375,452 nonzero local statuses in total. Every corresponding global determinant is a unit, so no gcd from this entire fixed PSC scan splits \(N\).
+
+The hostile audit independently reconstructed every global vector before local reduction, checked all coefficient gcds and chains, materialized complete determinant residue vectors at shifts 1 and 2942, and passed a full artifact/hash audit. Its direct theorem stress test covered 4,932 field pairs and 17,556 defining determinants. The proof-blind reconstruction independently proved the theorem, checked 231,494 literal determinants over small fields, materialized all global vectors in a separate artifact, verified every field chain and status, and used both direct-composite exponentiation and a separate general-remainder implementation for spot checks.
+
+**Scope.** P18 is an exact finite counterexample to universal factor localization by individual coefficients, individual multiplication nullities, or the fixed canonical \(D_j\) family within this one standard minimal-\(r\), standard-shift AKS scan. It is not an asymptotic lower bound. It does not address nonstandard \(r\), other group-algebra errors, arbitrary Sylvester minors or pivot-dependent elimination transcripts, joint-shift column matroids, or a uniform separation theorem. The supplied factorization is used only to certify the two local reductions; no factoring algorithm follows.
+
+Every named source, timeout, log, output, and failed-run disposition is preserved under `experiments/F04_psc_coefficient_hard`, `experiments/F04_psc_coefficient_audit`, and `experiments/F04_psc_coefficient_reconstruct`. Non-authoritative failed launches, overwritten early source revisions, sparse Sage-list assumptions, incidental pre-source diagnostics, and manifest-packaging failures are all explicitly excluded from the proof.
+
+## P19 — complete factoring reduces exactly to search CVP on one-hot multiplication lattices, but the natural tractability claims fail
+
+**Status:** promoted.
+
+**Verification record:** the corrected theorem passed a focused hostile audit and a proof-blind reconstruction from a bare statement. No cross-family audit has run. All parts are symbolic; no computation is evidence for this result.
+
+**Exact affine multiplication system.** Let \(N\) be an odd composite of bit length \(n\). Enumerate
+
+\[
+2\le a\le b,\qquad a+b\in\{n,n+1\}.
+\]
+
+For a fixed pair put \(L=a+b\) and \(H=\lceil\log_2 a\rceil\). Use integer coordinates
+
+\[
+x_i\ (0\le i<a),\qquad y_j\ (0\le j<b),
+\]
+
+four tuple coordinates \(t_{ij}^{uv}\) for every \(0\le i<a\), \(0\le j<b\), and \((u,v)\in\{0,1\}^2\), and binary-digit coordinates for carries
+
+\[
+C_k=\sum_{h=0}^{H-1}2^h c_{k,h}\qquad(1\le k<L),
+\]
+
+with \(C_0=C_L=0\). Impose the affine integer equations
+
+\[
+\sum_{u,v}t_{ij}^{uv}=1,
+\]
+
+\[
+x_i=t_{ij}^{10}+t_{ij}^{11},\qquad
+y_j=t_{ij}^{01}+t_{ij}^{11},
+\]
+
+\[
+x_0=y_0=x_{a-1}=y_{b-1}=1,
+\]
+
+and, for every \(0\le k<L\),
+
+\[
+C_k+\sum_{i+j=k}t_{ij}^{11}=N_k+2C_{k+1},
+\]
+
+where \(N_k=0\) above the leading bit of \(N\). The last column equation is essential. The total number of integer coordinates is
+
+\[
+M=a+b+4ab+(L-1)H=O(n^2),
+\]
+
+and the system has \(O(n^2)\) equations with \(O(\log n)\)-bit coefficients.
+
+**Binary-solution theorem.** The binary solutions of this system are exactly the factorizations \(xy=N\) with bit lengths \((a,b)\). Indeed, one-hotness and the marginal equations force \(t_{ij}^{11}=x_i y_j\). Multiplying the column equations by \(2^k\) and summing telescopes the carries and gives \(xy=N\). Conversely, ordinary schoolbook multiplication supplies all tuple and carry coordinates for any such factorization. Its carries obey
+
+\[
+0\le C_k\le a-1,
+\]
+
+because each column contains at most \(a\) products and
+
+\[
+C_{k+1}=\frac{C_k+\sum_{i+j=k}x_i y_j-N_k}{2};
+\]
+
+therefore \(H\) digits suffice.
+
+Every nontrivial factorization has an ordering \(x\le y\) whose bit lengths occur in the enumeration, since
+
+\[
+2^{a+b-2}\le N<2^{a+b}
+\quad\Longrightarrow\quad
+a+b\in\{n,n+1\}.
+\]
+
+This includes unbalanced composites, repeated factors, and prime powers.
+
+**Exact CVP reduction.** Write the system as \(Az=d\). Polynomial-bit HNF or SNF decides integral feasibility and, when feasible, computes an integral particular solution \(z_0\) and a basis \(B\) of \(\ker_{\mathbb Z}A\). Thus its integral solutions are the affine lattice
+
+\[
+z_0+B\mathbb Z^r.
+\]
+
+At the target \(h=\tfrac12\mathbf 1\), every integral coordinate contributes at least \(1/4\) to squared distance, with equality exactly at 0 or 1. Hence
+
+\[
+\min_{Az=d,\ z\in\mathbb Z^M}\|z-h\|^2=M/4
+\]
+
+exactly when a binary multiplication witness exists; otherwise the minimum is at least \(M/4+2\). Every minimizer at the baseline is therefore a valid factor witness. Equivalently, query the embedded integer lattice generated by \(2B\) at the integer target
+
+\[
+\mathbf 1-2z_0.
+\]
+
+This multiplies squared distances by four, so the baseline and separation become \(M\) and at least \(M+8\). A polynomial-size padding also converts the instance to a convention requiring full ambient rank. The oracle must return a closest vector: this is a reduction to search exact Euclidean CVP, not merely an invocation of an unspecified decision oracle.
+
+Even inputs are split directly and deterministic polynomial-time primality testing terminates prime leaves. At each odd composite node, try the \(O(n)\) length pairs, skip integrally infeasible systems, decode and directly verify a baseline answer, and recurse on the two factors. The factorization tree has \(O(n)\) nodes, so this is a deterministic polynomial-bit Turing reduction from complete integer factoring to exact search CVP on this explicit lattice family, with \(O(n^2)\) oracle calls of polynomial size.
+
+**The natural structural shortcuts do not follow.** In the displayed variable-equation incidence graph, every pair \((i,j)\) supplies the internally disjoint path
+
+\[
+x_i-E^x_{ij}-t_{ij}^{11}-E^y_{ij}-y_j.
+\]
+
+Deleting other incidences and contracting these paths produces \(K_{a,b}\), so this presentation has treewidth at least \(\min(a,b)\). Its \(ab\) one-hot rows are linearly independent, since each contains a private \(t_{ij}^{00}\) coordinate, so the affine lattice has codimension at least \(ab\). These are claims about this presentation, not universal lower bounds for every exact encoding or every basis of the same lattice.
+
+Dropping the tuple consistency and keeping only a lifted binary matrix \(W=(w_{ij})\), its anti-diagonal sums, and the carries gives a lower-codimension convolution relaxation but loses Boolean rank one. For \(N=25\), \(a=b=3\), the genuine lift and a spurious lift are
+
+\[
+W_{\rm true}=
+\begin{pmatrix}
+1&0&1\\
+0&0&0\\
+1&0&1
+\end{pmatrix},
+\qquad
+W_{\rm spurious}=
+\begin{pmatrix}
+1&0&1\\
+0&1&0\\
+0&0&1
+\end{pmatrix}.
+\]
+
+Both have anti-diagonal sums \((1,0,2,0,1,0)\) and carries \((0,0,0,1,0,0,0)\), but \(\det W_{\rm spurious}=1\). Both are binary and attain the absolute half-target baseline, while the second is not an outer product. This proves only that a closest relaxed matrix need not itself decode as a factor matrix. It does not rule out all postprocessing—the common convolution polynomial in this example factors as \((1+T^2)^2\)—and it proves no width lower bound for every possible restoration of rank one.
+
+**Scope.** P19 is a rigorous oracle reduction and a precise failure of the displayed bounded-width, low-codimension, and direct relaxed-decoding arguments. It supplies no polynomial-time algorithm for exact CVP on these lattices. Proving such an algorithm would already prove polynomial-time classical factoring through the reduction, while no theorem here excludes a different exact lattice encoding or favorable presentation.
+
+The complete derivation and its two independent checks are preserved under `experiments/F11_structured_cvp_kill`, `experiments/F11_structured_cvp_audit`, and `experiments/F11_structured_cvp_reconstruct`.

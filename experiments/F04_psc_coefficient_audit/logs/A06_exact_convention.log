@@ -1,0 +1,7 @@
+{"DOT_SAGE": "/private/tmp/f04_psc_coefficient_audit_sage", "command": ["sage", "experiments/F04_psc_coefficient_audit/verify_exact_convention.sage", "--output", "experiments/F04_psc_coefficient_audit/output/A06_exact_convention.json"], "event": "start", "run_id": "A06_exact_convention", "started_utc": "2026-08-05T17:52:17.785837+00:00", "timeout_seconds": 180}
+Traceback (most recent call last):
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F04_psc_coefficient_audit/verify_exact_convention.sage.py", line 72, in <module>
+    subresultants[index - gcd_degree][index]
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+IndexError: list index out of range
+{"disposition": "failed", "duration_seconds": 1.868494374997681, "event": "finish", "exit_code": 1, "finished_utc": "2026-08-05T17:52:19.654352+00:00", "run_id": "A06_exact_convention", "timed_out": false}

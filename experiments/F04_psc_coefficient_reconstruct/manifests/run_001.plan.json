@@ -1,0 +1,14 @@
+{
+  "run_id": "run_001",
+  "family_id": "F04_psc_coefficient_reconstruct",
+  "stages": [
+    {"name": "preflight", "timeout_seconds": 120, "source": "src/preflight.py"},
+    {"name": "theorem_exhaustive", "timeout_seconds": 600, "source": "src/theorem_exhaustive.py"},
+    {"name": "generate_global", "timeout_seconds": 7200, "source": "src/generate_global.cpp"},
+    {"name": "verify_complete", "timeout_seconds": 14400, "source": "src/verify_complete.cpp"},
+    {"name": "spot_audit", "timeout_seconds": 3600, "source": "src/spot_audit.cpp"},
+    {"name": "artifact_audit", "timeout_seconds": 900, "source": "src/artifact_audit.py"}
+  ],
+  "failure_policy": "Any timeout or nonzero exit writes a stage failure disposition and stops the run. The failed run and its source manifest remain preserved."
+}
+
