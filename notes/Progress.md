@@ -355,3 +355,19 @@ The \(2\times2\) matrix action remains succinct. For \(M_a=\operatorname{diag}(a
 This gives conditional expected-polynomial direct prime extraction whenever the stabilizers differ, but the probability is \(1/4\) at \(N=15,\alpha=1+i+2j+3k\) and \(0\) at \(N=39,\alpha=1+i+j+6k\).
 
 **Verification result and remaining gap.** The hostile audit corrected selector quantifiers, actual-versus-projective unit sampling, characteristic-\(3\) language, scan scope, and random-bit cost; the proof-blind reconstruction recovered the entire corrected theorem and both certificates. No factor-free expected-polynomial sampler is known to reach the mismatch stratum with inverse-polynomial probability. Mixed-handed four-square-finder output, sample-combining maps, and non-collision invariants remain open.
+
+### C26 — the exact level-two Eisenstein metric oracle is just the divisor-sum trace
+
+**Status:** promoted as P29 after hostile audit and proof-blind reconstruction.
+
+**Closest prior route and material difference.** P26 studies explicit numerical searches for an Archimedean approximation to \(p+q\). C26 instead asks for a fixed modular-form coefficient at the binary-encoded index \(N\), including exact, sufficiently large modular, and known additive-polynomial interfaces.
+
+**Verified boundary.** The fixed form
+
+\[
+2E_2(2z)-E_2(z)=1+24\sum_{m\ge1}\sigma_1(m_{\rm odd})q^m
+\]
+
+lies in \(M_2(\Gamma_0(2))\). For distinct odd \(N=pq\), its arithmetic Hecke coefficient is \(b_N=N+p+q+1\). Exact \(b_N\), \(24b_N\) modulo a caller-supplied \(O(\log N)\)-bit modulus, or a known additive polynomial approximation therefore recovers \(p+q\) and factors by the integer discriminant in deterministic polynomial bit complexity. Conversely, the factors compute every such output.
+
+**Verification result and remaining gap.** The hostile audit checked modularity at both cusps, normalization, decoding inequalities, promise scope, and bit lengths; the proof-blind reconstruction independently recovered the complete proof. The result constructs no evaluator and is false as stated for repeated or even semiprimes. Coarse or fixed-small-modulus data, cusp forms, twists, other levels and weights, Brandt or modular-symbol invariants, and any genuinely different metric information remain open.

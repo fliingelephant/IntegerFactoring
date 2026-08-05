@@ -1963,3 +1963,109 @@ N=39,\qquad \alpha=1+i+j+6k,
 they are the same order-\(3\) subgroup, giving success \(0\). No factor-free expected-polynomial method is known for finding a mismatch-stratum \(\alpha\) with inverse-polynomial probability. Thus the exact conditional extractor is not a top-level factoring algorithm.
 
 The candidate, corrected hostile audit and complete finite scan, and proof-blind reconstruction are preserved under `experiments/F15_hurwitz_bias_kill`, `experiments/F15_hurwitz_bias_audit`, and `experiments/F15_hurwitz_bias_reconstruct`.
+
+## P29 — the fixed level-two Eisenstein metric coefficient is a semiprime divisor-sum oracle
+
+**Status:** promoted.
+
+**Verification record:** modularity and both cusps, the Fourier coefficients, arithmetic Hecke normalization, exact promise identity, all three oracle interfaces, decoding and bit lengths, converse computation, and the repeated/even counterexamples passed a focused hostile audit and a proof-blind end-to-end reconstruction. No cross-family audit has run.
+
+Define
+
+\[
+F(z)=2E_2(2z)-E_2(z)
+=1+24\sum_{m\ge1}b_mq^m.
+\]
+
+The quasimodular anomalies in the two \(E_2\) terms cancel on \(\Gamma_0(2)\). At the non-infinity cusp,
+
+\[
+(F|_2S)(z)=\frac12E_2(z/2)-E_2(z),
+\]
+
+which has no negative powers of the width-two parameter \(e^{\pi iz}\). Hence
+
+\[
+F\in M_2(\Gamma_0(2)).
+\]
+
+Direct coefficient subtraction gives
+
+\[
+b_m=\sigma_1(m)-2\mathbf1_{2\mid m}\sigma_1(m/2)
+=\sigma_1(m_{\rm odd}).
+\]
+
+The space \(M_2(\Gamma_0(2))\) is one-dimensional. For odd \(m\), under the standard arithmetic weight-two Hecke normalization,
+
+\[
+T_m(F/24)=b_m(F/24).
+\]
+
+A unitary normalization instead rescales the eigenvalue by \(m^{-1/2}\).
+
+**Exact factor-trace identity.** If
+
+\[
+N=pq
+\]
+
+for distinct odd primes, with no balance assumption, then
+
+\[
+b_N=\sigma_1(N)=(p+1)(q+1)=N+p+q+1.
+\]
+
+Thus \(s=b_N-N-1=p+q\), and
+
+\[
+D=s^2-4N=(q-p)^2.
+\]
+
+Exact integer square root, parity, nontriviality, ordering, and product checks recover and verify \(p,q\). This terminal extraction uses no gcd.
+
+**Three precise high-information interfaces suffice.** Let
+
+\[
+n=\lceil\log_2(N+1)\rceil,\qquad M=2^n.
+\]
+
+Each of the following fixed uniform worst-case polynomial-time interfaces gives a deterministic one-call polynomial-bit factorization of every promised \(N\):
+
+1. exact \(b_N\), the exact arithmetic Hecke eigenvalue, or the exact unnormalized coefficient \(24b_N\);
+2. \(24b_N\bmod Q\) for arbitrary caller-supplied \(O(n)\)-bit \(Q\); choose
+
+   \[
+   Q=24M.
+   \]
+
+   Divide the canonical least residue by \(24\) to obtain \(b_N\bmod M\), then reduce \(b_N-(N+1)\) modulo \(M\). Since
+
+   \[
+   0<p+q<N+1\le M,
+   \]
+
+   its least residue is the ordinary integer \(p+q\);
+3. an exactly encoded integer \(h\) satisfying \(|h-b_N|\le K(n)\) for an explicit known numerical polynomial \(K\). Enumerate the polynomial-width interval for \(p+q\), apply the discriminant decoder to every candidate, and return only a verified product.
+
+All exact answers and intermediate values have \(O(n)\) bits; the modular choice has \(n+5\) bits; integer square root and the polynomial scan have deterministic polynomial bit complexity. An unspecified floating-point approximation, unknown polynomial, relative error, fixed small modulus, or nonuniform oracle is not covered.
+
+**Converse and exact scope.** A supplied complete factorization of arbitrary \(m\) computes
+
+\[
+b_m
+=\prod_{\ell^e\parallel m_{\rm odd}}
+(1+\ell+\cdots+\ell^e)
+\]
+
+and therefore every displayed output in polynomial bit complexity. Mutual polynomial-time reducibility is proved only for the distinct-odd-semiprime promise. It is false under broader semiprime wording:
+
+\[
+b_9=13\ne9+3+3+1,
+\qquad
+b_6=\sigma_1(3)=4\ne6+2+3+1.
+\]
+
+This theorem is exactly the familiar divisor-sum trace identity packaged in a fixed Eisenstein series. It does not construct any coefficient evaluator, factor arbitrary integers, or prove a lower bound. It says nothing adverse about cusp forms, character twists, other levels or weights, fixed-small-modulus or coarse data, low-index Hecke data, Brandt or modular-symbol invariants, or any automorphic invariant with a genuinely different information path.
+
+The candidate, corrected hostile audit, and proof-blind reconstruction are preserved under `experiments/F19_hecke_metric_kill`, `experiments/F19_hecke_metric_audit`, and `experiments/F19_hecke_metric_reconstruct`.

@@ -743,3 +743,37 @@ where \(H_r(\alpha)\) is the stabilizer of its local row line under the faithful
 **Evidence.** The hostile audit independently proved all orbit, sampling, menu, handedness, stabilizer, and complexity statements; corrected memoryless versus stateful quantifiers and small-characteristic wording; directly checked norm-\(r\) right divisors; and completed all 53 distinct odd semiprimes through 300. The proof-blind reconstruction recovered the corrected theorem and both hand certificates without seeing the proof. P28 records the common theorem.
 
 **What would make a retry materially new.** A fully specified factor-free expected-polynomial sampler with a proved inverse-polynomial probability of \(H_p(\alpha)\ne H_q(\alpha)\); a transform that genuinely combines samples and comes with a distribution theorem; a mixed row/image or mixed-handed construction not controlled by the finite-menu bound; or a non-collision Hurwitz invariant. Another coordinate slice, coordinate rejection sampler, or polynomial menu of separate fixed transforms is covered by P28.
+
+## X23 — the exact level-two Eisenstein coefficient as an independent metric primitive
+
+**Status:** promoted as P29 after hostile audit and proof-blind reconstruction.
+
+**Family:** F15.
+
+**Classification:** factorization equivalence for the exact high-information interfaces \(b_N\), \(24b_N\), caller-supplied \(O(\log N)\)-bit modular output, and a known additive polynomial-width approximation on the distinct-odd-semiprime promise. This is not a failure of automorphic methods generally, nor of fixed-small-modulus, coarse, cuspidal, twisted, Brandt, or modular-symbol data.
+
+**Closest prior route and material difference.** X20/P26 tests numerical scaled-Fermat scans and literal CRT trace wheels. X23 asks for a fixed modular-form coefficient at a binary-encoded index. Its terminal decoder is an exact discriminant computation and uses no gcd, but evaluating the coefficient is the entire missing problem.
+
+**Exact obstruction.** For
+
+\[
+F(z)=2E_2(2z)-E_2(z)=1+24\sum_{m\ge1}b_mq^m\in M_2(\Gamma_0(2)),
+\]
+
+one has
+
+\[
+b_m=\sigma_1(m_{\rm odd}).
+\]
+
+Hence, for \(N=pq\) with distinct odd primes,
+
+\[
+b_N=N+p+q+1.
+\]
+
+Exact \(b_N\) reveals \(p+q\). So does \(24b_N\bmod 24\cdot2^n\), where \(n=\lceil\log_2(N+1)\rceil\), because \(0<p+q<2^n\). A known exactly encoded bound \(|h-b_N|\le K(n)\) with numerical polynomial \(K\) leaves only polynomially many trace candidates. In every case the discriminant \((p+q)^2-4N\) recovers and verifies the factors in deterministic polynomial bit complexity. Conversely, a complete factorization computes \(b_m\) multiplicatively.
+
+The promise is essential: \(b_9=13\) and \(b_6=4\) do not obey the distinct-prime trace formula. The theorem packages the familiar divisor sum in an Eisenstein series; it supplies no factor-free evaluator and no lower bound.
+
+**What would make a retry materially new.** A fixed-small-modulus or coarse-relative interface, a cusp form or nontrivial twist, another level or weight, low-index Hecke data, Brandt or modular-symbol data, or any automorphic observable with a proved polynomial evaluator and an information path not already equal to \(\sigma_1\). Re-presenting the exact divisor sum as a metric or spectral oracle is covered by P29.
