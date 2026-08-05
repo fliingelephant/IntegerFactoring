@@ -2180,3 +2180,315 @@ Along an infinite balanced family \(p<q<2p\), every fixed polynomial number of i
 This does not control the image of a left-normalized right-gcd output, the row of a right-normalized left-gcd output, mixed-handed comparisons, sample-dependent nonlinear combinations, even or repeated-prime norms, completions that inspect the particular fibre point, or non-collision quaternion invariants.
 
 The candidate, corrected hostile audit, and proof-blind reconstruction are preserved under `experiments/F20_four_square_fibre_kill`, `experiments/F20_four_square_fibre_audit`, and `experiments/F20_four_square_fibre_reconstruct`.
+
+## P31 — mixed-handed four-square comparisons stay sparse independently, while the same-source graph survives
+
+**Status:** promoted.
+
+**Verification record:** conditional CRT product-uniformity, arbitrary transcript-dependent normalization, the exact constants \(12,27,378\), every independent comparison hand and both product orders, the total raw row--image graph, both split-free cross-hand criteria, the complete \(N=91\) certificate, and the two-or-four pooled-span theorem passed a corrected hostile audit and a proof-blind end-to-end reconstruction. No cross-family audit has run.
+
+Retain P30's notation. Thus \(N=pq\) for distinct odd primes, the four-square source is residual-only, and for
+
+\[
+s_r=r-\left(\frac{-1}{r}\right),
+\qquad
+\mathcal S_r=\{[u:v]:u^2+v^2\ne0\},
+\]
+
+the local row line and, separately, the local image line of a raw output \(\beta\) are uniform on \(\mathcal S_r\).
+
+**The CRT law is a product law.** Conditional on any positive-probability accepted residual and all completion randomness,
+
+\[
+(\operatorname{row}_p\beta,\operatorname{row}_q\beta)
+\quad\text{is uniform on }\mathcal S_p\times\mathcal S_q,
+\]
+
+and the image pair is separately uniform on the same product. This does not make the row and image of one \(\beta\) independent.
+
+Let \(D_R\) be a greatest common right divisor of \(N\) and \(\beta\), normalized on the left by an arbitrary function of its entire call transcript. If \(r'\) is the other prime, then every local image atom obeys
+
+\[
+\Pr(\operatorname{im}_rD_R=L)
+\le
+\min\left(1,\frac{12(r'+1)}{s_rs_{r'}}\right)
+\le
+\min\left(1,\frac{27}{r+1}\right).
+\]
+
+Dually, if \(D_L\) is a separately computed greatest common left divisor with arbitrary transcript-dependent right normalization, every atom of \(\operatorname{row}_rD_L\) obeys the same bound. The incidence proof counts the full 12 projective unit classes; it assumes no canonical Euclidean-algorithm normalization.
+
+**All independent direct comparisons remain rare.** For two independent finder calls, a one-sided gcd in either hand between any choices from \(\{D_R,D_L\}\), or either product-zero test \(AB=0\) and \(BA=0\), reduces locally to equality of two projective lines, at least one of which has atom at most \(27/(r+1)\). Hence one fixed comparison has proper-outcome probability at most
+
+\[
+27\left(\frac1{p+1}+\frac1{q+1}\right).
+\]
+
+A predetermined menu of \(T\) fixed projective transforms and all pairs among \(K\) independent outputs add only the explicit union factor \(K^2T\). On an infinite balanced family \(p<q<2p\), polynomial \(K,T\) therefore give
+
+\[
+2^{-\frac12\log_2N+O(\log\log N)}
+\]
+
+success. A joint rule that chooses normalizations or combinations after seeing several calls is not covered.
+
+For one wrong-handed output, the projective Hurwitz-unit group \(G\simeq A_4\) has at most 14 exceptional projective lines with nontrivial stabilizer in every odd characteristic. Thus the complete twelve-unit wrong-hand stabilizer menu is bounded by
+
+\[
+378\left(\frac1{p+1}+\frac1{q+1}\right),
+\]
+
+with the dual statement for \(D_L\).
+
+**The raw same-source dependence is exact.** Write \(C=zj+wk\). In a local split put
+
+\[
+J_{C,r}=
+\begin{pmatrix}A&B\\B&-A\end{pmatrix},
+\qquad
+J_{C,r}^2=-(z^2+w^2)I.
+\]
+
+The accepted residual makes this scalar a unit, and at every supported point, including both exceptional descriptions,
+
+\[
+\operatorname{im}_r\beta
+=J_{C,r}\operatorname{row}_r\beta.
+\]
+
+Consequently the two same-source cross hands admit the exact split-free tests
+
+\[
+\operatorname{row}_r(D_LU)=\operatorname{row}_r\beta
+\iff
+2[i](\bar C D_LU)\equiv0\pmod r,
+\]
+
+and
+
+\[
+\operatorname{im}_r(UD_R)=\operatorname{im}_r\beta
+\iff
+2[i](\bar CUD_R)\equiv0\pmod r.
+\]
+
+Changing the allowed normalization only permutes the full twelve-class menu.
+
+These criteria have no pointwise guarantee. For
+
+\[
+N=91,\quad M=273,\quad \beta=172+82i+k,
+\]
+
+one may take
+
+\[
+D_R=\frac{-19+i+j+k}{2},
+\qquad
+D_L=\frac{-19+i-j+k}{2}.
+\]
+
+Both have norm 91 and satisfy the required right/left factorizations. In one fixed projective-unit order, the two complete coefficient menus are
+
+\[
+(-1,1,-19,-1,9,8,-10,-11,10,9,-9,-10)
+\]
+
+and
+
+\[
+(1,-1,-19,1,10,11,-9,-8,9,10,-10,-9).
+\]
+
+Every entry is coprime to 91. This finite certificate refutes only a universal twelve-unit guarantee; it has no asymptotic force.
+
+**A narrow linear pool also collapses to equality.** Put
+
+\[
+Q_t=\bar C_tD_{L,t},
+\qquad
+L_{t,r}=\operatorname{row}_r\beta_t.
+\]
+
+Then \(\operatorname{im}_rQ_t=L_{t,r}\) and
+
+\[
+Q_tM_2(\mathbf F_r)
+=\{X:\operatorname{im}X\subseteq L_{t,r}\}
+\]
+
+is a two-dimensional right ideal. The pooled span for a nonempty subset has dimension two exactly when all its \(L_{t,r}\) coincide, and dimension four otherwise; dimension three never occurs. Therefore every fixed polynomial family of dimension-only subset profiles is just a polynomial union of equality/birthday events.
+
+This theorem does **not** cover adaptive or implicit subset selection, exact row spaces rather than their dimensions, coefficient/pivot/minor systems, resultants, noncommutative products, spectral or discrepancy statistics, nonlinear joint decoders, or a completion biased by the actual fibre point. Amortizing many coupled nonzero constraints is not refuted by the independent-ticket bounds.
+
+The candidate, corrected hostile audit and finite certificate, and proof-blind reconstruction are preserved under `experiments/F21_mixed_handed_four_square_kill`, `experiments/F21_mixed_handed_four_square_audit`, and `experiments/F21_mixed_handed_four_square_reconstruct`.
+
+## P32 — one complete real-infrastructure endpoint cycle can carry no single-endpoint factor hint
+
+**Status:** promoted.
+
+**Verification record:** the exact continued fraction, complete proper-form cycle, list/queue square classification with sign and counter-parity qualifications, repeated-factor audit, endpoint-only obstruction, infrastructure distance and reduction corrections, compact encodings, Terr bounds, regulator, exact published caps, and heuristic scope passed a corrected hostile audit and a proof-blind end-to-end reconstruction. No cross-family audit has run.
+
+For \(t\ge1\), set
+
+\[
+a=6t+1,
+\qquad
+N=a^2+2,
+\qquad
+\Delta=4N.
+\]
+
+Then \(N\) is odd and nonsquare, and
+
+\[
+N=3(12t^2+4t+1).
+\]
+
+Thus the family has the public nontrivial divisor 3 and is not a hard factoring family. It is also not uniformly squarefree: \(t=1\) gives \(51=3\cdot17\), \(t=3\) gives \(363=3\cdot11^2\), and \(t\equiv2\pmod3\) has \(9\mid N\).
+
+The continued fraction and the complete reduced proper principal cycle in the Gower--Wagstaff \(\rho\) convention are
+
+\[
+\sqrt N=[a;\overline{a,2a}],
+\qquad
+(1,2a,-2)\xleftrightarrow{\rho}(-2,2a,1).
+\]
+
+Every endpoint coefficient is coprime to \(N\). The only oriented positive right square coefficient is \(1\). It is already present in the sufficient list/queue and is the improper period-completion square, so the unmultiplied cycle contains no proper SQUFOF square.
+
+The sign and parity wording is essential. The negative coefficient \(-2\) cannot be replaced by its absolute value, and the two published pseudocode presentations have a local counter/index mismatch. In the invariant positive-right-end convention, \(C=1\) is tested and rejected as period completion; on the completely literal branch that skips that occurrence, no square is extracted. Neither reading produces a proper square.
+
+Therefore the following deliberately restricted observation model never exposes a factor: traverse or jump within this fixed unmultiplied principal infrastructure, discard every composition/reduction transcript, retain only the reduced endpoint, and apply only a coefficient gcd or the standard single-endpoint proper-square localization. The result says nothing about the public factor, multipliers, another discriminant, intermediate coefficients, reduction failures, relative generators, power products, or joint decoders.
+
+**The metric itself is small and exact.** The fundamental unit of \(\mathbf Z[\sqrt N]\) is
+
+\[
+\varepsilon=(N-1)+a\sqrt N,
+\qquad
+R=\log\varepsilon=\Theta(\log N).
+\]
+
+The two reduced principal endpoints lie at distances \(0\) and \(R/2\). Distance is injective on normalized reduced principal ideals, but composition adds distances only after retaining the reduction multiplier/correction. Neighbor gaps satisfy
+
+\[
+\frac1{\sqrt\Delta}<\delta_i<\frac12\log\Delta,
+\qquad
+\delta_i+\delta_{i+1}>\log2.
+\]
+
+Thus resolving an exact endpoint requires \(\frac12\log_2\Delta+O(1)\) fractional bits, and \(K\) approximate doublings require \(K+O(\log\Delta)\) guard bits. Compact power products can encode huge generators without expansion.
+
+Buchmann--Vollmer's named Terr algorithms have bit-time and bit-space upper bound
+
+\[
+O\left((\log\Delta+\sqrt R)(\log\Delta)^2\right).
+\]
+
+The term is the square root of the numeric regulator, and this is an algorithmic upper bound, not a lower bound. On this explicit family it is \(O((\log N)^3)\).
+
+The exact Gower--Wagstaff cap parameters are of order \(N^{1/4}\), but their body-pass counts depend on the published indexing convention. Their complexity theorems use explicit squarefree, distribution, random-walk, spacing, queue-density, and multiplier assumptions and are asymptotic averages, not per-input Las Vegas bounds. A cap is not a lower bound.
+
+Accordingly, P32 closes only unmultiplied endpoint-only single-form localization. Full transcripts, multipliers, relative generators, failure-event decoders, adaptive distance computations, and every general infrastructure/factoring possibility remain open.
+
+The candidate, corrected hostile audit, and proof-blind reconstruction are preserved under `experiments/F22_real_infrastructure_metric_kill`, `experiments/F22_real_infrastructure_metric_audit`, and `experiments/F22_real_infrastructure_metric_reconstruct`.
+
+## P33 — an exposed selective two-isogeny kernel is semiprime factoring, but its coarse neighbor is not
+
+**Status:** promoted.
+
+**Verification record:** the modular-polynomial specializations and collision primes, Vélu quotients and invariants, the rank-two étale subgroup/section equivalence, both gcd directions, the exact semiprime promise reduction and bit complexity, the \(N=143\) certificate and all power identities, and the narrow irreducibility/discriminant/CM boundaries passed a corrected hostile audit and a proof-blind end-to-end reconstruction. No cross-family audit has run.
+
+In the classical symmetric normalization,
+
+\[
+\Phi_2(0,Y)=(Y-54000)^3,
+\]
+
+\[
+\Phi_2(1728,Y)=(Y-1728)(Y-287496)^2,
+\]
+
+and
+
+\[
+\Phi_3(0,Y)=Y(Y+12288000)^3.
+\]
+
+The level-two roots at 1728 collide exactly in characteristics \(2,3,7\); the level-three roots at 0 collide in \(2,3,5\); and the source/target pair \(0,54000\) collides in \(2,3,5\).
+
+Let
+
+\[
+E_A:y^2=x^3+Ax
+\]
+
+over an odd base with \(A\) a unit. The public kernel generated by \((0,0)\) has quotient \(j=1728\). If \(s^2=-A\), either nonpublic kernel generated by \((\pm s,0)\) has quotient \(j=287496\). Nevertheless, if \(-A\) is a nonsquare over a finite field, Frobenius exchanges those two geometric points and neither nonpublic order-two subgroup descends from the fixed twist, even though the double coarse root \(287496\) is rational. A coarse modular-polynomial root is therefore weaker than a descended selective kernel.
+
+Now let \(N=pq\) with distinct odd primes and assume
+
+\[
+A\in(\mathbf Z/N\mathbf Z)^\times,
+\qquad
+\left(\frac{-A}{N}\right)=-1.
+\]
+
+A finite étale rank-two subgroup \(C\subset E_A[2]\) whose reduction differs from the public subgroup in at least one CRT component, represented so that its unique nonidentity section is recoverable, is exactly a residue \(u\) satisfying
+
+\[
+u(u^2+A)\equiv0\pmod N,
+\qquad
+u\not\equiv0\pmod N.
+\]
+
+Exactly one CRT component admits \(u^2=-A\). Thus every valid output is mixed and
+
+\[
+\{\gcd(u,N),\gcd(u^2+A,N)\}=\{p,q\}.
+\]
+
+Conversely, known factors construct the mixed \(u\) by taking a verified square root on the residue component, zero on the other, and applying CRT. Hence the exposed fine-kernel task and factorization are polynomial-time equivalent on this promise.
+
+Uniformly random \(A\bmod N\) reaches the unit Jacobi-minus-one promise with exact raw probability
+
+\[
+\frac{(p-1)(q-1)}{2pq}\ge\frac4{15}.
+\]
+
+Exact rejection sampling uses \(O(\log N)\) expected random bits. Promise tests, output verification, both gcds, and CRT have polynomial bit cost, so a uniform expected-polynomial fine-kernel solver gives a Las Vegas expected-polynomial factorization of every distinct odd semiprime. This is not a reduction for even, repeated-prime, prime-power, or multifactor inputs.
+
+For the exact good-prime certificate
+
+\[
+N=143=11\cdot13,
+\qquad A=1,
+\qquad u=44,
+\]
+
+one has
+
+\[
+\gcd(44,143)=11,
+\qquad
+\gcd(44^2+1,143)=13.
+\]
+
+The mixed quotient has \(j=1\). The pure coarse residue \(66\) also exists, illustrating that a coarse root alone need not select the descended nonpublic component.
+
+In \(\mathbf F_r[T]/(T^2+1)\), for every \(i\ge1\),
+
+\[
+T^{143^i}-T=
+\begin{cases}
+-2T,&i\text{ odd},\\
+0,&i\text{ even},
+\end{cases}
+\]
+
+at both \(r=11\) and \(r=13\). The true local Frobenius values are instead \(-2T\) and \(0\), respectively. Global \(N^i\)-powers synchronize and do not reproduce the selective local map.
+
+For fixed \(\ell\), irreducibility of \(\Phi_\ell\) over \(\mathbf Q(X)\) rules out only a universal rational-function coarse selector. Outside finitely many primes, a uniform \(j\in\mathbf F_r\) has a modular-polynomial discriminant collision with probability at most \(d_\ell/r\), but this says nothing about fixed CM points such as 0 and 1728. A characteristic-zero CM ideal label also needs compatible local endomorphism embeddings; the abstract label alone does not orient the unknown CRT components.
+
+P33 leaves open \(N\)-dependent selectors, higher-class-number CM with explicit embeddings, vertical and supersingular constructions, and every fine representation from which the selective section can actually be recovered. It proves no general selector lower bound.
+
+The candidate, corrected hostile audit, and proof-blind reconstruction are preserved under `experiments/F23_canonical_isogeny_neighbor_kill`, `experiments/F23_canonical_isogeny_neighbor_audit`, and `experiments/F23_canonical_isogeny_neighbor_reconstruct`.

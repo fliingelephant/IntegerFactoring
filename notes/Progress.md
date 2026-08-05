@@ -4,7 +4,7 @@ This is working state for nontrivial intermediate statements and the current syn
 
 ## Current synthesis
 
-The source material has been read in full. Sixteen approach families have been opened, primarily from materially different mechanisms in `notes/Inspirations.md` with additional factor-trace and noncommutative routes; promoted narrow results and exact open gaps are tracked below and in the registry. The current non-residue-ring frontier is a factor-free way to manufacture either a fine metric hint, a useful class-group bias, or a Hurwitz local-stabilizer mismatch. `notes/Zhihu.md` supplies background and motivation only.
+The source material has been read in full. Nineteen approach families have been opened, primarily from materially different mechanisms in `notes/Inspirations.md` with additional factor-trace, noncommutative, and hidden-modulus metric routes; promoted narrow results and exact open gaps are tracked below and in the registry. The current non-residue-ring frontier is a factor-free way to manufacture either a fine metric hint, a useful class-group/isogeny orientation, or a genuinely joint Hurwitz relation decoder. `notes/Zhihu.md` supplies background and motivation only.
 
 ## Working claims
 
@@ -381,3 +381,66 @@ lies in \(M_2(\Gamma_0(2))\). For distinct odd \(N=pq\), its arithmetic Hecke co
 **Verified boundary.** Conditional on the residual and fresh completion data, both local lines are uniform on \(\mathcal S_r=\{[u:v]:u^2+v^2\ne0\}\), of size \(r-(-1/r)\). A left-normalized gcrd inherits the row, and a separately computed right-normalized gcld inherits the image. Polynomially many matched-handed pair tests, all fixed unit translates, and the matched within-output stabilizer test therefore have exponentially small success on an infinite balanced family. The exact auxiliary modulus \(M=nP/\gcd(n,P)\), primitivity argument, rejection distribution, and expected bit/random-bit complexity all survive audit and blind reconstruction.
 
 **Verification result and remaining gap.** The theorem deliberately does not identify the image of a gcrd output or the row of a gcld output. Mixed-handed tests, nonlinear combinations of multiple samples, fibre-point-dependent completions, even or repeated-prime norms, and non-collision invariants remain open. This is also the precise place to test whether “many lucky relations” means only a union of rare events, already blocked, or a genuinely joint decoder that accumulates partial constraints.
+
+### C28 — mixed-handed independent tickets are sparse, but their same-source graph is exact
+
+**Status:** promoted as P31 after hostile audit and proof-blind reconstruction.
+
+**Closest prior route and material difference.** C27 controls matched hands and local marginals. C28 proves conditional product-uniformity across the two CRT primes, permits arbitrary transcript-dependent one-sided normalization, covers every independent comparison hand and product order, and then retains the exact row--image dependence within one raw output.
+
+**Verified boundary.** Every wrong orientation of an arbitrarily normalized one-sided divisor has local atom at most
+
+\[
+\frac{12(r'+1)}{s_rs_{r'}}\le\frac{27}{r+1}.
+\]
+
+Polynomial independent calls, fixed projective menus, all pairwise one-sided gcds, both product orders, and wrong-hand unit stabilizers are therefore exponentially sparse on balanced semiprimes. For one source, however,
+
+\[
+\operatorname{im}_r\beta=J_{C,r}\operatorname{row}_r\beta,
+\]
+
+and both mixed hands have exact split-free coefficient criteria. A complete \(N=91\) certificate makes all twelve coefficients in both menus coprime to \(91\). The orbit blocks \(Q_tM_2\) pool to dimension two iff their hidden lines coincide and dimension four otherwise.
+
+**Verification result and remaining gap.** Audit and blind reconstruction recovered every constant, hand, exceptional point, factorization, and quantifier. The result closes only unions of independent tickets and fixed dimension-only subset profiles. Adaptive/implicit subsets, exact row spaces, coefficient/pivot/minor systems, resultants, noncommutative products, spectral statistics, nonlinear joint decoders, and fibre-point bias remain open.
+
+### C29 — a two-form real-infrastructure endpoint cycle need not localize a factor
+
+**Status:** promoted as P32 after hostile audit and proof-blind reconstruction.
+
+**Closest prior route and material difference.** P27 treats unordered imaginary-class ambiguity. C29 studies an ordered real principal infrastructure, its exact metric, and the SQUFOF proper-square localization rule.
+
+**Verified boundary.** For \(a=6t+1\), \(N=a^2+2\), and \(\Delta=4N\),
+
+\[
+\sqrt N=[a;\overline{a,2a}],
+\qquad
+(1,2a,-2)\xleftrightarrow{\rho}(-2,2a,1).
+\]
+
+All endpoint coefficients are coprime to \(N\); the only positive right square \(1\) is improper period completion. The two endpoints lie at \(0,R/2\), with fundamental unit \((N-1)+a\sqrt N\) and \(R=\Theta(\log N)\). Exact reduction corrections, gap/precision bounds, compact encodings, and the Terr upper bound were reconstructed with their proper scope.
+
+**Verification result and remaining gap.** The family has the public factor \(3\), admits repeated factors, and has small regulator. It obstructs only unmultiplied endpoint-only coefficient gcd/proper-square extraction. Multipliers, other discriminants, intermediate transcripts, relative generators, failure events, and joint metric decoders remain open; no infrastructure lower bound is claimed.
+
+### C30 — fine two-isogeny orientation is the factor, while coarse orientation is missing
+
+**Status:** promoted as P33 after hostile audit and proof-blind reconstruction.
+
+**Closest prior route and material difference.** P09 studies a blindly substituted Frobenius rank. C30 asks instead for a canonical isogeny neighbor and separates the coarse modular-polynomial target from the fine descended kernel.
+
+**Verified boundary.** At \(j=1728\),
+
+\[
+\Phi_2(1728,Y)=(Y-1728)(Y-287496)^2.
+\]
+
+The double coarse root can be rational even when neither nonpublic two-torsion kernel descends from the fixed twist. On a distinct odd semiprime with \(A\) a unit and \(\left(\frac{-A}{N}\right)=-1\), an exposed selective rank-two kernel is exactly
+
+\[
+u(u^2+A)\equiv0\pmod N,
+\qquad u\not\equiv0\pmod N,
+\]
+
+and its two complementary gcds are \(p,q\). Random \(A\) reaches the promise with probability at least \(4/15\); known factors construct the section by a local square root and CRT.
+
+**Verification result and remaining gap.** The hostile audit and blind reconstruction checked the modular-polynomial constants, descent distinction, subgroup-scheme equivalence, exact probability and bit complexity, \(N=143,A=1,u=44\) certificate, global-power synchronization, and narrow irreducibility/discriminant/CM bounds. No fine selector was constructed. \(N\)-dependent, higher-CM-with-embeddings, vertical, and supersingular mechanisms remain open.

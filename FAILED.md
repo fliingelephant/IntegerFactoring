@@ -808,3 +808,95 @@ A left-normalized gcrd inherits the row; a separately computed right-normalized 
 per matched hand. All fixed unit classes add only a constant. Exact supported-line stabilizer counts bound the within-output survivor by \(O(1/p+1/q)\). The Pollack--Treviño modulus is exactly \(\operatorname{lcm}(n,P)\), its kernel has the required residual-only interface, and its expected bit and exact-random-bit costs are polynomial. Hence every named direct test is exponentially sparse on an infinite balanced family.
 
 **What would make a retry materially new.** A mixed row/image or mixed-gcd construction with an exact law; a nonlinear map that combines several finder outputs and accumulates information jointly rather than unioning rare pair events; a completion allowed to depend on the fibre point with a proved useful bias; or a non-collision quaternion observable. Resampling the same finder and amortizing only by testing more independent matched-handed pairs is covered by P30.
+
+## X25 — independent mixed-handed four-square menus and dimension-only pooling
+
+**Status:** promoted as P31 after hostile audit and proof-blind reconstruction.
+
+**Family:** F14.
+
+**Classification:** method failure for polynomially many independent mixed-handed one-sided-gcd comparisons, both product orders, fixed projective transform menus, wrong-hand single-output stabilizer menus, and every fixed polynomial family of pooled orbit-span **dimensions**. This does not close a joint decoder that combines ubiquitous nonzero data.
+
+**Closest prior route and material difference.** X24/P30 controls only matched handedness and separate local marginals. X25 proves the full conditional CRT product law, controls arbitrary transcript-dependent normalization, covers every independent hand and product order, and then uses the exact same-source row--image graph to test both cross hands.
+
+**Exact obstruction.** With \(s_r=r-(-1/r)\), every wrong orientation of an arbitrarily normalized one-sided divisor has atom at most
+
+\[
+\frac{12(r'+1)}{s_rs_{r'}}\le\frac{27}{r+1}.
+\]
+
+Thus one fixed independent comparison succeeds properly with probability at most
+
+\[
+27\left(\frac1{p+1}+\frac1{q+1}\right),
+\]
+
+and polynomial calls, pairs, and fixed menus stay exponentially sparse on balanced semiprimes. The complete wrong-hand unit stabilizer menu has the analogous constant 378.
+
+For the same raw output,
+
+\[
+\operatorname{im}_r\beta=J_{C,r}\operatorname{row}_r\beta,
+\]
+
+and the two exact split-free menus are \(2[i](\bar C D_LU)\) and \(2[i](\bar CUD_R)\). At \(N=91\), the certified \(M=273\) output makes all twelve entries in both menus coprime to 91, so there is no pointwise guarantee.
+
+Finally, \(Q_t=\bar C_tD_{L,t}\) generates the two-dimensional right ideal of matrices with image in \(\operatorname{row}_r\beta_t\). A pooled subset has dimension two iff all those lines coincide and dimension four otherwise. Fixed dimension-only profiles therefore reduce to birthday equalities.
+
+**What would make a retry materially new.** An adaptive or implicit subset rule, exact pooled row spaces, a coefficient/pivot/minor or resultant system, a noncommutative product, a spectral/discrepancy statistic, a genuinely nonlinear joint decoder, or a completion with proved fibre-point bias. Merely testing more independent relations or more fixed span-dimension subsets is covered by P31.
+
+## X26 — unmultiplied endpoint-only SQUFOF localization
+
+**Status:** promoted as P32 after hostile audit and proof-blind reconstruction.
+
+**Family:** F17.
+
+**Classification:** evidence against the exact auxiliary mechanism of discarding the infrastructure transcript and extracting only from one reduced endpoint by coefficient gcd or the standard proper-square test. This is not a failure of SQUFOF, infrastructure methods, metric decoders, or factoring.
+
+**Closest prior route and material difference.** X21/P27 studies exact-uniform ambiguity hunting in imaginary class groups. X26 moves to the ordered real principal infrastructure and asks whether a complete cycle or exact endpoint position manufactures a factor-bearing form.
+
+**Exact obstruction.** For
+
+\[
+a=6t+1,\qquad N=a^2+2,\qquad \Delta=4N,
+\]
+
+one has
+
+\[
+\sqrt N=[a;\overline{a,2a}],
+\qquad
+(1,2a,-2)\xleftrightarrow{\rho}(-2,2a,1).
+\]
+
+Every endpoint coefficient is coprime to \(N\), and the only positive right square is \(1\), already queued/listed as improper period completion. Sign and counter-parity qualifications do not create another square. Yet \(3\mid N\) publicly, repeated factors occur, and the regulator is only \(\Theta(\log N)\), so this is neither a hard family nor an infrastructure lower bound.
+
+**What would make a retry materially new.** A multiplier or different discriminant, an intermediate composition/reduction coefficient, a relative generator or compact power product, a failure-event decoder, an adaptive distance/jump decoder, or any joint use of endpoints and transcripts. Another single-endpoint coefficient or an absolute-value square test is covered by P32.
+
+## X27 — coarse canonical-isogeny neighbors without an exposed selective kernel
+
+**Status:** promoted as P33 after hostile audit and proof-blind reconstruction.
+
+**Family:** F18.
+
+**Classification:** factorization equivalence for the fine selective-kernel task and method failure for returning an arbitrary coarse modular-polynomial root or an opaque isogeny certificate. This does not close \(N\)-dependent fine selectors, higher CM, vertical, or supersingular routes.
+
+**Closest prior route and material difference.** X04/P09 studies blind characteristic substitution in a Frobenius/Hasse--Witt formula. X27 instead tries to orient CRT factors by selecting a canonical isogeny neighbor; the decisive distinction is coarse target versus recoverable kernel section.
+
+**Exact obstruction.** At \(j=1728\),
+
+\[
+\Phi_2(1728,Y)=(Y-1728)(Y-287496)^2.
+\]
+
+The double coarse root is rational even over a finite field where \(-A\) is a nonsquare and neither nonpublic two-torsion kernel descends from the specified twist. Thus an arbitrary coarse root carries no selective orientation.
+
+On \(N=pq\) with distinct odd primes, \(A\) a unit, and \(\left(\frac{-A}{N}\right)=-1\), an exposed finite étale rank-two subgroup is exactly a nonzero residue
+
+\[
+u(u^2+A)\equiv0\pmod N.
+\]
+
+It is mixed across the two CRT components, and \(\gcd(u,N)\) and \(\gcd(u^2+A,N)\) are the complementary factors. Uniform random \(A\) reaches the promise with probability at least \(4/15\). Hence constructing this fine object is already semiprime factoring; the missing selector has not been built.
+
+**What would make a retry materially new.** An explicit \(N\)-dependent construction that returns a kernel polynomial, rational map, or other representation from which the selective nonidentity section is recoverable in polynomial time; compatible local CM embeddings; or a vertical/supersingular mechanism. Another public/coarse root, a target \(j\), an opaque certificate, or a universal rational-function selector is covered by P33.
