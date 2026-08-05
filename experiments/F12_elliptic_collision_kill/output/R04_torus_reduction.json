@@ -1,0 +1,105 @@
+{
+  "approach_family": "F12_elliptic_collision_kill",
+  "purpose": "torus q-superfactorial conditional reduction",
+  "identity": "prod_{0<=i<j<m}(a^i-a^j)=a^binomial(m,3)*prod_{d=1}^{m-1}(1-a^d)^(m-d)",
+  "symbolic_checks": [
+    {
+      "m": 2,
+      "monomial_exponent": 0,
+      "polynomial_degree": 1
+    },
+    {
+      "m": 3,
+      "monomial_exponent": 1,
+      "polynomial_degree": 5
+    },
+    {
+      "m": 4,
+      "monomial_exponent": 4,
+      "polynomial_degree": 14
+    },
+    {
+      "m": 5,
+      "monomial_exponent": 10,
+      "polynomial_degree": 30
+    },
+    {
+      "m": 6,
+      "monomial_exponent": 20,
+      "polynomial_degree": 55
+    },
+    {
+      "m": 7,
+      "monomial_exponent": 35,
+      "polynomial_degree": 91
+    },
+    {
+      "m": 8,
+      "monomial_exponent": 56,
+      "polynomial_degree": 140
+    },
+    {
+      "m": 9,
+      "monomial_exponent": 84,
+      "polynomial_degree": 204
+    },
+    {
+      "m": 10,
+      "monomial_exponent": 120,
+      "polynomial_degree": 285
+    }
+  ],
+  "instances": [
+    {
+      "N": 10403,
+      "p": 101,
+      "q": 103,
+      "m_floor_sqrt_N": 101,
+      "p_minus_1_le_m_minus_1": true,
+      "q_minus_1_ge_m": true,
+      "unit_count": 10200,
+      "successful_units": 3200,
+      "exact_conditional_success_probability": "16/51",
+      "exact_conditional_success_numerator": 16,
+      "exact_conditional_success_denominator": 51,
+      "primitive_root_probability": "16/51",
+      "primitive_root_count": 32,
+      "primitive_probability_ge_inverse_log_bound": true,
+      "direct_formula_check_bases": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "N": 1111,
+      "p": 11,
+      "q": 101,
+      "m_floor_sqrt_N": 33,
+      "p_minus_1_le_m_minus_1": true,
+      "q_minus_1_ge_m": true,
+      "unit_count": 1000,
+      "successful_units": 600,
+      "exact_conditional_success_probability": "3/5",
+      "exact_conditional_success_numerator": 3,
+      "exact_conditional_success_denominator": 5,
+      "primitive_root_probability": "2/5",
+      "primitive_root_count": 40,
+      "primitive_probability_ge_inverse_log_bound": true,
+      "direct_formula_check_bases": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    }
+  ],
+  "elapsed_seconds": 1.012120125000365,
+  "source": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F12_elliptic_collision_kill/verify_torus_reduction.sage",
+  "source_sha256": "cb6b20adc412ed97f4c70f8c7942f6ad6e3ed552968959fca093d2f8c3f7a511"
+}

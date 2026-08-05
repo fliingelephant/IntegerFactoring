@@ -1,0 +1,100 @@
+{
+  "approach_family": "F12_elliptic_collision_audit",
+  "artifact_audit": {
+    "failure_log_hashes": {
+      "R02_torus_reduction.log": "1f2771696157372c8f10338763faccacf7ea6bda50bda97dff1f5dbc28cd5f11",
+      "R03_torus_reduction.log": "91c19002722d9e373d0e456c5cf93140c1ffab83a6d077cecec12a51c665b38e",
+      "R05_division_identity.log": "d0a598677a8dc798605a49e98c28885057eb33dd5d9786d0cf1141db4507ce13",
+      "R08_floor_clean_witness.log": "03c1c03d54a45f0f2264553889bc151745695375b79e2f098d6d107675b90e7a"
+    },
+    "manifest_source_hashes": {
+      "audit_certificates.py": "5c75400520647f7d9f92d1d6b5745c0560006743c98d97353973a5ca38f292c6",
+      "search_clean_synchronized.sage": "4b98339369bdb79e33d545a3e1fce54c8e19f252ecf136269722b24864a0d92e",
+      "verify_division_identity.sage": "cdd4196510c10936248a96223321be35a94ea25c2235dbb83815522ac54dd8a0",
+      "verify_floor_clean_witness.sage": "a933956d18248c6ffe5d0f49c0a765eb4495a5b7b2476639bba56b6b2b074334",
+      "verify_torus_prime_powers.sage": "6f4022faebe13be37ea67212dfecf18fbb0bc452ed9a60865ae79547f7c0bae4",
+      "verify_torus_reduction.sage": "cb6b20adc412ed97f4c70f8c7942f6ad6e3ed552968959fca093d2f8c3f7a511"
+    },
+    "partial_invalid_output_hashes": {
+      "R03_torus_reduction.json": "a0adb455c08554ebd0048e2ad43040c8f8a9f6600037b6da6727256cc08eea9f",
+      "R08_floor_clean_witness.json": "14f51ce79a1cb39dd99e5fe6e742383e46b8b81e393c2472e24950ed3013f01b"
+    },
+    "r10_input_hashes_reproduced": {
+      "division": "2dba0877eecfad4479fe2f51fa7e402b7ce84940b4030e8779dfd70771df0ebe",
+      "elliptic": "7e18d9a9e384d4307a501885d6da36c8ec6fb0795dac659dac86a6fea122def5",
+      "floor_witness": "af730bb4a4ee96f929070bbfa074d631c0056489713978221d4fedbdf198457e",
+      "prime_powers": "a35925a1dec649cddd5c91764c46ba922a608f4fe1eb732812a5784346272e97",
+      "torus": "96c26fd58a7c537ca2a7a94643d129882c171c0b5c1275df94340206f74f90c3"
+    },
+    "successful_logs_are_empty": [
+      "R01_clean_synchronized.log",
+      "R04_torus_reduction.log",
+      "R06_division_identity.log",
+      "R07_torus_prime_powers.log",
+      "R09_floor_clean_witness.log",
+      "R10_audit.log"
+    ],
+    "successful_output_hashes": {
+      "R01_clean_synchronized.json": "7e18d9a9e384d4307a501885d6da36c8ec6fb0795dac659dac86a6fea122def5",
+      "R04_torus_reduction.json": "96c26fd58a7c537ca2a7a94643d129882c171c0b5c1275df94340206f74f90c3",
+      "R06_division_identity.json": "2dba0877eecfad4479fe2f51fa7e402b7ce84940b4030e8779dfd70771df0ebe",
+      "R07_torus_prime_powers.json": "a35925a1dec649cddd5c91764c46ba922a608f4fe1eb732812a5784346272e97",
+      "R09_floor_clean_witness.json": "af730bb4a4ee96f929070bbfa074d631c0056489713978221d4fedbdf198457e",
+      "R10_audit.json": "027735cd84682183605ff79ee56069dcd570918e50501f7dbc5bb70e68a4f7d3"
+    },
+    "unmanifested_generated_sage_python_hashes": {
+      "search_clean_synchronized.sage.py": "373c1c67cfbae19a70ac89877b89cfe6e6410011e1bbd474a7f178e0dfdde7e7",
+      "verify_division_identity.sage.py": "fb047329695754da59696d1fb237bbf45db02dfb462f40042b7817c06f17c8f6",
+      "verify_floor_clean_witness.sage.py": "5a490f9d31290b0c30cb4d766907c5b802f23afcdd4b00d82e832922cbe48154",
+      "verify_torus_prime_powers.sage.py": "67ff695e5b9f2db4fd60887c5acf9d3633f42a9358f0ecba7fcb728f47e5a746",
+      "verify_torus_reduction.sage.py": "94b3575fbe8928c96aacd7adac5f98d62b815e8a4d1b38882af08283dd2f89b9"
+    }
+  },
+  "independent_elliptic_recomputation": {
+    "N": 10403,
+    "discriminant_mod_N": 9942,
+    "local": [
+      {
+        "first_floor_collision": [
+          11,
+          101
+        ],
+        "floor_collision_count": 45,
+        "group_order": 112,
+        "hasse_upper_floor": 122,
+        "point_order": 112,
+        "prime": 101
+      },
+      {
+        "first_floor_collision": [
+          5,
+          101
+        ],
+        "floor_collision_count": 48,
+        "group_order": 106,
+        "hasse_upper_floor": 124,
+        "point_order": 106,
+        "prime": 103
+      }
+    ],
+    "m_floor_sqrt_N": 101
+  },
+  "independent_torus_recomputation": {
+    "instances": [
+      {
+        "N": 10403,
+        "conditional_probability": "16/51",
+        "m": 101,
+        "successful_units": 3200
+      },
+      {
+        "N": 1111,
+        "conditional_probability": "3/5",
+        "m": 33,
+        "successful_units": 600
+      }
+    ]
+  },
+  "source": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F12_elliptic_collision_audit/audit_artifacts.py",
+  "source_sha256": "e32162fcacca47edb20bfa0f4647e10a502e895cb9e7ea45cbfebfd626b89ae1"
+}

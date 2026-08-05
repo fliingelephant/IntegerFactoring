@@ -1,0 +1,66 @@
+{
+  "approach_family": "F12_elliptic_collision_kill",
+  "purpose": "clean synchronized additive-orbit collision",
+  "inputs": {
+    "N": 10403,
+    "p": 101,
+    "q": 103,
+    "m": 102,
+    "collision_threshold": 203,
+    "coefficient_limit": 40
+  },
+  "hasse_upper_bounds_floor": [
+    122,
+    124
+  ],
+  "witness": {
+    "curve": {
+      "a": 1,
+      "b": 5
+    },
+    "global_point": [
+      5461,
+      5889
+    ],
+    "discriminant_mod_N": 9942,
+    "local": [
+      {
+        "characteristic": 101,
+        "group_order": 112,
+        "point": [
+          7,
+          31
+        ],
+        "point_order": 112,
+        "all_multiples_1_through_m_affine": true,
+        "first_x_collision": [
+          10,
+          102
+        ],
+        "collision_is_difference_multiple": false,
+        "collision_is_sum_multiple": true,
+        "x_difference_product": 0
+      },
+      {
+        "characteristic": 103,
+        "group_order": 106,
+        "point": [
+          2,
+          18
+        ],
+        "point_order": 106,
+        "all_multiples_1_through_m_affine": true,
+        "first_x_collision": [
+          4,
+          102
+        ],
+        "collision_is_difference_multiple": false,
+        "collision_is_sum_multiple": true,
+        "x_difference_product": 0
+      }
+    ]
+  },
+  "elapsed_seconds": 0.15786574999947334,
+  "source": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F12_elliptic_collision_kill/search_clean_synchronized.sage",
+  "source_sha256": "4b98339369bdb79e33d545a3e1fce54c8e19f252ecf136269722b24864a0d92e"
+}

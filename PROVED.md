@@ -999,3 +999,180 @@ Both have anti-diagonal sums \((1,0,2,0,1,0)\) and carries \((0,0,0,1,0,0,0)\), 
 **Scope.** P19 is a rigorous oracle reduction and a precise failure of the displayed bounded-width, low-codimension, and direct relaxed-decoding arguments. It supplies no polynomial-time algorithm for exact CVP on these lattices. Proving such an algorithm would already prove polynomial-time classical factoring through the reduction, while no theorem here excludes a different exact lattice encoding or favorable presentation.
 
 The complete derivation and its two independent checks are preserved under `experiments/F11_structured_cvp_kill`, `experiments/F11_structured_cvp_audit`, and `experiments/F11_structured_cvp_reconstruct`.
+
+## P20 — balanced Hasse bounds synchronize cleared elliptic collisions, while a torus evaluator would factor
+
+**Status:** promoted.
+
+**Verification record:** the corrected identities, universal obstruction, finite certificate, conditional factoring reduction, and bit complexity passed a focused hostile audit and a proof-blind end-to-end reconstruction. No cross-family audit has run.
+
+**Elliptic identity.** Let
+
+\[
+E:y^2=x^3+Ax+B
+\]
+
+be nonsingular over a field of characteristic different from 2 and 3. Use the standard division polynomials \(\psi_k\) and
+
+\[
+\phi_k=x\psi_k^2-\psi_{k+1}\psi_{k-1},
+\qquad
+x([k]P)=\frac{\phi_k(P)}{\psi_k(P)^2}.
+\]
+
+The division-polynomial addition recurrence gives, as a polynomial identity,
+
+\[
+\phi_i\psi_j^2-\phi_j\psi_i^2
+=\psi_{i+j}\psi_{j-i}
+\qquad(1\le i<j).
+\]
+
+Therefore the division-free numerator of the pairwise \(x\)-collision product is
+
+\[
+C_m(P)
+=\prod_{1\le i<j\le m}
+  (\phi_i\psi_j^2-\phi_j\psi_i^2)(P)
+=\prod_{1\le i<j\le m}\psi_{i+j}(P)\psi_{j-i}(P).
+\]
+
+If the affine point \(P\) has order \(t\), then \(\psi_k(P)=0\) exactly when \(t\mid k\). For \(m\ge3\), the nonconstant indices occurring in the last product are exactly \(2,3,\ldots,2m-1\), each with positive multiplicity. Hence
+
+\[
+C_m(P)=0\quad\Longleftrightarrow\quad t\le2m-1.
+\]
+
+Moreover \(\psi_1(P),\ldots,\psi_m(P)\) are all nonzero exactly when \(t>m\). Thus the interval \(m<t\le2m-1\) consists of denominator-clean collisions caused by \(x(Q)=x(-Q)\). The restriction \(m\ge3\) is necessary: at \(m=2\), a point of order 2 need not zero \(C_2=\psi_3\).
+
+**Universal balanced obstruction.** Take
+
+\[
+N=10403=101\cdot103,
+\qquad m=\lfloor\sqrt N\rfloor=101,
+\qquad 2m-1=201.
+\]
+
+For any short Weierstrass curve with good reduction at a prime \(\ell\), Hasse's theorem gives
+
+\[
+\#E(\mathbb F_\ell)
+\le\left\lfloor\ell+1+2\sqrt\ell\right\rfloor.
+\]
+
+The bounds at 101 and 103 are 122 and 124. Every affine local point therefore has order at most 201. For every short Weierstrass curve good at both primes and every global affine point,
+
+\[
+C_{101}(P)\equiv0\pmod {101},
+\qquad
+C_{101}(P)\equiv0\pmod {103}.
+\]
+
+Thus \(C_{101}(P)\equiv0\pmod N\) and \(\gcd(C_{101}(P),N)=N\). This is independent of the curve and point distribution. If the curve discriminant \(\Delta\) is not a unit, \(1<\gcd(\Delta,N)<N\) already splits the input, but \(\gcd(\Delta,N)=N\) is only a retry case; the universal statement above is specifically for good reduction at both primes.
+
+The checked denominator-clean witness is
+
+\[
+E:y^2=x^3+x+5,
+\qquad P=(5461,5889)\pmod {10403}.
+\]
+
+Its discriminant is \(-10864\equiv9942\pmod N\), a unit. Modulo 101, \(P=(7,31)\), \(\#E=112\), and \(P\) has order 112; the first lexicographic collision through \(m=101\) is \((11,101)\). Modulo 103, \(P=(2,18)\), \(\#E=106\), and \(P\) has order 106; the first collision is \((5,101)\). Both point orders exceed 101, so every denominator through \(m\) is nonzero, while the two colliding index sums equal the respective orders.
+
+**Torus identity and order test.** For any commutative ring,
+
+\[
+\begin{aligned}
+D_m(a)
+&=\prod_{0\le i<j<m}(a^i-a^j)\\
+&=a^{\binom m3}S_m(a),\\
+S_m(a)
+&=\prod_{d=1}^{m-1}(1-a^d)^{m-d}.
+\end{aligned}
+\]
+
+Indeed, the extracted powers have total exponent \(\binom m3\), and the difference \(d=j-i\) occurs \(m-d\) times. If \(a\) is a unit modulo a prime \(\ell\), then
+
+\[
+S_m(a)=0\text{ in }\mathbb F_\ell
+\quad\Longleftrightarrow\quad
+\operatorname{ord}_\ell(a)\le m-1.
+\]
+
+For a distinct semiprime \(N=pq\), \(p<q\), and \(m=\lfloor\sqrt N\rfloor\), every unit makes \(S_m(a)=0\pmod p\), while it is nonzero modulo \(q\) exactly when \(\operatorname{ord}_q(a)\ge m\). The exact conditional separation probability for a uniform unit modulo \(q\) is
+
+\[
+\frac{1}{q-1}
+\sum_{\substack{d\mid q-1\\d\ge m}}\varphi(d),
+\]
+
+and in particular is at least \(\varphi(q-1)/(q-1)\) by primitive residues.
+
+**Conditional complete-factoring theorem.** Assume a uniform exact algorithm
+
+\[
+\operatorname{Eval}(N,a,m)=S_m(a)\bmod N
+\]
+
+with worst-case bit cost \(T(\log N+\log m)\), where \(T\) is polynomial. Then there is a classical Las Vegas algorithm that completely factors every positive integer in expected polynomial bit complexity.
+
+Handle powers of two, deterministic primality testing, and exact perfect-power detection first. For an odd composite \(N\) that is not a perfect power, write
+
+\[
+N=\prod_i p_i^{e_i},
+\qquad s=\sum_i e_i,
+\]
+
+and let \(p_{\min}<p_{\max}\) be its smallest and largest distinct prime factors. The weighted geometric mean gives
+
+\[
+p_{\min}\le
+m_s=\left\lfloor N^{1/s}\right\rfloor
+<p_{\max}.
+\]
+
+The unknown \(s\) lies between 2 and the bit length \(n\), so compute exact integer-root floors \(m_k=\lfloor N^{1/k}\rfloor\) for every \(2\le k\le n\). In one trial choose \(a\) uniformly from \(\{0,\ldots,N-1\}\). A proper \(\gcd(a,N)\) already splits the input; otherwise evaluate \(S_{m_k}(a)\) and take its gcd with \(N\) for each \(k\).
+
+At \(k=s\), every unit has order at most \(p_{\min}-1\le m_s-1\) modulo \(p_{\min}\), so that prime divides \(S_{m_s}(a)\). If \(a\bmod p_{\max}\) is primitive, then its order is \(p_{\max}-1\ge m_s\), so \(p_{\max}\) does not divide the product and the gcd is proper. This remains valid with repeated prime powers.
+
+For \(t=p_{\max}-1\), if \(r\) is the number of distinct prime divisors of \(t\), then
+
+\[
+\frac{t}{\varphi(t)}
+=\prod_{q\mid t}\frac q{q-1}
+\le r+1
+\le1+\log_2t.
+\]
+
+Because sampling is uniform modulo \(p_{\max}\), the success probability of the primitive-residue event is
+
+\[
+\frac{\varphi(p_{\max}-1)}{p_{\max}}
+\ge\frac{1}{2(1+n)}.
+\]
+
+Independent retries therefore terminate almost surely after \(O(n)\) expected trials. Each trial makes \(O(n)\) evaluator calls on \(O(n)\)-bit inputs, so one proper split costs
+
+\[
+O\bigl(n^2T(O(n))+\operatorname{poly}(n)\bigr)
+\]
+
+in expectation. Recursing only on verified proper factors creates at most \(O(n)\) split nodes; exact perfect-power handling preserves multiplicities. A coarse complete-factorization bound is
+
+\[
+O\bigl(n^3T(O(n))+\operatorname{poly}(n)\bigr).
+\]
+
+Every proposed divisor is checked by gcd and exact division, and prime leaves are certified by deterministic primality testing, so the algorithm is Las Vegas and covers evens, primes, prime powers, repeated factors, and arbitrary composites.
+
+**Missing lemma and scope.** No polylogarithmic evaluator is supplied. The recurrences
+
+\[
+P_d=P_{d-1}(1-a^d),
+\qquad
+S_{d+1}=S_dP_d
+\]
+
+take \(O(m)\) explicit iterations. The cyclotomic factorization of \(S_m\) still displays \(m-1\) factors. Neither observation is a lower bound, but neither proves the evaluator hypothesis. Thus P20 contains an unconditional elliptic obstruction and torus order theorem plus an exact conditional reduction; it is not an unconditional factoring algorithm.
+
+The discovery, hostile audit, proof-blind reconstruction, named sources, timeouts, logs, outputs, and failed-run dispositions are preserved under `experiments/F12_elliptic_collision_kill`, `experiments/F12_elliptic_collision_audit`, and `experiments/F12_elliptic_collision_reconstruct`.

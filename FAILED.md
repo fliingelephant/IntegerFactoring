@@ -482,3 +482,56 @@ every globally formed standard error \(H_a\), \(1\le a\le2942\), has degree 2952
 have the same padded anti-diagonal sums \((1,0,2,0,1,0)\) and carry sequence \((0,0,0,1,0,0,0)\), while the second has determinant 1 and rank 3. Both are binary and tie at the absolute half-target minimum, so not every relaxed optimum is certified as a factor outer product. This does not prove that all postprocessing fails; in this example the shared convolution polynomial is \((1+T^2)^2\) and still exposes 5.
 
 **Verification and exact remaining gap.** The hostile audit repaired the normal-form justification, fixed the scope to search CVP, and removed the two overclaims above. The proof-blind reconstruction independently recovered the final-carry convention, carry bound, polynomial-bit normal forms, embedded and full-rank CVP normalizations, gap, recursion, graph minor, codimension, and narrow \(N=25\) certificate. These corrected statements are P19 in `PROVED.md`. A polynomial-time exact-CVP algorithm for the high-width, high-codimension multiplication-gadget lattices would already imply arbitrary integer factoring through this reduction. A materially new retry needs an exact encoding that both preserves Boolean rank one and provably belongs to an independently tractable lattice class, or a new exact-CVP algorithm exploiting structure not captured by width or codimension.
+
+## X14 — cleared elliptic \(x\)-collision products at the square-root threshold
+
+**Status:** promoted as P20 after hostile audit and proof-blind reconstruction.
+
+**Family:** F02.
+
+**Classification:** method failure for the cleared product of pairwise \(x\)-coordinate differences among consecutive elliptic multiples at \(m=\lfloor\sqrt N\rfloor\). This does not close other dynamics, other elliptic observables, ECM-style denominator failures, or the multiplicative-torus specialization.
+
+**Closest prior route and material difference.** P03 gives one synchronized orbit for a fixed duplication-Lattès map on \(N=15\). X14 treats general consecutive multiples on every good short Weierstrass curve and every affine seed for one balanced input, using division polynomials and Hasse's theorem rather than a hand-selected orbit.
+
+**Exact obstruction.** For \(m\ge3\), standard division polynomials satisfy
+
+\[
+\phi_i\psi_j^2-\phi_j\psi_i^2=\psi_{i+j}\psi_{j-i}
+\qquad(1\le i<j\le m).
+\]
+
+Consequently the cleared collision product
+
+\[
+C_m(P)=\prod_{i<j}(\phi_i\psi_j^2-\phi_j\psi_i^2)(P)
+\]
+
+vanishes at an affine point of order \(t\) exactly when \(t\le2m-1\); all denominators through \(m\) are nonzero exactly when \(t>m\). At
+
+\[
+N=10403=101\cdot103,\qquad m=101,
+\]
+
+the integral Hasse upper bounds are 122 and 124, both below \(2m-1=201\). Thus for every short Weierstrass curve good at both primes and every global affine point, \(C_m\) vanishes in both fields and \(\gcd(C_m,N)=N\). Randomizing the good curve or point cannot separate this input. A nonunit discriminant yields a factor only when its gcd is proper; a full gcd is a retry, not a split.
+
+The denominator-clean certificate
+
+\[
+E:y^2=x^3+x+5,\qquad P=(5461,5889)\pmod N
+\]
+
+has local point orders 112 and 106, both strictly between 101 and 201. Its first lexicographic collisions are \((11,101)\) modulo 101 and \((5,101)\) modulo 103, so the simultaneous zero is genuinely caused by \(x(Q)=x(-Q)\), not by a denominator through \(m\).
+
+**Surviving torus reduction.** The multiplicative analogue factors exactly as
+
+\[
+\prod_{0\le i<j<m}(a^i-a^j)
+=a^{\binom m3}S_m(a),\qquad
+S_m(a)=\prod_{d=1}^{m-1}(1-a^d)^{m-d}.
+\]
+
+For a unit modulo a prime, \(S_m(a)=0\) exactly when its order is at most \(m-1\). P20 proves that a uniform exact evaluator for \(S_m(a)\bmod N\) in time polynomial in \(\log N+\log m\) would yield complete classical Las Vegas polynomial-time factoring for every integer, including repeated prime factors and prime powers. The displayed recurrence still takes \(O(m)\) iterations, and the cyclotomic rewrite still has \(m-1\) displayed factors. Neither is the required evaluator or a lower bound against one.
+
+**Evidence.** The discovery, all failed-run dispositions, and exact certificate are in `experiments/F12_elliptic_collision_kill`; the hostile audit in `experiments/F12_elliptic_collision_audit` corrected the real \(m\ge3\) restriction, the full-discriminant-gcd case, and the recursive complexity bound; the proof-blind reconstruction in `experiments/F12_elliptic_collision_reconstruct` independently recovered the identities, certificate, all-input conditional reduction, success bound, and complete recursion. The corrected theorem is P20 in `PROVED.md`. No cross-family audit has run.
+
+**What would make a retry materially new.** A uniform factor-free polylogarithmic evaluator for the weighted torus product, or a different dynamical observable with both a proved polylogarithmic evaluation rule and inverse-polynomial asymmetric local behavior. Faster evaluation alone cannot repair the elliptic separator on the balanced obstruction.

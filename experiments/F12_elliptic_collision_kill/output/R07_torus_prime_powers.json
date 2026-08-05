@@ -1,0 +1,53 @@
+{
+  "approach_family": "F12_elliptic_collision_kill",
+  "purpose": "repeated-prime and exponent-scan verification",
+  "records": [
+    {
+      "N": 3087,
+      "factorization": {
+        "3": 2,
+        "7": 3
+      },
+      "total_prime_multiplicity_s": 5,
+      "bitlength": 12,
+      "m_s_floor_N_to_1_over_s": 4,
+      "smallest_prime_le_m_s": true,
+      "largest_prime_gt_m_s": true,
+      "unit_count": 1764,
+      "primitive_largest_residue_unit_count": 588,
+      "primitive_probability": "2/6",
+      "proper_gcd_values_at_k_equals_s": [
+        9
+      ],
+      "scan_2_through_bitlength_contains_k_equals_s": true
+    },
+    {
+      "N": 1452,
+      "factorization": {
+        "2": 2,
+        "3": 1,
+        "11": 2
+      },
+      "total_prime_multiplicity_s": 5,
+      "bitlength": 11,
+      "m_s_floor_N_to_1_over_s": 4,
+      "smallest_prime_le_m_s": true,
+      "largest_prime_gt_m_s": true,
+      "unit_count": 440,
+      "primitive_largest_residue_unit_count": 176,
+      "primitive_probability": "4/10",
+      "proper_gcd_values_at_k_equals_s": [
+        12
+      ],
+      "scan_2_through_bitlength_contains_k_equals_s": true
+    }
+  ],
+  "perfect_power_preprocessing": {
+    "N": 225,
+    "exponent": 2,
+    "proper_root_divisor": 15
+  },
+  "elapsed_seconds": 0.07707820800715126,
+  "source": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F12_elliptic_collision_kill/verify_torus_prime_powers.sage",
+  "source_sha256": "6f4022faebe13be37ea67212dfecf18fbb0bc452ed9a60865ae79547f7c0bae4"
+}

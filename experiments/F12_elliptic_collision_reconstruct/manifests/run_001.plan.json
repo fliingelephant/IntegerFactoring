@@ -1,0 +1,10 @@
+{
+  "run_id": "run_001",
+  "family_id": "F12_elliptic_collision_reconstruct",
+  "stages": [
+    {"name": "verify_finite", "timeout_seconds": 120, "source": "src/verify_finite.py"},
+    {"name": "audit_finite", "timeout_seconds": 120, "source": "src/audit_finite.py"}
+  ],
+  "failure_policy": "Any timeout or nonzero exit writes a retained failure disposition and stops."
+}
+

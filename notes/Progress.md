@@ -234,3 +234,25 @@ The lemma therefore makes all \(2942\cdot2953=8{,}687{,}726\) canonical PSCs non
 **Verified reduction.** For each of \(O(n)\) feasible factor-bit length pairs, introduce factor bits, one-hot truth-table variables for every product bit pair, and binary carry digits. The affine equations enforce marginal consistency and every schoolbook multiplication column, including the essential final carry equation. With \(M=O(n^2)\) integer coordinates, the affine solution lattice and an integral particular solution are computable by polynomial-bit HNF/SNF. The all-\(1/2\) target has squared distance at least \(M/4\) from every integer point, with equality exactly at binary points. Hence a valid factor witness gives optimum \(M/4\), while an affine system with no binary witness has optimum at least \(M/4+2\). An exact search-CVP answer at the baseline decodes and verifies a factor; rational targets can be scaled to an integer target, and embedded- or full-rank conventions have polynomial-size normalizations. The relative gap is only \(1+\Theta(1/M)\).
 
 **Verified structural boundary.** The exact constraint-incidence graph contains internally disjoint paths from every factor bit \(x_i\) to every factor bit \(y_j\), hence a subdivision of \(K_{a,b}\) and treewidth at least \(\min(a,b)\). The disjoint one-hot equations give codimension at least \(ab\). Dropping the truth-table consistency leaves a Toeplitz-like convolution system but loses Boolean rank one: for \(N=25\), the true outer-product matrix and a binary rank-3 matrix have identical anti-diagonal sums and carry sequence, so both attain the absolute half-target minimum. This only proves that not every relaxed closest matrix is itself a factor outer product. It does not rule out postprocessing that matrix—the displayed convolution polynomial actually retains the factor—or prove high width for every alternative rank-one encoding. The exact reduction therefore does not yet land in a class with a proved polynomial-time exact-CVP algorithm.
+
+### C17 — elliptic collision synchronization and the surviving torus evaluator target
+
+**Status:** promoted as P20 after hostile audit and proof-blind reconstruction.
+
+**Closest prior route and material difference.** P03 synchronizes one fixed duplication-Lattès orbit. C17 analyzes the general cleared \(x\)-collision product of consecutive multiples, proves a universal good-curve obstruction on one balanced input, and isolates a different multiplicative dynamic whose separation theorem survives.
+
+**Elliptic result.** Standard division-polynomial identities give
+
+\[
+C_m(P)=\prod_{1\le i<j\le m}\psi_{i+j}(P)\psi_{j-i}(P).
+\]
+
+For \(m\ge3\) and an affine point of order \(t\), this is zero exactly when \(t\le2m-1\), while every denominator through \(m\) is nonzero exactly when \(t>m\). At \(N=101\cdot103\) and \(m=101\), Hasse bounds every local point order by 122 or 124. Hence the product is zero modulo both factors for every curve good at both primes and every affine seed. The checked curve \(y^2=x^3+x+5\) and point \((5461,5889)\) have local orders 112 and 106, so this universal synchronization persists with all denominators through \(m\) nonzero.
+
+**Torus result and gap.** For
+
+\[
+S_m(a)=\prod_{d=1}^{m-1}(1-a^d)^{m-d},
+\]
+
+local vanishing is exactly the order test \(\operatorname{ord}(a)\le m-1\). If \(S_m(a)\bmod N\) had a uniform exact evaluator polynomial in \(\log N+\log m\), scanning exact integer-root thresholds and sampling a residue primitive modulo the largest unknown prime would split every non-perfect-power composite with inverse-polynomial probability. Perfect-power handling and recursion then give complete Las Vegas factoring in expected \(O(n^3T(O(n))+\operatorname{poly}(n))\) bit operations. The known recurrence is linear in \(m\), and the cyclotomic identity merely redisplays \(m-1\) factors; the polylogarithmic evaluator remains missing. The hostile audit and proof-blind reconstruction verified this exact conditional boundary.

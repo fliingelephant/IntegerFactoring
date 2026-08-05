@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F12_elliptic_collision_kill/verify_torus_reduction.sage.py", line 154, in <module>
+    main()
+    ~~~~^^
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F12_elliptic_collision_kill/verify_torus_reduction.sage.py", line 114, in main
+    success_probability = Fraction(success_count_q, q - _sage_const_1 )
+  File "/var/tmp/sage-10.9-current/local/lib/python3.14/fractions.py", line 295, in __new__
+    numerator.numerator * denominator.denominator,
+    ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'method' and 'method'

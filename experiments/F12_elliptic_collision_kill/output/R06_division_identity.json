@@ -1,0 +1,40 @@
+{
+  "approach_family": "F12_elliptic_collision_kill",
+  "identity": "phi_i*psi_j^2-phi_j*psi_i^2=psi_(i+j)*psi_(j-i) for i<j",
+  "pairwise_identity_checks": 45,
+  "identity_check_field": 101,
+  "identity_check_m": 10,
+  "witness_local_checks": [
+    {
+      "characteristic": 101,
+      "point_order": 112,
+      "division_polynomial_zero_indices_through_2m_minus_1": [
+        112
+      ],
+      "denominator_indices_1_through_m_all_nonzero": true,
+      "positive_product_exponent_range": [
+        2,
+        203
+      ],
+      "collected_cleared_product": 0
+    },
+    {
+      "characteristic": 103,
+      "point_order": 106,
+      "division_polynomial_zero_indices_through_2m_minus_1": [
+        106
+      ],
+      "denominator_indices_1_through_m_all_nonzero": true,
+      "positive_product_exponent_range": [
+        2,
+        203
+      ],
+      "collected_cleared_product": 0
+    }
+  ],
+  "elapsed_seconds": 0.021390458001405932,
+  "witness_source": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F12_elliptic_collision_kill/output/R01_clean_synchronized.json",
+  "witness_source_sha256": "7e18d9a9e384d4307a501885d6da36c8ec6fb0795dac659dac86a6fea122def5",
+  "source": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F12_elliptic_collision_kill/verify_division_identity.sage",
+  "source_sha256": "cdd4196510c10936248a96223321be35a94ea25c2235dbb83815522ac54dd8a0"
+}

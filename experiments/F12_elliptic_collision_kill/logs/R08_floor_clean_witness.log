@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F12_elliptic_collision_kill/verify_floor_clean_witness.sage.py", line 88, in <module>
+    main()
+    ~~~~^^
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F12_elliptic_collision_kill/verify_floor_clean_witness.sage.py", line 84, in main
+    json.dump(output, handle, indent=_sage_const_2 )
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/tmp/sage-10.9-current/local/lib/python3.14/json/__init__.py", line 181, in dump
+    for chunk in iterable:
+                 ^^^^^^^^
+  File "/var/tmp/sage-10.9-current/local/lib/python3.14/json/encoder.py", line 444, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/var/tmp/sage-10.9-current/local/lib/python3.14/json/encoder.py", line 413, in _iterencode_dict
+    yield from chunks
+  File "/var/tmp/sage-10.9-current/local/lib/python3.14/json/encoder.py", line 451, in _iterencode
+    newobj = _default(o)
+  File "/var/tmp/sage-10.9-current/local/lib/python3.14/json/encoder.py", line 182, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type Integer is not JSON serializable
+when serializing dict item 'collision_threshold'
