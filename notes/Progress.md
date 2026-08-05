@@ -324,9 +324,9 @@ The \(2\times2\) matrix action remains succinct. For \(M_a=\operatorname{diag}(a
 
 **Status:** promoted as P26 after hostile audit and proof-blind reconstruction.
 
-**Closest prior route and material difference.** F11 encodes an exact factor witness in a lattice. C23 instead asks whether bare (N=pq) can manufacture an additive polynomial-width approximation to (p+q), from which discriminant square-testing factors deterministically.
+**Closest prior route and material difference.** F11 encodes an exact factor witness in a lattice. C23 instead asks whether bare \(N=pq\) can manufacture an additive polynomial-width approximation to \(p+q\), from which discriminant square-testing factors deterministically.
 
-**Verified boundary.** Every fixed polynomial numerical multiplier range and Fermat-step cap fails on an infinite balanced family with (q/p) inverse-polylogarithmically close to (sqrt2). Literal CRT square-residue wheels have (|W_\ell|=(\ell+(N/\ell))/2), so materializing states, uniformly sampling them, or explicitly visiting interval lifts costs (L^{1-o(1)}) for trace-interval length (L=\Theta(\sqrt N)) in the appropriate modulus regimes.
+**Verified boundary.** Every fixed polynomial numerical multiplier range and Fermat-step cap fails on an infinite balanced family with \(q/p\) inverse-polylogarithmically close to \(\sqrt2\). Literal CRT square-residue wheels have \(|W_\ell|=(\ell+(N/\ell))/2\), so materializing states, uniformly sampling them, or explicitly visiting interval lifts costs \(L^{1-o(1)}\) for trace-interval length \(L=\Theta(\sqrt N)\) in the appropriate modulus regimes.
 
 **Verification result and remaining gap.** The hostile audit and blind reconstruction verified all allocations, parity cases, quantifiers, and wheel regimes, and supplied counterexamples to broader interpretations. Exponentially large encoded multipliers, compressed/adaptive character solvers, interval-conditioned distributions, and other metric observables remain open.
 
@@ -336,7 +336,7 @@ The \(2\times2\) matrix action remains succinct. For \(M_a=\operatorname{diag}(a
 
 **Closest prior route and material difference.** F14 uses noncommutative one-sided quaternion gcds. C24 uses canonical reduced imaginary-quadratic forms, whose useful ambiguous coefficients reveal the factors directly.
 
-**Verified boundary.** The ambiguous classes for the fundamental discriminants (-N) and (-4N) are completely classified, with exactly half useful. For class number (h) and (t=|G[2]|\in\{2,4\}), direct exact-uniform success is (t/(2h)), and square collisions have exact occupancy law and scale (Theta(\sqrt{h/t})). Siegel's bound makes polynomial sampling exponentially sparse. Public genus labels improve mass only by a constant; ordinary inverse collisions retain only a bounded (4)-torsion channel.
+**Verified boundary.** The ambiguous classes for the fundamental discriminants \(-N\) and \(-4N\) are completely classified, with exactly half useful. For class number \(h\) and \(t=|G[2]|\in\{2,4\}\), direct exact-uniform success is \(t/(2h)\), and square collisions have exact occupancy law and scale \(\Theta(\sqrt{h/t})\). Siegel's bound makes polynomial sampling exponentially sparse. Public genus labels improve mass only by a constant; ordinary inverse collisions retain only a bounded \(4\)-torsion channel.
 
 **Verification result and remaining gap.** The hostile audit corrected the public even-discriminant genus character, inverse-orbit and powering claims, and split-prime root count; a proof-blind reconstruction recovered the corrected theorem. Designed nonuniform split-prime walks, computable order/exponent surrogates, real infrastructure, and other composition failures remain open.
 
@@ -346,12 +346,12 @@ The \(2\times2\) matrix action remains succinct. For \(M_a=\operatorname{diag}(a
 
 **Closest prior route and material difference.** P25 grants iid uniform full-shell samples. C25 tests the strict integral-coordinate slice, an explicit factor-free sampler, adaptive fixed transform menus, and finally correlated samples from one right-unit orbit.
 
-**Verified boundary.** Every left- and right-unit orbit of odd norm contains exactly eight integral elements, so the Lipschitz slice is still uniform on each row quotient and separately on each image quotient. Its exact coordinate-triple sampler needs (Theta(\sqrt N)) trials on balanced semiprimes. A polynomial fixed menu remains sparse even under joint/stateful selection. For fixed (alpha), however, two random actual right units have exact proper-gcd probability
+**Verified boundary.** Every left- and right-unit orbit of odd norm contains exactly eight integral elements, so the Lipschitz slice is still uniform on each row quotient and separately on each image quotient. Its exact coordinate-triple sampler needs \(\Theta(\sqrt N)\) trials on balanced semiprimes. A polynomial fixed menu remains sparse even under joint/stateful selection. For fixed \(\alpha\), however, two random actual right units have exact proper-gcd probability
 
 \[
 |H_p(\alpha)\triangle H_q(\alpha)|/12.
 \]
 
-This gives conditional expected-polynomial direct prime extraction whenever the stabilizers differ, but the probability is (1/4) at (N=15,alpha=1+i+2j+3k) and (0) at (N=39,alpha=1+i+j+6k).
+This gives conditional expected-polynomial direct prime extraction whenever the stabilizers differ, but the probability is \(1/4\) at \(N=15,\alpha=1+i+2j+3k\) and \(0\) at \(N=39,\alpha=1+i+j+6k\).
 
-**Verification result and remaining gap.** The hostile audit corrected selector quantifiers, actual-versus-projective unit sampling, characteristic-(3) language, scan scope, and random-bit cost; the proof-blind reconstruction recovered the entire corrected theorem and both certificates. No factor-free expected-polynomial sampler is known to reach the mismatch stratum with inverse-polynomial probability. Mixed-handed four-square-finder output, sample-combining maps, and non-collision invariants remain open.
+**Verification result and remaining gap.** The hostile audit corrected selector quantifiers, actual-versus-projective unit sampling, characteristic-\(3\) language, scan scope, and random-bit cost; the proof-blind reconstruction recovered the entire corrected theorem and both certificates. No factor-free expected-polynomial sampler is known to reach the mismatch stratum with inverse-polynomial probability. Mixed-handed four-square-finder output, sample-combining maps, and non-collision invariants remain open.
