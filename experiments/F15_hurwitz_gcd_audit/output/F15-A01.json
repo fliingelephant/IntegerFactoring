@@ -1,0 +1,126 @@
+{
+  "direct_divisor_handedness": {
+    "left": {
+      "3": {
+        "distinct_signatures": 4,
+        "divisors_per_signature": 24
+      },
+      "5": {
+        "distinct_signatures": 6,
+        "divisors_per_signature": 24
+      }
+    },
+    "right": {
+      "3": {
+        "distinct_signatures": 4,
+        "divisors_per_signature": 24
+      },
+      "5": {
+        "distinct_signatures": 6,
+        "divisors_per_signature": 24
+      }
+    }
+  },
+  "fixed_transform_checks": {
+    "nonscalar_both_1_plus_i": {
+      "local": {
+        "3": {
+          "fixed_projective_lines": 0,
+          "scalar": false
+        },
+        "5": {
+          "fixed_projective_lines": 2,
+          "scalar": false
+        }
+      },
+      "norm": 2,
+      "tracefree_numerator_gcd": 1
+    },
+    "scalar_mod_15_1_plus_15i": {
+      "local": {
+        "3": {
+          "fixed_projective_lines": 4,
+          "scalar": true
+        },
+        "5": {
+          "fixed_projective_lines": 6,
+          "scalar": true
+        }
+      },
+      "norm": 226,
+      "tracefree_numerator_gcd": 15
+    },
+    "scalar_mod_3_only_2_plus_3i": {
+      "local": {
+        "3": {
+          "fixed_projective_lines": 4,
+          "scalar": true
+        },
+        "5": {
+          "fixed_projective_lines": 2,
+          "scalar": false
+        }
+      },
+      "norm": 13,
+      "tracefree_numerator_gcd": 3
+    }
+  },
+  "hurwitz_normalization": "(a+b*i+c*j+d*k)/2 with a,b,c,d of one parity",
+  "mixed_barred_unbarred": {
+    "asymmetric_scalar_gcds_checked": 12288,
+    "local_equivalences_checked": 73728,
+    "multipliers": 8
+  },
+  "non_extension_certificates": {
+    "naive_S_6_product_formula": 288,
+    "naive_S_9_product_formula": 384,
+    "norm_set_sizes": {
+      "2": 24,
+      "6": 96,
+      "9": 312
+    },
+    "units_in_H_mod_2": 12,
+    "units_in_M2_F2": 6
+  },
+  "p3_edge": {
+    "N": 15,
+    "S_N_size": 576,
+    "direct_product_counts": {
+      "1": 207360,
+      "15": 13824,
+      "3": 69120,
+      "5": 41472
+    },
+    "image_orientation_pairs": 24,
+    "left_units": 24,
+    "ordered_pair_counts": {
+      "1": 207360,
+      "15": 13824,
+      "3": 69120,
+      "5": 41472
+    },
+    "orientation_fibre_size": [
+      24
+    ],
+    "primes": [
+      3,
+      5
+    ],
+    "probabilities": {
+      "1": "5/8",
+      "15": "1/24",
+      "3": "5/24",
+      "5": "1/8"
+    },
+    "proper_probability": "1/3",
+    "row_orientation_pairs": 24,
+    "self_conjugation_gcd_counts": {
+      "1": 336,
+      "3": 144,
+      "5": 96
+    }
+  },
+  "run": "F15-A01",
+  "source_sha256": "4f114811494c5185556b6cf1428a99836370b4d837eb57bc4818ded19e96a190",
+  "status": "PASS"
+}

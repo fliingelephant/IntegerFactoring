@@ -1610,3 +1610,99 @@ two-tail exchanges, the first field has no dependent set, the second has exactly
 P24 refutes universal separation only for the joint row matroid and the named one-axis prefix, greedy-basis, raw-entry, and canonical-base-minor summaries. It simultaneously proves that the complete column-matroid refinement survives on this fixed coefficient-hard witness. It supplies neither a factor-free rule that selects successful parameters and minors on arbitrary composites nor a uniform theorem forcing a mismatch, so it is not a general factoring algorithm.
 
 The candidate analyses, hostile audit, and proof-blind reconstruction are preserved under `experiments/F04_joint_matroid_kill`, `experiments/F04_full_column_matroid_kill`, `experiments/F04_joint_matroid_audit`, and `experiments/F04_joint_matroid_reconstruct`.
+
+## P25 — uniform Hurwitz one-sided gcds have an \(N^{1/4}\) birthday scale
+
+**Status:** promoted.
+
+**Verification record:** the normalized order, local splittings, shell count, orbit parametrizations, left/right handedness, exact gcd and product laws, balanced asymptotic obstruction, fixed-transform qualifications, and ramified/repeated-prime exclusions passed a focused hostile audit and a proof-blind end-to-end reconstruction. No cross-family audit has run.
+
+Let
+
+\[
+\mathcal H=\mathbb Z\left[i,j,\frac{1+i+j+k}{2}\right]
+\]
+
+be the Hurwitz order with quaternion conjugation, reduced trace, and reduced norm \(\operatorname{nrd}(a+bi+cj+dk)=a^2+b^2+c^2+d^2\). Let \(p\ne q\) be odd primes, \(N=pq\), and
+
+\[
+S_N=\{\alpha\in\mathcal H:\operatorname{nrd}(\alpha)=N\}.
+\]
+
+**Exact orientations.** For each \(r\in\{p,q\}\), an algebra splitting
+
+\[
+\mathcal H/r\mathcal H\simeq M_2(\mathbb F_r)
+\]
+
+exists. Every \(\alpha\in S_N\) reduces to a nonzero rank-one matrix: its determinant is zero, while zero reduction would force \(r^2\mid N\). Write \(R_r(\alpha)\) and \(I_r(\alpha)\) for its row and image lines.
+
+The norm is Euclidean on both sides, so every one-sided ideal of \(\mathcal H\) is principal, and
+
+\[
+[\mathcal H:\mathcal H d]=[\mathcal H:d\mathcal H]
+=\operatorname{nrd}(d)^2.
+\]
+
+For a projective line \(L\subset\mathbb F_r^2\), the matrices whose rows lie in \(L\) form a two-dimensional minimal left ideal. The CRT preimage of any pair of such ideals at \(p,q\) has index \(N^2\), hence is \(\mathcal H\alpha\) for an \(\alpha\) of norm \(N\). This gives a bijection
+
+\[
+\mathcal H^\times\backslash S_N
+\simeq
+\mathbf P^1(\mathbb F_p)\times\mathbf P^1(\mathbb F_q)
+\]
+
+for the free left-unit action and the row-line pair. The analogous right-unit quotient is parametrized by image-line pairs. Since \(|\mathcal H^\times|=24\),
+
+\[
+|S_N|=24(p+1)(q+1).
+\]
+
+Thus a uniform shell element has independent uniform local row lines, and separately independent uniform local image lines. This does not assert independence between the row and image line of the same sample.
+
+**Exact one-sided gcd law.** A greatest common right divisor \(d_R\) is defined by
+
+\[
+\mathcal H\alpha+\mathcal H\beta=\mathcal H d_R;
+\]
+
+right divisors are controlled by row lines. A greatest common left divisor is defined by the corresponding sum of right ideals and is controlled by image lines. For iid uniform \(\alpha,\beta\in S_N\),
+
+\[
+\begin{array}{c|cccc}
+\operatorname{nrd}(d_R)&1&p&q&N\\ \hline
+\Pr&
+\dfrac{pq}{(p+1)(q+1)}&
+\dfrac{q}{(p+1)(q+1)}&
+\dfrac{p}{(p+1)(q+1)}&
+\dfrac1{(p+1)(q+1)}.
+\end{array}
+\]
+
+The same table holds for \(d_L\). Indeed,
+
+\[
+r\mid\operatorname{nrd}(d_R)
+\quad\Longleftrightarrow\quad
+R_r(\alpha)=R_r(\beta),
+\]
+
+and the two local equality events are independent with probabilities \(1/(p+1)\) and \(1/(q+1)\). Squarefreeness restricts the norm to \(1,p,q,N\). A proper event therefore outputs the prime directly as the quaternion-gcd norm; an additional terminal integer gcd is not logically required.
+
+For independent samples, the product test has the same law: local rank-one matrices satisfy \(AB=0\) exactly when \(\operatorname{im}(B)=\ker(A)\), again an equality of independent uniform projective lines.
+
+**Birthday obstruction.** With \(K\) iid uniform samples, testing every pair in one handedness satisfies
+
+\[
+\Pr(\text{some proper one-sided gcd})
+\le
+\binom K2\frac{p+q}{(p+1)(q+1)}.
+\]
+
+On \(p<q<2p\), this is \(O(K^2/\sqrt N)\). Bertrand's postulate supplies infinitely many such pairs, so every \(K=\operatorname{poly}(\log N)\) has exponentially small success along an infinite balanced family. The exact occupancy law places constant collision mass at \(K=\Theta(N^{1/4})\); the necessary lower scale is \(\Omega(N^{1/4})\). Fixed local sums, intersections, inclusions, equalities, and ranks of the reduced minimal ideals depend only on the same equality partitions and do not evade this bound.
+
+Fixed left/right transforms with norms coprime to \(N\) act by local projective bijections on independent sources and preserve the orientation law. For non-unit transforms, only \(\gcd(\operatorname{nrd}(d),N)\) has the displayed table in general, because multiplier primes may enter the full gcd norm. For two right transforms of one source, the relative action is \(B_1B_2^{-1}\); a nonscalar action has at most two fixed lines, while scalarity in exactly one component is already detected by the three trace-free quaternion coordinates. Self-conjugation similarly reduces to local trace zero. None of these statements covers sample-dependent nonlinear transforms.
+
+**Scope.** Exact-uniform sampling is an idealized premise here, not a supplied algorithm. Finding one four-square representation does not prove a uniform draw from \(S_N\), and multiplying it by units stays inside one constant-size orbit. The theorem is restricted to distinct odd primes: the Hurwitz order is ramified at 2, and repeated-prime norms admit rank-zero reductions and deeper ideal types. P25 is evidence against iid uniform one-sided-gcd collisions and their fixed-menu equality refinements; it does not rule out a factor-free nonuniform sampler with asymmetric local collision energy, adaptive/nonlinear constructions, mixed invariants, or non-collision quaternion methods.
+
+The candidate proof, corrected hostile audit with its exact \(N=15\) and \(N=2,6,9\) checks, and proof-blind reconstruction are preserved under `experiments/F15_hurwitz_gcd_kill`, `experiments/F15_hurwitz_gcd_audit`, and `experiments/F15_hurwitz_gcd_reconstruct`.

@@ -632,3 +632,42 @@ the globally formed standard-shift matrix has an invertible first-2942-column bl
 **Evidence.** The two candidate studies retain global matrices, exact local ranks/solves, complete one-/two-tail zero-pattern scans, direct exchanged determinants, all commands, timeouts, logs, outputs, and failure dispositions. The hostile audit rebuilt every global entry, validated the large retained matrices, reproduced both exact local solves and the exhaustive scan, and passed A09; its A02 timeout and A03/A04 serialization failures are retained and excluded. The proof-blind reconstruction independently formed both instances, recomputed all 8,687,726 P11 entries through a separate FLINT implementation, recovered the analytic P14 proof and P11 exchange, and passed the final run-025 cross-audit. P24 records the corrected common theorem.
 
 **What would make a retry materially new.** A globally specified polynomial-size minor family or factor-free adaptive rule with a proved inverse-polynomial chance of selecting a local support mismatch for every composite input; a nonstandard modulus/shift construction with such a theorem; or a nonlinear joint invariant whose selection cost and bit complexity are explicit. Another row-rank or one-axis prefix summary is covered by this obstruction.
+
+## X19 — iid uniform Hurwitz one-sided-gcd collisions
+
+**Status:** promoted as P25 after hostile audit and proof-blind reconstruction.
+
+**Family:** F14.
+
+**Classification:** evidence against the exact auxiliary mechanism of taking polynomially many iid uniformly oriented norm-\(N\) Hurwitz quaternions and using one-sided Euclidean gcds, product-zero incidences, or fixed local ideal-equality menus. This is not a lower bound against nonuniform/adaptive sampling or non-collision noncommutative methods.
+
+**Closest prior route and material difference.** The nearest prior mechanisms are F03's commutative polynomial gcd localization and F09's cyclotomic ideal orientation. X19 instead uses a genuinely noncommutative order that is Euclidean on both sides. On a successful collision, the greatest common one-sided divisor itself has norm \(p\) or \(q\), so the mechanism need not end in a single integer gcd of a public \(\mathbb Z/N\mathbb Z\) computation.
+
+**Exact obstruction.** For distinct odd primes \(N=pq\), the norm shell has
+
+\[
+|S_N|=24(p+1)(q+1),
+\]
+
+and its left-unit orbits are exactly the pairs of projective row lines over \(\mathbb F_p,\mathbb F_q\); right-unit orbits give image lines. For two iid uniform samples, a greatest common right divisor has norm distribution
+
+\[
+(1,p,q,N)
+\quad\text{with probabilities}\quad
+\frac{(pq,q,p,1)}{(p+1)(q+1)},
+\]
+
+and a left gcd has the same law. Hence proper success is only \((p+q)/((p+1)(q+1))\). With \(K\) samples, even every-pair testing has success at most
+
+\[
+\binom K2\frac{p+q}{(p+1)(q+1)}
+=O(K^2/\sqrt N)
+\]
+
+on an infinite balanced family. Polynomially many samples in the input bit length are exponentially below the \(N^{1/4}\) birthday scale. Product-zero tests and fixed reduced-ideal sums/intersections/ranks depend on the same projective equality partitions.
+
+**Corrections and evidence.** The hostile audit normalized the order, corrected the same-source right action to \(B_1B_2^{-1}\), restricted non-unit transforms to the \(N\)-part of the gcd norm, kept ideal-lattice claims local after reduction, separated row and image orientations of one sample, and weakened the necessary scale statement to \(\Omega(N^{1/4})\). Its timeout-bounded exact enumeration verified all \(576^2\) ordered pairs at \(N=15\), the proper probability \(1/3\), both handednesses, product incidences, and the failures at ramified 2 and repeated norm 9. The proof-blind reconstruction independently recovered the orbit/ideal proof, handedness dictionary, exact laws, corrected fixed transforms, and sampling boundary. P25 records only the corrected common theorem.
+
+**Sampling and scope.** The theorem grants exact-uniform samples for free and still obtains the obstruction. It does not construct such a sampler. A find-one four-square algorithm is not an exact-uniform shell sampler, and unit multiplication does not change the large orientation orbit. Ramification at 2 and repeated prime powers lie outside the rank-one squarefree theorem. Adaptive or deliberately biased samplers, singular or sample-dependent transforms, integral invariants not controlled by reduced equality partitions, and other quaternion algorithms remain open.
+
+**What would make a retry materially new.** A completely specified factor-free sampler from bare \(N\) with proved polynomial bit complexity and inverse-polynomial asymmetric local collision behavior; an adaptive/nonlinear transform whose success is not already a trace-free-coordinate gcd; or a non-collision quaternion invariant with a uniform all-input theorem.
