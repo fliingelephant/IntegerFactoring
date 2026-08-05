@@ -1281,3 +1281,144 @@ Degree and dense materialization are not arithmetic-circuit lower bounds.
 **Scope.** P21 closes the fixed positive-binomial/lcm compression, the literal two-child recursion, and the displayed grouping/materialization shortcuts. It does not prove an evaluation-time or circuit-size lower bound for \(P_M\) or \(S_m\), and it does not provide the evaluator assumed in P20. The general polylogarithmic torus evaluator remains open.
 
 The candidate analysis, hostile audit, and proof-blind reconstruction are preserved under `experiments/F14_torus_qfactorial_evaluator`, `experiments/F14_torus_qfactorial_audit`, and `experiments/F14_torus_qfactorial_reconstruct`.
+
+## P22 — exponent-\(N\) lifts erase principal input digits, and fixed canonical output digits rarely split balanced inputs
+
+**Status:** promoted.
+
+**Verification record:** the structural formulas, corrected twin exception, carrier probabilities, balanced-family upper bound, and scope passed a focused hostile audit and a proof-blind end-to-end reconstruction. No cross-family audit has run.
+
+Let \(N=pq\) for distinct odd primes and define
+
+\[
+\tau_N(a)=a^N\pmod {N^2}.
+\]
+
+**Principal kernel and local image.** Reduction of units modulo \(N^2\) to units modulo \(N\) has the full kernel
+
+\[
+K=\{1+kN\pmod {N^2}:k\bmod N\}.
+\]
+
+Its two local principal coordinates are \(qk\bmod p\) and \(pk\bmod q\), so uniform \(k\bmod N\) ranges over the whole local principal kernel. Nevertheless,
+
+\[
+(1+kN)^N\equiv1\pmod {N^2},
+\qquad
+(a+Nt)^N\equiv a^N\pmod {N^2}.
+\]
+
+Thus \(\tau_N\) kills all principal input digits and factors through reduction modulo \(N\). If \([x]_\ell\) denotes the Teichmüller lift of \(x\in\mathbb F_\ell\), with \([0]_\ell=0\), CRT gives the exact formula
+
+\[
+\tau_N(a)=
+\bigl([a\bmod p]_p^q,[a\bmod q]_q^p\bigr)
+\pmod {p^2q^2}.
+\]
+
+This also covers nonunits locally: a component divisible by its prime maps to zero modulo that prime squared.
+
+On the quotient
+
+\[
+(\mathbb Z/N^2\mathbb Z)^\times/K
+\cong C_{p-1}\times C_{q-1},
+\]
+
+the map is exponentiation by \(N\). With \(\lambda=\operatorname{lcm}(p-1,q-1)\), it is invertible exactly when \(\gcd(N,\lambda)=1\). Known factors then give the inverse exponent \(d=N^{-1}\bmod\lambda\) and the factor-aware untwist
+
+\[
+\tau_N(a)^d=([a]_p,[a]_q).
+\]
+
+No factoring equivalence for computing an untwist without the factors is proved.
+
+Every \(A\in\operatorname{im}\tau_N\), including a locally zero component, satisfies
+
+\[
+A^{N+1}=A^{p+q}\pmod {N^2},
+\]
+
+because \((N+1)-(p+q)=(p-1)(q-1)\). For a unit this reveals only a congruence modulo \(\operatorname{ord}(A)\); it is an order identity, not an extraction of the integer \(p+q\).
+
+**Consecutive iterates and additive defects.** Assume \(p<q\), take a uniform unit \(a\), and put \(A_r=\tau_N^r(a)\) for \(r\ge1\). Then
+
+\[
+A_r\equiv[a]_p^{q^r}\pmod {p^2},
+\qquad
+A_r\equiv[a]_q^{p^r}\pmod {q^2}.
+\]
+
+The exact local equality probabilities for \(A_{r+1}=A_r\) are
+
+\[
+P_p=\frac{\gcd(q-1,p-1)}{p-1},
+\qquad
+P_q(r)=\frac{\gcd(p^r(p-1),q-1)}{q-1}.
+\]
+
+The two CRT events are independent, so the exact proper-gcd probability is
+
+\[
+P_p(1-P_q(r))+(1-P_p)P_q(r).
+\]
+
+Two Teichmüller lifts that agree modulo a local prime already agree modulo its square. Consecutive differences therefore have no local valuation-one category, and division by \(N\) after a full first gcd cannot create a second-stage split. This claim starts at \(r=1\) and does not cover arbitrary linear combinations or comparisons with the original lift.
+
+For independent uniform units \(a,b\), define the additive defect
+
+\[
+\Delta(a,b)=\tau_N(a+b)-\tau_N(a)-\tau_N(b).
+\]
+
+Let \(\pi_{\ell,c}\) be the exact probability that its local value has valuation category \(c\in\{0,1,2\}\), where category 2 means zero modulo \(\ell^2\). A first gcd followed, only after a full gcd, by the quotient gcd has exact success probability
+
+\[
+1-\sum_{c=0}^{2}\pi_{p,c}\pi_{q,c},
+\]
+
+and the second stage adds exactly
+
+\[
+\pi_{p,1}\pi_{q,2}+\pi_{p,2}\pi_{q,1}.
+\]
+
+For twin primes \(q=p+2\) with \(p>3\), the local counts are
+
+\[
+(p-2,0,1),
+\qquad
+(q-4,0,3),
+\]
+
+so the two-stage success probability is
+
+\[
+\frac{4(p-2)}{(p-1)(p+1)},
+\]
+
+with no second-stage gain. The excluded twin \((3,5)\) is a real exception: its counts are \((0,1,1)\) and \((3,0,1)\), and its success probability is \(7/8\). No infinitude of twin primes is assumed.
+
+**Canonical high-digit obstruction.** Choose canonical representatives \(A_r\in[0,N^2)\), put \(b_r=A_r\bmod N\) in \([0,N)\), and define
+
+\[
+H_r=\frac{A_r-b_r}{N}\pmod N.
+\]
+
+For every balanced pair of odd primes \(p<q<2p\), every fixed set \(R\) of \(K\) positive iterate indices chosen independently of the uniform unit \(a\) satisfies
+
+\[
+\Pr\left(\exists r\in R:
+1<\gcd(H_r,N)<N\right)
+\le
+K\left(\frac2{q-1}+\frac1{p-1}\right)
+\le\frac{3K}{p-1}.
+\]
+
+Indeed, the local exponent maps permute the unit groups. The interval \([0,N)\), whose length is below \(2p^2\), contains at most two representatives of each Teichmüller class modulo \(p^2\), while its length is below \(q^2\) and contains at most one representative of each class modulo \(q^2\). These are exactly the necessary conditions for \(p\mid H_r\) and \(q\mid H_r\), respectively; a union bound needs no independence across iterates.
+
+Bertrand's postulate supplies infinitely many prime pairs \(p<q<2p\). Along this family \(p=2^{\Theta(\log N)}\), so every \(K=\operatorname{poly}(\log N)\) makes the displayed success bound exponentially small in the input bit length.
+
+**Scope.** P22 kills the premise that exponentiation by \(N\) preserves a freely sampled principal input digit, and it rules out inverse-polynomial success for direct gcds of any fixed polynomial-size collection of canonical high digits from a uniform base on an infinite balanced family. It exactly characterizes the displayed consecutive and additive carriers. It does not cover deliberately engineered or adaptive nonuniform bases, cross-base combinations, other uses of the output digits, or all constructions over \(\mathbb Z/N^2\mathbb Z\); it is neither a hardness theorem nor a factoring algorithm.
+
+The candidate analysis, hostile audit, and proof-blind reconstruction are preserved under `experiments/F13_teichmuller_lift_kill`, `experiments/F13_teichmuller_lift_audit`, and `experiments/F13_teichmuller_lift_reconstruct`.

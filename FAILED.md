@@ -551,3 +551,28 @@ For a unit modulo a prime, \(S_m(a)=0\) exactly when its order is at most \(m-1\
 The hostile audit also corrected the relationship between the unweighted and weighted products. They have the same prime support, and the unweighted gcd divides the weighted gcd, but the gcds can differ on prime powers: \(N=875,a=631,m=3\) gives 175 versus 875. The proof-blind reconstruction independently recovered the corrected theorem, counterexamples, recurrence identities, and all stated scope limits. The promoted statement is P21.
 
 **What would make a retry materially new.** A shared division-free circuit, fast weighted interval-product identity, characteristic-sensitive representation, or other evaluator with a symbolic polylogarithmic bit-complexity proof. Repackaging the factors in a fixed binomial list, a literal two-child tree, or one unweighted aggregate per equal-floor group is not new.
+
+## X16 — principal-unit and canonical-high-digit carriers from exponentiation by \(N\) modulo \(N^2\)
+
+**Status:** promoted as P22 after hostile audit and proof-blind reconstruction.
+
+**Family:** F12.
+
+**Classification:** method failure for treating the principal input digit of \(a^N\bmod N^2\), direct gcds of a fixed polynomial-size collection of canonical output digits from a uniform base, and the displayed consecutive/additive defects as a universal separator. This is not evidence against every \(N^2\)-adic construction or deliberately engineered/adaptive bases.
+
+**Closest prior routes and material difference.** F07/P12 encounters a scalar order-spectrum bottleneck, while F04 studies additive Frobenius errors modulo \(N\). X16 uses a materially different carrier: the principal \(p\)- and \(q\)-adic digits modulo \(N^2\), their exact valuations, and Teichmüller lifts.
+
+**Exact obstruction.** The full principal reduction kernel is \(K=\{1+kN\}\), but exponentiation by \(N\) sends all of it to 1 and depends only on the residue modulo \(N\). Locally it is the twisted Teichmüller map \(([a]_p^q,[a]_q^p)\). Consecutive image iterates have no valuation-one local difference, so a quotient after a full gcd supplies no second stage. The additive defect has an exact three-category formula; for twins \(q=p+2\), \(p>3\), its success is \(4(p-2)/((p-1)(p+1))\) with no second-stage gain, while \((3,5)\) is the verified \(7/8\) exception.
+
+The unconditional asymptotic obstruction concerns canonical output digits. For every odd balanced pair \(p<q<2p\), every fixed set of \(K\) iterate indices, and a uniform unit base,
+
+\[
+\Pr(\text{some direct high-digit gcd splits }N)
+\le
+K\left(\frac2{q-1}+\frac1{p-1}\right)
+\le\frac{3K}{p-1}.
+\]
+
+Bertrand supplies an infinite balanced family, so polynomial \(K\) in the input length gives exponentially small success. The hostile audit corrected the twin theorem to require \(p>3\) and independently reproduced the formulas and fibre bound. The proof-blind reconstruction recovered the corrected structure, the exceptional twin, the exact carrier formulas, and the nonadaptive uniformity scope. The promoted theorem is P22.
+
+**What would make a retry materially new.** A component-selective construction using engineered or adaptive nonuniform bases, cross-base relations, or a different \(N^2\)-adic operation with a proved inverse-polynomial success probability. Merely resampling uniform principal digits, taking more fixed iterates, or dividing a consecutive full-gcd difference by \(N\) is not new.

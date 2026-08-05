@@ -266,3 +266,19 @@ local vanishing is exactly the order test \(\operatorname{ord}(a)\le m-1\). If \
 **Verified result.** A positive product \(\prod_h(1-a^{L_h})^{w_h}\) with the exact all-finite-field order-threshold zero set must literally contain every exponent in \((M/2,M]\), so it has at least \(\lceil M/2\rceil\) distinct exponents. The one-lcm version has an order-12 false positive at \(M=4\) over \(\mathbb F_{13}\). The exact shifted \(Q/T\) addition identities create \(M\) leaves only for their literal two-child evaluator. Equal-floor grouping has \(\Omega(\sqrt M)\) groups, and explicit characteristic-zero root-set polynomials have large degree; neither statement is a general circuit lower bound.
 
 The unweighted and weighted products have identical prime support but not identical prime-power gcds: for \(N=875,a=631,m=3\), they yield gcds 175 and 875. Thus the unweighted product can be a better splitter but is not an evaluator for the weighted residue. P20's general evaluator gap remains open.
+
+### C19 — exponent-\(N\) lifts erase input principal digits; fixed output digits are rare separators
+
+**Status:** promoted as P22 after hostile audit and proof-blind reconstruction.
+
+**Closest prior routes and material difference.** F07/P12 concerns scalar order-spectrum reconstruction, and F04 concerns Frobenius errors modulo \(N\). C19 instead tests Teichmüller and principal-adic information created by \(a\mapsto a^N\bmod N^2\).
+
+**Verified structure.** The map kills the entire principal kernel \(\{1+kN\}\) and locally equals \(([a]_p^q,[a]_q^p)\). Its quotient power map is invertible exactly when \(\gcd(N,\operatorname{lcm}(p-1,q-1))=1\), but the displayed inverse is factor-aware. The identity \(A^{N+1}=A^{p+q}\) on the image is only an order congruence. Consecutive image iterates have no valuation-one local differences, and the additive carrier has an exact valuation-category formula, including the corrected exceptional twin \((3,5)\).
+
+For canonical high digits \(H_r\), every odd balanced pair \(p<q<2p\), uniform unit base, and fixed nonadaptive set of \(K\) iterates satisfies
+
+\[
+\Pr(\exists r:\ 1<\gcd(H_r,N)<N)\le\frac{3K}{p-1}.
+\]
+
+Thus \(K=\operatorname{poly}(\log N)\) has exponentially small success on the infinite balanced family supplied by Bertrand. Adaptive/engineered nonuniform bases, cross-base constructions, and other \(N^2\)-adic observables remain open.
