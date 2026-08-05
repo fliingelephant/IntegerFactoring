@@ -1,0 +1,155 @@
+{
+  "N": 20000000499999937,
+  "approach_family": "F04_reconstruct",
+  "bit_length_ceil_log2_N_plus_1": 55,
+  "both_factors_exceed_r": true,
+  "elapsed_seconds": 74.03600295899741,
+  "factorization": {
+    "100000007": 1,
+    "199999991": 1
+  },
+  "factorization_product_check": 20000000499999937,
+  "integer_order_threshold_consequence": "2932 < (log2 N)^2 < 2933",
+  "local_mod_p": {
+    "a_first": 1,
+    "a_last": 2942,
+    "a_weighted_sum_of_row_weighted_sums_mod_prime": 79105230,
+    "all_coefficients_nonzero": true,
+    "coefficient_stream_sha256": "c4d12aeb2323ac745c119248f06f9fc0e20ee98a49683052a3f490d1756bd1ab",
+    "coefficients_exhausted": 8687726,
+    "direct_original_H_reduction_checks": [
+      {
+        "a": 1,
+        "agrees": true
+      },
+      {
+        "a": 2,
+        "agrees": true
+      },
+      {
+        "a": 1471,
+        "agrees": true
+      },
+      {
+        "a": 2942,
+        "agrees": true
+      }
+    ],
+    "elapsed_seconds": 37.18258799999967,
+    "frobenius_factor": 100000007,
+    "label": "mod_p",
+    "minimum_least_residue": 9,
+    "minimum_location_a_position": [
+      1887,
+      17
+    ],
+    "modulus": 100000007,
+    "positions_per_shift": 2953,
+    "product_of_all_coefficients_mod_prime": 50824481,
+    "reduced_exponent": 199999991,
+    "row_file": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F04_reconstruct/output/full_attempt2/local_coefficients_mod_p.jsonl",
+    "row_file_sha256": "0ea82a9efa81cf1e8b1e19224c2c51cbd8320cee5bd0be670ad95744193a8df0",
+    "shifts_exhausted": 2942,
+    "sum_of_row_sums_mod_prime": 81654479,
+    "zero_count": 0,
+    "zero_file": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F04_reconstruct/output/full_attempt2/local_zeros_mod_p.jsonl"
+  },
+  "local_mod_q": {
+    "a_first": 1,
+    "a_last": 2942,
+    "a_weighted_sum_of_row_weighted_sums_mod_prime": 30097324,
+    "all_coefficients_nonzero": true,
+    "coefficient_stream_sha256": "d92a9374923b24583a77571f2d9e6e941936040f0c4202c83e5c9012eed047ae",
+    "coefficients_exhausted": 8687726,
+    "direct_original_H_reduction_checks": [
+      {
+        "a": 1,
+        "agrees": true
+      },
+      {
+        "a": 2,
+        "agrees": true
+      },
+      {
+        "a": 1471,
+        "agrees": true
+      },
+      {
+        "a": 2942,
+        "agrees": true
+      }
+    ],
+    "elapsed_seconds": 36.463844165999035,
+    "frobenius_factor": 199999991,
+    "label": "mod_q",
+    "minimum_least_residue": 27,
+    "minimum_location_a_position": [
+      2566,
+      1574
+    ],
+    "modulus": 199999991,
+    "positions_per_shift": 2953,
+    "product_of_all_coefficients_mod_prime": 146774171,
+    "reduced_exponent": 100000007,
+    "row_file": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F04_reconstruct/output/full_attempt2/local_coefficients_mod_q.jsonl",
+    "row_file_sha256": "18962035991d6e81f3c08218f9559cd998bd39689888b7349870373499883672",
+    "shifts_exhausted": 2942,
+    "sum_of_row_sums_mod_prime": 39347007,
+    "zero_count": 0,
+    "zero_file": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F04_reconstruct/output/full_attempt2/local_zeros_mod_q.jsonl"
+  },
+  "log2_N_interval_256_bits": "54.150849554265168592817738104053564393308897271362605957778689950336181686370?",
+  "log2_N_squared_interval_256_bits": "2932.314507448660208068308756412972465427064722714726402730011084368542797790?",
+  "minimal_r_exhaustion": {
+    "max_order_before_r": 2926,
+    "max_order_before_r_locations": [
+      2927
+    ],
+    "passing_candidates": [
+      2953
+    ],
+    "path": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F04_reconstruct/output/full_attempt2/orders_2_through_2953.csv",
+    "rows": 2952,
+    "sha256": "e52e0742358504d94a34024f643b83e3334dff252425fe15a3f1f6833430b07d"
+  },
+  "order_certificate": {
+    "base_N_mod_r": 1146,
+    "claimed_order": 2952,
+    "power_at_claimed_order": 1,
+    "proper_prime_quotient_powers": {
+      "2": 2952,
+      "3": 800,
+      "41": 1277
+    }
+  },
+  "order_r_N": 2952,
+  "phi_r": 2952,
+  "phi_r_factorization": {
+    "2": 3,
+    "3": 2,
+    "41": 1
+  },
+  "prime_checks": {
+    "p": {
+      "trial_division_prime": true,
+      "trial_divisors_checked_through": 10000,
+      "value": 100000007
+    },
+    "q": {
+      "trial_division_prime": true,
+      "trial_divisors_checked_through": 14142,
+      "value": 199999991
+    },
+    "r": {
+      "trial_division_prime": true,
+      "trial_divisors_checked_through": 54,
+      "value": 2953
+    }
+  },
+  "r": 2953,
+  "shift_bound_A": 2942,
+  "shift_expression_interval_256_bits": "2942.140789627247755549914253625591832712935342789646511079867217110087723673?",
+  "status": "verified",
+  "total_local_coefficients_exhausted": 17375452,
+  "total_local_zero_count": 0
+}

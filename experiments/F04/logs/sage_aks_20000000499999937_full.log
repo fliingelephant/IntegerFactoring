@@ -1,0 +1,10 @@
+Post-run provenance record (the raw stdout/stderr log was empty because the
+scanner was invoked with --quiet).
+
+Family: F04
+Source: experiments/F04/scan_aks_semiprime.sage
+Command: DOT_SAGE=/tmp/f04_sage timeout 120s sage experiments/F04/scan_aks_semiprime.sage --p 100000007 --q 199999991 --max-r 15000 --quiet --exceptions-only --output experiments/F04/output/sage_aks_20000000499999937_full.json
+Exit status: 0
+Scanner elapsed_seconds: 84.92052637500092
+Certificate: experiments/F04/output/sage_aks_20000000499999937_full.json
+Result: 2,942 shifts and 8,687,726 coefficient positions tested; zero coefficients modulo p: 0; zero coefficients modulo q: 0; separator positions: 0; whole-polynomial pass/fail mismatches: 0.

@@ -179,3 +179,156 @@ in both CRT components, so the naive DDF profiles always agree. At \(i=1\), the 
 \]
 
 Conditioning \(a\) to be a unit and normalizing \(B\) to \(X+t\) makes the exact probability \(2/p\). For balanced factors this is exponential in \(\log N\), so this probe strategy cannot have polynomial expected trials. \(\square\)
+
+## P09 — blind substitution fails for a Hasse–Witt rank separator
+
+**Status:** promoted.
+
+**Verification record:** exact certificate passed focused hostile audit and proof-blind reconstruction. No cross-family audit has run.
+
+**Statement.** Let \(N=15\) and \(E:y^2=f(x)=x^3+x+1\). The true genus-1 Hasse–Witt ranks of its reductions modulo 3 and 5 are 0 and 1, but the formal surrogate obtained by replacing the local characteristic with \(N\) in the coefficient formula is zero in both components.
+
+**Proof.** The Weierstrass discriminant is
+
+\[
+-16(4+27)=-496,
+\]
+
+a unit modulo 15, so both reductions are good. Under the standard genus-1 coefficient convention,
+
+\[
+H_r=[x^{r-1}]f(x)^{(r-1)/2}.
+\]
+
+Thus \(H_3=[x^2]f=0\), while \(H_5=[x^4]f^2=2\); their one-dimensional ranks are 0 and 1. Transpose, Frobenius twist, sign, or basis conventions preserve zero versus nonzero in dimension one. The blind surrogate is
+
+\[
+B_{15}=[x^{14}]f^7.
+\]
+
+If \(a,b,c\) count selections of \(x^3,x,1\), then \(a+b+c=7\) and \(3a+b=14\), whose unique nonnegative solution is \((4,2,1)\). Hence
+
+\[
+B_{15}=\frac{7!}{4!2!1!}=105\equiv0\pmod {15}.
+\]
+
+The true CRT lift satisfies \(h=0\pmod3\), \(h=2\pmod5\), so \(h=12\pmod {15}\) and \(\gcd(h,15)=3\). \(\square\)
+
+**Scope.** This refutes only the syntactic substitution of \(N\) into the prime-characteristic coefficient formula. Computing local entries after first factoring is circular, but a direct uniform computation of their CRT lift would be a legitimate factoring breakthrough; no other global geometric invariant is ruled out.
+
+## P10 — scalar carry is not a sufficient binary-factor state
+
+**Status:** promoted.
+
+**Verification record:** the corrected obstruction passed a focused hostile audit and a proof-blind end-to-end reconstruction. No cross-family audit has run.
+
+**Statement.** In low-to-high schoolbook binary multiplication, quotienting partial factor assignments only by the current scalar carry does not preserve future completability. In particular, for the canonical factor-length search \(2\le a\le b\), retaining the largest low \(x\)-prefix in each carry state can delete the only factor path. Moreover, when \(a<b\), the set of all raw histories compatible through the low \(a\) columns has exactly \(2^{a-2}\) members; a restart that samples uniformly from that whole set can therefore require exponentially many trials. These statements do not apply to richer states or arbitrary representative distributions.
+
+**Carry recurrence and bound.** Write
+
+\[
+s_k=\sum_{i+j=k}x_i y_j,
+\qquad
+c_{k+1}=\frac{c_k+s_k-N_k}{2},
+\qquad c_0=0.
+\]
+
+Accepted transitions require a nonnegative integer carry. If \(x\) has \(a\) bits, then \(s_k\le a\), and induction gives \(0\le c_k\le a-1\): from \(c_k\le a-1\),
+
+\[
+c_{k+1}\le\left\lfloor\frac{2a-1}{2}\right\rfloor=a-1,
+\]
+
+while an integral numerator at least \(-1\) cannot produce a negative integer.
+
+**Collision certificate.** Let \(N=55=(110111)_2\) and search lengths \((a,b)=(3,4)\). After columns 0 and 1, the histories
+
+\[
+P:(x_0,x_1)=(1,0),\ (y_0,y_1)=(1,1),
+\qquad
+Q:(x_0,x_1)=(1,1),\ (y_0,y_1)=(1,0)
+\]
+
+both have \(c_1=c_2=0\). History \(P\) completes to \(x=5,y=11\). In \(Q\), the leading-bit condition forces \(x_2=1\); column 2 then forces \(y_2=0,c_3=0\), and the four-bit condition forces \(y_3=1\). Column 3 would give \(c_4=(1-0)/2\), so no completion exists. Equivalently, its forced integers are \(x=7,y=9\). The largest low \(x\)-prefix rule keeps \(Q\) and discards \(P\), deleting the sole \((3,4)\), \(a\le b\) factor path.
+
+For this first-nontrivial-column destructive pattern, an accepting path has \(x\equiv1\pmod4\), \(y\equiv3\pmod4\). If equal-length swaps are allowed, equal lengths preserve the swapped completion, so the smallest destructive case has \(a<b\): the least factors are 5 and 11, giving 55. If a separate numerical rule \(x\le y\) rejects the swapped equal-length path, 35 is already a witness. No minimality over later collisions is asserted.
+
+**Raw-history count.** Assume \(a<b\), let \(X\) be an odd \(a\)-bit candidate and let \(Y\) denote the low \(a\) bits of the other candidate. Summing the first \(t\) column equations yields
+
+\[
+\sum_{i+j<t}x_i y_j2^{i+j}-(N\bmod2^t)=2^t c_t.
+\]
+
+Thus compatibility through the low \(a\) columns is equivalent to \(XY\equiv N\pmod {2^a}\). Every odd \(a\)-bit \(X\) is invertible modulo \(2^a\) and determines the unique residue \(Y\equiv NX^{-1}\pmod {2^a}\). There are exactly \(2^{a-2}\) such \(X\), hence exactly that many raw histories. The congruence in every lower modulus reconstructs integral nonnegative carries, proving the converse. Some histories need not extend: at \(N=55,a=3\), the two histories are \((5,3)\) and \((7,1)\) modulo 8, and only the first extends.
+
+**Global-uniform restart.** If \(N=pq\) is semiprime with a unique \(a\)-bit divisor \(p\) and the other factor has \(b>a\) bits, exactly one raw history fully completes. A uniform draw from the entire depth-\(a\) history set therefore succeeds with probability \(2^{-(a-2)}\). Bertrand's postulate supplies primes of lengths \(a\) and \(a+1\), for which the input length is \(2a\) or \(2a+1\); this particular restart rule consequently has success \(2^{-\Theta(n)}\). This is not the probability of selecting within the true carry class. For example, at \(N=187=11\cdot17\), global uniform sampling succeeds with probability \(1/4\), whereas the true final-carry class has two histories and a uniform choice within it succeeds with probability \(1/2\). \(\square\)
+
+**Scope.** P10 refutes scalar carry as a sufficient state, the largest-prefix rule in the stated canonical search, and the specified global-uniform restart argument. It proves no lower bound for factoring, richer carry/convolution summaries, other representative rules, or other randomized merging distributions.
+
+## P11 — the standard AKS coefficient scan need not localize compositeness
+
+**Status:** promoted.
+
+**Verification record:** an exact certificate passed a focused hostile audit with an independent full rescan, then a proof-blind end-to-end reconstruction with a second fresh exhaustive run. No cross-family audit has run.
+
+**Statement.** The standard minimal-\(r\) AKS polynomial stage does not guarantee either a local pass/fail mismatch or an individual error coefficient whose gcd with the input is nontrivial. This already fails for a product of two distinct primes that survives the preliminary gcd stage.
+
+**Certificate and parameters.** Let
+
+\[
+N=20{,}000{,}000{,}499{,}999{,}937
+=100{,}000{,}007\cdot199{,}999{,}991=pq.
+\]
+
+Deterministic trial division through the respective square-root bounds proves that \(p,q\), and \(r=2953\) are prime. Both factors exceed \(r\). Rigorous interval arithmetic gives
+
+\[
+2932<(\log_2N)^2<2933,
+\qquad
+2942<\sqrt{2952}\log_2N<2943.
+\]
+
+Exact order enumeration for every \(2\le s\le2953\) shows that \(r=2953\) is the first candidate with \(\operatorname{ord}_r(N)>(\log_2N)^2\). At \(r\), \(\varphi(r)=2952=2^3 3^2 41\), \(N\bmod r=1146\), and
+
+\[
+1146^{2952}=1,quad
+1146^{1476}=2952,quad
+1146^{984}=800,quad
+1146^{72}=1277\pmod {2953},
+\]
+
+so the order is exactly 2952. The standard shift bound is therefore
+
+\[
+A=\left\lfloor\sqrt{\varphi(r)}\log_2N\right\rfloor=2942.
+\]
+
+**Algebraic reduction.** Put
+
+\[
+H_a(X)=(X+a)^N-X^N-a,
+\qquad
+h_{m,a}(Y)=(Y+a)^m-Y^m-a.
+\]
+
+Frobenius gives
+
+\[
+H_a(X)=h_{q,a}(X^p)\pmod p,
+\qquad
+H_a(X)=h_{p,a}(X^q)\pmod q.
+\]
+
+Because \(p,q\) are coprime to \(r\), substitution by \(X^p\) or \(X^q\) permutes the \(r\) coefficient positions modulo \(X^r-1\). Thus zero/nonzero status is preserved and can be checked by the two reduced-exponent families.
+
+**Exhaustive certificate.** For every \(1\le a\le2942\), exact quotient-ring arithmetic scanned all 2953 coefficients of \(h_{q,a}\) over \(\mathbb F_p[Y]/(Y^{2953}-1)\) and all 2953 coefficients of \(h_{p,a}\) over \(\mathbb F_q[Y]/(Y^{2953}-1)\). Each side contains
+
+\[
+2942\cdot2953=8{,}687{,}726
+\]
+
+coefficient positions; both zero counts are zero. Hence every one of the \(17{,}375{,}452\) local residues is nonzero. Direct exponent-\(N\) evaluations at shifts \(a=1,2,1471,2942\) in both characteristics agree with the permuted reduced-exponent calculation. Complete row hashes, order tables, source hashes, timeouts, logs, outputs, and failed-run dispositions are preserved under `experiments/F04`, `experiments/F04_audit`, and `experiments/F04_reconstruct`.
+
+It follows that every \(H_a\) is nonzero in both prime components, while every one of its global coefficients is nonzero modulo both \(p\) and \(q\), hence a unit modulo \(N\). Therefore every standard local identity fails and every coefficient gcd is 1. \(\square\)
+
+**Scope.** P11 is a finite counterexample to exactly the standard minimal-\(r\), standard-shift pass/fail and individual coefficient-gcd localization claim. It does not rule out polynomially many nonstandard moduli, annihilator ranks or minors, relationships among multiple coefficients, or other group-algebra constructions. Finite computation refutes this universal auxiliary claim but does not address the top-level factoring theorem.

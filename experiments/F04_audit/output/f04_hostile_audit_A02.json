@@ -1,0 +1,153 @@
+{
+  "family": "F04",
+  "audit_scope": "standard minimal-r AKS pass/fail and coefficient scan",
+  "source": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F04_audit/verify_f04_counterexample.sage",
+  "source_sha256": "843003cabaca6993e8cf5b4d1dad03270638870c2bad4ca12a5a87638f2b7d85",
+  "N": 20000000499999937,
+  "p": 100000007,
+  "q": 199999991,
+  "product_verified": true,
+  "primality_checks": [
+    {
+      "candidate": 100000007,
+      "trial_division_through": 10000,
+      "tested_integer_divisors": 9999,
+      "first_divisor": null,
+      "prime": true
+    },
+    {
+      "candidate": 199999991,
+      "trial_division_through": 14142,
+      "tested_integer_divisors": 14141,
+      "first_divisor": null,
+      "prime": true
+    }
+  ],
+  "distinct_prime_factors": true,
+  "log2_n_interval": "54.150849554265168592817738104053564393308897271362605957778689950336181686370?",
+  "order_threshold_interval": "2932.314507448660208068308756412972465427064722714726402730011084368542797790?",
+  "order_threshold_floor": 2932,
+  "selected_r": 2953,
+  "selected_order": 2952,
+  "prior_max_order": 2926,
+  "prior_max_order_moduli": [
+    2927
+  ],
+  "orders_2934_through_2953": {
+    "2934": 162,
+    "2935": 1172,
+    "2936": 366,
+    "2937": 88,
+    "2938": 56,
+    "2939": 1469,
+    "2940": 84,
+    "2941": 344,
+    "2942": 490,
+    "2943": 108,
+    "2944": 2,
+    "2945": 60,
+    "2946": 245,
+    "2947": 420,
+    "2948": 22,
+    "2949": 491,
+    "2950": 580,
+    "2951": 113,
+    "2952": 15,
+    "2953": 2952
+  },
+  "noncoprime_moduli_through_selected_r": [],
+  "order_transcript_sha256": "1dee53b2a4f991d00834e602c3361fc55171b63b88d0e87f88b497d955d62db4",
+  "phi_r": 2952,
+  "shift_expression_interval": "2942.140789627247755549914253625591832712935342789646511079867217110087723673?",
+  "shift_bound": 2942,
+  "p_and_q_exceed_r": true,
+  "preliminary_gcd_nonunits": [],
+  "global_coefficient_positions": 8687726,
+  "scan_mod_p": {
+    "characteristic": 100000007,
+    "cofactor": 199999991,
+    "scanned_coefficients": 8687726,
+    "zero_count_before_permutation": 0,
+    "coefficient_sha256": "b2473c8c17c2b3c0c67a0322bc62c8eb2367741860b91ec084d8bda4842a09b7",
+    "digest_encoding": "a increasing, position 0..r-1, uint32 big-endian",
+    "exceptional_shifts": [],
+    "elapsed_seconds": 35.805567792001966
+  },
+  "scan_mod_q": {
+    "characteristic": 199999991,
+    "cofactor": 100000007,
+    "scanned_coefficients": 8687726,
+    "zero_count_before_permutation": 0,
+    "coefficient_sha256": "68cf43ca8efc3e39422af0352c2ee8bcd6baeebe4837b253ccd667359541780d",
+    "digest_encoding": "a increasing, position 0..r-1, uint32 big-endian",
+    "exceptional_shifts": [],
+    "elapsed_seconds": 35.13823829199828
+  },
+  "direct_frobenius_checks": [
+    {
+      "characteristic": 100000007,
+      "cofactor": 199999991,
+      "position_map_is_permutation": true,
+      "comparisons": [
+        {
+          "a": 1,
+          "localized_equals_direct_global": true,
+          "direct_global_zero_count": 0
+        },
+        {
+          "a": 1471,
+          "localized_equals_direct_global": true,
+          "direct_global_zero_count": 0
+        },
+        {
+          "a": 2942,
+          "localized_equals_direct_global": true,
+          "direct_global_zero_count": 0
+        }
+      ]
+    },
+    {
+      "characteristic": 199999991,
+      "cofactor": 100000007,
+      "position_map_is_permutation": true,
+      "comparisons": [
+        {
+          "a": 1,
+          "localized_equals_direct_global": true,
+          "direct_global_zero_count": 0
+        },
+        {
+          "a": 1471,
+          "localized_equals_direct_global": true,
+          "direct_global_zero_count": 0
+        },
+        {
+          "a": 2942,
+          "localized_equals_direct_global": true,
+          "direct_global_zero_count": 0
+        }
+      ]
+    }
+  ],
+  "retained_certificate": "experiments/F04/output/sage_aks_20000000499999937_full.json",
+  "retained_certificate_sha256": "cddc887cb689e10e6676e5aa93134e39118a2c91b666ff362b396020432e2d17",
+  "retained_field_matches": {
+    "N": true,
+    "p": true,
+    "q": true,
+    "r": true,
+    "order": true,
+    "phi_r": true,
+    "shift_bound": true,
+    "tested_shift_bound": true,
+    "aks_trial_gcd_would_stop": true,
+    "any_pass_fail": true,
+    "total_coefficients": true,
+    "total_zero_mod_p": true,
+    "total_zero_mod_q": true,
+    "total_zero_both": true,
+    "total_separator_positions": true
+  },
+  "audit_passed": true,
+  "elapsed_seconds": 71.25437595899712
+}

@@ -87,13 +87,13 @@ This is exponentially small in the bit length for balanced factors. Conditional 
 
 ## X04 — blind characteristic substitution in a Hasse–Witt formula
 
-**Status:** candidate (initial kill test only; hostile audit and blind reconstruction pending).
+**Status:** promoted as P09. Only the exact blind-substitution method is closed.
 
 **Family:** F05.
 
 **Classification:** method failure for the blind substitution of \(N\) for the local characteristic in the genus-1 Hasse–Witt coefficient; genuinely global geometric invariants remain open.
 
-**Exact certificate.** Let \(N=15\) and \(E:y^2=f(x)=x^3+x+1\). Its discriminant is \(-496\), a unit modulo 15. For an odd prime \(r\), the Hasse–Witt entry is
+**Exact certificate.** Let \(N=15\) and \(E:y^2=f(x)=x^3+x+1\). Its Weierstrass discriminant is \(-496\), a unit modulo 15. For an odd prime \(r\), the genus-1 Hasse–Witt entry (up to rank-preserving convention changes) is
 
 \[
 H_r=[x^{r-1}]f(x)^{(r-1)/2}.
@@ -106,6 +106,134 @@ H_{15}^{\rm blind}=[x^{14}]f^7
 =\frac{7!}{4!2!1!}=105\equiv0\pmod {15},
 \]
 
-so both reductions have blind rank zero. The CRT combination of the true entries is \(12\pmod {15}\), whose gcd with 15 is 3; once this characteristic-dependent combined entry is available, the factor is already exposed.
+so both reductions have blind rank zero. The CRT combination of the true entries is \(12\pmod {15}\), whose gcd with 15 is 3. Only the recipe “first determine \(p,q\), compute local entries, then CRT-combine” is circular. A direct uniform computation of 12 from the composite-ring curve would be a valid factoring mechanism, not a circular algorithm.
 
-**What would make a retry materially new.** A geometric operator defined directly and uniformly over \(\mathbb Z/N\mathbb Z\), not by substituting \(N\) into local characteristic formulas or by first selecting each CRT characteristic, together with an inverse-polynomial rank-separation probability and polynomial bit-cost construction.
+**What would make a retry materially new.** A geometric operator defined directly and uniformly over \(\mathbb Z/N\mathbb Z\), not by the refuted blind surrogate or by first selecting each CRT characteristic, together with an inverse-polynomial rank-separation probability and polynomial bit-cost construction.
+
+## X05 — coefficient localization in the standard minimal-\(r\) AKS stage
+
+**Status:** promoted as P11 after a focused hostile audit and proof-blind end-to-end reconstruction.
+
+**Family:** F04.
+
+**Classification:** method failure for the exact standard scan over the AKS-selected minimal \(r\), standard shift bound, whole-polynomial local pass/fail, and individual coefficient gcds. It does not close nonstandard \(r\) or richer rank/minor certificates.
+
+**Exact claim refuted.** The claim that every non-prime-power composite surviving the AKS preliminary gcd stage has, within the standard polynomial-identity stage, either an identity that holds in some but not all prime components or an error coefficient divisible by some but not all components.
+
+**Certificate.** Let
+
+\[
+N=20{,}000{,}000{,}499{,}999{,}937
+=100{,}000{,}007\cdot199{,}999{,}991.
+\]
+
+The standard smallest \(r\) with \(\operatorname{ord}_r(N)>(\log_2N)^2\) is \(r=2953\), with order 2952 and \((\log_2N)^2\approx2932.3145\). Both prime factors exceed \(r\). The standard shift bound is
+
+\[
+A=\left\lfloor\sqrt{\varphi(r)}\log_2N\right\rfloor=2942.
+\]
+
+For every \(1\le a\le A\), reduce
+
+\[
+H_a=(X+a)^N-X^N-a\pmod {X^r-1}.
+\]
+
+An exhaustive exact finite-field scan of all \(A r=8{,}687{,}726\) coefficient positions found no zero coefficient modulo either factor. Thus both local errors are nonzero for every shift, and every global coefficient is a unit modulo \(N\).
+
+The scanner uses the exact identity, for \(N=pq\),
+
+\[
+H_a\bmod p=h_{q,a}(X^p),
+\qquad h_{q,a}(Y)=(Y+a)^q-Y^q-a,
+\]
+
+and its swapped analogue modulo \(q\). Because \(\gcd(pq,r)=1\), the substitutions permute coefficient positions modulo \(X^r-1\).
+
+**Evidence and provenance.** Named source, timeout command, exhaustive output, and the manifest of every exploratory run are recorded in the F04 computation ledger. A fresh hostile auditor independently proved the parameters and factors, rescanned both full local families, and directly checked the Frobenius reduction at sample shifts. Its first run failed only during JSON serialization after the scans; a fully repeated second run passed. A proof-blind agent then reconstructed the parameters and algebra from the numerical statement and performed a fresh authoritative scan of all \(17{,}375{,}452\) local coefficients, again finding zero zeros. Its run manifest disqualifies three noncompliant diagnostic invocations; no claim relies on them, and the matching named source was rerun under timeout before promotion. The result is P11 in `PROVED.md`.
+
+**What would make a retry materially new.** A proved reason to scan additional polynomially many nonstandard moduli \(r\), or a different invariant of the AKS error family such as a local rank/minor whose mismatch is not reducible to a coefficient zero and has a uniform polynomial extraction bound.
+
+## X06 — scalar-carry quotient for binary multiplication
+
+**Status:** promoted as P10. The corrected deterministic obstruction and its precisely scoped counting claim passed both verification stages.
+
+**Family:** F06.
+
+**Classification:** evidence that scalar carry is not a sufficient equivalence relation, and method failure for the largest-\(x\)-prefix representative rule under the canonical \(a\le b\) search. No broader lower bound against other selection rules or richer state summaries is claimed.
+
+**Proposed mechanism.** For factor bits \(x_i,y_j\), process
+
+\[
+s_k=\sum_{i+j=k}x_i y_j,
+\qquad
+c_{k+1}=\frac{c_k+s_k-N_k}{2}
+\]
+
+column by column, accepting only integral nonnegative carries and eventually clearing the terminal carry, while keeping one partial assignment per scalar carry. For \(a\le b\), induction gives \(0\le c_k\le a-1\). This would be a polynomial-state dynamic program if future completability depended only on the carry.
+
+**Exact obstruction.** For \(N=55=(110111)_2\) and factor lengths \((a,b)=(3,4)\), after columns 0 and 1 the partial assignments
+
+\[
+P:(x_0,x_1)=(1,0),\ (y_0,y_1)=(1,1),
+\]
+
+and
+
+\[
+Q:(x_0,x_1)=(1,1),\ (y_0,y_1)=(1,0)
+\]
+
+both have \(c_1=c_2=0\). Yet \(P\) completes to \(x=5,y=11\), whereas \(Q\) forces \(x=7\) and has no valid 4-bit continuation. A largest-\(x\)-prefix rule keeps \(Q\) and deletes the only factor path in the canonical \(a\le b\) search. If the redundant ordered pair \((4,3)\) is also searched, a swapped path survives; a smallest-prefix rule also survives. Thus the witness refutes scalar-carry sufficiency and this representative rule, not every rule.
+
+Under the convention that equal-length swapped factorizations are both accepted, the smallest-first-column argument is: opposite second bits are necessary; \(a=2\) forces the second bit to be the leading bit; equal lengths preserve both swapped orientations; hence \(a\ge3,b\ge4\). The smallest live residues are 5 and 11, giving 55, while the opposite orientation begins at \(7\cdot9=63\). If a separate numerical constraint \(x\le y\) rejects the swapped equal-length path, 35 is already a counterexample.
+
+**State-size and randomized scope.** After processing the low \(a\) columns with \(a<b\), every odd \(a\)-bit candidate \(x\) determines a unique compatible low prefix \(y=Nx^{-1}\pmod {2^a}\), yielding exactly \(2^{a-2}\) raw histories. Some fail to extend through the \(b\)-th column, so this is an explicit-enumeration count, not a state-complexity lower bound. A restart that samples one history uniformly from this entire depth-\(a\) set succeeds with exact probability \(2^{-(a-2)}\) on a semiprime with one \(a\)-bit factor; Bertrand gives families with \(a=\Theta(n)\). This is not the probability of choosing one representative per carry: that probability depends on the true history's carry-class size. At \(N=187=11\cdot17\), global uniform sampling succeeds with probability \(1/4\), while uniform selection in the true carry class succeeds with probability \(1/2\).
+
+**Evidence.** A focused hostile audit corrected the scope of the restart probability and the minimality claim. A fresh proof-blind reconstruction then recovered the recurrence, carry bound, \(N=55\) live/dead collision, first-column minimality qualifications, the bijection giving exactly \(2^{a-2}\) raw histories, the global-uniform probability, the Bertrand family, and the \(N=187\) carry-class contrast. The promoted statement is P10 in `PROVED.md`.
+
+**What would make a retry materially new.** A proved polynomial-size state invariant that retains the prefix-convolution information required by all future columns, or a universally correct polynomial-time representative rule. Raw-history enumeration, hardwired live-path selection, or an unsupported representative heuristic is insufficient.
+
+## X07 — standard trace/point probes for Shor's multiplication spectrum
+
+**Status:** candidate after focused hostile audit with substantive scope corrections; proof-blind reconstruction pending.
+
+**Family:** F07.
+
+**Classification:** method failure for the claim that the regular-representation trace or basis-point spectral measures have polynomially many effective frequencies on all factoring inputs. It is not a lower bound against adaptive exponentially indexed queries or different arithmetic probes.
+
+**Exact spectral lemma.** For the permutation \(U_a:x\mapsto ax\pmod N\), with \(\gcd(a,N)=1\) and \(r_d=\operatorname{ord}_d(a)\),
+
+\[
+\chi_{U_a}(X)=\prod_{d\mid N}(X^{r_d}-1)^{\varphi(d)/r_d}.
+\]
+
+The residues of additive order \(d\) form \(\varphi(d)\) points in cycles of length \(r_d\). The unit stratum \(d=N\) therefore forces the spectral support to be exactly all \(r_N\)-th roots, of cardinality \(r_N\). Moreover,
+
+\[
+\operatorname{tr}(U_a^k)=\gcd(a^k-1,N).
+\]
+
+A trace strictly between 1 and \(N\) is already a factor. A point probe at \(x\) has a uniform complex spectral measure on the \(r_{N/\gcd(x,N)}\)-th roots. A nonzero nonunit point already exposes a proper gcd; \(x=0\) instead gives the trivial gcd \(N\) and constant moments, while a unit point retains all \(r_N\) frequencies. A normalized whole-orbit indicator has only eigenvalue 1 and discards the order; its unnormalized zeroth moment equals the orbit length. Only an explicit coefficient-list construction has a proved output-size lower bound—no generic obstruction to a succinct orbit representation follows.
+
+**Exponential synchronized family.** Choose an \(m\)-bit prime \(\ell\). Effective Linnik bounds first give a prime \(p\equiv1\pmod\ell\), then a larger prime \(q\equiv1\pmod {p\ell}\), with \(p,q\le\ell^{O(1)}\). Choose local elements of exact order \(\ell\) and CRT-combine them to \(a\pmod {N=pq}\). Then every nonzero residue lies in an \(\ell\)-cycle,
+
+\[
+\chi_{U_a}(X)=(X-1)(X^\ell-1)^{(N-1)/\ell},
+\qquad
+\operatorname{tr}(U_a^k)=
+\begin{cases}1,&\ell\nmid k,\\N,&\ell\mid k.\end{cases}
+\]
+
+The input length is \(n=\Theta(m)\), so \(\ell=2^{\Theta(n)}\). A uniform deterministic enumerator for the least primes takes only the Linnik-guaranteed \(\ell^{O(1)}=2^{O(m)}\) time; polynomial-time generation in \(m\) is not claimed. Every nonzero point sequence has reduced generating function \(1/(1-z^\ell)\) over every coefficient field. The exact integer trace sequence has, over characteristic zero,
+
+\[
+\frac1{1-z}+\frac{N-1}{1-z^\ell}
+=\frac{N+z+\cdots+z^{\ell-1}}{1-z^\ell},
+\]
+
+with no cancellation and denominator degree \(\ell\). This trace claim is false uniformly over finite fields: modulo 2 the odd values 1 and \(N\) coincide, leaving denominator \(1-z\).
+
+**Hostile-audit scope correction.** Denominator degree \(\ell\) obstructs consecutive-moment dense Padé/Prony reconstruction and explicit enumeration of all frequencies. It is not a lower bound for adaptively selected binary-encoded indices, sparse descriptions such as \(1-z^\ell\), finite-field trace reconstruction, arbitrary arithmetic/superposition probes, or algorithms exploiting \(N,a\) by another method. The family supplies bad fixed pairs \((N,a)\), not a density theorem for random \(a\), so it does not obstruct a factoring algorithm that resamples the base.
+
+**What would make a retry materially new.** A probe family computable without factoring whose spectral measure is proved polynomially supported for every input and still determines enough local order information; a density theorem justifying resampling; or a non-Prony reconstruction exploiting sparse/arithmetic structure with a complete adaptive-query and bit-cost proof.
