@@ -1,0 +1,280 @@
+{
+  "examples": {
+    "N=15,f=X^3+2X+5": {
+      "N": 15,
+      "automorphisms": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          5,
+          1,
+          0
+        ],
+        [
+          5,
+          4,
+          0
+        ],
+        [
+          10,
+          1,
+          0
+        ],
+        [
+          10,
+          4,
+          0
+        ]
+      ],
+      "cube_torsion": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          5,
+          1,
+          0
+        ],
+        [
+          10,
+          1,
+          0
+        ]
+      ],
+      "discriminant": -707,
+      "discriminant_mod_N": 13,
+      "f": [
+        1,
+        0,
+        2,
+        5
+      ],
+      "gcd_discriminant_N": 1,
+      "local_types": {
+        "3": "3",
+        "5": "12"
+      },
+      "nonidentity_cube_gcds": [
+        [
+          5,
+          15,
+          15
+        ],
+        [
+          5,
+          15,
+          15
+        ]
+      ],
+      "nonidentity_square_gcds": [
+        [
+          15,
+          3,
+          15
+        ]
+      ],
+      "square_torsion": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ]
+      ]
+    },
+    "N=35,f=X^3+2": {
+      "N": 35,
+      "automorphisms": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          11,
+          0
+        ],
+        [
+          0,
+          15,
+          28
+        ],
+        [
+          0,
+          16,
+          0
+        ],
+        [
+          0,
+          25,
+          28
+        ],
+        [
+          0,
+          30,
+          28
+        ]
+      ],
+      "cube_torsion": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          11,
+          0
+        ],
+        [
+          0,
+          16,
+          0
+        ]
+      ],
+      "discriminant": -108,
+      "discriminant_mod_N": 32,
+      "f": [
+        1,
+        0,
+        0,
+        2
+      ],
+      "gcd_discriminant_N": 1,
+      "local_types": {
+        "5": "12",
+        "7": "3"
+      },
+      "nonidentity_cube_gcds": [
+        [
+          35,
+          5,
+          35
+        ],
+        [
+          35,
+          5,
+          35
+        ]
+      ],
+      "nonidentity_square_gcds": [
+        [
+          35,
+          7,
+          7
+        ]
+      ],
+      "square_torsion": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          15,
+          28
+        ]
+      ]
+    },
+    "order2_Jacobi_minus_off_promise": {
+      "N": 15,
+      "coefficient_gcds": [
+        1,
+        1,
+        1
+      ],
+      "discriminant_mod_N": 11,
+      "f": [
+        1,
+        10,
+        6,
+        10
+      ],
+      "involution": [
+        2,
+        3,
+        8
+      ],
+      "local_f_mod_3": [
+        1,
+        0,
+        1
+      ],
+      "local_f_mod_5": [
+        0,
+        1,
+        0
+      ],
+      "local_involution_mod_3": [
+        2,
+        0,
+        2
+      ],
+      "local_involution_mod_5": [
+        2,
+        3,
+        3
+      ]
+    }
+  },
+  "local_counts": {
+    "11": {
+      "111": 165,
+      "12": 605,
+      "3": 440,
+      "nonsquarefree": 121
+    },
+    "3": {
+      "111": 1,
+      "12": 9,
+      "3": 8,
+      "nonsquarefree": 9
+    },
+    "5": {
+      "111": 10,
+      "12": 50,
+      "3": 40,
+      "nonsquarefree": 25
+    },
+    "7": {
+      "111": 35,
+      "12": 147,
+      "3": 112,
+      "nonsquarefree": 49
+    }
+  },
+  "mismatch_counts": {
+    "N=15": {
+      "order2_mismatch_count": 880,
+      "order2_mismatch_probability": "176/675",
+      "order3_mismatch_count": 900,
+      "order3_mismatch_probability": "4/15",
+      "squarefree_count": 1800,
+      "squarefree_probability": "8/15"
+    },
+    "N=35": {
+      "order2_mismatch_count": 14000,
+      "order2_mismatch_probability": "16/49",
+      "order3_mismatch_count": 14700,
+      "order3_mismatch_probability": "12/35",
+      "squarefree_count": 29400,
+      "squarefree_probability": "24/35"
+    }
+  }
+}

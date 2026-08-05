@@ -1,0 +1,93 @@
+{
+  "approach_family": "F04_psc_coefficient_hard",
+  "inputs": {
+    "N": 20000000499999937,
+    "p": 100000007,
+    "q": 199999991,
+    "r": 2953,
+    "shift_start": 1,
+    "shift_stop_requested": 1,
+    "standard_shift_bound": 2942
+  },
+  "construction": "global H_a in (Z/NZ)[X]/(X^r-1), then coefficientwise reduction",
+  "canonical_D_convention_source": "experiments/F04_psckill/RESULT.md",
+  "parameter_source": "PROVED.md P11 and experiments/F04/output/sage_aks_20000000499999937_full.json",
+  "shifts_completed": [
+    1
+  ],
+  "first_mismatch": null,
+  "stopped_after_first_mismatch": false,
+  "records": [
+    {
+      "approach_family": "F04_psc_coefficient_hard",
+      "shift": 1,
+      "global_degree_Q": 2952,
+      "global_H_coefficient_sha256": "b85b908a91ca790741c9e3e450f0164cf2611a5605917e57d9c0865de6e3a03d",
+      "raw_coefficient_zero_count_mod_p": 0,
+      "raw_coefficient_zero_count_mod_q": 0,
+      "raw_coefficient_nonunit_count_mod_N": 0,
+      "local_mod_p": {
+        "characteristic": 100000007,
+        "degree_Q": 2952,
+        "gcd_degree": 0,
+        "psc_count": 2953,
+        "psc_zero_indices": [],
+        "psc_residue_sha256": "96c5cd358a44da272ad2420a0aac033527abff5eb00a598600f2d2cafb2697c3",
+        "psc_residue_prefix": [
+          11525863,
+          88529733,
+          67324194,
+          802475,
+          20443753,
+          11753385,
+          173181,
+          77248084
+        ],
+        "psc_residue_suffix": [
+          52936116,
+          90732018,
+          54513857,
+          92020002,
+          97997058,
+          99810909,
+          22429667,
+          38386070
+        ]
+      },
+      "local_mod_q": {
+        "characteristic": 199999991,
+        "degree_Q": 2952,
+        "gcd_degree": 0,
+        "psc_count": 2953,
+        "psc_zero_indices": [],
+        "psc_residue_sha256": "1def7324bd999e1030ff8b299de1742a3ca6ab0f06e46dcfefeb4d4ae4d91f23",
+        "psc_residue_prefix": [
+          147232491,
+          169209755,
+          116566708,
+          180581097,
+          162241259,
+          183662761,
+          75348991,
+          165846601
+        ],
+        "psc_residue_suffix": [
+          87364796,
+          5655450,
+          68783648,
+          137624498,
+          197819529,
+          85701100,
+          135319832,
+          49417508
+        ]
+      },
+      "psc_mismatch_indices": [],
+      "elapsed_seconds": 12.715759792001336
+    }
+  ],
+  "elapsed_seconds": 12.72603004100165,
+  "source": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F04_psc_coefficient_hard/scan_psc_shifts.sage",
+  "source_sha256": "ff5b413d6a67306f4078b3ac9910b309a9cd942e5b871607043204b25e2fe84c",
+  "rows": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F04_psc_coefficient_hard/output/R05_shift_1_rows.jsonl"
+}

@@ -354,7 +354,7 @@ For \(a\ne0\), the leading \(Y^{24}\) terms cancel and the \(Y^{23}\) coefficien
 
 **Evidence.** Named Sage runs R01–R07 and their dispositions are in `experiments/F04_rankkill/RUN_MANIFEST.md`. That discovery manifest did not retain exact command/environment strings despite previously implying it did, and R04 used binary64 thresholds for its “first in the box” ordering; neither is authoritative evidence for provenance or minimality. R05 directly checked the small witness and R07 matched the analytic distributions. A fresh hostile auditor independently proved the exact parameters and algebra and reran all local residues under the fully specified timeout-bounded A02 in `experiments/F04_rank_audit`. A proof-blind reconstruction then independently recovered the exact logarithmic bounds, minimal \(r\), shift bound, nullity identity, local factor degrees, degree-23 obstruction, and exceptional shifts without reading either experiment directory. The displayed algebra, not a finite-search minimality claim, is P14 in `PROVED.md`.
 
-**PSC follow-up candidate.** The mandatory canonical-PSC kill test did not extend this obstruction. With a fixed determinant convention applied to the same globally formed \(H_a\), candidate C13 finds \(D_{47}=0\pmod{271}\) and \(173\pmod{293}\) already at \(a=1\). A raw leading coefficient separates the same instance, so this supplies no PSC advantage; it only confirms that equal full ranks do not control intermediate determinants. Hostile audit and proof-blind reconstruction are pending.
+**PSC follow-up (promoted P16).** The mandatory canonical-PSC kill test did not extend this obstruction. With a fixed determinant convention applied to the same globally formed \(H_a\), P16 finds \(D_{47}=0\pmod{271}\) and \(173\pmod{293}\) already at \(a=1\). A hostile factor-free scan independently discovered the same first index and gcd, and a literal-reduction audit checked every local determinant. Proof-blind reconstruction recovered the certificate and found that the constant coefficient already separates: \([X^0]H_1=36585\) and \(\gcd(36585,79403)=271\). Thus this supplies no PSC advantage; it only confirms that equal full ranks do not control intermediate determinants. The reconstruction's provenance-defective early probe is disclosed and disqualified; authoritative runs R01--R03 support P16.
 
 **What would make a retry materially new.** A proved choice of polynomially many nonstandard \(r\), a different group-algebra element or joint invariant, or an asymptotic shift distribution with inverse-polynomial mismatch probability that is not contradicted by this standard-parameter witness.
 
@@ -414,7 +414,7 @@ Globally conjugate orientations have unit differences, while roots agreeing in e
 
 ## X11 — order-filtered automorphisms of squarefree cubic algebras
 
-**Status:** candidate from the mandatory F10/B1 kill test; hostile audit and proof-blind reconstruction pending.
+**Status:** promoted as P17 after hostile audit and proof-blind reconstruction.
 
 **Family:** F10.
 
@@ -432,8 +432,33 @@ respectively. The exact type counts are \(\binom{\ell}{3}\), \(\ell(\ell^2-\ell)
 
 **Why construction is the factoring step.** On the order-3 mismatch promise, one local group is \(C_2\), whose only solution to \(\sigma^3=1\) is identity; the other local group has a nonidentity order-3 element. Therefore any globally nonidentity solution is identity in exactly one component. If \(\sigma(X)=a+bX+cX^2\), at least one of \(a,b-1,c\) is zero in exactly one component and its gcd with \(N\) splits the semiprime. Given the factors, fixed-degree finite-field factorization, Frobenius or root interpolation, and CRT construct such a solution in expected polynomial bit complexity. Rejection sampling plus this promise solver therefore factors every distinct odd semiprime; factoring trivially solves every promise instance.
 
-**Why elimination rank does not fix it.** Geometrically, the order-dividing-3 locus is always the identity and two 3-cycles, hence rank 3. In types \((111),(3)\) all three descend, while in type \((12)\) the two nonidentity points form a quadratic orbit. The order-dividing-2 locus analogously has rank 4 in every type. Rank/resultant tests of geometric nonemptiness see no type drop; rational-point descent or a mixed CRT choice is exactly the hidden idempotent problem.
+**Order-2 qualification.** If exactly one local type is \((3)\), any valid globally nonidentity involution is component-selective and known factors construct one. Unlike the order-3 mismatch, this promise is not recognized by the discriminant/Jacobi bit. Its constant random density does not authorize calls to a solver with no guaranteed off-promise behavior. Concretely, \(N=15\), \(f=X^3+10X^2+6X+10\) has unit discriminant with Jacobi symbol \(-1\), types \((12)/(111)\), and the involution \(X\mapsto2+3X+8X^2\) is nonidentity on both sides while every coefficient gcd is 1. Thus the naive unconditional order-2 reduction is false, not merely unproved.
 
-**Exact equations and evidence.** The coefficient equations for endomorphism, the unit Jacobian determinant, and \(\sigma^2=1,\sigma^3=1\) are derived in experiments/F10_autkill/REPORT.md. Named runs R01–R06 and every failure are in its manifest. The authoritative \(N=35,f=X^3+2\) enumeration finds exactly six global automorphisms; the selective order-3 maps \(X\mapsto11X\) and \(X\mapsto16X\) both expose 5 through \(\gcd(b-1,35)\). Finite computation certifies only this example.
+**Why full geometric rank does not fix it.** Geometrically, the order-dividing-3 locus is always the identity and two 3-cycles, hence rank 3. In types \((111),(3)\) all three descend, while in type \((12)\) the two nonidentity points form a quadratic orbit. The order-dividing-2 locus analogously has rank 4 in every type. Invariants depending only on geometric nonemptiness or full geometric rank see no type drop; rational-point descent or a mixed CRT choice is the hidden idempotent step. This does not rule out every coordinate projection, resultant, subresultant, or elimination invariant.
+
+**Exact equations and evidence.** The coefficient equations for endomorphism, the unit Jacobian determinant, and \(\sigma^2=1,\sigma^3=1\) are derived in experiments/F10_autkill/REPORT.md. Named runs R01–R06 and every failure are in its manifest. The hostile audit in experiments/F10_aut_audit/RESULT.md independently derived every equation, checked the characteristic-3 schemes, exact counts, reductions, and reverse constructions, and reran both small examples; A01's serialization failure is retained and authoritative A04 passed. The proof-blind reconstruction in experiments/F10_aut_reconstruct/RESULT.md recovered the theorem, explicit complexity bounds, rational-descent scope, promised examples, and order-2 counterexample; its timeout-bounded exhaustive verifier passed. The \(N=35,f=X^3+2\) enumeration finds exactly six global automorphisms; the selective order-3 maps \(X\mapsto11X\) and \(X\mapsto16X\) both expose 5 through \(\gcd(b-1,35)\). Finite computation certifies only the examples. The corrected general statements are P17 in `PROVED.md`.
 
 **What would make a retry materially new.** A fixed-degree family whose local certificate has a division-free geometric rank or determinant mismatch rather than only a rational-point-count mismatch, or a factor-free polynomial-time descent/canonization algorithm whose output is not already component-selective by definition. Merely shrinking the automorphism base does not address the \(N^3\)-sized image search.
+
+## X12 — canonical PSC localization on the coefficient-hard AKS witness
+
+**Status:** candidate from the mandatory F04 follow-up kill test; hostile audit and proof-blind reconstruction pending.
+
+**Family:** F04.
+
+**Classification:** method failure for the fixed canonical principal Sylvester coefficients of the standard AKS errors under the standard minimal-\(r\), standard-shift scan. This does not close arbitrary minors, pivot-dependent transcripts, nonstandard parameters, or other group-algebra invariants.
+
+**Closest prior route and material difference.** P11 closes raw coefficient gcds on the same input. C13 shows a canonical PSC can separate P14, but only where a raw coefficient already does. X12 applies the richer determinant family to the genuinely coefficient-hard P11 witness.
+
+**Candidate theorem and certificate.** Under C13's fixed determinant convention, a principal coefficient \(D_j(F,G)\) over a field is nonzero exactly when \(j\) occurs in the ordinary Euclidean remainder-degree sequence of \(F,G\). On
+
+\[
+N=20000000499999937
+=100000007\cdot199999991,\qquad r=2953,
+\]
+
+every globally formed standard error \(H_a\), \(1\le a\le2942\), has degree 2952 and unit coefficients. In both local fields, every Euclidean degree chain is the complete sequence \(2953,2952,\ldots,0\). Hence all 8,687,726 canonical determinants per field are nonzero and every global gcd is 1.
+
+**Evidence and scope.** Exact named R08 exhausts all shifts under a 900-second timeout; R05/R09 materialize all 2953 local PSC residues at the endpoint shifts, and R10 checks every row and artifact hash. R01/R02 failures and the noncompliant pre-source X00 probe are retained and excluded in experiments/F04_psc_coefficient_hard/RUN_MANIFEST.md. The degree-sequence theorem and full scan still require hostile audit and proof-blind reconstruction. Finite computation refutes a universal auxiliary claim but proves no asymptotic factoring statement.
+
+**What would make a retry materially new.** A specified noncanonical minor family or elimination invariant with polynomially many globally computable entries and a proved inverse-polynomial local mismatch probability; or a nonstandard AKS modulus/error family not covered by this exact witness.

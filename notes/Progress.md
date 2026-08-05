@@ -141,7 +141,7 @@ then a nontrivial factor of \(N\) is recoverable deterministically in \(\operato
 
 ### C13 — P14's full-rank witness is not a canonical-PSC witness
 
-**Status:** candidate from the mandatory F04 PSC kill test; hostile audit and proof-blind reconstruction pending.
+**Status:** promoted as P16 after hostile audit and proof-blind reconstruction.
 
 **Closest prior route and material difference.** The closest route is X09/P14, which proves equality of the two local nullity/gcd-degree invariants for every standard shift. Canonical intermediate principal Sylvester determinants are materially different because they need not be invariant under the component-dependent cyclic substitutions used in P14's local reduction.
 
@@ -153,11 +153,11 @@ D_{47}\equiv0\pmod{271},\qquad D_{47}\equiv173\pmod{293}.
 
 The factor-free global determinant is \(30352\pmod{79403}\), whose gcd with \(N\) is 271. Its matrix dimension is 443. Division-free determinant computation makes every such fixed coefficient polynomial-time computable when the AKS parameters are polynomial in \(\log N\).
 
-**Exact remaining gap.** This is not evidence that PSCs improve on coefficient localization: the same input and shift already have \([X^{268}]H_1=31978\) with gcd 271. It only shows that P14 cannot refute PSC refinement. The finite certificate needs hostile audit and proof-blind reconstruction. The decisive next family-level test is a canonical-PSC scan on an input that is already hard for every individual coefficient, such as P11's witness; even success or failure there would remain finite evidence rather than a uniform theorem.
+**Verification result and remaining gap.** A hostile implementation literally reduced one saved global \(H_1\), directly checked all 269 determinant pairs, matched the PRS masks and padding formula, and independently discovered the first nontrivial gcd at \(j=47\) without factor literals or a supplied index. A proof-blind reconstruction then rebuilt the global scan from only the numerical statement, rediscovered the same first determinant separator, and independently reconstructed every local reduction. It also found the stronger limitation \([X^0]H_1=36585\) with gcd 271; 246 of the 269 raw coefficients already separate. An early preselected-index reconstruction probe was deleted without durable records, then restored and replayed; it is explicitly disqualified, and authoritative R01--R03 do not depend on it. P16 therefore only shows that P14 cannot refute PSC refinement. The decisive family-level test on P11's coefficient-hard witness remains under audit; any finite outcome will still lack a uniform separation theorem.
 
 ### C14 — cubic order-filtered automorphism search hides the split
 
-**Status:** candidate from the mandatory F10/B1 kill test; hostile audit and proof-blind reconstruction pending.
+**Status:** promoted as P17 after hostile audit and proof-blind reconstruction.
 
 **Closest prior route and material difference.** The closest route is X08/P13, which blocks automorphism-**count** interpolation in natural fixed-degree families. C14 instead exploits a constant-probability mismatch in the **existence and construction** of order-2 or order-3 automorphisms of squarefree cubic algebras.
 
@@ -175,6 +175,46 @@ Under that promise, the \((12)\) component has no nonidentity cube-torsion autom
 \gcd(a,N),\qquad \gcd(b-1,N),\qquad \gcd(c,N)
 \]
 
-is a proper factor. Conversely, known factors construct such a map by using identity on the \((12)\) side, Frobenius on a \((3)\) side, or an interpolated root 3-cycle on a \((111)\) side, then CRT-lifting. Thus a uniform solver for this order-3 promise is Las Vegas polynomial-time equivalent to factoring distinct odd semiprimes. The order-2 mismatch is analogous.
+is a proper factor. Conversely, known factors construct such a map by using identity on the \((12)\) side, Frobenius on a \((3)\) side, or an interpolated root 3-cycle on a \((111)\) side, then CRT-lifting. Thus a uniform solver for this Jacobi-recognizable order-3 promise is Las Vegas polynomial-time equivalent to factoring distinct odd semiprimes. For an already-promised order-2 mismatch, any valid nonidentity involution similarly factors the instance and known factors construct one; constant mismatch density alone does not give a reduction to a promise-only solver because the order-2 predicate is not Jacobi-recognizable and off-promise behavior is uncontrolled.
 
-**Descent obstruction and scope.** The order-dividing-3 automorphism scheme has geometric rank 3 for every type: its rational-point counts are 3 for \((111),(3)\) but 1 for \((12)\). The order-dividing-2 locus has geometric rank 4 with rational-point counts 4, 2, 1. A resultant or quotient rank therefore does not automatically localize the mismatch; choosing a rational or mixed CRT point is the component-selective step. The explicit certificate \(N=35,f=X^3+2\) has types \((12)/(3)\), with \(X\mapsto11X,16X\) exposing 5. This blocks only the natural cubic order-filter construction, not all B1 rings or canonization mechanisms.
+**Verification, descent obstruction, and scope.** The hostile audit independently checked all equations, exact probabilities including characteristic 3, both gcd directions, reverse constructions, and the \(N=15,35\) certificates. A proof-blind reconstruction recovered those results and supplied a concrete order-2 failure: for \(N=15\), \(f=X^3+10X^2+6X+10\) has unit discriminant of Jacobi symbol \(-1\), but the involution \(X\mapsto2+3X+8X^2\) is nonidentity in both components and all three coefficient gcds are 1. The order-dividing-3 automorphism scheme has geometric rank 3 for every type: its rational-point counts are 3 for \((111),(3)\) but 1 for \((12)\). The order-dividing-2 locus has geometric rank 4 with rational-point counts 4, 2, 1. Invariants depending only on geometric nonemptiness or full geometric rank cannot localize the mismatch; no universal claim about every projection, resultant, or elimination invariant follows. The explicit promised certificate \(N=35,f=X^3+2\) has types \((12)/(3)\), with \(X\mapsto11X,16X\) exposing 5. This blocks only the natural cubic order-filter construction, not all B1 rings or canonization mechanisms.
+
+### C15 — the coefficient-hard AKS witness is also canonical-PSC-hard
+
+**Status:** candidate from the mandatory follow-up F04 kill test; hostile audit and proof-blind reconstruction pending.
+
+**Closest prior route and material difference.** The closest results are P11, which makes every standard AKS error coefficient a unit, and C13, whose canonical PSC separates P14 only because a raw leading coefficient already separates. C15 tests the strictly richer canonical determinant family on P11's coefficient-hard witness.
+
+**Degree-sequence lemma.** For polynomials \(F,G\) of degrees \(m>n\) over a field, let \(D_j\) use C13's fixed principal Sylvester determinant convention. If the ordinary Euclidean remainder degrees are
+
+\[
+m=d_0>d_1=n>d_2>\cdots>d_s=\deg\gcd(F,G),
+\]
+
+then
+
+\[
+D_j(F,G)\ne0
+\quad\Longleftrightarrow\quad
+j\in\{d_1,\ldots,d_s\}
+\qquad(0\le j\le n).
+\]
+
+The candidate proof identifies \(D_j\) with the principal coefficient of the \(j\)-th subresultant and inducts through the Euclidean remainder chain, including the positive-gcd and top-index cases. This convention-sensitive lemma requires hostile verification.
+
+**Finite obstruction.** On
+
+\[
+N=20000000499999937
+=100000007\cdot199999991,\qquad r=2953,
+\]
+
+for every standard shift \(1\le a\le2942\), the globally formed error has degree 2952 and unit coefficients, and both local Euclidean chains are exactly
+
+\[
+2953,2952,\ldots,1,0.
+\]
+
+The lemma therefore makes all \(2942\cdot2953=8{,}687{,}726\) canonical PSCs nonzero in each field, so every global PSC is a unit. R08 completed the entire standard range under a 900-second timeout; exact full PSC residues at shifts 1 and 2942 and R10's artifact audit cross-check the shortcut.
+
+**Exact remaining gap.** If verified, this refutes universal localization only for the fixed canonical PSCs in the standard minimal-\(r\), standard-shift AKS scan. It does not cover arbitrary Sylvester minors, other elimination transcripts, nonstandard moduli/shifts, or other group-algebra elements, and finite exhaustion supplies no top-level factoring theorem.

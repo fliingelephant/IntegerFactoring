@@ -1,0 +1,311 @@
+{
+  "checks": {
+    "all_compact_and_expanded_coefficient_equations": true,
+    "canonical_R06_sha256": "eb75cfe0e0f2327476d35508eaa09ba652a4215e926dbff75d5311683469ce6c",
+    "characteristic_three_coefficient_schemes": {
+      "111": {
+        "coefficients": [
+          0,
+          2,
+          0
+        ],
+        "order2_scheme": {
+          "geometric_rank": 4,
+          "is_radical": true,
+          "krull_dimension": 0,
+          "rational_point_count": 4
+        },
+        "order3_scheme": {
+          "geometric_rank": 3,
+          "is_radical": true,
+          "krull_dimension": 0,
+          "rational_point_count": 3
+        }
+      },
+      "12": {
+        "coefficients": [
+          0,
+          1,
+          0
+        ],
+        "order2_scheme": {
+          "geometric_rank": 4,
+          "is_radical": true,
+          "krull_dimension": 0,
+          "rational_point_count": 2
+        },
+        "order3_scheme": {
+          "geometric_rank": 3,
+          "is_radical": true,
+          "krull_dimension": 0,
+          "rational_point_count": 1
+        }
+      },
+      "3": {
+        "coefficients": [
+          0,
+          2,
+          1
+        ],
+        "order2_scheme": {
+          "geometric_rank": 4,
+          "is_radical": true,
+          "krull_dimension": 0,
+          "rational_point_count": 1
+        },
+        "order3_scheme": {
+          "geometric_rank": 3,
+          "is_radical": true,
+          "krull_dimension": 0,
+          "rational_point_count": 3
+        }
+      }
+    },
+    "characteristic_three_reverse_constructions": {
+      "irreducible_3_frobenius_image": [
+        2,
+        1,
+        0
+      ],
+      "split_111_interpolated_cycle": [
+        1,
+        1,
+        0
+      ]
+    },
+    "fresh_N35_certificate": {
+      "automorphisms": [
+        {
+          "determinant_modulus": 1,
+          "gcds_from_identity": [
+            35,
+            35,
+            35
+          ],
+          "image": [
+            0,
+            1,
+            0
+          ],
+          "order": 1
+        },
+        {
+          "determinant_modulus": 1,
+          "gcds_from_identity": [
+            35,
+            5,
+            35
+          ],
+          "image": [
+            0,
+            11,
+            0
+          ],
+          "order": 3
+        },
+        {
+          "determinant_modulus": 29,
+          "gcds_from_identity": [
+            35,
+            7,
+            7
+          ],
+          "image": [
+            0,
+            15,
+            28
+          ],
+          "order": 2
+        },
+        {
+          "determinant_modulus": 1,
+          "gcds_from_identity": [
+            35,
+            5,
+            35
+          ],
+          "image": [
+            0,
+            16,
+            0
+          ],
+          "order": 3
+        },
+        {
+          "determinant_modulus": 29,
+          "gcds_from_identity": [
+            35,
+            1,
+            7
+          ],
+          "image": [
+            0,
+            25,
+            28
+          ],
+          "order": 6
+        },
+        {
+          "determinant_modulus": 29,
+          "gcds_from_identity": [
+            35,
+            1,
+            7
+          ],
+          "image": [
+            0,
+            30,
+            28
+          ],
+          "order": 6
+        }
+      ],
+      "global_automorphism_count": 6,
+      "integer_discriminant": -108,
+      "local_automorphism_counts": [
+        2,
+        3
+      ],
+      "local_types": [
+        "12",
+        "3"
+      ],
+      "order_histogram": {
+        "1": 1,
+        "2": 1,
+        "3": 2,
+        "6": 2
+      },
+      "polynomial": "x^3 + 2",
+      "scalar_cube_roots": [
+        1,
+        11,
+        16
+      ]
+    },
+    "geometric_conjugation_orbits": {
+      "111": {
+        "2": {
+          "descent_orbit_degrees": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "geometric_rank": 4,
+          "rational_points": 4
+        },
+        "3": {
+          "descent_orbit_degrees": [
+            1,
+            1,
+            1
+          ],
+          "geometric_rank": 3,
+          "rational_points": 3
+        }
+      },
+      "12": {
+        "2": {
+          "descent_orbit_degrees": [
+            1,
+            1,
+            2
+          ],
+          "geometric_rank": 4,
+          "rational_points": 2
+        },
+        "3": {
+          "descent_orbit_degrees": [
+            1,
+            2
+          ],
+          "geometric_rank": 3,
+          "rational_points": 1
+        }
+      },
+      "3": {
+        "2": {
+          "descent_orbit_degrees": [
+            1,
+            3
+          ],
+          "geometric_rank": 4,
+          "rational_points": 1
+        },
+        "3": {
+          "descent_orbit_degrees": [
+            1,
+            1,
+            1
+          ],
+          "geometric_rank": 3,
+          "rational_points": 3
+        }
+      }
+    },
+    "mismatch_probabilities_p3_q5": {
+      "order2_conditional": "22/45",
+      "order2_raw": "176/675",
+      "order3_conditional": "1/2",
+      "order3_expected_raw_trials": "15/4",
+      "order3_raw": "4/15"
+    },
+    "type_counts_and_discriminant_character": {
+      "11": {
+        "conditional_probabilities": {
+          "111": "3/22",
+          "12": "1/2",
+          "3": "4/11"
+        },
+        "raw_counts": {
+          "111": 165,
+          "12": 605,
+          "3": 440,
+          "non-squarefree": 121
+        }
+      },
+      "3": {
+        "conditional_probabilities": {
+          "111": "1/18",
+          "12": "1/2",
+          "3": "4/9"
+        },
+        "raw_counts": {
+          "111": 1,
+          "12": 9,
+          "3": 8,
+          "non-squarefree": 9
+        }
+      },
+      "5": {
+        "conditional_probabilities": {
+          "111": "1/10",
+          "12": "1/2",
+          "3": "2/5"
+        },
+        "raw_counts": {
+          "111": 10,
+          "12": 50,
+          "3": 40,
+          "non-squarefree": 25
+        }
+      },
+      "7": {
+        "conditional_probabilities": {
+          "111": "5/42",
+          "12": "1/2",
+          "3": "8/21"
+        },
+        "raw_counts": {
+          "111": 35,
+          "12": 147,
+          "3": 112,
+          "non-squarefree": 49
+        }
+      }
+    }
+  },
+  "family_id": "F10-aut-audit",
+  "run_id": "A01"
+}

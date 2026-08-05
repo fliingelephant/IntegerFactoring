@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F10_aut_audit/audit_cubic_automorphisms.sage.py", line 400, in <module>
+    main()
+    ~~~~^^
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F10_aut_audit/audit_cubic_automorphisms.sage.py", line 385, in main
+    json.dumps(
+    ~~~~~~~~~~^
+        {
+        ^
+    ...<7 lines>...
+        sort_keys=True,
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/var/tmp/sage-10.9-current/local/lib/python3.14/json/__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "/var/tmp/sage-10.9-current/local/lib/python3.14/json/encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/var/tmp/sage-10.9-current/local/lib/python3.14/json/encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "/var/tmp/sage-10.9-current/local/lib/python3.14/json/encoder.py", line 182, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type Integer is not JSON serializable
+when serializing dict item 'characteristic_three_scheme_checks'

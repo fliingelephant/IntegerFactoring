@@ -1,0 +1,93 @@
+{
+  "approach_family": "F04_psc_coefficient_hard",
+  "method": "canonical D_j zero iff j occurs in the Euclidean remainder degree sequence",
+  "inputs": {
+    "N": 20000000499999937,
+    "p": 100000007,
+    "q": 199999991,
+    "r": 2953,
+    "shift_start": 1,
+    "shift_stop_requested": 1,
+    "standard_shift_bound": 2942
+  },
+  "construction": "global H_a in (Z/NZ)[X]/(X^r-1), then coefficientwise reduction",
+  "canonical_D_convention_source": "experiments/F04_psckill/RESULT.md",
+  "parameter_source": "PROVED.md P11 and experiments/F04/output/sage_aks_20000000499999937_full.json",
+  "shifts_completed": [
+    1
+  ],
+  "first_mismatch": null,
+  "stopped_after_first_mismatch": false,
+  "records": [
+    {
+      "approach_family": "F04_psc_coefficient_hard",
+      "shift": 1,
+      "global_degree_Q": 2952,
+      "global_H_coefficient_sha256": "b85b908a91ca790741c9e3e450f0164cf2611a5605917e57d9c0865de6e3a03d",
+      "raw_coefficient_zero_count_mod_p": 0,
+      "raw_coefficient_zero_count_mod_q": 0,
+      "raw_coefficient_nonunit_count_mod_N": 0,
+      "local_mod_p": {
+        "characteristic": 100000007,
+        "gcd_degree": 0,
+        "euclidean_degree_count": 2954,
+        "euclidean_degree_sha256": "942e5bfa8d55cd6b1762a5b595220b234744e76ae82a91f34b0d7b47af38627f",
+        "euclidean_degree_prefix": [
+          2953,
+          2952,
+          2951,
+          2950,
+          2949,
+          2948,
+          2947,
+          2946
+        ],
+        "euclidean_degree_suffix": [
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "psc_zero_indices": []
+      },
+      "local_mod_q": {
+        "characteristic": 199999991,
+        "gcd_degree": 0,
+        "euclidean_degree_count": 2954,
+        "euclidean_degree_sha256": "942e5bfa8d55cd6b1762a5b595220b234744e76ae82a91f34b0d7b47af38627f",
+        "euclidean_degree_prefix": [
+          2953,
+          2952,
+          2951,
+          2950,
+          2949,
+          2948,
+          2947,
+          2946
+        ],
+        "euclidean_degree_suffix": [
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "psc_zero_indices": []
+      },
+      "psc_mismatch_indices": [],
+      "elapsed_seconds_before_residue_reconstruction": 0.10906554099710775,
+      "elapsed_seconds": 0.10906649999742513
+    }
+  ],
+  "elapsed_seconds": 0.1190887919983652,
+  "source": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F04_psc_coefficient_hard/scan_degree_patterns.sage",
+  "source_sha256": "be12f869a9002d5c37b8217cf545f8785d72a117c1830502af189ef6d06be904",
+  "rows": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F04_psc_coefficient_hard/output/R07_degree_shift_1_rows.jsonl"
+}

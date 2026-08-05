@@ -1,0 +1,166 @@
+{
+  "approach_family": "F04_psc_coefficient_hard",
+  "purpose": "canonical determinant versus Sage PRS zero-index validation",
+  "field_characteristic": 7,
+  "records": [
+    {
+      "P": "x^6 + 6",
+      "Q": "x^5 + 2*x^4 + 3*x^3 + x^2 + 4*x + 2",
+      "gcd_degree": 0,
+      "euclidean_remainder_degrees": [
+        6,
+        5,
+        4,
+        3,
+        2,
+        0
+      ],
+      "indices_missing_from_euclidean_degrees": [
+        1
+      ],
+      "canonical_D": [
+        5,
+        0,
+        6,
+        6,
+        1,
+        1
+      ],
+      "canonical_zero_indices": [
+        1
+      ],
+      "subresultants": [
+        "5",
+        "4",
+        "6*x^2 + x",
+        "6*x^3 + 3*x^2 + 5*x + 4",
+        "x^4 + 5*x^3 + 5*x^2 + 6*x + 3"
+      ],
+      "subresultant_count": 5,
+      "subresultant_degrees": [
+        0,
+        0,
+        2,
+        3,
+        4
+      ],
+      "subresultant_diagonal_coefficients": [
+        5,
+        0,
+        6,
+        6,
+        1
+      ],
+      "subresultant_diagonal_zero_indices": [
+        1
+      ]
+    },
+    {
+      "P": "x^6 + 6",
+      "Q": "x^5 + x^4 + 5*x^3 + 3*x^2 + 5*x + 6",
+      "gcd_degree": 1,
+      "euclidean_remainder_degrees": [
+        6,
+        5,
+        4,
+        2,
+        1
+      ],
+      "indices_missing_from_euclidean_degrees": [
+        0,
+        3
+      ],
+      "canonical_D": [
+        0,
+        2,
+        3,
+        0,
+        3,
+        1
+      ],
+      "canonical_zero_indices": [
+        0,
+        3
+      ],
+      "subresultants": [
+        "2*x + 5",
+        "3*x^2 + 4*x",
+        "4*x^2 + 3*x",
+        "3*x^4 + 2*x^3 + 5*x^2 + 6*x + 5"
+      ],
+      "subresultant_count": 4,
+      "subresultant_degrees": [
+        1,
+        2,
+        2,
+        4
+      ],
+      "subresultant_diagonal_coefficients": [
+        5,
+        4,
+        4,
+        2
+      ],
+      "subresultant_diagonal_zero_indices": []
+    },
+    {
+      "P": "x^6 + 6",
+      "Q": "x^5 + 3*x^2 + 2",
+      "gcd_degree": 0,
+      "euclidean_remainder_degrees": [
+        6,
+        5,
+        3,
+        2,
+        1,
+        0
+      ],
+      "indices_missing_from_euclidean_degrees": [
+        4
+      ],
+      "canonical_D": [
+        4,
+        4,
+        2,
+        2,
+        0,
+        1
+      ],
+      "canonical_zero_indices": [
+        4
+      ],
+      "subresultants": [
+        "4",
+        "4*x + 6",
+        "2*x^2 + 5*x + 4",
+        "2*x^3 + 6*x + 3",
+        "4*x^3 + 5*x + 6"
+      ],
+      "subresultant_count": 5,
+      "subresultant_degrees": [
+        0,
+        1,
+        2,
+        3,
+        3
+      ],
+      "subresultant_diagonal_coefficients": [
+        4,
+        4,
+        2,
+        2,
+        0
+      ],
+      "subresultant_diagonal_zero_indices": [
+        4
+      ]
+    }
+  ],
+  "coprime_canonical_values_match_sage_diagonal": true,
+  "top_index_leading_coefficient_formula_matches": true,
+  "gcd_forces_initial_canonical_zeros": true,
+  "canonical_zero_indices_equal_missing_euclidean_degrees": true,
+  "elapsed_seconds": 0.01920287500252016,
+  "source": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F04_psc_coefficient_hard/validate_prs_convention.sage",
+  "source_sha256": "022e865ee3ada0896d1777152134768e868f325119cec150b970a573cc3196c2"
+}
