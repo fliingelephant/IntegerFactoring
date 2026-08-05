@@ -1706,3 +1706,68 @@ Fixed left/right transforms with norms coprime to \(N\) act by local projective 
 **Scope.** Exact-uniform sampling is an idealized premise here, not a supplied algorithm. Finding one four-square representation does not prove a uniform draw from \(S_N\), and multiplying it by units stays inside one constant-size orbit. The theorem is restricted to distinct odd primes: the Hurwitz order is ramified at 2, and repeated-prime norms admit rank-zero reductions and deeper ideal types. P25 is evidence against iid uniform one-sided-gcd collisions and their fixed-menu equality refinements; it does not rule out a factor-free nonuniform sampler with asymmetric local collision energy, adaptive/nonlinear constructions, mixed invariants, or non-collision quaternion methods.
 
 The candidate proof, corrected hostile audit with its exact \(N=15\) and \(N=2,6,9\) checks, and proof-blind reconstruction are preserved under `experiments/F15_hurwitz_gcd_kill`, `experiments/F15_hurwitz_gcd_audit`, and `experiments/F15_hurwitz_gcd_reconstruct`.
+
+## P26 — bounded scaled Fermat and literal CRT wheels do not manufacture a fine factor-trace hint
+
+**Status:** promoted.
+
+**Verification record:** the trace-hint reduction, quantifier order, all multiplier allocations and parity cases, prime construction, AM--GM gap, local wheel count, and explicit-state/uniform-sampling scope passed a focused hostile audit and a proof-blind end-to-end reconstruction. The reconstruction additionally supplied exact counterexamples to broader wheel interpretations. No cross-family audit has run.
+
+Let \(N=pq\), where \(p<q<2p\) are distinct odd primes, and let \(n=\lceil\log_2(N+1)\rceil\).
+
+**A fine metric hint is sufficient.** If an explicitly represented \(h\) satisfies
+
+\[
+|h-(p+q)|\le B(n)
+\]
+
+for a fixed polynomial \(B\), enumerate the polynomially many integers \(t\) in that interval and square-test \(t^2-4N\). At \(t=p+q\), the discriminant is \((q-p)^2\); parity, multiplication, and nontriviality checks make every return correct. All operands have \(O(n)\) bits, so this is a deterministic polynomial-bit reduction. It does not construct the hint.
+
+**Every fixed polynomial numerical multiplier range can fail.** Fix eventual positive polynomial bounds \(K(n),T(n)\). There are infinitely many balanced pairs with \(q/p\) arbitrarily close, at a chosen inverse-polylogarithmic scale, to \(\sqrt2\). The classical prime-number-theorem error term supplies the required prime \(q\) in an interval of width \(p/(\log p)^A\), with \(A\) chosen after \(K,T\).
+
+For every \(k\le K(n)\), eventually \(\gcd(k,N)=1\). Any factor-revealing factorization \(XY=kN\) allocates the two unknown primes oppositely, so after relabeling
+
+\[
+X=cp,\qquad Y=dq,\qquad cd=k,qquad c,d\le K(n),
+\]
+
+or the swapped orientation. Bad approximation to \(\sqrt2\) gives
+
+\[
+|X-Y|>\frac{p}{6K(n)}.
+\]
+
+The exact scaled-Fermat gap is
+
+\[
+\frac{X+Y}{2}-\sqrt{kN}
+=\frac{(X-Y)^2}{2(\sqrt X+\sqrt Y)^2}
+>\frac{p}{432K(n)^3}.
+\]
+
+This exceeds \(T(n)+1\) for all sufficiently large members of the family. The proof covers every divisor allocation; parity only removes impossible allocations. A found factor of \(kN\) reveals \(p\) or \(q\) through its gcd with \(N\), rather than necessarily being a factor of \(N\) itself. The family may depend on the fixed \(K,T\); the theorem does not cover polynomially many binary-encoded multipliers of exponential numerical magnitude.
+
+**Literal square-residue wheels remain large.** For an odd auxiliary prime \(\ell\nmid N\), let
+
+\[
+W_\ell(N)=\{t\bmod\ell:t^2-4N\text{ is a square modulo }\ell\}.
+\]
+
+The map \(x\mapsto x+Nx^{-1}\) on \(\mathbb F_\ell^\times\) has fibers given by the involution \(x\mapsto N/x\), hence
+
+\[
+|W_\ell(N)|=\frac{\ell+(N/\ell)}2.
+\]
+
+For a squarefree product \(m\) of \(k\) distinct such primes, CRT gives
+
+\[
+|W_m(N)|=\prod_{\ell\mid m}\frac{\ell+(N/\ell)}2
+\ge\frac{m}{3^k}=m^{1-o(1)}.
+\]
+
+Let \(L=\Theta(\sqrt N)\) be the number of integers in the public balanced trace interval. If \(m\ge L\), literal wheel materialization and unconditioned uniform sampling require \(L^{1-o(1)}\) states or expected trials. If \(m\le L\), explicitly visiting every accepted lift requires \(L^{1-o(1)}\) candidates. These are exponential in \(n\).
+
+The regime qualifications are essential. A fixed small \(m\) has only constantly many materialized states, while an enormous factor-aware tailored product can reject every false interval trace and leave one lift. Thus P26 is only an explicit-state, explicit-lift, and unconditioned-uniform-sampling obstruction. It is not a lower bound against compressed character solvers, adaptive auxiliary primes, biased or interval-conditioned generation, or another way for bare \(N\) to manufacture metric information.
+
+The candidate, hostile audit, and proof-blind reconstruction are preserved under `experiments/F18_metric_hint_kill`, `experiments/F18_metric_hint_audit`, and `experiments/F18_metric_hint_reconstruct`.

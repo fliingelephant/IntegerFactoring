@@ -671,3 +671,25 @@ on an infinite balanced family. Polynomially many samples in the input bit lengt
 **Sampling and scope.** The theorem grants exact-uniform samples for free and still obtains the obstruction. It does not construct such a sampler. A find-one four-square algorithm is not an exact-uniform shell sampler, and unit multiplication does not change the large orientation orbit. Ramification at 2 and repeated prime powers lie outside the rank-one squarefree theorem. Adaptive or deliberately biased samplers, singular or sample-dependent transforms, integral invariants not controlled by reduced equality partitions, and other quaternion algorithms remain open.
 
 **What would make a retry materially new.** A completely specified factor-free sampler from bare \(N\) with proved polynomial bit complexity and inverse-polynomial asymmetric local collision behavior; an adaptive/nonlinear transform whose success is not already a trace-free-coordinate gcd; or a non-collision quaternion invariant with a uniform all-input theorem.
+
+## X20 — bounded numerical scaled-Fermat scans and literal CRT trace wheels
+
+**Status:** promoted as P26 after hostile audit and proof-blind reconstruction.
+
+**Family:** F15.
+
+**Classification:** method failure for enumerating every numerical multiplier \(k\le\operatorname{poly}(\log N)\) with a polynomial Fermat scan, and for literal materialization, unconditioned uniform sampling, or explicit lift enumeration of square-residue CRT wheels. This is not evidence against large binary-encoded multipliers or implicit, adaptive, interval-conditioned, or biased metric decoders.
+
+**Closest prior route and material difference.** F11/P19 encodes exact factors as a structured closest-vector target. X20 instead asks whether bare \(N\) can cheaply manufacture an Archimedean approximation to \(p+q\), and its terminal extraction is an integer discriminant rather than a residue-ring polynomial separator.
+
+**Exact obstruction.** For each fixed polynomial pair \(K,T\), infinitely many balanced semiprimes have \(q/p\) sufficiently close to \(\sqrt2\) that every factor-revealing allocation of every \(k\le K(n)\) has scaled-Fermat threshold distance greater than
+
+\[
+\frac{p}{432K(n)^3}>T(n)+1.
+\]
+
+The family depends on \(K,T\), all allocations and parity cases are covered, and a factor of \(kN\) must be intersected with \(N\) to recover the unknown prime. Separately, each auxiliary prime accepts exactly \((\ell+(N/\ell))/2\) trace residues. A squarefree CRT wheel therefore has \(m^{1-o(1)}\) literal states; across a balanced trace interval of length \(L=\Theta(\sqrt N)\), the correct two-regime bound is \(L^{1-o(1)}\) materialized states/uniform trials when \(m\ge L\), or explicit accepted lifts when \(m\le L\).
+
+**Corrections and evidence.** The hostile audit corrected the fixed-\(K,T\) quantifiers, factors-of-\(kN\) wording, allocation/parity certificate, and implicit-decoder scope. The proof-blind reconstruction independently recovered the complete proof and showed why broader claims are false: small fixed \(m\) has few states, and a huge tailored \(m>L\) can leave exactly one accepted interval lift. No computation supports the theorem; all three reports are proof-only. P26 records only their corrected common result.
+
+**What would make a retry materially new.** A polynomial-size list of \(N\)-dependent exponentially large multipliers with a proved close allocation, a compressed character-condition interval solver, a biased trace sampler with inverse-polynomial target mass, or another factor-free metric observable. Merely enlarging the fixed numerical polynomial cap or explicitly adding more wheel primes is covered.
