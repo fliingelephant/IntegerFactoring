@@ -1,0 +1,21 @@
+{"DOT_SAGE": "/private/tmp/f04_joint_matroid_audit_sage", "command": ["sage", "experiments/F04_joint_matroid_audit/certify_p11_joint_matrices_v2.sage", "--p-matrix", "experiments/F04_joint_matroid_audit/output/matrices/A03_P11_mod_100000007.sobj", "--q-matrix", "experiments/F04_joint_matroid_audit/output/matrices/A03_P11_mod_199999991.sobj", "--producer-source", "experiments/F04_joint_matroid_audit/build_p11_joint_matrices.sage", "--producer-status", "experiments/F04_joint_matroid_audit/status/A03_P11_joint_build.json", "--producer-log", "experiments/F04_joint_matroid_audit/logs/A03_P11_joint_build.log", "--failed-v1-source", "experiments/F04_joint_matroid_audit/certify_p11_joint_matrices.sage", "--failed-v1-status", "experiments/F04_joint_matroid_audit/status/A04_P11_joint_certify.json", "--failed-v1-log", "experiments/F04_joint_matroid_audit/logs/A04_P11_joint_certify.log", "--output", "experiments/F04_joint_matroid_audit/output/A05_P11_joint_certify_v2.json"], "event": "start", "run_id": "A05", "started_utc": "2026-08-05T18:58:38.582815+00:00", "timeout_seconds": 300}
+stage=load-both-retained-matrices
+stage=crt-rehash rows=200/2942
+stage=crt-rehash rows=400/2942
+stage=crt-rehash rows=600/2942
+stage=crt-rehash rows=800/2942
+stage=crt-rehash rows=1000/2942
+stage=crt-rehash rows=1200/2942
+stage=crt-rehash rows=1400/2942
+stage=crt-rehash rows=1600/2942
+stage=crt-rehash rows=1800/2942
+stage=crt-rehash rows=2000/2942
+stage=crt-rehash rows=2200/2942
+stage=crt-rehash rows=2400/2942
+stage=crt-rehash rows=2600/2942
+stage=crt-rehash rows=2800/2942
+stage=crt-rehash rows=2942/2942
+stage=prefix-determinant field=p value=56136614
+stage=prefix-determinant field=q value=132391112
+{"elapsed_seconds": 52.79103899999609, "global_matrix_sha256": "85c4bcda5ff5d0f23117721a503fedb77e3a84b9d708a3ceb0f7bed1673c6f53", "prefix_determinants": {"p": 56136614, "q": 132391112}, "prefix_gcd": 1, "stage": "P11-joint-build-recovery-certificate-v2"}
+{"disposition": "completed", "duration_seconds": 61.28584512499947, "event": "finish", "exit_code": 0, "finished_utc": "2026-08-05T18:59:39.869296+00:00", "run_id": "A05", "timed_out": false}

@@ -1,0 +1,53 @@
+{"DOT_SAGE": "/private/tmp/f04_joint_matroid_audit_sage", "command": ["sage", "experiments/F04_joint_matroid_audit/build_p11_joint_matrices.sage", "--p-matrix", "experiments/F04_joint_matroid_audit/output/matrices/A03_P11_mod_100000007.sobj", "--q-matrix", "experiments/F04_joint_matroid_audit/output/matrices/A03_P11_mod_199999991.sobj", "--output", "experiments/F04_joint_matroid_audit/output/A03_P11_joint_build.json"], "event": "start", "run_id": "A03", "started_utc": "2026-08-05T18:50:54.697256+00:00", "timeout_seconds": 400}
+stage=joint-build rows=100/2942
+stage=joint-build rows=200/2942
+stage=joint-build rows=300/2942
+stage=joint-build rows=400/2942
+stage=joint-build rows=500/2942
+stage=joint-build rows=600/2942
+stage=joint-build rows=700/2942
+stage=joint-build rows=800/2942
+stage=joint-build rows=900/2942
+stage=joint-build rows=1000/2942
+stage=joint-build rows=1100/2942
+stage=joint-build rows=1200/2942
+stage=joint-build rows=1300/2942
+stage=joint-build rows=1400/2942
+stage=joint-build rows=1500/2942
+stage=joint-build rows=1600/2942
+stage=joint-build rows=1700/2942
+stage=joint-build rows=1800/2942
+stage=joint-build rows=1900/2942
+stage=joint-build rows=2000/2942
+stage=joint-build rows=2100/2942
+stage=joint-build rows=2200/2942
+stage=joint-build rows=2300/2942
+stage=joint-build rows=2400/2942
+stage=joint-build rows=2500/2942
+stage=joint-build rows=2600/2942
+stage=joint-build rows=2700/2942
+stage=joint-build rows=2800/2942
+stage=joint-build rows=2900/2942
+stage=joint-build rows=2942/2942
+stage=prefix-determinant field=p value=56136614
+stage=prefix-determinant field=q value=132391112
+stage=matrix-save field=p bytes=414018575
+stage=matrix-save field=q bytes=415523429
+Traceback (most recent call last):
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F04_joint_matroid_audit/build_p11_joint_matrices.sage.py", line 134, in <module>
+    output_path.write_text(json.dumps(output, indent=_sage_const_2 , sort_keys=True) + "\n", encoding="utf-8")
+                           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/tmp/sage-10.9-current/local/lib/python3.14/json/__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "/var/tmp/sage-10.9-current/local/lib/python3.14/json/encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/var/tmp/sage-10.9-current/local/lib/python3.14/json/encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "/var/tmp/sage-10.9-current/local/lib/python3.14/json/encoder.py", line 182, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type Integer is not JSON serializable
+when serializing dict item 'r'
+when serializing dict item 'inputs'
+{"disposition": "failed", "duration_seconds": 212.80428066699824, "event": "finish", "exit_code": 1, "finished_utc": "2026-08-05T18:54:27.530173+00:00", "run_id": "A03", "timed_out": false}

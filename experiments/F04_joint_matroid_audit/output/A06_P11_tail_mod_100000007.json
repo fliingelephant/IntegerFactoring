@@ -1,0 +1,46 @@
+{
+  "approach_family": "F04_joint_matroid_audit",
+  "determinant_seconds": 9.789131749996159,
+  "elapsed_seconds": 1089.6745039580055,
+  "exact_product_verification": true,
+  "inputs": {
+    "N": 20000000499999937,
+    "basis_columns": [
+      0,
+      2941
+    ],
+    "characteristic": 100000007,
+    "matrix_shape": [
+      2942,
+      2953
+    ],
+    "tail_columns": [
+      2942,
+      2952
+    ]
+  },
+  "matrix_artifact": {
+    "bytes": 414018575,
+    "path": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F04_joint_matroid_audit/output/matrices/A03_P11_mod_100000007.sobj",
+    "sha256": "5556711714baa4dec8b8f79b292bf228c2a04201604ec22c684b20adf7169d71"
+  },
+  "normalization": "C_l = B_l^(-1) T_l, solved exactly by row reduction of [B_l|T_l] with the already-certified nonsingular prefix",
+  "normalized_artifact": {
+    "bytes": 1542030,
+    "path": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F04_joint_matroid_audit/output/matrices/A06_P11_normalized_mod_100000007.sobj",
+    "sha256": "311fa71d9001fffb2d23ca77edd9a705dbec55d0a1ccd3ba5ed38111b60b6998"
+  },
+  "normalized_entry_sha256": "e39b8d887105d18e25d80762d3fc201631183e70d31a20bdc91a346ea8dd45f6",
+  "normalized_shape": [
+    2942,
+    11
+  ],
+  "normalized_zero_positions": [],
+  "prefix_determinant": 56136614,
+  "product_verification_seconds": 9.912079708999954,
+  "save_seconds": 0.034407083003316075,
+  "solve_seconds": 1058.0404211249988,
+  "source": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F04_joint_matroid_audit/solve_p11_tail.sage.py",
+  "source_sha256": "f9636c285b74e593c7ce587e074c34435ca94dc28f28f70c45cce0a85f4a7c53",
+  "stage": "P11-exact-tail-solve-v1"
+}

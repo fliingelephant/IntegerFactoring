@@ -299,3 +299,13 @@ Thus \(K=\operatorname{poly}(\log N)\) has exponentially small success on the in
 The cyclic translation gives the lower bound, and factor-aware disjoint CRT actions give the upper bound. Thus a balanced semiprime needs explicit degree \(p+q=2^{\Theta(\log N)}\), even though the natural local affine action has base size 2 for odd primes. Ordinary explicit-permutation stabilizer chains remain exponential-size in the input bit length.
 
 The \(2\times2\) matrix action remains succinct. For \(M_a=\operatorname{diag}(a,1)\), however, the literal-vector stabilizer of \((1,0)^T\) is exactly \(\operatorname{ord}_N(a)\mathbb Z\). A materially new retry needs a factor-sufficient quotient, a justified succinct-action algorithm, or a different matrix/module stabilizer; none is ruled out by the degree theorem.
+
+### C21 — joint AKS prefix invariants fail, but a full-column separator survives
+
+**Status:** promoted as P24 after hostile audit and proof-blind reconstruction.
+
+**Closest prior route and material difference.** P18 exhausts the canonical principal Sylvester coefficients of each standard AKS error on the coefficient-hard P11 input. C21 instead stacks all standard errors and tests dependence across shifts. It distinguishes the row matroid and polynomial-size prefix summaries from the exponentially richer full column matroid.
+
+**Verified boundary.** On P11, the first 2942 columns form a basis in both local fields. Hence both row matroids are free, all row-prefix and full-row column-prefix ranks agree, both lexicographic bases are the same, the canonical base determinant is a unit, and every raw matrix entry is a unit. These joint summaries therefore fail. However, removing base columns \(423,2336\) and adding global columns \(2944,2948\) gives local determinants \(15564403\) and \(0\); the CRT determinant has gcd \(199999991\) with \(N\). An exhaustive exact scan found no one-tail mismatch and exactly two two-tail mismatches.
+
+**Verification result and remaining gap.** The hostile audit independently rebuilt and hashed the global matrices, solved both local systems, scanned all 237,941,605 two-tail exchanges, directly checked the separator, and audited every retained artifact. A proof-blind reconstruction recovered the analytic P14 ranks, the P11 row/prefix obstruction, the exchange identity and sign, all finite counts, and a division-free polynomial-bit evaluation bound, while disclosing every failed or interrupted run. The surviving determinant is globally computable once specified, but its discovery used the factors. No factor-free uniform selector, mismatch theorem, or all-input factoring algorithm follows.

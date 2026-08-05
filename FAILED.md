@@ -606,3 +606,29 @@ The succinct \(2\times2\) affine representation is not excluded. Its most direct
 under \(\operatorname{diag}(a,1)\), so asking for the least positive stabilizer is exactly order finding, not a new stabilizer algorithm.
 
 **What would make a retry materially new.** A factor-sufficient quotient whose kernel may discard translations, a proved algorithm polynomial in a succinct action description rather than its expanded degree, or a factor-free matrix/module stabilizer whose computation is not merely modular order finding. Reusing an ordinary explicit permutation chain under the label "small base" is not new.
+
+## X18 — joint AKS row matroids and one-axis prefix summaries
+
+**Status:** promoted as P24 after hostile audit and proof-blind reconstruction.
+
+**Family:** F04.
+
+**Classification:** method failure for the complete row matroid on the standard shifts, all row prefixes, all full-row column prefixes, the lexicographically first column basis, raw-entry gcds, and the canonical first-\(A\)-column determinant. This is explicitly not a failure of the complete column matroid: the same witness has a verified two-tail column separator.
+
+**Closest prior route and material difference.** P18 makes every fixed canonical principal Sylvester coefficient a unit on the coefficient-hard P11 input, shift by shift. X18 stacks every standard error into one global matrix and tests joint linear dependence across shifts. Row matroids and column matroids are different invariants and cannot be conflated.
+
+**Exact obstruction.** For
+
+\[
+N=20000000499999937
+=100000007\cdot199999991,
+\qquad (A,r)=(2942,2953),
+\]
+
+the globally formed standard-shift matrix has an invertible first-2942-column block in both local fields, with determinants \(56136614\) and \(132391112\). Thus both row matroids are the same free matroid, every row-prefix rank is its length, every full-row column-prefix rank is \(\min(t,2942)\), and both greedy column scans select \(0,\ldots,2941\). The global base determinant is a unit, as are all raw entries. These polynomial-size joint summaries therefore do not universally localize the AKS failure.
+
+**Surviving refinement.** The full column matroids are not equal. Removing base columns \(423,2336\) and adding global columns \(2944,2948\) gives determinant residues \(15564403\) and \(0\), whose global residue has gcd \(199999991\) with \(N\). Every one-tail exchange agrees, while an exhaustive scan finds exactly two mismatches among all 237,941,605 two-tail exchanges. The specified determinant is factor-free and division-free evaluable over \(\mathbb Z/N\mathbb Z\), but the successful exchange was discovered factor-assistively and no uniform selector or separation theorem is known.
+
+**Evidence.** The two candidate studies retain global matrices, exact local ranks/solves, complete one-/two-tail zero-pattern scans, direct exchanged determinants, all commands, timeouts, logs, outputs, and failure dispositions. The hostile audit rebuilt every global entry, validated the large retained matrices, reproduced both exact local solves and the exhaustive scan, and passed A09; its A02 timeout and A03/A04 serialization failures are retained and excluded. The proof-blind reconstruction independently formed both instances, recomputed all 8,687,726 P11 entries through a separate FLINT implementation, recovered the analytic P14 proof and P11 exchange, and passed the final run-025 cross-audit. P24 records the corrected common theorem.
+
+**What would make a retry materially new.** A globally specified polynomial-size minor family or factor-free adaptive rule with a proved inverse-polynomial chance of selecting a local support mismatch for every composite input; a nonstandard modulus/shift construction with such a theorem; or a nonlinear joint invariant whose selection cost and bit complexity are explicit. Another row-rank or one-axis prefix summary is covered by this obstruction.

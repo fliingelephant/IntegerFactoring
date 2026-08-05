@@ -1,0 +1,18 @@
+{"DOT_SAGE": "/private/tmp/f04_joint_matroid_audit_sage", "command": ["sage", "experiments/F04_joint_matroid_audit/compare_p11_tail_supports.sage", "--build-summary", "experiments/F04_joint_matroid_audit/output/A05_P11_joint_certify_v2.json", "--p-solve", "experiments/F04_joint_matroid_audit/output/A06_P11_tail_mod_100000007.json", "--q-solve", "experiments/F04_joint_matroid_audit/output/A07_P11_tail_mod_199999991.json", "--output", "experiments/F04_joint_matroid_audit/output/A08_P11_tail_supports.json"], "event": "start", "run_id": "A08", "started_utc": "2026-08-05T19:37:37.529008+00:00", "timeout_seconds": 180}
+stage=load field=p
+stage=load field=q
+stage=support-scan first_tail=0/9
+stage=support-scan first_tail=1/9
+stage=support-scan first_tail=2/9
+stage=support-scan first_tail=3/9
+stage=support-scan first_tail=4/9
+stage=support-scan first_tail=5/9
+stage=support-scan first_tail=6/9
+stage=support-scan first_tail=7/9
+stage=support-scan first_tail=8/9
+stage=support-scan first_tail=9/9
+stage=support-scan first_tail=10/9
+stage=direct-minor field=p value=15564403
+stage=direct-minor field=q value=0
+{"elapsed_seconds": 44.567237707997265, "first_separator": {"direct_determinant_seconds": {"p": 10.92499908299942, "q": 7.556768333000946}, "global_maximal_minor_gcd_with_N": 199999991, "global_maximal_minor_mod_N_from_CRT": 2473353088699106, "maximal_minor_direct_determinants": {"p": 15564403, "q": 0}, "maximal_minor_formula_determinants": {"p": 15564403, "q": 0}, "normalized_two_by_two_determinants": {"p": 67899852, "q": 0}, "removed_prefix_columns": [423, 2336], "replacement_sign": 1, "selected_column_count": 2942, "selected_column_order": "all prefix columns except the two removed, then the two tail columns in increasing order", "tail_global_columns": [2944, 2948], "tail_local_indices": [2, 6], "zero_field": "q"}, "one_tail_zero_counts": [0, 0], "stage": "P11-low-tail-Pluecker-support-v1", "two_tail_mismatch_counts": [0, 2]}
+{"disposition": "completed", "duration_seconds": 53.24047320799582, "event": "finish", "exit_code": 0, "finished_utc": "2026-08-05T19:38:30.769701+00:00", "run_id": "A08", "timed_out": false}

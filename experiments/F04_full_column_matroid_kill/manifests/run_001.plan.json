@@ -1,0 +1,10 @@
+{
+  "run_id": "run_001",
+  "family_id": "F04_full_column_matroid_kill",
+  "stages": [
+    {"name": "compute_exchange", "timeout_seconds": 1800, "source": "src/compute_exchange.cpp"},
+    {"name": "audit_outputs", "timeout_seconds": 600, "source": "src/audit_outputs.py"}
+  ],
+  "failure_policy": "Any timeout or nonzero exit writes a retained failure disposition and stops."
+}
+

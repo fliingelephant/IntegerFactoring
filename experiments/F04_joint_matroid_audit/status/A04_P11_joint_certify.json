@@ -1,0 +1,28 @@
+{
+  "command": [
+    "sage",
+    "experiments/F04_joint_matroid_audit/certify_p11_joint_matrices.sage",
+    "--p-matrix",
+    "experiments/F04_joint_matroid_audit/output/matrices/A03_P11_mod_100000007.sobj",
+    "--q-matrix",
+    "experiments/F04_joint_matroid_audit/output/matrices/A03_P11_mod_199999991.sobj",
+    "--producer-source",
+    "experiments/F04_joint_matroid_audit/build_p11_joint_matrices.sage",
+    "--producer-status",
+    "experiments/F04_joint_matroid_audit/status/A03_P11_joint_build.json",
+    "--producer-log",
+    "experiments/F04_joint_matroid_audit/logs/A03_P11_joint_build.log",
+    "--output",
+    "experiments/F04_joint_matroid_audit/output/A04_P11_joint_certify.json"
+  ],
+  "disposition": "failed",
+  "duration_seconds": 24.706607207997877,
+  "exit_code": 1,
+  "finished_utc": "2026-08-05T18:56:28.244602+00:00",
+  "log": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F04_joint_matroid_audit/logs/A04_P11_joint_certify.log",
+  "log_sha256": "a53c13eb222a70c8879e3c16568acbf676bb87034c3fd654aec780ba37d1d373",
+  "run_id": "A04",
+  "started_utc": "2026-08-05T18:56:03.537708+00:00",
+  "timed_out": false,
+  "timeout_seconds": 300
+}

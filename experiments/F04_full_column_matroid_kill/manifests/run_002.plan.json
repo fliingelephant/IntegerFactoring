@@ -1,0 +1,9 @@
+{
+  "run_id": "run_002",
+  "scope": "Directly certify every local zero-pattern mismatch retained by run_001.",
+  "stages": [
+    {"name": "certify_all", "timeout_seconds": 600, "source": "src/certify_all.cpp"},
+    {"name": "audit_all_certificates", "timeout_seconds": 120, "source": "src/audit_all_certificates.py"}
+  ]
+}
+

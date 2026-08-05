@@ -1,0 +1,19 @@
+{"DOT_SAGE": "/private/tmp/f04_joint_matroid_audit_sage", "command": ["sage", "experiments/F04_joint_matroid_audit/certify_p11_joint_matrices.sage", "--p-matrix", "experiments/F04_joint_matroid_audit/output/matrices/A03_P11_mod_100000007.sobj", "--q-matrix", "experiments/F04_joint_matroid_audit/output/matrices/A03_P11_mod_199999991.sobj", "--producer-source", "experiments/F04_joint_matroid_audit/build_p11_joint_matrices.sage", "--producer-status", "experiments/F04_joint_matroid_audit/status/A03_P11_joint_build.json", "--producer-log", "experiments/F04_joint_matroid_audit/logs/A03_P11_joint_build.log", "--output", "experiments/F04_joint_matroid_audit/output/A04_P11_joint_certify.json"], "event": "start", "run_id": "A04", "started_utc": "2026-08-05T18:56:03.537708+00:00", "timeout_seconds": 300}
+stage=load-both-retained-matrices
+Traceback (most recent call last):
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F04_joint_matroid_audit/certify_p11_joint_matrices.sage.py", line 80, in <module>
+    encoded = json.dumps(coefficients, separators=(",", ":")).encode("ascii")
+              ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/tmp/sage-10.9-current/local/lib/python3.14/json/__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "/var/tmp/sage-10.9-current/local/lib/python3.14/json/encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/var/tmp/sage-10.9-current/local/lib/python3.14/json/encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "/var/tmp/sage-10.9-current/local/lib/python3.14/json/encoder.py", line 182, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type Integer is not JSON serializable
+when serializing list item 0
+{"disposition": "failed", "duration_seconds": 24.706607207997877, "event": "finish", "exit_code": 1, "finished_utc": "2026-08-05T18:56:28.244602+00:00", "run_id": "A04", "timed_out": false}

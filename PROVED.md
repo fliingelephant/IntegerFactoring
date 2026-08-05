@@ -1517,3 +1517,96 @@ Computing the least positive stabilizing exponent in this formulation is exactly
 **Scope.** P23 closes only the inference that a small affine base yields a polynomial-size ordinary explicit-permutation stabilizer chain. It does not rule out a factor-sufficient quotient that discards translations, succinct/circuit actions, new matrix or module stabilizer algorithms, resampling arguments, or nonabelian lifts with a different mechanism. The displayed matrix formulation remains succinct but has not removed the order-finding dependency.
 
 The candidate proof, hostile audit, and proof-blind reconstruction are preserved under `experiments/F16_affine_stabilizer_kill`, `experiments/F16_affine_stabilizer_audit`, and `experiments/F16_affine_stabilizer_reconstruct`.
+
+## P24 — joint AKS prefix summaries agree while a full-column minor separates
+
+**Status:** promoted.
+
+**Verification record:** the global-before-local construction, P14 and P11 ranks, P11 row/prefix obstruction, exchange identity, exhaustive one-/two-tail scan, direct determinant certificate, factor-free evaluation bound, and artifact provenance passed a focused hostile audit and a proof-blind end-to-end reconstruction. No cross-family audit has run.
+
+For standard shifts \(1\le a\le A\), form
+
+\[
+H_a=(X+a)^N-X^N-a
+\quad\text{in}\quad
+(\mathbb Z/N\mathbb Z)[X]/(X^r-1),
+\]
+
+and let \(M_N\) be the \(A\)-by-\(r\) matrix of their coefficients. The matrix is formed over \(\mathbb Z/N\mathbb Z\) before reduction modulo any prime factor.
+
+**A genuine joint separator.** For
+
+\[
+N=79403=271\cdot293,\qquad (A,r)=(266,269),
+\]
+
+the local ranks are \(23\) and \(266\). The rank-23 side follows from
+
+\[
+H_a=(y^2+a)(y+a)^{22}-y^{24}-a,
+\qquad y=X^2,
+\]
+
+whose coefficient functions span exactly \(a,a^2,\ldots,a^{23}\); the other side contains a scaled 266-by-266 Vandermonde submatrix. The first-266-column determinant has residues \(0\) and \(30\), hence global residue \(71815\) and gcd \(271\). Thus stacking shifts can separate an input.
+
+**The P11 row/prefix obstruction.** For
+
+\[
+N=20000000499999937
+=100000007\cdot199999991,
+\qquad (A,r)=(2942,2953),
+\]
+
+write \(B=M_N[:,0:A]\). Exact reduction of the same global matrix gives
+
+\[
+\det B\equiv56136614\pmod {100000007},
+\qquad
+\det B\equiv132391112\pmod {199999991}.
+\]
+
+Both residues are nonzero. Consequently both complete row matroids are the free matroid \(U_{A,A}\), every row-prefix rank is \(s\), every full-row column-prefix rank is \(\min(t,A)\), and the lexicographically first column basis is \(0,\ldots,A-1\). The determinant's CRT lift is \(16315256998204520\), with gcd 1, and all \(8{,}687{,}726\) raw global entries are units. Equality of these invariants does not imply equality of the full column matroids.
+
+**A full-column separator on the same matrix.** Put \(T=M_N[:,A:r]\) and, over either local field, \(W=B^{-1}T\). Remove base columns
+
+\[
+I=(423,2336)
+\]
+
+and add global tail columns \(2944,2948\), corresponding to tail offsets \(J=(2,6)\). For the selected columns in increasing global order, the exchange identity is
+
+\[
+\det M[:,S]
+=(-1)^{3122}\det(B)\det W[I,J]
+=\det(B)\det W[I,J].
+\]
+
+The normalized 2-by-2 determinants are \(67899852\) and \(0\), and direct dense evaluation of the exchanged local matrices independently gives
+
+\[
+\det M[:,S]\equiv15564403\pmod {100000007},
+\qquad
+\det M[:,S]\equiv0\pmod {199999991}.
+\]
+
+Therefore \(S\) is a basis in exactly one local column matroid. The determinant's global residue and gcd are
+
+\[
+2473353088699106\pmod N,
+\qquad
+\gcd(2473353088699106,N)=199999991.
+\]
+
+All \(2942\cdot11=32{,}362\) one-tail exchanges are bases in both fields. Among all
+
+\[
+\binom{2942}{2}\binom{11}{2}=237{,}941{,}605
+\]
+
+two-tail exchanges, the first field has no dependent set, the second has exactly two, and those are the only support mismatches. The second mismatch removes \(1618,1874\) and uses tail offsets \(3,10\). No claim is made about exchanges using three through eleven tail columns.
+
+**Factor-free evaluation and scope.** Any specified minor here is globally evaluable without the factors. Binary exponentiation forms all rows using \(O(Ar^2\log N)\) naive ring operations, and Samuelson--Berkowitz evaluates an \(A\)-square determinant division-free in \(O(A^4)\) ring operations. Reducing after every operation keeps bit complexity polynomial in \(\log N\) whenever \(A,r=\operatorname{poly}(\log N)\). The local solves and CRT were discovery/certification devices; they are not needed to define the displayed global minor.
+
+P24 refutes universal separation only for the joint row matroid and the named one-axis prefix, greedy-basis, raw-entry, and canonical-base-minor summaries. It simultaneously proves that the complete column-matroid refinement survives on this fixed coefficient-hard witness. It supplies neither a factor-free rule that selects successful parameters and minors on arbitrary composites nor a uniform theorem forcing a mismatch, so it is not a general factoring algorithm.
+
+The candidate analyses, hostile audit, and proof-blind reconstruction are preserved under `experiments/F04_joint_matroid_kill`, `experiments/F04_full_column_matroid_kill`, `experiments/F04_joint_matroid_audit`, and `experiments/F04_joint_matroid_reconstruct`.

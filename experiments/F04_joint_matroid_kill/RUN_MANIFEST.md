@@ -1,0 +1,20 @@
+# F04 joint row-matroid kill manifest
+
+Approach-family ID: `F04_joint_matroid_kill`.
+
+Every mathematical computation used a named source, explicit hard timeout,
+retained log, and retained output.  There were no failed runs.
+
+| Run | Timeout command | Result | Log | Output |
+| --- | --- | --- | --- | --- |
+| R01 | `DOT_SAGE=/tmp/f04_joint_matroid_p14_271_sage timeout 120 sage experiments/F04_joint_matroid_kill/scan_maximal_prefix.sage --instance P14 --characteristic 271 --output experiments/F04_joint_matroid_kill/output/R01_P14_mod_271.json > experiments/F04_joint_matroid_kill/logs/R01_P14_mod_271.log 2>&1` | exit 0; 0.4454 s internal; rank 23; prefix determinant 0 | `logs/R01_P14_mod_271.log` | `output/R01_P14_mod_271.json` |
+| R02 | `DOT_SAGE=/tmp/f04_joint_matroid_p14_293_sage timeout 120 sage experiments/F04_joint_matroid_kill/scan_maximal_prefix.sage --instance P14 --characteristic 293 --output experiments/F04_joint_matroid_kill/output/R02_P14_mod_293.json > experiments/F04_joint_matroid_kill/logs/R02_P14_mod_293.log 2>&1` | exit 0; 0.4449 s internal; rank 266; prefix determinant 30 | `logs/R02_P14_mod_293.log` | `output/R02_P14_mod_293.json` |
+| R03 | `timeout 60 python3 experiments/F04_joint_matroid_kill/compare_local_profiles.py --left experiments/F04_joint_matroid_kill/output/R01_P14_mod_271.json --right experiments/F04_joint_matroid_kill/output/R02_P14_mod_293.json --output experiments/F04_joint_matroid_kill/output/R03_P14_comparison.json > experiments/F04_joint_matroid_kill/logs/R03_P14_comparison.log 2>&1` | exit 0; identical global matrix verified; gcd 271 | `logs/R03_P14_comparison.log` | `output/R03_P14_comparison.json` |
+| R04 | `DOT_SAGE=/tmp/f04_joint_matroid_p11_p_sage timeout 1200 sage experiments/F04_joint_matroid_kill/scan_maximal_prefix.sage --instance P11 --characteristic 100000007 --output experiments/F04_joint_matroid_kill/output/R04_P11_mod_100000007.json > experiments/F04_joint_matroid_kill/logs/R04_P11_mod_100000007.log 2>&1` | exit 0; 156.0791 s internal; rank 2942; prefix determinant 56136614 | `logs/R04_P11_mod_100000007.log` | `output/R04_P11_mod_100000007.json` |
+| R05 | `DOT_SAGE=/tmp/f04_joint_matroid_p11_q_sage timeout 1200 sage experiments/F04_joint_matroid_kill/scan_maximal_prefix.sage --instance P11 --characteristic 199999991 --output experiments/F04_joint_matroid_kill/output/R05_P11_mod_199999991.json > experiments/F04_joint_matroid_kill/logs/R05_P11_mod_199999991.log 2>&1` | exit 0; 159.1375 s internal; rank 2942; prefix determinant 132391112 | `logs/R05_P11_mod_199999991.log` | `output/R05_P11_mod_199999991.json` |
+| R06 | `timeout 60 python3 experiments/F04_joint_matroid_kill/compare_local_profiles.py --left experiments/F04_joint_matroid_kill/output/R04_P11_mod_100000007.json --right experiments/F04_joint_matroid_kill/output/R05_P11_mod_199999991.json --output experiments/F04_joint_matroid_kill/output/R06_P11_comparison.json > experiments/F04_joint_matroid_kill/logs/R06_P11_comparison.log 2>&1` | exit 0; all global row hashes agree; rank/profile match; gcd 1 | `logs/R06_P11_comparison.log` | `output/R06_P11_comparison.json` |
+| R07 | `timeout 60 python3 experiments/F04_joint_matroid_kill/audit_certificates.py --p14-left experiments/F04_joint_matroid_kill/output/R01_P14_mod_271.json --p14-right experiments/F04_joint_matroid_kill/output/R02_P14_mod_293.json --p14-comparison experiments/F04_joint_matroid_kill/output/R03_P14_comparison.json --p11-left experiments/F04_joint_matroid_kill/output/R04_P11_mod_100000007.json --p11-right experiments/F04_joint_matroid_kill/output/R05_P11_mod_199999991.json --p11-comparison experiments/F04_joint_matroid_kill/output/R06_P11_comparison.json --output experiments/F04_joint_matroid_kill/output/R07_audit.json > experiments/F04_joint_matroid_kill/logs/R07_audit.log 2>&1` | exit 0; `audit_passed=true` | `logs/R07_audit.log` | `output/R07_audit.json` |
+
+Retained SHA-256 values are recorded in `output/R07_audit.json`.  In
+particular, R04 and R05 independently produced the same global-matrix hash
+`85c4bcda5ff5d0f23117721a503fedb77e3a84b9d708a3ceb0f7bed1673c6f53`.

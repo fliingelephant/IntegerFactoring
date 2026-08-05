@@ -1,0 +1,6 @@
+{"DOT_SAGE": "/private/tmp/f04_joint_matroid_audit_sage", "command": ["sage", "experiments/F04_joint_matroid_audit/solve_p11_tail.sage", "--matrix", "experiments/F04_joint_matroid_audit/output/matrices/A03_P11_mod_100000007.sobj", "--characteristic", "100000007", "--normalized", "experiments/F04_joint_matroid_audit/output/matrices/A06_P11_normalized_mod_100000007.sobj", "--output", "experiments/F04_joint_matroid_audit/output/A06_P11_tail_mod_100000007.json"], "event": "start", "run_id": "A06", "started_utc": "2026-08-05T19:00:10.349222+00:00", "timeout_seconds": 1200}
+stage=load characteristic=100000007
+stage=determinant characteristic=100000007 value=56136614
+stage=solve characteristic=100000007 seconds=1058.0404211249988
+{"characteristic": 100000007, "elapsed_seconds": 1089.6745039580055, "normalized_entry_sha256": "e39b8d887105d18e25d80762d3fc201631183e70d31a20bdc91a346ea8dd45f6", "normalized_zero_count": 0, "stage": "P11-exact-tail-solve-v1"}
+{"disposition": "completed", "duration_seconds": 1102.1501641249997, "event": "finish", "exit_code": 0, "finished_utc": "2026-08-05T19:18:32.494636+00:00", "run_id": "A06", "timed_out": false}

@@ -1,0 +1,15 @@
+parameters.json: OK
+manifests/run_001.plan.json: OK
+src/compute_exchange.cpp: OK
+src/audit_outputs.py: OK
+scripts/build.sh: OK
+scripts/prepare_run.sh: OK
+scripts/run_all.sh: OK
+build/compute_exchange: OK
+[compute_exchange] start timeout=1800s
+formed global matrix in 29.3528 seconds
+solved local systems in 3.82151 and 3.73816 seconds
+scanned 32362 entries and 237941605 two-by-two minors; mismatches=2
+[compute_exchange] exit=0
+[audit_outputs] start timeout=600s
+[audit_outputs] exit=0

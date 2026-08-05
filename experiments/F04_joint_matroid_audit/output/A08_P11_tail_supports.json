@@ -1,0 +1,737 @@
+{
+  "approach_family": "F04_joint_matroid_audit",
+  "elapsed_seconds": 44.567237707997265,
+  "normalization": "C_l = B_l^(-1) T_l for the common first-A-column basis B and 11-column tail T",
+  "one_tail": {
+    "minor_count_per_field": 32362,
+    "p_zero_count": 0,
+    "p_zero_q_nonzero_positions": [],
+    "q_zero_count": 0,
+    "q_zero_p_nonzero_positions": []
+  },
+  "source": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F04_joint_matroid_audit/compare_p11_tail_supports.sage.py",
+  "source_artifacts": {
+    "build": {
+      "path": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F04_joint_matroid_audit/output/A05_P11_joint_certify_v2.json",
+      "sha256": "ed0a1a628f2729a4b12d9343df033b0221b82db6fc5ef2e591d53931343c3554"
+    },
+    "p": {
+      "path": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F04_joint_matroid_audit/output/A06_P11_tail_mod_100000007.json",
+      "sha256": "58d9dd4a0a841605765dbb7c7242d294297dbea6b31a91667e8c1307b23cb167"
+    },
+    "q": {
+      "path": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F04_joint_matroid_audit/output/A07_P11_tail_mod_199999991.json",
+      "sha256": "87a0b70402a08cc48aa933c12b407745895430f4539a00ebcc658386c3850974"
+    }
+  },
+  "source_sha256": "49569b62cf0935b79013048966f96a7ddd321f676f8da3a90192b5568e8366af",
+  "stage": "P11-low-tail-Pluecker-support-v1",
+  "two_tail": {
+    "first_separator": {
+      "direct_determinant_seconds": {
+        "p": 10.92499908299942,
+        "q": 7.556768333000946
+      },
+      "global_maximal_minor_gcd_with_N": 199999991,
+      "global_maximal_minor_mod_N_from_CRT": 2473353088699106,
+      "maximal_minor_direct_determinants": {
+        "p": 15564403,
+        "q": 0
+      },
+      "maximal_minor_formula_determinants": {
+        "p": 15564403,
+        "q": 0
+      },
+      "normalized_two_by_two_determinants": {
+        "p": 67899852,
+        "q": 0
+      },
+      "removed_prefix_columns": [
+        423,
+        2336
+      ],
+      "replacement_sign": 1,
+      "selected_column_count": 2942,
+      "selected_column_order": "all prefix columns except the two removed, then the two tail columns in increasing order",
+      "tail_global_columns": [
+        2944,
+        2948
+      ],
+      "tail_local_indices": [
+        2,
+        6
+      ],
+      "zero_field": "q"
+    },
+    "minor_count_per_field": 237941605,
+    "p_zero_q_nonzero_count": 0,
+    "q_zero_p_nonzero_count": 2,
+    "tail_pair_count": 55,
+    "tail_pair_summaries": [
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2942,
+          2943
+        ],
+        "tail_local_indices": [
+          0,
+          1
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2942,
+          2944
+        ],
+        "tail_local_indices": [
+          0,
+          2
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2942,
+          2945
+        ],
+        "tail_local_indices": [
+          0,
+          3
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2942,
+          2946
+        ],
+        "tail_local_indices": [
+          0,
+          4
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2942,
+          2947
+        ],
+        "tail_local_indices": [
+          0,
+          5
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2942,
+          2948
+        ],
+        "tail_local_indices": [
+          0,
+          6
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2942,
+          2949
+        ],
+        "tail_local_indices": [
+          0,
+          7
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2942,
+          2950
+        ],
+        "tail_local_indices": [
+          0,
+          8
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2942,
+          2951
+        ],
+        "tail_local_indices": [
+          0,
+          9
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2942,
+          2952
+        ],
+        "tail_local_indices": [
+          0,
+          10
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2943,
+          2944
+        ],
+        "tail_local_indices": [
+          1,
+          2
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2943,
+          2945
+        ],
+        "tail_local_indices": [
+          1,
+          3
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2943,
+          2946
+        ],
+        "tail_local_indices": [
+          1,
+          4
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2943,
+          2947
+        ],
+        "tail_local_indices": [
+          1,
+          5
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2943,
+          2948
+        ],
+        "tail_local_indices": [
+          1,
+          6
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2943,
+          2949
+        ],
+        "tail_local_indices": [
+          1,
+          7
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2943,
+          2950
+        ],
+        "tail_local_indices": [
+          1,
+          8
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2943,
+          2951
+        ],
+        "tail_local_indices": [
+          1,
+          9
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2943,
+          2952
+        ],
+        "tail_local_indices": [
+          1,
+          10
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2944,
+          2945
+        ],
+        "tail_local_indices": [
+          2,
+          3
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2944,
+          2946
+        ],
+        "tail_local_indices": [
+          2,
+          4
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2944,
+          2947
+        ],
+        "tail_local_indices": [
+          2,
+          5
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 1,
+        "tail_global_columns": [
+          2944,
+          2948
+        ],
+        "tail_local_indices": [
+          2,
+          6
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2944,
+          2949
+        ],
+        "tail_local_indices": [
+          2,
+          7
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2944,
+          2950
+        ],
+        "tail_local_indices": [
+          2,
+          8
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2944,
+          2951
+        ],
+        "tail_local_indices": [
+          2,
+          9
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2944,
+          2952
+        ],
+        "tail_local_indices": [
+          2,
+          10
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2945,
+          2946
+        ],
+        "tail_local_indices": [
+          3,
+          4
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2945,
+          2947
+        ],
+        "tail_local_indices": [
+          3,
+          5
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2945,
+          2948
+        ],
+        "tail_local_indices": [
+          3,
+          6
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2945,
+          2949
+        ],
+        "tail_local_indices": [
+          3,
+          7
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2945,
+          2950
+        ],
+        "tail_local_indices": [
+          3,
+          8
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2945,
+          2951
+        ],
+        "tail_local_indices": [
+          3,
+          9
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 1,
+        "tail_global_columns": [
+          2945,
+          2952
+        ],
+        "tail_local_indices": [
+          3,
+          10
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2946,
+          2947
+        ],
+        "tail_local_indices": [
+          4,
+          5
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2946,
+          2948
+        ],
+        "tail_local_indices": [
+          4,
+          6
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2946,
+          2949
+        ],
+        "tail_local_indices": [
+          4,
+          7
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2946,
+          2950
+        ],
+        "tail_local_indices": [
+          4,
+          8
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2946,
+          2951
+        ],
+        "tail_local_indices": [
+          4,
+          9
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2946,
+          2952
+        ],
+        "tail_local_indices": [
+          4,
+          10
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2947,
+          2948
+        ],
+        "tail_local_indices": [
+          5,
+          6
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2947,
+          2949
+        ],
+        "tail_local_indices": [
+          5,
+          7
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2947,
+          2950
+        ],
+        "tail_local_indices": [
+          5,
+          8
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2947,
+          2951
+        ],
+        "tail_local_indices": [
+          5,
+          9
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2947,
+          2952
+        ],
+        "tail_local_indices": [
+          5,
+          10
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2948,
+          2949
+        ],
+        "tail_local_indices": [
+          6,
+          7
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2948,
+          2950
+        ],
+        "tail_local_indices": [
+          6,
+          8
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2948,
+          2951
+        ],
+        "tail_local_indices": [
+          6,
+          9
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2948,
+          2952
+        ],
+        "tail_local_indices": [
+          6,
+          10
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2949,
+          2950
+        ],
+        "tail_local_indices": [
+          7,
+          8
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2949,
+          2951
+        ],
+        "tail_local_indices": [
+          7,
+          9
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2949,
+          2952
+        ],
+        "tail_local_indices": [
+          7,
+          10
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2950,
+          2951
+        ],
+        "tail_local_indices": [
+          8,
+          9
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2950,
+          2952
+        ],
+        "tail_local_indices": [
+          8,
+          10
+        ]
+      },
+      {
+        "p_zero_q_nonzero_count": 0,
+        "q_zero_p_nonzero_count": 0,
+        "tail_global_columns": [
+          2951,
+          2952
+        ],
+        "tail_local_indices": [
+          9,
+          10
+        ]
+      }
+    ]
+  },
+  "unscanned_tail_orders": [
+    3,
+    11
+  ]
+}
