@@ -4,7 +4,7 @@ This is working state for nontrivial intermediate statements and the current syn
 
 ## Current synthesis
 
-The source material has been read in full. Seven approach families have been opened, primarily from materially different mechanisms in `notes/Inspirations.md`; promoted narrow results and exact open gaps are tracked below and in the registry. `notes/Zhihu.md` supplies background and motivation only.
+The source material has been read in full. Nine approach families have been opened, primarily from materially different mechanisms in `notes/Inspirations.md`; promoted narrow results and exact open gaps are tracked below and in the registry. `notes/Zhihu.md` supplies background and motivation only.
 
 ## Working claims
 
@@ -109,8 +109,32 @@ then a nontrivial factor of \(N\) is recoverable deterministically in \(\operato
 
 ### C09 — natural multiplication-spectrum probes can have exponential support
 
-**Status:** corrected candidate after focused hostile audit; proof-blind reconstruction pending.
+**Status:** promoted as P12 in `PROVED.md`.
 
 **Claim.** X07 gives an exact orbit-stratified characteristic polynomial and trace formula, plus an unconditional family of synchronized local orders \(\ell=2^{\Theta(n)}\). Every nonzero basis-point sequence has ordinary denominator degree \(\ell\) over every field; the exact integer trace sequence has degree \(\ell\) over characteristic zero and takes only the values 1 and \(N\). The family is uniformly enumerable in \(2^{O(n)}\) time, not known polynomial-time generable, and supplies bad fixed pairs rather than density over random bases.
 
-**Hostile-audit result and remaining gap.** The exact orbit, trace, bit-cost, Linnik, synchronization, and characteristic-zero no-cancellation arguments survived after four corrections: \(x=0\) gives gcd \(N\); no generic succinct orbit-state lower bound follows; family enumeration is exponential in input length; and dense/consecutive denominator degree does not cover adaptive binary-index, sparse, finite-field trace, arbitrary-probe, or base-resampling algorithms. Proof-blind reconstruction of this corrected theorem remains. F07 and B4 remain open.
+**Verification result and remaining gap.** The exact orbit, trace, bit-cost, Linnik, synchronization, and characteristic-zero no-cancellation arguments survived after correcting the \(x=0\), orbit-state, effectivity, coefficient-field, query-model, and random-base scopes. A proof-blind reconstruction independently recovered the corrected theorem. P12 closes only the universal low-effective-frequency premise for standard point/trace probes and dense consecutive reconstruction. F07 and B4 remain open to sparse/adaptive, other-probe, and resampling mechanisms.
+
+### C10 — natural automorphism-count interpolation hides a factor oracle
+
+**Status:** promoted as P13 in `PROVED.md`.
+
+**Claim.** X08 derives exact automorphism counts for dual numbers, a rank-3 square-zero algebra, odd quadratic monogenic algebras, and all fixed-rank étale algebras. The informative non-étale counts are \(\varphi(N)\)- or factoring-equivalent on semiprimes, while fixed-rank étale counts depend only on a bounded decomposition partition. Easy globally synchronized automorphisms need not separate CRT components.
+
+**Verification result and remaining gap.** The audit confirmed every algebraic classification after correcting that the full rank-3 cubic—not its last linear factor—is increasing, noting quadratic count collisions, and bounding the étale count by \(d!\). A proof-blind reconstruction independently recovered the corrected theorem and its non-impossibility scope. P13 blocks only the tested natural magnitude-count mechanism: an explicit factor-free counting algorithm would itself solve the target problem and has not been ruled out.
+
+### C11 — standard AKS annihilator ranks can agree everywhere
+
+**Status:** promoted as P14 in `PROVED.md`.
+
+**Claim.** X09 gives the analytic witness \(N=79403=271\cdot293\), standard \(r=269\), for which the local multiplication nullities of every standard AKS error \(H_a\), \(1\le a\le266\), are both zero. A degree-23 common obstruction polynomial cannot contain the nontrivial cyclotomic factors of degrees 268 and 67; the only linear-root exceptions occur at shifts outside the scan.
+
+**Verification result and remaining gap.** The exact parameters, nullity–gcd identity, two local reductions, factor degrees, degree-23 obstruction, and exceptional shifts survived an independent proof and full local-residue A02 run. A proof-blind reconstruction recovered the complete corrected theorem. P14 applies only to the nullity/gcd-degree invariant: equal full ranks do not rule out every intermediate minor or elimination transcript. The discovery manifest's missing exact commands and R04's binary64 minimality claim remain disqualified. Nonstandard moduli, richer joint invariants, and asymptotic randomized-shift theorems remain open.
+
+### C12 — scalar symmetric higher-residue carriers collapse to the diagonal
+
+**Status:** candidate from the mandatory F09 kill test; hostile audit and proof-blind reconstruction pending.
+
+**Claim.** X10 proves, for a precisely defined multiplicative scalar carrier class, that factor-swap invariance forces every local phase functional through \(u_p+u_q\); twists and \(+/-\) combining retain the anti-diagonal kernel. An exact cubic example shows a canceled global phase with neither local phase canceled. The fully Galois-symmetric odd-power residue-symbol product is trivial, while nontrivial symbols require a cyclotomic orientation.
+
+**Exact remaining gap.** The carrier-class quantifiers, postselection claim, cyclotomic Galois product, and orientation formulation require hostile audit and proof-blind reconstruction. Even if verified, vector/ring-valued, factor-oriented, additive, and other higher-residue carriers remain open; no factoring-equivalence claim for one orientation is made.

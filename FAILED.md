@@ -196,7 +196,7 @@ Under the convention that equal-length swapped factorizations are both accepted,
 
 ## X07 — standard trace/point probes for Shor's multiplication spectrum
 
-**Status:** candidate after focused hostile audit with substantive scope corrections; proof-blind reconstruction pending.
+**Status:** promoted as P12 after a focused hostile audit with substantive scope corrections and a proof-blind reconstruction of the corrected theorem.
 
 **Family:** F07.
 
@@ -236,4 +236,176 @@ with no cancellation and denominator degree \(\ell\). This trace claim is false 
 
 **Hostile-audit scope correction.** Denominator degree \(\ell\) obstructs consecutive-moment dense Padé/Prony reconstruction and explicit enumeration of all frequencies. It is not a lower bound for adaptively selected binary-encoded indices, sparse descriptions such as \(1-z^\ell\), finite-field trace reconstruction, arbitrary arithmetic/superposition probes, or algorithms exploiting \(N,a\) by another method. The family supplies bad fixed pairs \((N,a)\), not a density theorem for random \(a\), so it does not obstruct a factoring algorithm that resamples the base.
 
+**Evidence.** A focused hostile audit found and corrected the zero-point, orbit-indicator, family-effectivity, coefficient-field, query-model, and random-base overclaims. A fresh proof-blind reconstruction then recovered the orbit stratification, trace and point formulas, quantified Linnik family, characteristic-zero and finite-field generating-function behavior, effectivity bound, and exact scope. The promoted statement is P12 in `PROVED.md`.
+
 **What would make a retry materially new.** A probe family computable without factoring whose spectral measure is proved polynomially supported for every input and still determines enough local order information; a density theorem justifying resampling; or a non-Prony reconstruction exploiting sparse/arithmetic structure with a complete adaptive-query and bit-cost proof.
+
+## X08 — natural fixed-degree automorphism-count magnitude interpolation
+
+**Status:** promoted as P13 after the mandatory kill test, focused hostile audit, and proof-blind reconstruction of the corrected theorem.
+
+**Family:** F08.
+
+**Classification:** method failure for treating interpolation as the hard step in the canonical dual-number, square-zero, quadratic-monogenic, or fixed-degree étale families. Informative counts in the tested non-étale families are already factoring-equivalent; this is a theorem-strength blockage, not an impossibility theorem for all B12 constructions.
+
+**Dual-number obstruction.** Let \(A=\mathbb Z/N\mathbb Z\) and \(R=A[\varepsilon]/(\varepsilon^2)\). An \(A\)-algebra automorphism has
+
+\[
+\varepsilon\longmapsto a+b\varepsilon,
+\qquad b\in A^\times,\quad 2a=0,\quad a^2=0.
+\]
+
+The number of admissible \(a\) is 2 if \(4\mid N\) and 1 otherwise, so
+
+\[
+|\operatorname{Aut}_A R|=\delta(N)\varphi(N),
+\qquad
+\delta(N)=\begin{cases}2,&4\mid N,\\1,&4\nmid N.\end{cases}
+\]
+
+The known factor \(\delta(N)\) makes exact counting a \(\varphi(N)\) oracle. On \(N=pq\), it gives \(p+q=N+1-\varphi(N)\) and hence the factors. Augmentation-preserving automorphisms remove the translation and have count exactly \(\varphi(N)\).
+
+**A richer rank-3 count.** For squarefree \(N=pq\), let \(S=A\oplus A^2\) with \((A^2)^2=0\). Its nilradical is \(A^2\), hence
+
+\[
+\operatorname{Aut}_A(S)=GL_2(A),
+\quad
+C=|GL_2(\mathbb F_p)|\,|GL_2(\mathbb F_q)|.
+\]
+
+Writing \(s=p+q\) and \(u=\varphi(N)=N+1-s\), direct multiplication gives
+
+\[
+C=N(N+1-s)^2(N+1+s)
+=Nu^2\bigl(2(N+1)-u\bigr).
+\]
+
+The full cubic \(g(u)=u^2(2(N+1)-u)\) is strictly increasing for \(0<u<N+1\), since \(g'(u)=u(4(N+1)-3u)>0\). Thus binary search recovers \(u\) in polynomial bit complexity. (The linear factor \(2(N+1)-u\) itself decreases.) This count is again exactly factoring-equivalent despite not literally equaling \(\varphi(N)\).
+
+**Quadratic and étale classifications.** For odd \(N=pq\) and
+
+\[
+B=A[X]/(X^2-uX+v),\qquad\Delta=u^2-4v,
+\]
+
+the local automorphism count over \(\mathbb F_\ell\) is 2 when \(\ell\nmid\Delta\) and \(\ell-1\) when \(\ell\mid\Delta\). Thus the global count is respectively 4, \(2(p-1)\), \(2(q-1)\), or \(\varphi(N)\), according as \(\gcd(\Delta,N)\) is \(1,p,q,N\). These numerical values can collide, so the count alone need not identify the case. The mixed cases were already factored by the known gcd; the deliberately everywhere-degenerate case hides \(\varphi(N)\); the étale case is constant.
+
+More generally, a rank-\(d\) finite étale \(\mathbb F_p\)-algebra
+
+\[
+E\simeq\prod_e\mathbb F_{p^e}^{m_e},
+\qquad\sum_e e m_e=d,
+\]
+
+has
+
+\[
+|\operatorname{Aut}_{\mathbb F_p}E|=\prod_e e^{m_e}m_e!,
+\]
+
+which for fixed \(d\) depends only on the decomposition partition and is at most \(d!\), independently of \(p\). Over a squarefree semiprime base the global count is at most \((d!)^2\). A parameterized sequence of factorization-type patterns could still support a different Frobenius separator; only growing field-size magnitude interpolation is absent.
+
+**Counting versus finding.** At \(N=15\), \(\varepsilon\mapsto-\varepsilon\) is an easy nonidentity automorphism but \(\gcd(-2,15)=1\); the CRT-selective map \(\varepsilon\mapsto4\varepsilon\) gives \(\gcd(3,15)=3\). Finding some automorphism is therefore too weak, while finding a component-selective one is already a factor witness. All displayed fixed-degree counts have only \(O(\log N)\) output bits, so output size is not the gap.
+
+**Evidence.** A focused hostile audit verified the arbitrary-\(N\) dual-number count, corrected the rank-3 monotonicity wording, noted collisions among quadratic case counts, proved the étale \(d!\) bound, and enforced the theorem-strength-blockage scope. A fresh proof-blind reconstruction independently recovered all formulas, semiprime reductions, bit-cost bounds, and limitations. The promoted theorem is P13 in `PROVED.md`.
+
+**What would make a retry materially new.** An explicit fixed-degree family whose informative local counts admit a proved uniform factor-free \(\operatorname{poly}(\log N)\) counting algorithm, or a structural invariant computable without counting an already factoring-equivalent group. Merely postulating the count oracle, changing the interpolation basis, or producing an easy globally synchronized automorphism is not new.
+
+## X09 — annihilator rank in the standard minimal-\(r\) AKS error family
+
+**Status:** promoted as P14 after the mandatory kill test, focused hostile audit, and proof-blind reconstruction of the corrected theorem.
+
+**Family:** F04.
+
+**Classification:** evidence against the universal auxiliary claim that the standard AKS error must have unequal local annihilator ranks. It closes neither nonstandard moduli nor other group-algebra elements.
+
+**Exact witness.** Let
+
+\[
+N=79{,}403=271\cdot293,
+\qquad r=269.
+\]
+
+Exact integer inequalities give \(264<(\log_2N)^2<265\). Orders below \(r\) are excluded by totient bounds, while \(N\equiv48\pmod {269}\), \(48^{134}=-1\), and \(48^4=239\pmod {269}\), so \(r\) is the first AKS modulus and \(\operatorname{ord}_{269}(N)=268\). Moreover
+
+\[
+266<\sqrt{268}\log_2N<267,
+\]
+
+so the standard shift bound is 266; both factors exceed \(r\).
+
+For \(h_{m,a}(Y)=(Y+a)^m-Y^m-a\), the two local multiplication nullities are
+
+\[
+\nu_{271}(a)=\deg\gcd(h_{293,a},Y^{269}-1),
+\qquad
+\nu_{293}(a)=\deg\gcd(h_{271,a},Y^{269}-1).
+\]
+
+The nontrivial irreducible factors of \(Y^{269}-1\) have degrees 268 over \(\mathbb F_{271}\) and 67 over \(\mathbb F_{293}\), because \(\operatorname{ord}_{269}(271)=268\) and \(\operatorname{ord}_{269}(293)=67\). For any nontrivial 269th root \(\zeta\), local vanishing implies
+
+\[
+G_a(\zeta)=0,
+\qquad
+G_a(Y)=(Y^2+a)(Y+a)^{22}-Y^{24}-a.
+\]
+
+For \(a\ne0\), the leading \(Y^{24}\) terms cancel and the \(Y^{23}\) coefficient is \(22a\), so \(G_a\) has degree 23 and cannot contain any nontrivial cyclotomic factor. At \(Y=1\), the local equations have only \(a=-1,0,-2\). Hence both local nullities are zero for every standard shift \(1\le a\le266\), and also for \(a=267\). Multiplication by every standard \(H_a\) is invertible in both local quotient algebras, so the local nullity/gcd-degree invariant supplies no separator. Equal full ranks alone do not show that every intermediate minor, principal subresultant coefficient, or elimination transcript is nonseparating.
+
+**Evidence.** Named Sage runs R01–R07 and their dispositions are in `experiments/F04_rankkill/RUN_MANIFEST.md`. That discovery manifest did not retain exact command/environment strings despite previously implying it did, and R04 used binary64 thresholds for its “first in the box” ordering; neither is authoritative evidence for provenance or minimality. R05 directly checked the small witness and R07 matched the analytic distributions. A fresh hostile auditor independently proved the exact parameters and algebra and reran all local residues under the fully specified timeout-bounded A02 in `experiments/F04_rank_audit`. A proof-blind reconstruction then independently recovered the exact logarithmic bounds, minimal \(r\), shift bound, nullity identity, local factor degrees, degree-23 obstruction, and exceptional shifts without reading either experiment directory. The displayed algebra, not a finite-search minimality claim, is P14 in `PROVED.md`.
+
+**What would make a retry materially new.** A proved choice of polynomially many nonstandard \(r\), a different group-algebra element or joint invariant, or an asymptotic shift distribution with inverse-polynomial mismatch probability that is not contradicted by this standard-parameter witness.
+
+## X10 — factor-symmetric scalar higher-residue phase carriers
+
+**Status:** candidate from the mandatory F09 kill test; hostile audit and proof-blind reconstruction pending.
+
+**Family:** F09.
+
+**Classification:** method failure for the precisely defined scalar, multiplicative, factor-swap-invariant carrier with multiplicative twists and additive/subtractive combining. This does not close vector/ring-valued, oriented, additive, or general higher-residue mechanisms.
+
+**Diagonal quotient theorem.** Let \(\ell\) be an odd prime and \(N=pq\) with \(p,q\equiv1\pmod\ell\). Fix local order-\(\ell\) characters and write a unit's hidden exponent vector as
+
+\[
+u(a)=(u_p(a),u_q(a))\in\mathbb F_\ell^2.
+\]
+
+A multiplicative scalar character has exponent \(L(x,y)=\alpha x+\beta y\). Invariance under swapping the two unlabeled factors forces \(\alpha=\beta\), so every such carrier is a multiple of
+
+\[
+\Sigma(x,y)=x+y.
+\]
+
+Arbitrarily many labels still have joint rank one and common kernel \(\{(t,-t):t\in\mathbb F_\ell\}\). A twist \(a\mapsto t_j a^{k_j}\) only adds a constant and rescales \(\Sigma(u(a))\). Inductively, every \(+/-\) combination and every decision based solely on exposed labels remains in this quotient. Thus an exposed zero phase does not certify either local phase is zero.
+
+**Exact cubic certificate.** For \(\ell=3\), \(N=91=7\cdot13\), choose primitive roots 3 modulo 7 and 2 modulo 13 and reduce their discrete-log exponents modulo 3. Then
+
+\[
+u(15)=(0,1),\qquad u(18)=(1,0),
+\]
+
+so both scalar sums equal 1, yet
+
+\[
+15/18=16\pmod {91},\qquad u(16)=(2,1).
+\]
+
+The combined scalar phase is zero while neither local phase is zero. All nine local pairs occur and each diagonal fiber contains 24 units.
+
+**Cyclotomic orientation.** In \(K=\mathbb Q(\zeta_\ell)\), the product of the local \(\ell\)-th power-residue symbols over every prime ideal above a rational split prime is trivial on rational numerators: the Galois exponents sum to
+
+\[
+1+\cdots+(\ell-1)\equiv0\pmod\ell.
+\]
+
+Obtaining a nontrivial odd-power symbol therefore requires selecting prime ideals above the rational factors rather than taking the fully symmetric product. For \(\ell=3,N=91\), an oriented norm-\(N\) ideal can be written \((N,\zeta-\rho)\) for a root \(\rho\) of \(\Phi_3\) modulo \(N\). The four roots have CRT pairs
+
+\[
+(2,9),(2,3),(4,9),(4,3).
+\]
+
+Globally conjugate orientations have unit differences, while roots agreeing in exactly one component have difference gcd 7 or 13 with \(N\). Multiple independent orientations can therefore factor this input. This does not prove that one orientation is factoring-equivalent or that no canonical factor-free orientation exists.
+
+**Evidence.** The exact enumeration and all failed-run dispositions are recorded in `experiments/F09_phasekill/RUN_MANIFEST.md`; R04 verifies all phase fibers and root-difference gcds. The linear-algebra and Galois-symmetry arguments are the proof candidate; finite computation only certifies the displayed example.
+
+**What would make a retry materially new.** A factor-free polynomial-time construction of a vector/ring-valued or consistently oriented carrier with more than diagonal rank, or a nonmultiplicative/additive probe with a proved combining law and inverse-polynomial separation probability. Merely adding scalar symmetric twists or postselection on their labels is not new.

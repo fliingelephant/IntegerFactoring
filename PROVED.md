@@ -332,3 +332,240 @@ coefficient positions; both zero counts are zero. Hence every one of the \(17{,}
 It follows that every \(H_a\) is nonzero in both prime components, while every one of its global coefficients is nonzero modulo both \(p\) and \(q\), hence a unit modulo \(N\). Therefore every standard local identity fails and every coefficient gcd is 1. \(\square\)
 
 **Scope.** P11 is a finite counterexample to exactly the standard minimal-\(r\), standard-shift pass/fail and individual coefficient-gcd localization claim. It does not rule out polynomially many nonstandard moduli, annihilator ranks or minors, relationships among multiple coefficients, or other group-algebra constructions. Finite computation refutes this universal auxiliary claim but does not address the top-level factoring theorem.
+
+## P12 — natural multiplication-spectrum probes can require exponential dense support
+
+**Status:** promoted.
+
+**Verification record:** the corrected theorem passed a focused hostile audit and a proof-blind end-to-end reconstruction. No cross-family audit has run.
+
+**General formulas.** Let \(N\ge2\), \(a\in(\mathbb Z/N\mathbb Z)^\times\), and let \(U_a|x\rangle=|ax\bmod N\rangle\). For each \(d\mid N\), put \(r_d=\operatorname{ord}_d(a)\), with \(r_1=1\). Then
+
+\[
+\chi_{U_a}(X)=\prod_{d\mid N}(X^{r_d}-1)^{\varphi(d)/r_d},
+\qquad
+\operatorname{tr}(U_a^k)=\gcd(a^k-1,N).
+\]
+
+Indeed, the residues of additive order \(d\) are in bijection with \((\mathbb Z/d\mathbb Z)^\times\), so they form \(\varphi(d)/r_d\) cycles of length \(r_d\). Every \(r_d\) divides \(r_N\), while the \(d=N\) stratum supplies every \(r_N\)-th root; hence the distinct complex spectrum is exactly all \(r_N\)-th roots. The trace counts solutions of \((a^k-1)x=0\pmod N\), of which there are exactly the displayed gcd. Binary modular exponentiation and Euclid compute it in \(\operatorname{poly}(n+\log(k+1))\) bit operations without forming \(a^k\).
+
+For a basis point \(x\), let \(g=\gcd(x,N)\) and \(D=N/g\). Its orbit length is \(r_D\),
+
+\[
+\langle x|U_a^k|x\rangle=\mathbf1_{r_D\mid k},
+\qquad
+\mu_x=\frac1{r_D}\sum_{\zeta^{r_D}=1}\delta_\zeta
+\]
+
+over \(\mathbb C\). The point \(x=0\) has constant moments and gcd \(N\); a nonzero nonunit already exposes a proper gcd; a unit retains all \(r_N\) frequencies. A normalized whole-orbit indicator is fixed by \(U_a\) and has constant moments 1, whereas the squared norm of its unnormalized indicator is the orbit length. This proves no lower bound on succinct orbit-state representations.
+
+**Synchronized family.** Fix effective Linnik constants: every reduced residue class modulo \(M\) contains a prime at most \(AM^L\). For each sufficiently large \(m\), choose an \(m\)-bit prime \(\ell\). Use Linnik first to choose \(p\equiv1\pmod\ell\), then \(q\equiv1\pmod {p\ell}\). Thus \(q>p>\ell\) and, for an absolute \(C\),
+
+\[
+p,q\le\ell^C.
+\]
+
+Choose elements of exact order \(\ell\) in \(\mathbb F_p^\times\) and \(\mathbb F_q^\times\), and CRT-combine them to \(a\pmod {N=pq}\). Since
+
+\[
+\ell^2<N\le\ell^{2C},
+\]
+
+the input length satisfies \(n=\Theta(\log\ell)=\Theta(m)\), so \(\ell=2^{\Theta(n)}\). Every nonzero residue has period exactly \(\ell\), while zero is fixed. Therefore
+
+\[
+\chi_{U_a}(X)=(X-1)(X^\ell-1)^{(N-1)/\ell},
+\qquad
+\operatorname{tr}(U_a^k)=
+\begin{cases}
+N,&\ell\mid k,\\
+1,&\ell\nmid k.
+\end{cases}
+\]
+
+For every nonzero point, the moment generating function is
+
+\[
+M_x(z)=\frac1{1-z^\ell}.
+\]
+
+The numerator 1 makes this fraction reduced over every coefficient field, even when the denominator is inseparable. For the exact integer trace sequence, over \(\mathbb Q\) or \(\mathbb C\),
+
+\[
+T(z)=\frac1{1-z}+\frac{N-1}{1-z^\ell}
+=\frac{N+z+\cdots+z^{\ell-1}}{1-z^\ell}.
+\]
+
+At a nonidentity \(\ell\)-th root the numerator is \(N-1\), and at 1 it is \(N+\ell-1\), so there is no cancellation and the minimal denominator degree is \(\ell\). This trace conclusion is coefficient-field dependent: since \(N\) is odd, reduction modulo 2 makes every trace value 1 and reduces the denominator to \(1-z\).
+
+Choosing least primes and exhaustively finding local witnesses makes the family uniformly enumerable in \(\ell^{O(1)}=2^{O(m)}\) time, not polynomial time in \(m\). Given \(p,q\), local order-\(\ell\) witnesses and the CRT combination are Las Vegas polynomial time, but this uses the witness factors.
+
+**Consequence and scope.** Consecutive-moment dense Padé/Prony reconstruction and explicit enumeration of all frequencies require \(\Omega(\ell)=2^{\Theta(n)}\) representation or query/output size on these fixed pairs. P12 gives no lower bound for adaptive binary-encoded indices, sparse descriptions, finite-field trace methods, arbitrary probes, non-Prony arithmetic algorithms, or algorithms that choose or resample \(a\). The construction is not a density theorem for random bases and proves nothing about the hardness of factoring.
+
+## P13 — natural fixed-degree automorphism counts hide the factoring oracle
+
+**Status:** promoted.
+
+**Verification record:** the corrected theorem passed a focused hostile audit and a proof-blind end-to-end reconstruction. No cross-family audit has run.
+
+**Dual numbers.** Let \(A=\mathbb Z/N\mathbb Z\) and \(R=A[\varepsilon]/(\varepsilon^2)\). Every \(A\)-algebra automorphism is uniquely
+
+\[
+\varepsilon\longmapsto a+b\varepsilon,
+\qquad b\in A^\times,\quad 2a=0,\quad a^2=0.
+\]
+
+The relation follows by squaring the image; invertibility is equivalent to the unit condition on \(b\). If \(N\) is even, the solutions to \(2a=0\) are \(0,N/2\), and the latter squares to zero exactly when \(4\mid N\); for odd \(N\), only zero occurs. Hence, for arbitrary \(N\),
+
+\[
+|\operatorname{Aut}_A R|=\delta(N)\varphi(N),
+\qquad
+\delta(N)=\begin{cases}2,&4\mid N,\\1,&4\nmid N.\end{cases}
+\]
+
+Augmentation-preserving automorphisms force \(a=0\) and have count exactly \(\varphi(N)\). Since \(\delta(N)\) is known, the unrestricted count also gives \(\varphi(N)\). For \(N=pq\),
+
+\[
+p+q=N+1-\varphi(N),
+\]
+
+so an exact integer square root of the quadratic discriminant recovers the factors in polynomial bit complexity. Conversely, factors compute the count.
+
+**A richer rank-3 square-zero algebra.** Assume \(N=pq\) for distinct primes and put \(S=A\oplus M\), where \(M=A^2\) and \(M^2=0\). Since \(A\) is reduced, \(M\) is exactly the nilradical. Therefore
+
+\[
+\operatorname{Aut}_A(S)=GL_2(A)
+\simeq GL_2(\mathbb F_p)\times GL_2(\mathbb F_q).
+\]
+
+Writing \(u=\varphi(N)=(p-1)(q-1)\), the exact count is
+
+\[
+C=N u^2\bigl(2(N+1)-u\bigr).
+\]
+
+For fixed \(N\), the full cubic in \(u\) has derivative
+
+\[
+Nu\bigl(4(N+1)-3u\bigr)>0
+\qquad(0<u<N+1).
+\]
+
+Binary search over \(1\le u\le N\) therefore recovers the unique \(u\) from \(C\) using polynomially many operations on \(O(\log N)\)-bit integers; the factors then follow as above. This informative count is again factoring-equivalent despite not literally equaling \(\varphi(N)\).
+
+**Quadratic monogenic algebras.** Let \(p,q\) be distinct odd primes and
+
+\[
+B=A[X]/(X^2-uX+v),\qquad\Delta=u^2-4v.
+\]
+
+After translating locally by \(u/2\), the algebra over \(\mathbb F_\ell\) is \(\mathbb F_\ell[Y]/(Y^2-\Delta/4)\). Its automorphism count is 2 if \(\ell\nmid\Delta\), whether split or irreducible, and \(\ell-1\) if \(\ell\mid\Delta\). CRT gives
+
+\[
+4,\quad2(p-1),\quad2(q-1),\quad\varphi(N)
+\]
+
+according as \(\gcd(\Delta,N)\) is \(1,p,q,N\). These values can collide, so the count alone need not identify the case. In mixed cases the known gcd already factors \(N\); the fully degenerate count is a \(\varphi(N)\) oracle; the fully étale count is constant.
+
+**Fixed-rank étale algebras.** Every rank-\(d\) finite étale \(\mathbb F_p\)-algebra has a decomposition
+
+\[
+E\simeq\prod_e\mathbb F_{p^e}^{m_e},
+\qquad\sum_e e m_e=d,
+\]
+
+and
+
+\[
+|\operatorname{Aut}_{\mathbb F_p}E|
+=\prod_e e^{m_e}m_e!\le d!.
+\]
+
+The formula is the product of wreath-product orders: each block permits \(m_e!\) permutations and \(e\) Frobenius choices per factor. It is bounded independently of \(p\); over a squarefree semiprime base the global count is at most \((d!)^2\). A parameterized sequence of decomposition patterns could still carry information—only growing field-size magnitude is absent.
+
+**Construction versus counting.** At \(N=15\), \(\varepsilon\mapsto-\varepsilon\) is an easy nonidentity automorphism but gives only gcds 1 and 15, whereas \(\varepsilon\mapsto4\varepsilon\) is identity modulo 3 and negation modulo 5 and exposes both factors through \(\gcd(4\mp1,15)\). Finding an arbitrary automorphism is too weak; a component-selective one already contains a factor certificate. All displayed counts have \(O(\log N)\) bits for fixed rank, so output size is not the obstruction.
+
+**Scope.** P13 proves that in these canonical families the decomposition “easy exact counting, then interpolate” hides the target difficulty in the exact count. It does not prove that such a count lacks a factor-free polynomial-time algorithm, that every B12 family fails, or that bounded étale decomposition-pattern sequences cannot separate CRT components.
+
+## P14 — standard AKS error nullities can agree at full rank
+
+**Status:** promoted.
+
+**Verification record:** an analytic counterexample passed a focused hostile audit with an independent exact run and a proof-blind end-to-end reconstruction. No cross-family audit has run.
+
+**Statement.** Under the standard AKS convention—choose the smallest \(r\) with \(\operatorname{ord}_r(N)>(\log_2N)^2\), then test shifts through \(\lfloor\sqrt{\varphi(r)}\log_2N\rfloor\)—the local multiplication nullities of every standard error polynomial can be equal and zero in both prime components.
+
+**Parameters.** Let
+
+\[
+N=79{,}403=271\cdot293.
+\]
+
+Trial division proves both factors prime, so \(N\) is not a perfect power. Exact rational bounds give
+
+\[
+264<(\log_2N)^2<265.
+\]
+
+For \(s\le265\), \(\operatorname{ord}_s(N)\le s-1\le264\), while \(\varphi(266),\varphi(267),\varphi(268)=108,176,132\). Modulo the prime 269,
+
+\[
+N\equiv48,qquad48^{134}=-1,qquad48^4=239,
+\]
+
+so \(\operatorname{ord}_{269}(N)=268\). Hence the first AKS modulus is \(r=269\). Both factors exceed it, so the preliminary gcd scan survives. Moreover
+
+\[
+266<\sqrt{268}\log_2N<267,
+\]
+
+and the standard shift bound is \(A=266\).
+
+**Nullity reduction.** Put
+
+\[
+h_{m,a}(Y)=(Y+a)^m-Y^m-a.
+\]
+
+Frobenius and the substitutions \(X\mapsto X^{271}\) and \(X\mapsto X^{293}\), which are automorphisms modulo \(X^{269}-1\), reduce the two local nullities to
+
+\[
+\nu_{271}(a)=\deg\gcd(h_{293,a},Y^{269}-1),
+\qquad
+\nu_{293}(a)=\deg\gcd(h_{271,a},Y^{269}-1).
+\]
+
+In general, multiplication by \(h\) on \(F[Y]/(f)\) has kernel dimension \(\deg\gcd(h,f)\): writing \(h=dh_0,f=df_0\) with coprime cofactors, the kernel consists exactly of the multiples of \(f_0\) modulo \(f\).
+
+**Cyclotomic obstruction.** Exact modular powers give
+
+\[
+\operatorname{ord}_{269}(271)=268,
+\qquad
+\operatorname{ord}_{269}(293)=67.
+\]
+
+Thus every nontrivial irreducible factor of \(Y^{269}-1\) has degree 268 over \(\mathbb F_{271}\) and degree 67 over \(\mathbb F_{293}\). For a nontrivial 269th root \(\zeta\), either relevant local vanishing equation implies
+
+\[
+G_a(\zeta)=0,
+\qquad
+G_a(Y)=(Y^2+a)(Y+a)^{22}-Y^{24}-a.
+\]
+
+In characteristic 293, division by \((\zeta+a)^{22}\) is legitimate: if \(\zeta+a=0\), the original error equals \(\zeta(1-\zeta)\ne0\). For \(a\ne0\), the \(Y^{24}\) terms in \(G_a\) cancel and its \(Y^{23}\) coefficient is \(22a\), so \(G_a\) has exact degree 23. It cannot vanish at an element of degree 67 or 268.
+
+Only \(Y=1\) remains. Writing \(b=1+a\), the equations reduce locally to \(b^{293}=b\) and \(b^{271}=b\). Since
+
+\[
+\gcd(22,270)=\gcd(270,292)=2,
+\]
+
+the only exceptional shifts are \(a=-1,0,-2\), with nullities \(1,269,1\). Every integer \(1\le a\le267\), hence every standard shift, avoids these residues in both fields. Therefore
+
+\[
+\nu_{271}(a)=\nu_{293}(a)=0
+\qquad(1\le a\le266).
+\]
+
+**Scope.** P14 refutes only universal unequal local nullity/gcd-degree separation for the standard minimal \(r\) and standard \(H_a\). Equal full ranks do not rule out zero divisors in individual intermediate minors, principal subresultant coefficients, or elimination transcripts. Nonstandard moduli, other group-algebra elements, joint invariants, shift distributions, and factoring remain open.
