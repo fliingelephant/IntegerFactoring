@@ -1514,3 +1514,139 @@ lifted state, a rational/division/opaque or genuinely piecewise model, a
 charged useful warm start, a positive-combinatorial sampler, or a theorem for
 prime powers and nonsquarefree bases.  More factor-free synchronized
 low-degree global bijections are covered by P45.
+
+## X40 — cellwise matchgate landing of the propagated shifted-add multiplier
+
+**Status:** promoted as P46 after a clean hostile audit and a fresh
+context-free proof-blind reconstruction.
+
+**Family:** F20.
+
+**Classification:** evidence against the exact auxiliary mechanism which
+turns each copy of the natural minimal scalar-Boolean propagated schoolbook
+cell into a planar matchgate by invertible local leg gauges.  It is not a
+tensor-contraction lower bound.
+
+**Positive survivor.**  The eight-leg relation
+
+\[
+\mathbf 1[x_L=x_R]\mathbf 1[y_U=y_D]
+\mathbf 1[a+c+x_Ly_U=s+2d]
+\]
+
+tiles a planar shifted-add multiplier.  Product bits and every factor-prefix
+query are boundary unaries, and each ordered factor witness has exactly one
+internal extension.  Thus the fusion genuinely escapes P36's separated
+COPY\(_3\)--AND\(_3\) hypothesis.
+
+**Exact obstruction.**  In the displayed planar rotation, the four incoming
+legs and four outgoing legs form complementary contiguous boundary arcs.
+Their flattening is a direct sum of four rank-three full-adder blocks and has
+rank \(12\).  Every nonzero pure-spinor/matchgate signature, including odd
+and degenerate charts, has power-of-two rank across a contiguous cyclic cut.
+Independent \(\mathrm{GL}_2\) maps on all eight legs preserve the rank, so
+even locally unconstrained gauges cannot make this cell a matchgate.
+
+**What would make a retry materially new.**  A larger fused block passing all
+contiguous-rank and matchgate-identity tests; an alternate planar rotation,
+packed or projected encoding, or asymmetric tile set; a genuinely global
+Pfaffian identity not decomposed into copies of this cell; a precise modular
+construction with exact integer recovery; or a non-matchgate polynomial
+contraction.  Merely replacing common bases by edge-dependent invertible
+gauges is covered by P46.  F38 tests horizontal strip fusions and leaves
+general two-dimensional blocks open.
+
+## X41 — smooth-multiplier divisor clouds for direct scaled-Fermat extraction
+
+**Status:** promoted as P47 after a historical amendment audit, a clean fresh
+whole-artifact re-audit, and a context-free proof-blind reconstruction.
+
+**Family:** F15.
+
+**Classification:** method failure for target-independent divisor-ratio
+clouds and, on one infinite balanced-semiprime family, every direct useful
+Fermat-square/gcd scan using an adaptively selected coprime
+\(o(\sqrt n)\)-bit multiplier.  This is not a factoring lower bound.
+
+**Positive survivor.**  A polynomial-bit integer \(k\) with known
+factorization can have exponentially many allocations \(k=cd\), and one
+ordinary square scan of \(kN\) tests all of them without enumerating divisors.
+All operands remain polynomial-bit when the represented list, its supplied
+factorizations, and its scan caps are uniformly polynomial.
+
+**Exact obstruction.**  Balancing \(cp\) and \(dq\) through \(T\) Fermat
+increments requires log-ratio error
+
+\[
+O\!\left((kN)^{-1/4}\sqrt{T+1}\right).
+\]
+
+The aggregate necessary-window measure is at most
+
+\[
+4\sqrt2\,N^{-1/4}
+\sum_i\tau(k_i)k_i^{-1/4}\sqrt{T_i+1},
+\]
+
+and \(\tau(k)=k^{o(1)}\), so a polynomial target-independent list cannot
+cover any fixed ratio interval.  More strongly, primes with
+\(q/p\) exponentially close in \(\sqrt n\) to \(\sqrt2\) form an infinite
+balanced family on which quadratic irrationality gives useful Fermat gap
+\(>p/(432k^3)\) simultaneously for every coprime
+\(\log_2k=o(\sqrt n)\).  Polynomial scans miss them even when \(k\) is chosen
+after seeing \(N\).
+
+**What would make a retry materially new.**  An \(N\)-adaptive
+\(\Omega(\sqrt n)\)-bit multiplier construction with proved concentration on
+the actual discrete prime ratio; a joint decoder of multiple nonsquare
+residues or full scan transcripts which does not require one useful factor
+pair; a different metric observable; or non-gcd extraction.  Merely citing a
+large divisor count or a uniformly dense smooth cloud is covered by P47.
+
+## X42 — horizontal fusion of propagated multiplier cells
+
+**Status:** promoted as P48 after a historical amendment audit, a clean fresh
+whole-artifact re-audit, and a context-free proof-blind reconstruction.
+
+**Family:** F20.
+
+**Classification:** evidence against the exact auxiliary mechanism which
+fuses any finite horizontal strip of the natural P46 scalar-Boolean cell,
+contracts only its shared (y)-propagation and ripple-carry legs, and seeks a
+characteristic-zero matchgate landing by invertible leg gauges.  This is not
+a tensor-contraction lower bound.
+
+**Positive survivor.**  The fusion is an exact multiplicity-one Boolean
+tensor.  For local words (X,A,S), its support is
+
+\[
+x_i^-=x_i^+,\qquad y_0=y_L,\qquad
+A+y_0X+c_0=S+2^Lc_L.
+\]
+
+The inherited planar drawing has a literal noncrossing two-lane realization,
+and the input and output legs occupy complementary contiguous cyclic boundary
+arcs.  Thus horizontal fusion genuinely escapes P46's single-cell scope.
+
+**Exact obstruction.**  Across that cut the tensor is a direct sum of
+(2^{L+1}) arithmetic blocks.  Each block contains exactly (2^L+1)
+distinct standard basis rows, so
+
+\[
+\operatorname{rank}=2^{L+1}(2^L+1).
+\]
+
+For every (L\ge1), this has a nontrivial odd factor.  A nonzero
+characteristic-zero matchgate/pure-spinor signature has power-of-two rank
+across a contiguous cyclic cut, including odd and degenerate charts.
+Independent external (\mathrm{GL}_2) gauges preserve the rank, while
+compatible internal gauges cancel.  No finite strip in this exact family and
+port order can therefore be a matchgate.
+
+**What would make a retry materially new.**  A genuinely two-dimensional
+fused block that also contracts vertical (x) or accumulator/sum interfaces;
+an alternate rotation, packed/projected/auxiliary encoding, or asymmetric
+tile; a global Pfaffian identity not decomposing into these strip signatures;
+a separately proved finite-characteristic reconstruction; or a non-matchgate
+polynomial contraction.  Another horizontal scalar-cell strip in the
+inherited order is covered by P48.

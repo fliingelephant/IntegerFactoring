@@ -819,3 +819,105 @@ noninvertible/stochastic or auxiliary/lifted kernels, accessible rational or
 piecewise maps, positive matching encodings, direct samplers, warm starts,
 and nonsquarefree geometry remain open. P45 supplies no complete all-input
 factoring algorithm.
+
+### C43 — the natural propagated multiplier cell has a rank-12 matchgate obstruction
+
+**Status:** promoted as P46 after a clean hostile audit and a fresh
+context-free proof-blind reconstruction.
+
+**Closest prior route and material difference.** C33/P36 obstructs the
+separated COPY\(_3\)--AND\(_3\) gate set. C43 fuses factor propagation,
+partial multiplication, accumulator update, and carry into the smallest
+natural eight-leg scalar-Boolean schoolbook tile and permits an independent
+invertible basis on every leg.
+
+**Verified boundary.** The cell tiles an exact planar shifted-add multiplier
+whose target and prefix constraints are boundary unaries and whose ordered
+factor witnesses have multiplicity one. In its actual planar rotation, the
+incoming and outgoing legs are complementary contiguous arcs. The
+corresponding flattening consists of four rank-three full-adder blocks, hence
+has rank \(12\). Every nonzero matchgate/pure-spinor signature has rank
+\(2^r\) across a contiguous cyclic split, including odd signatures and
+degenerate charts; particle-hole Clifford maps reduce to the vacuum
+Pfaffian chart without changing rank. Arbitrary independent leg gauges
+therefore cannot make this cell a matchgate.
+
+**Remaining gap.** This is a cell/order obstruction, not a contraction lower
+bound. F38 tests horizontal strip fusions. General two-dimensional blocks,
+other planar rotations, packed/projected/auxiliary encodings, global
+Pfaffian identities, modular constructions with exact recovery, and
+non-matchgate polynomial contractions remain open. P46 supplies no factoring
+algorithm.
+
+### C44 — smooth multiplier clouds lose to the Fermat resolution they create
+
+**Status:** promoted as P47 after a historical amendment audit, a clean fresh
+whole-artifact re-audit, and a context-free proof-blind reconstruction.
+
+**Closest prior route and material difference.** C20/P26 enumerates only
+numerical multipliers \(k\le\operatorname{poly}(n)\). C44 permits a
+polynomial-bit known-factorization multiplier whose potentially exponentially
+many allocations \(k=cd\) are all pooled by one ordinary Fermat scan. This is
+the explicit metric/allocation-cloud version of amortizing many lucky
+relations.
+
+**Verified boundary.** A useful allocation has exact gap
+
+\[
+\sqrt{kN}\!\left(
+\cosh\!\left(\tfrac12\log\frac{c/d}{q/p}\right)-1
+\right),
+\]
+
+so a polynomial scan requires log-ratio error
+\(O((kN)^{-1/4}\sqrt T)\). Summing all divisor windows and using
+\(\tau(k)=k^{o(1)}\) proves that no target-independent polynomial list covers
+a fixed positive-length ratio interval, regardless of multiplier magnitude.
+On an infinite balanced-semiprime family with \(q/p\) exponentially close to
+\(\sqrt2\), quadratic irrationality gives gap \(>p/(432k^3)\) uniformly for
+every coprime adaptive \(o(\sqrt n)\)-bit multiplier, so direct
+useful-square/gcd extraction misses through every fixed polynomial cap.
+
+**Remaining gap.** P47 does not address adaptive \(\Omega(\sqrt n)\)-bit
+multipliers concentrated on the actual prime ratio, joint decoding of
+nonsquare residues or complete scan transcripts, other metric observables,
+non-gcd extraction, or an all-input splitter. The continuous theorem must not
+be inflated into an adaptive discrete lower bound.
+
+### C45 — every horizontal propagated-cell strip retains a matchgate rank obstruction
+
+**Status:** promoted as P48 after a historical amendment audit, a clean fresh
+whole-artifact re-audit, and a context-free proof-blind reconstruction.
+
+**Closest prior route and material difference.** C43/P46 treats one natural
+eight-leg propagated multiplier cell. C45 contracts the shared (y) and
+ripple-carry legs of an arbitrary length-(L) row, so it tests whether fusion
+removes the single-cell obstruction rather than merely repeating it.
+
+**Verified boundary.** The fused tensor is exactly the multiplicity-one
+relation
+
+\[
+x_i^-=x_i^+,\qquad y_0=y_L,\qquad
+A+y_0X+c_0=S+2^Lc_L.
+\]
+
+An explicit two-lane planar embedding puts all incoming and outgoing legs on
+complementary contiguous cyclic arcs. Across that cut propagation gives
+(2^{L+1}) blocks, and each arithmetic block has rank (2^L+1). Hence the
+exact rank is
+
+\[
+2^{L+1}(2^L+1),
+\]
+
+which is never a power of two for (L\ge1). The P46 all-chart pure-spinor
+lemma and invariance under arbitrary independent leg gauges therefore exclude
+every finite horizontal strip in its inherited characteristic-zero matchgate
+orbit.
+
+**Remaining gap.** This closes only horizontal scalar-cell fusion in one port
+order. Genuinely two-dimensional blocks, alternate rotations or encodings,
+auxiliary/projection schemes, global Pfaffian identities, modular recovery,
+and non-matchgate contraction remain open. P48 supplies no factoring
+algorithm.

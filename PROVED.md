@@ -4151,3 +4151,502 @@ experiments/F35_low_degree_zero_product_bijection_kill,
 experiments/F35_low_degree_zero_product_bijection_audit,
 experiments/F35_low_degree_zero_product_bijection_reaudit, and
 experiments/F35_low_degree_zero_product_bijection_reconstruct.
+
+## P46 — the natural propagated multiplier cell is outside every independent-leg matchgate orbit
+
+**Status:** promoted.
+
+**Verification record:** a fresh hostile proof audit passed the complete
+candidate as written.  A context-free proof-blind reconstruction independently
+recovered the shifted-add recurrence, planar rotation system, rank computation,
+degenerate-chart pure-spinor lemma, sign boundary, and exact scope.  No
+computation and no cross-family audit were used.
+
+Over a characteristic-zero field, define the eight-leg Boolean signature
+
+\[
+C(x_L,x_R,y_U,y_D,a,c,s,d)
+=\mathbf 1[x_L=x_R]\mathbf 1[y_U=y_D]
+ \mathbf 1[a+c+x_Ly_U=s+2d].
+\]
+
+Copies \(C_{j,i}\), \(0\le j,i<n\), form an exact planar shifted-add
+multiplier.  Propagate \(x_i\) down column \(i\), propagate \(y_j\) across
+row \(j\), connect \(d_{j,i}\) to \(c_{j,i+1}\), connect
+\(s_{j,i}\) to \(a_{j+1,i-1}\) for \(i\ge1\), and connect each row's
+final-column carry \(d_{j,n-1}\) to \(a_{j+1,n-1}\).  Pin
+\(a_{0,i}=c_{j,0}=0\).  If
+
+\[
+A_j=\sum_{i=0}^{n-1}2^i a_{j,i},
+\qquad X=\sum_{i=0}^{n-1}2^i x_i,
+\]
+
+then summing one row's cell equations gives
+
+\[
+A_j+Xy_j=s_{j,0}+2A_{j+1}.
+\]
+
+Telescoping over the rows shows that
+
+\[
+XY=
+\sum_{j=0}^{n-2}2^j s_{j,0}
++\sum_{i=0}^{n-1}2^{n-1+i}s_{n-1,i}
++2^{2n-1}d_{n-1,n-1}.
+\]
+
+Thus the displayed boundary outputs have consecutive weights
+\(0,\ldots,2n-1\).  Given \(x,y\), every carry and sum is forced by the
+unique binary decomposition of \(a+c+xy\in\{0,1,2,3\}\), so the pinned
+network has exactly one internal assignment per ordered factor witness.
+Factor-prefix restrictions are boundary unaries and retain this
+multiplicity-one semantics.
+
+Placing cell \((j,i)\) at \((u,v)=(i+j,j)\) uses horizontal, vertical, and
+one diagonal family of lattice edges; parallel propagation/carry edges fit in
+disjoint thin lanes.  At every cell the incoming legs
+
+\[
+I=(x_L,y_U,a,c)
+\]
+
+occupy one local boundary arc and the outgoing legs
+
+\[
+O=(x_R,y_D,s,d)
+\]
+
+the complementary arc.  Constants, factor bits, prefix pins, target bits,
+and neutral terminal unaries all attach in the outer face.
+
+For any nonzero planar matchgate signature, the ordinary coefficient
+flattening across two complementary contiguous cyclic arcs has rank \(2^r\)
+for some \(r\).  This includes every degenerate chart and both parities.
+Indeed, choose a nonzero coefficient and apply the needed particle-hole
+operators
+
+\[
+\gamma_i=e_i\wedge+\iota_{e_i}.
+\]
+
+Each \(\gamma_i\) is a tensor-product Pauli string, preserves flattening
+rank, and carries pure spinors to pure spinors; their product moves the chosen
+coefficient to the even vacuum chart.  There the spinor is
+\(\lambda\exp(\omega)\).  For a contiguous split write
+
+\[
+\omega=\omega_I+\omega_O+\omega_{IO}.
+\]
+
+The first two terms act by invertible row and column maps.  If the cross-form
+has rank \(r\), separate changes of basis put it into
+\(\sum_{k=1}^r u_k\wedge v_k\); expanding its exponential gives a diagonal
+pairing indexed by all \(2^r\) subsets.  Cyclic rotations across a contiguous
+cut contribute only rank-preserving row or column signs.  Contiguity is
+essential: the pure spinor
+
+\[
+\exp(e_1\wedge e_2+e_3\wedge e_4+e_1\wedge e_4+e_2\wedge e_3)
+\]
+
+has ordinary \(\{1,3\}\mid\{2,4\}\) flattening
+
+\[
+\begin{pmatrix}
+1&0&0&0\\
+0&1&1&0\\
+0&1&1&0\\
+0&0&0&2
+\end{pmatrix},
+\]
+
+of rank \(3\) over characteristic zero.
+
+Finally, propagation makes the \(I\mid O\) flattening of \(C\) a direct sum
+of four blocks indexed by \((x,y)\).  In each block the four \((a,c)\) rows
+select exactly three distinct \((s,d)\) columns, so every block has rank
+\(3\) and
+
+\[
+\operatorname{rank}\operatorname{Flat}_{I\mid O}(C)=12.
+\]
+
+Independent invertible \(2\times2\) transformations on the eight legs only
+left- and right-multiply this flattening by invertible Kronecker products.
+Because \(12\) is not a power of two, no such transformations make this cell
+a matchgate.  Contraction-compatible shared-edge gauges are a specialization
+and cannot repair the local failure.
+
+P46 closes only the displayed natural scalar-Boolean cell in this planar port
+order.  It does not close larger fused blocks, other rotations or encodings,
+projected auxiliary states, global Pfaffian identities, modular
+constructions, or non-matchgate exact contraction.  It is an auxiliary
+obstruction, not a factoring algorithm.
+
+The candidate, clean hostile audit, and context-free reconstruction are
+preserved under experiments/F36_fused_matchgate_cell_kill,
+experiments/F36_fused_matchgate_cell_audit, and
+experiments/F36_fused_matchgate_cell_reconstruct.
+
+## P47 — smooth multiplier clouds lose to their own Fermat scale
+
+**Status:** promoted.
+
+**Verification record:** the first hostile audit found no error in either
+core obstruction but required the continuous surrogate, target-independence,
+uniform cost quantifiers, and direct useful-square/gcd scope to be literal.
+The amended whole artifact passed a fresh hostile re-audit.  A context-free
+proof-blind reconstruction independently recovered the exact gap, coverage
+bound, divisor estimate, LCM example, prime-ratio counterfamily, constants,
+and exclusions.  No computation and no cross-family audit were used.
+
+Let \(N=pq\) for distinct odd primes \(p<q\), and let a positive multiplier
+\(k\) have a supplied complete factorization.  If \(\gcd(k,N)>1\), that gcd
+or the supplied prime list already exposes a factor.  When \(\gcd(k,N)=1\),
+every factor pair of \(kN\) is, up to exchange, either
+
+\[
+(cp,dq),\qquad(cq,dp),\qquad\text{or}\qquad(cN,d),
+\qquad cd=k.
+\]
+
+The first two allocate \(p,q\) to opposite sides and have useful
+intersections \(p,q\) with \(N\); the last has only the trivial/full
+intersections \(1,N\).  Fermat represents a pair only when its two factors
+have the same parity, equivalently \(c\equiv d\pmod2\).
+
+For a useful allocation \(X=cp,Y=dq\), put
+
+\[
+r=\frac qp,qquad M=kN,qquad
+\lambda=\log\frac{c/d}{r}.
+\]
+
+Its exact real gap above the Fermat square-root threshold is
+
+\[
+G=\sqrt{kN}\bigl(\cosh(\lambda/2)-1\bigr)
+=\frac{(cp-dq)^2}{2(\sqrt{cp}+\sqrt{dq})^2}.
+\]
+
+If \(\theta_M=\lceil\sqrt M\rceil-\sqrt M\), its exact integer scan index is
+\(j=G-\theta_M\).  Hence a parity-compatible pair occurs through index
+\(T\) exactly when
+
+\[
+|\lambda|
+\leq2\operatorname{arcosh}
+\left(1+\frac{T+\theta_M}{\sqrt{kN}}\right),
+\]
+
+and necessarily
+
+\[
+|\lambda|
+\leq2\sqrt2\,\frac{\sqrt{T+1}}{(kN)^{1/4}}.
+\tag{47.1}
+\]
+
+This yields a precise continuous obstruction.  Fix \(S>0\), a log-ratio
+interval \(I\) of length \(\ell\), target-independent multipliers \(k_i\),
+and caps \(T_i\).  Define
+
+\[
+R_i=2\sqrt2\,\frac{\sqrt{T_i+1}}{(k_iS)^{1/4}}
+\]
+
+and
+
+\[
+\mathcal C=
+\bigcup_i\ \bigcup_{c\mid k_i}
+[2\log c-\log k_i-R_i,\ 2\log c-\log k_i+R_i].
+\]
+
+Every actual useful pair for an integer \(N\ge S\) found through its cap has
+\(\log(q/p)\in\mathcal C\).  Summing the lengths of all necessary windows
+gives
+
+\[
+\operatorname{meas}(I\cap\mathcal C)
+\leq4\sqrt2\,S^{-1/4}
+\sum_i\tau(k_i)k_i^{-1/4}\sqrt{T_i+1}.
+\tag{47.2}
+\]
+
+For every fixed \(\varepsilon>0\),
+
+\[
+\tau(k)\le C_\varepsilon k^\varepsilon.
+\]
+
+Indeed, for primes \(s\ge2^{1/\varepsilon}\),
+\(e+1\le2^e\le s^{\varepsilon e}\); each of the finitely many smaller
+primes contributes the finite supremum
+\(\sup_e(e+1)s^{-\varepsilon e}\).  Taking \(\varepsilon=1/8\) makes
+\(\tau(k)k^{-1/4}\) uniformly bounded.  Thus one target-independent list of
+uniformly polynomial cardinality and uniformly polynomial scan caps covers
+only \(2^{-\Theta(n)}\operatorname{poly}(n)\) log measure when
+\(S=2^{\Theta(n)}\), regardless of multiplier magnitude.  It cannot cover a
+fixed positive-length balanced interval.  This is a continuous
+necessary-window theorem, not a lower bound for a cloud chosen from the
+particular input ratio.
+
+The natural dense construction illustrates the same loss.  With
+
+\[
+L_m=\operatorname{lcm}(1,\ldots,m),\qquad k_m=L_m^2,
+\]
+
+the allocations
+
+\[
+c=L_m\frac ab,\qquad d=L_m\frac ba
+\]
+
+realize \(c/d=(a/b)^2\) for \(a,b\le m\).  Taking
+\(b=\lfloor(m-2)/\sqrt2\rfloor\) and
+\(a=\operatorname{round}(b\sqrt r)\) gives a uniform \(O(1/m)\) log mesh on
+\(1\le r\le2\).  But \(\log L_m=\Theta(m)\), so
+\(k_m^{-1/4}=\exp(-\Theta(m))\); even all \(\tau(k_m)\) allocations cannot
+offset the required Fermat resolution in (47.2).
+
+There is also an actual discrete obstruction which permits input-dependent
+selection.  Fix functions
+
+\[
+B:\mathbb N\to\mathbb R_{\ge0},\qquad
+T:\mathbb N\to\mathbb Z_{\ge0},
+\]
+
+with \(B(n)/\sqrt n\to0\) and \(T\) bounded by one fixed polynomial.  The
+de la Vallée Poussin error term
+
+\[
+\pi(x)=\operatorname{Li}(x)+O(xe^{-a\sqrt{\log x}})
+\]
+
+puts a prime in every sufficiently large symmetric interval of relative
+radius \(e^{-b\sqrt{\log x}}\) for a suitable \(b>0\).  Taking the interval
+around \(\sqrt2p\), for arbitrarily large primes \(p\), produces primes
+\(q\) with
+
+\[
+p<q<2p,qquad
+\left|\frac qp-\sqrt2\right|\le e^{-\gamma\sqrt n},
+\qquad n=\lceil\log_2(pq+1)\rceil.
+\]
+
+For all sufficiently large members of this infinite family, writing
+\(K=2^{B(n)}\) gives
+
+\[
+\left|\frac qp-\sqrt2\right|\le\frac1{6K^2}.
+\]
+
+For every \(cd=k\le K\), quadratic irrationality gives
+
+\[
+|c-d\sqrt2|
+=\frac{|c^2-2d^2|}{c+d\sqrt2}>\frac1{3k}.
+\]
+
+The prime-ratio error therefore yields, simultaneously for every such
+\(k,c,d\),
+
+\[
+|c-d(q/p)|>\frac1{6k},
+\]
+
+and the same estimate after exchanging \(c,d\).  Both useful orientations
+then satisfy
+
+\[
+G>\frac{p}{432k^3}>T(n)+1
+\]
+
+eventually, because \(\log p=\Theta(n)\) whereas
+\(\log k=o(\sqrt n)\).  Every compatible useful pair has index greater than
+\(T(n)\), and every incompatible one is absent from the Fermat scan.  This
+holds before an algorithm selects \(k\), so it defeats every deterministic or
+random input-dependent choice, and every list, within the stated size range.
+
+P47 therefore closes target-independent continuous divisor clouds and the
+direct useful-square/factor-pair/gcd method with adaptive coprime
+\(o(\sqrt n)\)-bit multipliers on the constructed balanced family.  It does
+not close \(\Omega(\sqrt n)\)-bit adaptive multipliers, concentration on the
+actual discrete prime ratio, joint decoding of nonsquare values or complete
+scan transcripts, other metric observables, non-gcd extraction, or general
+factoring.  A represented polynomial-time scan must also charge multiplier
+and supplied-factorization generation, total encoding length, every scan
+step, arithmetic operands, and gcds.  Only an every-composite Las Vegas
+splitter with one uniform expected polynomial bound would recurse to complete
+factorization; P47 supplies no such splitter.
+
+The candidate, historical amendment audit, clean whole-artifact re-audit,
+and context-free reconstruction are preserved under
+experiments/F37_smooth_multiplier_cloud_kill,
+experiments/F37_smooth_multiplier_cloud_audit,
+experiments/F37_smooth_multiplier_cloud_reaudit, and
+experiments/F37_smooth_multiplier_cloud_reconstruct.
+
+## P48 — every horizontal propagated-cell strip stays outside the matchgate orbit
+
+**Status:** promoted.
+
+**Verification record:** the first hostile audit preserved the tensor, topology,
+and rank theorem but required the pure-spinor recap to distinguish the two local
+two-forms from the cross-form.  The amended whole artifact passed a fresh hostile
+re-audit.  A context-free proof-blind reconstruction independently recovered the
+fused relation, multiplicity one, planar cyclic cut, exact rank, all-chart
+pure-spinor obstruction, gauge invariance, and scope.  No computation and no
+cross-family audit were used.
+
+For (L\ge1), horizontally fuse (L) copies of the P46 Boolean cell
+
+\[
+C(x_i^-,x_i^+,y_i,y_{i+1},a_i,c_i,s_i,c_{i+1})
+=\mathbf1[x_i^-=x_i^+]\mathbf1[y_i=y_{i+1}]
+ \mathbf1[a_i+c_i+x_i^-y_i=s_i+2c_{i+1}].
+\]
+
+Contract only (y_1,\ldots,y_{L-1}) and
+(c_1,\ldots,c_{L-1}).  All equalities inside the indicators are ordinary
+integer Boolean equalities; only their truth values are embedded in a field.
+Put
+
+\[
+X=\sum_{i=0}^{L-1}2^ix_i^-,\qquad
+A=\sum_{i=0}^{L-1}2^ia_i,\qquad
+S=\sum_{i=0}^{L-1}2^is_i.
+\]
+
+The resulting tensor is exactly
+
+\[
+\boxed{
+\mathcal S_L=
+\left(\prod_{i=0}^{L-1}\mathbf1[x_i^-=x_i^+]\right)
+\mathbf1[y_0=y_L]
+\mathbf1[A+y_0X+c_0=S+2^Lc_L].}
+\tag{48.1}
+\]
+
+Indeed, a nonzero summand propagates every (x_i), makes all (y_i) equal,
+and satisfies
+
+\[
+a_i+c_i+x_i^-y_0=s_i+2c_{i+1}.
+\]
+
+Multiplication by (2^i) and summation cancels every internal carry and
+gives the last indicator in (48.1).  Conversely, start from the exposed
+(c_0) and apply the ordinary full-adder recurrence.  Each input sum lies in
+({0,1,2,3}), so it uniquely determines the next Boolean output bit and
+carry.  The integer (A+y_0X+c_0) lies in
+([0,2^{L+1}-1]), and ((s_0,\ldots,s_{L-1},c_L)) is its unique
+((L+1))-bit representation.  Equation (48.1) therefore forces the
+recursively generated outputs and final carry.  Every allowed external word
+has exactly one internal (y)- and carry assignment, including the unique
+empty assignment when (L=1).  Thus every tensor entry is literally (0) or
+(1) over every field.
+
+There is an explicit planar rotation with clockwise port order on cell (i)
+
+\[
+x_i^-,a_i,y_{i+1},c_{i+1},x_i^+,s_i,c_i,y_i.
+\tag{48.2}
+\]
+
+Place the cells left to right, joining (y) in a lane above the parallel
+carry lane.  The two ports are consecutive on both facing disk boundaries,
+their endpoint orders agree, and the lens between the two wires contains no
+external port.  The outer face encounters the top ports (x_i^-,a_i), the
+right endpoint (y_L,c_L), the bottom ports (x_i^+,s_i), and the left
+endpoint (y_0,c_0) cyclically.  Hence
+
+\[
+I_L=\{x_i^-\}_i\cup\{a_i\}_i\cup\{y_0,c_0\}
+\]
+
+is one cyclic boundary arc, using the wrap between the left and top groups,
+and
+
+\[
+O_L=\{x_i^+\}_i\cup\{s_i\}_i\cup\{y_L,c_L\}
+\]
+
+is its complementary arc.  This also holds for (L=1), when there is no
+internal lens.
+
+Flatten (48.1) across (I_L\mid O_L).  Propagation makes it a direct sum of
+(2^{L+1}) blocks indexed by
+((x_0,\ldots,x_{L-1},y)).  Fix one block and put (Q=yX).  Its rows are
+indexed by ((A,c_0)), its columns by the bijective integer label
+
+\[
+W=S+2^Lc_L\in\{0,\ldots,2^{L+1}-1\},
+\]
+
+and each row is the standard basis row supported at
+
+\[
+W=Q+A+c_0.
+\]
+
+As (A\in[0,2^L-1]) and (c_0\in\{0,1\}) vary, the used columns are
+exactly
+
+\[
+Q,Q+1,\ldots,Q+2^L.
+\]
+
+They are all legal because (0\le Q\le2^L-1).  Distinct standard basis rows
+are independent over every field, so each block has rank (2^L+1), and
+
+\[
+\boxed{
+\operatorname{rank}\operatorname{Flat}_{I_L\mid O_L}(\mathcal S_L)
+=2^{L+1}(2^L+1).}
+\tag{48.3}
+\]
+
+For (L=1), this is (12), recovering P46.  For every (L\ge1), the
+factor (2^L+1) is odd and greater than one, so (48.3) is not a power of
+two.
+
+P46 proves the needed all-chart theorem: over a characteristic-zero field,
+every nonzero matchgate or parity-homogeneous pure-spinor signature has rank
+(2^r) across complementary contiguous cyclic arcs.  Briefly, particle-hole
+Clifford toggles move an arbitrary nonzero coefficient to the vacuum chart
+without changing flattening rank.  There the spinor is
+(\lambda\exp(\omega_I+\omega_O+\omega_{IO})).  Wedge multiplication by
+(\exp(\omega_I)) and (\exp(\omega_O)) gives invertible row and column
+maps, while a rank-(r) cross-form reduces to (r) paired terms whose subset
+expansion has rank (2^r).  Cyclic recutting contributes only invertible
+parity signs.  The all-zero assignment makes (\mathcal S_L\ne0), so
+(48.3) contradicts this necessary matchgate rank form.
+
+Finally, arbitrary independent (\mathrm{GL}_2) transformations on exposed
+input and output legs left- and right-multiply the flattening by invertible
+Kronecker products.  Its rank is unchanged.  Contraction-compatible dual
+gauges on an internal shared edge cancel, leaving only the already covered
+external gauges.  Therefore no such gauges put any finite horizontal strip
+in the characteristic-zero matchgate orbit in the inherited port order.
+
+P48 closes only horizontal fusion of the displayed scalar-Boolean cells,
+with shared (y) and carry legs contracted and all (x), accumulator, and
+sum legs exposed.  It does not close genuinely two-dimensional blocks,
+alternate rotations or encodings, auxiliary or packed states, noninvertible
+projections, asymmetric cells, global Pfaffian identities, independently
+justified modular methods, or non-matchgate contraction algorithms.  It is
+not a contraction lower bound and supplies no factoring algorithm.
+
+The candidate, historical amendment audit, clean fresh re-audit, and
+context-free reconstruction are preserved under
+experiments/F38_horizontal_matchgate_strip_kill,
+experiments/F38_horizontal_matchgate_strip_audit,
+experiments/F38_horizontal_matchgate_strip_reaudit, and
+experiments/F38_horizontal_matchgate_strip_reconstruct.
