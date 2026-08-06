@@ -1136,3 +1136,56 @@ prime-power and recursion bookkeeping, but the hypothesis itself already
 requires inverse-polynomial-probability recovery of a numerical odd-exponent
 prime factor. It is the missing algorithm, not a consequence of the
 low-degree theorem.
+
+### C52 — Lucas-torus relations carry the exact signed factor gap, but opaque pooling remains generic
+
+**Status:** promoted as P55 after a clean hostile audit and a fresh
+context-free proof-blind reconstruction.
+
+**Closest prior routes and material difference.** P20--P21 asks for a
+succinct evaluator of an exponentially long torus order-threshold product,
+and P12 studies dense moments of one modular-multiplication spectrum. C52
+instead evaluates only ordinary powers and exposes polynomially many
+ubiquitous nonzero equations with one common hidden exponent magnitude.
+
+**Verified positive mechanism.** For \(N=pq\) with distinct odd primes, the
+Cayley chart of \(A_D=(\mathbb Z/N\mathbb Z)[w]/(w^2-D)\) is exact away from
+\(-1\), and its local torus has order \(r-(D/r)\). A unit \(D\) chosen first
+conditional on Jacobi symbol \(-1\) has a fair split/nonsplit orientation.
+Keeping that \(D\) while resampling a pole-free \(t\) preserves fairness;
+every pole itself returns the unique split prime. Pointwise for every
+norm-one element,
+
+\[
+U^{N-1}=U^{q-p}\quad(+,-),\qquad
+U^{N-1}=U^{p-q}\quad(-,+).
+\]
+
+The triples are generated in expected polynomial bit and fair-random-bit
+cost. A uniform inverse-polynomial-success decoder for the integer magnitude
+\(q-p\) would factor the distinct-odd-semiprime promise through the exact
+test \((q-p)^2+4N=(p+q)^2\). Early denominator or discriminant gcds can only
+help, by an exact same-tape coupling to the ideal clean sampler.
+
+**Verified generic boundary.** In \(K\) independently random-encoded tagged
+cyclic groups of common prime order \(\ell\), with the signs granted and at
+most \(Q\) generic actions, affine symbolic exponents give
+
+\[
+\Pr(\widehat e=e)\le
+\min\left\{1,{1\over\ell}+
+{\binom{Q+3}{2}+3(K-1)\over\ell}\right\}.
+\]
+
+The subset, list, and nonuniform-prior variants have the corresponding
+collision-count numerators. This closes relation-count amortization only in
+the opaque common-prime-order abstraction.
+
+**Remaining gap.** Actual Lucas elements share explicit composite-ring
+coordinates, have unequal composite orders and non-generators, admit
+cross-discriminant algebra and zero-divisor gcds, and carry a deterministic
+worst-case gap. A coordinate-specific polynomial-time decoder remains open,
+as do interval methods and nonuniform sampling. Even after such a decoder,
+prime powers, multifactor and even inputs, arbitrary composites, recursion,
+and complete factorization require a separate extension. P55 is therefore
+not the all-input theorem.

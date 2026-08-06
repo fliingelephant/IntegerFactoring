@@ -1939,3 +1939,58 @@ symbolic transform; or supply a genuine Hadamard--Paley/product-code
 list-recovery algorithm returning a verifiable integer factor. Repackaging
 polynomially many fresh rows into bounded low-degree one-bit decisions is
 covered by P54.
+
+## X49 — opaque common-prime-order Lucas relations do not amortize past the generic collision scale
+
+**Status:** promoted as the narrow generic-method boundary in P55 after a
+clean hostile audit and a fresh context-free proof-blind reconstruction.
+
+**Family:** F27.
+
+**Classification:** method failure for the assertion that polynomially many
+independently random-encoded, tagged, common-prime-order base/image relations
+force polynomial-time recovery of a shared exponent merely by their number.
+This is not a failure of the explicit Lucas-torus route.
+
+**What was tried.** Replace each explicit Lucas torus by an independently
+encoded cyclic group of common prime order \(\ell\), reveal handles for
+\(0,1,\sigma_i e\) with the signs granted, and let an adaptive algorithm pool
+all \(K\) transcripts using \(Q\) generic operations and equality tests.
+
+**Exact obstruction.** Every generated handle has an affine formal exponent
+\(a+bX\). Distinct affine expressions in one tagged group collide at at most
+one secret value. If \(q_i\) handles are generated in group \(i\), the full
+adaptive collision set has size at most
+
+\[
+C\le\sum_i\binom{q_i+3}{2}
+\le\binom{Q+3}{2}+3(K-1).
+\]
+
+Outside this set, lazy random encodings couple the real transcript to one
+independent of a uniform \(e\), so
+
+\[
+\Pr(\widehat e=e)
+\le\min\left\{1,{1+C\over\ell}\right\}.
+\]
+
+The exact subset, list, and maximum-prior-mass variants are recorded in P55.
+Thus constant recovery still needs the generic birthday scale.
+
+**Evidence and surviving positive mechanism.** P55 also proves, independently
+of this model, that the actual D-first Lucas sampler has exact fair hidden
+orientations, denominator poles return factors, and every clean relation
+satisfies \(V=U^{\pm(q-p)}\) pointwise. A decoder for the explicit
+coordinates would factor distinct odd semiprimes after exact integer
+verification. The hostile audit and blind reconstruction both passed, and
+the early-gcd branch was validated by a coupling rather than a false
+conditional-fairness claim.
+
+**What would make a retry materially new.** Exploit public coordinate pairs
+over \(\mathbb Z/N\mathbb Z\), cross-discriminant resultants or determinants,
+unequal composite local orders, non-generator structure, zero divisors, a
+proved short-interval algorithm, or a deliberately nonuniform factor-free
+sample law. Any successful promise decoder must then be extended to prime
+powers, multifactor composites, even inputs, and complete recursion. Another
+opaque tagged prime-order pooling argument is covered by P55.

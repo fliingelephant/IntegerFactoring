@@ -5794,3 +5794,226 @@ respectively,
 `ecbfc505de24f391eedb62cbaaf293b518915ac91abb8abc27b2c7a49cd7bceb`,
 `7a5e77055e4cb8244a4b155d2570542fbb05b9e99e16edc36f990f24140b577c`,
 and `aa36ea413d6c2eadaba2778b52754d5f4457102f36aa84b2dfec4ab0ce7b4b82`.
+
+## P55 — Lucas tori expose an exact signed factor gap, while opaque shared-exponent pooling stays generic-hard
+
+**Status:** promoted narrow promise theorem, conditional reduction, and
+generic-method boundary. The proof-only candidate passed a clean hostile
+audit and a fresh context-free proof-blind reconstruction. No computation or
+cross-family audit was used.
+
+Let
+
+\[
+N=pq,\qquad 3\le p<q
+\]
+
+for distinct odd primes, put \(R=\mathbb Z/N\mathbb Z\), choose
+\(D\in R^\times\), and define
+
+\[
+A_D=R[w]/(w^2-D),\qquad
+\overline{a+bw}=a-bw,
+\]
+
+\[
+\operatorname{Nm}(a+bw)=a^2-Db^2.
+\]
+
+An element of \(A_D\) is a unit exactly when its norm is a unit. For
+\(t\in R\), put
+
+\[
+z_D(t)=1-Dt^2.
+\]
+
+On the branch \(\gcd(z_D(t),N)=1\), the Cayley element
+
+\[
+U_D(t)=\frac{1+tw}{1-tw}
+=\frac{1+Dt^2}{1-Dt^2}
+ +\frac{2t}{1-Dt^2}w
+\tag{55.1}
+\]
+
+is a norm-one unit.
+
+For an odd prime \(r\nmid D\), the local Cayley map is the exact bijection
+
+\[
+\{t\in\mathbb F_r:1-Dt^2\ne0\}
+\longrightarrow T_D(\mathbb F_r)\setminus\{-1\},
+\tag{55.2}
+\]
+
+whose inverse at \(a+bw\ne-1\) is \(t=b/(a+1)\). Moreover,
+
+\[
+|T_D(\mathbb F_r)|=r-\left(\frac Dr\right).
+\tag{55.3}
+\]
+
+Indeed, a square \(D\) splits the algebra and identifies the torus with
+\(\mathbb F_r^\times\), of order \(r-1\); a nonsquare \(D\) gives
+\(\mathbb F_{r^2}\), where conjugation is Frobenius and the norm kernel has
+order \(r+1\). The split chart has exactly two poles and the nonsplit chart
+has none. No generator hypothesis occurs.
+
+Now choose \(D\) uniformly among units with Jacobi symbol \(-1\). Its two
+local orientations
+
+\[
+(+,-),\qquad(-,+)
+\]
+
+are exactly equiprobable. Conditional on \((+,-)\), a uniform \(t\bmod N\)
+has
+
+\[
+\Pr(\gcd(z_D(t),N)=p)=\frac2p,
+\qquad
+\Pr(\gcd(z_D(t),N)=1)=1-\frac2p,
+\tag{55.4}
+\]
+
+and no other gcd value; in orientation \((-,+)\), replace \(p\) by \(q\).
+Thus every pole returns the unique split local prime. If \(D\) is kept and
+only \(t\) is resampled, a clean parameter appears after at most three draws
+in expectation, the orientation remains fair, and the two local Cayley
+points are independent and uniform on their tori with \(-1\) removed.
+Rejecting the whole pair \((D,t)\) would instead bias the accepted
+orientation, so these two samplers must not be conflated.
+
+Put \(g=q-p\). Reducing \(N-1\) modulo the exact local torus orders gives,
+pointwise for every norm-one unit,
+
+\[
+\boxed{U^{N-1}=U^g\quad\text{in orientation }(+,-),}
+\tag{55.5}
+\]
+
+\[
+\boxed{U^{N-1}=U^{-g}\quad\text{in orientation }(-,+).}
+\tag{55.6}
+\]
+
+For example, in orientation \((+,-)\), the local orders are \(p-1,q+1\)
+and
+
+\[
+pq-1\equiv q-p\pmod{p-1},\qquad
+pq-1\equiv q-p\pmod{q+1}.
+\]
+
+The other orientation is identical with exponent \(-g\). These identities
+include lower-order elements and non-generators.
+
+All relation generation is factor-free and polynomial-bit: exact uniform
+residue sampling, gcd and Jacobi screening, one modular inverse, quadratic-
+algebra arithmetic, and binary powering to \(N-1\) use polynomially many
+operations on \(O(\log N)\)-bit values. A polynomial number of clean triples
+
+\[
+(D_i,U_i,V_i),\qquad V_i=U_i^{N-1},
+\tag{55.7}
+\]
+
+therefore has polynomial expected bit and fair-random-bit cost.
+
+There is an exact conditional reduction. Suppose one uniform decoder, on
+every distinct odd semiprime, receives \(K(n)=\operatorname{poly}(n)\)
+independent triples from the choose-\(D\)-first clean law and returns the
+integer \(g=q-p\) with inverse-polynomial probability in polynomial bit
+time. Verify a candidate \(h\) by checking
+
+\[
+h^2+4N=s^2,\qquad s\equiv h\pmod2,
+\]
+
+and then
+
+\[
+p'=(s-h)/2,qquad q'=(s+h)/2,qquad p'q'=N.
+\tag{55.8}
+\]
+
+The true gap passes because \((q-p)^2+4pq=(p+q)^2\), and every accepted
+output is an exact factor pair. Fresh verified retries are Las Vegas with
+polynomial expectation. Early discriminant or denominator gcds cannot
+invalidate the decoder guarantee: couple the real procedure to an ideal
+sampler that ignores each proper gcd and continues on the same random tape.
+On every tape where the ideal decoder succeeds, the real procedure either
+has already factored or reaches the identical clean transcript and succeeds.
+No false conditional-fairness assertion is needed.
+
+This reduction is strictly promise-only. It supplies neither the decoder nor
+an extension to prime squares, prime powers, products of three or more
+distinct primes, even inputs, arbitrary composites, recursion, or complete
+factorization.
+
+There is also a precise generic boundary. Let \(G_1,\ldots,G_K\) be
+independently random-encoded tagged cyclic groups of one prime order
+\(\ell\). In group \(i\), give handles for exponents
+
+\[
+0,\qquad1,\qquad\sigma_i e,
+\]
+
+where every public \(\sigma_i\in\{\pm1\}\) and
+\(e\) is uniform in \(\mathbb F_\ell\). Allow arbitrary adaptive generic
+group operations, equality tests, and unlimited computation between at most
+\(Q\) total oracle actions. Every group-operation input must be a previously
+received handle; fabricated unseen labels are not valid handles. No cross-tag
+group operation or inspection of the encodings is allowed. Then
+
+\[
+\boxed{
+\Pr(\widehat e=e)\le
+\min\left\{1,
+\frac1\ell+
+\frac{\binom{Q+3}{2}+3(K-1)}{\ell}
+\right\}.}
+\tag{55.9}
+\]
+
+To prove this, a symbolic generic execution assigns every handle in group
+\(i\) an affine exponent \(a+bX\). If \(q_i\) new handles are produced in
+that group, all surprise collisions lie in a set of at most
+
+\[
+C=\sum_i\binom{q_i+3}{2}
+\le\binom{Q+3}{2}+3(K-1)
+\tag{55.10}
+\]
+
+secret values. Outside this set, the adaptive real transcript couples to an
+ideal lazy random encoding whose output is independent of \(e\), giving the
+baseline \(1/\ell\); the collision event adds at most \(C/\ell\). The
+minimum with one handles finite-label edge cases. If \(e\) is uniform on a
+public \(H\)-element set, the bound is \((1+C)/H\); an output list of size
+\(L\) gives \((L+C)/\ell\); and a prior of maximum mass \(\mu_*\) gives
+\((C+1)\mu_*\), each truncated at one.
+
+The generic theorem deliberately does not model (55.7). Actual Lucas
+elements have explicit correlated coefficient pairs over one composite
+ring; different discriminants admit cross-coordinate algebra; local orders
+are unequal and composite; samples need not be generators; \(q-p\) is fixed
+by a worst-case input rather than sampled from the generic prior; and zero
+divisors or gcds have no generic-group analogue. Interval methods,
+resultants, determinants, deliberately nonuniform sampling, and every other
+coordinate-specific decoder remain open.
+
+P55 therefore closes only the assertion that polynomially many opaque,
+independently encoded common-prime-order relations force shared-exponent
+recovery by their number alone. It promotes the exact Lucas relation and its
+promise-only conditional reduction, but it is not an unconditional factoring
+algorithm and does not satisfy the top-level statement.
+
+The candidate, hostile audit, and context-free reconstruction are preserved
+under `experiments/F46_lucas_torus_gap_kill`,
+`experiments/F46_lucas_torus_gap_audit`, and
+`experiments/F46_lucas_torus_gap_reconstruct`. Their SHA-256 hashes are,
+respectively,
+`2afc8df267dc270cee4a1780c232fe46a18addbba22c13fef462c92d6ad1cf9b`,
+`942823b27dbf31d8eb80a067de50ff25ffd5e3903b479bd369943f1750d1c8cb`,
+and `e6fcee2e4ce5bed2da4b956aba361b88fee8654b367ebb6ecbb6a2b5c07f29ef`.
