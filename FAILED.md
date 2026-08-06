@@ -1650,3 +1650,43 @@ tile; a global Pfaffian identity not decomposing into these strip signatures;
 a separately proved finite-characteristic reconstruction; or a non-matchgate
 polynomial contraction.  Another horizontal scalar-cell strip in the
 inherited order is covered by P48.
+
+## X43 — ordinary Fourier means and rectangular histograms of inverse-pair clouds
+
+**Status:** promoted as P49 after a scope-amended hostile audit and a fresh
+context-free proof-blind reconstruction.
+
+**Family:** F24.
+
+**Classification:** method failure for using polynomially many ordinary
+empirical additive-Fourier means, polynomial-\(\ell^1\) linear combinations
+of them, or a polynomial-size fixed axis-parallel rectangular histogram of
+the easy inverse graph
+\((u,u^{-1}\bmod N)\) as a factor-scale metric signal. This is not evidence
+against nonlinear or Fourier-dense statistics, hidden-frequency recovery,
+other arithmetic sources, or metric hints in general.
+
+**Exact obstruction.** CRT factors every coefficient into two prime
+Kloosterman sums. A nonzero common-gcd-free mode satisfies
+
+\[
+ |\widehat\mu_N(a,b)|\le\frac{4\sqrt N}{\varphi(N)}
+ =N^{-1/2+o(1)}
+\]
+
+on balanced semiprimes. One-local-zero modes can genuinely reach
+\(N^{-1/4+o(1)}\), but both frequency coordinates then share the hidden
+prime and their public common gcd already factors \(N\). Erdős--Turán--
+Koksma with the prime-divisible frequency sublattices included gives
+\(D_N^*=O(N^{-1/2}\log^2N)\). The exact raw-mean MSE is
+\((1-|\mu|^2)/m\), so relative RMSE needs \(N^{1-o(1)}\) samples; the
+fourth-moment argument gives only the explicitly quantified
+sufficiently-high-absolute-confidence analogue.
+
+**What would make a retry materially new.** A factor-free nonlinear or
+Fourier-dense observable with a proved inverse-polynomial signal; an implicit
+decoder for the hidden prime-spaced spectral modes; an adaptive, correlated,
+nonuniform, or dissipative source; a curved/diagonal metric statistic with a
+new discrepancy theorem; exact symbolic amplification of the tiny bias; or
+a quantitatively valid ACD/HNP/Coppersmith reduction. Merely adding
+polynomially many raw means or rectangular bins is covered by P49.

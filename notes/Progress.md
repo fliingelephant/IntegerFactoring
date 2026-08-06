@@ -4,7 +4,7 @@ This is working state for nontrivial intermediate statements and the current syn
 
 ## Current synthesis
 
-The source material has been read in full. Twenty-three approach families have been opened, primarily from materially different mechanisms in `notes/Inspirations.md` with additional factor-trace, noncommutative, hidden-modulus metric, non-gcd tensor-contraction, joint-amortization, and positive-sampling routes; promoted narrow results and exact open gaps are tracked below and in the registry. The current frontier is a factor-free sampler for the quadratic-energy/zero-product law, a genuinely joint decoder using typical nonzero relation data, a fine manufactured metric hint, a useful class-group/isogeny orientation, or an exactly contractible positive factor-witness network beyond the proved local wiring boundaries. `notes/Zhihu.md` supplies background and motivation only.
+The source material has been read in full. Twenty-four approach families have been opened, primarily from materially different mechanisms in `notes/Inspirations.md` with additional factor-trace, noncommutative, hidden-modulus metric, non-gcd tensor-contraction, joint-amortization, and positive-sampling routes; promoted narrow results and exact open gaps are tracked below and in the registry. The current frontier is a factor-free sampler for the quadratic-energy/zero-product law, a genuinely joint decoder using typical nonzero relation data, a fine manufactured metric hint, a useful class-group/isogeny orientation, or an exactly contractible positive factor-witness network beyond the proved local wiring boundaries. `notes/Zhihu.md` supplies background and motivation only.
 
 ## Working claims
 
@@ -921,3 +921,32 @@ order. Genuinely two-dimensional blocks, alternate rotations or encodings,
 auxiliary/projection schemes, global Pfaffian identities, modular recovery,
 and non-matchgate contraction remain open. P48 supplies no factoring
 algorithm.
+
+### C46 — the easy inverse graph has no polynomial-sample sparse Fourier signal
+
+**Status:** promoted as P49 after a scope-amended hostile audit and a fresh
+context-free proof-blind reconstruction.
+
+**Closest prior route and material difference.** C37--C42 study a desired
+quadratic-energy law whose sampler is missing. C46 instead starts from an
+expected-constant-time source available from bare \(N\): uniform units and
+their exact modular inverses. It tests lossy Fourier and rectangular metric
+statistics rather than a local-zero target law.
+
+**Verified boundary.** Exact CRT twists factor every inverse-graph Fourier
+coefficient into prime Kloosterman sums. Every nonzero mode with
+\(\gcd(a,b,N)=1\) has magnitude at most
+\(4\sqrt N/\varphi(N)\). The larger \(N^{-1/4+o(1)}\) modes are real but
+require both coordinates to share a hidden prime, so the proposed frequency
+already carries a public factor. After explicitly summing those hidden
+frequency sublattices, two-dimensional Erdős--Turán--Koksma gives
+\(D_N^*=O(N^{-1/2}\log^2N)\). Ordinary empirical Fourier means and regular
+raw bin counts therefore need \(N^{1-o(1)}\) samples for relative accuracy,
+with the high-confidence statement restricted to the constants actually
+delivered by Paley--Zygmund.
+
+**Remaining gap.** P49 is neither a factoring lower bound nor a general
+source-side no-bias theorem. Nonlinear or Fourier-dense processing, implicit
+hidden-frequency search, correlated/nonuniform sources, canonical metric
+branching, curved bins, exact amplification, noisy ACD/HNP/Coppersmith
+decoding, and dissipative dynamics remain open.

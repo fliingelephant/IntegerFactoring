@@ -4650,3 +4650,170 @@ experiments/F38_horizontal_matchgate_strip_kill,
 experiments/F38_horizontal_matchgate_strip_audit,
 experiments/F38_horizontal_matchgate_strip_reaudit, and
 experiments/F38_horizontal_matchgate_strip_reconstruct.
+
+## P49 — modular-inverse clouds are Fourier-flat at every common-gcd-free mode
+
+**Status:** verifier-backed narrow obstruction. The proof-only candidate
+passed a hostile audit after mandatory scope amendments and a fresh
+context-free reconstruction. No computation or cross-family audit was used.
+
+Let \(N=pq\) with distinct odd primes and let
+
+\[
+ \widehat\mu_N(a,b)=\frac1{\varphi(N)}
+ \sum_{u\in(\mathbb Z/N\mathbb Z)^\times}
+ e_N(au+bu^{-1}).
+\]
+
+Choose \(\bar q_p,\bar p_q\) with
+
+\[
+ \bar q_pq\equiv1\pmod p,\qquad
+ \bar p_qp\equiv1\pmod q.
+\]
+
+Coordinatewise inversion of units under CRT gives the exact factorization
+
+\[
+ \boxed{
+ \widehat\mu_N(a,b)=
+ \widehat\mu_p(\bar q_pa,\bar q_pb)
+ \widehat\mu_q(\bar p_qa,\bar p_qb).}
+ \tag{49.1}
+\]
+
+For a prime \(r\), the unnormalized local sum has the complete trichotomy
+
+\[
+ S_r(A,B)=
+ \begin{cases}
+ r-1,&A=B=0 \quad(Z),\\
+ -1,&\text{exactly one of }A,B\text{ is zero}\quad(D),\\
+ K_r(A,B),&AB\ne0\quad(K),
+ \end{cases}
+ \qquad |K_r(A,B)|\le2\sqrt r.
+ \tag{49.2}
+\]
+
+Thus, for every nonzero frequency with
+\(d=\gcd(a,b,N)=1\), neither component is of type \(Z\), and
+
+\[
+ \boxed{
+ |\widehat\mu_N(a,b)|
+ \le \delta_N:=\frac{4\sqrt N}{\varphi(N)}.}
+ \tag{49.3}
+\]
+
+The zero character has coefficient \(1\) under both the cloud and the
+uniform-grid baseline. The restriction in (49.3) is sharp in scope. Prime
+orthogonality gives
+
+\[
+ \sum_{c\in\mathbb F_r}|K_r(1,c)|^2=r(r-1),
+\]
+
+so some \(c\ne0\) satisfies
+\(|K_r(1,c)|^2\ge r-1/(r-1)\). A frequency \((p,pc)\) therefore has
+\(p\)-type \(Z\), \(q\)-type \(K\), and normalized size
+\(q^{-1/2+o(1)}=N^{-1/4+o(1)}\) on balanced semiprimes. But its displayed
+common gcd is already \(p\). Separate screens
+\(\gcd(a,N)\) and \(\gcd(b,N)\) can expose still more cross-degenerate modes;
+accordingly, “publicly factor-free” means that none of these screens is a
+nontrivial proper divisor, whereas (49.3) needs only the weaker common-gcd
+condition.
+
+After combining duplicate modes and removing the zero character, every
+finite trigonometric observable
+
+\[
+ F(x,y)=\sum_j c_j e_N(a_jx+b_jy),
+ \qquad A=\sum_j|c_j|,
+\]
+
+whose common-gcd screens all pass obeys
+
+\[
+ \boxed{
+ |\mathbb E_{\mu_N}F-\mathbb E_{\lambda_N}F|
+ \le A\delta_N.}
+ \tag{49.4}
+\]
+
+This is an \(\ell^1\)-linear expectation theorem, not a theorem about
+nonlinear processing of the vector of character values.
+
+The larger hidden divisible modes also do not spoil coarse rectangular
+equidistribution. Put
+
+\[
+ \alpha_r=\frac{2\sqrt r}{r-1},\qquad
+ L(H)=2\sum_{k\le H}\frac1k,\qquad
+ M_r(H)=\frac2r\sum_{k\le H/r}\frac1k.
+\]
+
+The two-dimensional Erdős--Turán--Koksma inequality and (49.2) give, for
+\(1\le H<N\),
+
+\[
+\begin{aligned}
+D_N^*\le C\Big[&\frac1{H+1}
++\alpha_p\alpha_q((1+L(H))^2-1)\\
+&+\alpha_p((1+M_q(H))^2-1)
++\alpha_q((1+M_p(H))^2-1)\Big].
+\end{aligned}
+\tag{49.5}
+\]
+
+Indeed, the indicator that both coordinates are divisible by \(r\) has
+reciprocal Fourier weight \((1+M_r(H))^2-1\); the simultaneous \(p\)- and
+\(q\)-indicator occurs only at the excluded zero frequency. Taking
+\(H=N-1\) yields, on every fixed balanced semiprime family,
+
+\[
+ \boxed{D_N^*=O(N^{-1/2}\log^2N).}
+ \tag{49.6}
+\]
+
+Hence every half-open axis-parallel rectangle has mass error at most
+\(4D_N^*\). A list of \(B\) such rectangles has summed absolute error at
+most \(4BD_N^*\); only when the rectangles form a disjoint exhaustive
+partition are the two bin vectors probability laws and
+\(d_{\rm TV}\le2BD_N^*\).
+
+Finally, for one fixed screened character
+\(X=e_N(au+bu^{-1})\), mean \(\theta\ne0\), and \(m\) iid samples,
+
+\[
+ \boxed{
+ \mathbb E|\overline X_m-\theta|^2
+ =\frac{1-|\theta|^2}{m}.}
+ \tag{49.7}
+\]
+
+Relative RMSE at most \(\eta\) therefore needs
+\(m\ge(1-|\theta|^2)/(\eta^2|\theta|^2)=N^{1-o(1)}\) under (49.3).
+A complex fourth-moment expansion and Paley--Zygmund give absolute constants
+\(c_0,c_1>0\) such that
+
+\[
+ \Pr(|\overline X_m-\theta|\ge c_1m^{-1/2})\ge c_0.
+\]
+
+Consequently, success confidence greater than \(1-c_0\), not an arbitrary
+unnamed fixed confidence, requires
+\(m\ge c_1^2/(\eta^2|\theta|^2)\). One regular fixed rectangular-bin
+frequency has the analogous Bernoulli MSE and sufficiently-high-absolute-
+confidence conclusion, provided its area and complementary area are bounded
+below as stated in the reconstructed theorem.
+
+P49 is distributional and statistic-specific. It is not a factoring lower
+bound, a computational-indistinguishability claim, or a proof that bare
+\(N\) cannot manufacture a metric hint. It leaves open Fourier-dense or
+nonlinear statistics, implicit hidden-frequency recovery, adaptive or
+correlated sources, curved/diagonal bins, exact evaluation of tiny biases,
+noisy ACD/HNP/Coppersmith decoding, and noninvertible or dissipative
+dynamics. The candidate, hostile audit, and context-free reconstruction are
+preserved under experiments/F39_inverse_metric_cloud_kill,
+experiments/F39_inverse_metric_cloud_audit, and
+experiments/F39_inverse_metric_cloud_reconstruct.
