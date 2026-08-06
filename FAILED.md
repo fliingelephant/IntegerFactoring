@@ -1239,3 +1239,107 @@ polynomial-time nonshortest/LLL statistic; growing informative local rank; or
 a nonlinear full-lattice decoder.  Merely increasing the number of
 independent uniform fixed-rank relations and asking exact SVP for a
 coordinate-gcd vector is covered by P39.
+
+## X34 — low-actual-degree products of full-affine CRT relations
+
+**Status:** promoted as P40 after a corrected audit sequence, a clean final
+hostile audit, and a fresh context-free proof-blind reconstruction.
+
+**Family:** F22.
+
+**Classification:** evidence against the exact auxiliary claim that feeding
+all coordinates of polynomially many full-affine CRT samples into a product
+of low-actual-degree polynomial tests creates genuine joint amortization.
+This is not evidence against high-degree succinct evaluation, nonuniform or
+correlated sources, metric tests, or a decoder using typical nonzero values.
+
+**Exact obstruction.**  For \(N=pq\), local actual degree sums
+\(\Delta_p,\Delta_q\), and nonzero formal reductions, the local product-zero
+rates satisfy
+
+\[
+\alpha_r\le\min(1,\Delta_r/r),
+\]
+
+while the proper product-gcd probability is exactly
+
+\[
+\alpha_p+\alpha_q-2\alpha_p\alpha_q.
+\]
+
+The sharp envelope from the two local caps is
+\(\max\{u_p,u_q,u_p+u_q-2u_pu_q\}\), and the simpler all-degree bound is
+
+\[
+\min\left\{1,\frac{\Delta_p}{p}+\frac{\Delta_q}{q}\right\}.
+\]
+
+Products over a field only OR their factors' zero sets; CRT then XORs the two
+local OR events.  No independence among relations is used, but no information
+from ubiquitous nonzero outputs is combined either.  On balanced semiprimes,
+polynomial total actual degree gives exponentially small success and
+inverse-polynomial success requires
+\(\Omega(\sqrt N/\operatorname{poly}(\log N))\) actual degree.
+
+Random coefficients require conditioning before CRT independence is used;
+fresh-batch adaptation is valid but same-sample selection is not.  Formal
+zero products obey the exact four-case table in P40, while explicit one-sided
+coefficient content already factors.  Formal nonzero zero-functions and
+polynomial-size sparse/circuit descriptions of exponential degree remain
+outside the useful low-degree conclusion.
+
+**What would make a retry materially new.** A succinct characteristic-scale
+product with a proved inverse-polynomial local XOR law and factor-free
+evaluator; a source with a proved nonuniform/conditioned metric law; or a
+decoder that combines rank, kernel, resultant, spectral, or other information
+from typical nonzero outputs.  Replacing polynomially many scalar zero tests
+by their low-degree product, determinant, or another polynomial contraction
+is covered by P40.
+
+## X35 — obvious classical samplers for quadratic Fourier energy
+
+**Status:** promoted as P41 after a clean initial audit, strengthening by
+strict reconstruction, a fresh hostile re-audit, and a context-free final
+reconstruction.
+
+**Family:** F23.
+
+**Classification:** method failure for uniform rejection, direct uniform-gcd
+discovery, and the lazy uniform-proposal independence-Metropolis chain.  This
+is not a failure of the quadratic-energy distribution itself or of all
+classical samplers.
+
+**Positive conditional boundary.**  For odd \(N\),
+
+\[
+\left|\sum_{x\bmod N}e^{2\pi i kx^2/N}\right|^2
+=N\gcd(k,N).
+\]
+
+The normalized law \(\pi_N(k)=\gcd(k,N)/S(N)\) has factor-revealing mass at
+least \(2/7\) on every odd composite, sharply at \(N=9\).  Therefore an
+all-input explicit sampler within TV \(1/28\), with almost-sure termination
+and expected polynomial bit/fair-bit cost, gives complete classical Las Vegas
+factoring.  The sampler is the missing lemma.
+
+**Exact obstruction.**  On balanced distinct semiprimes, uniform rejection
+has \(\Theta(N)\) expected proposals and direct uniform proper-gcd discovery
+has \(\Theta(\sqrt N)\) expected trials.  For lazy independence Metropolis,
+
+\[
+\mathbf1_{\{0\}}-N/S(N)
+\]
+
+is an exact eigenfunction with eigenvalue
+\(1-S(N)/(2N^2)\).  Hence the gap is at most \(S(N)/(2N^2)\) and worst-start
+mixing is \(\Omega(N)\) on distinct semiprimes.  Initializers that neutralize
+the zero atom but place \(o(1)\) mass on factor classes still face an
+\(\Omega(\sqrt N)\) uniform-proposal hitting bound.  Exact \(S(pq)\) reveals
+\(p+q\), so normalization is not a free oracle.
+
+**What would make a retry materially new.** A nonuniform, nonlocal,
+nonreversible, auxiliary-variable, positive-combinatorial, or otherwise
+factor-free sampler with a proved all-input stationary/output law and
+polynomial bit/fair-bit cost.  F33 tests the uniform zero-product lift; F34
+tests explicit automorphism moves on it.  Reusing uniform proposals in
+rejection or independence Metropolis is covered by P41.

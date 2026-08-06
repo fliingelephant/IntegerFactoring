@@ -3366,3 +3366,305 @@ experiments/F29_full_lattice_random_code_kill,
 experiments/F29_full_lattice_random_code_audit,
 experiments/F29_full_lattice_random_code_reaudit, and
 experiments/F29_full_lattice_random_code_reconstruct.
+
+## P40 — low-actual-degree products only OR rare affine CRT zeros
+
+**Status:** promoted.
+
+**Verification record:** the fixed-polynomial theorem, actual reduced-degree
+caps, exact CRT XOR, sharp rectangular envelope, random-coefficient
+conditioning, fresh-batch adaptation, four formal-zero cases, coefficient
+content, zero-function ideal, representation boundaries, and balanced
+threshold passed an initial hostile audit with six required repairs, two
+intermediate re-audits, a strict reconstruction that found a substantive
+interpretive correction, a clean hostile audit of the amended theorem, and a
+fresh context-free proof-blind reconstruction of that final statement.  No
+cross-family audit has run.
+
+Let \(N=pq\) for distinct primes and let
+
+\[
+X\sim\operatorname{Unif}((\mathbb Z/N\mathbb Z)^k).
+\]
+
+For \(F_1,\ldots,F_s\in\mathbb Z[X_1,\ldots,X_k]\), suppose every
+formal reduction \(f_{j,r}=F_j\bmod r\) is nonzero for
+\(r\in\{p,q\}\).  Put
+
+\[
+\delta_{j,r}=\deg f_{j,r},\qquad
+\Delta_r=\sum_j\delta_{j,r},\qquad
+u_r=\min\left(1,\frac{\Delta_r}{r}\right),
+\]
+
+and
+
+\[
+\alpha_r=
+\Pr\left[\prod_jf_{j,r}(X_r)=0\right].
+\]
+
+CRT makes \(X_p,X_q\) independent and uniform.  Since a polynomial ring
+over a field is an integral domain, the reduced product is nonzero of degree
+\(\Delta_r\), and Schwartz--Zippel gives \(0\le\alpha_r\le u_r\).
+The proper-gcd probability is exactly
+
+\[
+\Pr\left(1<\gcd\left(N,\prod_jF_j(X)\right)<N\right)
+=\alpha_p+\alpha_q-2\alpha_p\alpha_q.
+\]
+
+If
+
+\[
+\Psi(u,v)=\max\{u,v,u+v-2uv\},
+\]
+
+then the sharp envelope implied by the separate local caps is
+
+\[
+\Pr(\text{proper gcd})\le\Psi(u_p,u_q).
+\]
+
+In particular, for \(D=\sum_j\deg F_j\),
+
+\[
+\Pr(\text{proper gcd})
+\le
+\min\left\{1,\frac{\Delta_p}{p}+\frac{\Delta_q}{q}\right\}
+\le
+\min\left\{1,D\left(\frac1p+\frac1q\right)\right\}.
+\]
+
+When \(D\le\min(p,q)/2\), monotonicity on the half-square gives the sharper
+
+\[
+\Pr(\text{proper gcd})
+\le\frac Dp+\frac Dq-\frac{2D^2}{pq},
+\]
+
+with the corresponding local-degree version.
+
+Random coefficients must be conditioned on before applying CRT independence:
+
+\[
+\Pr(\text{proper gcd})
+=\mathbb E_\Theta[
+\alpha_p(\Theta)+\alpha_q(\Theta)
+-2\alpha_p(\Theta)\alpha_q(\Theta)].
+\]
+
+Shared coefficient randomness can correlate the two conditional rates, so an
+XOR formula formed from unconditional marginals is false in general.  The
+same conditional argument works for adaptive polynomials only on a genuinely
+fresh full-affine batch.  Selecting \(F_X(T)=T-X\) after observing the point
+shows why same-sample adaptation is outside the theorem.
+
+If \(Z_r\) is the set of factors formally zero modulo \(r\), the exact
+product-gcd alternatives are
+
+| \(Z_p\) | \(Z_q\) | proper-gcd probability |
+|---|---|---|
+| empty | empty | \(\alpha_p+\alpha_q-2\alpha_p\alpha_q\) |
+| nonempty | empty | \(1-\alpha_q\) |
+| empty | nonempty | \(1-\alpha_p\) |
+| nonempty | nonempty | \(0\) |
+
+For an explicit collected coefficient list, formal zero modulo \(r\) is
+equivalent to divisibility of the coefficient content by \(r\); a one-sided
+formal identity therefore exposes a factor.  Individual contents must be
+checked before multiplication: \(F_1=p,F_2=q\) each separates, whereas their
+product has gcd \(N\).  No efficient content extractor is asserted for a
+succinct arithmetic circuit.
+
+Formal nonzero is not functional nonzero.  The vanishing ideal of the full
+affine field space is exactly
+
+\[
+(X_1^r-X_1,\ldots,X_k^r-X_k).
+\]
+
+Thus characteristic-scale degree can make Schwartz--Zippel vacuous.  Sparse
+binary exponents and repeated-squaring circuits can reach exponential actual
+degree with polynomial description and evaluation size.
+
+On fixed-balance semiprimes, polynomial total actual degree gives
+
+\[
+\Pr(\text{proper gcd})
+=O\left(\frac{D}{\sqrt N}\right)
+=2^{-n/2+O(\log n)}
+\]
+
+for \(D=\operatorname{poly}(n)\).  Inverse-polynomial success inside this
+model requires total actual degree
+\(\Omega(\sqrt N/\operatorname{poly}(n))\).  This is not a circuit-size,
+evaluation-time, or factoring lower bound.
+
+Most importantly, P40 is **not** a genuine joint-decoder theorem.  Locally,
+
+\[
+\prod_jf_{j,r}(X_r)=0
+\quad\Longleftrightarrow\quad
+\bigvee_j[f_{j,r}(X_r)=0].
+\]
+
+The product merely ORs rare zero tickets; CRT turns the two local OR events
+into an XOR.  High-actual-degree succinct pooling, nonuniform or correlated
+sources, rational/branching/metric computations, and decoders that combine
+typical nonzero values remain open.
+
+The candidate, audits, correction reconstruction, final clean audit, and
+context-free final reconstruction are preserved under
+`experiments/F31_low_degree_joint_amortization_kill`,
+`experiments/F31_low_degree_joint_amortization_audit`,
+`experiments/F31_low_degree_joint_amortization_reaudit`,
+`experiments/F31_low_degree_joint_amortization_reaudit2`,
+`experiments/F31_low_degree_joint_amortization_reconstruct`,
+`experiments/F31_low_degree_joint_amortization_reaudit3`, and
+`experiments/F31_low_degree_joint_amortization_reconstruct2`.
+
+## P41 — quadratic Fourier energy has constant factor mass; its classical sampler remains missing
+
+**Status:** promoted.
+
+**Verification record:** the Gauss-energy identity, normalizer, sharp useful
+mass, all-input sampler reduction, recursive expected-cost proof, rejection
+and direct-gcd costs, hidden-normalizer audit, and natural Metropolis
+obstruction passed an initial clean hostile audit and strict blind
+reconstruction.  The reconstruction found a stronger exact zero-atom
+eigenmode; the amended \(\Omega(N)\) semiprime mixing theorem passed a fresh
+hostile re-audit and a new context-free proof-blind reconstruction.  No
+cross-family audit has run.
+
+For odd \(N\), define
+
+\[
+G_N(k)=\sum_{x\bmod N}\exp(2\pi i kx^2/N).
+\]
+
+The bijection \((x,y)\mapsto(x-y,x+y)\) gives, including \(k=0\),
+
+\[
+|G_N(k)|^2
+=\sum_{u,v\bmod N}e^{2\pi i kuv/N}
+=N\gcd(k,N).
+\]
+
+Hence the normalized Fourier-energy law is
+
+\[
+\pi_N(k)=\frac{\gcd(k,N)}{S(N)},
+\qquad
+S(N)=\sum_{d\mid N}d\varphi(N/d).
+\]
+
+The normalizer is multiplicative and
+
+\[
+S(p^a)=p^{a-1}((a+1)p-a)
+=p^a+a\varphi(p^a).
+\]
+
+For every odd composite,
+
+\[
+\pi_N\{k:1<\gcd(k,N)<N\}
+=1-\frac{N+\varphi(N)}{S(N)}
+\ge\frac27,
+\]
+
+with equality only at \(N=9\).  For distinct odd primes,
+
+\[
+S(pq)=(2p-1)(2q-1),
+\qquad
+\pi_{pq}(\text{proper gcd})
+=\frac12-\frac1{2(2p-1)(2q-1)}.
+\]
+
+Suppose one uniform classical algorithm, on every odd modulus, returns an
+explicit residue from a law within total variation \(1/28\) of \(\pi_N\),
+terminates almost surely, and has expected bit and independent fair-bit cost
+polynomial in \(\log N\).  On every odd composite a call then returns a
+verified proper gcd with probability at least
+
+\[
+\frac27-\frac1{28}=\frac14.
+\]
+
+Fresh invocations give at most four expected calls per split.  Correlation
+between one call's runtime and its own success is harmless because the event
+that call \(i\) is reached depends only on earlier calls; the stopped cost is
+the corresponding geometric sum of unconditional one-call expectations.
+Deterministic primality testing, removal of powers of two, exact verification,
+and recursive splitting handle primes, prime powers, repeated factors,
+unbalanced inputs, and arbitrary composites.  A factor tree has
+\(O(\log N)\) nodes.  This is a complete conditional all-input classical
+Las Vegas factoring theorem.
+
+The most immediate implementations remain exponential in input length.  On
+balanced distinct semiprimes:
+
+- uniform rejection with acceptance \(\gcd(k,N)/N\) is exact but has
+  expected \(N^2/S(N)=\Theta(N)\) proposals;
+- direct uniform-residue gcd discovery takes
+  \(N/(p+q-2)=\Theta(\sqrt N)\) trials.
+
+For the lazy uniform-proposal independence-Metropolis chain with weight
+\(w(x)=\gcd(x,N)\), let
+
+\[
+f=\mathbf1_{\{0\}}-\frac N{S(N)}.
+\]
+
+Then the exact transition probabilities to and from zero give
+
+\[
+Pf=\left(1-\frac{S(N)}{2N^2}\right)f.
+\]
+
+Therefore
+
+\[
+\operatorname{gap}(P)\le\frac{S(N)}{2N^2},
+\]
+
+and the eigenmode's general time scale is \(N^2/S(N)\).  On distinct
+semiprimes \(S(N)=\Theta(N)\), so worst-start mixing is \(\Omega(N)\);
+more precisely on balanced families
+
+\[
+t_{\rm mix}(1/4)\ge(N/2+o(N))\log3.
+\]
+
+An initializer that exactly repairs the zero mass can kill this mode, but if
+its initial mass on proper-gcd residues is \(o(1)\), entering that class under
+uniform proposals still takes \(\Omega(\sqrt N)\) steps for any fixed target
+error below \(1/2\).  An explicit initializer with constant proper-gcd mass
+is already a constant-success factoring routine.
+
+Exact normalization is not a free shortcut.  On a semiprime,
+
+\[
+p+q=\frac{4N+1-S(N)}2,
+\]
+
+so exact \(S(N)\) factors by an integer discriminant.  Sampling separately
+from prime-power CRT laws likewise assumes the desired factorization.
+
+P41 is a positive amortization theorem at the distribution level, not an
+unconditional factoring algorithm.  The exact missing lemma is a factor-free
+explicit sampler for \(\pi_N\) with fixed error below \(2/7\) and expected
+polynomial bit/fair-bit cost on every odd modulus.  Uniform rejection,
+uniform-gcd discovery, and the stated Metropolis chain fail, but nonuniform,
+nonlocal, nonreversible, auxiliary-state, positive-combinatorial, and other
+direct samplers remain open.
+
+The candidate, initial audit and reconstruction, strengthened re-audit, and
+context-free final reconstruction are preserved under
+`experiments/F32_quadratic_fourier_energy_kill`,
+`experiments/F32_quadratic_fourier_energy_audit`,
+`experiments/F32_quadratic_fourier_energy_reconstruct`,
+`experiments/F32_quadratic_fourier_energy_reaudit`, and
+`experiments/F32_quadratic_fourier_energy_reconstruct2`.

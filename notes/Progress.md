@@ -653,3 +653,53 @@ source theorem. Biased/dependent local subspaces, growing local rank, affine
 targets, CVP/LLL, nonshortest observables, and nonlinear decoding remain
 open. A retry must specify and analyze one of those mechanisms rather than
 reuse independent uniform fixed-rank exact SVP.
+
+### C37 — low-degree product pooling is local OR/CRT XOR, not joint decoding
+
+**Status:** promoted as P40 after the amended theorem passed a clean hostile
+audit and a fresh context-free proof-blind reconstruction.
+
+**Closest prior route and material difference.** P08/P31 bound linear or
+enumerated equality tickets, while P35/P39 treat relation lattices. C37 lets
+every polynomial depend on every coordinate of one full-affine CRT batch and
+allows all zero tests to share variables before one terminal product gcd.
+
+**Verified boundary.** For nonzero local formal reductions, the exact
+proper-gcd law is \(\alpha_p+\alpha_q-2\alpha_p\alpha_q\), with
+\(\alpha_r\le\min(1,\Delta_r/r)\) at the actual reduced degree. The sharp
+box envelope is \(\max\{u_p,u_q,u_p+u_q-2u_pu_q\}\). Random coefficients
+must be conditioned on, adaptive use requires a fresh batch, and local formal
+zeros obey the four-case content table. Formal zero functions and
+characteristic-scale degree are not silently treated as low degree.
+
+**Remaining gap.** A product only ORs rare zeros locally. C37 does not touch
+a decoder that combines typical nonzero values, a nonuniform or metric
+source, or a succinct characteristic-scale product with a proved evaluator
+and XOR mass. Sparse/circuit size is not actual degree.
+
+### C38 — quadratic Fourier energy pools constant factor mass
+
+**Status:** promoted as P41 after a strengthened hostile re-audit and a fresh
+context-free proof-blind reconstruction.
+
+**Closest prior route and material difference.** P12 studies order-spectrum
+moment reconstruction. C38 instead takes the additive Fourier energy of the
+square pushforward and obtains an explicit positive target distribution.
+
+**Verified boundary.** For odd \(N\), the energy is exactly
+\(N\gcd(k,N)\), and its normalized law has factor-revealing mass at least
+\(2/7\) on every odd composite. An explicit all-input sampler within TV
+\(1/28\), with almost-sure termination and expected polynomial bit/fair-bit
+cost, would give complete all-input Las Vegas factoring.
+
+Uniform rejection costs \(\Theta(N)\) proposals and direct uniform-gcd
+discovery \(\Theta(\sqrt N)\) on balanced semiprimes. The lazy
+uniform-proposal Metropolis chain has exact eigenvalue
+\(1-S(N)/(2N^2)\), hence worst-start \(\Omega(N)\) semiprime mixing; a
+zero-mass-corrected initializer with negligible factor-class mass still has
+an \(\Omega(\sqrt N)\) hitting obstruction.
+
+**Remaining gap.** No factor-free polynomial-time sampler is known. F33
+tests the uniform zero-product lift and coordinate heat bath. F34 tests
+explicit algebra-automorphism proposals. Augmented, nonlocal, nonreversible,
+positive-matching, and other direct samplers remain open.
