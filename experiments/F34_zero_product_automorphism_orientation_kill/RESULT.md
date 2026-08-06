@@ -1,7 +1,7 @@
 # F34 kill-first: zero-product automorphisms cannot desynchronize CRT axes without exposing a factor
 
-**Status:** candidate; hostile audit and proof-blind reconstruction are
-required before promotion.
+**Status:** promoted as P44 after an amendment-verified hostile audit and a
+fresh context-free proof-blind reconstruction.
 
 **Family:** F23.
 
@@ -35,8 +35,9 @@ Let \(N=pq\) for distinct primes, put \(R=\mathbb Z/N\mathbb Z\), and let
 A_R=R[K,X]/(KX).
 \]
 
-For an \(R\)-algebra automorphism \(\Phi\), write its coordinate images to
-first order at the node as
+Every \(R\)-algebra automorphism fixes the ideal \((K,X)\), as proved below.
+For such an automorphism \(\Phi\), write its coordinate images intrinsically
+in the quotient \(A_R/(K,X)^2\) as
 
 \[
 \begin{pmatrix}\Phi(K)\\ \Phi(X)\end{pmatrix}
@@ -195,7 +196,19 @@ of
 A_r=\mathbb F_r[K,X]/(KX).
 \]
 
-Therefore Section 1 applies to both reductions of \(J_\Phi\).
+Section 1 shows that the reductions of \(\Phi(K)\) and \(\Phi(X)\) have
+zero constant term in both field components.  CRT therefore gives
+\(\Phi(K),\Phi(X)\in(K,X)\) globally.  Applying the same argument to
+\(\Phi^{-1}\) proves that \((K,X)\) is fixed.  The canonical quotient
+
+\[
+A_R\longrightarrow A_R/(K,X)^2
+\]
+
+then makes the constant and linear parts independent of every choice of
+polynomial representative: the relation \(KX\) already lies in
+\((K,X)^2\).  Thus \(J_\Phi\) in (0.1) is intrinsic, and Section 1 applies
+to both of its field reductions.
 
 Suppose, for example, that \(\Phi_p\) preserves the axes while \(\Phi_q\)
 swaps them.  Then
@@ -227,16 +240,32 @@ The support pattern of the two local monomial matrices must agree, so the
 local orientations are synchronized.
 
 The field classification also proves the stronger global statement (0.2).
-If both local maps preserve axes, all coefficients of
-\(\Phi(K)-uK\) and \(\Phi(X)-vX\) vanish modulo both primes and hence modulo
-\(N\); the CRT-lifted scalars \(u,v\) are units.  The swapping case is
-identical.  No nonlinear term survives.
+If both local maps preserve axes, choose the CRT lifts \(u,v\in R^\times\)
+of the corresponding nonzero local scalars.  Both field components of the
+elements \(\Phi(K)-uK\) and \(\Phi(X)-vX\) vanish.  Injectivity of
+\(A_R\simeq A_{\mathbb F_p}\times A_{\mathbb F_q}\) makes the elements
+themselves zero.  The swapping case is identical.  No nonlinear term
+survives.
 
-For an explicit polynomial or branch-free arithmetic-circuit description of
-the two coordinate images, the four entries of \(J_\Phi\) are computable in
-polynomial bit time by formal differentiation and evaluation at \((0,0)\).
-This does not require expanding a high-degree circuit.  The theorem is
-conditional on the maps really being algebra automorphisms; efficiently
+For an explicit division-free straight-line circuit over \(R\), with
+\(+,-,\times\) gates and explicitly specified residue constants, the four
+entries of \(J_\Phi\) are computable without expanding a high-degree circuit.
+Evaluate each gate in \(A_R/(K,X)^2\), storing the triple
+\((c,\alpha,\beta)\) for \(c+\alpha K+\beta X\).  Multiplication is
+
+\[
+(c,\alpha,\beta)(c',\alpha',\beta')
+=(cc',\ c\alpha'+c'\alpha,\ c\beta'+c'\beta).
+\tag{2.3}
+\]
+
+The output linear coefficients are \(J_\Phi\).  This costs a constant number
+of ring operations per gate and bit time polynomial in \(\log N\) plus the
+encoded circuit length.  It is polynomial in the factoring input length
+when a uniform sampler constructs circuits whose size and constant encoding
+length are \(\operatorname{poly}(\log N)\).  Division/rational circuits,
+branching programs, and black-box evaluators are not included.  The theorem
+is conditional on the maps really being algebra automorphisms; efficiently
 certifying that promise is a separate issue, not an escape from (2.2).
 
 ## 3. The factor-free region is invariant
@@ -256,8 +285,9 @@ an arbitrary adaptive sequence \(\Phi_1,\Phi_2,\ldots\):
 - otherwise every selected map preserves \(\mathcal A_N\), regardless of
   how it was chosen from the preceding public history.
 
-Randomizing over automorphisms only randomizes a **global** preserve/swap
-bit.  It never manufactures independent CRT orientation bits.
+As far as local-axis orientation is concerned, randomizing over
+automorphisms only randomizes a **global** preserve/swap bit.  Unit scalings
+may vary too, but they never manufacture independent CRT orientation bits.
 
 ## 4. Uniform target mass and total variation
 
@@ -310,8 +340,10 @@ family is reducible on its factor-free branch.
 The obstruction covers an adaptive or random mixture of explicit
 \(R\)-algebra automorphisms of the affine scheme \(KX=0\), started from a
 pair whose coordinate gcds are trivial.  It allows arbitrarily high degree
-in the submitted formulas, arbitrary unit scalings, and any public rule for
-choosing the next automorphism.
+in the submitted division-free circuits, arbitrary unit scalings, and any
+public rule for choosing the next automorphism.  Extraction time is measured
+in the encoded circuit length; a polynomial-time factoring proposal must
+construct circuits of size \(\operatorname{poly}(\log N)\).
 
 It does **not** cover:
 
@@ -324,9 +356,15 @@ It does **not** cover:
 4. an initializer that already returns a proper-coordinate-gcd pair with
    inverse-polynomial probability—that initializer is itself a factoring
    routine;
-5. opaque black-box maps from which the first-order coefficients cannot be
+5. division/rational circuits, branch-dependent programs, or opaque
+   black-box maps from which the first-order coefficients cannot be
    accessed; or
-6. prime powers, nonsquarefree moduli, or a claimed all-input sampler theorem.
+6. prime powers and nonsquarefree moduli.
+
+The obstruction on distinct semiprimes nevertheless refutes a claimed
+**all-input automorphism-only sampler in this explicit, factor-free-start
+model**, because such a sampler must also work on every distinct semiprime.
+It does not refute an all-input sampler using any excluded move type above.
 
 A retry is materially new only if it gives one of the excluded move types
 with a proved stationary law and polynomial bit/fair-bit implementation, or

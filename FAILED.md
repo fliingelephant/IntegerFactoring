@@ -1340,9 +1340,11 @@ the zero atom but place \(o(1)\) mass on factor classes still face an
 **What would make a retry materially new.** A nonuniform, nonlocal,
 nonreversible, auxiliary-variable, positive-combinatorial, or otherwise
 factor-free sampler with a proved all-input stationary/output law and
-polynomial bit/fair-bit cost.  F33 tests the uniform zero-product lift; F34
-tests explicit automorphism moves on it.  Reusing uniform proposals in
-rejection or independence Metropolis is covered by P41.
+polynomial bit/fair-bit cost.  P43 promotes the uniform zero-product lift and
+closes its exact coordinate heat bath; P44 closes factor-free explicit
+scheme-automorphism moves.  F35 tests low-degree finite-set bijections.
+Reusing uniform proposals in rejection or independence Metropolis is covered
+by P41.
 
 ## X36 — clean four-port composition of closed matching occurrences
 
@@ -1381,3 +1383,134 @@ or block/heterogeneous occurrence code; shared vertex identifications or
 fused cells; or one globally interleaved multiplication graph with a proved
 positive matching-mass law.  Reusing a raw universal four-distinct-port
 equality wire is covered by P42.
+
+## X37 — random-scan coordinate heat bath on the quadratic-energy positive lift
+
+**Status:** promoted as P43 after two historical failed audits, a clean
+whole-artifact hostile re-audit, and a fresh context-free proof-blind
+reconstruction.
+
+**Family:** F23.
+
+**Classification:** method failure for the exact random-scan
+one-coordinate heat-bath kernel from its stated cold start.  This is not a
+failure of the positive zero-product representation, an efficiently
+generated warm start, block/nonlocal/augmented kernels, positive matching
+encodings, or direct spectral sampling.
+
+**Positive survivor.**  Uniform sampling from
+
+\[
+\Omega_N=\{(k,x):kx=0\bmod N\}
+\]
+
+has first marginal \(\gcd(k,N)/S(N)\), exactly the normalized quadratic
+Fourier-energy law for odd \(N\).  Inspecting both coordinates raises the
+proper-gcd mass to at least \(1/3\) on every odd composite.  Therefore a
+uniform TV-\(1/12\) expected-polylog pair sampler gives complete all-input
+Las Vegas factoring.  A uniform polynomial-size equal-positive-fibre
+perfect-matching representation with an efficient short-output decoder
+would suffice; none is constructed.
+
+**Exact obstruction.**  The coordinate heat bath is implementable exactly:
+sample the updated coordinate uniformly from the other's annihilator.  For
+\(N=pq\), distinct odd primes, \(h=p+q-2\), and start \((1,0)\), its
+factor-bearing hitting expectation is \(\Omega(N/h)\), while
+
+\[
+t_{\rm mix}(1/4)\ge\left\lfloor\frac{N}{8h}\right\rfloor.
+\]
+
+Both are \(\Omega(\sqrt N)\) on balanced semiprimes.  The exact local
+interpretation uses \(H,V,O\) types; origins have no artificial axis label,
+and prime powers have separate valuation strata.
+
+**What would make a retry materially new.** An efficiently generated warm
+start with a proved law; a block, nonlocal, nonreversible, or augmented-state
+kernel; a positive matching graph satisfying the full uniform
+builder/decoder/multiplicity interface; or a direct sampler not using this
+coordinate update.  Reusing the exact cold-start random-scan heat bath is
+covered by P43.
+
+## X38 — explicit zero-product scheme-automorphism proposals
+
+**Status:** promoted as P44 after an amendment-verified hostile audit and a
+fresh context-free proof-blind reconstruction.
+
+**Family:** F23.
+
+**Classification:** evidence against factor-free movement by adaptive
+mixtures of explicit coordinate-algebra automorphisms of \(KX=0\) over a
+distinct semiprime.  This is a factor-or-invariant dichotomy, not a
+nonexistence theorem for a construction that deliberately exposes a factor.
+
+**Exact obstruction.**  Over a field, every node automorphism is a unit
+scaling of the two axes, with or without a swap.  Over
+\(R=\mathbb Z/pq\mathbb Z\), different local preserve/swap orientations make
+a first-jet coefficient vanish in exactly one component, and its gcd with
+\(N\) factors.  If no jet coefficient factors, orientations synchronize,
+the automorphism is globally a monomial unit scaling/swap, and it preserves
+
+\[
+(R^\times,0)\mathbin{\dot\cup}(0,R^\times)
+\mathbin{\dot\cup}\{(0,0)\}.
+\]
+
+Uniform zero-product pairs put more than one-half mass outside this region.
+The first jet is extracted intrinsically in polynomial time from a
+division-free straight-line circuit by evaluation modulo \((K,X)^2\).
+
+**What would make a retry materially new.** A noninvertible or stochastic
+move, a finite-set-only permutation, a lifted/auxiliary kernel, an explicit
+division/rational or piecewise model with a different extraction theorem, a
+useful warm start, or a prime-power construction.  Merely composing or
+adaptively choosing more accessible global node automorphisms is covered by
+P44.
+
+## X39 — low-formal-degree finite-set bijections of the zero-product locus
+
+**Status:** promoted as P45 after the original sampler-impossibility version
+failed hostile audit, a materially amended whole artifact passed fresh
+hostile re-audit, and a context-free proof-blind reconstruction succeeded.
+
+**Family:** F23.
+
+**Classification:** evidence against factor-free movement by adaptive
+mixtures of explicit low-formal-degree polynomial bijections of the finite
+zero-product point set over a distinct semiprime.  This is a quantitative
+factor-or-invariant dichotomy, not a proof that an accurate sampler cannot
+exist.
+
+**Exact obstruction.**  If \(T=(F,G)\) is a polynomial-induced bijection of
+\(\Omega_N\), both exact formal outputs have degree at most \(D\), and
+\(2D<\min(p,q)\), root counting forces each local source axis wholly onto one
+target axis.  Mixed local preserve/swap orientations make an axis-restriction
+coefficient selectively divisible and hence factor \(N\).  On the no-factor
+branch the orientations synchronize and preserve
+
+\[
+\mathcal A_N=
+(R^\times,0)\mathbin{\dot\cup}(0,R^\times)
+\mathbin{\dot\cup}\{(0,0)\}.
+\]
+
+For an explicit uniformly bounded division-free circuit run, monitoring the
+initializer and all materialized restriction coefficients gives
+
+\[
+\Pr(H)\ge
+\frac{2N-2}{(2p-1)(2q-1)}
+-d_{\rm TV}(\mu,\pi_N).
+\]
+
+Thus a factor-free run is more than \(1/2\) from uniform, while an accurate
+sampler may legitimately succeed by exposing a factor.  A uniform or
+inverse-polynomial TV gap below \(1/2\) gives only a repeatable
+distinct-semiprime splitter, not complete all-input factoring.
+
+**What would make a retry materially new.** A characteristic-scale succinct
+finite-set permutation, a noninvertible or stochastic kernel, auxiliary or
+lifted state, a rational/division/opaque or genuinely piecewise model, a
+charged useful warm start, a positive-combinatorial sampler, or a theorem for
+prime powers and nonsquarefree bases.  More factor-free synchronized
+low-degree global bijections are covered by P45.

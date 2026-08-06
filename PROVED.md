@@ -3772,3 +3772,382 @@ under
 `experiments/F30_internal_edge_matching_composition_kill`,
 `experiments/F30_internal_edge_matching_composition_audit`, and
 `experiments/F30_internal_edge_matching_composition_reconstruct`.
+
+## P43 — quadratic Fourier energy is a positive zero-product marginal, but coordinate heat bath is slow
+
+**Status:** promoted.
+
+**Verification record:** the first hostile audit preserved the core theorem
+but rejected the prime-power geometry, matching-decoder quantifiers, and
+overbroad kernel/start scope.  A full re-audit of that amendment rejected the
+origin-ambiguous “chosen axis” equivalence.  After replacing it by exact
+\(H/V/O\) local types and making fair-bit rejection explicitly
+almost-sure/expected-cost, a fresh whole-artifact hostile re-audit passed.
+A new context-free proof-blind reconstruction recovered every theorem and
+the complete all-input cost proof without reading any F33 artifact.  Both
+historical failed versions are retained.  No computation and no cross-family
+audit were used.
+
+For every positive integer \(N\), put
+
+\[
+\Omega_N=\{(k,x)\in(\mathbb Z/N\mathbb Z)^2:kx=0\}.
+\]
+
+For each \(k\bmod N\),
+
+\[
+\#\{x:kx=0\}=\gcd(k,N),
+\qquad
+|\Omega_N|=S(N):=\sum_{k\bmod N}\gcd(k,N).
+\]
+
+Thus the first marginal of the uniform law on \(\Omega_N\) is
+\(\gcd(k,N)/S(N)\).  For odd \(N\), the invertible change
+\((y-z,y+z)\) gives
+
+\[
+\left|\sum_{y\bmod N}e^{2\pi i ky^2/N}\right|^2=N\gcd(k,N),
+\]
+
+so this marginal is exactly P41's normalized quadratic Fourier-energy law.
+The positive identity itself also holds for even and nonsquarefree \(N\).
+
+The pairs on which neither coordinate exposes a proper gcd are exactly
+
+\[
+A_N=
+((\mathbb Z/N\mathbb Z)^\times\times\{0\})
+\mathbin{\dot\cup}
+(\{0\}\times(\mathbb Z/N\mathbb Z)^\times)
+\mathbin{\dot\cup}\{(0,0)\},
+\]
+
+of size \(2\varphi(N)+1\).  Using
+
+\[
+S(p^a)=p^{a-1}((a+1)p-a)
+\]
+
+and multiplicativity, the uniform useful-pair mass is at least \(1/3\) on
+every odd composite, asymptotically sharply along prime squares.  For
+distinct semiprimes it is strictly greater than \(1/2\).
+
+For \(N=pq\), local field points have the three intrinsic types
+
+\[
+H=(\mathbb F_r^\times,0),\qquad
+V=(0,\mathbb F_r^\times),\qquad O=(0,0).
+\]
+
+A proper coordinate gcd occurs exactly when the \(p\)- and \(q\)-types
+differ.  This includes all cases involving a local origin.  Prime powers
+instead have intermediate valuation strata and are not described by this
+three-type CRT rule.
+
+Suppose one uniform algorithm, on every odd modulus, returns an actual pair
+in \(\Omega_N\) within TV \(1/12\) of uniform, terminates almost surely, and
+has one fixed expected polynomial bit/fair-bit bound.  Each fresh call then
+returns a verified proper divisor with probability at least \(1/4\).
+Deterministic primality testing, direct even splitting, exact division,
+fresh retries, and a factor tree of \(O(\log N)\) nodes give complete
+all-input classical Las Vegas factoring.  The stopped-cost argument uses
+only independence of a fresh call from the event that it is reached; one
+call's runtime may be correlated with its own success.
+
+A sufficient positive-matching hypothesis must be fully uniform: a
+polynomial-time builder outputs a polynomial-size bipartite graph, a
+uniform deterministic decoder maps every explicit perfect matching to two
+\(O(\log N)\)-bit residues in \(\Omega_N\) in polynomial time, and every
+pair has one equal positive preimage multiplicity.  P38's almost-uniform
+matching sampler would then instantiate the preceding conditional theorem.
+No such graph is constructed here.
+
+The exact random-scan coordinate heat bath is implementable without hidden
+factors: update one coordinate uniformly from the annihilator of the other.
+If \(g=\gcd(y,N)\), sample
+
+\[
+jN/g,\qquad 0\le j<g,
+\]
+
+by fair-bit rejection.  The update terminates almost surely and has expected
+polynomial bit and \(O(\log N)\) fair-bit cost.  The chain is reversible,
+irreducible, and aperiodic with uniform stationary law.
+
+Nevertheless, for \(N=pq\), distinct odd primes, from \((1,0)\), with
+\(h=p+q-2\), the factor-bearing hitting time has expectation
+
+\[
+\Omega(N/h),
+\]
+
+and
+
+\[
+t_{\rm mix}(1/4)\ge
+\left\lfloor\frac{N}{8h}\right\rfloor.
+\]
+
+Both are \(\Omega(\sqrt N)\) on fixed-balance semiprime families.  This is
+only a worst-start result for the exact random-scan one-coordinate kernel.
+Efficient warm starts, block or nonlocal moves, auxiliary/lifted chains,
+positive matching encodings, and direct spectral samplers remain open.
+
+The candidate, two historical failed audits, clean final audit, and
+context-free reconstruction are preserved under
+experiments/F33_quadratic_energy_positive_lift_kill,
+experiments/F33_quadratic_energy_positive_lift_audit,
+experiments/F33_quadratic_energy_positive_lift_reaudit,
+experiments/F33_quadratic_energy_positive_lift_reaudit2, and
+experiments/F33_quadratic_energy_positive_lift_reconstruct.
+
+## P44 — zero-product scheme automorphisms cannot desynchronize CRT axes invisibly
+
+**Status:** promoted.
+
+**Verification record:** the hostile audit found no mathematical
+counterexample and required only an intrinsic first-jet proof, an exact
+division-free circuit model, and narrower all-input wording.  It explicitly
+verified every amendment.  A fresh context-free proof-blind reconstruction
+independently recovered the field classification, CRT dichotomy, circuit
+extraction, invariant, count, characteristic-two case, and nonsquarefree
+boundary.  No computation and no cross-family audit were used.
+
+Let \(N=pq\) for distinct primes, \(R=\mathbb Z/N\mathbb Z\), and
+
+\[
+A_R=R[K,X]/(KX).
+\]
+
+Over any field \(F\), the two minimal primes of
+\(F[K,X]/(KX)\) are \((K)\) and \((X)\).  Every \(F\)-algebra automorphism
+therefore has exactly one of the forms
+
+\[
+(K,X)\mapsto(uK,vX),
+\qquad
+(K,X)\mapsto(uX,vK),
+\qquad u,v\in F^\times.
+\]
+
+Over \(R\), every automorphism fixes \((K,X)\), so its intrinsic first jet in
+\(A_R/(K,X)^2\) is well-defined.  If its reductions modulo \(p\) and \(q\)
+have different preserve/swap orientations, a first-jet entry vanishes in
+exactly one field component; taking its ordinary integer gcd with \(N\)
+returns \(p\) or \(q\).  If none of the four entry gcds is proper, the
+orientations synchronize and the global automorphism is exactly
+
+\[
+(K,X)\mapsto(uK,vX)
+\quad\text{or}\quad
+(K,X)\mapsto(uX,vK)
+\]
+
+for units \(u,v\in R^\times\).
+
+The jet is efficiently accessible from an explicit division-free
+\(+,-,\times\) straight-line circuit.  Evaluate every gate in
+\(A_R/(K,X)^2\), storing \(c+\alpha K+\beta X\); multiplication is
+
+\[
+(c,\alpha,\beta)(c',\alpha',\beta')
+=(cc',c\alpha'+c'\alpha,c\beta'+c'\beta).
+\]
+
+This costs a constant number of ring operations per gate and bit time
+polynomial in \(\log N\) plus the encoded circuit length.  A polynomial-time
+factoring proposal must uniformly materialize circuits of
+\(\operatorname{poly}(\log N)\) encoded size.
+
+On the no-factor branch, every such automorphism preserves
+
+\[
+\mathcal A_N=(R^\times,0)\mathbin{\dot\cup}(0,R^\times)
+\mathbin{\dot\cup}\{(0,0)\}.
+\]
+
+This is pathwise and survives arbitrary random or adaptive selection among
+materialized global automorphisms.  Uniform \(\Omega_N\) assigns the
+complement mass
+
+\[
+\frac{2N-2}{(2p-1)(2q-1)}>\frac12,
+\]
+
+so a run started in \(\mathcal A_N\) either exposes a factor in a selected
+map's jet or stays more than \(1/2\) from the uniform target.
+
+P44 covers coordinate-algebra automorphisms over distinct semiprimes.  It
+does not cover endomorphisms, finite-set-only permutations, auxiliary or
+lifted kernels, division/rational circuits, stitched branch-dependent or
+opaque maps, independently useful warm starts, or prime powers and other
+nonsquarefree bases.  The semiprime theorem refutes an all-input proposal
+only when that proposal remains factor-free and automorphism-only in this
+exact explicit model on the semiprime subfamily.
+
+The candidate, amendment-verified hostile audit, and context-free
+reconstruction are preserved under
+experiments/F34_zero_product_automorphism_orientation_kill,
+experiments/F34_zero_product_automorphism_orientation_audit, and
+experiments/F34_zero_product_automorphism_orientation_reconstruct.
+
+## P45 — low-degree finite-set bijections obey a factor-or-invariant dichotomy
+
+**Status:** promoted.
+
+**Verification record:** the first hostile audit passed the local structural
+theorem but rejected the submitted claim that it refuted an accurate sampler:
+a sampler may expose a factor, which is success rather than contradiction.
+The candidate was materially amended to the unconditional quantitative
+factor-or-TV theorem below, with uniform degree, circuit, adaptive-branch,
+and expected-cost quantifiers made explicit.  A fresh whole-artifact hostile
+re-audit passed that amendment.  A new context-free proof-blind
+reconstruction independently recovered the theorem, circuit monitor,
+stopped-cost calculation, characteristic-two handling, and exact exclusions.
+No computation and no cross-family audit were used.  The historical failed
+audit is retained.
+
+Let
+
+\[
+N=pq,\qquad R=\mathbb Z/N\mathbb Z,\qquad
+\Omega_N=\{(k,x)\in R^2:kx=0\},
+\]
+
+where \(p\ne q\) are primes.  Suppose
+
+\[
+T=(F,G):\Omega_N\longrightarrow\Omega_N
+\]
+
+is induced by polynomials \(F,G\in R[K,X]\) of total degree at most
+\(D\), is a bijection of the finite point set, and satisfies
+
+\[
+2D<\min(p,q).
+\]
+
+CRT makes \(T\) the product of bijections
+\(T_r:\Omega_r\to\Omega_r\), where
+
+\[
+\Omega_r=\{(a,b)\in\mathbb F_r^2:ab=0\}.
+\]
+
+On either source axis, the two coordinate restrictions \(f,g\) obey
+\(f(t)g(t)=0\) at every field point.  Their formal product has degree below
+\(r\), so root counting makes it the zero polynomial; the domain property of
+\(\mathbb F_r[Z]\) then gives \(f=0\) or \(g=0\).  Bijectivity forces the
+two source axes to enter distinct target axes and fixes their common origin.
+Thus, independently modulo \(p\) and \(q\), the map either preserves the two
+axes or swaps them.  This proof does not divide by two and includes
+characteristic two whenever the hypotheses are nonvacuous.
+
+If the two local orientations differ, one coefficient of one of
+
+\[
+F(K,0),\quad G(K,0),\quad F(0,X),\quad G(0,X)
+\]
+
+vanishes modulo exactly one prime.  Its integer gcd with \(N\) is therefore
+\(p\) or \(q\).  If none of these coefficient gcds is proper, the
+orientations synchronize and \(T\) preserves
+
+\[
+\mathcal A_N=
+(R^\times\times\{0\})\mathbin{\dot\cup}
+(\{0\}\times R^\times)\mathbin{\dot\cup}\{(0,0)\}.
+\]
+
+Mixed maps genuinely exist.  For complementary CRT idempotents \(e_p,e_q\),
+
+\[
+(K,X)\longmapsto
+(e_pK+e_qX,\ e_pX+e_qK)
+\]
+
+is a degree-one involution which preserves axes modulo one prime and swaps
+them modulo the other.  Its coefficients expose the factors.  Hence the
+theorem is a factor-or-invariant reduction, not a nonexistence theorem for
+accurate samplers.
+
+The reduction is algorithmic for explicit division-free straight-line
+circuits.  Given a public numeric cap \(D\), evaluate the circuit after the
+two axis substitutions in
+
+\[
+R[Z]/(Z^{D+1}).
+\]
+
+The quotient map is a ring homomorphism, so arbitrarily high intermediate
+degrees and cancellations do not corrupt the final low-degree coefficients.
+For a circuit with \(g\) gates the two evaluations cost \(O(gD^2)\) ring
+operations under ordinary truncated convolution.  A proposed uniform run
+must use one fixed public bound \(D_N\le P(n)\), where \(P\) is independent
+of the input, history, randomness, move, and stopping time; every materialized
+branch circuit must have exact formal outputs below that cap and must itself
+be a global bijection of all \(\Omega_N\).  These are semantic promises, not
+properties certified by the monitor.  If the expected total encoded circuit
+length is at most another fixed polynomial \(Q(n)\), the expected total
+monitoring overhead is polynomial.  A one-time gcd scan through
+\(2,\ldots,2D_N\) either finds a small factor or certifies the strict degree
+condition without knowing \(p,q\).
+
+For an almost-surely finite adaptive run, inspect both initializer-coordinate
+gcds and all restriction coefficients of each realized branch circuit.  Let
+\(H\) be the event that any check finds a proper factor, let \(Y\) be the
+unmodified run's output, and let \(\mu\) be its **unconditional** terminal
+law.  On \(H^c\), the initializer lies in \(\mathcal A_N\), every realized
+move synchronizes, and pathwise induction keeps \(Y\) in \(\mathcal A_N\).
+With \(B_N=\Omega_N\setminus\mathcal A_N\), therefore
+
+\[
+\{Y\in B_N\}\subseteq H.
+\]
+
+The exact counts are
+
+\[
+|\Omega_N|=(2p-1)(2q-1),\qquad
+|B_N|=2N-2,
+\]
+
+so, for uniform \(\pi_N\) on \(\Omega_N\),
+
+\[
+\rho_N:=\pi_N(B_N)
+=\frac{2N-2}{(2p-1)(2q-1)}>\frac12.
+\]
+
+Consequently
+
+\[
+\boxed{
+\Pr(H)\ge\mu(B_N)
+\ge\rho_N-d_{\rm TV}(\mu,\pi_N).}
+\]
+
+A genuinely factor-free run is therefore more than \(1/2\) from uniform.
+Conversely, fresh repeatable runs whose TV error is at most
+\(1/2-1/Q_0(n)\) for one fixed polynomial \(Q_0\), and whose full expected
+cost is uniformly polynomial, yield a Las Vegas splitter for every distinct
+semiprime by stopping at the first monitored factor.  The expected cost is
+the one-run expectation divided by the inverse-polynomial success lower
+bound; a merely pointwise inequality \(\delta_N<1/2\) is insufficient.
+This is not by itself a complete all-input factoring theorem.
+
+P45 does not cover characteristic-scale or succinctly high-degree point
+permutations, noninvertible or stochastic moves, auxiliary/lifted kernels,
+rational, division, opaque, or nonmaterialized piecewise maps, useful warm
+starts whose construction is not charged, prime powers, or general
+nonsquarefree bases.  State-dependent selection is covered only when every
+materialized branch is itself a promised global low-degree bijection.  These
+are the exact reopen conditions.
+
+The candidate, historical failed audit, amended hostile re-audit, and
+context-free reconstruction are preserved under
+experiments/F35_low_degree_zero_product_bijection_kill,
+experiments/F35_low_degree_zero_product_bijection_audit,
+experiments/F35_low_degree_zero_product_bijection_reaudit, and
+experiments/F35_low_degree_zero_product_bijection_reconstruct.

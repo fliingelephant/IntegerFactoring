@@ -1,7 +1,8 @@
 # F33 follow-up: quadratic energy is a positive zero-product marginal, but coordinate heat bath is slow
 
-**Status:** candidate; hostile audit and proof-blind reconstruction are
-required before promotion.
+**Status:** promoted as P43 after two historical failed audits, a clean
+whole-artifact hostile re-audit, and a fresh context-free proof-blind
+reconstruction.
 
 **Family:** F23.
 
@@ -103,9 +104,10 @@ t_{\rm mix}(1/4)
 up to the harmless convention at time zero.  On every fixed-balance
 semiprime family, both scales are \(\Omega(\sqrt N)\).
 
-The positive lift is therefore exact, but a one-coordinate Gibbs update only
-moves the hidden-sector bottleneck from frequency space to switching between
-the local zero-product axes.
+The positive lift is therefore exact, but on distinct squarefree semiprimes
+the exact one-coordinate Gibbs update only moves the hidden-sector bottleneck
+from frequency space to creating unequal local zero-product types by a rare
+nonunit proposal.
 
 ## 1. Exact positive lift
 
@@ -161,9 +163,27 @@ For a prime \(r\),
 \tag{1.2}
 \]
 
-Thus the lifted state space literally consists locally of two coordinate
-axes.  Factoring is the problem of sampling a global state whose chosen axes
-do not agree across all unknown CRT components.
+Thus, at a prime-field CRT component, the lifted state space is the union of
+two coordinate axes.  Their common origin carries no intrinsic choice of
+axis.  This description does not extend verbatim to prime powers: in
+\(\Omega_{r^e}\), the condition is \(v_r(k)+v_r(x)\ge e\), so there are
+intermediate valuation strata such as \((r,r^{e-1})\), not just two axes.
+
+For a distinct squarefree semiprime, the exact interpretation uses three
+local types.  At \(r\in\{p,q\}\), write
+
+\[
+H=(\mathbb F_r^\times\times\{0\}),\qquad
+V=(\{0\}\times\mathbb F_r^\times),\qquad
+O=\{(0,0)\}.
+\tag{1.3}
+\]
+
+Neither coordinate has a proper gcd with \(N\) exactly when the two CRT
+components have the same type: \((H,H)\), \((V,V)\), or \((O,O)\).  At
+least one coordinate exposes a proper gcd exactly when the two local types
+differ.  This statement does not assign an artificial axis label to a local
+origin.
 
 ## 2. Proper-factor mass when both coordinates are readable
 
@@ -248,8 +268,9 @@ b_2\ge\frac45.
 \tag{2.7}
 \]
 
-All omitted factors increase \(S(N)/N\) and decrease
-\(\varphi(N)/N\), while
+All omitted factors increase \(S(N)/N\) and do not increase
+\(\varphi(N)/N\): an extra exponent leaves the latter ratio unchanged,
+whereas an extra distinct prime decreases it.  Also,
 
 \[
 \frac1N\le(1-b_1)(1-b_2).
@@ -318,10 +339,13 @@ recursion over at most \(2n-1\) nodes give complete all-input Las Vegas
 factoring with one fixed expected polynomial bit/fair-bit bound.
 
 There is a concrete sufficient matching hypothesis.  Suppose a uniform
-polynomial-time builder returns a polynomial-size unweighted bipartite graph
-\(G_N\) and a total decoder from its perfect matchings to \(\Omega_N\), and
-suppose one positive integer \(c_N\) is the number of matching preimages of
-every pair in \(\Omega_N\).  Uniform matchings then push forward to uniform
+polynomial-time builder returns, for every needed modulus \(N\), a
+polynomial-size unweighted bipartite graph \(G_N\).  Suppose further that a
+uniform deterministic algorithm decodes every perfect matching of \(G_N\)
+to a pair in \(\Omega_N\), represents the two residues with \(O(\log N)\)
+bits each, and runs in time polynomial in \(\log N+|G_N|\).  Finally, suppose
+one positive integer \(c_N\) is the number of matching preimages of every
+pair in \(\Omega_N\).  Uniform matchings then push forward to uniform
 zero-product pairs.  P38's rational Jerrum--Sinclair--Vigoda implementation
 supplies an actual almost-uniform matching in expected polynomial bit and
 fair-bit cost, so the pair-sampler reduction above applies.
@@ -329,9 +353,8 @@ fair-bit cost, so the pair-sampler reduction above applies.
 This graph condition is weaker than requiring one equal matching fibre for
 every positive integer factorization \(xy=N\).  It is not constructed here.
 P38's terminal-deletion subcube theorem still blocks several direct local
-encodings, while F30's closed internal-edge COPY and AND candidates show why
-one may not transfer that boundary to all closed or globally filtered
-graphs.
+encodings, while P42's closed internal-edge COPY and AND gadgets show why one
+may not transfer that boundary to all closed or globally filtered graphs.
 
 ## 4. The random-scan coordinate heat-bath chain
 
@@ -360,8 +383,7 @@ therefore holds with the uniform law.  The chain is irreducible because one
 may set either coordinate to zero and then resample the other arbitrarily,
 and it is aperiodic because it has self-loops.
 
-The annihilator can be listed without hidden arithmetic once
-\(g=\gcd(y,N)\) is known:
+Once \(g=\gcd(y,N)\) is known, the annihilator has the explicit description
 
 \[
 \operatorname{Ann}_N(y)
@@ -369,12 +391,16 @@ The annihilator can be listed without hidden arithmetic once
 \tag{4.1}
 \]
 
-If \(1<g<N\), this computation has already factored \(N\).  Before that
-happens on a semiprime, \(g\) is either 1 or \(N\): the update is therefore
-either forced to zero or is an ordinary uniform residue.  The lower bound
-below does not hide a hard transition implementation.
+It need not, and in general cannot efficiently, be enumerated.  To sample it
+exactly, draw \(j\) uniformly from \(\{0,\ldots,g-1\}\) by fair-bit rejection
+and return \(jN/g\pmod N\).  The rejection loop terminates almost surely and
+uses expected \(O(\log N)\) fair bits and expected polynomial bit time.  If
+\(1<g<N\), computing \(g\) has already factored \(N\).  Before that happens
+on a semiprime, \(g\) is either 1 or \(N\): the update is therefore either
+forced to zero or is an ordinary uniform residue.  The lower bound below
+does not hide a hard transition implementation.
 
-## 5. Hidden-axis hitting and mixing lower bound
+## 5. Hidden-type hitting and mixing lower bound
 
 Let \(N=pq\) for distinct odd primes, and retain \(A_N\) from (2.1).  Its
 complement consists exactly of factor-bearing states.  The number of
@@ -437,10 +463,9 @@ h_N=p+q-2=\Theta_\kappa(\sqrt N),
 so (5.4) and (0.7) are both \(\Omega_\kappa(\sqrt N)\), exponential in the
 input bit length.
 
-This is the same geometric obstruction as local axis switching in (1.2):
-while one coordinate is a unit, the other is pinned to zero; changing a
-local axis requires a uniform proposal to hit a nonunit in an unknown CRT
-component.
+This is the local-type mismatch obstruction described after (1.3): while one
+coordinate is a unit, the other is pinned to zero, and reaching unequal CRT
+types requires a uniform proposal to hit a nonunit in an unknown component.
 
 ## 6. What remains open
 
@@ -452,18 +477,23 @@ The following mechanisms are not ruled out:
 
 - a JSV-style augmented state space of near-zero-product defects which joins
   the local axes without first proposing a nonunit residue;
-- a block heat bath or nonlocal arithmetic proposal with a proved
-  factor-free transition rule and rapid mixing;
+- a block heat bath, a modified coordinate-update scheme, or a nonlocal
+  arithmetic proposal with a proved factor-free transition rule and rapid
+  mixing;
+- an efficiently generated warm start whose law is not concentrated on the
+  unhelpful set \(A_N\);
 - a polynomial-size positive matching graph for zero-product witnesses with
   controlled multiplicity;
 - a globally filtered internal-edge graph, block code, or multiplication-
-  specific matching construction of the kind left open by P38 and F30;
+  specific matching construction of the kind left open by P38 and P42;
 - a direct classical spectral sampler not expressed as a Markov chain on
   \(\Omega_N\); or
 - another phase family whose positive lift has more connected local fibres.
 
 A retry is materially new only if it supplies one of these constructions
 with a symbolic all-stream polynomial bit/fair-bit bound, or proves a wider
-sampler theorem in a precisely named model.  Reusing uniform rejection,
-uniform-proposal independence Metropolis, or the random-scan single-coordinate
-heat bath is covered by F32 and this report.
+sampler theorem in a precisely named model.  For the exact kernels and starts
+analyzed there and here, reusing uniform rejection, uniform-proposal
+independence Metropolis, or the random-scan single-coordinate heat bath is
+covered by F32 and this report.  This does not cover new efficiently generated
+initial laws or modified coordinate kernels.

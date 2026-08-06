@@ -4,7 +4,7 @@ This is working state for nontrivial intermediate statements and the current syn
 
 ## Current synthesis
 
-The source material has been read in full. Twenty approach families have been opened, primarily from materially different mechanisms in `notes/Inspirations.md` with additional factor-trace, noncommutative, hidden-modulus metric, and non-gcd tensor-contraction routes; promoted narrow results and exact open gaps are tracked below and in the registry. The current frontier is a factor-free way to manufacture a fine metric hint, a useful class-group/isogeny orientation, a genuinely joint Hurwitz relation decoder, or an exactly contractible non-gcd factor-witness network beyond the separated common-basis matchgate obstruction. `notes/Zhihu.md` supplies background and motivation only.
+The source material has been read in full. Twenty-three approach families have been opened, primarily from materially different mechanisms in `notes/Inspirations.md` with additional factor-trace, noncommutative, hidden-modulus metric, non-gcd tensor-contraction, joint-amortization, and positive-sampling routes; promoted narrow results and exact open gaps are tracked below and in the registry. The current frontier is a factor-free sampler for the quadratic-energy/zero-product law, a genuinely joint decoder using typical nonzero relation data, a fine manufactured metric hint, a useful class-group/isogeny orientation, or an exactly contractible positive factor-witness network beyond the proved local wiring boundaries. `notes/Zhihu.md` supplies background and motivation only.
 
 ## Working claims
 
@@ -700,9 +700,11 @@ zero-mass-corrected initializer with negligible factor-class mass still has
 an \(\Omega(\sqrt N)\) hitting obstruction.
 
 **Remaining gap.** No factor-free polynomial-time sampler is known. F33
-tests the uniform zero-product lift and coordinate heat bath. F34 tests
-explicit algebra-automorphism proposals. Augmented, nonlocal, nonreversible,
-positive-matching, and other direct samplers remain open.
+has now become P43, promoting the uniform zero-product lift and closing its
+exact coordinate heat bath. F34 has become P44, closing factor-free explicit
+algebra-automorphism proposals. F35 tests low-degree finite-set bijections.
+Augmented, nonlocal, nonreversible, positive-matching, and other direct
+samplers remain open.
 
 ### C39 — closed matching logic survives, but its clean occurrence wire fails
 
@@ -725,3 +727,95 @@ composition. Contextual suppression of off-code states, projected auxiliary
 states, block/heterogeneous codes, fused or identified ports, global
 multiplicity balancing, and one multiplication-specific interleaved graph
 remain open.
+
+### C40 — quadratic energy has an exact positive lift, but coordinate heat bath is cold-start slow
+
+**Status:** promoted as P43 after two corrected historical failures, a clean
+whole-artifact hostile re-audit, and a fresh context-free proof-blind
+reconstruction.
+
+**Closest prior route and material difference.** C38/P41 identifies the
+one-coordinate quadratic-energy target but leaves its sampler abstract. C40
+lifts the target to the uniform positive relation \(kx=0\), allows both
+coordinates to be inspected, and tests the exact random-scan conditional
+sampler on that relation.
+
+**Verified boundary.** The uniform zero-product marginal is
+\(\gcd(k,N)/S(N)\), and the pair has proper-coordinate-gcd mass at least
+\(1/3\) on every odd composite. A uniform TV-\(1/12\) explicit pair sampler
+therefore gives complete all-input Las Vegas factoring. A fully uniform
+equal-positive-fibre matching graph and efficient short-output decoder would
+suffice, but no such graph is known.
+
+For a semiprime, exact local types are \(H,V,O\); useful pairs are precisely
+unequal CRT types, including cases with a local origin. The exact
+one-coordinate heat bath is implementable by fair-bit annihilator sampling,
+yet from \((1,0)\) its hitting expectation is \(\Omega(N/(p+q))\) and its
+worst-start mixing time is at least
+\(\lfloor N/(8(p+q-2))\rfloor\). Both are
+\(\Omega(\sqrt N)\) on balanced families.
+
+**Remaining gap.** Efficient warm starts, block/nonlocal/nonreversible or
+augmented kernels, positive matching encodings, and direct spectral samplers
+remain open. Prime-power geometry has valuation strata and is not collapsed
+to an axis label.
+
+### C41 — zero-product scheme automorphisms give a factor-or-invariant dichotomy
+
+**Status:** promoted as P44 after an amendment-verified hostile audit and a
+fresh context-free proof-blind reconstruction.
+
+**Closest prior route and material difference.** C40 studies local
+conditional updates. C41 allows arbitrary nonlocal adaptive compositions,
+but restricts each move to an explicit automorphism of the nodal coordinate
+algebra.
+
+**Verified boundary.** Over a field every node automorphism is a unit
+scaling with a preserve/swap axis bit. Over
+\(\mathbb Z/pq\mathbb Z\), differing local bits make an intrinsic first-jet
+entry a selective zero divisor, which is extracted from a division-free
+circuit and gcd-factored in polynomial time. If no entry factors, the
+orientations synchronize and the exact factor-free region is invariant
+pathwise under every adaptive mixture. Uniform zero-product pairs put more
+than one-half mass outside that region.
+
+**Remaining gap.** P45 now closes the low-formal-degree finite-set
+permutation escape. Characteristic-scale permutations, endomorphisms,
+noninvertible/stochastic or auxiliary/lifted kernels, accessible piecewise or
+rational models, useful warm starts, and nonsquarefree bases remain open.
+
+### C42 — low-degree finite-set bijections give a quantitative factor-or-invariant boundary
+
+**Status:** promoted as P45 after the original overclaim failed hostile audit,
+the amended whole artifact passed a fresh hostile re-audit, and a context-free
+proof-blind reconstruction succeeded.
+
+**Closest prior route and material difference.** C41/P44 classifies
+coordinate-ring automorphisms and reads only their intrinsic first jet. C42
+allows the semantically larger class of polynomial-induced bijections of the
+finite zero-product point set, but requires a public cap on the submitted
+exact formal degree so every axis restriction is accessible.
+
+**Verified boundary.** On a distinct semiprime, \(2D<\min(p,q)\) forces each
+local source axis wholly onto one target axis. Differing local orientations
+make an axis-restriction coefficient expose a factor; on the no-factor branch
+the orientations synchronize and preserve the exact factor-free region.
+For the unconditional terminal law of any uniformly bounded adaptive
+explicit-circuit run,
+
+\[
+\Pr(H)\ge
+\frac{2N-2}{(2p-1)(2q-1)}
+-d_{\rm TV}(\mu,\pi_N).
+\]
+
+The circuit monitor has expected polynomial overhead under one fixed degree
+cap and one fixed expected total encoding-length bound. A uniform or
+inverse-polynomial TV gap below \(1/2\) yields a Las Vegas
+distinct-semiprime splitter; pointwise \(\delta_N<1/2\) does not suffice.
+
+**Remaining gap.** Characteristic-scale succinct point permutations,
+noninvertible/stochastic or auxiliary/lifted kernels, accessible rational or
+piecewise maps, positive matching encodings, direct samplers, warm starts,
+and nonsquarefree geometry remain open. P45 supplies no complete all-input
+factoring algorithm.
