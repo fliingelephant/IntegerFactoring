@@ -4,7 +4,7 @@ This is working state for nontrivial intermediate statements and the current syn
 
 ## Current synthesis
 
-The source material has been read in full. Twenty-four approach families have been opened, primarily from materially different mechanisms in `notes/Inspirations.md` with additional factor-trace, noncommutative, hidden-modulus metric, non-gcd tensor-contraction, joint-amortization, and positive-sampling routes; promoted narrow results and exact open gaps are tracked below and in the registry. The current frontier is a factor-free sampler for the quadratic-energy/zero-product law, a genuinely joint decoder using typical nonzero relation data, a fine manufactured metric hint, a useful class-group/isogeny orientation, or an exactly contractible positive factor-witness network beyond the proved local wiring boundaries. `notes/Zhihu.md` supplies background and motivation only.
+The source material has been read in full. Twenty-five approach families have been opened, primarily from materially different mechanisms in `notes/Inspirations.md` with additional factor-trace, noncommutative, hidden-modulus metric, non-gcd tensor-contraction, joint-amortization, positive-sampling, and dissipative-dynamics routes; promoted narrow results and exact open gaps are tracked below and in the registry. The current frontier is a factor-free sampler for the quadratic-energy/zero-product law, a genuinely joint decoder using typical nonzero relation data, a fine manufactured metric hint, a useful class-group/isogeny orientation, or an exactly contractible positive factor-witness network beyond the proved local wiring boundaries. `notes/Zhihu.md` supplies background and motivation only.
 
 ## Working claims
 
@@ -950,3 +950,46 @@ source-side no-bias theorem. Nonlinear or Fourier-dense processing, implicit
 hidden-frequency search, correlated/nonuniform sources, canonical metric
 branching, curved bins, exact amplification, noisy ACD/HNP/Coppersmith
 decoding, and dissipative dynamics remain open.
+
+### C47 — bounded-degree actual-fibre bias has a sharp diffuse/constant boundary
+
+**Status:** promoted as P50 after the original hostile audit found a
+mathematical gap, a corrected fresh whole-artifact re-audit passed, and a
+context-free proof-blind reconstruction recovered the amended result.
+
+**Closest prior route and material difference.** C27--C29/P28--P31 restrict
+quaternion completions to residual-only rules or fixed menus. C47 allows the
+completion to inspect the actual uniformly sampled conic point and may use a
+bounded-degree rational branch or algebraic graph component. It therefore
+tests a genuine source-side bias rather than another independent collision
+ticket.
+
+**Verified boundary.** On the projective source conic, a degree-\(D\)
+completion produces a map into the rank-one Segre quadric. The pullback
+degrees of its image and row factors sum to at most \(2(D+1)\). Every
+locally nonconstant line branch consequently has fixed-line fibres of size
+at most \(2(D+1)\), and a \(B\)-branch selector has unconditional no-factor
+output subprobability at most
+
+\[
+ {2B(D+1)\over r-\chi_r}.
+\]
+
+The normalized-graph version uses the corresponding
+\(\mathcal O(1,1)\)-degree. Explicit binary forms of unequal reduced local
+degree reveal a factor through subresultants, and one public conic point gives
+an exact same-fibre uniform sampler with its full gcd trichotomy.
+
+The boundary is attained by a real degeneration. From a public pair set
+\(h=u_0^{-1}c_0\). Then \(c=uh\) gives a constant row at both hidden
+fields, while \(c=h\bar u\) gives a constant image at both. The synchronized
+degree-zero behavior need not expose a coefficient factor; the \(N=21\)
+matrix certificate has constant row \([0:1]\) modulo both primes.
+
+**Remaining gap.** P50 controls fixed/past-measurable targets on fresh calls,
+not equality of two maps on the same source. The explicit constant family may
+still carry a factor-asymmetric metric or nonlinear signal in its varying
+quaternion values. Implicit graphs, adaptive coefficient/minor systems,
+characteristic-scale degree, and piecewise, stochastic, canonical-metric, or
+dissipative completions remain open. Synchronized bias alone is not yet a
+useful manufactured hint.

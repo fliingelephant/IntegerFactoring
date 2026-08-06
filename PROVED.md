@@ -4817,3 +4817,222 @@ dynamics. The candidate, hostile audit, and context-free reconstruction are
 preserved under experiments/F39_inverse_metric_cloud_kill,
 experiments/F39_inverse_metric_cloud_audit, and
 experiments/F39_inverse_metric_cloud_reconstruct.
+
+## P50 — bounded-degree fibre completions are diffuse unless a line map degenerates, and synchronized constant degenerations exist
+
+**Status:** verifier-backed narrow classification and counterexample. The
+proof-only candidate required a mathematical amendment in its first hostile
+audit, passed a fresh whole-artifact re-audit after correction, and was then
+reconstructed from the statement and key ideas by a context-free agent. No
+computation or cross-family audit was used.
+
+Let \(N=pq\) for distinct odd primes, put
+\(A=\mathbb Z/N\mathbb Z\), and let
+
+\[
+ K=A[i],\qquad i^2=-1,qquad n(x+yi)=x^2+y^2.
+\]
+
+Fix \(R\in A^\times\). A source and completion satisfy
+
+\[
+ u=x+yi,\quad n(u)=-R,qquad
+ c=z+wi,\quad n(c)=R.
+\]
+
+In the quaternion algebra with \(i^2=j^2=-1\) and \(ji=-ij\), the element
+\(\beta=u+cj\) has norm zero. Over either CRT field
+\(k=\mathbb F_r\), \(r\in\{p,q\}\), its nonzero split-matrix image has rank
+one and therefore has intrinsic image and row lines in \(\mathbb P^1(k)\).
+Write \(\chi_r=(-1/r)\). The affine source conic has exactly
+
+\[
+ |C_r^-|=#\{(x,y):x^2+y^2=-R\}=r-\chi_r.
+\tag{50.1}
+\]
+
+Consider a rational completion branch represented on the projective source
+conic
+
+\[
+ \bar C^-:X^2+Y^2=-RT^2
+\]
+
+by common-degree homogeneous forms \((Z,W,H)\) of degree \(d\le D\), with
+\(Z^2+W^2=RH^2\) in the function field. Clearing denominators gives
+
+\[
+ \widetilde\beta=(X+iY)H+T(Z+iW)j.
+\tag{50.2}
+\]
+
+Its four matrix coordinates are sections of
+\(\mathcal O_{\bar C^-}(d+1)\). After cancelling their common base divisor,
+the rational map extends across poles, base points, and points at infinity to
+the rank-one Segre quadric
+
+\[
+ Q\simeq\mathbb P^1_{\rm image}\times\mathbb P^1_{\rm row}.
+\]
+
+Because \(\mathcal O_Q(1)=\mathcal O_Q(1,1)\) and
+\(\deg\mathcal O_{\bar C^-}(1)=2\), the two factor maps obey
+
+\[
+ \deg L_{m image}^*\mathcal O(1)
+ +\deg L_{m row}^*\mathcal O(1)
+ \le 2(d+1).
+\tag{50.3}
+\]
+
+Hence every nonconstant intrinsic row or image map has, with multiplicity,
+at most
+
+\[
+ \boxed{2(D+1)}
+\tag{50.4}
+\]
+
+preimages of any fixed local line. This remains true for inseparable maps.
+If a current-point selector may choose among \(B\) displayed branches, each
+locally nonconstant for the line under test, then for every fixed line
+\(\ell\),
+
+\[
+ \boxed{
+ \Pr[\text{no factor is output and the selected line is }\ell]
+ \le {2B(D+1)\over r-\chi_r}.}
+\tag{50.5}
+\]
+
+This is an unconditional output subprobability, not a probability conditioned
+on the no-factor event. A denominator that is a nonunit is already a factor
+ticket and is accounted for outside the displayed output.
+
+The same argument is intrinsic for an algebraic graph component
+\(\Gamma_i\subset\bar C^-\times\bar C^+\). On its normalization let
+
+\[
+ \delta_i=\deg\nu_i^*\mathcal O(1,1).
+\]
+
+Every nonconstant row or image map on that component has fibres of size at
+most \(\delta_i\); selectable components contribute at most
+\(\sum_i\delta_i\). The exact exception is a component dominant over the
+source on which the tested line map is constant. There the relevant section
+vanishes identically, so a point-count bound is impossible. Vertical
+components instead lie over a finite exceptional source set.
+
+The atom theorem supports fixed targets, past-measurable targets tested on a
+fresh independent source call, fresh-call collisions, and finite menus after
+the corresponding union bound. It gives no same-source comparison theorem:
+two nonconstant maps can agree identically while both marginals are diffuse.
+
+There is also a precise public detector for one explicit representation. If
+a composed projective map is supplied as homogeneous binary forms
+
+\[
+ [P(S,T):Q(S,T)]
+\tag{50.6}
+\]
+
+of declared degree \(d\), let \(G_r=\gcd(P_r,Q_r)\). Its reduced local
+degree is \(d_r=d-\deg G_r\). If \(d_p\ne d_q\), the homogeneous
+subresultant sequence has an index whose coefficients vanish in exactly one
+CRT field; the gcd of such a coefficient with \(N\) is a proper factor.
+Zero-pair and one-sided-zero-form cases are exposed directly by coefficient
+gcds. Fraction-free subresultants give polynomial bit complexity. This
+statement is only for explicitly supplied binary forms; it does not assert
+that an implicit graph or selector admits a semantics-preserving polynomial
+eliminant.
+
+Uniform sampling from either conic fibre is nevertheless exact once one
+public point \((a,b)\), \(a^2+b^2=\kappa\), is known. For uniform
+\((s,t)\in A^2\), set
+
+\[
+\begin{aligned}
+ X&=a(s^2-t^2)-2bst,\\
+ Y&=b(s^2-t^2)+2ast,\\
+ H&=s^2+t^2.
+\end{aligned}
+\tag{50.7}
+\]
+
+If \(\gcd(H,N)=1\), return \((X/H,Y/H)\); if the gcd is proper, return the
+factor; if it is \(N\), reject and resample. Conditional on direct
+acceptance the returned point is exactly uniform, and the exact direct-
+acceptance probability is
+
+\[
+ \boxed{
+ \prod_{r\in\{p,q\}}
+ { (r-1)(r-\chi_r)\over r^2}.}
+\tag{50.8}
+\]
+
+Indeed each affine point has \(r-1\) nonzero homogeneous parameter
+representatives over \(\mathbb F_r\), and CRT multiplies both counts and
+preimage multiplicities.
+
+Most importantly, the diffuse-or-visible hope fails at the constant-component
+boundary. From one public source/completion pair \((u_0,c_0)\), define
+
+\[
+ h=u_0^{-1}c_0,qquad n(h)=-1.
+\tag{50.9}
+\]
+
+For every source \(u\), the completion \(c=uh\) gives
+
+\[
+ \beta=u(1+hj),
+\tag{50.10}
+\]
+
+so left multiplication by the invertible local matrix of \(u\) leaves a
+constant row line at both CRT primes. Dually, \(c=h\bar u\) gives
+
+\[
+ \beta=(1+hj)u,
+\tag{50.11}
+\]
+
+and a constant image line at both primes. These are explicit
+source-dominating constant graph components, not merely abstract exceptional
+cases.
+
+For a concrete certificate, take
+
+\[
+ N=21,quad R=1,quad u_0=2-4i,quad c_0=-1,quad h=2+4i.
+\]
+
+Then \(n(u_0)=-1\), \(n(c_0)=1\), and \(u_0h=c_0\) modulo \(21\). With
+the split representation determined by \(s=2,t=4\), the fixed factor
+\(\alpha=1+hj=1+2j+4ij\) satisfies
+
+\[
+ \rho(u\alpha)=
+ \begin{pmatrix}0&2y\\0&2x\end{pmatrix}
+\tag{50.12}
+\]
+
+for \(u=x+yi\), hence has constant row \([0:1]\) modulo both \(3\) and
+\(7\), with no coefficient factor forced.
+
+The synchronized constant bias is neutral only for the audited direct
+equality/stabilizer and unequal-reduced-degree extractors: both hidden fields
+see the same constant degree-zero behavior. P50 does not rule out a metric or
+nonlinear statistic of the varying quaternion values, a factor-asymmetric
+use of the constant family, same-source joint algebraic tests, implicit
+graphs, unbounded or characteristic-scale degree, or piecewise, stochastic,
+canonical-metric, and dissipative completions. It is neither a factoring
+lower bound nor a bare-\(N\) factoring algorithm.
+
+The candidate, failed historical audit, corrected clean re-audit, and
+context-free reconstruction are preserved under
+experiments/F40_fibre_completion_bias_kill,
+experiments/F40_fibre_completion_bias_audit,
+experiments/F40_fibre_completion_bias_reaudit, and
+experiments/F40_fibre_completion_bias_reconstruct.

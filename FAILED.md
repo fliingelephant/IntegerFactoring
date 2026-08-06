@@ -1690,3 +1690,52 @@ nonuniform, or dissipative source; a curved/diagonal metric statistic with a
 new discrepancy theorem; exact symbolic amplification of the tiny bias; or
 a quantitatively valid ACD/HNP/Coppersmith reduction. Merely adding
 polynomially many raw means or rectangular bins is covered by P49.
+
+## X44 — bounded-degree fibre-dependent completion is not uniformly diffuse or coefficient-visible
+
+**Status:** promoted as P50 after the original hostile audit required a
+mathematical amendment, a fresh whole-artifact re-audit passed, and a
+context-free proof-blind reconstruction recovered the corrected theorem.
+
+**Family:** F14.
+
+**Classification:** counterexample to the proposed dichotomy that every
+bounded-degree rational or algebraic completion depending on the actual conic
+source point must either have \(O(D/r)\) row/image atoms or reveal a factor
+through a visible local-degree discrepancy. This is not a lower bound for
+fibre-dependent, metric, or nonlinear extraction.
+
+**Positive survivor.** On every locally nonconstant degree-\(D\) rational
+line branch, the Segre pullback degree gives the sharp usable bound
+
+\[
+ \Pr[\text{no factor and selected fixed line}]
+ \le {2B(D+1)\over r-\chi_r}
+\]
+
+for a \(B\)-branch selector. The componentwise graph version replaces the
+numerator by the sum of the relevant \(\mathcal O(1,1)\)-degrees. Unequal
+local reduced degrees of explicitly supplied binary forms are publicly
+visible through homogeneous subresultants. A public point also gives an
+exact uniform conic sampler with direct-acceptance probability
+
+\[
+ \prod_{r\in\{p,q\}}{(r-1)(r-\chi_r)\over r^2}.
+\]
+
+**Exact obstruction.** Given one public source/completion pair, put
+\(h=u_0^{-1}c_0\), so \(n(h)=-1\). The completion \(c=uh\) makes
+\(u+cj=u(1+hj)\) have a constant row at both CRT primes; the dual completion
+\(c=h\bar u\) makes \((1+hj)u\) have a constant image at both primes. Thus
+maximal bias can live on a source-dominating constant graph component while
+both local degrees agree at zero. The explicit \(N=21\) instance gives
+matrix \(\left(\begin{smallmatrix}0&2y\\0&2x\end{smallmatrix}\right)\),
+whose row is \([0:1]\) modulo both hidden primes.
+
+**What would make a retry materially new.** A factor-asymmetric metric or
+nonlinear use of this synchronized constant family; a same-source joint
+algebraic detector proved directly rather than inferred from marginal atoms;
+an implicit-graph invariant not reduced to the explicit binary-form theorem;
+or a characteristic-scale, piecewise, stochastic, canonical-metric, or
+dissipative completion. Another bounded-degree nonconstant branch followed
+by a fixed/fresh target test is covered by P50.
