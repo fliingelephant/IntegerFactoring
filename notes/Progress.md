@@ -549,3 +549,36 @@ reconstruction recovered the theorem through an independent slice-pencil
 argument. This closes only the separated common-role-basis matchgate route.
 Fused cells, high-arity equality, edge-dependent gauges, other Pfaffian
 identities, and non-matchgate exact contractions remain open.
+
+### C34 — output/dual faithful quotients have only public scale
+
+**Status:** promoted as P37 after a corrected hostile re-audit and a fresh
+proof-blind reconstruction.
+
+**Closest prior route and material difference.** C32/P35 closes the public
+zero-syndrome and shared-output Gram constructions but leaves the output
+lattice, scaled dual, and their metric quotients open. C34 treats those
+objects and the explicit fixed-completion cyclic tail.
+
+**Verified boundary.** For any integer matrix, Smith form either exposes a
+proper factor or leaves \(1\)- and \(N\)-gcd blocks. The common primitive
+\(1\)-block is public; orthogonal projection off it makes each output and
+transpose-side local lattice exactly \(p\), \(q\), or \(N\) times one
+public projected ambient lattice. This does not orthogonally split the
+original full lattice.
+
+For a shared-completion batch satisfying the maximal-minor surjectivity
+criterion, the nontrivial output tail is cyclic. On its unfactored branch it
+is \(\mathbb ZC_0+N\mathbb ZD\), its faithful quotient is rank one, and
+its scaled rank-two dual is only a rotation. Coordinate-gcd extraction from
+\(aC_0+NbD\) is exactly the public scalar ticket \(\gcd(N,a)\).
+Uniform cyclic targets and marginally uniform completion lines give only
+\(1/p+1/q-2/N\) and \(O(1/p+1/q)\) one-factor events.
+
+**Verification result and remaining gap.** The first blind reconstruction
+correctly rejected an accidentally over-strengthened Smith statement; the
+failed attempt is preserved. A new blind agent reconstructed the exact
+\(1\)-/\(N\)-block theorem and every cyclic identity independently. Biased
+completions/targets, nonlinear combinations, and metric coordinate-gcd
+selection in the original full lattice remain open. F29 now tests the latter
+in the independent uniform local-subspace model.

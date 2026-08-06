@@ -1077,3 +1077,57 @@ Pfaffian/sub-Pfaffian construction with exact pinned counts and polynomial
 bit growth; or a non-matchgate tractable tensor family containing the full
 pinned multiplication network.  Reusing the separated COPY\(_3\)--AND\(_3\)
 pair under a common role basis is covered by P36.
+
+## X31 — public quotient-scale and uniform cyclic metric manufacture
+
+**Status:** promoted as P37 after a corrected hostile re-audit and a fresh
+proof-blind reconstruction.
+
+**Family:** F19.
+
+**Classification:** evidence against the exact auxiliary mechanism that the
+public output lattice, scaled dual, their faithful orthogonal quotients, or
+the fixed-completion cyclic tail automatically manufacture a hidden
+\(p/q\) metric scale.  This is not a failure of full-lattice SVP/CVP,
+biased arithmetic samples or targets, nonlinear combinations, or arbitrary
+public lattices built from \(N\).
+
+**Closest prior route and material difference.** X29/P35 closes the public
+zero-syndrome kernel and shared-output high-dimensional Gram amortization,
+but explicitly leaves the output and scaled-dual lattices open.  X31 treats
+those objects, their public exact-direction quotients, and the smallest
+fixed-completion output tail.
+
+**Exact obstruction.** Smith form either exposes a proper factor or has only
+\(1\)- and \(N\)-gcd blocks.  Removing the common public primitive
+\(1\)-block orthogonally gives exactly \(p\), \(q\), and \(N\)
+times one public projected lattice, on both output and transpose sides.
+The original full lattice is not orthogonally split by this statement.
+
+Under a shared completion and the explicit maximal-minor surjectivity
+condition, the output tail is
+
+\[
+L_C=O_C=\mathbb ZC_0+N\mathbb ZD
+\]
+
+on the unfactored branch.  It has one public exact direction; its faithful
+quotient is one-dimensional and its scaled rank-two dual is only a rotation.
+Coordinate divisibility of
+\(v=aC_0+NbD\) is exactly \(\gcd(N,a)\).  Uniform cyclic CVP targets
+give probability \(1/p+1/q-2/N\), and marginally uniform nonisotropic
+completion lines give only \(O(1/p+1/q)\) probability that any shortest
+vector exposes a factor on balanced odd semiprimes.
+
+**Verification caveat.** A first blind package falsely required every
+nonzero Smith invariant to be coprime to \(N\); \(A=(N)\) refuted it.
+That failed artifact is preserved and was replaced by a genuinely fresh
+reconstruction of the exact effective-rank \(1\)-/\(N\)-block theorem.
+
+**What would make a retry materially new.** A fully specified biased
+completion or affine-target law; an inverse-polynomial coordinate-gcd theorem
+for a polynomial-time optimizer in the original nonorthogonally coupled full
+lattice; a batch without shared completion whose growing informative rank is
+proved; or a nonlinear metric observable.  Reusing determinant, finite
+quotient, projected shape, uniform cyclic targets, or uniform completion-line
+SVP is covered by P37.

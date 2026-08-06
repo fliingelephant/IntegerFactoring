@@ -2928,3 +2928,190 @@ reconstruction are preserved under
 `experiments/F26_holographic_factor_network_audit`,
 `experiments/F26_holographic_factor_network_reaudit`, and
 `experiments/F26_holographic_factor_network_reconstruct`.
+
+## P37 — public output/dual quotients have only public scale, and the fixed-completion tail is cyclic
+
+**Status:** promoted.
+
+**Verification record:** the CRT, Smith-block, output/transpose faithful
+quotient, fixed-batch, cyclic normal-form, duality, scalar-gcd, SVP/CVP,
+uniform-line, edge-case, and bit-complexity claims passed a corrected hostile
+re-audit and a strict proof-blind reconstruction.  A first blind
+reconstruction prompt incorrectly strengthened the Smith branch by requiring
+every nonzero invariant to be coprime to \(N\); it was rejected on
+\(A=(N)\), is preserved, and supplies no evidence.  A fresh reconstruction
+of the exact \(1\)-/\(N\)-block theorem succeeded.  No cross-family audit
+has run.
+
+Let \(N=pq\) for distinct primes and
+\(A\in\mathbb Z^{t\times d}\).  Define
+
+\[
+\Lambda_{\rm out}(A,r)=A\mathbb Z^d+r\mathbb Z^t,
+\qquad
+\Lambda_{\rm dual}(A,r)=r\mathbb Z^d+A^{\mathsf T}\mathbb Z^t.
+\]
+
+Both are exact CRT intersections of their \(p\)- and \(q\)-local
+versions.  Subtracting any vector of the public \(N\)-lattice preserves both
+local cosets, so CVP cannot change whether a target belongs to exactly one
+local output module.  If
+\(s_r=\operatorname{rank}_{\mathbb F_r}(A\bmod r)\), a target uniform
+modulo \(N\) has exact one-local output probability
+
+\[
+p^{-(t-s_p)}+q^{-(t-s_q)}
+-2p^{-(t-s_p)}q^{-(t-s_q)},
+\]
+
+with the analogous formula in dimension \(d\) for the transpose side.
+The scaled Euclidean dualities are
+
+\[
+N\Lambda_{\rm out}(A,N)^*=K_N(A^{\mathsf T}),
+\qquad
+NK_N(A)^*=\Lambda_{\rm dual}(A,N).
+\]
+
+Take integer Smith form
+\(UAV=\operatorname{diag}(\sigma_1,\ldots,\sigma_\rho,0,\ldots)\)
+and put \(\delta_i=\gcd(\sigma_i,N)\).  A value
+\(1<\delta_i<N\) is already a proper factor.  Otherwise the divisibility
+chain gives a block of \(1\)'s followed by a block of \(N\)'s.  Let
+\(u\) be the number of \(1\)'s; the later nonzero Smith entries are
+divisible by \(N\), not asserted coprime to it.  Define the public primitive
+exact directions
+
+\[
+E_{\rm out}=U^{-1}(\mathbb Z^u\oplus0),
+\qquad
+E_{\rm dual}=V^{-\mathsf T}(\mathbb Z^u\oplus0).
+\]
+
+Then, simultaneously for \(r=p,q,N\),
+
+\[
+\Lambda_{\rm out}(A,r)=E_{\rm out}+r\mathbb Z^t,
+\qquad
+\Lambda_{\rm dual}(A,r)=E_{\rm dual}+r\mathbb Z^d.
+\]
+
+Orthogonal projection off either exact-direction span therefore gives
+literally \(r\) times one fixed public projected ambient lattice.  The
+quotient dimensions are \(t-u\) and \(d-u\), and their covolumes are
+
+\[
+\frac{r^{t-u}}{\operatorname{covol}(E_{\rm out})},
+\qquad
+\frac{r^{d-u}}{\operatorname{covol}(E_{\rm dual})}.
+\]
+
+These are exact quotient identities, not an orthogonal splitting of the
+original integer lattice; full-lattice metric coupling remains open.
+
+For a batch with columns
+\(\beta_i=(x_i,y_i,z,w)^{\mathsf T}\) sharing one completion, let
+\(T\) have columns \((x_i,y_i,1)^{\mathsf T}\).  Surjectivity of
+\(T\) over \(\mathbb Z/N\) is equivalent to
+
+\[
+\gcd(N,\Delta_3(T))=1,
+\]
+
+where \(\Delta_3\) is the gcd of all maximal minors.  Under this condition
+the output lattice splits as
+
+\[
+\mathbb Z^2\oplus O_C,
+\qquad
+O_C=(z,w)\mathbb Z+N\mathbb Z^2.
+\]
+
+For \(C=(z,w)\ne0\), write
+\(g=\gcd(z,w)>0\), \(h=\gcd(g,N)\), \(C_0=C/g\), and choose
+\(D\) with \(\det(C_0,D)=1\).  The determinant-congruence lattice
+
+\[
+L_C=\{v:wv_1-zv_2\equiv0\pmod N\}
+\]
+
+has the exact normal forms
+
+\[
+L_C=\mathbb ZC_0+\frac Nh\mathbb ZD,
+\qquad
+O_C=h\mathbb ZC_0+N\mathbb ZD,
+\]
+
+with determinants \(N/h\) and \(Nh\).  They are equal exactly when
+\(h=1\), while \(1<h<N\) already exposes a factor and \(h=N\) makes
+\(L_C=\mathbb Z^2\).  Quarter rotation \(R\) gives
+
+\[
+NO_C^*=R(L_C),
+\qquad
+NL_C^*=R(O_C).
+\]
+
+On the unfactored \(h=1\) branch every public vector is uniquely
+
+\[
+v=aC_0+NbD,
+\qquad
+\gcd(N,v_1,v_2)=\gcd(N,a),
+\]
+
+where local output-line membership of an ambient
+\(\alpha C_0+\beta D\) is instead \(r\mid\beta\).  Thus the
+coordinate-gcd event is one explicit public scalar ticket, not a hidden
+determinant scale.  If \(\lVert C_0\rVert^2<N\), the complete shortest
+set is \(\{\pm C_0\}\).  Projecting off \(C_0\) leaves the rank-one
+lattices
+
+\[
+\frac r{\lVert C_0\rVert}\mathbb Z
+\quad(r=p,q,N),
+\]
+
+and the two-dimensional scaled dual is only the rotation
+\(NL_C^*=R(L_C)\).
+
+A target uniform in the cyclic quotient has exact one-local CVP probability
+
+\[
+\frac1p+\frac1q-\frac2N,
+\]
+
+independent of the chosen closest-vector tie.  If
+\(p<q\le\kappa p\) are distinct odd primes and the completion line is
+marginally uniform on
+
+\[
+\mathcal S_r=
+\{[x:y]\in\mathbb P^1(\mathbb F_r):x^2+y^2\ne0\},
+\qquad
+|\mathcal S_r|=r-\left(\frac{-1}{r}\right),
+\]
+
+then the probability that **any** shortest vector has a proper coordinate
+gcd is \(O(1/p+1/q)\).  The proof divides a bad shortest vector by its
+factor, uses the planar Hermite bound to leave only finitely many primitive
+integer directions, proves the opposite-prime reduction is nonzero, and
+handles isotropic reductions, collisions, ties, and small primes.  Only the
+two marginals are used.  This hypothesis is not supplied by P30's
+conditional row/image-line theorem.
+
+All Smith, gcd, minor, projection, and fixed-dimensional lattice operations
+have deterministic polynomial bit complexity.  P37 proves no factoring
+algorithm and no general lattice lower bound.  Biased completions or targets,
+batches without the fixed-completion/surjective-\(T\) hypotheses, nonlinear
+combinations, and coordinate-gcd optimization in the original
+nonorthogonally coupled full lattice remain open.
+
+The candidate, first audit, fresh re-audit, rejected over-strengthened blind
+attempt, and successful corrected reconstruction are preserved under
+`experiments/F27_public_output_dual_metric_kill`,
+`experiments/F27_public_output_dual_metric_audit`,
+`experiments/F27_public_output_dual_metric_reaudit`,
+`experiments/F27_public_output_dual_metric_reconstruct`, and
+`experiments/F27_public_output_dual_metric_reconstruct_corrected`.
