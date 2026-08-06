@@ -6310,3 +6310,435 @@ hashes are, respectively,
 `2a667261e61979aca3b0ba11b7605b750bb18bff9cb8274c318782cadc9adce2`,
 `0cfb9a9ab5588ab6bba28324bebb9d2469684c3fb4770bf538df71cf6e198d53`,
 and `387ebc3980863938eacdb0653d3ecc0c828181b5fc8c6932dff9b27aa437061d`.
+
+## P57 — ordinary Dickson traces have four exact index aliases, while coherent mixed roots remain open
+
+**Status:** promoted narrow promise theorem and method classification. The
+proof-only candidate passed a clean hostile audit and a fresh context-free
+proof-blind reconstruction. No computation or cross-family audit was used.
+
+Let
+
+\[
+ N=pq,\qquad 3\le p<q
+\]
+
+for distinct odd primes, put
+
+\[
+ R=\mathbb Z/N\mathbb Z,\qquad
+ e=N-1,\qquad t=p+q-2,\qquad g=q-p,
+\]
+
+and let
+
+\[
+ L=\operatorname{lcm}(p-1,q-1).
+\]
+
+Define the Dickson polynomials by
+
+\[
+ D_0(X)=2,\qquad D_1(X)=X,\qquad
+ D_{j+1}(X)=XD_j(X)-D_{j-1}(X),\qquad D_{-j}=D_j.
+\]
+
+For every commutative ring, every unit \(a\), and every integer \(j\),
+
+\[
+ \boxed{D_j(a+a^{-1})=a^j+a^{-j}.}
+ \tag{57.1}
+\]
+
+Both sides have the same two initial values and recurrence, which proves the
+identity without any field or characteristic assumption. Write
+
+\[
+ T(a)=a+a^{-1},\qquad F_j(a)=D_j(T(a)).
+\]
+
+The exact exponent relations are
+
+\[
+ e-t=(p-1)(q-1),
+\]
+
+\[
+ e-g=(p-1)(q+1),\qquad
+ e+g=(q-1)(p+1).
+\]
+
+Consequently, for every unit \(a\in R^\times\),
+
+\[
+ a^e=a^t,
+\]
+
+while
+
+\[
+ a^e\equiv a^g\pmod p,\qquad
+ a^e\equiv a^{-g}\pmod q.
+\]
+
+Taking traces gives the universal promised-family identity
+
+\[
+ \boxed{F_e(a)=F_t(a)=F_g(a).}
+ \tag{57.2}
+\]
+
+Thus the public pair
+
+\[
+ x=a+a^{-1},\qquad y=a^{N-1}+a^{1-N}
+\]
+
+satisfies both
+
+\[
+ y=D_{p+q-2}(x)=D_{q-p}(x)\pmod N.
+\]
+
+The unsymmetrized value \(a^e\) retains only the same-sign equality
+\(a^e=a^t\).
+
+**Complete trace-alias classification.** For an odd prime \(r\),
+
+\[
+ z^u+z^{-u}=z^v+z^{-v}
+ \quad\text{for every }z\in\mathbb F_r^\times
+\]
+
+holds exactly when
+
+\[
+ u\equiv v\pmod{r-1}
+ \quad\text{or}\quad
+ u\equiv-v\pmod{r-1}.
+\]
+
+Indeed, the functions \(z\mapsto z^j\), indexed modulo \(r-1\), are
+linearly independent over \(\mathbb F_r\): summing a relation after
+multiplication by \(z^{-k}\) isolates its \(k\)-th coefficient. Equality
+of the two traces therefore makes the two inversion orbits equal. This proof
+also covers self-inverse exponent classes and \(r=3\); the possible
+coefficient \(2\) is nonzero because \(r\) is odd.
+
+CRT lets the two local unit coordinates vary independently. Hence, for any
+integers \(u,v\),
+
+\[
+ F_u=F_v\text{ on }R^\times
+\]
+
+if and only if there are independent signs
+\(\epsilon_p,\epsilon_q\in\{\pm1\}\) such that
+
+\[
+ u\equiv\epsilon_pv\pmod{p-1},\qquad
+ u\equiv\epsilon_qv\pmod{q-1}.
+\]
+
+Applying this to \(v=e\) yields the full alias class
+
+\[
+ \boxed{
+ F_m=F_e\text{ on }R^\times
+ \iff
+ m\equiv t,-t,g,\text{ or }-g\pmod L.}
+ \tag{57.3}
+\]
+
+Coincidences among these four classes are allowed; there is no fifth class.
+For comparison,
+
+\[
+ a^m=a^e\text{ for every }a\in R^\times
+ \iff m\equiv e\equiv t\pmod L.
+ \tag{57.4}
+\]
+
+The gap \(g\) is also in this unsymmetrized power class exactly when
+\(q=2p-1\). An arbitrary alias class plus an unknown multiple of \(L\) is
+not a short integer witness.
+
+**Both exact short representatives factor.** Given a candidate exact gap
+\(h=q-p\), square-test
+
+\[
+ h^2+4N=S^2
+\]
+
+and verify
+
+\[
+ p'=(S-h)/2,\qquad q'=(S+h)/2,\qquad p'q'=N.
+\]
+
+Given a candidate exact trace index \(u=p+q-2\), put \(S=u+2\),
+square-test
+
+\[
+ S^2-4N=H^2,
+\]
+
+and verify
+
+\[
+ p'=(S-H)/2,\qquad q'=(S+H)/2,\qquad p'q'=N.
+\]
+
+Exact square root, parity, positivity, and product checks make both decoders
+deterministic polynomial-bit verification procedures for polynomial-bit
+candidates. False candidates are harmless; they are accepted only if they
+nevertheless provide a genuine factorization.
+
+**Why the displayed many-base identities do not localize an index.** The
+universal Dickson identities
+
+\[
+ D_j(D_k(X))=D_{jk}(X),
+\]
+
+\[
+ D_{u+v}(X)+D_{u-v}(X)=D_u(X)D_v(X)
+ \tag{57.5}
+\]
+
+imply, for units \(a,b\),
+
+\[
+ T(a^k)=D_k(T(a)),\qquad
+ F_e(a^k)=D_k(F_e(a)),
+\]
+
+\[
+ T(a)T(b)=T(ab)+T(ab^{-1}),
+\]
+
+\[
+ F_e(a)F_e(b)=F_e(ab)+F_e(ab^{-1}).
+\]
+
+The unsymmetrized map \(a\mapsto a^e\) is a homomorphism. Powers,
+products, repeated bases, and chosen bases therefore instantiate the same
+power map or trace function. More generally, an adaptive procedure that
+chooses public units from its preceding public residues and then evaluates
+ring expressions in \(T(a_i),F_e(a_i)\) receives exactly the same transcript
+after replacing \(e\) by any alias in (57.3). This is exact
+nonidentifiability inside the trace-function interface. It is not an
+information-theoretic or computational lower bound for algorithms that
+inspect the explicit ring coordinates in other ways.
+
+**Shifted traces isolate the surviving coherent-root problem.** Fix one
+unit and write
+
+\[
+ X=T(a),\qquad Y=D_e(X),\qquad K=D_k(X),
+\]
+
+\[
+ A=D_{e+k}(X),\qquad B=D_{e-k}(X).
+\]
+
+Then
+
+\[
+ A+B=YK,
+\]
+
+\[
+ AB=Y^2+K^2-4.
+\]
+
+Thus \(A,B\) are the two known roots of
+
+\[
+ P_k(Z)=Z^2-YKZ+(Y^2+K^2-4).
+ \tag{57.6}
+\]
+
+The values
+
+\[
+ C=D_{g+k}(X),\qquad D=D_{g-k}(X)
+\]
+
+have the same sum and product. Their ordering agrees with \((A,B)\) modulo
+\(p\) and is reversed modulo \(q\); they are precisely the two CRT-mixed
+roots of (57.6). First screen \(\gcd(A-B,N)\). A proper gcd already
+factors. If \(A-B\) is a unit, producing either mixed root gives, for
+example,
+
+\[
+ \gcd(C-A,N)\in\{p,q\}.
+ \tag{57.7}
+\]
+
+If \(A-B\) vanishes in both fields, that instance has no orientation.
+Therefore a quadratic formula or symmetric resultant does not manufacture
+the mixed root: it only returns the two synchronized global roots already
+known. Polynomially many quadratics share a coherent hidden orientation, so
+a genuinely joint mixed-root selector remains open; it is not excluded by
+the trace-interface theorem.
+
+The ordinary lucky gcds also remain live. For example,
+
+\[
+ A-B=(a^e-a^{-e})(a^k-a^{-k}),
+\]
+
+so \(Y^2-4\), \(K^2-4\), and \(A-B\) can split special inputs or
+bases. No inverse-polynomial all-input lower bound for these events has been
+proved.
+
+**Derivatives and first lifts are genuinely additional data.** Over
+\(\mathbb Z[X]\),
+
+\[
+ (X^2-4)D_m'(X)=m(D_{m+1}(X)-D_{m-1}(X)),
+ \tag{57.8}
+\]
+
+\[
+ (X^2-4)D_m'(X)^2=m^2(D_m(X)^2-4).
+ \tag{57.9}
+\]
+
+The public derivative \(D_e'\) is computable and, through (57.8), encodes
+one known shifted-root orientation. Equality of \(D_e\) and \(D_g\) as
+functions on the finite trace set does not imply equality of their formal
+derivatives. The missing object is a hidden-short-alias derivative or an
+independent comparator that orients it against the public one. Neither
+hidden prime divides \(g\); \(q\nmid t\), but \(p\mid t\) can occur, so
+division by a candidate index is not uniformly valid.
+
+Let \(\widetilde a\) be a fixed unit lift modulo \(N^2\), let
+
+\[
+ \varphi=(p-1)(q-1)=e-t,
+\]
+
+and put
+
+\[
+ Q_{\widetilde a}
+ =\frac{\widetilde a^\varphi-1}{N}\pmod N.
+\]
+
+Then
+
+\[
+ \boxed{
+ T(\widetilde a^e)-T(\widetilde a^t)
+ \equiv
+ NQ_{\widetilde a}
+ (\widetilde a^t-\widetilde a^{-t})
+ \pmod{N^2}.}
+ \tag{57.10}
+\]
+
+This discrepancy is lift-dependent. Replacing
+\(\widetilde a\) by \(\widetilde a(1+Nh)\) changes the quotient by
+
+\[
+ Q_{\widetilde a(1+Nh)}
+ \equiv Q_{\widetilde a}+\varphi h\pmod N.
+\]
+
+The variations are coherent, but neither \(Q_{\widetilde a}\) nor the
+factor-determining exponent \(\varphi\) is supplied. Pooling these first
+lifts is a materially new route, not a consequence of the mod-\(N\) alias
+and not ruled out here.
+
+**Interval and representation accounting.** On balanced semiprimes the
+useful indices can still occupy an interval of cardinality
+\(2^{\Theta(\log N)}\); on unbalanced semiprimes they may be
+\(\Theta(N)\). Ordinary BSGS over an \(H\)-element interval costs
+\(\Theta(\sqrt H)\) group operations. Binary-index Dickson evaluation is
+cheap, but expanding \(D_m\), emitting its coefficients, or forming a
+generic dense resultant can cost \(\Omega(m)\). A polynomial-size metric
+candidate list would already suffice via the verified discriminant decoders,
+but no such list is manufactured.
+
+**Opaque quotient-by-inversion boundary.** Let \(\ell\) be an odd prime
+and \(E\) uniform in \(\mathbb F_\ell\). In each of \(K\) independently
+random-encoded tags, expose inversion-orbit handles
+
+\[
+ [0],\qquad[1],\qquad[E],\qquad [z]=\{z,-z\}.
+\]
+
+Allow a scalar call \([u]\mapsto[cu]\), or an addition-pair call
+
+\[
+ [u],[v]\mapsto\{[u+v],[u-v]\},
+\]
+
+with at most \(Q\) calls in total and an output list of at most \(M\)
+residues. If \(q_i\) calls occur in tag \(i\), then
+
+\[
+ \boxed{
+ \Pr(\exists h\text{ output}:h=\pm E)
+ \le
+ \min\left(1,{2M+B\over\ell}\right),}
+ \tag{57.11}
+\]
+
+where
+
+\[
+ B=2\sum_i\binom{2q_i+3}{2}
+ \le2\binom{2Q+3}{2}+6(K-1).
+ \tag{57.12}
+\]
+
+Every formal handle is an affine orbit \([\alpha+\beta Z]\). A tag sees
+at most \(2q_i+3\) handles, and two distinct formal orbits collide only at
+a root of \(f(Z)=\pm g(Z)\), contributing at most two secret values per
+pair. Outside their union, lazy random encodings make the transcript
+independent of \(E\); the output list covers at most \(2M\) field values.
+The same proof gives public-subset and maximum-prior-mass variants.
+
+In a stronger ordinary generic-group model, the corresponding bound is
+
+\[
+ \min\left(1,{2M+C\over\ell}\right),
+ \qquad
+ C\le\binom{Q+3}{2}+3(K-1).
+ \tag{57.13}
+\]
+
+Composite orders require an explicit root-multiplicity term, and
+non-generators may reveal only short congruences. Neither theorem transfers
+to the explicit factoring ring: its local orders are unequal and composite,
+bases share numerical coordinates and multiplicative correlations, gcds can
+read CRT disagreement, and resultants, derivatives, and lifts inspect more
+than generic equality. The generic theorem closes only the claim that many
+opaque relations force recovery merely by their number.
+
+**Scope.** Nonunits and every introduced denominator or difference must be
+gcd-screened; proper gcds are success and full gcds are rejection or
+degeneracy. The theorem excludes \(p=q\), prime powers, three-or-more-prime
+products, even inputs, and primes. The displayed two-factor identities and
+discriminant decoders do not extend automatically to those cases. Hidden
+local generators, \(p-1\), \(q-1\), \(L\), group orders, or factoring
+oracles cannot be treated as free preprocessing.
+
+P57 is a method failure only for localizing an integer index by accumulating
+the displayed symmetric trace identities, and for opaque prime-order generic
+pooling. It does not close coherent mixed-root selection, explicit
+derivative/resultant/minor comparators, useful lucky gcd distributions,
+modulo-\(N^2\) pooling, factor-free metric shrinkage, non-generator
+structure, an all-input extension, or integer factoring generally.
+
+The candidate, hostile audit, and context-free reconstruction are preserved
+under `experiments/F48_dickson_trace_index_kill`,
+`experiments/F48_dickson_trace_index_audit`, and
+`experiments/F48_dickson_trace_index_reconstruct`. Their SHA-256 hashes are,
+respectively,
+`801f86d6acb3c5278ba5f5e1d0ba4db6349b4e9be3878727d29602991c5d6d61`,
+`86d840259d1ae0f035f95d4d1785d2c68c6f0a30bcce556f5133aab6bb2ebbef`,
+and `278ab46afc83ee25af883f8ef82016084d9b2cdf7f55f0e9d78ac5121ea5dc9a`.

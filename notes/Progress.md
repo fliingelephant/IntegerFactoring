@@ -1252,3 +1252,63 @@ power-map inversion, noncanonical or higher lifts, and engineered base laws
 with inverse-polynomial all-input separation remain open. P56 is a method
 failure for multiplicative linear-cocycle inconsistency pooling, not a broad
 \(N^2\)-adic obstruction and not a factoring algorithm.
+
+### C54 — ordinary Dickson traces have an exact four-alias boundary
+
+**Status:** promoted as P57 after a clean hostile audit and a fresh
+context-free proof-blind reconstruction.
+
+**Closest prior routes and material difference.** C52/P55 uses
+discriminant-dependent norm-one tori and closes only independently encoded
+generic shared exponents. C09/P12 treats spectral moment support. C54 uses
+the ordinary unit group, no auxiliary discriminant, and exact numerical ring
+coordinates; trace symmetrization exposes two globally valid
+factor-determining representatives.
+
+**Verified boundary.** For \(N=pq\) with distinct odd primes, put
+
+\[
+ e=N-1,\qquad t=p+q-2,\qquad g=q-p,
+\qquad L=\operatorname{lcm}(p-1,q-1).
+\]
+
+For every unit trace \(T(a)=a+a^{-1}\),
+
+\[
+ D_e(T(a))=D_t(T(a))=D_g(T(a)).
+\]
+
+The complete function alias class is
+
+\[
+ D_m(T(a))=D_e(T(a))\text{ for all units }a
+ \iff m\equiv\pm t,\pm g\pmod L.
+\]
+
+Both exact positive representatives factor through polynomial-bit verified
+integer discriminants. Powers, products, repeated bases, Dickson
+composition/addition, and adaptive trace-interface expressions are exact
+functorial consequences of the same function and cannot select one
+representative. In the quotient-by-inversion random-encoding model,
+polynomially many tags and calls retain only an
+\(O((M+Q^2+K)/\ell)\) list-recovery probability; the theorem is explicitly
+nontransferable to numerical \(\mathbb Z/N\mathbb Z\) coordinates.
+
+**Constructive survivor.** The shifted public values
+\(D_{e+k}(x),D_{e-k}(x)\) are two known roots of a public quadratic, while
+\(D_{g+k}(x),D_{g-k}(x)\) are its coherently CRT-mixed roots. After
+screening the known-root difference, producing one mixed root factors by one
+comparison gcd. Thus the symmetry has been localized to a concrete
+root-orientation problem rather than eliminated. Formal derivatives and
+modulo-\(N^2\) discrepancies are additional information, not consequences
+of the value aliases; the latter involve a lift-dependent Euler quotient.
+Lucky shifted/root gcds remain open because no inverse-polynomial all-input
+probability bound was proved.
+
+**Remaining gap.** Characterize and attack the coherent root-selection
+system across many bases and shifts; construct a public derivative,
+resultant, minor, or lift statistic; manufacture a polynomial-size metric
+candidate set; or prove a useful non-generator/order distribution. Any
+promise decoder must then be extended to prime powers, repeated factors,
+even and multifactor inputs, recursion, and one uniform Las Vegas expected
+bit bound. P57 is a narrow method classification, not a factoring algorithm.

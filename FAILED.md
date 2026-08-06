@@ -2089,3 +2089,119 @@ divisible by \(N\); power-map inversion; noncanonical or higher lifts; or an
 engineered base distribution with a proved inverse-polynomial all-input
 separation law. Another multiplicative linear consistency or cycle-syndrome
 decoder is covered by P56.
+
+## X51 — ordinary Dickson trace identities do not localize a unique short index
+
+**Status:** promoted as the narrow promise theorem and method classification
+P57 after a clean hostile audit and a fresh context-free proof-blind
+reconstruction.
+
+**Family:** F28.
+
+**Classification:** method failure for accumulating powers, products,
+repeated bases, Dickson composition/addition identities, or opaque
+prime-order trace-orbit relations until one symmetric integer index becomes
+identifiable. This is not a failure of explicit-coordinate coherent-root,
+derivative, resultant, lift, metric, or other joint decoders.
+
+**What was tried.** For a distinct odd semiprime \(N=pq\), form polynomially
+many public pairs
+
+\[
+ x=a+a^{-1},\qquad
+ y=a^{N-1}+a^{1-N}=D_m(x)\pmod N
+\]
+
+and use structured choices of units and Dickson identities to recover the
+factor-determining integer \(m=q-p\) or \(m=p+q-2\).
+
+**Exact obstruction.** Put
+
+\[
+ e=N-1,\qquad t=p+q-2,\qquad g=q-p,
+\qquad L=\operatorname{lcm}(p-1,q-1).
+\]
+
+For every unit, \(a^e=a^t\), while the trace also satisfies
+\(F_e=F_g\). The complete function alias class is
+
+\[
+ F_m=F_e\text{ on }(\mathbb Z/N\mathbb Z)^\times
+ \iff
+ m\equiv\pm t,\pm g\pmod L.
+\]
+
+This follows from the exact one-prime theorem that
+\(z^u+z^{-u}=z^v+z^{-v}\) on all nonzero field elements precisely when
+\(u\equiv\pm v\pmod{r-1}\), including self-inverse classes. Both positive
+representatives factor by a verified integer discriminant, but every
+displayed power/product/composition/addition relation is a functorial
+identity of the same trace function and cannot choose between them. Adaptive
+trace-interface expressions inherit the same exact nonidentifiability.
+
+Shifted traces expose rather than solve the missing orientation. The public
+values \(D_{e+k}(x),D_{e-k}(x)\) are the two known roots of
+
+\[
+ Z^2-D_e(x)D_k(x)Z+
+   (D_e(x)^2+D_k(x)^2-4).
+\]
+
+The values \(D_{g+k}(x),D_{g-k}(x)\) are the coherent CRT-mixed roots.
+After the double-root gcd is screened, constructing either mixed root is
+already factor-sufficient. Symmetric resultants therefore do not select it
+for free, although a genuinely joint selector across many such quadratics
+remains open.
+
+In an independently random-encoded quotient-by-inversion group of prime
+order \(\ell\), \(K\) tags, \(Q\) scalar/addition-pair calls, and an
+\(M\)-element output list have success at most
+
+\[
+ \min\left(1,{2M+O(Q^2+K)\over\ell}\right).
+\]
+
+The exact constants are P57's (57.11)--(57.13). This closes only opaque
+generic pooling. Explicit \(\mathbb Z/N\mathbb Z\) coordinates, unequal
+composite local orders, non-generators, gcds, and algebraic processing lie
+outside the model.
+
+**Surviving data channels.** Formal derivative identities do not follow from
+finite trace-function equality; the public \(D_e'\) supplies only a known
+orientation, while a short-alias derivative or comparator is missing. The
+first lift satisfies
+
+\[
+ T(\widetilde a^e)-T(\widetilde a^t)
+ \equiv
+ NQ_{\widetilde a}
+ (\widetilde a^t-\widetilde a^{-t})\pmod{N^2},
+\]
+
+where \(Q_{\widetilde a}=(\widetilde a^{(p-1)(q-1)}-1)/N\) is
+lift-dependent and not supplied. Lucky gcds such as those from
+\(D_e(x)^2-4\), \(D_k(x)^2-4\), and shifted-root differences also remain
+live because no uniform probability theorem was proved. Interval/BSGS
+enumeration remains exponential absent an independently manufactured
+polynomial-size metric candidate set.
+
+**Evidence.** The proof-only candidate, hostile audit, and proof-blind
+reconstruction are preserved under
+`experiments/F48_dickson_trace_index_kill`,
+`experiments/F48_dickson_trace_index_audit`, and
+`experiments/F48_dickson_trace_index_reconstruct`, with hashes
+`801f86d6acb3c5278ba5f5e1d0ba4db6349b4e9be3878727d29602991c5d6d61`,
+`86d840259d1ae0f035f95d4d1785d2c68c6f0a30bcce556f5133aab6bb2ebbef`,
+and `278ab46afc83ee25af883f8ef82016084d9b2cdf7f55f0e9d78ac5121ea5dc9a`.
+No computation or cross-family audit was used.
+
+**What would make a retry materially new.** A uniform explicit-coordinate
+algorithm selecting a coherent mixed root from polynomially many shifted
+quadratics; a publicly computable derivative/resultant/minor comparator; a
+modulo-\(N^2\) pooling law controlling the lift-dependent quotient without
+recovering \(\varphi(N)\); a factor-free metric/list shrinkage; a proved
+useful non-generator or lucky-gcd distribution; or a promise decoder plus a
+complete extension to prime powers, repeated factors, evens, multifactor
+inputs, recursion, and uniform Las Vegas expected bit complexity. Another
+collection of trace identities or opaque generic relations is covered by
+P57.
