@@ -1,6 +1,7 @@
 # F30 follow-up: closed internal-edge AND survives, but a clean occupancy connector does not
 
-**Status:** candidate; hostile audit required before promotion.
+**Status:** promoted as P42 after a clean hostile audit and a fresh
+context-free proof-blind reconstruction.
 
 **Family:** F21.
 

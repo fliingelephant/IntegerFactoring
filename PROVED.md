@@ -3668,3 +3668,107 @@ context-free final reconstruction are preserved under
 `experiments/F32_quadratic_fourier_energy_reconstruct`,
 `experiments/F32_quadratic_fourier_energy_reaudit`, and
 `experiments/F32_quadratic_fourier_energy_reconstruct2`.
+
+## P42 — closed matching AND/COPY survive, but a universal clean occupancy wire does not
+
+**Status:** promoted.
+
+**Verification record:** both finite matching enumerations, multiplicity-one
+decoding, the internal-edge/terminal distinction, the arbitrary-context
+four-port support requirement, matching symmetric exchange, every endpoint
+case, and the positive-weight/auxiliary-vertex scope passed a clean hostile
+audit and a fresh context-free proof-blind reconstruction.  No computation
+and no cross-family audit were used.
+
+The bipartite graph with adjacency matrix
+
+\[
+\begin{pmatrix}
+1&1&0\\
+1&1&1\\
+1&1&1
+\end{pmatrix}
+\]
+
+has exactly four perfect matchings.  Marking
+
+\[
+L_1R_2,\qquad L_2R_3,\qquad L_3R_1
+\]
+
+gives occupancy words
+
+\[
+000,\quad010,\quad100,\quad111,
+\]
+
+exactly the Boolean relation \(z=xy\), once each.  The six-cycle with
+adjacency matrix
+
+\[
+\begin{pmatrix}
+1&1&0\\
+0&1&1\\
+1&0&1
+\end{pmatrix}
+\]
+
+has exactly its two alternating perfect matchings; marking one alternating
+triple gives \(000,111\), exactly COPY\(_3\), again once each.  These are
+closed internal-edge observables, so P38's direct boundary-deletion parity
+and one-hot subcube obstruction do not apply to them.
+
+The immediate modular composition mechanism nevertheless fails.  Removing
+two occurrence edges exposes four distinct endpoint ports
+
+\[
+B=B_1\mathbin{\dot\cup}B_2,
+\qquad |B_1|=|B_2|=2.
+\]
+
+A connector that equates the two occupancy bits in **every** surrounding
+matching context, while allowing neither mismatches nor partial endpoint
+states, must have boundary-deletion support
+
+\[
+\{\varnothing,B\}.
+\]
+
+For any graph \(H\) with boundary \(B\), however, the feasible deletion
+family
+
+\[
+\mathcal F_H=\{S\subseteq B:H-S\text{ has a perfect matching}\}
+\]
+
+satisfies symmetric exchange:
+
+\[
+\forall X,Y\in\mathcal F_H\ \forall e\in X\triangle Y
+\exists f\in X\triangle Y,\ f\ne e:
+X\triangle\{e,f\}\in\mathcal F_H.
+\]
+
+This follows by taking perfect matchings of \(H-X\) and \(H-Y\), following
+the alternating path from \(e\) to its other endpoint \(f\), and toggling
+that path.  With \(X=\varnothing\) and \(Y=B\), exchange forces a feasible
+two-element deletion set, contradicting the proposed two-word support.
+
+Arbitrary internal auxiliary vertices, nonplanarity, graph size, parallel
+positive contributions, and nonnegative edge weights do not help: deleting
+zero-weight edges reduces positive support to the same unweighted matching
+family.  Signed cancellation and merely approximate suppression are outside
+the theorem.
+
+P42 closes only a clean, context-independent equality wire on four distinct
+occurrence ports.  Contextual filtering of exchange states, projected
+auxiliary states, block or heterogeneous encodings, vertex identifications,
+fused cells, global multiplicity balancing, and a single interleaved
+multiplication-specific graph remain open.  The explicit AND survivor is a
+warning not to transfer P38's terminal theorem to arbitrary internal labels.
+
+The candidate, hostile audit, and context-free reconstruction are preserved
+under
+`experiments/F30_internal_edge_matching_composition_kill`,
+`experiments/F30_internal_edge_matching_composition_audit`, and
+`experiments/F30_internal_edge_matching_composition_reconstruct`.

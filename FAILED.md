@@ -1343,3 +1343,41 @@ factor-free sampler with a proved all-input stationary/output law and
 polynomial bit/fair-bit cost.  F33 tests the uniform zero-product lift; F34
 tests explicit automorphism moves on it.  Reusing uniform proposals in
 rejection or independence Metropolis is covered by P41.
+
+## X36 — clean four-port composition of closed matching occurrences
+
+**Status:** promoted as P42 after a clean hostile audit and a fresh
+context-free proof-blind reconstruction.
+
+**Family:** F21.
+
+**Classification:** evidence against the exact auxiliary mechanism of wiring
+closed internal-edge Boolean gadgets through a universal positive connector
+whose raw boundary support contains only the two equal occupancy states.  It
+is not a failure of closed decoding itself or of contextual/global/block
+composition.
+
+**Positive survivor.**  A \(3\times3\) bipartite graph with one missing edge
+has four perfect matchings whose three marked internal-edge words are
+
+\[
+000,010,100,111,
+\]
+
+exactly AND.  A six-cycle has two perfect matchings with words \(000,111\),
+exactly COPY\(_3\).  Each decoded word has multiplicity one.  Internal-edge
+labels therefore escape P38's direct terminal parity/subcube theorem.
+
+**Exact obstruction.**  An occurrence edge consumes two endpoints.  A clean
+context-independent connector equating two occurrences on four distinct
+ports would require deletion support \(\{\varnothing,B\}\), \(|B|=4\).
+Every matching deletion family satisfies symmetric exchange, so applying it
+to \(\varnothing,B\) forces an intermediate two-port state.  Arbitrary
+auxiliary vertices and nonnegative weights do not alter positive support.
+
+**What would make a retry materially new.** A concrete contextual connector
+whose off-code states are proved globally unextendable; a projected auxiliary
+or block/heterogeneous occurrence code; shared vertex identifications or
+fused cells; or one globally interleaved multiplication graph with a proved
+positive matching-mass law.  Reusing a raw universal four-distinct-port
+equality wire is covered by P42.

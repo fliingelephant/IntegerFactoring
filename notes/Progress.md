@@ -703,3 +703,25 @@ an \(\Omega(\sqrt N)\) hitting obstruction.
 tests the uniform zero-product lift and coordinate heat bath. F34 tests
 explicit algebra-automorphism proposals. Augmented, nonlocal, nonreversible,
 positive-matching, and other direct samplers remain open.
+
+### C39 — closed matching logic survives, but its clean occurrence wire fails
+
+**Status:** promoted as P42 after a clean hostile audit and a fresh
+context-free proof-blind reconstruction.
+
+**Closest prior route and material difference.** C35/P38 closes direct
+terminal-deletion encodings. C39 reads ordinary internal edges of completed
+matchings and therefore tests a survivor that P38 explicitly left open.
+
+**Verified boundary.** Two six-vertex bipartite graphs realize AND and
+COPY\(_3\) exactly from marked internal-edge occupancies, with one matching
+per truth word. A universal connector equating two occurrence edges on four
+distinct ports would need raw deletion support
+\(\{\varnothing,B\}\). Matching symmetric exchange forces a feasible
+two-port set, even with arbitrary auxiliary vertices and nonnegative weights.
+
+**Remaining gap.** The theorem closes only context-independent clean
+composition. Contextual suppression of off-code states, projected auxiliary
+states, block/heterogeneous codes, fused or identified ports, global
+multiplicity balancing, and one multiplication-specific interleaved graph
+remain open.
