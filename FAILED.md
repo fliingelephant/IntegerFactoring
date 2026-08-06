@@ -1837,3 +1837,52 @@ correlated source with a proved law, or stochastic/piecewise/canonical metric
 dynamics. More restarts or iterations of the same map followed only by the
 audited denominator/numerator/residual/root-difference gcds are covered by
 P52.
+
+## X47 — fresh compressed shifted-Jacobi correlations do not yield a polynomial-sample factor signal
+
+**Status:** promoted as P53 after a clean hostile audit and a fresh
+context-free proof-blind reconstruction.
+
+**Family:** F09.
+
+**Classification:** method failure for polynomially many shifted Jacobi
+products evaluated on fresh hidden uniform residues, including collected
+repeated shifts, past-measurable adaptive menus, explicitly expanded
+polynomial linear combinations, and raw empirical-correlation decoding.
+This is not a lower bound for richer Jacobi transcripts or higher-residue
+methods.
+
+**Exact obstruction.** After every distinct shift difference is gcd-screened,
+CRT factors the mean into two complete prime-field character sums. If some
+shift has odd multiplicity, the centered Hasse--Weil bound gives
+
+\[
+ |\mathbb EY_H|\le{(s-1)^2\over\sqrt N}.
+\]
+
+The exact zero probability is \(s(p+q-s)/N\), while the probability that an
+individual shift gcd is proper is \(s(p+q-s-1)/N\). Consequently a nonzero
+odd-pattern mean needs \(\Omega(N/(\eta^2s^4))\) fresh samples for relative
+RMSE \(\eta\). If all multiplicities are even, the exact mean contains
+\(p+q\), but its informative deviation is only \(s(p+q-s)/N\) and requires
+\(\Omega(\sqrt N/(\eta^2s))\) samples on fixed-balance families.
+
+An explicitly expanded polynomial statistic with polynomial coefficient
+\(\ell_1\)-norm has only polynomial-over-\(\sqrt N\) drift from its public
+fair-sign baseline. More strongly, any adaptive transcript releasing one
+such scalar per fresh hidden source and using total support \(T\) is within
+
+\[
+ {2\Lambda T+T^2/2\over\sqrt N}
+\]
+
+in total variation of a public factor-free simulator on a
+\(\Lambda\)-balanced semiprime.
+
+**What would make a retry materially new.** Retain the sampled \(x\); expose
+the whole per-shift character vector or gcd labels; evaluate several
+correlations on the same source; exploit same-source adaptation; compute an
+exact symbolic sum; use a dense/succinct statistic outside polynomial
+\(\ell_1\) expansion; or provide a genuinely nonlinear joint decoder. Those
+channels were explicitly excluded from P53 and must not be dismissed by its
+scalar marginal theorem.

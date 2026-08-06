@@ -1065,3 +1065,38 @@ orbit transcripts, primes \(1\bmod4\), other maps, p-adic lifts, correlated
 starts, and stochastic, piecewise, ordered, or canonical-metric dynamics are
 outside P52. F26 now tests a genuinely decreasing integer inverse-quotient
 map rather than another finite-field basin metaphor.
+
+### C50 — shifted-Jacobi scalar correlations have a public fair-sign simulator
+
+**Status:** promoted as P53 after a clean hostile audit and a fresh
+context-free proof-blind reconstruction.
+
+**Closest prior routes and material difference.** P15 closes only
+factor-swap-invariant multiplicative scalar phase labels. P49 treats sparse
+additive Fourier statistics of the inverse graph. C50 instead allows
+nonlinear products of many publicly shifted Jacobi symbols, repeated shifts,
+and fresh past-adaptive query menus, then asks whether their empirical
+correlations manufacture a factor-asymmetric bias.
+
+**Verified boundary.** Difference screening makes every distinct shift
+injective in both hidden fields. CRT factors each product mean into two
+complete character sums. A nonempty odd-multiplicity support has mean at most
+\((s-1)^2/\sqrt N\) by the correctly centered odd/even hyperelliptic bounds;
+the all-even branch has exact mean \((1-s/p)(1-s/q)\). The complete
+three-point law shows that learning either the small odd mean or the
+informative all-even deviation takes exponentially many raw samples for
+polynomial \(s\).
+
+For one hidden-source scalar per fresh call, sequential maximal coupling
+compares every adaptive transcript of total support \(T\) with a public
+fair-sign/constant-one process within
+\((2\Lambda T+T^2/2)/\sqrt N\). Explicit polynomial lists with polynomial
+coefficient \(\ell_1\)-norm likewise have only polynomial-over-\(\sqrt N\)
+mean drift.
+
+**Remaining gap.** The theorem intentionally hides the sampled residue and
+compresses all shifted symbols to one product. Per-shift vectors, gcd labels,
+several correlations sharing one source, same-source adaptation, exact
+symbolic sums, succinct dense statistics, and nonlinear joint decoders are
+open. Thus C50 is a sharp scalar-channel boundary, not a generic Jacobi
+indistinguishability claim.

@@ -5383,3 +5383,169 @@ The candidate, hostile audit, and context-free reconstruction are preserved
 under experiments/F42_newton_basin_kill,
 experiments/F42_newton_basin_audit, and
 experiments/F42_newton_basin_reconstruct.
+
+## P53 — polynomial shifted-Jacobi scalar correlations have only Weil-scale drift or rare zero mass
+
+**Status:** verifier-backed narrow observation-channel obstruction. The
+proof-only candidate passed a clean hostile audit and a fresh context-free
+proof-blind reconstruction. No computation or cross-family audit was used.
+
+Let \(N=pq\) for distinct odd primes. Normalize a multiset of shifts by
+reducing modulo \(N\), collecting equal residues with positive
+multiplicities \(m_e\), and screening every distinct difference
+\(\gcd(e-f,N)\). On the branch where no factor is found, the \(s\) distinct
+shifts are also distinct modulo each \(r\in\{p,q\}\). Put
+
+\[
+ O=\{e:m_e\text{ is odd}\},\qquad A=E\setminus O,\qquad k=|O|,
+\]
+
+and, for uniform \(x\bmod N\), define
+
+\[
+ Y_H(x)=\prod_{e\in E}\left({x+e\over N}\right)^{m_e}.
+\tag{53.1}
+\]
+
+With the Legendre symbol extended by zero, let
+
+\[
+ S_r=\sum_{u\in\mathbb F_r}\prod_{e\in E}\chi_r(u+e)^{m_e}.
+\]
+
+CRT gives the exact factorization
+
+\[
+ \boxed{\theta:=\mathbb EY_H={S_pS_q\over N}.}
+\tag{53.2}
+\]
+
+If \(O=\varnothing\), then \(S_r=r-s\). If \(O\ne\varnothing\), write
+
+\[
+ P_{O,r}(X)=\prod_{o\in O}(X+o),\quad
+ C_r(O)=\sum_u\chi_r(P_{O,r}(u)),\quad
+ R_r(O,A)=\sum_{a\in A}\chi_r(P_{O,r}(-a)).
+\]
+
+Retaining the zeros contributed by even powers gives the exact identity
+
+\[
+ S_r=C_r(O)-R_r(O,A).
+\tag{53.3}
+\]
+
+The centered hyperelliptic bounds, including their genus-zero endpoints,
+are
+
+\[
+ |C_r(O)|\le(k-1)\sqrt r\quad(k\text{ odd}),\qquad
+ |C_r(O)+1|\le(k-2)\sqrt r\quad(k\text{ even}).
+\tag{53.4}
+\]
+
+Consequently, only on the nonempty odd-support branch,
+
+\[
+ \boxed{|S_r|\le(s-1)\sqrt r,\qquad
+ |\theta|\le{(s-1)^2\over\sqrt N}.}
+\tag{53.5}
+\]
+
+For both branches the exact second moment and complete scalar law are
+
+\[
+ \rho:=\mathbb EY_H^2=\left(1-{s\over p}\right)
+                       \left(1-{s\over q}\right),\qquad
+ \zeta:=1-\rho={s(p+q-s)\over N},
+\tag{53.6}
+\]
+
+\[
+ \Pr(Y_H=0)=\zeta,\qquad
+ \Pr(Y_H=\pm1)={\rho\pm\theta\over2},\qquad
+ \operatorname{Var}(Y_H)=\rho-\theta^2.
+\tag{53.7}
+\]
+
+Thus \(m\) fresh samples have mean-squared error
+\((\rho-\theta^2)/m\). On every fixed-balance family with polynomial
+support, estimating a nonzero odd-pattern mean to relative RMSE at most
+\(\eta\) eventually requires
+
+\[
+ m\ge {N\over2\eta^2(s-1)^4}.
+\tag{53.8}
+\]
+
+When the odd-pattern mean is zero, only additive error is meaningful. In the
+all-even branch, \(\theta=\rho=1-\delta\), where
+
+\[
+ \delta={s(p+q)-s^2\over N}.
+\tag{53.9}
+\]
+
+For \(s>0\), exact knowledge of this mean recovers
+\(p+q=[N(1-\theta)+s^2]/s\), but estimating the small deviation from raw
+samples to relative RMSE \(\eta\) requires
+\(\Omega(\sqrt N/(\eta^2s))\) samples on fixed-balance polynomial-support
+families. The exact probability that an individual shift gcd directly
+returns a proper factor is
+
+\[
+ \boxed{{s(p+q-s-1)\over N}.}
+\tag{53.10}
+\]
+
+There are two uniform extensions. First, for an explicitly expanded
+polynomial statistic \(F=\sum_j a_jY_{H_j}\), the public fair-sign baseline
+\(B(F)\) has drift at most
+
+\[
+ {1\over\sqrt N}\sum_{O_j\ne\varnothing}|a_j|(s_j-1)^2
+ +{1\over N}\sum_{O_j=\varnothing}|a_j|s_j(p+q-s_j).
+\tag{53.11}
+\]
+
+Hence polynomial list size, support, and coefficient \(\ell_1\)-norm leave
+only exponentially small drift on balanced semiprimes. The same statement
+holds conditionally for a past-measurable menu followed by a fresh uniform
+sample.
+
+Second, suppose an adaptive protocol hides each fresh \(x_i\) and releases
+only one scalar \(Y_{H_i}(x_i)\). Compare it with the public reference that
+returns a fresh fair sign for nonempty odd support and the constant one for
+all-even support. The exact one-call total-variation distances are
+
+\[
+ {\zeta_i+\max(\zeta_i,|\theta_i|)\over2}
+ \quad\text{and}\quad \zeta_i,
+\tag{53.12}
+\]
+
+respectively. If the pathwise total support is
+\(\sum_i s_i\le T\) and \(p,q\le\Lambda\sqrt N\), sequential maximal
+coupling gives
+
+\[
+ \boxed{d_{\rm TV}(\text{real transcript},\text{public reference})
+ \le {2\Lambda T+T^2/2\over\sqrt N}.}
+\tag{53.13}
+\]
+
+P53 deliberately does not cover a released or retained sample \(x_i\), the
+per-shift character vector, gcd labels, several correlations on one source,
+same-source adaptation, exact symbolic sums, dense or succinct exponentially
+expanded statistics, or arbitrary nonlinear joint Jacobi processing. It
+therefore closes polynomially many fresh compressed scalar correlations, not
+the broader higher-residue family or factoring generally.
+
+The candidate, hostile audit, and proof-blind reconstruction are preserved
+under experiments/F44_jacobi_correlation_kill,
+experiments/F44_jacobi_correlation_audit, and
+experiments/F44_jacobi_correlation_reconstruct. Their SHA-256 hashes are,
+respectively,
+`0b5bdfb97afff96f8c8034c5bb633d4e98d82e7ab9705c3eeaae356efc475460`,
+`67970e20c51905a074c7ebf7dbd59e3c8bd3e5a1b163749377ae1dadb930773c`,
+and `d0914f3c8debf9b9675fa7367c1be41c29292fa73e6612669d51d5d665840e67`.
