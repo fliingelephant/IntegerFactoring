@@ -6017,3 +6017,296 @@ respectively,
 `2afc8df267dc270cee4a1780c232fe46a18addbba22c13fef462c92d6ad1cf9b`,
 `942823b27dbf31d8eb80a067de50ff25ffd5e3903b479bd369943f1750d1c8cb`,
 and `e6fcee2e4ce5bed2da4b956aba361b88fee8654b367ebb6ecbb6a2b5c07f29ef`.
+
+## P56 — canonical Teichmüller high digits form one global multiplicative carry cocycle
+
+**Status:** promoted narrow method classification. The proof-only candidate
+passed a clean hostile audit and a fresh context-free proof-blind
+reconstruction. No computation or cross-family audit was used.
+
+Let
+
+\[
+G_N=(\mathbb Z/N\mathbb Z)^\times,
+\qquad N\ge2.
+\]
+
+For a class \(a\in G_N\), choose any integer representative \(r\) and put
+
+\[
+A(a)=r^N\pmod {N^2}.
+\tag{56.1}
+\]
+
+This is well defined. If \(r'=r+kN\), then
+
+\[
+(r+kN)^N-r^N
+=Nr^{N-1}kN+
+ \sum_{j=2}^N\binom Njr^{N-j}(kN)^j
+\equiv0\pmod {N^2}.
+\tag{56.2}
+\]
+
+Moreover, a representative of \(ab\) differs from the product of
+representatives of \(a,b\) by a multiple of \(N\). Hence
+
+\[
+A(ab)=A(a)A(b)pmod {N^2},
+\tag{56.3}
+\]
+
+so \(A:G_N\to(\mathbb Z/N^2\mathbb Z)^\times\) is a homomorphism for
+every \(N\), including even and nonsquarefree inputs.
+
+Use canonical integer representatives and write uniquely
+
+\[
+A(a)=x(a)+Nh(a),
+\qquad 0\le x(a),h(a)<N.
+\tag{56.4}
+\]
+
+Reduction makes \(x:G_N\to G_N\) a homomorphism. For \(a,b\in G_N\),
+abbreviate
+
+\[
+x=x(a),\qquad y=x(b),\qquad
+z=\langle xy\rangle_N=x(ab),\qquad
+c(x,y)=\frac{xy-z}{N}.
+\tag{56.5}
+\]
+
+Expanding (56.4) modulo \(N^2\) gives the exact canonical high-digit law
+
+\[
+\boxed{
+h(ab)\equiv c(x,y)+xh(b)+yh(a)\pmod N.}
+\tag{56.6}
+\]
+
+Since every \(x(a)\) is a unit, define
+
+\[
+\lambda(a)=h(a)x(a)^{-1},
+\qquad
+\kappa(x,y)=c(x,y)\langle xy\rangle_N^{-1}pmod N.
+\tag{56.7}
+\]
+
+Multiplication of (56.6) by \(z^{-1}\) proves
+
+\[
+\boxed{
+\lambda(ab)=\lambda(a)+\lambda(b)
+ +\kappa(x(a),x(b))\pmod N.}
+\tag{56.8}
+\]
+
+The plus sign is forced by \(xy=z+Nc\). The inverse specialization is
+
+\[
+\lambda(a^{-1})
+=-\lambda(a)-\frac{x\langle x^{-1}\rangle_N-1}{N}pmod N,
+\tag{56.9}
+\]
+
+because the product residue is \(1\). Associating a triple product in the
+two possible ways gives the normalized section-cocycle identity
+
+\[
+\kappa(x,y)+\kappa(\langle xy\rangle_N,w)
+=\kappa(y,w)+\kappa(x,\langle yw\rangle_N)pmod N.
+\tag{56.10}
+\]
+
+Thus \(\kappa\) is the central \(2\)-cocycle of the canonical section
+\(G_N\hookrightarrow(\mathbb Z/N^2\mathbb Z)^\times\), and its pullback
+along \(x\) is the coboundary of the observed \(1\)-cochain \(\lambda\).
+
+**Exact graph consequence.** Consider any finite occurrence-labelled
+multiplicative graph. A vertex occurrence \(v\) carries a unit base
+\(a_v\), and every edge occurrence \(e\) has roles \(s(e),m(e),t(e)\)
+satisfying
+
+\[
+a_{t(e)}=a_{s(e)}a_{m(e)}\quad\text{in }G_N.
+\tag{56.11}
+\]
+
+Repeated roles, loops, repeated products, and distinct occurrences with the
+same public value are allowed. Let \(B\) have, in row \(e\), coefficient
+\(+1\) at \(t(e)\) and coefficients \(-1\) at \(s(e),m(e)\), collecting
+coefficients when roles coincide. Put
+
+\[
+\lambda_v=\lambda(a_v),
+\qquad
+\kappa_e=\kappa(x(a_{s(e)}),x(a_{m(e)})).
+\]
+
+Equation (56.8) holds edge by edge and proves the literal global identity
+
+\[
+\boxed{B\lambda=\kappa
+\quad\text{over }\mathbb Z/N\mathbb Z.}
+\tag{56.12}
+\]
+
+Consequently every genuine edge residual, every ring-linear combination of
+edge residuals, and every left-syzygy, path, triangle, or cycle syndrome is
+zero. Reduction of the same witness modulo every divisor remains a solution.
+For each prime \(p\mid N\), in particular,
+
+\[
+\operatorname{rank}_{\mathbb F_p}[B_p\mid\kappa_p]
+=\operatorname{rank}_{\mathbb F_p}B_p.
+\tag{56.13}
+\]
+
+This compares a coefficient matrix with its own augmented column in one
+field. It does **not** imply that \(\operatorname{rank}B_p\) and
+\(\operatorname{rank}B_q\) agree, nor does it synchronize minors, Smith
+data, unnormalized coefficient matrices, arbitrary eliminants, or nonlinear
+statistics. An integer residual divisible by \(N\) may also have a
+nontrivial quotient after division by \(N\); (56.12) does not control that
+higher digit.
+
+**When occurrences may be merged by their \(x\)-values.** The precise
+descent criterion is
+
+\[
+\boxed{
+A\text{ (equivalently }h\text{) is determined by }x
+\text{ on all units}
+\iff
+N_{\rm odd}\text{ is squarefree and }8\nmid N.}
+\tag{56.14}
+\]
+
+To prove it, fix \(p^e\parallel N\), write \(N=p^em\) with \(p\nmid m\),
+and work modulo \(p^{2e}\).
+
+For odd \(p\), decompose a local unit as
+
+\[
+a=\omega\eta,
+\qquad \omega\in\mu_{p-1},quad \eta\in1+p\mathbb Z_p.
+\]
+
+Then
+
+\[
+A(a)\equiv\omega^m\eta^{p^em}\pmod {p^{2e}},
+\qquad
+x(a)\equiv\omega^m\pmod {p^e}.
+\tag{56.15}
+\]
+
+When \(e=1\), the principal factor disappears and
+
+\[
+A(a)\equiv[x(a)\bmod p]_p\pmod {p^2},
+\tag{56.16}
+\]
+
+where \([\cdot]_p\) is the Teichmüller lift. Thus every squarefree odd
+component descends from \(x\), whether or not the power map itself is
+injective.
+
+For \(e\ge2\), the odd \(p\)-adic logarithm identifies exponentiation by
+\(p^em\) with the isomorphism
+
+\[
+\frac{1+p\mathbb Z_p}{1+p^e\mathbb Z_p}
+\xrightarrow{\ \sim\ }
+\frac{1+p^{e+1}\mathbb Z_p}{1+p^{2e}\mathbb Z_p}.
+\tag{56.17}
+\]
+
+Thus \(x\) erases the input principal coordinate, while \(A\) retains it
+bijectively. The local units \(1\) and \(1+p\) have the same \(x\)-value
+but different \(A\)-values; for \(N=p^2\), explicitly,
+
+\[
+(1+p)^{p^2}\equiv1+p^3\pmod {p^4}.
+\tag{56.18}
+\]
+
+This includes \(p=3\).
+
+For \(2^e\parallel N\), every local unit has
+
+\[
+A(a)\equiv1\pmod4\quad(e=1),
+\qquad
+A(a)\equiv1\pmod {16}\quad(e=2).
+\tag{56.19}
+\]
+
+For \(e\ge3\), write uniquely
+
+\[
+a=(-1)^\epsilon\eta,
+\qquad\eta\in1+4\mathbb Z_2.
+\]
+
+The exponent kills the sign and
+
+\[
+A(a)\equiv\eta^{2^em}\pmod {2^{2e}},
+\qquad x(a)\equiv1\pmod {2^e}.
+\tag{56.20}
+\]
+
+The \(2\)-adic logarithm gives the isomorphism
+
+\[
+\frac{1+4\mathbb Z_2}{1+2^e\mathbb Z_2}
+\xrightarrow{\ \sim\ }
+\frac{1+2^{e+2}\mathbb Z_2}{1+2^{2e}\mathbb Z_2},
+\tag{56.21}
+\]
+
+so \(A\) retains the \(e-2\) signless principal bits erased by \(x\).
+The boundary \(e=3\) is already nontrivial; \(1\) and \(5\) give a local
+same-\(x\), different-\(A\) pair. CRT combines the local determining
+formulas in the forward direction of (56.14), and lifts either kind of local
+counterexample while fixing every other component in the reverse direction.
+
+Occurrence labels are therefore always safe. Equal base classes may be
+identified for every \(N\); distinct occurrences with merely equal
+\(x\)-values may be identified exactly under (56.14), and not in general.
+
+**Uniform cost and scope.** With
+\(n=\lceil\log_2(N+1)\rceil\), binary modular exponentiation computes one
+vertex value modulo \(N^2\) in \(O(n^3)\) schoolbook bit operations.
+Extraction of \(h\), an extended-Euclidean inverse for \(x\), and every
+edge carry use at most \(O(n^2)\) additional bit operations. A graph with
+\(V\) vertices and \(E\) genuine edges is therefore evaluated in
+
+\[
+O(Vn^3+En^2)
+\tag{56.22}
+\]
+
+bit operations and polynomial space. Nonunits are screened at the external
+boundary by \(\gcd(a,N)\); a proper gcd is already a factor, while a full
+gcd is rejected.
+
+P56 is a method failure only for multiplicative **linear-cocycle
+inconsistency** pooling. It proves no distributional rarity for the digits
+and leaves open additive and other nonmultiplicative relations, coefficient-
+rank and minor/Smith selectors not equivalent to augmented consistency,
+nonlinear whole-graph processing, engineered bases, power-map inversion,
+canonically useful quotients after division by \(N\), noncanonical or higher
+lifts, inverse-polynomial separation, recursion, and all-input factoring.
+
+The candidate, hostile audit, and context-free reconstruction are preserved
+under `experiments/F47_teichmuller_cocycle_pooling_kill`,
+`experiments/F47_teichmuller_cocycle_pooling_audit`, and
+`experiments/F47_teichmuller_cocycle_pooling_reconstruct`. Their SHA-256
+hashes are, respectively,
+`2a667261e61979aca3b0ba11b7605b750bb18bff9cb8274c318782cadc9adce2`,
+`0cfb9a9ab5588ab6bba28324bebb9d2469684c3fb4770bf538df71cf6e198d53`,
+and `387ebc3980863938eacdb0653d3ecc0c828181b5fc8c6932dff9b27aa437061d`.

@@ -1189,3 +1189,66 @@ as do interval methods and nonuniform sampling. Even after such a decoder,
 prime powers, multifactor and even inputs, arbitrary composites, recursion,
 and complete factorization require a separate extension. P55 is therefore
 not the all-input theorem.
+
+### C53 — multiplicative Teichmüller high digits have one global carry cocycle
+
+**Status:** promoted as P56 after a clean hostile audit and a fresh
+context-free proof-blind reconstruction.
+
+**Closest prior route and material difference.** C19/P22 bounds direct gcds
+of a fixed polynomial-size collection of canonical high digits from one
+uniform base. C53 permits arbitrary finite collections of engineered,
+adaptive, or nonuniform unit bases linked by genuine multiplicative
+relations, and tests whether many cycles can expose incompatible local
+cocycles.
+
+**Verified boundary.** For every \(N\ge2\),
+
+\[
+A(a)=a^N\bmod N^2=x(a)+Nh(a)
+\]
+
+is a well-defined homomorphism. With canonical carry
+
+\[
+c(x,y)=\frac{xy-\langle xy\rangle_N}{N},
+\qquad
+\lambda=h x^{-1},
+\qquad
+\kappa=c(x,y)\langle xy\rangle_N^{-1},
+\]
+
+one has
+
+\[
+\lambda(ab)=\lambda(a)+\lambda(b)+\kappa(x(a),x(b))\pmod N.
+\]
+
+Every occurrence-labelled multiplicative graph therefore satisfies one
+global public system \(B\lambda=\kappa\). Edge residuals, arbitrary
+ring-linear pools, cycle/left-syzygy syndromes, and augmented-consistency
+failures vanish modulo every divisor. This does not equalize coefficient
+ranks across CRT fields or control minors, Smith data, nonlinear eliminants,
+or the quotient of an integer residual after division by \(N\).
+
+The exact collision/descent classification is
+
+\[
+A\text{ is determined by }x\text{ on all units}
+\iff N_{\rm odd}\text{ is squarefree and }8\nmid N.
+\]
+
+Repeated odd primes retain a principal-unit coordinate in \(A\) that \(x\)
+erases; \(1\) and \(1+p\) witness it, including \(p=3\). For
+\(2^e\), \(e\ge3\), the signless principal coordinate survives and
+\(1,5\) witness the failure already at \(e=3\). Thus occurrence labels are
+mandatory outside the exact descent range. The whole transcript is computed
+in \(O(Vn^3+En^2)\) schoolbook bit operations.
+
+**Remaining gap.** Additive or nonmultiplicative relations, coefficient-rank
+or minor/Smith selectors not equivalent to augmented consistency, nonlinear
+whole-graph processing, a canonically useful higher integer quotient,
+power-map inversion, noncanonical or higher lifts, and engineered base laws
+with inverse-polynomial all-input separation remain open. P56 is a method
+failure for multiplicative linear-cocycle inconsistency pooling, not a broad
+\(N^2\)-adic obstruction and not a factoring algorithm.

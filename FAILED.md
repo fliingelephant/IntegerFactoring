@@ -1994,3 +1994,98 @@ proved short-interval algorithm, or a deliberately nonuniform factor-free
 sample law. Any successful promise decoder must then be extended to prime
 powers, multifactor composites, even inputs, and complete recursion. Another
 opaque tagged prime-order pooling argument is covered by P55.
+
+## X50 — multiplicative Teichmüller high-digit graphs have no linear cocycle inconsistency
+
+**Status:** promoted as the narrow method classification P56 after a clean
+hostile audit and a fresh context-free proof-blind reconstruction.
+
+**Family:** F12.
+
+**Classification:** method failure for every decoder whose signal is a
+nonzero edge residual, ring-linear combination of residuals, left-syzygy or
+cycle syndrome, or augmented-versus-coefficient inconsistency in a genuine
+multiplicative graph of canonical exponent-\(N\) high digits. This does not
+close coefficient-rank, minor/Smith, nonlinear, additive, or higher-carry
+processing.
+
+**What was tried.** Use many adaptively or nonuniformly chosen unit bases,
+their canonical values
+
+\[
+A(a)=a^N\bmod N^2=x(a)+Nh(a),
+\qquad
+\lambda(a)=h(a)x(a)^{-1}\pmod N,
+\]
+
+and multiplicative triangles, paths, cycles, or larger relation graphs. The
+intended signal was that the local Teichmüller corrections might satisfy
+incompatible cocycles in different hidden CRT components, so pooling many
+relations would reveal a factor even when no individual digit did.
+
+**Exact obstruction.** The map \(A:G_N\to(\mathbb Z/N^2\mathbb Z)^\times\)
+is a well-defined homomorphism for every \(N\ge2\). With canonical
+representatives,
+
+\[
+c(x,y)=\frac{xy-\langle xy\rangle_N}{N},
+\qquad
+\kappa(x,y)=c(x,y)\langle xy\rangle_N^{-1},
+\]
+
+one has
+
+\[
+\lambda(ab)=\lambda(a)+\lambda(b)+\kappa(x(a),x(b))\pmod N.
+\]
+
+For every finite occurrence-labelled genuine multiplicative graph this is
+one public global solution
+
+\[
+B\lambda=\kappa\quad\text{over }\mathbb Z/N\mathbb Z.
+\]
+
+Every edge residual, every adaptive ring-linear pooling of residuals, and
+every linear path/cycle elimination is therefore zero modulo \(N\) and
+modulo every divisor. For each \(p\mid N\),
+
+\[
+\operatorname{rank}_{\mathbb F_p}[B_p\mid\kappa_p]
+=\operatorname{rank}_{\mathbb F_p}B_p.
+\]
+
+This is only augmented consistency. It neither equalizes
+\(\operatorname{rank}B_p\) and \(\operatorname{rank}B_q\) nor controls
+arbitrary minors, Smith data, nonlinear eliminants, or the quotient of an
+integer residual after division by \(N\).
+
+Occurrence labels cannot generally be discarded. The exact descent theorem
+is
+
+\[
+A\text{ is determined by }x\text{ on all units}
+\iff N_{\rm odd}\text{ is squarefree and }8\nmid N.
+\]
+
+At a repeated odd prime, \(1\) and \(1+p\) give the same local \(x\) but
+different \(A\); at \(2^e\), \(e\ge3\), \(1\) and \(5\) do so. Odd and
+\(2\)-adic logarithms prove that these are the exact retained principal-unit
+coordinates, including \(p=3\) and the boundary \(e=3\).
+
+**Evidence.** The complete proof, a hostile reconstruction of every sign and
+prime-power case, and a proof-blind end-to-end reconstruction are preserved
+under `experiments/F47_teichmuller_cocycle_pooling_kill`,
+`experiments/F47_teichmuller_cocycle_pooling_audit`, and
+`experiments/F47_teichmuller_cocycle_pooling_reconstruct`. They used no
+finite mathematical computation. P56 records the common theorem and the
+uniform \(O(Vn^3+En^2)\) bit bound.
+
+**What would make a retry materially new.** Use additive or other
+nonmultiplicative relations; a coefficient-rank, minor, Smith, or resultant
+selector not equivalent to augmented consistency; a nonlinear whole-graph
+statistic; a canonically useful integer quotient after a residual is known
+divisible by \(N\); power-map inversion; noncanonical or higher lifts; or an
+engineered base distribution with a proved inverse-polynomial all-input
+separation law. Another multiplicative linear consistency or cycle-syndrome
+decoder is covered by P56.
