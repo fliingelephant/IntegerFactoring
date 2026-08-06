@@ -1312,3 +1312,33 @@ candidate set; or prove a useful non-generator/order distribution. Any
 promise decoder must then be extended to prime powers, repeated factors,
 even and multifactor inputs, recursion, and one uniform Las Vegas expected
 bit bound. P57 is a narrow method classification, not a factoring algorithm.
+
+### C55 — coherent Dickson-root relations reduce to one binary switch (candidate)
+
+**Status:** corrected candidate only; not promoted. The first hostile audit
+confirmed the core one-component calculation but found real scope errors around
+degenerate roots, shifted-root coherence, and disconnected components. The
+candidate was corrected. A fresh audit was then interrupted for the requested
+shutdown, so no blind reconstruction has started.
+
+**Candidate boundary.** For a distinct odd semiprime, first use linear gcd
+screens to remove known, repeated, or constant roots. On each proved connected
+component of the remaining orientation graph, all coherent root choices share
+one idempotent switch, with coordinate algebra
+
+\[
+  (\mathbb Z/N\mathbb Z)[f]/(f^2-f).
+\]
+
+An explicit polynomial relation on that one component has only three relevant
+outcomes: it accepts both public synchronized choices; one endpoint evaluation
+already exposes a factor; or it asks for a mixed choice whose production is the
+original factoring problem. The claim does not cover arbitrary couplings between
+independent components, auxiliary existential variables, metric order, random
+root samplers, derivatives, or lifts.
+
+**Exact resume point.** Re-audit
+`experiments/F49_coherent_dickson_root_kill/RESULT.md` at SHA-256
+`b29bc27bc16766c52bbd8d4e83e6e7c4f67e49f7c2f6f615beddc11f3bffccd1`.
+If and only if that audit passes, run a fresh context-free blind reconstruction.
+Only then consider promotion. Preserve the first audit as a failed audit record.
