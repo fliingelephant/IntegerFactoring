@@ -4,7 +4,7 @@ This is working state for nontrivial intermediate statements and the current syn
 
 ## Current synthesis
 
-The source material has been read in full. Twenty approach families have been opened, primarily from materially different mechanisms in `notes/Inspirations.md` with additional factor-trace, noncommutative, hidden-modulus metric, and non-gcd tensor-contraction routes; promoted narrow results and exact open gaps are tracked below and in the registry. The current frontier is a factor-free way to manufacture a fine metric hint, a useful class-group/isogeny orientation, a genuinely joint Hurwitz relation decoder, or an exactly contractible non-gcd factor-witness network. `notes/Zhihu.md` supplies background and motivation only.
+The source material has been read in full. Twenty approach families have been opened, primarily from materially different mechanisms in `notes/Inspirations.md` with additional factor-trace, noncommutative, hidden-modulus metric, and non-gcd tensor-contraction routes; promoted narrow results and exact open gaps are tracked below and in the registry. The current frontier is a factor-free way to manufacture a fine metric hint, a useful class-group/isogeny orientation, a genuinely joint Hurwitz relation decoder, or an exactly contractible non-gcd factor-witness network beyond the separated common-basis matchgate obstruction. `notes/Zhihu.md` supplies background and motivation only.
 
 ## Working claims
 
@@ -512,3 +512,40 @@ output lattice \(A\mathbb Z^d+N\mathbb Z^t\), the scaled dual
 \(N\mathbb Z^d+A^{\mathsf T}\mathbb Z^t\), a faithful fixed-rank metric
 decoder, biased affine targets, and nonlinear combinations. No every-input
 sampler or factor-extraction law is known.
+
+### C33 — exact pinned multiplication counts factor directly, while the
+separated COPY--AND matchgate landing fails
+
+**Status:** promoted as P36 after a corrected hostile re-audit and
+proof-blind reconstruction.
+
+**Closest prior route and material difference.** P10 compresses multiplication
+histories by scalar carry, P19 encodes them as exact CVP, and P29 studies an
+already factor-sufficient trace oracle. C33 instead uses the complete Boolean
+multiplication witness as a tensor-network count and recovers a factor by
+prefix self-reduction rather than by a terminal gcd.
+
+**Verified conditional reduction.** If every original and
+\(x\)-prefix-pinned multiplication-witness network can be contracted exactly
+in bit time polynomial in \(\log N\), subtract the two public witnesses
+\(x=1,N\). The remaining positive counts partition at every next bit, so a
+nontrivial divisor is recovered directly. Exact division, deterministic
+primality testing, and recursion give complete deterministic polynomial-time
+factorization for every input.
+
+**Verified local obstruction.** Ordinary contraction requires
+\((T^{-1})^{\mathsf T}\) on the endpoint opposite \(T\). Every invertible
+basis making ternary COPY parity-pure gives an alternating dual column ratio
+\(r(-1)^b\). With independent input-role bases and arbitrary output action,
+the transformed AND parity equations force both \(x=y\) and \(x=-y\), or
+force \(xy=0\) in a zero-coordinate case. An explicit padded bipartite
+ternary-fanout construction realizes the directly adjacent leaf-COPY/AND
+pair without changing witness multiplicity.
+
+**Verification result and remaining gap.** A fresh hostile re-audit checked
+the corrected transpose-dual convention, all parity and topology-scope cases,
+the exact witness count, recursion, and bit complexity. A proof-blind
+reconstruction recovered the theorem through an independent slice-pencil
+argument. This closes only the separated common-role-basis matchgate route.
+Fused cells, high-arity equality, edge-dependent gauges, other Pfaffian
+identities, and non-matchgate exact contractions remain open.

@@ -1024,3 +1024,56 @@ polynomial algorithm and inverse-polynomial factor-extraction law; or a new
 exact obstruction for one of those explicitly open objects.  Adding more
 samples to the same shared-output zero-syndrome/Gram map, or block-diagonalizing
 the same Hurwitz multiplication maps, is covered by P35.
+
+## X30 — common-basis holographic contraction of the separated
+COPY--AND multiplier
+
+**Status:** promoted as P36 after a corrected hostile re-audit and
+proof-blind reconstruction.
+
+**Family:** F20.
+
+**Classification:** method failure for the explicit bipartite
+ternary-fanout realization under one common basis per copied input role and
+the required transpose-dual action on adjacent AND inputs.  This is not a
+failure of fused cells, high-arity equality, edge-dependent gauges, other
+gate sets, other Pfaffian identities, or non-matchgate exact contraction.
+
+**Closest prior route and material difference.** P10 refutes scalar carry as
+a sufficient exact multiplication state, P19 gives an exact multiplication
+CVP reduction without a tractable landing, and P29 identifies a
+factor-sufficient trace oracle without an evaluator.  X30 instead encodes
+the complete multiplication witness as a tensor-network count.  An exact
+polynomial contraction of every prefix-pinned network would output a divisor
+by count self-reduction, without a terminal factor-extracting gcd.
+
+**Exact obstruction.** Ordinary contraction pairs \(T\) with
+\((T^{-1})^{\mathsf T}\), not \(T^{-1}\).  The complete basis
+classification for parity-pure ternary COPY gives an alternating
+original-one/original-zero coordinate ratio \(r(-1)^b\) under the correct
+dual action.  With independent ratios \(x,y\) on the two AND inputs and
+arbitrary independent output columns \(u,v\), every transformed output
+slice has the form
+
+\[
+u(1+xs+yt)+vxy\,st.
+\]
+
+The forbidden-parity equations force \(x=y\) and \(x=-y\), while every
+zero-coordinate escape forces \(xy=0\).  Hence AND cannot be a ternary
+matchgate whenever the two directly adjacent leaf COPY tensors are
+matchgates.
+
+Complete padded ternary fanout trees, neutral unary legs, a common leaf
+depth, and binary equality subdivisions realize that direct adjacency in a
+literal bipartite polynomial-size network without changing witness counts.
+The failure occurs before planarity or full-adder identities are relevant.
+
+**What would make a retry materially new.** A fused multiplier-cell
+signature satisfying all required matchgate identities; a globally
+compatible edge-dependent gauge; a high-arity equality treatment not
+reducible to the displayed ternary leaves; a different planar
+Pfaffian/sub-Pfaffian construction with exact pinned counts and polynomial
+bit growth; or a non-matchgate tractable tensor family containing the full
+pinned multiplication network.  Reusing the separated COPY\(_3\)--AND\(_3\)
+pair under a common role basis is covered by P36.

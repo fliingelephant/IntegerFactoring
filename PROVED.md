@@ -2812,3 +2812,119 @@ reconstruction are preserved under
 `experiments/F25_hidden_modulus_relation_lattice_audit`,
 `experiments/F25_hidden_modulus_relation_lattice_reaudit`, and
 `experiments/F25_hidden_modulus_relation_lattice_reconstruct`.
+
+## P36 — exact pinned factor-witness counts self-reduce, but the natural
+COPY--AND matchgate basis is impossible
+
+**Status:** promoted.
+
+**Verification record:** the count-to-factor self-reduction, every-input
+recursion and bit bound, contraction-preserving transpose-dual convention,
+complete ternary-COPY basis classification, AND parity contradiction, and
+explicit bipartite fanout realization passed a corrected hostile re-audit
+and an independent proof-blind reconstruction.  The reconstruction used a
+different slice-pencil proof of the AND obstruction.  No cross-family audit
+has run.
+
+Let \(N>1\), and let \(Z(P)\) denote the exact number of Boolean
+multiplication witnesses
+
+\[
+xy=N,
+\]
+
+whose fixed-length \(x\)-encoding extends a prefix \(P\).  A polynomial-size
+deterministic multiplier network has exactly one internal assignment for
+each ordered divisor pair.  Define
+
+\[
+Z_*(P)=Z(P)
+-\mathbf1_{\{1\text{ extends }P\}}
+-\mathbf1_{\{N\text{ extends }P\}}.
+\]
+
+If \(N\) is composite, then \(Z_*(\varnothing)=\tau(N)-2>0\), and
+
+\[
+Z_*(P)=Z_*(P0)+Z_*(P1).
+\]
+
+Choosing a positive child at every bit therefore returns an integer
+\(1<x<N\) with \(x\mid N\).  Exact division verifies the split.
+Deterministic primality testing and recursion give the complete
+factorization, including even inputs, prime powers, repeated factors, and
+unbalanced composites.  There are \(O(\log N)\) recursion nodes and
+\(O(\log N)\) pinned contractions per node, and every count has polynomial
+bit length.  Consequently a uniform exact polynomial-bit contraction
+algorithm for every original and prefix-pinned witness network would imply
+deterministic polynomial-time factoring.  The divisor is recovered directly,
+with no terminal factor-extracting gcd.
+
+The natural Valiant-style landing fails locally.  Put
+
+\[
+E=e_0^{\otimes3}+e_1^{\otimes3}
+\]
+
+for ternary COPY and let \(A\) be the ternary AND relation.  Ordinary edge
+contraction requires a primal action \(T\) on one endpoint and the
+transpose-dual action
+
+\[
+S=(T^{-1})^{\mathsf T}
+\]
+
+on the other.  Every invertible \(T\) making \(T^{\otimes3}E\) parity-pure
+has one of the two forms
+
+\[
+T=\operatorname{diag}(a,c)
+\begin{pmatrix}1&-\rho\\1&\rho\end{pmatrix}
+\quad\text{or}\quad
+T=\operatorname{diag}(a,c)
+\begin{pmatrix}1&\rho\\1&-\rho\end{pmatrix},
+\qquad \rho^3=-1.
+\]
+
+For either form there are nonzero \(\lambda_0,\lambda_1,r\) such that
+
+\[
+Se_0=\begin{pmatrix}\lambda_0\\\lambda_1\end{pmatrix},
+\qquad
+Se_1=r\begin{pmatrix}\lambda_0\\-\lambda_1\end{pmatrix}.
+\]
+
+Permit independent common bases for the two copied input roles and an
+arbitrary invertible action on the AND-output leg.  After nonzero input
+scalings are removed, the transformed AND output slice is
+
+\[
+W_{s,t}=u(1+xs+yt)+vxy\,st,
+\qquad s,t\in\{\pm1\},\qquad xy\ne0,
+\]
+
+where \(u,v\) are independent.  If the tensor were even, its four forbidden
+entries force both \(x=y\) and \(x=-y\); the odd case forces the same two
+equalities in the opposite order.  If either relevant coordinate of \(u\)
+is zero, the equations instead force \(xy=0\).  Thus transformed AND is
+neither even nor odd and hence is not a ternary matchgate.
+
+The local hypotheses occur literally in a polynomial-size bipartite
+realization: complete padded trees of ternary COPY tensors put all leaf COPY
+vertices on one side and connect their used leaf legs directly to AND
+inputs on the other; neutral unaries and binary equality subdivisions
+preserve every witness with multiplicity one.  Therefore the displayed
+separated COPY\(_3\)--AND\(_3\) network cannot acquire an FKT/Pfaffian
+contraction through a common role basis and its required dual action.
+
+This is not a tensor-contraction lower bound.  High-arity equality, fused
+multiplier cells, edge- or vertex-dependent gauges, other gate sets,
+different Pfaffian identities, public-pin cancellations, bounded-genus
+constructions, and non-matchgate exact contraction remain open.
+
+The corrected candidate, first audit, fresh re-audit, and proof-blind
+reconstruction are preserved under
+`experiments/F26_holographic_factor_network`,
+`experiments/F26_holographic_factor_network_audit`,
+`experiments/F26_holographic_factor_network_reaudit`, and
+`experiments/F26_holographic_factor_network_reconstruct`.
