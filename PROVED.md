@@ -2492,3 +2492,323 @@ For fixed \(\ell\), irreducibility of \(\Phi_\ell\) over \(\mathbf Q(X)\) rules 
 P33 leaves open \(N\)-dependent selectors, higher-class-number CM with explicit embeddings, vertical and supersingular constructions, and every fine representation from which the selective section can actually be recovered. It proves no general selector lower bound.
 
 The candidate, corrected hostile audit, and proof-blind reconstruction are preserved under `experiments/F23_canonical_isogeny_neighbor_kill`, `experiments/F23_canonical_isogeny_neighbor_audit`, and `experiments/F23_canonical_isogeny_neighbor_reconstruct`.
+
+## P34 — Boolean pooling gives constant relation mass, but the exact evaluator remains exponential in the input length
+
+**Status:** promoted.
+
+**Verification record:** the probability theorem, floor constants, local-OR
+scope, meet-in-the-middle identity and signs, composite-ring evaluator, exact
+bit/space bounds, cube-tree identity, and representation-specific limitations
+passed a corrected hostile audit and a proof-blind end-to-end reconstruction.
+No cross-family audit has run.
+
+Let
+
+\[
+N=pq,\qquad 53\le p<q<2p
+\]
+
+for distinct odd primes.  Put
+
+\[
+h=\lfloor\sqrt N\rfloor,\quad
+K=\lfloor\log_2h\rfloor-3,\quad
+T=2^K,
+\]
+
+draw independent uniform \(a_1,\ldots,a_K)\) modulo \(N\), and define
+
+\[
+Q_K=\prod_{\varnothing\ne S\subseteq[K]}
+\left(\sum_{i\in S}a_i\right)\pmod N.
+\]
+
+For \(r\in\{p,q\}\), let \(E_r\) be the event that at least one nonempty
+subset sum vanishes modulo \(r\), and put \(\mu_r=(T-1)/r\).
+
+**Constant-mass pooled event.**  Distinct nonempty \(0/1\) incidence vectors
+are linearly independent in pairs over every field.  The corresponding
+zero indicators are therefore pairwise independent, so the second-moment
+bound gives
+
+\[
+\Pr(E_r)\ge
+\frac{\mu_r}{\mu_r+1-1/r}.
+\]
+
+The exact floors imply
+
+\[
+\frac1{32\sqrt2}<\mu_r<\frac{\sqrt2}{8}.
+\]
+
+The complete arrays modulo \(p\) and \(q\) are independent under CRT.  In
+each field, and only in that componentwise sense, the product is a
+cancellation-free OR:
+
+\[
+Q_K=0\pmod r
+\quad\Longleftrightarrow\quad E_r.
+\]
+
+Consequently
+
+\[
+\Pr\bigl(1<\gcd(Q_K,N)<N\bigr)
+=\Pr(E_p\mathbin\triangle E_q)
+\ge
+\frac{2}{32\sqrt2+1}
+\left(1-\frac{\sqrt2}{8}\right).
+\]
+
+Thus a uniform exact evaluator for \(Q_K\bmod N\) with bit cost polynomial
+in \(\log N+K\) would give a constant-expected-trial Las Vegas splitter on
+this balanced squarefree-semiprime promise.  This does not cover unbalanced
+semiprimes, repeated factors, prime powers, even inputs, or arbitrary
+composites.
+
+**Exact evaluator boundary.**  For a split
+\([K]=A\mathbin{\dot\cup}B\), put
+
+\[
+x_U=\sum_{i\in U}a_i,\quad
+y_V=\sum_{i\in V}a_i,\quad
+F_A(X)=\prod_{U\subseteq A}(X+x_U),\quad
+Q_A=\prod_{\varnothing\ne U\subseteq A}x_U.
+\]
+
+Then, over every commutative ring,
+
+\[
+Q_K=Q_A\prod_{\varnothing\ne V\subseteq B}F_A(y_V).
+\]
+
+Equivalently, with
+\(P_B(X)=\prod_{V\ne\varnothing}(X-y_V)\),
+
+\[
+Q_K=Q_A\operatorname{Res}(P_B,F_A).
+\]
+
+The alternative ordering carries the usual
+\((-1)^{\deg P_B\deg F_A}\) sign; no sign-free resultant convention is
+assumed.
+
+For \(|A|=\lceil K/2\rceil\) and
+\(|B|=\lfloor K/2\rfloor\), enumerate the half sums by Gray code, build a
+monic product tree for \(F_A\), and evaluate it at all \(y_V\) by a monic
+subproduct/remainder tree.  Fast monic division over \(\mathbb Z/N\mathbb Z\)
+uses reversal and Newton inversion only of a power series with constant
+coefficient \(1\); it never inverts a data-dependent residue or a point
+difference.  Carry-safe Kronecker packing reduces polynomial multiplication
+to uniform integer multiplication.  Since the largest tree degree is
+
+\[
+D=2^{\lceil K/2\rceil}=\Theta(N^{1/4}),
+\]
+
+the exact evaluator uses
+
+\[
+N^{1/4+o(1)}
+\]
+
+bit time and space.  Direct Gray-code multiplication over all subsets uses
+\(N^{1/2+o(1)}\) bit time and polynomial space.
+
+**Structural identities and scope.**  The direction-weighted \(K\)-cube has
+spanning-tree enumerator
+
+\[
+\tau_K=2^{2^K-K-1}Q_K.
+\]
+
+For \(a_i=u2^{i-1}\),
+
+\[
+Q_K=u^{2^K-1}(2^K-1)!.
+\]
+
+Over \(\mathbb Q(a_1,\ldots,a_K)\), the subset-sum diagonal operator has
+minimal-polynomial degree \(2^K\), and a characteristic-zero polynomial
+vanishing on every hyperplane
+\(\sum_{i\in S}a_i=0\) is divisible by \(Q_K\).  These are exact
+representation statements, not arithmetic-circuit, compressed-state, or
+modular-evaluation lower bounds.  P34 therefore verifies that exponentially
+many rare relations can be pooled into a constant-probability event, while
+leaving the decisive polylogarithmic evaluator completely open.
+
+The corrected candidate, hostile audit and fresh re-audit, and proof-blind
+reconstruction are preserved under
+`experiments/F24_amortized_mixed_relation_decoder`,
+`experiments/F24_amortized_mixed_relation_decoder_audit`,
+`experiments/F24_amortized_mixed_relation_decoder_reaudit`, and
+`experiments/F24_amortized_mixed_relation_decoder_reconstruct`.
+
+## P35 — public zero-syndrome lattices do not amortize hidden local kernels
+
+**Status:** promoted.
+
+**Verification record:** the Construction-A indices, determinantal-rank
+separator, exact-kernel quotient, general rank/covolume formulas, CVP coset
+invariance, Hurwitz handedness and minima, graph threshold, Gram quotient,
+and public output/scaled-dual boundary passed a corrected hostile re-audit
+and a proof-blind end-to-end reconstruction.  No cross-family audit has run.
+
+Let \(A\in\mathbb Z^{t\times d}\), let \(N=pq\) for distinct primes, and set
+
+\[
+K_r(A)=\{x\in\mathbb Z^d:Ax\equiv0\pmod r\},\qquad
+s_r=\operatorname{rank}_{\mathbb F_r}(A\bmod r).
+\]
+
+Then
+
+\[
+\det K_r(A)=r^{s_r},\qquad
+K_N(A)=K_p(A)\cap K_q(A),\qquad
+\det K_N(A)=p^{s_p}q^{s_q}.
+\]
+
+If \(s_p\ne s_q\), an integer determinantal divisor of \(A\) vanishes
+modulo exactly one prime, so SNF followed by a gcd already factors \(N\) in
+polynomial bit complexity.  In the remaining equal-rank case, the desired
+set
+
+\[
+(K_p\setminus K_q)\cup(K_q\setminus K_p)
+\]
+
+is not a lattice.  More precisely, any subgroup contained in a union of two
+subgroups lies wholly in one of them.  The public homogeneous
+Construction-A object therefore represents the CRT intersection, not the
+one-local-only disjunction.
+
+Put
+
+\[
+\rho=\operatorname{rank}_{\mathbb Q}A,\qquad
+K_0=\ker_{\mathbb Z}A.
+\]
+
+The lattice \(K_0\) is primitive of rank \(d-\rho\).  If \(\pi\) denotes
+orthogonal projection off its real span and \(\Delta_0\) its covolume in
+that span, then
+
+\[
+\det\pi(K_p)=\frac{p^{s_p}}{\Delta_0},\quad
+\det\pi(K_q)=\frac{q^{s_q}}{\Delta_0},\quad
+\det\pi(K_N)=\frac{p^{s_p}q^{s_q}}{\Delta_0}.
+\]
+
+When \(s_p=s_q=u\) and \(\rho>0\), the determinant-root scales in the
+faithful rank-\(\rho\) quotient are
+
+\[
+p^{u/\rho}\Delta_0^{-1/\rho},\quad
+q^{u/\rho}\Delta_0^{-1/\rho},\quad
+N^{u/\rho}\Delta_0^{-1/\rho}.
+\]
+
+Only the full-local-rank case \(u=\rho\) simplifies to the exponent one.
+For \(\rho=0\), \(A=0\) and there is no syndrome.  Thus concatenating many
+samples into a fixed output does not create high-dimensional metric
+amortization: it adds exact, prime-independent kernel directions.  For one
+quaternion output the faithful quotient has rank at most four.
+
+If a public target \(t\in\mathbb Z^d\) is reduced by any
+\(v\in K_N(A)\), then \(e=t-v\) satisfies
+
+\[
+e\in K_r(A)\quad\Longleftrightarrow\quad t\in K_r(A).
+\]
+
+CVP inside the public intersection cannot manufacture a new local-zero
+syndrome.  For a target uniform modulo \(N\), the exact probability of
+landing in exactly one local kernel is
+
+\[
+p^{-s_p}+q^{-s_q}-2p^{-s_p}q^{-s_q},
+\]
+
+which is exponentially small on balanced inputs when the common rank is
+positive.
+
+**Exact Hurwitz block.**  For a norm-\(N\) Hurwitz integer \(\alpha\), the
+matrix of left multiplication has
+
+\[
+\operatorname{SNF}(M_\alpha)=\operatorname{diag}(1,1,N,N).
+\]
+
+The intrinsic local right ideals
+
+\[
+J_r(\alpha)=\{x:\alpha x\in r\mathcal H\}
+\]
+
+have determinant \(r^2\) and exact shortest Hurwitz length \(\sqrt r\).
+Their public intersection is
+
+\[
+J_N(\alpha)=\bar\alpha\mathcal H,
+\qquad \det J_N=N^2,
+\qquad \lambda_1(J_N)=\sqrt N.
+\]
+
+Its Gram matrix is exactly \(N\) times the fixed Hurwitz Gram matrix.
+Direct sums preserve the three determinant-root scales
+\(\sqrt p,\sqrt q,\sqrt N\), so block multiplication also gains no
+amortization.  A basis of a local ideal would reveal its prime from the
+determinant before LLL is invoked.
+
+For the public graph lattice
+
+\[
+\Gamma_{a,b}(A,N)=
+\{(ax,b(Ax-Nz)):x\in\mathbb Z^d,z\in\mathbb Z^t\},
+\]
+
+the determinant is \(a^d(bN)^t\).  In one Hurwitz block,
+
+\[
+\|\alpha x-Nz\|_Q^2
+=N\|x-\bar\alpha z\|_Q^2.
+\]
+
+If \(x\in J_r(\alpha)\) and the unshifted residual has length strictly below
+\(r\), the residual must be zero and \(x\in J_N(\alpha)\).  This closes
+only that below-threshold graph slice.
+
+**The remaining metric boundary is explicit.**  Two other full-rank public
+lattices are
+
+\[
+\Lambda_{\rm out}=A\mathbb Z^d+N\mathbb Z^t,
+\qquad
+\det\Lambda_{\rm out}=p^{t-s_p}q^{t-s_q},
+\]
+
+and
+
+\[
+\Lambda_{\rm dual}
+=NK_N(A)^*
+=N\mathbb Z^d+A^{\mathsf T}\mathbb Z^t,
+\qquad
+\det\Lambda_{\rm dual}=p^{d-s_p}q^{d-s_q}.
+\]
+
+P35 proves no shortest-vector, closest-vector, target-distribution, or
+factor-extraction theorem for either lattice, nor for a faithful fixed-rank
+quotient, biased targets, or nonlinear combinations.  It is a narrow
+obstruction to public zero-syndrome and high-dimensional Gram amortization,
+not a lattice lower bound or a factoring algorithm.
+
+The corrected candidate, hostile audit and fresh re-audit, and proof-blind
+reconstruction are preserved under
+`experiments/F25_hidden_modulus_relation_lattice`,
+`experiments/F25_hidden_modulus_relation_lattice_audit`,
+`experiments/F25_hidden_modulus_relation_lattice_reaudit`, and
+`experiments/F25_hidden_modulus_relation_lattice_reconstruct`.

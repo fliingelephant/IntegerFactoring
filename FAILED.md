@@ -900,3 +900,127 @@ u(u^2+A)\equiv0\pmod N.
 It is mixed across the two CRT components, and \(\gcd(u,N)\) and \(\gcd(u^2+A,N)\) are the complementary factors. Uniform random \(A\) reaches the promise with probability at least \(4/15\). Hence constructing this fine object is already semiprime factoring; the missing selector has not been built.
 
 **What would make a retry materially new.** An explicit \(N\)-dependent construction that returns a kernel polynomial, rational map, or other representation from which the selective nonidentity section is recoverable in polynomial time; compatible local CM embeddings; or a vertical/supersingular mechanism. Another public/coarse root, a target \(j\), an opaque certificate, or a universal rational-function selector is covered by P33.
+
+## X28 — explicit evaluation of the Boolean many-relation product
+
+**Status:** promoted as P34 after a corrected hostile audit and proof-blind
+reconstruction.
+
+**Family:** F02.  The optional Hurwitz provenance was removed because it is
+mathematically dispensable.
+
+**Classification:** evidence against the exact auxiliary mechanism of gaining
+a polynomial-time algorithm merely by observing that exponentially many rare
+subset relations have constant pooled mass.  This is not a circuit lower
+bound and does not close implicit modular evaluators or other joint decoders.
+
+**Closest prior route and material difference.** X15/P21 studies a torus
+order-threshold product and blocks several literal compression schemes.  X28
+uses a Boolean subset-sum product with pairwise-independent local tickets.
+Unlike a polynomial union of birthday events, its pooled local zero event
+has proved constant probability on balanced semiprimes.
+
+**Exact boundary.** For \(N=pq\), \(53\le p<q<2p\), and
+
+\[
+K=\lfloor\log_2\lfloor\sqrt N\rfloor\rfloor-3,
+\qquad
+Q_K=\prod_{\varnothing\ne S\subseteq[K]}
+\sum_{i\in S}a_i,
+\]
+
+uniform independent \(a_i\bmod N\) give
+
+\[
+\Pr(1<\gcd(Q_K,N)<N)
+\ge
+\frac{2}{32\sqrt2+1}
+\left(1-\frac{\sqrt2}{8}\right).
+\]
+
+The OR statement is exact separately modulo \(p\) and \(q\), not globally
+over \(\mathbb Z/N\mathbb Z\).  Thus a polylogarithmic exact evaluator would
+give a constant-trial promised splitter.
+
+The proved evaluator instead splits the variables in half and uses monic
+product and remainder trees over the composite ring.  It has exact
+\(N^{1/4+o(1)}\) bit time and space.  Direct Gray-code evaluation has
+\(N^{1/2+o(1)}\) bit time and polynomial space.  The minimal-polynomial,
+hyperplane-divisibility, cube-tree, and literal-support facts do not imply an
+arithmetic-circuit or compressed-state lower bound.  No all-input factoring
+algorithm follows.
+
+**What would make a retry materially new.** A uniform division-free circuit
+or other implicit evaluator with bit cost polynomial in \(\log N\), together
+with a proved all-input or reducible promise theorem; a different pooled
+observable whose joint decoder is genuinely polynomial; or a symbolic lower
+bound in a precisely named model strong enough to exclude the missing
+evaluator.  Re-enumerating the subsets, using the displayed meet-in-the-middle
+tree, or quoting exponential formal degree is covered by P34.
+
+## X29 — high-dimensional public zero-syndrome relation lattices
+
+**Status:** promoted as P35 after a corrected hostile re-audit and proof-blind
+reconstruction.
+
+**Family:** F19.
+
+**Classification:** method failure for the public zero-syndrome
+Construction-A kernel, fixed-output coefficient/Gram high-dimensional
+amortization, block-diagonal Hurwitz sums, CVP subtraction inside the public
+intersection, and the displayed below-threshold graph slice.  This is not a
+failure of the public output lattice, scaled dual, a faithful fixed-rank
+metric decoder, biased targets, or nonlinear combinations.
+
+**Closest prior route and material difference.** P19 encodes multiplication
+as an exact but high-width CVP instance, while P30/P31 control projective
+collision tickets from four-square outputs.  X29 instead asks whether many
+locally low-rank algebraic samples create a public metric gap whose shortest
+vector lies in exactly one hidden local kernel.
+
+**Exact obstruction.** For
+
+\[
+K_r(A)=\{x\in\mathbb Z^d:Ax\equiv0\pmod r\},
+\]
+
+one has
+
+\[
+K_N=K_p\cap K_q,
+\qquad
+\det K_N=p^{s_p}q^{s_q}.
+\]
+
+Unequal local ranks already factor through an SNF determinantal divisor.
+With equal ranks, the one-local-only disjunction is not a public subgroup.
+The exact rational kernel of a fixed-output map is primitive and consumes
+the apparent extra dimensions; after quotienting it, the faithful rank is at
+most four for one quaternion output.  Subtracting any vector of \(K_N\)
+preserves both local syndromes, so CVP in the public intersection cannot
+create a local-zero event.
+
+For norm-\(N\) Hurwitz multiplication, the local ideals have exact minima
+\(\sqrt p,\sqrt q\), while the public intersection
+\(\bar\alpha\mathcal H\) is an exact rotated \(\sqrt N\)-similarity of the
+fixed Hurwitz lattice.  Direct sums retain those scales.  Below residual
+length \(r\), the named graph embedding selects only the public
+intersection.
+
+P35 explicitly derives but does not close
+
+\[
+\Lambda_{\rm out}=A\mathbb Z^d+N\mathbb Z^t,
+\qquad
+\Lambda_{\rm dual}=N\mathbb Z^d+A^{\mathsf T}\mathbb Z^t.
+\]
+
+No shortest/closest-vector distribution or extraction theorem is known for
+them or for the faithful fixed-rank quotient.
+
+**What would make a retry materially new.** A completely specified output,
+dual, quotient, affine-target, or nonlinear lattice construction with a
+polynomial algorithm and inverse-polynomial factor-extraction law; or a new
+exact obstruction for one of those explicitly open objects.  Adding more
+samples to the same shared-output zero-syndrome/Gram map, or block-diagonalizing
+the same Hurwitz multiplication maps, is covered by P35.

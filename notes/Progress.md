@@ -4,7 +4,7 @@ This is working state for nontrivial intermediate statements and the current syn
 
 ## Current synthesis
 
-The source material has been read in full. Nineteen approach families have been opened, primarily from materially different mechanisms in `notes/Inspirations.md` with additional factor-trace, noncommutative, and hidden-modulus metric routes; promoted narrow results and exact open gaps are tracked below and in the registry. The current non-residue-ring frontier is a factor-free way to manufacture either a fine metric hint, a useful class-group/isogeny orientation, or a genuinely joint Hurwitz relation decoder. `notes/Zhihu.md` supplies background and motivation only.
+The source material has been read in full. Twenty approach families have been opened, primarily from materially different mechanisms in `notes/Inspirations.md` with additional factor-trace, noncommutative, hidden-modulus metric, and non-gcd tensor-contraction routes; promoted narrow results and exact open gaps are tracked below and in the registry. The current frontier is a factor-free way to manufacture a fine metric hint, a useful class-group/isogeny orientation, a genuinely joint Hurwitz relation decoder, or an exactly contractible non-gcd factor-witness network. `notes/Zhihu.md` supplies background and motivation only.
 
 ## Working claims
 
@@ -444,3 +444,71 @@ u(u^2+A)\equiv0\pmod N,
 and its two complementary gcds are \(p,q\). Random \(A\) reaches the promise with probability at least \(4/15\); known factors construct the section by a local square root and CRT.
 
 **Verification result and remaining gap.** The hostile audit and blind reconstruction checked the modular-polynomial constants, descent distinction, subgroup-scheme equivalence, exact probability and bit complexity, \(N=143,A=1,u=44\) certificate, global-power synchronization, and narrow irreducibility/discriminant/CM bounds. No fine selector was constructed. \(N\)-dependent, higher-CM-with-embeddings, vertical, and supersingular mechanisms remain open.
+
+### C31 — exponentially many Boolean relations have constant pooled mass but no polylogarithmic evaluator
+
+**Status:** promoted as P34 after a corrected hostile audit and proof-blind
+reconstruction.
+
+**Closest prior route and material difference.** P21 blocks several literal
+compressions of a torus threshold product. C31 studies the product of every
+nonempty Boolean subset sum. It is also F02-adjacent, but its local event is a
+genuine constant-mass pool of pairwise-independent tickets rather than a
+polynomial union of rare comparisons. Optional Hurwitz provenance is
+dispensable.
+
+**Verified boundary.** On \(N=pq\) with
+\(53\le p<q<2p\), choose
+\(K=\lfloor\log_2\lfloor\sqrt N\rfloor\rfloor-3\) uniform residues and
+multiply their \(2^K-1\) nonempty subset sums. The product vanishes in
+exactly one field component with probability at least
+
+\[
+\frac{2}{32\sqrt2+1}
+\left(1-\frac{\sqrt2}{8}\right).
+\]
+
+Therefore a polylogarithmic exact evaluator would give a constant-trial
+Las Vegas splitter on the promise. The exact meet-in-the-middle identity,
+monic product/remainder trees, and carry-safe Kronecker multiplication give
+only \(N^{1/4+o(1)}\) bit time and space; direct Gray-code evaluation gives
+\(N^{1/2+o(1)}\) bit time and polynomial space.
+
+**Verification result and remaining gap.** The hostile audit and blind
+reconstruction checked the floors, probability, componentwise-OR scope,
+resultant signs, composite-ring division, bit complexity, cube-tree identity,
+and formal degree limitations. No polynomial evaluator, general circuit
+lower bound, unbalanced/repeated-factor theorem, recursion, or all-input
+factoring algorithm is known.
+
+### C32 — public zero-syndrome lattices lose the proposed high-dimensional amortization
+
+**Status:** promoted as P35 after a corrected hostile re-audit and proof-blind
+reconstruction.
+
+**Closest prior route and material difference.** P19 is an exact
+multiplication-CVP reduction whose tractable-class landing fails. P30/P31
+control pairwise projective events. C32 instead analyzes the hidden-modulus
+Construction-A, coefficient/Gram, Hurwitz block, and graph lattices proposed
+for jointly decoding many local relations.
+
+**Verified boundary.** For an integer map \(A\), the public modular kernel is
+exactly \(K_p(A)\cap K_q(A)\). Unequal local ranks factor immediately through
+SNF minors. In the equal-rank case, the desired symmetric difference is not a
+lattice, fixed-output concatenation adds a primitive exact rational kernel,
+and quotienting leaves rank at most four for one quaternion output. CVP
+subtraction in the public intersection preserves both local syndromes.
+
+For norm-\(N\) Hurwitz multiplication, the intrinsic local ideals have exact
+shortest lengths \(\sqrt p\) and \(\sqrt q\), while their public intersection
+has exact shortest length \(\sqrt N\) and is a fixed-shape similarity. Direct
+sums do not improve these scales. The displayed unshifted graph regime below
+local residual length \(r\) selects only the public intersection.
+
+**Verification result and remaining gap.** The corrected audit and blind
+reconstruction verified all determinant, projection, handedness, minimum,
+CVP, graph, and bit-complexity claims. They explicitly leave open the public
+output lattice \(A\mathbb Z^d+N\mathbb Z^t\), the scaled dual
+\(N\mathbb Z^d+A^{\mathsf T}\mathbb Z^t\), a faithful fixed-rank metric
+decoder, biased affine targets, and nonlinear combinations. No every-input
+sampler or factor-extraction law is known.
