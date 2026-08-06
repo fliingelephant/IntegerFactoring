@@ -4,7 +4,7 @@ This is working state for nontrivial intermediate statements and the current syn
 
 ## Current synthesis
 
-The source material has been read in full. Twenty-six approach families have been opened, primarily from materially different mechanisms in `notes/Inspirations.md` with additional factor-trace, noncommutative, hidden-modulus metric, non-gcd tensor-contraction, joint-amortization, positive-sampling, and finite-field or integer-quotient dissipative routes; promoted narrow results and exact open gaps are tracked below and in the registry. The current frontier is a factor-free sampler for the quadratic-energy/zero-product law, a genuinely joint decoder using typical nonzero relation data, a fine manufactured metric hint, a useful class-group/isogeny orientation, or an exactly contractible positive factor-witness network beyond the proved local wiring boundaries. `notes/Zhihu.md` supplies background and motivation only.
+The source material has been read in full. Twenty-eight approach families have been opened, primarily from materially different mechanisms in `notes/Inspirations.md` with additional factor-trace, noncommutative, hidden-modulus metric, non-gcd tensor-contraction, joint-amortization, positive-sampling, and finite-field or integer-quotient dissipative routes; promoted narrow results and exact open gaps are tracked below and in the registry. The current frontier is a factor-free sampler for the quadratic-energy/zero-product law, a genuinely joint decoder using typical nonzero relation data, a fine manufactured metric hint, a useful class-group/isogeny orientation, or an exactly contractible positive factor-witness network beyond the proved local wiring boundaries. `notes/Zhihu.md` supplies background and motivation only.
 
 ## Working claims
 
@@ -1100,3 +1100,39 @@ several correlations sharing one source, same-source adaptation, exact
 symbolic sums, succinct dense statistics, and nonlinear joint decoders are
 open. Thus C50 is a sharp scalar-channel boundary, not a generic Jacobi
 indistinguishability claim.
+
+### C51 — Hadamard--Paley relation pooling is low-degree-hard but high-order-open
+
+**Status:** promoted as P54 after a clean hostile audit and a fresh
+context-free proof-blind reconstruction.
+
+**Closest prior routes and material difference.** C50/P53 controls a scalar
+product or a polynomial-\(\ell_1\) combination from each fresh hidden source.
+C51 retains \(m=\Theta(n)\) shifted signs jointly and allows one arbitrary
+bounded decision rule with superpolynomial Fourier support. The only
+restriction is its Walsh degree, so this is a genuine amortization test rather
+than another single-invariant gcd.
+
+**Verified boundary.** Difference screening makes the local shift polynomials
+squarefree. Independent zero filling and CRT give the exact Walsh coefficient
+\(c_S=A_p(S)A_q(S)/N\); degrees one and two are exactly \(0\) and \(1/N\),
+and higher coefficients are at most \((|S|-1)^2/\sqrt N\). Parseval then
+controls every bounded rule of degree
+\(D\le n/(20\log_2n)\) by
+\(2^{-9n/20+O_C(\log n)}\) after the exact accepted-word conditioning
+penalty. Past-adaptive use remains covered only when each fresh source and row
+is immediately compressed to one released bit and discarded.
+
+The raw sampler's accepted, full-gcd rejection, and proper-gcd success
+probabilities are known exactly. The whole filled word is not claimed
+pseudorandom: its support is below \(4N\), and the public pair \((X,W)\) is
+outside the marginal theorem.
+
+**Remaining gap.** Retained sources, full-row release, same-row reuse, high or
+characteristic-order processing, exact transforms, and genuine
+Hadamard--Paley/product-code list recovery remain open. A precise HP-LR
+decoder hypothesis has an all-input Las Vegas reduction with complete
+prime-power and recursion bookkeeping, but the hypothesis itself already
+requires inverse-polynomial-probability recovery of a numerical odd-exponent
+prime factor. It is the missing algorithm, not a consequence of the
+low-degree theorem.

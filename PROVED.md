@@ -291,9 +291,9 @@ Deterministic trial division through the respective square-root bounds proves th
 Exact order enumeration for every \(2\le s\le2953\) shows that \(r=2953\) is the first candidate with \(\operatorname{ord}_r(N)>(\log_2N)^2\). At \(r\), \(\varphi(r)=2952=2^3 3^2 41\), \(N\bmod r=1146\), and
 
 \[
-1146^{2952}=1,quad
-1146^{1476}=2952,quad
-1146^{984}=800,quad
+1146^{2952}=1,\quad
+1146^{1476}=2952,\quad
+1146^{984}=800,\quad
 1146^{72}=1277\pmod {2953},
 \]
 
@@ -510,7 +510,7 @@ Trial division proves both factors prime, so \(N\) is not a perfect power. Exact
 For \(s\le265\), \(\operatorname{ord}_s(N)\le s-1\le264\), while \(\varphi(266),\varphi(267),\varphi(268)=108,176,132\). Modulo the prime 269,
 
 \[
-N\equiv48,qquad48^{134}=-1,qquad48^4=239,
+N\equiv48,\qquad48^{134}=-1,\qquad48^4=239,
 \]
 
 so \(\operatorname{ord}_{269}(N)=268\). Hence the first AKS modulus is \(r=269\). Both factors exceed it, so the preliminary gcd scan survives. Moreover
@@ -2517,7 +2517,7 @@ K=\lfloor\log_2h\rfloor-3,\quad
 T=2^K,
 \]
 
-draw independent uniform \(a_1,\ldots,a_K)\) modulo \(N\), and define
+draw independent uniform \(a_1,\ldots,a_K\) modulo \(N\), and define
 
 \[
 Q_K=\prod_{\varnothing\ne S\subseteq[K]}
@@ -4879,8 +4879,8 @@ Because \(\mathcal O_Q(1)=\mathcal O_Q(1,1)\) and
 \(\deg\mathcal O_{\bar C^-}(1)=2\), the two factor maps obey
 
 \[
- \deg L_{m image}^*\mathcal O(1)
- +\deg L_{m row}^*\mathcal O(1)
+ \deg L_{\rm image}^*\mathcal O(1)
+ +\deg L_{\rm row}^*\mathcal O(1)
  \le 2(d+1).
 \tag{50.3}
 \]
@@ -5005,7 +5005,7 @@ cases.
 For a concrete certificate, take
 
 \[
- N=21,quad R=1,quad u_0=2-4i,quad c_0=-1,quad h=2+4i.
+ N=21,\quad R=1,\quad u_0=2-4i,\quad c_0=-1,\quad h=2+4i.
 \]
 
 Then \(n(u_0)=-1\), \(n(c_0)=1\), and \(u_0h=c_0\) modulo \(21\). With
@@ -5118,7 +5118,7 @@ the quotients and a union bound give
 
 \[
  \boxed{
- \Pr[\exists,1\le a<q:\max_i\|az_i/N\|\le\epsilon]
+ \Pr[\exists\,1\le a<q:\max_i\|az_i/N\|\le\epsilon]
  \le q\left(4\epsilon+{1\over q}\right)^m.}
 \tag{51.7}
 \]
@@ -5549,3 +5549,248 @@ respectively,
 `0b5bdfb97afff96f8c8034c5bb633d4e98d82e7ab9705c3eeaae356efc475460`,
 `67970e20c51905a074c7ebf7dbd59e3c8bd3e5a1b163749377ae1dadb930773c`,
 and `d0914f3c8debf9b9675fa7367c1be41c29292fa73e6612669d51d5d665840e67`.
+
+## P54 — the hidden-source Hadamard--Paley word has an exact low-Walsh-degree boundary
+
+**Status:** promoted narrow observation-channel obstruction and conditional
+reduction. The proof-only candidate passed a clean hostile audit and a fresh
+context-free proof-blind reconstruction. No computation or cross-family audit
+was used.
+
+Let \(N=pq\), where \(p<q<2p\) are distinct odd primes. Reduce a public
+shift list modulo \(N\), deduplicate it, and gcd-screen every nonzero
+difference. On the branch where no factor is found, write the remaining
+shifts as \(a_1,\ldots,a_m\); they are distinct modulo both hidden primes.
+For the accepted-word statements below assume \(m<p\), which is equivalent
+in this setting to positive acceptance probability.
+
+Draw \(X\) uniformly modulo \(N\), put
+
+\[
+ Y_j=\left({X+a_j\over N}\right)\in\{-1,0,1\},
+\]
+
+and replace each zero coordinate by its own independent fair sign to obtain
+\(W\in\{-1,1\}^m\). For \(S\subseteq[m]\), define
+
+\[
+ A_r(S)=\sum_{u\in\mathbb F_r}
+ \chi_r\!\left(\prod_{j\in S}(u+a_j)\right),
+ \qquad r\in\{p,q\},
+\]
+
+with the quadratic character extended by zero. Conditional centering of the
+fill signs and CRT give the exact Walsh coefficient
+
+\[
+ \boxed{c_S:=\mathbb E\prod_{j\in S}W_j
+ ={A_p(S)A_q(S)\over N}.}
+ \tag{54.1}
+\]
+
+The screened polynomial is squarefree in both fields. Therefore
+
+\[
+ c_\varnothing=1,\qquad
+ c_S=0\quad(|S|=1),\qquad
+ c_S={1\over N}\quad(|S|=2),
+ \tag{54.2}
+\]
+
+and, for \(t=|S|\ge2\), the squarefree character-sum bound gives
+
+\[
+ \boxed{|c_S|\le{(t-1)^2\over\sqrt N}.}
+ \tag{54.3}
+\]
+
+The value at \(t=2\) uses the exact identity
+\(\sum_u\chi_r((u+a)(u+b))=-1\) for distinct \(a,b\).
+
+Let \(\mu\) be the law of \(W\) and \(U_m\) the uniform sign-word law.
+For the likelihood ratio \(L=d\mu/dU_m\), one has
+\(\widehat L(S)=c_S\). Walsh Parseval consequently gives the exact identity
+
+\[
+ \boxed{
+ \chi^2(\mu\Vert U_m)
+ =\sum_{\varnothing\ne S\subseteq[m]}c_S^2
+ =\sum_{\varnothing\ne S\subseteq[m]}
+ {A_p(S)^2A_q(S)^2\over N^2}.}
+ \tag{54.4}
+\]
+
+In particular,
+
+\[
+ d_{\rm TV}(\mu,U_m)
+ \le {1\over2}\left(
+ {\binom m2\over N^2}
+ +{1\over N}\sum_{t=3}^m\binom mt(t-1)^4
+ \right)^{1/2}.
+ \tag{54.5}
+\]
+
+This is not whole-word pseudorandomness. A source has at most one zero
+coordinate in each local field, and direct CRT counting gives
+
+\[
+ |\operatorname{supp}\mu|
+ \le N+m(p+q)+m^2-2m<4N.
+ \tag{54.6}
+\]
+
+Conditional on a public source \(X\), the word is usually deterministic;
+neither (54.4) nor (54.5) controls the pair \((X,W)\).
+
+Let \(\mathcal A\) be the event that every shifted value is a unit, and let
+\(\mu_{\rm acc}\) be the accepted no-zero word law. The exact acceptance and
+conditioning quantities are
+
+\[
+ \alpha=\Pr(\mathcal A)
+ =\left(1-{m\over p}\right)\left(1-{m\over q}\right),
+ \qquad
+ \beta=1-\alpha={m(p+q-m)\over N},
+ \tag{54.7}
+\]
+
+\[
+ d_{\rm TV}(\mu_{\rm acc},\mu)\le\beta.
+ \tag{54.8}
+\]
+
+The raw sampler has the exact three-way partition
+
+\[
+ \boxed{
+ \Pr(\text{accepted})=\alpha,\qquad
+ \Pr(\gcd=N)={m\over N},\qquad
+ \Pr(\text{proper gcd})={m(p+q-m-1)\over N}.}
+ \tag{54.9}
+\]
+
+The proper-gcd branch is factoring success, while the full gcd is only a
+rejection.
+
+For \(D\le m\), put
+
+\[
+ R_D^2=\sum_{1\le|S|\le D}c_S^2.
+\]
+
+If \(f:\{-1,1\}^m\to[0,1]\) has Walsh degree at most \(D\), Parseval gives
+\(\sum_{S\ne\varnothing}\widehat f(S)^2
+=\operatorname{Var}_{U_m}(f)\le1/4\).
+Cauchy--Schwarz and (54.8) therefore prove the norm-sharp channel bound
+
+\[
+ \boxed{
+ |\mathbb E_{\mu_{\rm acc}}f-\mathbb E_{U_m}f|
+ \le\beta+{R_D\over2}.}
+ \tag{54.10}
+\]
+
+No Fourier-\(\ell_1\) or support-size restriction is present. If
+\(n=\lceil\log_2(N+1)\rceil\), \(m\le Cn\),
+\(n\ge\max(2,C+1)\), and
+
+\[
+ D\le {n\over20\log_2n},
+\]
+
+then (54.2)--(54.3), \(2^{n-1}\le N<2^n\), and balance imply
+
+\[
+ \boxed{
+ |\mathbb E_{\mu_{\rm acc}}f-\mathbb E_{U_m}f|
+ \le\epsilon_{n,C}:=
+ (1+\sqrt2)Cn\,2^{(1-n)/2}
+ +{1\over2}\sqrt{
+ C^2n^2\,2^{1-2n}+n^4\,2^{1-9n/10}}
+ =2^{-9n/20+O_C(\log n)}.}
+ \tag{54.11}
+\]
+
+The finitely many small \(n\) may be absorbed into a constant-times-
+\(n^{5/2}2^{-9n/20}\) bound; in the nontrivial range \(m<p\) follows
+automatically.
+
+The consequence remains exact for a sequential protocol only under its
+stated compression rule. In round \(i\), after the previous released bits,
+choose a screened menu and a bounded degree-\(D_i\) function, apply it to one
+fresh independently accepted hidden-source row, release one Bernoulli bit,
+and discard both the source and row. A kernel hybrid gives
+
+\[
+ d_{\rm TV}(\text{real bit transcript},
+            \text{uniform-word bit transcript})
+ \le\sum_i(\beta_i+R_{D_i}/2).
+ \tag{54.12}
+\]
+
+This does not cover retention of \(X_i\) or the full word, multiple decisions
+on one row, same-source adaptation, high or characteristic-order degree, or
+exact symbolic/list-recovery transforms.
+
+There is a separate exact conditional all-input reduction. Assume fixed
+polynomials \(L,Q,T\) and one uniform randomized algorithm \(\mathsf{Dec}\)
+with this property: for every odd composite non-perfect-power \(M\) of bit
+length \(k\), all of whose prime divisors exceed \(4k^2\), take the \(k\)
+consecutive shifts \(0,\ldots,k-1\) and give \(\mathsf{Dec}\) \(L(k)\)
+independent accepted rows together with their retained sources. In at most
+\(T(k)\) bit operations it returns, with probability at least \(1/Q(k)\), a
+numerical prime \(r\mid M\) whose exponent in \(M\) is odd. This is the
+**HP-LR hypothesis**; no such decoder is supplied.
+
+For arbitrary odd \(M=\prod r^{e_r}\), the accepted Jacobi word is exactly
+the coordinatewise product of the local Paley words for the primes with odd
+exponent:
+
+\[
+ \left({z\over M}\right)
+ =\prod_{e_r\ {\rm odd}}\chi_r(z)
+ \qquad(z\in(\mathbb Z/M\mathbb Z)^\times).
+ \tag{54.13}
+\]
+
+After trial division through \(4k^2\), all shifts are distinct modulo every
+remaining prime, and the exact raw partition is
+
+\[
+ \alpha_M=\prod_{r\mid M}(1-k/r),\qquad
+ \rho_M={k\over M},\qquad
+ \sigma_M=1-\alpha_M-\rho_M.
+ \tag{54.14}
+\]
+
+There are at most \(k\) distinct primes and every one exceeds \(4k^2\), so
+\(\alpha_M>3/4\). Accepted batches therefore have constant expected sampling
+overhead. Remove powers of two, certify primes, detect exact perfect powers,
+trial-divide as above, collect a fresh batch, invoke \(\mathsf{Dec}\), verify
+every proposed numerical prime by deterministic primality and exact division,
+and retry on failure. A non-perfect-power has at least one odd prime exponent,
+so the decoder hypothesis supplies a valid target. Fresh trials succeed with
+probability at least \(1/Q(k)\), terminate almost surely, and have fixed
+polynomial expected bit and fair-random-bit cost. Verified recursive splitting,
+with perfect-power multiplicities restored, has only polynomially many calls
+and covers primes, prime powers, repeated factors, evens, unbalanced inputs,
+and arbitrary composites.
+
+Thus HP-LR would imply the requested all-input classical Las Vegas theorem,
+but it is the missing algorithmic core and already promises a labeled prime
+factor with inverse-polynomial probability. P54 supplies no unconditional
+decoder or factoring algorithm.
+
+P54 is strictly an obstruction to fresh-hidden-source, immediate,
+low-Walsh-degree one-bit decision channels. The public sampled source, full
+word, same-row reuse, high-order processing, exact transforms, and actual
+Hadamard--Paley/product-code list recovery remain open. The candidate, hostile
+audit, and proof-blind reconstruction are preserved under
+`experiments/F45_hadamard_paley_kill`,
+`experiments/F45_hadamard_paley_audit`, and
+`experiments/F45_hadamard_paley_reconstruct`. Their SHA-256 hashes are,
+respectively,
+`ecbfc505de24f391eedb62cbaaf293b518915ac91abb8abc27b2c7a49cd7bceb`,
+`7a5e77055e4cb8244a4b155d2570542fbb05b9e99e16edc36f990f24140b577c`,
+and `aa36ea413d6c2eadaba2778b52754d5f4457102f36aa84b2dfec4ab0ce7b4b82`.

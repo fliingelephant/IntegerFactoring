@@ -1760,8 +1760,8 @@ adversarial after seeing all quotients, ordinary LLL has exact success lower
 bound
 
 \[
- 1-2A\theta^m,qquad
- A=2^{m/2}q\sqrt{m+1},qquad
+ 1-2A\theta^m,\qquad
+ A=2^{m/2}q\sqrt{m+1},\qquad
  \theta=\min\!\left(1,
  4\cdot2^{m/2}{B\over p}\sqrt{m+1}+{1\over q}\right).
 \]
@@ -1770,7 +1770,7 @@ It is polynomial-time and succeeds with failure
 \(2^{-\Omega_\eta(n)}\) when
 
 \[
- {B\over p}\le2^{-(1+\eta)\sqrt n},qquad
+ {B\over p}\le2^{-(1+\eta)\sqrt n},\qquad
  m=\lfloor(1+\eta/2)\sqrt n\rfloor.
 \]
 
@@ -1886,3 +1886,56 @@ exact symbolic sum; use a dense/succinct statistic outside polynomial
 \(\ell_1\) expansion; or provide a genuinely nonlinear joint decoder. Those
 channels were explicitly excluded from P53 and must not be dismissed by its
 scalar marginal theorem.
+
+## X48 — bounded low-Walsh-degree decisions cannot extract the hidden-source Hadamard--Paley word
+
+**Status:** promoted as P54 after a clean hostile audit and a fresh
+context-free proof-blind reconstruction.
+
+**Family:** F09.
+
+**Classification:** method failure for an immediate bounded
+low-Walsh-degree decision on one fresh accepted hidden-source word, and for
+past-adaptive sequences that release only one bit per fresh word before
+discarding the source and row. This is not family closure for joint character
+relations or amortized decoding.
+
+**Exact obstruction.** Normalize and deduplicate the shift menu, then
+gcd-screen every nonzero difference. For the independently zero-filled word
+\(W\), every Walsh coefficient is exactly
+
+\[
+ c_S=\mathbb E\prod_{j\in S}W_j
+ ={A_p(S)A_q(S)\over N}.
+\]
+
+Here \(c_S=0\) for \(|S|=1\), \(c_S=1/N\) for \(|S|=2\), and
+\(|c_S|\le(|S|-1)^2/\sqrt N\) thereafter. Parseval gives the exact
+chi-square identity. If \(f:\{-1,1\}^m\to[0,1]\) has degree at most \(D\),
+accepted-word conditioning gives
+
+\[
+ \left|\mathbb E_{\mu_{\rm acc}}f-\mathbb E_{U_m}f\right|
+ \le {m(p+q-m)\over N}+{1\over2}
+ \left(\sum_{1\le|S|\le D}c_S^2\right)^{1/2}.
+\]
+
+For balanced \(N=pq\), \(m\le Cn\), and
+\(D\le n/(20\log_2n)\), this is
+\(2^{-9n/20+O_C(\log n)}\), without any Fourier-\(\ell_1\) or
+support-size restriction. A kernel hybrid sums the same bound for
+past-adaptive one-bit rules on independent accepted rows.
+
+The obstruction stops exactly there. The full filled-word support is below
+\(4N\), so no whole-word pseudorandomness follows; retaining the sampled
+source also destroys the marginal comparison. The separately audited HP-LR
+hypothesis would yield all-input Las Vegas factoring, but it already assumes
+a uniform high-order decoder that returns a numerical prime factor with
+inverse-polynomial probability.
+
+**What would make a retry materially new.** Retain the source and full word;
+reuse a row; use high or characteristic-order degree; perform an exact
+symbolic transform; or supply a genuine Hadamard--Paley/product-code
+list-recovery algorithm returning a verifiable integer factor. Repackaging
+polynomially many fresh rows into bounded low-degree one-bit decisions is
+covered by P54.
