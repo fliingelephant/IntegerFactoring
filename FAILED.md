@@ -1739,3 +1739,101 @@ an implicit-graph invariant not reduced to the explicit binary-form theorem;
 or a characteristic-scale, piecewise, stochastic, canonical-metric, or
 dissipative completion. Another bounded-degree nonconstant branch followed
 by a fixed/fresh target test is covered by P50.
+
+## X45 — inverse-polynomial relative ACD noise is not certified by the natural ordinary-LLL decoder
+
+**Status:** promoted as P51 after the original hostile audit found a false
+“nonfactor” inference and an incomplete comparison theorem; the corrected
+artifact passed a fresh whole-proof re-audit and a context-free proof-blind
+reconstruction.
+
+**Family:** F24.
+
+**Classification:** method boundary for the explicit simultaneous-
+approximation lattice and ordinary worst-case LLL guarantee on a granted
+one-sided approximate-multiple source. This is neither an ACD hardness result
+nor evidence that bare \(N\) cannot manufacture the source.
+
+**Positive survivor.** For
+\(z_i=pt_i+r_i\), independent uniform \(t_i\bmod q\), and errors jointly
+adversarial after seeing all quotients, ordinary LLL has exact success lower
+bound
+
+\[
+ 1-2A\theta^m,qquad
+ A=2^{m/2}q\sqrt{m+1},qquad
+ \theta=\min\!\left(1,
+ 4\cdot2^{m/2}{B\over p}\sqrt{m+1}+{1\over q}\right).
+\]
+
+It is polynomial-time and succeeds with failure
+\(2^{-\Omega_\eta(n)}\) when
+
+\[
+ {B\over p}\le2^{-(1+\eta)\sqrt n},qquad
+ m=\lfloor(1+\eta/2)\sqrt n\rfloor.
+\]
+
+A separate polynomial-time source with this law would therefore give a
+conditional Las Vegas factorization on balanced semiprimes.
+
+**Exact obstruction.** At \(B/p=n^{-c}\), approximation-denominator
+isolation already needs coarse dimension \(\Theta(n/\log n)\), while
+ordinary LLL pays \(2^{m/2}\). For every \(m\), the proved failure term
+\(2A\theta^m\) exceeds one and is noninformative. The Dirichlet argument
+shows the designated \(q\)-vector is not shortest under its exact condition;
+only a strengthened size condition certifies a shorter unit coefficient,
+and neither statement rules out gcd-of-SVP factoring.
+
+**What would make a retry materially new.** Manufacture the source from bare
+\(N\) at \(2^{-\sqrt n}\) precision; give a fully dimensioned decoder for
+inverse-polynomial relative error that avoids the ordinary-LLL loss; prove a
+helpful nonadversarial error law; or give a robust joint decoder for partial
+inliers. Restating determinant heuristics or dropping the dimension-dependent
+LLL factor is covered by P51.
+
+## X46 — known-square finite-field Newton iteration has no enlarged root basins
+
+**Status:** promoted as P52 after a clean hostile audit and a context-free
+proof-blind reconstruction.
+
+**Family:** F25.
+
+**Classification:** method failure for the exact proposal that the modular
+Newton map of a public square creates large independent \(\pm s\) attraction
+basins whose denominator, residual, or root-difference gcds factor \(N\).
+This is not evidence against other dissipative or cross-iterate mechanisms.
+
+**Exact obstruction.** The projective Newton map
+
+\[
+ [X:Z]\mapsto[X^2+s^2Z^2:2XZ]
+\]
+
+is globally conjugate by \([X:Z]\mapsto[X-sZ:X+sZ]\) to projective
+squaring. Hence each exact root basin is a singleton. For primes
+\(r\equiv3\pmod4\), \(-s^2\) is a nonsquare, so a nonzero orbit never
+hits the affine pole. Every named gcd ticket is time-invariant and depends
+only on whether the initial coordinate equals \(\pm s\) locally.
+
+On \(N=pq\), \(p,q\equiv3\pmod4\), exact accepted-unit success is
+
+\[
+ {2p+2q-10\over(p-1)(q-1)}.
+\]
+
+Including all raw residue-sampler gcd tickets raises it only to
+
+\[
+ {3p+3q-12\over pq-1}.
+\]
+
+PNT in arithmetic progressions supplies an infinite balanced family on which
+both are \(O(N^{-1/2})\); more Newton iterations do not alter the event.
+
+**What would make a retry materially new.** Use longer cross-iterate
+collisions or orders, a different rational map, a p-adic lift, a nonuniform
+correlated source with a proved law, or stochastic/piecewise/canonical metric
+dynamics. More restarts or iterations of the same map followed only by the
+audited denominator/numerator/residual/root-difference gcds are covered by
+P52.

@@ -5036,3 +5036,350 @@ experiments/F40_fibre_completion_bias_kill,
 experiments/F40_fibre_completion_bias_audit,
 experiments/F40_fibre_completion_bias_reaudit, and
 experiments/F40_fibre_completion_bias_reconstruct.
+
+## P51 — ordinary LLL decodes granted one-sided approximate multiples at the \(2^{-\sqrt n}\) relative-error scale
+
+**Status:** verifier-backed conditional decoder theorem and method boundary.
+The proof-only candidate failed its first hostile audit, was mathematically
+amended, passed a fresh whole-artifact re-audit, and was then reconstructed
+from the statement by a context-free agent. No computation or cross-family
+audit was used.
+
+Let
+
+\[
+ N=pq,qquad z_i=pt_i+r_i\in[0,N),qquad |r_i|\le B,qquad
+ \epsilon=B/p,
+\tag{51.1}
+\]
+
+where \(p,q\) are distinct fixed-balance odd primes,
+\(1\le B<p/8\), and the \(t_i\) are independent uniform residues modulo
+\(q\). After seeing the entire quotient tuple, an adversary may choose the
+whole error vector jointly, subject only to (51.1). All probabilities below
+are uniform over those error rules.
+
+The simultaneous Dirichlet lemma used here is explicit: for real
+\(\alpha_1,\ldots,\alpha_m\) and \(A\ge2^m\), pigeonholing
+\(\lfloor A^{1/m}\rfloor^m+1\) torus points gives an integer
+\(1\le a\le A\) with
+
+\[
+ \max_i\|a\alpha_i\|_{\mathbb R/\mathbb Z}\le2A^{-1/m}.
+\tag{51.2}
+\]
+
+Put \(d=m+1\) and \(\alpha_i=z_i/N\). If
+
+\[
+ \left({2\sqrt d\over\epsilon}\right)^m
+ <{q\over2\sqrt d},
+\tag{51.3}
+\]
+
+then (51.2), with nearest multiples of \(N\), produces
+
+\[
+ w=(aB,az_1-Nk_1,\ldots,az_m-Nk_m),qquad
+ \|w\|_2<qB,qquad 1\le a<q.
+\tag{51.4}
+\]
+
+The designated factor vector
+
+\[
+ v_q=(qB,qr_1,ldots,qr_m)
+\tag{51.5}
+\]
+
+has norm at least \(qB\), so it is not shortest. The conclusion in (51.4)
+is only \(q\nmid a\): \(a\) may still be divisible by \(p\). If, more
+strongly, there is an \(A_0\) satisfying
+
+\[
+ \left({2\sqrt d\over\epsilon}\right)^m
+ <A_0<\min\!\left(p,{q\over\sqrt d}\right),
+\tag{51.6}
+\]
+
+the same proof gives the shorter vector with \(\gcd(a,N)=1\). Even this does
+not rule out a still-shorter factor-bearing vector and therefore is not an
+SVP-factoring lower bound.
+
+Conversely, for every fixed \(1\le a<q\), the event
+
+\[
+ \max_i\|az_i/N\|\le\epsilon
+\]
+
+implies \(\|at_i/q\|<2\epsilon\) for every \(i\), regardless of the error
+rule. Multiplication by \(a\) permutes \(\mathbb F_q\), so independence of
+the quotients and a union bound give
+
+\[
+ \boxed{
+ \Pr[\exists,1\le a<q:\max_i\|az_i/N\|\le\epsilon]
+ \le q\left(4\epsilon+{1\over q}\right)^m.}
+\tag{51.7}
+\]
+
+Equations (51.3), (51.6), and (51.7) concern approximation-denominator
+geometry, not statistical factor identifiability. At
+\(\epsilon=n^{-c}\), they give only the coarse scale
+\(m=\Theta(n/\log n)\); the \(\sqrt m\) in (51.3) changes constants.
+
+For the decoder, use the row lattice
+
+\[
+ \begin{pmatrix}
+ B&z_1&\cdots&z_m\\
+ 0&N&&0\\
+ \vdots&&\ddots&\\
+ 0&0&&N
+ \end{pmatrix}.
+\tag{51.8}
+\]
+
+It has determinant \(BN^m\), and every vector has the unique form in
+(51.4). Run \(\delta=3/4\) LLL and write its first vector as
+\(b_1=(aB,w_1,\ldots,w_m)\). Define
+
+\[
+ \Gamma=2^{m/2},\quad
+ R=\Gamma qB\sqrt d,\quad
+ A=R/B=\Gamma q\sqrt d,
+\quad
+ \theta=\min\!\left(1,4\Gamma\epsilon\sqrt d+{1\over q}\right).
+\tag{51.9}
+\]
+
+If \(R<N\) and \(A<N\), then
+
+\[
+ \boxed{
+ \Pr[1<\gcd(|a|,N)<N]\ge1-2A\theta^m.}
+\tag{51.10}
+\]
+
+Indeed, LLL gives \(\|b_1\|\le\Gamma\|v_q\|\le R\). A nonzero lattice
+vector with \(a=0\) has norm at least \(N\), so the output has \(a\ne0\)
+and \(|a|\le A<N\). On decoder failure, \(a\) is coprime to \(N\). For
+each fixed signed such \(a\), a vector of norm at most \(R\) necessarily
+satisfies
+
+\[
+ \operatorname{dist}(at_i,q\mathbb Z)
+ \le {R+|a|B\over p}\le {2R\over p}.
+\tag{51.11}
+\]
+
+At most \(4R/p+1\) quotient residues satisfy (51.11), giving probability
+at most \(\theta^m\). There are at most \(2A\) signed coefficients. No
+union over the \(k_i\) is needed: their existence is exactly the one torus-
+distance event in (51.11). The argument also handles arbitrary nonzero
+multiples of either factor; \(|a|<N\) makes their gcd proper.
+
+Let \(n=\lceil\log_2N\rceil\). For every fixed \(\eta>0\), taking
+
+\[
+ \epsilon\le2^{-(1+\eta)\sqrt n},qquad
+ m=\left\lfloor(1+\eta/2)\sqrt n\right\rfloor
+\tag{51.12}
+\]
+
+makes the failure term in (51.10) equal to
+\(2^{-\Omega_\eta(n)}\). The order-\(n\) exponent is
+
+\[
+ {1\over2}+{(1+\eta/2)^2\over2}
+ -(1+\eta/2)(1+\eta)
+ =-\eta-{3\eta^2\over8}.
+\tag{51.13}
+\]
+
+The size conditions also hold, since
+\(R/N=\Gamma\epsilon\sqrt d=2^{-\Omega_\eta(\sqrt n)}\) and
+\(A/N=\Gamma\sqrt d/p=o(1)\). Optimizing the leading requirement
+
+\[
+ \log_2(1/\epsilon)
+ \ge {\log_2q\over m}+{m\over2}+O(\log m)
+\tag{51.14}
+\]
+
+at \(m\sim\sqrt n\) gives the asymptotic boundary
+\(\epsilon\le2^{-(1+o(1))\sqrt n}\); a
+\((1/4)\log n+\omega(1)\) additive exponent absorbs the displayed lower-
+order terms.
+
+At \(\epsilon=n^{-c}\), the same proved certificate is noninformative for
+every \(m\). If \(\theta=1\), then \(2A\theta^m>1\). Otherwise
+\(\theta\ge4\epsilon\), \(A\ge q\), and \(\theta<1\) forces
+\(m<2c\log_2n\); hence
+
+\[
+ \log_2(2A\theta^m)
+ \ge\log_2q-O((\log n)^2)>0.
+\tag{51.15}
+\]
+
+This is failure only of the worst-case ordinary-LLL guarantee, not an LLL,
+ACD, or arbitrary-decoder hardness theorem.
+
+The lattice dimension is \(O(\sqrt n)\) in (51.12), its entries have
+\(O(n)\) bits, and exact LLL plus all gcds and verification are polynomial
+in \(n\). If a separate polynomial-time source supplies fresh independent
+batches with (51.1), verified repetition is a conditional Las Vegas
+factorization on that promise. P51 does not construct such a source from
+bare \(N\), does not cover general composites, and is not the requested
+all-input algorithm.
+
+The candidate, preserved failed audit, clean amended re-audit, and
+context-free reconstruction are under
+experiments/F41_metric_acd_decoder_kill,
+experiments/F41_metric_acd_decoder_audit,
+experiments/F41_metric_acd_decoder_reaudit, and
+experiments/F41_metric_acd_decoder_reconstruct.
+
+## P52 — finite-field Newton iteration has singleton root basins on an infinite balanced semiprime family
+
+**Status:** verifier-backed narrow method obstruction. The proof-only
+candidate passed a clean hostile audit and a fresh context-free
+reconstruction. No computation or cross-family audit was used.
+
+Let \(r\) be an odd prime, \(s\in\mathbb F_r^\times\), and \(a=s^2\). The
+affine Newton rule
+
+\[
+ T(x)={x^2+a\over2x}
+\]
+
+extends to the everywhere-defined degree-two morphism
+
+\[
+ F([X:Z])=[X^2+s^2Z^2:2XZ].
+\tag{52.1}
+\]
+
+The two coordinates have no common projective zero. The Möbius map
+
+\[
+ M([X:Z])=[X-sZ:X+sZ]
+\tag{52.2}
+\]
+
+has determinant \(2s\ne0\), and direct homogeneous calculation gives
+
+\[
+ \boxed{M\circ F([X:Z])=[(X-sZ)^2:(X+sZ)^2].}
+\tag{52.3}
+\]
+
+Thus \(F\) is globally conjugate to squaring on \(\mathbb P^1\), including
+
+\[
+ s\leftrightarrow0,qquad -s\leftrightarrow\infty,qquad
+ 0\leftrightarrow-1,qquad\infty\leftrightarrow1.
+\]
+
+Only \(0\) maps to \(0\) under an iterate of squaring, and only \(\infty\)
+maps to \(\infty\). Therefore
+
+\[
+ F^k(x_0)=s\iff x_0=s,qquad
+ F^k(x_0)=-s\iff x_0=-s
+\tag{52.4}
+\]
+
+for every \(k\ge0\). If \(r\equiv3\pmod4\), then \(-s^2\) is a
+nonsquare, so \(x^2+a\ne0\) for every \(x\); a nonzero start remains finite
+and nonzero forever.
+
+Now let \(N=pq\) with distinct \(p,q\equiv3\pmod4\), take public
+\(s\in(\mathbb Z/N\mathbb Z)^\times\), and start from a uniform unit
+\(x_0\). Define
+
+\[
+ E_r^\pm=[x_0\equiv\pm s\pmod r],qquad E_r=E_r^+\vee E_r^-.
+\]
+
+For every iterate, the complete named-ticket law is
+
+\[
+\begin{aligned}
+ \gcd(2x_k,N)&=1,\\
+ \gcd(x_k^2+a,N)&=1,\\
+ \gcd(x_k^2-a,N)&=p^{E_p}q^{E_q},\\
+ \gcd(x_k-s,N)&=p^{E_p^+}q^{E_q^+},\\
+ \gcd(x_k+s,N)&=p^{E_p^-}q^{E_q^-}.
+\end{aligned}
+\tag{52.5}
+\]
+
+Thus later Newton iterations create no new denominator, numerator, residual,
+or root-difference event. Among the \((p-1)(q-1)\) unit starts, the five
+disjoint counts are
+
+\[
+ (p-3)(q-3),\quad2(q-3),\quad2(p-3),\quad2,\quad2.
+\tag{52.6}
+\]
+
+The last four root combinations split into two same-sign public roots, which
+are unhelpful, and two opposite-sign roots, whose two difference gcds expose
+\(p,q\). Hence the exact accepted-unit success probability is
+
+\[
+ \boxed{
+ \theta_{\rm unit}(p,q)
+ ={2p+2q-10\over(p-1)(q-1)}.}
+\tag{52.7}
+\]
+
+This includes \(p=3\) or \(q=3\), where the corresponding nonroot count is
+zero.
+
+If a restart instead draws a uniform residue, returns any proper initial
+gcd, redraws only zero, and otherwise uses the accepted unit, then the first
+nonzero residue is uniform over \(N-1\) classes. The proper initial-gcd
+counts are \(q-1\) and \(p-1\), so
+
+\[
+ \boxed{
+ \theta_{\rm raw}(p,q)={3p+3q-12\over pq-1},
+ \qquad
+ 1-\theta_{\rm raw}={(p-3)(q-3)+2\over pq-1}.}
+\tag{52.8}
+\]
+
+The zero redraw costs exactly \(N/(N-1)<2\) raw draws on average. A
+history-dependent factor-free choice of public unit \(s\) before each fresh
+start does not alter these counts, so \(K\) restarts succeed with probability
+at most \(K\theta_{\rm raw}\).
+
+The prime number theorem in arithmetic progressions places at least two
+distinct primes \(3\bmod4\) in \([X,2X]\) for every sufficiently large
+\(X\). Taking disjoint intervals \([3^j,2\cdot3^j]\) yields an infinite
+fixed-balance family. On it,
+
+\[
+ \theta_{\rm raw}\le {48\over\sqrt N},
+\tag{52.9}
+\]
+
+and \(\theta_{\rm unit}=O(N^{-1/2})\). Polynomially many restarts have
+negligible success, regardless of the number of iterations inside each
+restart, while repeat-until-success requires \(\Omega(\sqrt N)\) expected
+restarts.
+
+P52 closes only the exact known-square Newton proposal with its named
+denominator/numerator/residual/root-difference gcds. It does not cover longer
+cross-iterate collision or order tests, arbitrary nonlinear transcript
+processing, primes \(1\bmod4\), other rational maps, prime powers and
+p-adic attraction, correlated starts, stochastic resets, piecewise or
+canonical real rounding, metric dynamics, or factoring generally.
+
+The candidate, hostile audit, and context-free reconstruction are preserved
+under experiments/F42_newton_basin_kill,
+experiments/F42_newton_basin_audit, and
+experiments/F42_newton_basin_reconstruct.

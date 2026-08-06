@@ -4,7 +4,7 @@ This is working state for nontrivial intermediate statements and the current syn
 
 ## Current synthesis
 
-The source material has been read in full. Twenty-five approach families have been opened, primarily from materially different mechanisms in `notes/Inspirations.md` with additional factor-trace, noncommutative, hidden-modulus metric, non-gcd tensor-contraction, joint-amortization, positive-sampling, and dissipative-dynamics routes; promoted narrow results and exact open gaps are tracked below and in the registry. The current frontier is a factor-free sampler for the quadratic-energy/zero-product law, a genuinely joint decoder using typical nonzero relation data, a fine manufactured metric hint, a useful class-group/isogeny orientation, or an exactly contractible positive factor-witness network beyond the proved local wiring boundaries. `notes/Zhihu.md` supplies background and motivation only.
+The source material has been read in full. Twenty-six approach families have been opened, primarily from materially different mechanisms in `notes/Inspirations.md` with additional factor-trace, noncommutative, hidden-modulus metric, non-gcd tensor-contraction, joint-amortization, positive-sampling, and finite-field or integer-quotient dissipative routes; promoted narrow results and exact open gaps are tracked below and in the registry. The current frontier is a factor-free sampler for the quadratic-energy/zero-product law, a genuinely joint decoder using typical nonzero relation data, a fine manufactured metric hint, a useful class-group/isogeny orientation, or an exactly contractible positive factor-witness network beyond the proved local wiring boundaries. `notes/Zhihu.md` supplies background and motivation only.
 
 ## Working claims
 
@@ -993,3 +993,75 @@ quaternion values. Implicit graphs, adaptive coefficient/minor systems,
 characteristic-scale degree, and piecewise, stochastic, canonical-metric, or
 dissipative completions remain open. Synchronized bias alone is not yet a
 useful manufactured hint.
+
+### C48 — ordinary LLL needs \(2^{-\sqrt n}\)-scale relative ACD precision
+
+**Status:** promoted as P51 after a failed first hostile audit, substantive
+amendment, clean fresh whole-artifact re-audit, and context-free proof-blind
+reconstruction.
+
+**Closest prior route and material difference.** C46/P49 starts from the
+available but Fourier-flat inverse graph. C48 grants a much stronger
+factor-correlated source \(z_i=pt_i+r_i\), with uniform hidden quotients and
+one-sided bounded errors, and asks what a standard polynomial-time lattice
+decoder can actually certify. P39 treats a different full-lattice uniform
+subspace model.
+
+**Verified boundary.** The natural lattice has factor vector
+\((qB,qr_1,\ldots,qr_m)\). Simultaneous Dirichlet approximation gives an
+exact shorter-competitor condition, while a random-quotient union bound gives
+the corresponding approximation-isolation upper regime. Ordinary LLL has
+success at least \(1-2A\theta^m\), uniformly even when the errors are a
+joint function of all quotients. At
+\(B/p\le2^{-(1+\eta)\sqrt n}\) and \(m=\Theta(\sqrt n)\), failure is
+\(2^{-\Omega_\eta(n)}\) and all bit complexity is polynomial.
+
+At \(B/p=1/\operatorname{poly}(n)\), no dimension makes this proved
+worst-case LLL certificate nontrivial: the isolation dimension is coarsely
+\(n/\log n\) and the \(2^{m/2}\) approximation loss overwhelms the
+polynomial precision. This is not an ACD or decoder hardness theorem.
+
+**Remaining gap.** No bare-\(N\) source with either precision is known.
+Different lattice bases, distribution-specific reduction, nonlinear or
+spectral decoders, helpful correlated errors, robust partial-inlier
+aggregation, and inverse-cloud metric statistics remain open. The positive
+theorem is conditional and semiprime-only, not progress on the all-input
+source requirement by itself.
+
+### C49 — modular Newton attraction collapses to projective squaring
+
+**Status:** promoted as P52 after a clean hostile audit and a context-free
+proof-blind reconstruction.
+
+**Closest prior route and material difference.** P44/P45 treats explicit
+automorphisms and low-degree bijections of the zero-product scheme. C49
+tests a degree-two noninvertible rational map and therefore directly probes
+the proposed dissipative escape. P22's \(N^2\)-adic carrier is unrelated to
+finite-field basin dynamics.
+
+**Verified boundary.** The Möbius coordinate
+\(z=(x-s)/(x+s)\) globally conjugates
+\(T(x)=(x^2+s^2)/(2x)\) to \(z\mapsto z^2\), including every projective
+exception. Exact roots have no preimages beyond themselves. On primes
+\(3\bmod4\), nonzero orbits also never hit the affine pole. Thus all named
+denominator, numerator, residual, and \(x_k\mp s\) gcd tickets are fixed at
+time zero.
+
+For \(N=pq\) with both primes \(3\bmod4\), the accepted-unit and full raw-
+sampler success probabilities are exactly
+
+\[
+ {2p+2q-10\over(p-1)(q-1)},
+ \qquad
+ {3p+3q-12\over pq-1}.
+\]
+
+An infinite balanced PNT-in-AP family makes both \(O(N^{-1/2})\), so
+polynomial restarts are negligible and repeat-until-success is exponential
+in the input length.
+
+**Remaining gap.** Cross-iterate collision/order tests, arbitrary nonlinear
+orbit transcripts, primes \(1\bmod4\), other maps, p-adic lifts, correlated
+starts, and stochastic, piecewise, ordered, or canonical-metric dynamics are
+outside P52. F26 now tests a genuinely decreasing integer inverse-quotient
+map rather than another finite-field basin metaphor.
