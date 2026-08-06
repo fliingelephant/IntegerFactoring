@@ -3115,3 +3115,254 @@ attempt, and successful corrected reconstruction are preserved under
 `experiments/F27_public_output_dual_metric_reaudit`,
 `experiments/F27_public_output_dual_metric_reconstruct`, and
 `experiments/F27_public_output_dual_metric_reconstruct_corrected`.
+
+## P38 — positive perfect-matching sampling would factor, but direct deletion gadgets are subcubes
+
+**Status:** promoted.
+
+**Verification record:** the equal-fiber sampling reduction, all-input
+recursion, exact total-variation constants, rational cooling schedule,
+empirical-failure accounting, fair-bit implementation, expected-cost
+argument, deletion-support exchange theorem, one-hot subcube classification,
+four local-signature obstructions, and Valiant-scope distinction passed four
+hostile audit rounds—three requiring corrections and one clean—and a strict
+proof-blind reconstruction.  The
+reconstruction independently made bounded terminal conditioning and bounded
+bad-estimate paths explicit.  No cross-family audit has run.
+
+Let
+
+\[
+\mathcal W_N=\{(x,y)\in\mathbb Z_{>0}^2:xy=N\}.
+\]
+
+Suppose uniform polynomial-time algorithms build an unweighted bipartite
+graph \(G_N\), with at most \(n^a\) vertices per side for
+\(n=\lceil\log_2(N+1)\rceil\), and decode every perfect matching to a member
+of \(\mathcal W_N\).  Suppose further that one positive integer \(c_N\)
+is the number of matching preimages of every ordered witness.  Then a uniform
+perfect matching pushes forward to the uniform law on the
+\(\tau(N)\) ordered positive divisors.
+
+The Jerrum--Sinclair--Vigoda almost-uniform sampler can be implemented on fair
+bits so that it always returns an actual perfect matching, has
+total-variation error \(1/12\), terminates almost surely, and has expected
+bit and fair-random-bit cost polynomial in the graph size.  One explicit
+Turing implementation uses rational \(3/4\) cooling one nonedge at a time,
+terminal activity \(1/m!\), at most
+
+\[
+O(m^3\log m)
+\]
+
+phases and \(O(m^5\log m)\) empirical sector estimates.  The full event that
+any estimate misses its multiplicative window is assigned probability at
+most \(1/24\); a zero count is only a detectable subevent and triggers a
+known perfect-matching fallback.  Positive but inaccurate paths retain
+positive polynomial-bit rational weights and run for predetermined polynomial
+length, so they are total and are charged to the same bad event.  On good
+paths, bounded terminal conditioning/rejection returns a genuine original-edge
+matching and contributes at most the remaining \(1/24\) in total variation.
+Unreduced rational numerators and denominators grow by only polynomially many
+bits.  Exact rational coins treat probabilities \(0,1\) deterministically and
+otherwise use power-of-two rejection with fewer than two rounds in
+expectation.
+
+Exactly two witnesses, \((1,N)\) and \((N,1)\), are trivial.  Every
+composite has \(\tau(N)\ge3\), so a sample at distance \(1/12\) from
+uniform returns a verified proper divisor with probability at least
+
+\[
+\frac{\tau(N)-2}{\tau(N)}-\frac1{12}
+\ge\frac14.
+\]
+
+Fresh complete sampler invocations therefore give at most four expected
+trials per composite node.  Deterministic primality testing, exact product
+verification, and recursive splitting handle primes, prime powers, repeated
+factors, even inputs, and unbalanced composites.  If the complete
+factorization has \(r\) prime leaves with multiplicity, then
+\(2^r\le N\), so the recursion tree has at most \(2n-1\) nodes.  Summing
+fresh-call expectations gives one fixed polynomial expected bit and fair-bit
+bound without assuming independence between a call's own cost and success.
+This is a complete conditional factoring theorem, but no graph satisfying
+the hypothesis is constructed.
+
+There is also an unconditional support boundary.  For a finite graph \(H\)
+with boundary \(B\), put
+
+\[
+F_H(S)=\#\operatorname{PM}(H-S),
+\qquad
+\mathcal F_H=\{S\subseteq B:F_H(S)>0\}.
+\]
+
+Every feasible deletion set has fixed parity.  In a bipartite graph it also
+has fixed left-minus-right charge.  If
+\(X,Y\in\mathcal F_H\), symmetric differences of perfect matchings give
+
+\[
+\forall e\in X\triangle Y\ \exists f\in X\triangle Y:
+X\triangle\{e,f\}\in\mathcal F_H.
+\]
+
+Thus a nonempty support is an even matching delta-matroid.  If logical words
+are encoded exactly by choosing one deleted terminal from each dual-rail
+pair, all feasible sets have equal size and hence are matroid bases.  Basis
+exchange cannot move a rail between different logical coordinates without
+creating an off-code word, so every coordinate that varies can be flipped
+individually.  The logical relation must therefore be a subcube.  Empty
+support is a separate realizable case.
+
+Direct single-rail COPY\(_3\), AND\(_3\), full addition, and
+\(a+c+xy=s+2d\) each contain valid words of opposite parity.  Their exact
+nonempty one-hot dual-rail relations fail single-coordinate closure and are
+not subcubes.  Positive weights and arbitrary internal auxiliary vertices do
+not change this support theorem.
+
+Valiant's permanent-hardness gadgets do not supply the missing positive
+distribution: negative contributions cancel only after summation, modular
+equalities control residues rather than positive fibers, and interpolation
+combines totals from several instances.  None gives an individual-matching
+decoder with equal positive witness multiplicities.
+
+P38 does not cover closed internal-edge observables, off-code states filtered
+globally, larger block codes, assignment-dependent auxiliary states, global
+multiplicity balancing, or one multiplication-specific graph.  These are
+the exact F21 survivors.
+
+The candidate, three correction audits, and strict reconstruction are
+preserved under
+experiments/F28_positive_matching_factor_graph_kill,
+experiments/F28_positive_matching_factor_graph_audit,
+experiments/F28_positive_matching_factor_graph_reaudit,
+experiments/F28_positive_matching_factor_graph_reaudit2,
+experiments/F28_positive_matching_factor_graph_reaudit3, and
+experiments/F28_positive_matching_factor_graph_reconstruct.
+
+## P39 — uniform full-lattice random codes do not amortize factor-divisible shortest vectors
+
+**Status:** promoted.
+
+**Verification record:** the CRT determinant and slice identities,
+coordinate-gcd classification, uniform-subspace incidence, Minkowski/public
+cutoff, eligible-point and cube bounds, all shortest-vector ties, both radius
+branches, and every dimension regime passed a corrected hostile audit, a
+clean re-audit, and a strict proof-blind reconstruction.  The first audit
+correctly separated the actual small-dimension event from a loose
+cube-volume expression.  No cross-family audit has run.
+
+Let \(N=pq\) for distinct primes.  Independently choose uniform
+\(u\)-dimensional subspaces
+
+\[
+C_p\le\mathbb F_p^m,
+\qquad
+C_q\le\mathbb F_q^m,
+\qquad
+1\le u<m,
+\]
+
+and form the complete CRT Construction-A lattice
+
+\[
+L=\{x\in\mathbb Z^m:x\bmod p\in C_p,\ x\bmod q\in C_q\}.
+\]
+
+If
+
+\[
+L_r=\{x\in\mathbb Z^m:x\bmod r\in C_r\},
+\]
+
+then
+
+\[
+\det L=N^{m-u},
+\qquad
+L\cap p\mathbb Z^m=pL_q,
+\qquad
+L\cap q\mathbb Z^m=qL_p.
+\]
+
+For nonzero \(x\in L\), a proper coordinate gcd with \(N\) is therefore
+exactly membership in one of these two slices but not
+\(N\mathbb Z^m\).
+
+Put
+
+\[
+v_m=\frac{\pi^{m/2}}{\Gamma(m/2+1)},\qquad
+R_M=2v_m^{-1/m}N^{1-u/m},\qquad
+R_0=\min(R_M,N),
+\]
+
+and
+
+\[
+\theta_r=\frac{r^u-1}{r^m-1}.
+\]
+
+Minkowski gives \(\lambda_1(L)\le R_M\), while
+\(Ne_i\in L\) gives \(\lambda_1(L)\le N\).  Hence every exact
+shortest vector lies inside radius \(R_0\).  For the \(p\)-slice, division
+by \(p\) leaves a nonzero residue that must land in the random code \(C_q\),
+which has exact incidence probability \(\theta_q\).  The sharp finite union
+bound is
+
+\[
+\theta_q
+\#\{y\in\mathbb Z^m:\|y\|_2\le R_0/p,\ y\bmod q\ne0\},
+\]
+
+with the symmetric \(q\)-slice term.  The unit-cube relaxation gives the
+tie-independent bound
+
+\[
+\Pr(\exists\text{ proper-gcd shortest vector})
+\le
+\theta_qv_m\left(\frac{R_0}{p}+\frac{\sqrt m}{2}\right)^m
++
+\theta_pv_m\left(\frac{R_0}{q}+\frac{\sqrt m}{2}\right)^m.
+\]
+
+Fix \(u\), a balance constant \(\kappa\), and \(K\).  Uniformly over
+
+\[
+p\le q\le\kappa p,
+\qquad
+u<m\le(\log N)^K,
+\]
+
+the **actual** event satisfies
+
+\[
+\Pr(\exists\text{ proper-gcd shortest vector})
+\le N^{-u/2+o(1)}.
+\]
+
+When \(u<m<2u\), the divided radii tend below one and the eligible
+nonzero-vector count is eventually zero; the literal cube relaxation is not
+claimed to have the sharper exponent.  At \(m=2u\), only constantly many
+divided vectors remain and each costs \(N^{-u/2+o(1)}\).  For
+\(m\ge2u+1\) and \(R_M\le N\), substitution leaves leading terms below
+\(2^m/p^u\) and \(2^m/q^u\); the branch inequality forces
+\(m\log m=O(\log N)\), so \(2^m=N^{o(1)}\).  On the
+\(R_M>N\) branch, the public radius \(N\), the inequality
+\(v_mN^u<2^m\), and the shrinking unit-ball volume give the same bound.
+The event quantifies over every shortest vector simultaneously, so it is
+independent of tie-breaking.
+
+P39 grants even an exact-SVP oracle and proves only that its complete
+shortest set is almost surely useless in this clean model.  It is not an SVP
+hardness theorem and does not cover biased or dependent arithmetic codes,
+growing local dimension \(u\), affine targets, CVP, LLL, nonshortest
+statistics, nonlinear decoding, or arbitrary public lattices manufactured
+from \(N\).
+
+The candidate, audit, clean re-audit, and strict reconstruction are preserved
+under
+experiments/F29_full_lattice_random_code_kill,
+experiments/F29_full_lattice_random_code_audit,
+experiments/F29_full_lattice_random_code_reaudit, and
+experiments/F29_full_lattice_random_code_reconstruct.

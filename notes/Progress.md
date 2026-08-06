@@ -580,5 +580,76 @@ correctly rejected an accidentally over-strengthened Smith statement; the
 failed attempt is preserved. A new blind agent reconstructed the exact
 \(1\)-/\(N\)-block theorem and every cyclic identity independently. Biased
 completions/targets, nonlinear combinations, and metric coordinate-gcd
-selection in the original full lattice remain open. F29 now tests the latter
-in the independent uniform local-subspace model.
+selection in the original full lattice remain open in general. P39/C36 closes
+only the independent uniform fixed-local-rank subspace model.
+
+### C35 — positive matching sampling is sufficient, but direct deletion signatures are subcubes
+
+**Status:** promoted as P38 after four hostile audit rounds and a strict
+proof-blind reconstruction.
+
+**Closest prior route and material difference.** C33/P36 uses exact
+contraction and prefix self-reduction. C35 instead asks for a positive
+bipartite graph whose individual almost-uniformly sampled matchings decode
+directly to ordered divisor witnesses with equal multiplicity.
+
+**Verified conditional reduction.** Under that graph hypothesis, uniform
+matchings push forward to uniform positive divisors. Every composite has at
+least one third nontrivial ordered-divisor mass; total-variation error
+\(1/12\) leaves success at least \(1/4\). A total rational JSV
+implementation, exact fair-bit coins, bounded terminal conditioning,
+all-estimate failure accounting, deterministic verification, primality
+testing, and a recursion tree of at most \(2n-1\) nodes give a complete
+all-input Las Vegas expected-polynomial factoring algorithm. No such graph
+has been constructed.
+
+**Verified local obstruction.** Perfect-matching deletion supports have fixed
+parity, bipartite charge, and symmetric exchange. Exact nonempty one-hot
+dual-rail support is therefore a family of matroid bases and its logical
+relation is a subcube. Direct single-rail and exact one-hot dual-rail
+COPY\(_3\), AND\(_3\), full addition, and the fused multiplier/addition
+cell all fail. Aggregate cancellation/modular/interpolation permanent
+reductions do not give the required positive individual-matching semantics.
+
+**Remaining gap.** Closed internal-edge decoding, off-code filtering, block
+codes, assignment-dependent auxiliary states, global multiplicity balancing,
+and one globally interleaved multiplication graph remain open. F30 now tests
+the first clean composition mechanism without transferring P38 beyond
+terminal signatures.
+
+### C36 — independent uniform full-lattice relations do not win exact SVP
+
+**Status:** promoted as P39 after a corrected hostile audit, clean re-audit,
+and strict proof-blind reconstruction.
+
+**Closest prior route and material difference.** C32/P35 closes the public
+zero-syndrome relation lattice, and C34/P37 closes projected output/dual scale
+and the fixed-completion cyclic tail. C36 keeps the original full
+nonorthogonally coupled lattice but specializes its hidden local codes to
+independent uniform fixed-rank subspaces.
+
+**Verified boundary.** The full CRT lattice has determinant \(N^{m-u}\);
+its proper-factor coordinate slices are exactly \(pL_q\) and \(qL_p\).
+Minkowski and the public vectors \(Ne_i\) bound every shortest vector by
+\(\min(R_M,N)\). Each divided candidate pays the exact uniform-code
+incidence probability, and a tie-independent eligible-point union bound
+controls all shortest vectors simultaneously.
+
+For fixed local rank \(u\), balance constant \(\kappa\), and dimension
+exponent \(K\), uniformly over
+
+\[
+p\le q\le\kappa p,\qquad u<m\le(\log N)^K,
+\]
+
+the probability that any shortest vector has proper coordinate gcd is
+\(N^{-u/2+o(1)}\). The small range \(u<m<2u\) is eventually empty by
+the exact nonzero lattice-point count; the cube relaxation itself is not
+claimed sharp there. The two Minkowski/public-radius branches handle every
+remaining dimension and every shortest-vector tie.
+
+**Remaining gap.** This is neither an SVP hardness theorem nor an arithmetic
+source theorem. Biased/dependent local subspaces, growing local rank, affine
+targets, CVP/LLL, nonshortest observables, and nonlinear decoding remain
+open. A retry must specify and analyze one of those mechanisms rather than
+reuse independent uniform fixed-rank exact SVP.

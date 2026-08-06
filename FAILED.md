@@ -1131,3 +1131,111 @@ lattice; a batch without shared completion whose growing informative rank is
 proved; or a nonlinear metric observable.  Reusing determinant, finite
 quotient, projected shape, uniform cyclic targets, or uniform completion-line
 SVP is covered by P37.
+
+## X32 — direct positive terminal-deletion gadgets for factor-witness matching graphs
+
+**Status:** promoted as P38 after four hostile audit rounds and a strict
+proof-blind reconstruction.
+
+**Family:** F21.
+
+**Classification:** evidence against the exact auxiliary mechanism of
+composing a positive matching representation from direct single-rail or exact
+one-hot dual-rail terminal-deletion signatures.  This is not a method failure
+for closed internal-edge decoders, off-code filtering, block codes, or one
+global multiplication-specific graph.
+
+**Closest prior route and material difference.** X30/P36 blocks a separated
+COPY--AND landing in an exactly contractible matchgate basis.  X32 instead
+uses ordinary unweighted bipartite perfect matchings and their
+almost-uniform positive sampler.  A matching would decode directly to a
+factor witness; no tensor contraction, prefix count, or terminal
+factor-extracting gcd is used.
+
+**Exact obstruction.** For
+
+\[
+\mathcal F_H=\{S:H-S\text{ has a perfect matching}\},
+\]
+
+all feasible sets have fixed parity and satisfy matching symmetric exchange.
+In a bipartite graph they also have fixed left-minus-right boundary charge.
+If nonempty support consists exactly of one-hot dual-rail codewords, its
+sets are equicardinal delta-matroid feasible sets and hence matroid bases.
+Basis exchange within an exact one-hot code can only swap the two rails of
+one logical coordinate.  Every varying coordinate is therefore independently
+flippable, so the logical relation is a subcube.
+
+COPY\(_3\), AND\(_3\), full addition, and the fused
+\(a+c+xy=s+2d\) relation all fail the direct single-rail parity test and
+the exact one-hot subcube test.  Positive multiplicities and arbitrary
+internal auxiliary vertices cannot change support.  Classical Valiant
+gadgets use cancellation, congruences, or interpolation at the aggregate
+permanent level and do not supply individual positive readable matchings with
+equal witness fibers.
+
+**Positive conditional boundary.** If a uniform polynomial-size bipartite
+graph did have only readable factor witnesses with one positive multiplicity
+per ordered divisor, JSV almost-uniform sampling would return a proper divisor
+with probability at least \(1/4\) per fresh call.  Exact rational/fair-bit
+implementation and recursion give complete all-input Las Vegas polynomial
+factoring.  X32 closes a proposed landing, not this conditional theorem.
+
+**What would make a retry materially new.** A closed graph decoded from
+internal edges; a connector whose off-code states are proved globally
+impossible; a block or heterogeneous occurrence code; an assignment-dependent
+auxiliary-state projection; or a globally interleaved graph with a proved
+matching-mass law.  Reusing direct single rail or exact one-hot dual rail is
+covered by P38.
+
+## X33 — exact SVP in the independent-uniform full CRT code lattice
+
+**Status:** promoted as P39 after a corrected hostile audit, clean re-audit,
+and strict proof-blind reconstruction.
+
+**Family:** F19.
+
+**Classification:** evidence against the exact auxiliary claim that a
+polynomial batch of independent uniform local code relations makes a
+factor-divisible slice win exact SVP in the original full lattice.  This is
+not a method failure for biased or dependent arithmetic samples, affine
+targets, CVP/LLL, nonshortest statistics, or nonlinear decoding.
+
+**Closest prior route and material difference.** X29/P35 treats public
+zero-syndrome and shared-output Gram/Hurwitz lattices. X31/P37 treats
+output/dual quotients and a fixed-completion cyclic tail but leaves
+nonorthogonal full-lattice coupling open. X33 analyzes that complete ambient
+lattice in the clean random-code model without projecting its exact
+directions away.
+
+**Exact obstruction.** For independent uniform \(u\)-subspaces
+\(C_p,C_q\) of \(\mathbb F_p^m,\mathbb F_q^m\), the full CRT lattice
+has determinant \(N^{m-u}\), and its factor-divisible slices are exactly
+
+\[
+L\cap p\mathbb Z^m=pL_q,
+\qquad
+L\cap q\mathbb Z^m=qL_p.
+\]
+
+Every shortest vector lies below
+\(\min(2v_m^{-1/m}N^{1-u/m},N)\).  Dividing a \(p\)-slice vector by
+\(p\) leaves a fixed nonzero residue that enters \(C_q\) with probability
+\((q^u-1)/(q^m-1)\), and symmetrically.  Exact eligible lattice-point
+counts plus the unit-ball bound show that, for fixed \(u,\kappa,K\) and
+
+\[
+p\le q\le\kappa p,\qquad u<m\le(\log N)^K,
+\]
+
+the probability that **any** exact shortest vector has proper coordinate gcd
+is \(N^{-u/2+o(1)}\).  When \(u<m<2u\), the actual event is eventually
+empty; the looser cube-volume expression is not used for that exponent.
+
+**What would make a retry materially new.** A public factor-free arithmetic
+source whose local subspaces have a proved bias or dependence defeating the
+incidence bound; a biased affine target with an inverse-polynomial CVP law; a
+polynomial-time nonshortest/LLL statistic; growing informative local rank; or
+a nonlinear full-lattice decoder.  Merely increasing the number of
+independent uniform fixed-rank relations and asking exact SVP for a
+coordinate-gcd vector is covered by P39.
