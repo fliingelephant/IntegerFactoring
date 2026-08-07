@@ -1608,3 +1608,58 @@ dominates the whole adaptive loop.
 no source power. A real retry must combine several blocks or relations, use a
 different representative, or otherwise change the relation value. This leaves
 the cross-relation product mechanism open.
+
+### C67 — cross-relation products are a real new source operation
+
+**Status:** verifier-backed and promoted as P70. The theorem passed a hostile
+audit with required scope corrections and a proof-blind reconstruction. No
+cross-family or human audit ran.
+
+**Verified boundary.** Combine several inverse relations and select a legal
+product of their gcd-free blocks. If their product is $1+KN$, the selected
+state's new quotient is exactly $K\bmod g$. This can create a new relation
+and a new block, and it can expose a factor even when the old exact
+square-relation kernel is empty.
+
+The operation is not limited to square roots of one. At $N=21$, the selected
+state $10$ is not self-inverse, but $10-1$ already exposes $3$. At
+$N=55$, blocks from two independent relations form the self-inverse state
+$21$, which exposes both factors. Deliberate polynomial relation reuse also
+creates a family whose useful selected state is near $\sqrt N$, far above
+the seed quotient.
+
+**Algorithmic consequence.** P69's one-block fixed point does not extend to
+cross products. The decoder must preserve exact block occurrences and allow
+new candidate construction. The remaining hard step is now the selector:
+produce only polynomially many block products and prove that one is $+1$ or
+$-1$ in a proper hidden component on every required input. Exhaustive
+selection is exponential, so P70 is not yet a factoring algorithm.
+
+### C68 — the self-inverse selector has an exact order/HSP boundary
+
+**Status:** verifier-backed and promoted as P71 after a failed first hostile
+audit, a corrected fresh re-audit, and a proof-blind reconstruction. No
+computation, cross-family audit, or human audit ran.
+
+**Verified boundary.** The public block map has a hidden integer relation
+lattice. A legal selected block product is self-inverse exactly when twice its
+exponent vector lies in that lattice. The old square decoder sees exactly the
+2-saturation of the known relation lattice, but only as modular residues; this
+does not give a representative in the finite occurrence box.
+
+For one generator, the least nonidentity involutory exponent is half the exact
+order, and a total least-answer oracle is order-equivalent. Recovering the full
+relation lattice therefore contains modular order finding. A supplied lattice
+basis makes the remaining 2-torsion postprocessing polynomial, but does not
+solve lattice recovery or legal selection.
+
+The finite distinction is real. At $N=187$, no legal state in the one-copy
+box passes even the broader direct screen, although the unbounded subgroup
+contains a useful involution. An odd-$t$ family requires $t=\Theta(\log N)$
+explicit occurrences before its first legal self-inverse state appears. This
+is a multiplicity boundary, not a support or full-screen lower bound.
+
+**Algorithmic consequence.** Shor/HSP language identifies the hidden object
+but does not supply its classical recovery. The live route must be narrower:
+use the integer block presentation to find a legal direct CRT separator without
+recovering the full hidden lattice. P71 supplies no such all-input selector.

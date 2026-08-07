@@ -7937,3 +7937,249 @@ The final changes state the audit and reconstruction scope conditions; they do
 not change the divisor or saturation proofs. No computation, cross-family
 audit, or human audit ran. No publication-level novelty is claimed without a
 dedicated literature review.
+
+## P70 — cross-relation block feedback can escape one-block saturation
+
+**Status:** promoted exact feedback theorem and special-family construction.
+This is not an all-input selector and not a factoring algorithm.
+
+Let
+
+\[
+A_i=x_i y_i=1+k_iN
+\]
+
+be canonical inverse relations. Completely refine their endpoints into
+pairwise-coprime gcd-free blocks $q_j$, and retain every exact endpoint
+exponent before decoder-column deduplication. For an indexed subset $S$,
+write
+
+\[
+P_S=\prod_{i\in S}A_i=1+K_SN.
+\]
+
+Let $E_j(S)$ be the total exponent of $q_j$ in $P_S$. Select any
+
+\[
+g=\prod_jq_j^{c_j},
+\qquad 0\le c_j\le E_j(S),
+\qquad 1<g<N.
+\]
+
+If $w$ is the canonical inverse of $g\bmod N$ and
+
+\[
+gw=1+k(g)N,
+\]
+
+then the new quotient is exactly
+
+\[
+\boxed{k(g)=K_S\bmod g}
+\]
+
+in the least nonzero residue range $1,\ldots,g-1$. The proof is the exact
+division $P_S/g=w+tN$, which gives $K_S=k(g)+gt$. Different subset
+certificates for the same $g$ cannot assign different quotients.
+
+This operation is strictly stronger than P69's one-block loop. At $N=21$,
+
+\[
+22=2\cdot11,\qquad 85=5\cdot17,\qquad g=2\cdot5=10
+\]
+
+give the new relation
+
+\[
+10\cdot19=190=1+9\cdot21.
+\]
+
+The complementary endpoint contributes the new block $19$, so feedback is
+not closed in the old block set. The new three-column square kernel is still
+zero, but the selected state itself factors because
+
+\[
+\gcd(10-1,21)=3.
+\]
+
+Thus the full direct target is broader than non-global square roots of one: a
+selected residue can equal $+1$ or $-1$ in only one hidden CRT component
+without being self-inverse globally.
+
+There are also genuinely cross-relation self-inverse witnesses. At $N=55$,
+
+\[
+56=2\cdot28,\qquad 111=3\cdot37,\qquad g=3\cdot7=21.
+\]
+
+The two seed square classes are independent, while
+
+\[
+21^2=441=1+8\cdot55
+\]
+
+gives factors $5$ and $11$. This is not a power of one repeated relation.
+
+Deliberate relation reuse changes the source exponent budget even though it
+adds no independent decoder observation. With three authorized uses of
+$22=2\cdot11$ at $N=21$, the old decoder has only global roots, but the
+available power $2^3=8$ is self-inverse and splits $21$.
+
+The power mechanism has an infinite exact family. For every odd $t\ge3$,
+put
+
+\[
+g=2^t,
+\qquad
+N=\frac{g^2-1}{3}=(g-1)\frac{g+1}{3}.
+\]
+
+Use $t$ authorized copies of the quotient-one relation
+$N+1=2(N+1)/2$. Every old decoded root is global, while
+
+\[
+g^2=1+3N,
+\qquad
+\gcd(g-1,N)=g-1,
+\qquad
+\gcd(g+1,N)=\frac{g+1}{3}.
+\]
+
+Here $t=\Theta(\log N)$, so the explicit source and selected integer have
+polynomial bit size, while $g=\Theta(\sqrt N)$ is exponentially larger than
+the seed quotient $1$. This disproves domination by a scan only through the
+largest seed quotient.
+
+The theorem does not choose $g$. The number of legal subsets and exponent
+vectors can be exponential. Products above $N$ reduced modulo $N$, or
+negative block exponents, define valid public residue selectors but are a
+different operation and do not obey the displayed quotient formula. A full
+algorithm must first handle even inputs and perfect powers, then prove that a
+polynomial-size selector finds a direct CRT separator on every remaining odd
+composite with inverse-polynomial probability.
+
+The final candidate, hostile audit, proof-blind reconstruction statement, and
+proof-blind reconstruction have SHA-256 hashes
+`401bfb5b29724584455bb3d4edae93ebbe58f1224969f8c0fce19187b82b7072`,
+`4cf5da70bd0d176db33f07e15d7ff6222cc55da2573bc95e2035a2f6139dfac6`,
+`d2dbbbfc7ebac3b913172e136f2535ff55cb29cfdeee7ad39599622e2bb0d6cb`,
+and `5245330fab0a5a52f833f98fbd7e7f30c07820a7916f5e3d18a747ac4083527b`.
+The audit pinned the pre-correction candidate hash
+`b18f37b176eb697e039946c713c8e20c38e7f2f5f97e2b463436b78719cce67e`;
+the final version applies its required exponent-budget, direct-screen,
+duplicate-semantics, and prime-power corrections. No research computation,
+cross-family audit, human audit, or publication-level literature review
+supports the theorem.
+
+## P71 — cross-relation self-inverse selection is a bounded hidden-lattice problem
+
+**Status:** promoted exact structural boundary after a failed first hostile
+audit, a corrected fresh hostile re-audit, and a proof-blind reconstruction.
+This is not an all-input selector and not a factoring algorithm.
+
+Let $q_1,\ldots,q_s$ be public unit blocks and define
+
+\[
+\Phi_N:\mathbb Z^s\longrightarrow(\mathbb Z/N\mathbb Z)^\times,
+\qquad
+\Phi_N(v)=\prod_jq_j^{v_j},
+\qquad
+\Lambda_N=\ker\Phi_N.
+\]
+
+For a finite indexed set of relation occurrences, let
+$L_0\subseteq\Lambda_N$ be the integer lattice generated by their exponent
+rows. If a selected occurrence set has total exponent $E$ and a legal
+whole-block divisor has exponent $0\le v\le E$ with $1<q^v<N$, then its two
+endpoints are modular inverses. They are equal exactly when
+
+\[
+2v\in\Lambda_N.
+\]
+
+For odd $N$, a self-inverse residue other than the two global signs exposes
+proper factors through both $\gcd(q^v-1,N)$ and $\gcd(q^v+1,N)$. This is only
+a sufficient subtarget. The full direct screen can succeed when
+$2v\notin\Lambda_N$; $N=21$ and $q^v=10$ give
+$\gcd(10-1,21)=3$ although $10^2\not\equiv1\pmod {21}$.
+
+The exact modular residue image of the old square-relation decoder is
+
+\[
+R_{\rm old}
+=\{\Phi_N(v):v\in\mathbb Z^s,\ 2v\in L_0\}.
+\]
+
+This is not an equality of legal positive divisors. A representative can have
+negative coordinates, lie outside every finite occurrence box, or have
+integer magnitude at least $N$. In the quotient
+$Q_0=\mathbb Z^s/L_0$ with $K=\Lambda_N/L_0$, the conditions
+$x\notin K$ and $2x\in K$ characterize a nonidentity involution in the
+generated residue group. Usefulness still needs a non-global residue outside
+the old image and a legal bounded representative.
+
+For one generator $a$ of exact order $r$, the least positive $e$ satisfying
+
+\[
+a^{2e}=1,
+\qquad
+a^e\ne1
+\]
+
+exists exactly when $r$ is even and then equals $r/2$. A total least-answer
+oracle that returns `NONE` for odd order is Turing-equivalent to exact modular
+order finding: after `NONE` on $a$, the element $-a$ has order $2r$ and its
+least answer is $r$. Full recovery of $\Lambda_N$ contains unrestricted order
+finding because one generator has kernel $r\mathbb Z$.
+
+If a basis of $\Lambda_N$ is supplied, Smith normal form computes the finite
+generated group and a basis of its 2-torsion in time polynomial in all supplied
+and produced encodings. Screening at most $s$ basis residues finds a
+non-global involution whenever the generated subgroup contains one. Pulled-back
+exponents can be negative and therefore do not establish legal divisor
+provenance. Output equality under $\Phi_N$ is exactly coset equality modulo
+$\Lambda_N$; this is the algebraic hidden-subgroup identity, not a complete
+efficient quantum implementation on the infinite domain.
+
+Two finite witnesses separate the scopes. At $N=65$, the independent relation
+rows for $66=2\cdot3\cdot11$ and $651=3\cdot7\cdot31$ admit the legal cross
+choice $2\cdot7=14$, a non-global involution that factors $65$. At $N=187$,
+the one-copy relation $188=2^2\cdot47$ has exactly the legal proper products
+$2,4,47,94$, and none passes either direct screen. Nevertheless
+$\operatorname{ord}_{187}(2)=40$, and $2^{20}$ is a non-global involution.
+Thus useful unbounded subgroup data can be absent from the finite source box.
+
+There is also an exact occurrence-multiplicity hierarchy. For odd $t\ge3$,
+put
+
+\[
+G=2^t,
+\qquad
+N=\frac{G^2-1}{3},
+\qquad
+B=\frac{N+1}{2}.
+\]
+
+With fewer than $t$ indexed copies of $2B=N+1$, no legal divisor below $N$
+is self-inverse. With $t$ copies, $G<N$, $G^2=1+3N$, and $G$ is a
+non-global involution. The old parity decoder still yields only the global
+identity, $\operatorname{ord}_N(2)=2t$, and $t=\Theta(\log N)$. This is a
+lower bound on total occurrence multiplicity for the self-inverse subtarget,
+not on support and not on the broader direct screen.
+
+The result therefore blocks a false shortcut. A classical selector cannot be
+obtained merely by naming the complete hidden lattice or its 2-torsion; that
+contains order finding and ignores the finite-box constraint. The remaining
+route is narrower: use the observed integer block presentation to find a legal
+direct separator without recovering the full lattice. No such all-input
+polynomial selector is known here.
+
+The corrected candidate, failed first audit, passing hostile re-audit,
+proof-blind statement, and proof-blind reconstruction have SHA-256 hashes
+`b0d19ae14669dbe1330fafd22447919368149b497accf870387abbda1e891bae`,
+`862c5dc768cee9a91933f9acfe5bdfdd9d4554eda81b3e2ded48a2bcb6d60289`,
+`df9e18d00918bfcf96aa25f469f7d8bf93ad2a554b0d09123af86fb399e468a6`,
+`9f140a320d5ec8267bb981b316ce9b72fdb7642872908d92abf5cf7241446bcc`,
+and `6bbc0fce0620c983d86b970223dad56cb6cb2ab1af1fcccfafb0d72c821b3855`.
+No computation, cross-family audit, human audit, or publication-level
+literature review supports this theorem.
