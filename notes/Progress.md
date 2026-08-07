@@ -1587,3 +1587,24 @@ right place to search, but it can still contain decoys. For every tested F59
 offset batch, the entire complete kernel was removed. The next sampler must
 create a relation outside $U_N$ and give it a non-global root. Merely creating
 more symbolic identities does not help.
+
+### C66 — feeding one gcd-free block is adaptive only in appearance
+
+**Status:** verifier-backed and promoted as P69/X62 after hostile audit and
+proof-blind reconstruction. The reconstruction forced exact source-size and
+seed-scope wording. No computation, cross-family audit, or human audit ran.
+
+**Verified boundary.** After a complete gcd-free refinement, feed one current
+block into the inverse map. The block has only two outcomes. It is small enough
+that the quotient-bounded direct scan already used it, or its inverse relation
+is exactly one old relation value. Its new endpoint presentation is made only
+of whole old blocks, so it cannot expose a finer block.
+
+This stays true after any number of repeats. For a polynomial-size seed list
+whose quotients are polynomial in $\log N$, one short nonadaptive saturation
+dominates the whole adaptive loop.
+
+**Algorithmic consequence.** This specific feedback loop adds bookkeeping but
+no source power. A real retry must combine several blocks or relations, use a
+different representative, or otherwise change the relation value. This leaves
+the cross-relation product mechanism open.

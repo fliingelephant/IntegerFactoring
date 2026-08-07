@@ -7869,3 +7869,71 @@ the final edits only clarified status, rational units, and the distinction
 between the certified and exact signal quotients. No cross-family or human
 audit has run. No publication-level novelty is claimed without a dedicated
 literature review.
+
+## P69 — one-block gcd-free feedback is saturated by a quotient-bounded scan
+
+**Status:** promoted narrow adaptive-source redundancy theorem. This is not a
+decoder obstruction and not a factoring algorithm.
+
+Let $2\le x<N$ be a unit, let $y$ be its canonical inverse, and write
+
+\[
+xy=1+kN.
+\]
+
+Then $1\le k<x$. If $g>1$ divides $1+kN$, exactly the following useful
+dichotomy applies:
+
+\[
+g\le k,
+\quad\text{or}\quad
+g>k\text{ and }
+\iota_N(g)=\frac{1+kN}{g},\ k(g)=k.
+\]
+
+Now refine every known endpoint completely into pairwise-coprime gcd-free
+blocks, while retaining exact block exponents and every endpoint presentation.
+Feed one whole current block $g$ back as a canonical inverse state.
+
+If the source consists exactly of all valid states $2\le x\le B<N$, the
+feedback creates neither a new relation value nor a proper split of a current
+block. If $g\le k$, state $g$ was already scanned because $k<B$. If $g>k$,
+the feedback relation is the old value $1+kN$. Its complementary endpoint is
+an exact product of whole current blocks, including multiplicities, so it
+cannot refine a block.
+
+More generally, let an explicit seed list have all quotients at most $K$.
+Add every valid state
+
+\[
+2\le x\le\min(K,N-1)
+\]
+
+before the first complete refinement. This seed list plus saturation dominates
+every finite sequence of one-block feedback steps. The added list has $O(K)$
+states. The total size is the original seed-presentation size plus $O(K)$, so
+it is polynomial when both that seed size and $K$ are polynomial in
+$\log N$.
+
+The order of bookkeeping matters. Different endpoint presentations of one
+relation value must enter refinement before duplicate decoder columns are
+removed. The theorem covers composite blocks, repeated block powers, one
+block shared by several values, loose bounds $K\ge N$, and repeated feedback.
+
+The result closes only “feed one whole current block.” It does not cover a
+product, power, quotient, or unknown proper divisor of blocks; noncanonical
+representatives; cross-relation constructions; or large selected states not
+dominated by a polynomial quotient bound.
+
+The final candidate, hostile audit, proof-blind reconstruction statement, and
+reconstruction have SHA-256 hashes
+`bb9ac13264f8213f8f1892525e328ef2461e0324824e234437e304c847fa3ac4`,
+`da85af61e760e2e0a5016e3479e85aa5286adc220f54b28101a12b9b416754f9`,
+`0b85bdd2e4c21d12580837d7280b9963f1aec3ba98932d9aba5ff2ae46986f9b`,
+and `1ed6a8a99e37b25b41747be1af99bf228c4bd4d78bbdab39ff3b45d45df941a3`.
+The audit pinned pre-clarification candidate hash
+`c3ad4d4f5a210d64feeb803e9e8047e6d0b95310c08bed3aaf088d68fb253658`.
+The final changes state the audit and reconstruction scope conditions; they do
+not change the divisor or saturation proofs. No computation, cross-family
+audit, or human audit ran. No publication-level novelty is claimed without a
+dedicated literature review.

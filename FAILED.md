@@ -2663,3 +2663,36 @@ proof-blind reconstruction and was promoted as P68.
 computable unit-denominator subspace $U_N$, as P68 does. A source retry must
 produce a non-global relation outside $U_N$; a nonzero residual quotient alone
 is not enough.
+
+## X62 — one-block gcd-free endpoint feedback is exactly saturated
+
+**Status:** promoted as the narrow method failure in P69.
+
+**Family:** F26/F61.
+
+**Classification:** method failure for feeding one whole current gcd-free
+block as a canonical inverse state. It is not evidence against products of
+blocks, cross-relation mixing, or other adaptive sources.
+
+**What was tried.** Refine all inverse-relation endpoints into true arithmetic
+blocks. Feed each new block back through the inverse map. Repeat, hoping that
+new relations will split blocks and compound information.
+
+**Exact obstruction.** For a relation $1+kN$ and a block divisor $g$, either
+$g\le k$ or $g>k$. In the first case, a direct scan through the quotient bound
+already contains state $g$. In the second case, the canonical inverse is
+$(1+kN)/g$, so feedback repeats the same relation value. Exact block
+exponents show that this alternative factor pair cannot split any current
+block. The invariant survives iteration.
+
+**Evidence.** The proof covers composite blocks, multiplicities, shared
+values, duplicate presentations, and loose scan bounds. It passed hostile
+audit and proof-blind reconstruction. The reconstruction also found why the
+seed scope must be exact: extra seeds with larger quotients are not dominated
+by a smaller scan.
+
+**What would make a retry materially new.** Feed a product, quotient, or power
+of several blocks; combine blocks from several relation values; use a
+noncanonical representative; or prove that polynomially many selected large
+states change the normalized-root image. Repeating one whole block is covered
+by P69.
