@@ -1563,3 +1563,27 @@ nothing about hard factoring inputs.
 but it must use a cumulative invariant rather than a fixed local contraction.
 Even such a theorem would only make the transcript cheap. P66 shows that a
 separate non-global relation law is still necessary.
+
+### C65 — generic relations split into certified decoys and an unresolved residue
+
+**Status:** verifier-backed and promoted as P68 after one failed theorem
+version, a passing fresh hostile re-audit, and strict proof-blind
+reconstruction. No cross-family or human audit has run.
+
+**Verified boundary.** A symbolic square relation is forced to give only the
+global roots $\pm1$ when the least denominator of its symbolic root is
+coprime to $N$. All such relations form a computable subspace $U_N$. Its
+exact description uses only rational-polynomial factorization, coefficient
+denominators, gcds with $N$, and binary linear algebra.
+
+The condition is sharp. A generic relation with a denominator that shares a
+factor with $N$ can be useful. If the denominator gcd equals all of $N$, it
+can be either useful or another decoy. Therefore “generic” does not mean
+“harmless.” Only the unit-denominator subspace is certified harmless.
+
+**Algorithmic consequence.** The decoder now removes a whole proved-decoy
+subspace before it tests roots. The remaining quotient is smaller and is the
+right place to search, but it can still contain decoys. For every tested F59
+offset batch, the entire complete kernel was removed. The next sampler must
+create a relation outside $U_N$ and give it a non-global root. Merely creating
+more symbolic identities does not help.

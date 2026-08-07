@@ -2621,3 +2621,45 @@ $\operatorname{poly}(\log N)$ depth theorem.
 inverse labels, the positive adjacent determinant identities, or another
 global invariant. Do not assume that the local Farey parent is the next
 trajectory fraction; the numerator resets to $N$.
+
+## X61 — generic square relations need not be global decoys
+
+**Status:** promoted as the exact failed auxiliary claim corrected by P68.
+
+**Family:** F26/F60.
+
+**Classification:** evidence against the claim that every useful numeric
+relation must appear only after specialization. It does not close symbolic
+lifts or generic relations with nonunit denominators.
+
+**What was tried.** Split the numeric square kernel into symbolic identities
+and specialization-only relations, then discard every symbolic identity as a
+global-root decoy.
+
+**Exact obstruction.** At $N=15$, let
+
+\[
+S(T)=1-\frac45T+\frac1{15}T^2,
+\qquad A(T)=S(T)^2.
+\]
+
+Then $A(0)=1$, $A(15)=16\equiv1\pmod {15}$, and
+$K_N=K_{\rm gen}=\mathbb F_2$. But $S(15)=4$, so
+
+\[
+\gcd(4-1,15)=3,
+\qquad
+\gcd(4+1,15)=5.
+\]
+
+The useful relation is generic. Its least root denominator is $15$, so the
+invalid step was cancellation of a nonunit denominator modulo $N$.
+
+**Evidence.** The first F60 hostile audit found this counterexample. The
+corrected unit-denominator theorem then passed a fresh hostile audit and
+proof-blind reconstruction and was promoted as P68.
+
+**What would make a retry materially new.** Restrict the decoy theorem to the
+computable unit-denominator subspace $U_N$, as P68 does. A source retry must
+produce a non-global relation outside $U_N$; a nonzero residual quotient alone
+is not enough.

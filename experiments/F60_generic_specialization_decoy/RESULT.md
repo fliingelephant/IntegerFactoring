@@ -1,14 +1,17 @@
-# F60 — Generic dependencies are global-root decoys
+# F60 — Unit-denominator generic dependencies are global-root decoys
 
-**Status:** candidate. This version has not yet passed hostile audit or
-proof-blind reconstruction.
+**Status:** verifier-backed. The first version failed hostile audit because it
+incorrectly claimed that every useful relation must be specialization-only.
+This corrected version uses the exact unit-denominator subspace and passed a
+fresh whole-proof audit plus proof-blind reconstruction.
 
 **Verdict:** for an explicit family of completion relations, square
 dependencies that already hold symbolically are not factor-bearing when their
 symbolic root denominators are units modulo $N$. The normalized-root map
 therefore factors through the quotient of the numeric square kernel by this
-generic kernel. A useful sampler must create a specialization-only dependency,
-not only a dependency.
+certified harmless subspace. A useful relation must lie outside that subspace.
+It can be specialization-only, or it can be generic with a nonunit symbolic
+denominator.
 
 This is a source-filter theorem. It is not a source-success theorem and not a
 factoring algorithm.
@@ -21,11 +24,12 @@ complete for factor extraction. P64 explains global roots from exact endpoint
 cycles in inverse-completion trajectories.
 
 The result here adds a different layer. It compares the numeric kernel at the
-given integer $N$ with the kernel of a public symbolic lift before $N$ is
-substituted. It proves that the latter kernel maps only to global signs under a
-checkable denominator condition. Thus it separates generic algebraic
-dependencies from specialization-only dependencies. It covers symbolic
-identities whose retained numeric endpoint labels do not form cycles.
+given integer $N$ with the kernel of a fixed public symbolic lift. It proves
+that the unit-denominator part of the latter kernel maps only to global signs.
+Thus it separates certified generic decoys from the remaining relations. The
+remainder can include both specialization-only dependencies and generic
+dependencies with nonunit denominators. The theorem covers symbolic identities
+whose retained numeric endpoint labels do not form cycles.
 
 The algebra is elementary. No publication-level novelty is claimed without a
 dedicated literature review.
@@ -129,6 +133,19 @@ K_N/K_{\rm gen}
 measures square relations that appear only after the public parameter is
 specialized to the given integer $N$.
 
+This quotient is relative to the selected lift rule. The same numeric value
+can be generic under one valid lift and specialization-only under another. For
+example, at $N=15$ the value $16$ is obtained from both
+
+\[
+(1+T/5)^2
+\qquad\text{and}\qquad
+1+T.
+\]
+
+The first lift is a symbolic square and the second is not. No claim below
+treats $K_{\rm gen}$ as an invariant of the numeric list alone.
+
 ## 3. Unit-denominator generic roots are global
 
 For $c\in K_{\rm gen}$, choose $S_c\in\mathbb Q[T]$ with
@@ -192,52 +209,122 @@ be omitted. For example, with $N=15$ and
 
 \[
 S(T)=1+T/5,
+\qquad
+A(T)=S(T)^2,
 \]
 
-one has $S(0)=1$ but $S(15)=4$, a non-global square root of $1$ modulo $15$.
-The denominator $5$ is exactly a hidden factor.
+one has $A(0)=1$, $A(15)=16\equiv1\pmod {15}$, but $S(15)=4$ is a
+non-global square root. The denominator $5$ is exactly a hidden factor.
 
-## 4. The factor-bearing map lives on a quotient
+A generic relation can remain useful even when the denominator gcd is $N$
+rather than a proper factor. Let
+
+\[
+S(T)=1-\frac45T+\frac1{15}T^2,
+\qquad
+A(T)=S(T)^2.
+\tag{10}
+\]
+
+Then $S(0)=1$, $S(15)=4$, $A(0)=1$, and $A(15)=16$. The one-dimensional
+numeric and generic kernels are equal, while the least root denominator is
+$15$. Its gcd with $N$ is the whole modulus, yet the positive root $4$ gives
+the factors $3$ and $5$. Thus $K_N/K_{\rm gen}$ can be zero while a useful
+generic relation exists.
+
+## 4. The unit-denominator set is a computable subspace
+
+For a nonzero rational polynomial $P$, let $d(P)$ be the least positive
+integer that clears all coefficient denominators. Because every $A_i(0)=1$,
+put
+
+\[
+D_i=d(A_i).
+\tag{11}
+\]
+
+### Theorem 3
+
+For every $c\in K_{\rm gen}$,
+
+\[
+\boxed{d_c^2=\prod_i D_i^{c_i}.}
+\tag{12}
+\]
+
+Consequently,
+
+\[
+U_N:=\{c\in K_{\rm gen}:\gcd(d_c,N)=1\}
+=K_{\rm gen}\cap
+\{c:c_i=0\text{ when }\gcd(D_i,N)>1\}.
+\tag{13}
+\]
+
+In particular, $U_N$ is a binary subspace and is computable from a basis of
+$K_{\rm gen}$ by binary linear algebra and ordinary gcds.
+
+### Proof
+
+Fix a rational prime $p$. For a rational polynomial $P$ with constant term
+$1$ or $-1$, define
+
+\[
+\lambda_p(P)=-\min_j v_p([T^j]P)=v_p(d(P)).
+\]
+
+The minimum is at most zero because the constant coefficient is a $p$-adic
+unit. The Gauss valuation is multiplicative:
+
+\[
+\lambda_p(PQ)=\lambda_p(P)+\lambda_p(Q).
+\]
+
+To see this, scale each polynomial so all coefficients are $p$-integral and
+at least one coefficient is a unit. Their nonzero reductions multiply to a
+nonzero polynomial in the domain $\mathbb F_p[T]$.
+
+Apply this identity to
+$S_c^2=\prod_iA_i^{c_i}$. It gives
+
+\[
+2v_p(d_c)=\sum_i c_i v_p(D_i)
+\]
+
+for every $p$, which proves (12). For a prime $p\mid N$, every term on the
+right is nonnegative. It vanishes exactly when no selected $D_i$ is divisible
+by $p$. Taking all primes dividing $N$ gives (13). The right side of (13) is
+the intersection of two binary subspaces. $\square$
+
+## 5. The factor-bearing map factors through a certified quotient
 
 For $c\in K_N$, condition (1) gives $R_N(c)^2\equiv1\pmod N$. P66's overlap
 identity proves that
 
 \[
 \rho_N(c)=R_N(c)\pmod N
-\tag{10}
+\tag{14}
 \]
 
 is a homomorphism from $K_N$ to the square roots of $1$ modulo $N$. Quotient
 the target by its global subgroup $\{1,-1\}$ and write the result as
 $\bar\rho_N$.
 
-Let
+### Theorem 4
 
 \[
-U_N=
-\{c\in K_{\rm gen}:\gcd(d_c,N)=1\}.
-\tag{11}
+\boxed{U_N\subseteq\ker\bar\rho_N.}
+\tag{15}
 \]
 
-Define $G_N=\operatorname{span}_{\mathbb F_2}(U_N)$. This definition does not
-assume that the displayed denominator condition is itself closed under binary
-addition.
-
-### Theorem 3
-
-\[
-\boxed{G_N\subseteq\ker\bar\rho_N.}
-\tag{12}
-\]
-
-Consequently, $\bar\rho_N$ factors through $K_N/G_N$. Every useful square
-relation lies outside the generic unit-denominator subspace.
+Consequently, $\bar\rho_N$ factors through $K_N/U_N$. Every useful square
+relation lies outside $U_N$, but it need not lie outside $K_{\rm gen}$.
 
 If a binary basis of the complete numeric kernel $K_N$ consists entirely of
 generic relations with unit root denominators, then
 
 \[
-K_N=K_{\rm gen}
+K_N=K_{\rm gen}=U_N
 \]
 
 and every numeric square relation has a global root. No subset of that batch
@@ -245,48 +332,91 @@ can factor $N$ through this decoder.
 
 ### Proof
 
-Theorem 2 puts every generator in $U_N$ inside
-$\ker\bar\rho_N$. A kernel is a subspace, so it also contains their span
-$G_N$. A homomorphism factors through any subspace of its kernel.
+Theorem 2 puts every vector in $U_N$ inside $\ker\bar\rho_N$. A homomorphism
+factors through any subspace of its kernel.
 
 For the final statement, Theorem 1 gives
 $K_{\rm gen}\subseteq K_N$. If a basis of $K_N$ lies in $K_{\rm gen}$, the
-reverse containment holds. Each basis image under $\rho_N$ is global by
-Theorem 2. Since $\rho_N$ is a homomorphism, every linear combination of the
-basis also has a global image. $\square$
+reverse containment holds. The unit-denominator premise puts that basis in
+$U_N$. Since $U_N$ is a subspace, it contains all of $K_N$. Each basis image
+under $\rho_N$ is also global by Theorem 2, so every linear combination has a
+global image. $\square$
 
-## 5. Algorithmic change
+The certified quotient need not be the exact signal quotient. Define
 
-P66 computes $K_N$. The new filter is:
+\[
+Z_N=\ker\bar\rho_N
+=\{c\in K_N:R_N(c)\equiv\pm1\pmod N\}.
+\tag{16}
+\]
 
-1. attach a public symbolic lift $A_i(T)$ to each sampled relation;
-2. identify the generic square subspace and check its root denominators;
-3. remove that certified global-decoy subspace from the numeric kernel; and
-4. test a basis of the remaining specialization quotient.
+Then $U_N\subseteq Z_N$. The exact quotient that classifies distinct
+non-global root images is $K_N/Z_N$. The computable quotient $K_N/U_N$ can
+still contain nonzero global-decoy classes. Thus a nonzero certified quotient
+is necessary for this decoder to succeed, but it is not sufficient.
 
-When the symbolic lifts have polynomial total representation size and their
-square classes can be computed in polynomial bit complexity, this filter is
-also polynomial. It is not another scalar followed by one gcd. It changes the
-state passed from the source to the decoder: the decoder now retains only
-dependencies created by specialization.
+If every $D_i$ is coprime to $N$, then $U_N=K_{\rm gen}$ and the certified
+residual quotient is the specialization quotient $K_N/K_{\rm gen}$.
+Without this extra condition, example (10) shows that even a useful generic
+relation can lie outside $U_N$.
 
-This filter does not make the quotient nonzero. A factoring theorem still
-needs a sampler with an all-input inverse-polynomial law that makes
-$\bar\rho_N$ nonzero on that quotient.
+## 6. Algorithmic change and bit complexity
 
-## 6. Exact finite certificate from F59-D03
+For explicit lifts of polynomial total degree and coefficient bit length, the
+filter is:
+
+1. use P66 to compute the numeric kernel $K_N$;
+2. factor the $A_i$ over $\mathbb Q[T]$, normalize every nonconstant
+   irreducible factor to be monic, and use its exponent parity to compute
+   $K_{\rm gen}$;
+3. compute each $D_i$ as the least common multiple of its coefficient
+   denominators and compute $\gcd(D_i,N)$;
+4. return any proper denominator gcd immediately, and otherwise compute $U_N$
+   from (13);
+5. extend a basis of $U_N$ to a basis of $K_N$ and run P66's exact-root gcd
+   screens only on the added quotient representatives.
+
+Deterministic rational-polynomial factorization is polynomial in degree and
+coefficient bit length. The total factored degree is the sum of the input
+degrees. Clearing denominators increases bit length by at most the sum of the
+input denominator bit lengths. No factorization of rational unit contents is
+needed. If every nonconstant factor parity of a selected product is even,
+evaluation at $T=0$ and $A_i(0)=1$ force the remaining rational unit to be a
+square. Conversely, a rational-function square has even valuation at every
+nonconstant irreducible. The parity matrix therefore computes $K_{\rm gen}$
+exactly. The parity matrix, the coordinate restrictions in (13), and the basis
+extension have polynomial dimensions. Exact roots have at most half the total
+bit length of the selected numeric product. Thus all five steps have
+polynomial bit complexity in the explicit numeric list, the explicit lift
+list, and $\log N$.
+
+This is not another scalar followed by one gcd. It changes the decoder state:
+the certified harmless subspace is removed before root tests. The remaining
+quotient can contain specialization-only relations and generic relations with
+nonunit denominators. The filter does not make this quotient nonzero and does
+not make its root image non-global.
+
+## 7. Exact finite certificate from F59-D03
 
 F59-D03 applied this distinction to the 12 preregistered deterministic-offset
 batches from F59-D02. Their numeric kernel dimensions sum to $19$.
 
 - Twelve basis vectors are the direct $(N-1)^2$ relation.
-- Seven basis vectors survive removal of every global square singleton and
-  removal of the raw trajectory started at $N-1$.
+- Seven basis relation values survive removal of every global square singleton
+  and removal of the raw trajectory started at $N-1$. In the second variant,
+  duplicate provenance from the $N-2$ trajectory supplies the same retained
+  quotient values; the original raw occurrences do not survive.
 - All 19 basis products lift to exact squares over $\mathbb Q[T]$.
 - Every symbolic root has constant term $1$ or $-1$ and denominator coprime
   to its tested $N$.
-- Therefore the generic and numeric kernels are equal on all 12 batches, and
-  every dependency in every tested batch is a global-root decoy.
+- Therefore $K_N=K_{\rm gen}=U_N$ on all 12 batches, and every dependency in
+  every tested batch is a global-root decoy.
+
+These lifts are public but relative to the tested input and executed branch.
+Their coefficients use the known modulus, inverse value, and trajectory
+provenance. The statement “generic” means that $T$ remains indeterminate after
+that lift rule is applied; it does not mean that one $N$-independent polynomial
+family was fixed for all inputs.
 
 The seven residual instances reduce to four symbolic root polynomials. Four
 instances share
@@ -299,8 +429,8 @@ whose constant term is $-1$. The other roots have degrees $3$, $6$, and $7$
 and coefficient-denominator least common multiples $230$, $22533$, and
 $5040$. Their constant terms are respectively $-1$, $1$, and $-1$.
 
-Sage independently checked each of the 19 polynomial square identities. The
-run used exact rational arithmetic. Its authoritative source, log, and output
+The source checked each identity with exact rational-pair arithmetic and then
+with Sage polynomial arithmetic as a second backend. Its authoritative source, log, and output
 SHA-256 hashes are, respectively,
 
 `5306268bf01ac569f2c75ca0be635dc1b8ed6bffc0065f6a307bbd6abf515d42`,
@@ -311,14 +441,16 @@ and
 This is finite evidence about one sampler. It is not an asymptotic obstruction
 for all offset batches and not evidence for factor correlation.
 
-## 7. Remaining gap
+## 8. Remaining gap
 
 The old target was “make a dependency.” The sharper target is:
 
 > From bare $N$, produce in polynomial time a polynomial-size relation list
-> whose specialization quotient contains a vector with non-global root, with
+> whose quotient $K_N/U_N$ contains a vector with non-global root, with
 > inverse-polynomial probability on every composite input.
 
-A dimension gap $K_N/K_{\rm gen}\ne0$ is necessary but not sufficient. A
-specialization-only relation can still have root $1$ or $-1$. The root-image
-condition remains the factor-bearing event.
+A nonzero quotient $K_N/U_N$ is necessary but not sufficient. It can contain a
+specialization-only relation or a generic relation with nonunit denominator,
+and either type can still have root $1$ or $-1$. A proper denominator gcd is
+already a factor. Otherwise the non-global root-image condition remains the
+factor-bearing event.

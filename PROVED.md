@@ -7775,3 +7775,97 @@ The passing re-audit pinned mathematical-content hash
 `e65df85135f4793096d49147ba066682c9afd134b7e166e5386bc1898698b05f`;
 the later candidate change was status-only. No research computation,
 cross-family audit, or human audit ran.
+
+## P68 — unit-denominator generic dependencies are certified global-root decoys
+
+**Status:** promoted source-filter theorem. This is not a source-success
+theorem and not a factoring algorithm.
+
+Let $N\ge3$ be odd. Let nonzero polynomials
+$A_1(T),\ldots,A_m(T)\in\mathbb Q[T]$ satisfy
+
+\[
+A_i(0)=1,
+\qquad
+a_i=A_i(N)\in\mathbb Z_{>0},
+\qquad
+a_i\equiv1\pmod N.
+\]
+
+Let $K_N$ be the binary kernel of integer-square products of the $a_i$, and
+let $K_{\rm gen}$ be the binary kernel of products that are squares in
+$\mathbb Q(T)$. Then
+
+\[
+K_{\rm gen}\subseteq K_N.
+\]
+
+For $c\in K_{\rm gen}$, write the symbolic product as $S_c(T)^2$ and let
+$d_c$ be the least positive coefficient denominator of $S_c$. If
+$\gcd(d_c,N)=1$, then the positive numeric root satisfies
+
+\[
+R_N(c)\equiv\pm1\pmod N.
+\]
+
+Such a relation is therefore a global-root decoy. The denominator condition
+is essential: at $N=15$, the generic square with
+
+\[
+S(T)=1-\frac45T+\frac1{15}T^2
+\]
+
+has $S(15)=4$ and factors $15$, even though its denominator gcd is the whole
+modulus and $K_N=K_{\rm gen}$.
+
+The harmless subspace is computable without factoring $N$. If $D_i$ is the
+least coefficient denominator of $A_i$, exact Gauss valuations give
+
+\[
+d_c^2=\prod_iD_i^{c_i}.
+\]
+
+Hence
+
+\[
+U_N
+=K_{\rm gen}\cap
+\{c:c_i=0\text{ whenever }\gcd(D_i,N)>1\}.
+\]
+
+Let $\bar\rho_N$ map a square relation to its numeric root modulo the global
+signs. Then
+
+\[
+U_N\subseteq Z_N:=\ker\bar\rho_N.
+\]
+
+The computable quotient $K_N/U_N$ is a certified residual search space. It is
+not the exact signal quotient; the latter is $K_N/Z_N$. Thus a nonzero
+$K_N/U_N$ is necessary for this decoder to succeed, but it is not sufficient.
+
+The theorem causes a real algorithmic change. Compute $K_N$ with P66, compute
+$K_{\rm gen}$ by rational-polynomial factor parity, remove $U_N$, and screen
+only a basis of the remaining quotient. The constant-term condition makes the
+residual rational unit a square whenever all nonconstant parities cancel, so
+this step does not hide integer factorization. All work is polynomial in the
+explicit lift/list size and $\log N$.
+
+For the 12 audited F59 deterministic-offset batches, all 19 complete numeric
+basis dependencies lie in $U_N$. Therefore every dependency in those batches
+is a global decoy. This finite certificate does not imply an unbounded source
+law.
+
+The final candidate, failed first audit, passing fresh re-audit, proof-blind
+reconstruction, and reconstruction computation manifest have SHA-256 hashes
+`07d5fcd049a4047adff6651cc297df4646a1b43b5fab69b2d9b2c351da1983fb`,
+`d514a92f48b64063e27b302551c4bc8b24e63f861174b5a060be5c3bd9588299`,
+`20f557b82eb6afc25124471f2980e7b644e6f9d1bf63c536bfc0df1dd5ae9b68`,
+`f7cd9b4ad1dd12ba338617845af4b93ca856a14ef8697851d5555e58f5f63af0`,
+and `e0469b2e6b1d05b02a2d847e8ad13445aea7c376cb7671be00782f6465559eed`.
+The passing re-audit pinned mathematical-content hash
+`804d0776a1ba446b3e604cb19a7b6abdae4ed052589ae62723bf23b6e48b6c93`;
+the final edits only clarified status, rational units, and the distinction
+between the certified and exact signal quotients. No cross-family or human
+audit has run. No publication-level novelty is claimed without a dedicated
+literature review.
