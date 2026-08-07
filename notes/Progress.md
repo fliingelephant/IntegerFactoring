@@ -4,7 +4,7 @@ This is working state for nontrivial intermediate statements and the current syn
 
 ## Current synthesis
 
-The source material has been read in full. Twenty-eight approach families have been opened, primarily from materially different mechanisms in `notes/Inspirations.md` with additional factor-trace, noncommutative, hidden-modulus metric, non-gcd tensor-contraction, joint-amortization, positive-sampling, and finite-field or integer-quotient dissipative routes; promoted narrow results and exact open gaps are tracked below and in the registry. The current frontier is a factor-free sampler for the quadratic-energy/zero-product law, a genuinely joint decoder using typical nonzero relation data, a fine manufactured metric hint, a useful class-group/isogeny orientation, or an exactly contractible positive factor-witness network beyond the proved local wiring boundaries. `notes/Zhihu.md` supplies background and motivation only.
+The source material has been read in full. Twenty-eight approach families have been opened, primarily from materially different mechanisms in `notes/Inspirations.md` with additional factor-trace, noncommutative, hidden-modulus metric, non-gcd tensor-contraction, joint-amortization, positive-sampling, and finite-field or integer-quotient dissipative routes; promoted narrow results and exact open gaps are tracked below and in the registry. The closest current structural frontier is non-endpoint quotient or cross-relation feedback: it can enlarge the block subgroup, but a useful sampler must also force square-class cancellation and a non-global root. Other live frontiers are a factor-free sampler for the quadratic-energy/zero-product law, a genuinely joint decoder using typical nonzero relation data, a fine manufactured metric hint, a useful class-group/isogeny orientation, or an exactly contractible positive factor-witness network beyond the proved local wiring boundaries. `notes/Zhihu.md` supplies background and motivation only.
 
 ## Working claims
 
@@ -1802,3 +1802,67 @@ balanced-partition solver or on more precise log balancing. The live feature
 is the change in integer block structure after canonical endpoint feedback.
 We must predict refinement gain or a non-global closure, not closeness by
 itself.
+
+### C75 — refinement can escape a separator-free old subgroup
+
+**Status:** verifier-backed and promoted as P78. A first hostile audit found
+five scope errors. The corrected theorem passed re-audit. A first proof-blind
+statement then exposed undefined screens, an ambiguous overlap claim, and
+missing domain assumptions. The final exact candidate passed a new hostile
+audit and fresh proof-blind reconstruction. No research computation,
+cross-family audit, human audit, or literature audit ran.
+
+**Verified boundary.** At \(N=4033=37\cdot109\), the old block subgroup
+\(\langle2\rangle\) has no direct separator. Canonical feedback can still
+split an old composite block and expose \(5\notin\langle2\rangle\). The
+refined subgroup contains \(630\), and
+\(\gcd(630-1,4033)=37\). Both feedback endpoint residues were already in the
+old subgroup.
+
+The representative \(630\) is not in the current positive whole-block
+occurrence box. Thus strict subgroup growth is real but does not supply a
+legal selector. A separate infinite family gives immediate useful square
+closure with zero old-block splitting. Conversely, the strict-expansion
+witness has positive splitting but no immediate closure. Raw split count is
+therefore not a stand-alone certificate.
+
+**Algorithmic consequence.** Feedback has changed the algorithmic search
+space, not only one scalar gcd input. The missing step is still access: a
+public polynomial rule must produce an immediate separator, a non-global
+closure, or a reachable factor-bearing representative with an all-input
+inverse-polynomial law.
+
+### C76 — endpoint powers can be trapped, but a relation quotient is a real operation change
+
+**Status:** verifier-backed and promoted as P79. The endpoint trap, infinite
+quotient escape, and exact square-class gate each passed a fresh hostile audit
+and proof-blind reconstruction. No research computation, cross-family audit,
+human audit, or literature audit ran.
+
+**Verified boundary.** For
+
+\[
+N=c^2+c+1,
+\]
+
+with prime \(c\), endpoint powers remain in the order-three subgroup
+\(\{1,c,c^2\}\). Arbitrary occurrence amplification, gcd refinement, exact
+perfect-power extraction, direct screens, and complete \(2\)-saturation
+produce no second block and only the global decoder root. An infinite
+large-factor family proves that this is not a bounded trial-division artifact.
+
+Promoting the public relation quotient \(g=c-1\) is a genuine state change.
+It always lies outside the old subgroup. Put \(b=(c+1)/3\). The new relation
+has square class \([b]\), while the old class is \([c]\). Therefore subgroup
+expansion always occurs, but immediate decoder closure occurs exactly when
+\(b\) is an integer square. When \(b=s^2\), the root
+\(s(c-1)\) factors \(N\). A separate infinite robust family with
+\(c=3s^2-1\) proves the same trap-and-escape separation for a composite
+non-perfect-power old block.
+
+**Algorithmic consequence.** This is the clearest current framework result.
+It separates three events: enlarge the subgroup, cancel a square class, and
+obtain a non-global root. A useful sampler must cause all needed events. More
+relations or more generators alone are insufficient. The quotient is public,
+so this is an operation-set distinction, not hidden side information or a
+general factoring algorithm.

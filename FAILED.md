@@ -2696,3 +2696,38 @@ of several blocks; combine blocks from several relation values; use a
 noncanonical representative; or prove that polynomially many selected large
 states change the normalized-root image. Repeating one whole block is covered
 by P69.
+
+## X63 — unlimited endpoint occurrence amplification can remain trapped at the full subgroup level
+
+**Status:** promoted as the source-specific obstruction in P79.
+
+**Family:** F26/F71.
+
+**Classification:** method failure for arbitrary occurrence amplification
+inside one order-three endpoint block. It is not evidence against relation
+quotients, independent seeds, non-endpoint data, or general factoring.
+
+**What was tried.** Start from the sole block \(c\) in
+
+\[
+c\cdot c^2=c^3=1+(c-1)(c^2+c+1),
+\]
+
+then use arbitrarily many copies, raw or canonically reduced powers,
+canonical inverses, exact gcd refinement, perfect-power extraction, direct
+screens, and complete \(2\)-saturation.
+
+**Exact obstruction.** For composite
+\(N=c^2+c+1\) with prime \(c\) and \(3\nmid N\), the residue of \(c\) has
+exact order three in every hidden prime-power component. Every raw relation
+value is \(c^{3t}\). Every rational-square relation root is therefore the
+global identity, and no second block appears. CRT and Dirichlet constructions
+give infinitely many examples with two distinct factors, growing least prime
+factor, and no perfect-power escape.
+
+**What would make a retry materially new.** Promote a relation quotient or
+other non-endpoint state. P79 proves that the quotient \(c-1\) always enlarges
+the subgroup, so it is a real escape operation. But its new decoder column
+closes only when the new square class cancels. A general retry must prove that
+such cancellation and a non-global root occur with an all-input
+inverse-polynomial law.

@@ -8797,3 +8797,393 @@ reconstruction have SHA-256 hashes
 and `be625fdc995dae3cec63a36984014e0fa791c62ecd792899cb9dbf5614c74195`.
 No research computation, cross-family audit, human audit, or
 publication-level literature review has run.
+
+## P78 — endpoint refinement can create a factor-bearing subgroup beyond a separator-free old subgroup
+
+**Status:** promoted exact representation-level feedback theorem and selector
+boundary. This is not a uniform selector or a factoring algorithm.
+
+**Verification record:** the first hostile audit accepted the core arithmetic
+but rejected five scope claims. The corrected version passed a fresh audit.
+A first proof-blind statement then failed because it left the screens and
+domains undefined and called a whole-block containment the sole overlap. The
+candidate was corrected again. Its exact final version passed a new hostile
+audit and a fresh proof-blind reconstruction. No research computation,
+cross-family audit, human audit, or publication-level literature review ran.
+
+Let a positive endpoint transcript have pairwise-coprime nontrivial gcd-free
+blocks. After appending one canonical inverse relation, let \(\sigma\) count
+the extra descendants created by splitting old block types, and let \(\nu\)
+count private new block types. If \(r,r'\) are the old and new block counts,
+then
+
+\[
+r'=r+\sigma+\nu.
+\]
+
+For any fixed finite transcript of positive endpoints, if \(R\) is its final
+block count and
+
+\[
+L=\sum_x\left\lceil\log_2(x+1)\right\rceil,
+\]
+
+then
+
+\[
+R\le L,
+\qquad
+\sum_t(\sigma_t+\nu_t)=R-r_0\le L-r_0.
+\]
+
+This is only accounting. In an adaptive run, every new endpoint also enlarges
+\(L\), so the identity gives no polynomial stopping bound.
+
+At
+
+\[
+N=4033=37\cdot109=\Phi_{36}(2),
+\]
+
+the element \(2\) has order \(36\) modulo both prime factors. Hence
+
+\[
+H_0=\langle2\rangle
+\]
+
+has no direct sign separator: the exponents giving \(+1\) or \(-1\) are the
+same in both CRT components.
+
+There is an infinite immediate-square family that shows old-block splitting
+is not necessary. For odd \(s>1\), \(s\equiv1\pmod3\), put
+
+\[
+N_s=\frac{4s^2-1}{3}
+=(2s-1)\frac{2s+1}{3}.
+\]
+
+Two charged copies of \(N_s+1\) authorize \(g=4\). Its canonical inverse is
+\(w=s^2\), and
+
+\[
+gw=4s^2=1+3N_s=(2s)^2.
+\]
+
+The old duplicate dependency has only the global root
+\(N_s+1\equiv1\pmod{N_s}\), while the new root \(2s\) gives both displayed
+factors. On the subfamily \(s\equiv55\pmod{1530}\), all declared sign,
+difference, and discriminant gcd screens fail before the exact-square screen.
+At \(s=55\), this gives \(N=4033\), \(w=3025\), and \(\sigma=0\).
+The private square endpoint gives positive total block gain, so the exact
+conclusion is only that positive old-block splitting is unnecessary.
+
+A separate \(N=4033\) history proves strict subgroup expansion. Start from
+
+\[
+2\cdot2017=1+N,
+\qquad
+64\cdot3970=1+63N,
+\qquad
+8\cdot3529=1+7N.
+\]
+
+Complete refinement gives
+
+\[
+Q_0=\{2,2017,1985,3529\},
+\qquad
+H(Q_0)=H_0.
+\]
+
+The legal occurrence product
+
+\[
+g=2^{11}=2048
+\]
+
+has canonical inverse \(w=3905\), with
+
+\[
+gw=1+1983N.
+\]
+
+All immediate screens fail. The containment
+\(\gcd(2,2048)=2\) reuses one whole old block and does not split it. The only
+proper refinement-causing overlap is
+
+\[
+\gcd(1985,3905)=5.
+\]
+
+It gives
+
+\[
+1985=5\cdot397,
+\qquad
+3905=5\cdot781,
+\]
+
+\[
+Q_1=\{2,2017,5,397,3529,781\},
+\qquad
+\sigma=1,\quad\nu=1.
+\]
+
+The private odd block \(781\) prevents immediate square-class closure.
+Nevertheless,
+
+\[
+H(Q_1)=\langle H_0,5\rangle\supsetneq H_0.
+\]
+
+Strictness follows from
+
+\[
+5=2^{23}\pmod {37},
+\qquad
+2^{23}=77\ne5\pmod {109}.
+\]
+
+The enlarged subgroup contains
+
+\[
+x=5\cdot2^{-23}=5\cdot2^{13}=630\pmod {4033},
+\]
+
+and
+
+\[
+\gcd(x-1,4033)=37.
+\]
+
+This is a genuine representation-level gain: both feedback endpoint residues
+were already in the separator-free old subgroup, but integer refinement
+exposed a generator outside it and enlarged the subgroup to one containing a
+factor-bearing element.
+
+The current positive whole-block occurrence box still cannot contain the
+canonical integer \(630=2\cdot3^2\cdot5\cdot7\). The modular representation
+\(5\cdot2^{13}=40960\) exceeds \(N\). Thus subgroup expansion does not by
+itself supply a legal representative.
+
+The two histories also show that \(\sigma>0\) is neither necessary nor
+sufficient for immediate success across those histories. They do not give a
+same-menu ranking theorem and do not rule out using \(\sigma\) as one feature.
+The missing theorem remains a public polynomial-size selector or trajectory
+with an all-input inverse-polynomial law.
+
+The final candidate, hostile re-audit, corrected proof-blind statement, and
+proof-blind reconstruction have SHA-256 hashes
+
+baa75d5935ca576dcea16bd5ebc675bbb76fad2ded26bbe3baff7c3e1a3decfe,
+e342d83efe424d086d78ed6af10ba38b210028a75f6086b0716fcea64843c47b,
+c55f7b1bbd691ebffac02d1863ed5df4e33b8ad85f8d90cdecc8030e6702c281,
+and
+e1fe9c6dc87b56aef1da9823944abad7e0c24b800a67ef945d357ddd22a30e9b.
+
+## P79 — order-three endpoint feedback can be trapped, while quotient promotion has an exact square-class escape gate
+
+**Status:** promoted source-specific obstruction, operation-set separation,
+and exact two-gate theorem. This is not a general quotient sampler or a
+factoring algorithm.
+
+**Verification record:** the endpoint trap first passed a kill-first review
+with two corrections: canonical reduction can produce the trivial state, and
+retained raw powers give \(c^{3t}\), not always \(c^3\). The corrected exact
+theorem then passed a fresh hostile audit and proof-blind reconstruction. The
+infinite quotient-escape family and the exact prime-block square-class gate
+each passed their own fresh hostile audit and proof-blind reconstruction. No
+research computation, cross-family audit, human audit, or publication-level
+literature review ran.
+
+### Endpoint-only trap
+
+Let \(c\) be an odd prime and assume
+
+\[
+N=c^2+c+1
+\]
+
+is composite with \(3\nmid N\). The seed relation is
+
+\[
+c\cdot c^2=c^3=1+(c-1)N.
+\]
+
+For every prime power dividing \(N\), the residue of \(c\) has exact order
+three. Therefore
+
+\[
+H_0=\langle c\rangle=\{1,c,c^2\}\pmod N
+\]
+
+has no sign separator.
+
+Allow arbitrary occurrence amplification of the endpoint block, optional
+canonical reduction, canonical inversion, retained oversized raw powers,
+integer gcd refinement, exact perfect-power extraction, all declared direct
+screens, integer relation coefficients, and complete \(2\)-saturation. Every
+raw relation value is \(c^{3t}\). Every rational-square relation root has
+exponent divisible by three and is therefore \(1\pmod N\). No second block
+appears, and the full positive decoder image is exactly \(\{1\}\).
+
+This is not a small-factor artifact. For every \(B\ge3\), CRT, simple-root
+lifting, and Dirichlet's theorem give infinitely many prime values of \(c\)
+for which \(N\) has at least two distinct prime factors, every prime factor is
+larger than \(B\), and two prescribed factors have valuation one. Thus \(N\)
+is not a perfect power and its least prime factor can tend to infinity.
+
+### Quotient promotion changes the source
+
+The public seed quotient is
+
+\[
+g=c-1.
+\]
+
+It is not an endpoint block or a power of one. Promoting it to a state is an
+operation change, although it adds no hidden information. Put
+
+\[
+b=\frac{c+1}{3}.
+\]
+
+Its canonical inverse and relation value are
+
+\[
+w=\frac{c^2-1}{3}=gb,
+\qquad
+A_1=gw=g^2b
+=1+\frac{c-2}{3}N.
+\]
+
+The promoted state always passes the subgroup gate. Since
+
+\[
+1<g=c-1<c
+\]
+
+and the canonical representatives of \(H_0\) are \(1,c,c^2\), one has
+\(g\notin H_0\). Complete refinement preserves products for both \(c\) and
+\(g\), so the refined block-generated subgroup strictly contains \(H_0\).
+
+The square-class gate is independent. The old and new relation classes are
+
+\[
+[A_0]=[c],
+\qquad
+[A_1]=[b].
+\]
+
+Because \(c\) is prime and \(\gcd(c,b)=1\), the two nonzero classes cannot
+be equal. Hence
+
+\[
+\boxed{
+\text{the quotient-fed column closes immediately}
+\iff
+\frac{c+1}{3}\text{ is an integer square}.
+}
+\]
+
+Complete \(2\)-saturation adds no missed relation in the nonsquare branch. In
+the square branch it adds exactly the displayed root generator and no further
+\(2\)-division.
+
+If \(b=s^2\), then \(c=3s^2-1\), \(s\) is even, and the new relation has
+positive root
+
+\[
+R=s(c-1).
+\]
+
+With
+
+\[
+A=3s^2-3s+1,
+\qquad
+B=3s^2+3s+1,
+\]
+
+one has
+
+\[
+N=AB,
+\qquad
+R-1=(s-1)B,
+\qquad
+R+1=(s+1)A,
+\]
+
+and therefore
+
+\[
+\gcd(R-1,N)=B,
+\qquad
+\gcd(R+1,N)=A.
+\]
+
+The example \(c=11\) gives \(N=133=7\cdot19\) and \(R=20\).
+
+There is also an infinite robust operation-set separation without requiring
+prime \(c\). For even \(s\ge2\), put \(c=3s^2-1\). Then
+
+\[
+N=(3s^2-3s+1)(3s^2+3s+1).
+\]
+
+For every fixed \(B\ge13\), a CRT construction gives infinitely many such
+\(s\) for which every prime factor of both \(c\) and \(N\) exceeds \(B\), and
+one large prime has valuation one in \(c\). Thus \(c\) is a non-perfect-power
+composite gcd-free block that survives the bounded prepass. Endpoint-only
+feedback remains trapped, while promotion of \(c-1\) creates the exact square
+
+\[
+(c-1)\frac{c^2-1}{3}
+=\bigl(s(c-1)\bigr)^2
+\]
+
+and factors \(N\). All sign, difference, and discriminant screens can be
+forced to fail before this square.
+
+The result identifies a real algorithmic distinction:
+
+1. subgroup expansion;
+2. square-class closure;
+3. a non-global root.
+
+The quotient always gives the first event on the prime-block source. It gives
+the second and third only on the exact square branch. Thus manufacturing new
+relations or blocks is not enough; a general sampler must manufacture
+square-class cancellation and a useful root with an all-input
+inverse-polynomial law.
+
+The families are deliberately manufactured and recognizable from public
+squares. The algebraic factorization is explicit. No infinitude theorem for
+prime \(c=3s^2-1\), general quotient bias, all-input sampler, or unrestricted
+factoring algorithm follows.
+
+For the endpoint trap, the final candidate, hostile audit, proof-blind
+statement, and reconstruction hashes are
+
+3d769c9760f1b947d3023979cfef83d0d3a9d71ee9444eeef9169344910579a1,
+623fcaa760fb89a0d691ad98ed131fcba08a9b78ebf83cad161c27a51825869f,
+9422a610006d0804f7be6182cc944a93e0aef62e55f7bea1ab989eb301422ee9,
+and
+b8bd7e3fefcfd9448466d5b5a37eaa9e0b80e194c705bbb64383e9c98f09a0af.
+
+For the infinite quotient escape, the corresponding hashes are
+
+c6a02473aa6efd340bfec009d0fb9581cd164b4ce80d4b32b9969d00d53b6c10,
+173d217fa5bf20cabd1c5b9c086c880e42878b13aafdc1db3e4e0975c87157d7,
+ee9b0d5bb9c9d9c27acb89f7c7abedb797dbe519aa68feedeb8d3d955f7a99e1,
+and
+b4faf236890075b153ceb1773e8bf4b7a9bc2075f86c865bf23e4a800f2ba045.
+
+For the exact square-class gate, the corresponding hashes are
+
+480fa3fbe324dfcc9947ce32724904618e05933d05eb5282c9d4ce344bb8d1f5,
+45fb0bdf53c54b1f67ccc05aeaa5826529d61bd4797dafbb2ca36cde10b0f688,
+8a8f96f1b9ccd454ec02da906bcc7984affa32de7ca22ac2bd8d559b7060766a,
+and
+52c2cb450ab2692794c603fa97e4a748b2d74e23175f6bc9f1f03cfc69786466.
