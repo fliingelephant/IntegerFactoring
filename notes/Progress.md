@@ -1313,32 +1313,33 @@ promise decoder must then be extended to prime powers, repeated factors,
 even and multifactor inputs, recursion, and one uniform Las Vegas expected
 bit bound. P57 is a narrow method classification, not a factoring algorithm.
 
-### C55 — coherent Dickson-root relations reduce to one binary switch (candidate)
+### C55 — coherent Dickson-root relations reduce to one binary switch
 
-**Status:** corrected candidate only; not promoted. The first hostile audit
-confirmed the core one-component calculation but found real scope errors around
-degenerate roots, shifted-root coherence, and disconnected components. The
-candidate was corrected. A fresh audit was then interrupted for the requested
-shutdown, so no blind reconstruction has started.
+**Status:** verifier-backed and promoted as P58/X52. Two earlier mathematical
+versions failed hostile audit. The twice-corrected artifact passed a fresh
+whole-proof audit and a strict proof-blind reconstruction. No cross-family audit
+has run.
 
-**Candidate boundary.** For a distinct odd semiprime, first use linear gcd
-screens to remove known, repeated, or constant roots. On each proved connected
-component of the remaining orientation graph, all coherent root choices share
-one idempotent switch, with coordinate algebra
+**Verified boundary.** For a distinct odd semiprime, first use gcd screens and
+linear equations to remove known constant roots, then simplify all repeated and
+constant-position relations. On each proved connected component of the remaining
+orientation graph, all coherent root choices share one idempotent switch, with
+coordinate algebra
 
 \[
   (\mathbb Z/N\mathbb Z)[f]/(f^2-f).
 \]
 
-An explicit polynomial relation on that one component has only three relevant
+An explicit public polynomial relation on that one component has only three
+relevant
 outcomes: it accepts both public synchronized choices; one endpoint evaluation
 already exposes a factor; or it asks for a mixed choice whose production is the
 original factoring problem. The claim does not cover arbitrary couplings between
 independent components, auxiliary existential variables, metric order, random
 root samplers, derivatives, or lifts.
 
-**Exact resume point.** Re-audit
-`experiments/F49_coherent_dickson_root_kill/RESULT.md` at SHA-256
-`b29bc27bc16766c52bbd8d4e83e6e7c4f67e49f7c2f6f615beddc11f3bffccd1`.
-If and only if that audit passes, run a fresh context-free blind reconstruction.
-Only then consider promotion. Preserve the first audit as a failed audit record.
+**Algorithmic consequence.** This is not the next factoring algorithm. It proves
+that more equations inside the same component do not create more information.
+A retry must add a genuinely different operation: metric order, nonlocal or
+stochastic sampling, derivatives/lifts, or a joint decoder across structures not
+covered by the one-idempotent algebra.

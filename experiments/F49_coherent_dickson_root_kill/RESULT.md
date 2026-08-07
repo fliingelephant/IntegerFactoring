@@ -2,12 +2,13 @@
 
 ## Status and scope
 
-**Status:** corrected candidate kill-first classification. The first hostile audit
-passed the one-triangle algebra, endpoint theorem, and anchor probability, but
-required mathematical amendments to the treatment of degenerate/repeated vertices,
-shifted-root coherence, and disconnected components. Those amendments are included
-below; the failed audit remains preserved. This file is proof-only. It uses no
-computation, web search, or unproved distribution heuristic.
+**Status:** twice-corrected candidate kill-first classification. The first hostile
+audit required mathematical amendments to the treatment of degenerate/repeated
+vertices, shifted-root coherence, and disconnected components. A fresh whole-proof
+re-audit then found that the reduced equation was misstated when an eliminated
+constant is the product output. The exact constant-position split and corner proof
+are now included below; both failed audits remain preserved. This file is
+proof-only. It uses no computation, web search, or unproved distribution heuristic.
 
 **Family:** F28, following P57.
 
@@ -264,18 +265,36 @@ orientation edge exactly in the following proved cases:
    \(A_w-A_w^{-1}=A_u^2-A_u^{-2}\) is a unit. Thus the two
    orientations agree.
 3. After substituting one known constant \(s=\pm1\), two distinct remaining
-   nondegenerate variables satisfy \(X_w=sX_u\). Their unequal corners
-   violate this equation by \(A_u-A_u^{-1}\), up to a unit factor, so
-   their orientations agree.
+   nondegenerate variables occur in one of two positions:
+   - if an input is constant, the reduced equation is \(X_w=sX_u\);
+   - if the output is constant, the reduced equation is \(s=X_uX_v\),
+     equivalently \(X_v=sX_u^{-1}\).
+   In both cases the equation retains exactly the two equal-orientation corners,
+   so the two remaining orientations agree.
 4. A simplified relation containing at most one distinct nondegenerate
    variable supplies no orientation edge.
 
-The first case is Section 4. In the second and third cases, normalize both
-root pairs by their unit root differences. Direct evaluation at the four
-Boolean corners leaves the two equal corners and gives units at the unequal
-corners. The same product-ring argument therefore kills exactly the unequal
-components. Notice that two triangles sharing only a constant vertex need not
-connect their other orientations.
+The first case is Section 4. In the second case and the constant-input subcase
+of the third, normalize both root pairs by their unit root differences. Direct
+evaluation at the four Boolean corners leaves the two equal corners and gives
+units at the unequal corners.
+
+For the constant-output subcase, put \(A=A_u\) and
+\(\delta=A-A^{-1}\in R^\times\). Genuine public multiplicativity gives
+\(A_v=sA^{-1}\). Write
+
+\[
+  X_u=A^{-1}+f\delta,
+  \qquad
+  X_v=sA-hs\delta,
+  \qquad f^2=f,\quad h^2=h.
+\]
+
+The residual \(X_uX_v-s\) vanishes at \((f,h)=(0,0),(1,1)\). At
+\((1,0)\) it is \(sA\delta\), and at \((0,1)\) it is
+\(-sA^{-1}\delta\); both are units. Thus this equation also kills exactly
+the unequal components and imposes \(h=f\). Notice that two triangles sharing
+only a constant vertex need not connect their other orientations.
 
 On every connected component of this reduced orientation graph, the displayed
 edge equalities identify all orientation variables. The component coordinate
@@ -304,8 +323,8 @@ relations have been proved to identify all its \(f_i\) in the reduced
 orientation graph. Equivalently, the four sections induced by one
 trace-compatible homomorphism \(H\in\{E,E^{-1},G,G^{-1}\}\) are coherent:
 their normalized idempotents are respectively \(1,0\), and the two fixed
-nontrivial CRT idempotents, for every shift. On such an established common
-component,
+nontrivial CRT idempotents, for every retained screened shift. On such an
+established common component,
 
 \[
   Z_i=B_i+f(A_i-B_i),\qquad f^2=f.
@@ -354,9 +373,11 @@ If \(Q(1)\ne0\) in \(R\), its gcd with \(N\) is \(p\). If
 endpoints remain solutions. The case \(e=(0,1)\) swaps \(p,q\).
 \(\square\)
 
-The theorem applies equation by equation to every finite explicit polynomial
-system **after** all its relevant variables have been proved to lie in one
-common-\(f\) component. For a system \(Q_j(f)=0\), if a mixed idempotent
+Here an explicit relation means a public, factor-free arithmetic expression of
+polynomial size when the conclusion is used algorithmically. The theorem applies
+equation by equation to every finite explicit polynomial system **after** all its
+relevant variables have been proved to lie in one common-\(f\) component. For a
+system \(Q_j(f)=0\), if a mixed idempotent
 solves all equations and a synchronized endpoint fails the system, choose one
 equation that fails there and apply Theorem 6.1. Therefore, on one established
 component:
@@ -365,8 +386,8 @@ component:
   identically true on the whole idempotent algebra;
 - if the system retains a mixed point but removes a public endpoint, an
   endpoint evaluation factors before any root solver is called;
-- if a solver returns a mixed point, comparison with any unit-difference
-  anchor factors immediately;
+- if a solver returns a mixed point, comparison on any returned screened
+  coordinate in that same mixed section factors immediately;
 - a solver may always return one of the two public endpoints, so mere
   solvability gives no factor.
 

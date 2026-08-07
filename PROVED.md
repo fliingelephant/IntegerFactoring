@@ -6742,3 +6742,139 @@ respectively,
 `801f86d6acb3c5278ba5f5e1d0ba4db6349b4e9be3878727d29602991c5d6d61`,
 `86d840259d1ae0f035f95d4d1785d2c68c6f0a30bcce556f5133aab6bb2ebbef`,
 and `278ab46afc83ee25af883f8ef82016084d9b2cdf7f55f0e9d78ac5121ea5dc9a`.
+
+## P58 — a screened coherent Dickson-root component has one idempotent switch
+
+**Status:** promoted narrow promise theorem and method classification.
+
+**Verification record:** two hostile audits found real errors in earlier
+versions: raw double-root nilpotents and overbroad component scope in the first,
+then a false reduced equation when an eliminated constant was the product output
+in the second. Both failed audits are preserved. The twice-corrected artifact
+passed a fresh whole-proof hostile audit and a strict proof-blind reconstruction.
+No cross-family or human audit has run.
+
+Let
+
+\[
+N=pq,\qquad 3\le p<q
+\]
+
+for distinct odd primes, put \(R=\mathbb Z/N\mathbb Z\), and define
+
+\[
+E(z)=z^{N-1},\qquad G(z)=z^{q-p},\qquad T(z)=z+z^{-1}.
+\]
+
+Every group homomorphism \(H:R^\times\to R^\times\) satisfying
+
+\[
+T(H(a))=T(E(a))\qquad(a\in R^\times)
+\]
+
+is one of
+
+\[
+\boxed{E,E^{-1},G,G^{-1},}
+\]
+
+with coincidences allowed. CRT first shows that each output coordinate ignores
+the opposite input coordinate. Over one field,
+\(x+x^{-1}=y+y^{-1}\) forces the two multiplicative characters to agree or
+be inverse globally. The two local signs give exactly the four displayed maps.
+
+There is a factor-free constant-expected-trial screen for a nondegenerate public
+root pair. For a uniform raw residue, first screen its gcd, then compute
+\(Y=E(a)\) and screen \(Y-Y^{-1}\), followed in the full-gcd case by
+\(Y-1\) and \(Y+1\). Put
+
+\[
+d=\gcd(p-1,q-1),\qquad h_p=(p-1)/d,\qquad h_q=(q-1)/d.
+\]
+
+Conditional on a unit input, the exact no-factor/no-anchor probability is
+
+\[
+\frac{1+\mathbf1_{2\mid h_p,\,2\mid h_q}}{h_ph_q}\le\frac12.
+\]
+
+The raw unit probability is at least \(8/15\), so one raw trial returns a
+factor or a pair \(A,A^{-1}\) with unit difference with probability at least
+\(4/15\). Every trial has polynomial bit and fair-random-bit cost.
+
+Now take finitely many public inverse-root variables
+
+\[
+(X_v-A_v)(X_v-A_v^{-1})=0
+\]
+
+and genuine public multiplicative relations \(X_w=X_uX_v\). Gcd-screen every
+root difference. A proper gcd is success. If the gcd is full, screen the two
+signs, add the proved linear equation \(X_v=s\), \(s\in\{1,-1\}\), and
+eliminate the variable. This linear reduction is necessary: the raw quotient
+by \((X_v-s)^2\) has a nilpotent.
+
+For every retained variable write
+
+\[
+X_v=A_v^{-1}+f_v(A_v-A_v^{-1}),\qquad f_v^2=f_v.
+\]
+
+A nondegenerate triangle kills exactly the unequal Boolean corners and
+identifies its orientations. Repeated inputs, repeated outputs, and constants
+must be simplified first. In particular, a constant input gives
+\(X_w=sX_u\), while a constant product gives
+
+\[
+s=X_uX_v,\qquad X_v=sX_u^{-1}.
+\]
+
+In the latter case, with \(A=A_u\) and
+\(\delta=A-A^{-1}\in R^\times\), write
+
+\[
+X_u=A^{-1}+f\delta,\qquad X_v=sA-hs\delta.
+\]
+
+The residual \(X_uX_v-s\) is zero at \((f,h)=(0,0),(1,1)\) and is the
+unit \(sA\delta\) or \(-sA^{-1}\delta\) at the unequal corners. Thus it
+also imposes \(h=f\).
+
+Consequently every connected component of the screened, linearly reduced,
+proved orientation graph has exact coordinate algebra
+
+\[
+\boxed{R[f]/(f^2-f).}
+\]
+
+Different components retain independent idempotents. Shifted quadratics are
+covered only after their retained screened variables have been explicitly
+proved to lie in one such component; the quadratics alone do not prove
+coherence.
+
+Every element of this component algebra has the unique endpoint form
+
+\[
+Q(f)=Q(0)(1-f)+Q(1)f.
+\]
+
+Hence a public, factor-free, polynomial-size polynomial relation that accepts
+both synchronized endpoints is tautological on the component. If a nontrivial
+CRT idempotent satisfies it while an endpoint fails, one of
+\(\gcd(Q(0),N)\) and \(\gcd(Q(1),N)\) is a proper factor. If a solver
+returns a mixed screened coordinate \(X\), then comparison with its two public
+roots gives \(p\) and \(q\); conversely, known factors construct every mixed
+coordinate by CRT. Producing that mixed coordinate is therefore
+deterministic-polynomial-time equivalent to factoring on this promise.
+
+P58 is an obstruction, not a sampler or factoring algorithm. It does not cover
+independent-component couplings, auxiliary existential variables, ordered or
+metric rules, inequalities, optimization, stochastic or positive-combinatorial
+samplers, derivatives, lifts modulo \(N^2\), lucky distributions, prime powers,
+even or multifactor inputs, recursion, or an all-input Las Vegas bound.
+
+The corrected candidate, clean audit, and proof-blind reconstruction have
+SHA-256 hashes
+`b34c2965b4be06ca59c9c27ba54814a76c1cac286bcfb13beee65917f9093aba`,
+`7a916baae18362ba03e92e59b9f06a20c220064ba5f0e094464aa556827aed8b`,
+and `0deccee4937143f443455a3564a4b61812f1cfe8a815bb54c42915506daeeeae`.

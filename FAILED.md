@@ -2205,3 +2205,58 @@ complete extension to prime powers, repeated factors, evens, multifactor
 inputs, recursion, and uniform Las Vegas expected bit complexity. Another
 collection of trace identities or opaque generic relations is covered by
 P57.
+
+## X52 — one-component polynomial root coherence cannot select a mixed section invisibly
+
+**Status:** promoted as P58 after two preserved failed audits, a clean hostile
+re-audit of the twice-corrected proof, and a fresh proof-blind reconstruction.
+
+**Family:** F28.
+
+**Classification:** method failure for adding finite explicit polynomial
+relations inside one screened, linearly reduced, already proved coherent root
+component. It is not a failure of metric rules, stochastic sampling, derivatives,
+lifts, multicomponent or auxiliary-variable systems, or general factoring.
+
+**What was tried.** Start from the two public roots \(A_v,A_v^{-1}\) of many
+Dickson-trace quadratics. Use genuine multiplicative relations between bases and
+extra polynomial equations to force the coherent CRT-mixed root rather than the
+two public synchronized roots.
+
+**Exact obstruction.** After gcd screening and linear elimination of every
+proved global constant \(\pm1\), each connected orientation component has one
+idempotent \(f\) and coordinate algebra
+
+\[
+(\mathbb Z/N\mathbb Z)[f]/(f^2-f).
+\]
+
+Every explicit endpoint polynomial is determined by its two public endpoint
+values. If both vanish, the equation is tautological. If a mixed idempotent
+satisfies the equation but a public endpoint fails, that endpoint value already
+has a proper gcd with \(N\). Otherwise the equation still asks for the
+nontrivial idempotent, which is factoring itself. More equations in the same
+component repeat this one switch; they do not create independent chances.
+
+The proof requires exact handling of degenerate and repeated variables. A raw
+double root has a nilpotent and must be linearly eliminated. A constant product
+is \(s=X_uX_v\), not \(X_v=sX_u\); the corrected four-corner calculation
+still identifies the orientations. Different connected components keep separate
+switches, and shifted quadratics are not coherent until relations prove it.
+
+**Evidence.** The corrected candidate, clean audit, and proof-blind
+reconstruction have hashes
+`b34c2965b4be06ca59c9c27ba54814a76c1cac286bcfb13beee65917f9093aba`,
+`7a916baae18362ba03e92e59b9f06a20c220064ba5f0e094464aa556827aed8b`,
+and `0deccee4937143f443455a3564a4b61812f1cfe8a815bb54c42915506daeeeae`.
+The two earlier failed audits remain at
+`experiments/F49_coherent_dickson_root_audit` and
+`experiments/F49_coherent_dickson_root_reaudit`. No computation or
+cross-family audit was used.
+
+**What would make a retry materially new.** Add an operation that changes the
+algorithm: an ordered or metric selector, a stochastic/nonlocal sampler with a
+proved mixed-root law, a derivative or controlled lift, a genuinely coupled
+multicomponent or auxiliary-witness decoder, or a proved lucky distribution.
+Another one-component polynomial identity followed by endpoint gcds is covered
+by P58.
