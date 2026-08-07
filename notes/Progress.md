@@ -1663,3 +1663,49 @@ is a multiplicity boundary, not a support or full-screen lower bound.
 but does not supply its classical recovery. The live route must be narrower:
 use the integer block presentation to find a legal direct CRT separator without
 recovering the full hidden lattice. P71 supplies no such all-input selector.
+
+### C69 — fixed orientations do not create factor bias
+
+**Status:** verifier-backed and promoted as P72 after a failed first hostile
+audit, a corrected fresh re-audit, and a proof-blind reconstruction. No
+computation, cross-family audit, or human audit ran.
+
+**Verified boundary.** Any fixed nonzero signed product of independent uniform
+units is exactly uniform. On a balanced semiprime, a polynomial fixed menu has
+only an exponentially small direct-screen probability. The same conclusion
+holds adaptively when every trial retains a unit pivot that is uniform
+conditional on the complete past and chosen before it is observed.
+
+The first audit corrected an important overclaim. Reusing units across fixed
+menu entries remains covered, but a rule chosen after observing a residue can
+destroy uniformity without using integer presentation data. Correlated and
+nonuniform states are also outside the theorem.
+
+**Algorithmic consequence.** Cross-relation multiplication alone does not
+manufacture a sampler. A useful selector must exploit a real operation change:
+observed integer blocks or magnitudes, correlated/nonuniform states, or
+adaptive refinement without a fresh-uniform mask. P72 does not show that any
+such escape succeeds.
+
+### C70 — feedback dependencies require square-class closure
+
+**Status:** promoted as P73 after a failed first proof-blind reconstruction,
+a corrected fresh hostile re-audit, and a corrected proof-blind
+reconstruction. No computation, cross-family audit, or human audit ran.
+
+**Verified boundary.** Complete gcd-free refinement gives the exact square
+relation space. After one indexed feedback value is appended, nullity grows
+exactly when its refined parity column is already in the old column span. A
+private new-only nonsquare block prevents immediate closure. Over many rounds,
+each new square class raises rank, while each closure raises nullity.
+
+A canonical self-inverse state is the strongest immediate closure: it adds a
+zero column. For odd $N$, it reveals factors exactly when it is a non-global
+square root of one. Equal values count as separate dependencies only when they
+remain separate indexed columns.
+
+**Algorithmic consequence.** A new quotient or block is not enough. A useful
+feedback sampler must first create closure and must then make the decoded root
+non-global. P73 proves the first event's exact accounting, but supplies neither
+its frequency nor the second event. It therefore sharpens the selector target
+without giving a factoring algorithm.

@@ -8183,3 +8183,173 @@ proof-blind statement, and proof-blind reconstruction have SHA-256 hashes
 and `6bbc0fce0620c983d86b970223dad56cb6cb2ab1af1fcccfafb0d72c821b3855`.
 No computation, cross-family audit, human audit, or publication-level
 literature review supports this theorem.
+
+## P72 — fixed cross-relation orientations and fresh pivots remain diffuse
+
+**Status:** promoted probability boundary after the first hostile audit found
+an overbroad scope claim, the corrected theorem passed a fresh hostile
+re-audit, and a proof-blind reconstruction succeeded. This is not a selector
+or a factoring algorithm.
+
+Let $X_1,\ldots,X_m$ be independent uniform units modulo $N$, and fix a
+nonzero signed exponent vector
+$\epsilon\in\{-1,0,1\}^m$. Then
+
+\[
+Z=\prod_iX_i^{\epsilon_i}\pmod N
+\]
+
+is exactly uniform in $(\mathbb Z/N\mathbb Z)^\times$. Conditioning on all
+but one nonzero coordinate leaves a bijective identity-or-inversion map of
+the remaining uniform unit.
+
+For $N=pq$ with distinct odd primes, a nontrivial proper direct screen means
+$1<\gcd(Z-1,N)<N$ or $1<\gcd(Z+1,N)<N$. Its exact probability is
+
+\[
+\boxed{\frac{2p+2q-10}{(p-1)(q-1)}}.
+\]
+
+The probability that $Z$ is a useful non-global square root of one is
+
+\[
+\boxed{\frac{2}{(p-1)(q-1)}}.
+\]
+
+The direct event is strictly broader: only one hidden component needs to
+equal one selected sign.
+
+For any fixed menu of $T$ signed patterns, entries can share inputs, coincide,
+or be inverses. Joint independence is unnecessary. Marginal uniformity and a
+union bound give
+
+\[
+\Pr(\text{some direct screen succeeds})
+\le T\frac{2p+2q-10}{(p-1)(q-1)},
+\]
+
+and
+
+\[
+\Pr(\text{some useful involution appears})
+\le\frac{2T}{(p-1)(q-1)}.
+\]
+
+These are upper bounds, not asymptotic equalities. On balanced semiprimes,
+every polynomial-size menu has exponentially small success in the input bit
+length.
+
+The adaptive extension has an exact filtration condition. Before trial $t$,
+let the full history determine a unit multiplier $C_t$ and a sign
+$s_t\in\{+1,-1\}$. If $U_t$ is uniform conditional on that full history and
+is not observed before the choice, then
+
+\[
+Z_t=C_tU_t^{s_t}
+\]
+
+is uniform conditional on every realized history. Prior failures do not
+change the bound. A pivot that is only marginally uniform or physically
+unseen is insufficient when it is correlated with the past.
+
+The scope boundary is essential. A fixed menu can reuse base units, but a rule
+that observes a unit before choosing its exponent can destroy uniformity even
+without inspecting an integer factorization or endpoint presentation.
+Correlated or nonuniform states are also outside the theorem. In particular,
+P72 does not prove that integer block data is the only escape. P70's gcd-free
+block, magnitude, multiplicity, and feedback operations are outside the model
+and remain legitimate targets. The theorem only rules out the idea that
+ordinary fixed multiplication of independent uniform relations creates factor
+correlation by itself.
+
+The corrected candidate, failed first audit, passing fresh re-audit,
+proof-blind statement, and proof-blind reconstruction have SHA-256 hashes
+`b7a56e611d4f679237a9923204daa188b820f01bf869712a6636d91cc9065bc2`,
+`64fdc4370f5dbc2763ecbeeb1a74afa64e20ebbaa54aa6e5e62fc871b97b2b25`,
+`f9c89f3f12aa597dd492a6e96b992647feeeb53dc839ff3b88246c2a08bcdeb4`,
+`0ed9962e67d4ee5f1980b1d034b674b13c3a954edb62288d7f34795fd6e4fd4a`,
+and `e76e918c555587381d81bc1618104bda7e445ddd56c8c0981d9cd69d68405240`.
+No computation, cross-family audit, human audit, or publication-level
+literature review supports this theorem.
+
+## P73 — feedback creates a new dependency exactly at square-class closure
+
+**Status:** promoted exact accounting theorem after a first proof-blind
+reconstruction found two scope errors, the corrected result passed a fresh
+hostile re-audit, and a corrected proof-blind reconstruction succeeded. This
+is not a selector, a root-usefulness theorem, or a factoring algorithm.
+
+Assume that $N$ is odd, or remove the factor $2$ first. Let indexed positive
+relation values $B_1,\ldots,B_m$, all coprime to $N$, be represented after
+complete gcd-free refinement by the parity matrix
+
+\[
+M\in\mathbb F_2^{r\times m}
+\]
+
+on pairwise-coprime nonsquare blocks. These block square classes are
+independent even when the blocks are composite or prime powers. Hence
+$\ker M$ is exactly the indexed rational-square relation space. Perfect-square
+blocks can be omitted from the parity rows, but their exact exponent data must
+remain available for root construction.
+
+Append one indexed feedback value $B_{m+1}=gw$, jointly refine all old and new
+values, and let $b$ be the new parity column in the refined coordinates.
+Refinement can split old blocks, but it preserves the old column kernel. The
+new nullity increases by one exactly when
+
+\[
+b\in\operatorname{colspan}_{\mathbb F_2}(M).
+\]
+
+Otherwise rank and column count both increase, so nullity is unchanged. In
+particular, if any refined nonsquare row is zero on all old columns and one on
+$b$, then $b$ cannot close in the old span. Arithmetically, a fully refined
+block with odd **total** multiplicity in $gw$ and zero old parity row is such a
+witness. Its occurrence in $w$ alone is insufficient because an odd
+occurrence in $g$ can cancel it modulo squares.
+
+For a feedback sequence, write
+
+\[
+d_t=(\text{number of indexed columns})-(\text{square-class rank}).
+\]
+
+Exact refinement preserves $d_t$. Every appended class either raises rank and
+leaves $d_t$ fixed, or closes in the current span and raises $d_t$ by one. If
+each appended column has a new-only nonsquare row at its insertion time, then
+$d_t=d_0$ for every finite prefix. This preserves the initial nullity; it
+implies absolute independence only when $d_0=0$. A block that is new-only now
+can recur later and participate in a closure.
+
+The strongest immediate closure is a canonical self-inverse state. If $w$ is
+the canonical inverse endpoint of $g$ and $g^{-1}\equiv g\pmod N$, then $w=g$
+as integers. Appending $g^2$ gives a zero parity column and one singleton
+dependency. For odd $N$, both direct screens $\gcd(g-1,N)$ and
+$\gcd(g+1,N)$ are proper exactly when $g$ is a non-global square root of one.
+
+This theorem separates two jobs that must not be merged. Square-class closure
+creates a dependency; P66's complete decoder computes its modular root. The
+root can still be global, so closure alone does not reveal a factor. P73 gives
+no closure frequency, no factor-correlated root law, and no polynomial-time
+selector. It only proves the exact event that a feedback sampler must cause
+before a *new* decoder dependency can exist.
+
+At $N=21$, the feedback value $190=10\cdot19$ adds a private $19$ row, so the
+three relation columns remain independent even though the direct screen of
+$10-1$ already factors $N$. At $N=55$, the self-inverse state $21$ gives
+$21^2=441$, a zero column, and direct factors $5$ and $11$. These witnesses
+show that a new quotient and a new dependency are different events.
+
+The corrected candidate, original hostile audit, failed first proof-blind
+statement and reconstruction, passing fresh hostile re-audit, corrected
+proof-blind statement, and corrected reconstruction have SHA-256 hashes
+`210198cdbc8d15a67fe84577d80a41e8d501f6df23f80ed612989ebf322405ea`,
+`9c0c7fd436d6b92baf52df5e21a70d1b78f01a4699effadcf199e556c773e557`,
+`71ba7a01069657c4f66b1b88be4f22cecb5d928ec208cc8422486190f71cb9f6`,
+`b69f425918a278d3311e3f9ffbc92d0a263837f2fd098e4f233bba171b4b2675`,
+`4ff069a12fa753e3228a9928ecbef8944319644d77ea1928dfeb1006d0e0bc48`,
+`86c041ea3d56fe2af0ef7682b4ed6b8d5c91c4c93979ca598da18c96e4f45395`,
+and `1a0d7f05721045fa0a8fb5295f674efb75f51aae47bd1ec2f63e0b6a2b4ba7f0`.
+No computation, cross-family audit, human audit, or publication-level
+literature review supports this theorem.
