@@ -2529,3 +2529,49 @@ their differences, smooth or partial relations, a lattice or
 continued-fraction decoder, or a hidden-period/stabilizer operation with a
 stated extra signal. Another parity kernel on repeated public endpoint names is
 covered by P64/X58.
+
+## X59 — independent completion-biased quotients do not make short clusters
+
+**Status:** promoted as the exact independent-localization obstruction inside
+P65. F26 and the completion-biased sampler remain open.
+
+**Family:** F26.
+
+**Classification:** method failure for exact collisions and polynomial-width
+clustering of independent first-step quotient samples. It is not a failure of
+dependent descent tails, unclustered joint decoding, or the sampler itself.
+
+**What was tried.** Draw polynomially many uniform units, apply the canonical
+inverse quotient, and hope that its nonuniform completion weights concentrate
+several outputs in one short public interval. A clustered arithmetic decoder
+could then recover every exact square relation in that interval.
+
+**Exact obstruction.** If
+
+\[
+\Delta_N=\max_{1\le m<N^2}\tau(m),
+\]
+
+then every output atom has mass at most
+$\Delta_N/\varphi(N)$. For $T$ independent outputs and interval width $H$,
+
+\[
+\Pr\bigl(\exists i<j:\ |K_i-K_j|\le H\bigr)
+\le
+\binom T2\frac{(2H+1)\Delta_N}{\varphi(N)}.
+\]
+
+On balanced distinct semiprimes, polynomial $T$ and $H$ make this negligible.
+The source is biased, but independent sampling does not localize that bias by
+short collisions.
+
+**Evidence.** This is an unbounded theorem inside P65. Its corrected candidate
+passed a fresh hostile re-audit and a strict proof-blind reconstruction after a
+failed first audit caught an unrelated duplicate rule and scope error. No
+cross-family audit has run.
+
+**What would make a retry materially new.** Use a dependent trajectory tail, a
+deliberately correlated start rule, or a decoder that acts on a dispersed
+batch. A statistic other than exact output distance must state its own
+factor-correlation and inverse-polynomial success law. More independent draws
+with the same polynomial width are covered by P65/X59.

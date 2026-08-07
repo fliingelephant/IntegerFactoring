@@ -7464,3 +7464,124 @@ SHA-256 hashes
 and `19199147c5c20b7d037ca77d90132df4dbbe90d874f8a395f0e81bd798971154`.
 The preserved failed first audit has SHA-256
 `958db4092d9bd9177df0ed7748be0f6f2b9aa0887bcb0d17f3d58d8f94223666`.
+
+## P65 — inverse quotients give an exact completion-biased source and a clustered arithmetic decoder
+
+**Status:** promoted narrow source theorem, independent-clustering obstruction,
+and conditional batch decoder.
+
+**Verification record:** the first hostile audit accepted the main theorem but
+found a false duplicate-index reduction and an overstrong equivalence claim.
+The corrected theorem passed a fresh whole-artifact re-audit. A strict
+proof-blind reconstruction then recovered every substantive clause, including
+duplicates, singleton relations, repeated prime powers, even inputs, and bit
+complexity. No cross-family or human audit has run.
+
+For a unit $u\in\{1,\ldots,N-1\}$, let $v$ be its least positive inverse
+modulo $N$, and put
+
+\[
+D_N(u)=\frac{uv-1}{N}.
+\]
+
+For $1\le k<N$, define
+
+\[
+f_N(k)=\#\{u:k<u<N,\ u\mid Nk+1\},
+\qquad f_N(0)=1.
+\]
+
+If $U$ is uniform over the units modulo $N$, then the exact output law is
+
+\[
+\boxed{
+\Pr(D_N(U)=k)=\frac{f_N(k)}{\varphi(N)}.
+}
+\]
+
+Thus modular inversion, canonical representatives, and one exact integer
+division sample an implicit distribution weighted by the number of admissible
+factor-pair completions of $Nk+1$. The weights do not have to be evaluated.
+This is a real source bias manufactured from bare $N$. It is not yet a proved
+bias toward a factor.
+
+Let
+
+\[
+\Delta_N=\max_{1\le m<N^2}\tau(m).
+\]
+
+Every set of $h$ output indices has mass at most
+
+\[
+\frac{h\Delta_N}{\varphi(N)}.
+\]
+
+For $T$ independent outputs $K_1,\ldots,K_T$ and any integer $H\ge0$,
+
+\[
+\Pr\bigl(\exists i<j:\ |K_i-K_j|\le H\bigr)
+\le
+\binom T2\frac{(2H+1)\Delta_N}{\varphi(N)}.
+\]
+
+On balanced distinct semiprimes, polynomially many independent samples have
+negligible probability of an exact collision or a cluster of polynomial
+numerical width. This conclusion does not apply to dependent descent tails or
+other statistics of an unclustered batch.
+
+There is also an exact arithmetic confinement law. For distinct indices, put
+
+\[
+A_i=Nk_i+1.
+\]
+
+Then
+
+\[
+\boxed{
+\gcd(A_i,A_j)=\gcd(A_i,|k_i-k_j|).
+}
+\]
+
+If a nonempty selected product of the $A_i$ is an integer square, then for
+every selected $i$,
+
+\[
+\operatorname{sf}(A_i)
+\mid
+\prod_{\substack{j\ne i\\j\text{ selected}}}|k_i-k_j|.
+\]
+
+Hence a square relation whose indices have diameter at most $H$ can use only
+squarefree kernels supported on primes at most $H$. Trial division by those
+primes, exact square tests on the residual cofactors, and binary linear algebra
+therefore give a deterministic decoder polynomial in $m+H+\log N$. It
+represents every exact square subset in the batch. The map from its parity
+kernel to the resulting roots of $1\bmod N$ is a homomorphism, so testing a
+kernel basis detects a non-global root whenever any dependency has one.
+
+Repeated equal indices are replaced by one representative per nonempty class.
+For a selected subset, removing copies in pairs changes its positive root by
+a factor $A_i\equiv1\pmod N$. This preserves every modular-root image.
+Reducing the available class size modulo two would be false.
+
+Fix $n=\lceil\log_2(N+1)\rceil$, a constant $C\ge1$, and
+$H(n)=n^C$. Enumerating the factor-free states
+$2\le u\le\min(H(n),N-1)$, computing their quotient indices, deduplicating,
+and applying the decoder is one uniform deterministic polynomial-time
+conditional algorithm. The same decoder applies to a trajectory interval of
+polynomial numerical width. Neither construction proves that a useful
+dependency exists, that such an interval is reached in polynomial time, or
+that the completion bias correlates with a hidden factor. P65 is not a
+factoring algorithm.
+
+The final candidate, failed first audit, passing re-audit, and proof-blind
+reconstruction have SHA-256 hashes
+`4771cb22933a56e3811185be4f7a5becac5fd6e52c015770f49ef4a9be2e2984`,
+`ef1ed485edf880c750b9285bc14cbdaf22eeefa33dfc1cc23590444e38b41a80`,
+`0b9b4d5a4327122503d560d5906972bc17c89f04a47805165824036f75f6d6fb`,
+and `47724940db357442e06c30c1fdd50727ceab5b7ce1f5ac303dbb2784577f7d1c`.
+The passing re-audit pinned mathematical-content hash
+`5fc697fe596b37b973813004a2463f5a234dc56c6be5f44a88d094a4a1b124d5`;
+the later candidate changes were status and scope-label edits only.

@@ -1485,3 +1485,28 @@ must record arithmetic prime-valuation parity or another real relation. A graph
 whose vertices are only exact endpoint names discards that information. The
 next candidate uses the public quotient indices $k$ and the fact that common
 factors of $Nk_i+1,Nk_j+1$ divide $k_i-k_j$.
+
+### C62 — bare $N$ makes completion bias, but factor correlation is unproved
+
+**Status:** verifier-backed and promoted as P65/X59. The first hostile audit
+found a real duplicate-handling bug and an overstrong equivalence claim. The
+corrected theorem passed a fresh whole-artifact re-audit and strict proof-blind
+reconstruction. No cross-family audit has run.
+
+**Verified boundary.** A uniform unit $U$ does not give a uniform quotient.
+The output $k=D_N(U)$ has probability proportional to the number of divisor
+completions of $Nk+1$ that fit inside the canonical range. This is an exact
+implicit sampler. It uses only bare $N$ and does not evaluate those weights.
+
+The bias is diffuse. Polynomially many independent outputs almost never
+collide or enter one polynomial-width interval on balanced semiprimes. Inside
+any interval that is available, common prime factors of two relation values are
+confined to the public index differences. This gives a complete arithmetic
+square-relation decoder for that interval.
+
+**Algorithmic consequence.** The route now has three different operations:
+canonical metric sampling, ordered descent, and batch parity decoding. It is no
+longer only one scalar identity followed by one gcd. The missing theorem is
+source-side: prove that some polynomial-time source from bare $N$ creates a
+squareclass dependency whose root is non-global often enough. Completion bias
+alone is not yet factor bias, and P65 is not a factoring algorithm.
