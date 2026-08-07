@@ -2443,3 +2443,47 @@ potential bound, prove an inverse-polynomial factor-hit law, or use many public
 relations (u_i v_i=N u_{i+1}+1) through a genuinely joint decoder. Retrying
 the false two-step inequality or citing the small-input hit rates is covered by
 P62/X56.
+
+## X57 — affine randomization does not enlarge the root basin of \(x(x-1)\)
+
+**Status:** promoted as P63 after a clean hostile audit and strict proof-blind
+reconstruction.
+
+**Family:** F29.
+
+**Classification:** method failure for the fixed map (x(x-1)), its unit
+scalings and affine conjugates, uniform uncorrelated starts, and gcd tickets at
+the two relabeled roots. It is not a failure of general polynomial dynamics.
+
+**What was tried.** Iterate a cheap noninvertible quadratic. Its (t)-fold
+composition has degree (2^t), so one might expect a rapidly growing inverse
+tree feeding the two public roots. Random unit scaling was intended to prevent
+an adversarial fixed alignment.
+
+**Exact obstruction.** If (5) is a quadratic nonresidue modulo a hidden
+prime (r), the equation (x(x-1)=1) has no solution. Therefore
+
+\[
+H^{-1}(\{0,1\})=\{0,1\},
+\]
+
+and iteration never adds a point to the useful basin. Unit scaling and affine
+relabeling are exact conjugacies, so they cannot change that basin. On the
+infinite balanced family (p,q\equiv2\pmod5), the full two-root success
+probability is exactly ((2p+2q-6)/(pq)=\Theta(N^{-1/2})) for raw starts and
+((p+q-4)/((p-1)(q-1))=\Theta(N^{-1/2})) for unit starts.
+
+**Evidence.** The candidate, hostile audit, proof-blind reconstruction, and
+manifest have hashes
+`a0ca496ec0aba9cf0ad9c52683aefc0e05507558d3d0120eb6a50454dd96db19`,
+`7cf5802d24c804a561641cb7164403a9a1291aac7c9ed16e1c72266b53cdbc8b`,
+`e19d8b1c57daab4eb65a2dd5b02ab891a6234a24df8a6345ef738478c848d86c`,
+and `bee0d78de357e606232f7166ec4e880811b394630f03efe18c18d0fff161f6dc`.
+The finite cross-check had no failed run and supports no unbounded claim.
+
+**What would make a retry materially new.** Use an unrelated or
+(N)-dependent map and prove inverse-polynomial average backward-basin density
+for every hidden-prime pair; add extra state, a valuation lift, a correlated
+factor-free start, or a full-orbit decoder that uses periods or collisions
+without waiting for a target hit. Another affine relabeling of this map is
+covered by P63/X57.

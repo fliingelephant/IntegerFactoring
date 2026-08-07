@@ -7271,3 +7271,110 @@ and `c36ee5112f7bb335ab39a938e4774c2bbe57733d85ea8ede68b0424796e2fcb9`.
 The two preserved failed audits have SHA-256 hashes
 `73fcda541a72c074af717e16a12bc73a07980bd735d5a3df4fba7f82d808e6aa`
 and `1c321a097632d847b77fccdbe8274a24de1613a436a49ec69c6072d23aacd9a9`.
+
+## P63 — branching degree does not force a polynomial root basin to grow
+
+**Status:** promoted narrow polynomial-dynamics obstruction and general
+necessary basin condition.
+
+**Verification record:** the candidate passed a fresh hostile whole-artifact
+audit as written. A strict proof-blind reconstruction then recovered the
+theorem, both exact probabilities, affine-conjugacy boundary, infinite balanced
+family, general basin bound, and edge cases. No cross-family or human audit has
+run.
+
+Let
+
+\[
+H(x)=x(x-1).
+\]
+
+For an odd prime (r\ne5) with Legendre symbol
+
+\[
+\left(\frac5r\right)=-1,
+\]
+
+the target set (A=\{0,1\}) has the exact inverse image
+
+\[
+\boxed{H^{-1}(A)=A}.
+\]
+
+The equation (H(x)=0) gives (0,1), while (H(x)=1) has discriminant
+(5) and no root. Hence an orbit reaches (A) at any time if and only if it
+starts in (A). The formal degree of (H^{\circ t}) is (2^t), but its
+useful backward basin still has only two points.
+
+Let (N=pq), where (p\ne q) are odd primes satisfying the same nonresidue
+condition. From a uniform residue start, screen both public roots at every
+iterate:
+
+\[
+\gcd(x_i,N),
+\qquad
+\gcd(x_i-1,N).
+\]
+
+For any number of iterations, the exact one-restart success probability is
+
+\[
+\boxed{\frac{2p+2q-6}{pq}}.
+\]
+
+For a uniform unit start it is
+
+\[
+\boxed{\frac{p+q-4}{(p-1)(q-1)}}.
+\]
+
+For every unit (c), the map
+
+\[
+H_c(x)=\frac{x(x-c)}c
+\]
+
+is conjugate to (H) by (x=cy). Its targets (0,c) have the same basin
+and exact probabilities. General affine conjugacy preserves the basin and a
+uniform raw-residue start; translation does not automatically preserve a raw
+unit start. A nonunit parameter, mixed target, mixed root, or mixed public
+difference is screened first and already factors on its proper-gcd branch.
+
+Every prime (r\equiv2\pmod5) has ((5/r)=-1). The prime number theorem in
+arithmetic progressions supplies infinitely many balanced pairs of distinct
+such primes. On that family, both displayed probabilities are
+(\Theta(N^{-1/2})). Polynomially many restarts therefore have negligible
+success, and repeat-until-success needs (\Omega(\sqrt N)) expected restarts.
+
+There is also a general necessary condition. For a public CRT-compatible map
+(F_N), local target set (A_r), and time cap (t), put
+
+\[
+B_{r,t}=\{u\in\mathbb F_r:F_{N,r}^{\,i}(u)\in A_r
+\text{ for some }0\le i\le t\}.
+\]
+
+From a uniform CRT start, every target-ticket factor event satisfies
+
+\[
+\Pr(\text{factor by time }t)
+\le\frac{|B_{p,t}|}{p}+\frac{|B_{q,t}|}{q}.
+\]
+
+The same inequality can be averaged over independent public map randomness on
+the factor-free construction branch. It is necessary, not sufficient: the two
+local hit signatures can still synchronize.
+
+P63 does not cover unrelated or (N)-dependent maps, extra state, correlated
+or nonuniform starts, valuation lifts, arbitrary nonroot targets, or full-orbit
+decoders using periods and collisions. It is not a factoring algorithm. It
+proves that noninvertibility and exponentially growing formal degree are not
+enough; a useful dynamic sampler must prove actual inverse-polynomial basin
+mass over every hidden-prime family.
+
+The candidate, hostile audit, proof-blind reconstruction, and computation
+manifest have SHA-256 hashes
+`a0ca496ec0aba9cf0ad9c52683aefc0e05507558d3d0120eb6a50454dd96db19`,
+`7cf5802d24c804a561641cb7164403a9a1291aac7c9ed16e1c72266b53cdbc8b`,
+`e19d8b1c57daab4eb65a2dd5b02ab891a6234a24df8a6345ef738478c848d86c`,
+and `bee0d78de357e606232f7166ec4e880811b394630f03efe18c18d0fff161f6dc`.

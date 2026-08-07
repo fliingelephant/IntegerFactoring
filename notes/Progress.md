@@ -1440,3 +1440,26 @@ depth is still exponential in the input length, and no useful hit probability
 is known. The next test must use the whole sequence. A parity, lattice,
 continued-fraction, or other joint decoder must extract more than the union of
 rare coordinate gcd events. F26 remains open.
+
+### C60 — formal degree is not real basin mass
+
+**Status:** verifier-backed and promoted as P63/X57. The candidate passed a
+fresh hostile whole-artifact audit and a strict proof-blind reconstruction. No
+cross-family audit has run.
+
+**Verified boundary.** The noninvertible map (x(x-1)) appears to branch
+backward. But when (5) is a non-square modulo a hidden prime, the first new
+branch does not exist. The complete basin of its two public roots then stays at
+two points for all time. Unit scaling and affine relabeling only rename the
+same process. Infinitely many balanced semiprimes have this obstruction on
+both prime sides, so all root-ticket restarts remain a square-root-scale search.
+
+For a general map, target-ticket success is at most the sum of the two local
+backward-basin densities. This gives a clean test for future dynamic samplers.
+
+**Algorithmic consequence.** Iteration and exponential composed degree do not
+manufacture information by themselves. A retry must prove that actual local
+preimages occupy inverse-polynomial density for every hidden-prime family. Or
+it must use a different output, such as a full-orbit period, collision,
+valuation, or joint transcript decoder. General polynomial dynamics remain
+open.
