@@ -10803,3 +10803,312 @@ and
 537468a5dcd233bae1970a7f10f09005e70bdb5d2dd5b0dfb24c338932d62ba3.
 No research computation, cross-family audit, human audit, or
 publication-level literature review has run.
+
+## P95 — powering by N−1 removes all shared local-order components
+
+**Status:** promoted from F89 after a hostile proof-only audit and a
+proof-blind reconstruction. This is a public subgroup normalization and two
+conditional decoders, not an all-input factoring algorithm.
+
+Let \(N=pq\) for distinct odd primes, let
+
+\[
+K\le(\mathbb Z/N\mathbb Z)^\times,
+\]
+
+and put \(E=N-1\), \(S=K^E\). If the two local projection orders of \(K\)
+are \(m_p,m_q\), define
+
+\[
+A=\frac{m_p}{\gcd(m_p,E)},
+\qquad
+B=\frac{m_q}{\gcd(m_q,E)}.
+\]
+
+Then
+
+\[
+\boxed{\gcd(A,B)=1}
+\]
+
+and the powered subgroup is the full product of its local images:
+
+\[
+\boxed{
+S=K_p^E\times K_q^E,
+\qquad
+|S|=AB.
+}
+\]
+
+Indeed, a prime dividing both residual image orders would force both
+\(p\) and \(q\) to be one modulo a prime power larger than the corresponding
+valuation of \(N-1\), a contradiction. Surjective projections of coprime
+orders force the full product. Thus the public power removes every shared
+order component and every residual graph correlation.
+
+The powered subgroup contains exactly
+
+\[
+\boxed{A+B-2}
+\]
+
+positive separators, with uniform density
+
+\[
+\boxed{
+\frac1A+\frac1B-\frac2{AB}.
+}
+\]
+
+Near-uniform public sampling is therefore a Las Vegas polynomial-time
+decoder when \(S\ne1\) and one of \(A,B\) is numerically polynomial in
+\(\log N\). Deterministic capped subgroup enumeration succeeds when
+\(1<AB\) fits a public polynomial cap. Neither algorithm knows the hidden
+orders.
+
+If \(K\) contains a diagonal graph subgroup \(H\), then
+\(|H|\mid N-1\), so the power map kills \(H\), factors abstractly through
+\(K/H\), and
+
+\[
+|S|\le[K:H].
+\]
+
+At \(N=4033\), the feedback-exposed block 5 has local orders 36 and 27.
+The public exponent \(4032=N-1\) leaves local orders one and three, so
+
+\[
+\boxed{\gcd(5^{4032}-1,4033)=37.}
+\]
+
+At \(N=2047\), the special phase subgroup \(\langle11,2\rangle\) has
+exponent 22 dividing \(N-1\), so the unpunctured image is trivial. P94's
+puncture 186 is therefore necessary for that supplied subgroup.
+
+The theorem does not decode the case in which both coprime local image
+orders are large. It does not prove that feedback creates a polynomial
+image or give an arbitrary-composite reduction. The final candidate fixes
+two fraction-command characters and replaces one misleading “public
+quotient” phrase in the audited version. The proof-blind reconstruction
+verified the forced intended formula, and a separate certificate confirms
+that the corrected statement makes no mathematical change.
+
+The final candidate, hostile audit, original proof-blind statement,
+corrected statement, proof-blind reconstruction, and correction certificate
+have SHA-256 hashes
+92b912f3741ff9d04e7772a03fb82bf2e80fe01d09c24de699921c374aad6101,
+c7e51fadaf9259aa2fae128d2d1efb2480bb6ebd3a13c38add3902bf338b521b,
+aafa64e607c6cd108b08b43d3084a91ca388930792c569db083c4b9d9e58fabe,
+e504a24c285e0c98d64a37302e53e56b6656ec50361a507e003f37a1848d5779,
+8d0948ae5348e5a67772f13f4b7a9249a25a85be6752ef229fd41bc51a4816f5,
+and
+11d7ccc125a27d6bea5a95e9b97f380366f812202aab07c1278ea260ee71e9e2.
+No research computation, cross-family audit, human audit, or
+publication-level literature review has run.
+
+## P96 — a public annihilator makes every bounded primary separator enumerable
+
+**Status:** promoted from F90 after a hostile proof-only audit and a
+proof-blind reconstruction. This is a conditional deterministic decoder for
+a supplied subgroup killed by \(N-1\), not a separator source or an
+all-input factoring algorithm.
+
+Let \(K\) be given by public generators and let
+\(\lambda=\exp(K)\). The public test
+
+\[
+g_i^{N-1}=1\pmod N
+\qquad\text{for every generator }g_i
+\]
+
+is equivalent to
+
+\[
+\boxed{\lambda\mid N-1.}
+\]
+
+Assume that this test passes and that \(K\) contains a positive separator
+\(x\). Choose a prime \(\ell\mid\operatorname{ord}(x)\), and put
+
+\[
+e=v_\ell(N-1),
+\qquad
+H=v_\ell(\lambda),
+\qquad
+C=v_\ell(\operatorname{ord}(x)).
+\]
+
+The puncture
+
+\[
+E=(N-1)/\ell^{e-C+1}
+\]
+
+keeps \(x^E\) as a positive separator of exact order \(\ell\). It kills
+every other primary component, and
+
+\[
+\boxed{
+\exp(K^E)=\ell^{H-C+1},
+\qquad
+|K^E|\le\ell^{2(H-C+1)}.
+}
+\]
+
+The size bound follows because a subgroup of two cyclic local
+\(\ell\)-groups has rank at most two.
+
+A public algorithm scans small primes \(\ell\le L\) dividing \(N-1\), every
+puncture depth, and cap-enumerates every powered subgroup. It
+deterministically factors \(N\) whenever some separator and prime satisfy
+
+\[
+\boxed{
+\ell\le L,
+\qquad
+\ell^{2(H-C+1)}\le T
+}
+\]
+
+for a public polynomial cap \(T\). The algorithm does not know the
+separator, subgroup exponent, useful prime, hidden valuations, or factors.
+
+At \(N=2047\), the subgroup \(\langle11,2\rangle\) passes the annihilator
+test. The prime 11 and exponent 186 give the general upper bound 121; the
+exact phase calculation attains 121 and contains 20 positive separators.
+The public algorithm does not need to recognize the phase branch.
+
+Together, P95 and P96 give a public structural split. If
+\(K^{N-1}\ne1\), the powered subgroup is a nontrivial coprime-order
+rectangle containing separators. If \(K^{N-1}=1\), \(N-1\) is a public
+annihilator and the puncture decoder applies under its primary-image
+promise. Neither branch proves that its factor-bearing image is polynomially
+accessible on every input.
+
+The candidate, hostile audit, proof-blind statement, and proof-blind
+reconstruction have SHA-256 hashes
+96275cc1cb5b454722cc4ae18dead7ec8260d8c05e842f71709696afc19cc8f3,
+7a82a8d3a8a8bb57d499b6e8a7c89c2869484e4df0e6694fd04ba62b53fa607c,
+d65001d43a35c32ff826e6fa7cda54dbcaccf47cf9078c07111eb47b5aa005cf,
+and
+a1283b5e6d6de1f72404a75bbc0f43e706775d4a7ff55b95f49eed3e530747eb.
+No research computation, cross-family audit, human audit, or
+publication-level literature review has run.
+
+## P97 — bare N supplies constant-probability generators of a factor-bearing rectangle
+
+**Status:** promoted from F91 after a hostile proof-only audit and a
+proof-blind reconstruction. This is a source theorem and an exact reduction
+to axis localization for distinct odd semiprimes. It is not an axis decoder
+or a factoring algorithm.
+
+Let
+
+\[
+N=pq,
+\qquad
+g=\gcd(p-1,q-1),
+\qquad
+A=(p-1)/g,
+\qquad
+B=(q-1)/g
+\]
+
+for distinct odd primes \(p,q\), and put
+
+\[
+G=(\mathbb Z/N\mathbb Z)^\times,
+\qquad
+S_N=G^{N-1}.
+\]
+
+Then
+
+\[
+\boxed{
+S_N\cong C_A\times C_B\cong C_{AB},
+\qquad
+\gcd(A,B)=1,
+\qquad
+AB>1.
+}
+\]
+
+The two nonidentity coordinate axes contain exactly \(A+B-2\) positive
+separators. Their exact uniform density is
+
+\[
+\delta_N=\frac1A+\frac1B-\frac2{AB}.
+\]
+
+Sample \(a\) uniformly from \(1,\ldots,N-1\). A nonunit sample immediately
+gives a proper factor. Conditioned on being a unit, \(a\) is exactly uniform
+in \(G\), and \(a^{N-1}\) is exactly uniform in \(S_N\). Unit acceptance has
+probability greater than one half.
+
+For two independent accepted units, put
+
+\[
+y_i=a_i^{N-1}\pmod N.
+\]
+
+The public pair generates the complete powered rectangle with exact
+probability
+
+\[
+\boxed{
+\Pr(\langle y_1,y_2\rangle=S_N)
+=\prod_{\ell\mid AB}(1-\ell^{-2})
+\ge\frac6{\pi^2}>0.6.
+}
+\]
+
+Thus bare \(N\) supplies a constant-size public generating set for a
+guaranteed factor-bearing subgroup with constant probability and polynomial
+work. No new subgroup sampler is required on this input class.
+
+This gives an exact promise reduction. Suppose a polynomial-time procedure,
+on every public list generating \(S_N\), returns an element \(z\) of that
+generated subgroup with
+
+\[
+1<\gcd(z-1,N)<N
+\]
+
+with inverse-polynomial probability. Suppose it has polynomial bounded work
+on every list and returns only verified factors or failure. Fresh two-sample
+batches and verified repetition then give a classical Las Vegas
+expected-polynomial factorer for distinct odd semiprimes. The reduction does
+not need to recognize which pairs generate \(S_N\).
+
+The source does not solve the promise task. When both \(A\) and \(B\) are
+large, direct uniform sampling can have exponentially small separator
+density in the input length. Inside the cyclic group \(C_{AB}\), the two
+axes are the unique subgroups of hidden orders \(A\) and \(B\). The missing
+operation is therefore axis localization, or a feedback/refinement step that
+changes this coprime-order rectangle. This is an access statement, not a
+computational lower bound.
+
+At \(N=4033=37\cdot109\), one has \(g=36,A=1,B=3\), and
+
+\[
+\gcd(5^{4032}-1,4033)=37.
+\]
+
+At \(N=2047=23\cdot89\), one has \(g=22,A=1,B=4\), so a fresh powered unit
+gives a proper gcd with probability \(3/4\). This does not contradict the
+smaller feedback subgroup \(\langle11,2\rangle\) being killed by \(N-1\).
+
+The final candidate implements the audit's exact-versus-near-uniform wording
+correction and adds explicit generated-subgroup membership to the promise
+task. These are precision and scope corrections; they do not change the
+proved theorem. The final candidate, hostile audit, proof-blind statement,
+and proof-blind reconstruction have SHA-256 hashes
+22d818157876d303c038fa4caa68bef2c94f9b6a709e2691be2d8554e642d46d,
+e1a20aef5e85424fed8ac42606dc12be44c9c5cd47ef69b98ed1827ad6ee2cee,
+547f538367abef228c387761fb1f67a4c778d127c0c69b8ce013e96ae211b07c,
+and
+7e1d572adb0ce54008e521bd23e8fa777c9f39755c6f4b4d5b3c7bbe6412116b.
+No research computation, cross-family audit, human audit, or
+publication-level literature review has run.

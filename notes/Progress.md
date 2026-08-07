@@ -4,7 +4,7 @@ This is working state for nontrivial intermediate statements and the current syn
 
 ## Current synthesis
 
-The source material has been read in full. Twenty-eight approach families have been opened, primarily from materially different mechanisms in `notes/Inspirations.md` with additional factor-trace, noncommutative, hidden-modulus metric, non-gcd tensor-contraction, joint-amortization, positive-sampling, and finite-field or integer-quotient dissipative routes; promoted narrow results and exact open gaps are tracked below and in the registry. The closest current structural frontier is non-endpoint quotient or cross-relation feedback: it can enlarge the block subgroup, but a useful sampler must also force square-class cancellation and a non-global root. Other live frontiers are a factor-free sampler for the quadratic-energy/zero-product law, a genuinely joint decoder using typical nonzero relation data, a fine manufactured metric hint, a useful class-group/isogeny orientation, or an exactly contractible positive factor-witness network beyond the proved local wiring boundaries. `notes/Zhihu.md` supplies background and motivation only.
+The source material has been read in full. Twenty-eight approach families have been opened, primarily from materially different mechanisms in `notes/Inspirations.md` with additional factor-trace, noncommutative, hidden-modulus metric, non-gcd tensor-contraction, joint-amortization, positive-sampling, and finite-field or integer-quotient dissipative routes; promoted narrow results and exact open gaps are tracked below and in the registry. The closest current structural frontier is canonical feedback followed by public subgroup normalization. Integer refinement can enlarge the usable subgroup without adding a new modular residue. For every distinct odd semiprime, bare \(N\) also supplies two public generators of a guaranteed factor-bearing coprime-order rectangle with probability at least \(6/\pi^2\). Thus the main missing operation is no longer a generic subgroup sampler. It is axis localization when both hidden local orders are large, or a feedback rule that changes that rectangle with a proved all-input progress law. Other live frontiers are a factor-free sampler for the quadratic-energy/zero-product law, a genuinely joint decoder using typical nonzero relation data, a fine manufactured metric hint, a useful class-group/isogeny orientation, or an exactly contractible positive factor-witness network beyond the proved local wiring boundaries. `notes/Zhihu.md` supplies background and motivation only.
 
 ## Working claims
 
@@ -2371,3 +2371,85 @@ of order 121 with 20 separators.
 the pure phase route. The remaining source theorem must show that feedback
 creates a strict phase quotient with a small enough prime component and
 residual image. This condition is not yet proved for general inputs.
+
+### C92 — N−1 removes every shared local-order component
+
+**Status:** verifier-backed and promoted as P95 after a hostile proof-only
+audit and a proof-blind reconstruction. No research computation,
+cross-family audit, human audit, or literature audit ran.
+
+For any supplied public subgroup modulo \(N=pq\), power every generator by
+\(N-1\). The remaining two hidden projection orders are coprime, and the
+powered subgroup is their full direct product. All shared order and graph
+correlation disappear.
+
+The image has orders \(A,B\), size \(AB\), and exactly \(A+B-2\) positive
+separators. Sampling works when one order is small. Complete enumeration
+works when the full image is small.
+
+At \(N=4033\), the exponent \(N-1=4032\) sends the feedback block 5 to an
+element with local orders one and three, and one gcd returns 37. At
+\(N=2047\), the special phase subgroup is killed, so its puncture 186 is the
+correct branch.
+
+**Algorithmic consequence.** The public power gives a canonical normal form
+for every post-feedback subgroup. The unresolved case is a full rectangle
+whose two coprime hidden orders are both large.
+
+### C93 — if N−1 kills the supplied subgroup, primary punctures are complete under a cap
+
+**Status:** verifier-backed and promoted as P96 after a hostile proof-only
+audit and a proof-blind reconstruction. No research computation,
+cross-family audit, human audit, or literature audit ran.
+
+The public test that every generator satisfies \(g^{N-1}=1\) is equivalent
+to the whole subgroup exponent dividing \(N-1\). If that subgroup contains
+a separator, removing one prime power from \(N-1\) preserves an order-prime
+separator and kills all other primary components.
+
+For a separator with prime valuation \(C\) inside a subgroup exponent with
+valuation \(H\), the surviving group has exponent
+\(\ell^{H-C+1}\) and at most \(\ell^{2(H-C+1)}\) elements. A public scan of
+small primes and capped subgroup enumeration is therefore complete whenever
+that full bound is polynomial.
+
+**Algorithmic consequence.** The algorithm does not need to detect a phase
+branch. The remaining gap is to create a separator with a small accessible
+primary image. The annihilator test alone does not do this.
+
+### C94 — bare N already supplies the full powered rectangle with constant probability
+
+**Status:** verifier-backed and promoted as P97 after a hostile proof-only
+audit and a proof-blind reconstruction. No research computation,
+cross-family audit, human audit, or literature audit ran.
+
+For every distinct odd semiprime \(N=pq\), write
+
+\[
+g=\gcd(p-1,q-1),
+\qquad
+A=(p-1)/g,
+\qquad
+B=(q-1)/g.
+\]
+
+The full unit-group image under the public power \(N-1\) is the nontrivial
+cyclic rectangle \(C_A\times C_B\cong C_{AB}\), with \(\gcd(A,B)=1\).
+A fresh accepted unit maps exactly uniformly to this rectangle. Two
+independent samples generate the complete rectangle with probability
+
+\[
+\prod_{\ell\mid AB}(1-\ell^{-2})\ge6/\pi^2.
+\]
+
+Thus bare \(N\) gives a constant-size public generator source for a
+guaranteed factor-bearing subgroup. If a polynomial-time decoder can
+localize either hidden axis from any generating list with
+inverse-polynomial probability, verified fresh batches give a classical Las
+Vegas factorer for distinct odd semiprimes.
+
+**Algorithmic consequence.** The sampler question is solved at the subgroup
+source level for this input class. The exact remaining problem is axis
+localization when both coprime hidden orders are large, or a feedback step
+that changes the rectangle. The result does not supply that decoder, handle
+other composite forms, or prove a factoring algorithm.
