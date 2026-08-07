@@ -1866,3 +1866,129 @@ obtain a non-global root. A useful sampler must cause all needed events. More
 relations or more generators alone are insufficient. The quotient is public,
 so this is an operation-set distinction, not hidden side information or a
 general factoring algorithm.
+
+### C77 — quotient fibres can be inverted exactly
+
+**Status:** verifier-backed and promoted as P80 after a failed first scope
+audit, corrected proof-only re-audit, and proof-blind reconstruction. No
+authoritative research computation, cross-family audit, human audit, or
+literature audit ran.
+
+For retained values \(A_i=1+k_iN\) and
+\(P=\prod_iA_i=1+KN\), every supported feedback candidate with target
+quotient \(r\) lies in
+
+\[
+D_r=\gcd(P,1+rN)
+=\gcd\!\left(1+rN,\prod_i(k_i-r)\right).
+\]
+
+Conversely, every divisor \(g\mid D_r\) with \(r<g<N\) has quotient \(r\).
+If \(N>r^2\), the fibre is nonempty exactly when \(D_r>r\), and one legal
+member is constructed greedily after gcd-free refinement. This is the exact
+target-first dual of selecting a block product and computing its CRT quotient.
+
+The first audit found the decisive limit. If all old and target quotients are
+at most \(B=\operatorname{poly}(n)\), a state scan through \(B^2\) already
+recovers the same relation, aggregate divisor, and endpoint provenance. Thus
+the exact sieve is new only with large correlated old quotient differences.
+
+**Algorithmic consequence.** The exponential subset scan is removed inside a
+declared quotient fibre. The missing source theorem is now sharper: adaptive
+feedback must create large correlated quotients, and some polynomially
+scanned fibre must then make direct, refinement, or decoder progress.
+
+### C78 — canonical residues complete the fixed refinement chain
+
+**Status:** verifier-backed and promoted as P81 after a proof-only re-audit
+and proof-blind reconstruction. No research computation, cross-family audit,
+human audit, or literature audit ran.
+
+CRT updates of \(\rho(g)=(-N^{-1})\bmod g\) are exact bookkeeping for
+coprime block extensions. The proposed inverse-size, quotient-size,
+inverse-distance, and current-refinement scores are not extension-monotone.
+This refutes them only as scalar dominance certificates, not as heuristics or
+all possible polynomial beams.
+
+Canonical-residue closure is the real operation change. It evaluates a public
+block word modulo \(N\) before gcd refinement. The result stays in the old
+residue subgroup but can use an integer representative outside the old
+positive occurrence box.
+
+At the post-P78 state \(N=4033\), \(H_1=\langle2,5\rangle\), the literal
+support-two menu contains
+
+\[
+5^2 2^8\bmod4033=2367,
+\qquad
+\gcd(2367+1,4033)=37.
+\]
+
+Thus the fixed chain is now complete: cross-feedback refines a
+separator-free subgroup and exposes \(5\); a small canonical word in the
+refined subgroup then factors \(N\). The unsolved part is an all-input sparse
+word or density theorem.
+
+### C79 — independent uniform seeds do not feed the hard collision regime
+
+**Status:** verifier-backed and promoted as P82 after a failed prime-scope
+audit, corrected proof-only re-audit, and proof-blind reconstruction. No
+research computation, cross-family audit, human audit, or literature audit
+ran.
+
+After polynomial trial division through \(B\), take \(m\) uniform inverse
+relations and scan \(R\) targets. The probability that any collision divisor
+contains a prime larger than \(B\) is at most
+
+\[
+\frac{2e\,mR\bigl(n+\lceil\log_2(R+1)\rceil+1\bigr)}B.
+\]
+
+Independence is unnecessary; uniform marginals suffice, and the union already
+covers adaptive target selection inside the declared range. By choosing a
+larger polynomial \(B\), every collision divisor is polynomial-smooth with
+overwhelming probability and is fully exposed by trial division.
+
+**Algorithmic consequence.** Large random quotients do not supply the missing
+hard overlap. The live feedback source must be adaptive and structured. This
+supports the composition
+
+\[
+\text{integer refinement}
+\to\text{canonical residue words}
+\to\text{correlated quotients}
+\to\text{exact target-fibre scan},
+\]
+
+but no theorem yet proves the required correlation or factor-bearing density.
+
+### C80 — subgroup sampling is solved; factor-bearing density is not
+
+**Status:** verifier-backed and promoted as P83 after a proof-only hostile
+audit and proof-blind reconstruction. No research computation, cross-family
+audit, human audit, or literature audit ran.
+
+Given public generators of any subgroup \(H\le(\mathbb Z/N\mathbb Z)^\times\),
+independent random exponents from a sufficiently long public interval give a
+distribution within \(2^{-2n}\) of uniform on \(H\). This uses no factor,
+order, or subgroup-size oracle and has polynomial bit complexity.
+
+For \(N=pq\), the exact density of elements that expose a factor through
+\(\gcd(X-1,N)\) is
+
+\[
+\delta_+=\frac1{|H_p|}+\frac1{|H_q|}-\frac2{|H|},
+\]
+
+with the analogous exact formula for \(X+1\). If either density is inverse
+polynomial, uniform subgroup sampling is already a Las Vegas
+polynomial-time decoder.
+
+But the existence of one separator does not imply useful density. An
+abstract subgroup can contain a separator with density \(1/L\), where \(L\)
+is exponential in the input length.
+
+**Algorithmic consequence.** The missing object is not a generic dense
+sampler. Feedback must force inverse-polynomial factor-bearing density, make
+a rare separator accessible by a polynomial sparse-word menu, or continue
+integer refinement until one of these conditions holds.

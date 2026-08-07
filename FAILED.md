@@ -2731,3 +2731,122 @@ the subgroup, so it is a real escape operation. But its new decoder column
 closes only when the new square class cancels. A general retry must prove that
 such cancellation and a non-global root occur with an all-input
 inverse-polynomial law.
+
+## X64 — bounded quotient-collision feedback is dominated by a bounded state scan
+
+**Status:** promoted as the exact method boundary in P80.
+
+**Family:** F26/F74.
+
+**Classification:** method failure for using only polynomially bounded old
+quotients and polynomially bounded target quotients in the remainder-product
+sieve. It does not cover large correlated quotient differences.
+
+**What was tried.** Choose a small target \(r\), compute
+
+\[
+D_r=\gcd\!\left(\prod_i(1+k_iN),1+rN\right),
+\]
+
+and use many small overlaps in \(D_r\) to avoid block-subset enumeration.
+
+**Exact obstruction.** If every \(k_i,r\le B\), each prime of \(D_r\)
+divides some nonzero \(k_i-r\) and is at most \(B\). When \(D_r>r\), these
+small differences construct a divisor
+
+\[
+r<g\le rB\le B^2.
+\]
+
+Either trial division resolves \(N\), or a prior state scan through \(B^2\)
+already emits the same relation value. With the unchanged source ledger it
+also recovers the same aggregate divisor and provenance. Thus bounded
+quotients do not create a new source state.
+
+**What would make a retry materially new.** Produce large old quotient
+differences by an adaptive correlated operation, then prove that a
+polynomially scanned target fibre opens and makes factor-bearing progress.
+
+## X65 — current CRT beam scores are not extension-monotone
+
+**Status:** promoted as the narrow score obstruction in P81.
+
+**Family:** F26/F75.
+
+**Classification:** failure of four scalar values as exact prefix-dominance
+certificates. This is not a lower bound against polynomial beams.
+
+**What was tried.** Retain polynomial-width beams minimizing canonical inverse
+size, quotient size, or inverse distance, or maximizing current gcd-refinement
+gain.
+
+**Exact obstruction.** At \(N=55\), each of the first three scalar rankings
+reverses after one common coprime block extension. Proper old-block overlap
+can appear from a zero-gain prefix and disappear from a positive-gain prefix.
+Therefore the current scalar value is not an extension-monotone lookahead
+bound.
+
+**Scope.** The examples do not prove that any polynomial-width beam fails.
+Several displayed paths already factor under mandatory screens. A retry can
+use enriched state, another proof of coverage, or a different source law.
+
+## X66 — fresh uniform inverse seeds do not create hard large-prime quotient collisions
+
+**Status:** promoted as the probabilistic source obstruction in P82.
+
+**Family:** F26/F76.
+
+**Classification:** method failure for feeding P80 with polynomially many
+fresh uniform inverse samples. It does not cover adaptive canonical-residue or
+block-feedback states.
+
+**What was tried.** Use random full-size inverse states to obtain large old
+quotients, then scan polynomially many small targets \(r\) and hope that
+\(D_r\) contains a new hard common factor.
+
+**Exact obstruction.** After trial division through any chosen polynomial
+bound \(B\), the probability that any of \(mR\) sample-target pairs shares a
+prime larger than \(B\) is at most
+
+\[
+\frac{2e\,mR\bigl(n+\lceil\log_2(R+1)\rceil+1\bigr)}B.
+\]
+
+Choose a larger polynomial \(B\) to make this arbitrarily small inverse
+polynomial. On the complementary event, every collision divisor is
+\(B\)-smooth and fully exposed by the same polynomial trial prepass.
+
+**What would make a retry materially new.** Use an adaptive source whose
+canonical integer representatives are correlated with the current block
+geometry, or prove a different progress event that does not require a hard
+large common prime.
+
+## X67 — separator existence does not imply useful uniform subgroup density
+
+**Status:** promoted as the exact density boundary in P83.
+
+**Family:** F26/F77.
+
+**Classification:** failure of subgroup expansion or separator existence as
+a sufficient success law. It is not a failure of subgroup sampling, which is
+already polynomial-time.
+
+**What was tried.** After feedback adds a factor-bearing subgroup element,
+sample the whole public generated subgroup almost uniformly and apply the two
+sign gcd tests.
+
+**Exact obstruction.** For a squarefree semiprime, the positive-sign density
+is
+
+\[
+\frac1{|H_p|}+\frac1{|H_q|}-\frac2{|H|}.
+\]
+
+A subgroup can contain a separator while this density is exponentially
+small. In the abstract example
+\(H=\langle(a,a),(1,-1)\rangle\le C_L\times C_L\), it is exactly \(1/L\).
+
+**What would make a retry materially new.** Prove inverse-polynomial density
+for the subgroups produced by the actual integer feedback process, target a
+rare separator by a polynomial sparse-word law, or prove that another block
+split reaches a dense subgroup.

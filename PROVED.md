@@ -9187,3 +9187,448 @@ For the exact square-class gate, the corresponding hashes are
 8a8f96f1b9ccd454ec02da906bcc7984affa32de7ca22ac2bd8d559b7060766a,
 and
 52c2cb450ab2692794c603fa97e4a748b2d74e23175f6bc9f1f03cfc69786466.
+
+## P80 — quotient-collision feedback has an exact target-first fibre and a bounded-quotient boundary
+
+**Status:** verifier-backed exact feedback theorem and method boundary. This
+is not an all-input selector or a factoring algorithm.
+
+Let
+
+\[
+A_i=x_i y_i=1+k_iN,
+\qquad
+P=\prod_iA_i=1+KN,
+\]
+
+be a polynomial-size indexed list of retained canonical inverse relations,
+with complete gcd-free endpoint blocks, exact exponents, and occurrence
+capacities. For a target quotient \(r\ge1\), put
+
+\[
+A_r=1+rN,
+\qquad
+D_r=\gcd(P,A_r).
+\]
+
+Then the complete supported target fibre collapses to quotient differences:
+
+\[
+\boxed{
+D_r
+=\gcd(P,K-r)
+=\gcd\!\left(A_r,\prod_i(k_i-r)\right).
+}
+\]
+
+If \(r\ne k_i\) for every \(i\), then
+
+\[
+v_p(D_r)
+=\min\!\left(v_p(A_r),\sum_i v_p(k_i-r)\right).
+\]
+
+Thus every prime in \(D_r\) is supported by an old quotient difference, and
+repeated relation occurrences can increase its valuation even when they add
+no decoder rank.
+
+For any occurrence-certified divisor \(1<g<N\) of \(P\), let
+
+\[
+g\iota_N(g)=1+k(g)N.
+\]
+
+The exact fibre condition is
+
+\[
+\boxed{
+k(g)=r
+\iff
+g\mid D_r\text{ and }r<g<N.
+}
+\]
+
+If \(N>r^2\), a legal target-\(r\) candidate exists after gcd-free
+refinement by \(D_r\) exactly when \(D_r>r\). Refine \(D_r\) into retained
+block occurrences. If one occurrence exceeds \(r\), use it. Otherwise
+multiply occurrences until the product first exceeds \(r\); the result is at
+most \(r^2<N\). For polynomially bounded \(r\), the branch \(N\le r^2\) is
+resolved by polynomial trial division.
+
+This is the exact dual of the proposed CRT state. For
+
+\[
+\rho_N(g)=(-N^{-1})\bmod g,
+\]
+
+one has \(\rho_N(g)=k(g)\). A CRT product search chooses \(g\) and computes
+its label \(r\); the quotient-collision scan chooses \(r\) and computes the
+largest supported divisor \(D_r\). One gcd per declared \(r\) therefore
+replaces subset enumeration inside that fibre. The aggregate \(D_r\) can
+exceed \(N\) and need not itself be legal or factor-bearing.
+
+There is an exact domination boundary. If
+
+\[
+1\le r,k_i\le B=operatorname{poly}(\log N),
+\qquad r\ne k_i,
+\]
+
+then every prime of \(D_r\) is at most \(B\). When \(D_r>r\), trial
+factorization of the small differences constructs
+
+\[
+r<g\le rB\le B^2.
+\]
+
+Either trial division resolves \(N\), or a prior state scan through \(B^2\)
+already emits \(A_r\). With the unchanged product and endpoint ledger it then
+recovers the same \(D_r\), refinement, and occurrence provenance. Hence the
+sieve has genuinely different source power only in a regime with large old
+quotient differences.
+
+Two implementation corrections are essential. First,
+
+\[
+\gcd(g-\iota_N(g),N)=\gcd(g^2-1,N)
+\]
+
+does not replace the two sign screens: it equals \(N\) on a non-global
+involution. Second, an HNF/SNF decoder basis cannot replace the source
+occurrence ledger. At \(N=4033,r=3\), one quotient-one occurrence gives
+\(D_3=2\), while two identical occurrences give \(D_3=4\) and authorize
+\(g=4\).
+
+The gate contains all central P70/P78 witnesses. For example, at \(N=4033\)
+with old quotients \(1,63,7\), target \(r=1983\) gives
+
+\[
+D_r=10240=2^{11}\cdot5.
+\]
+
+It certifies \(g=2048\), complement \(3905\), and the block split
+\(\gcd(10240,1985)=5\). In the repeated power family
+
+\[
+N=(2^{2t}-1)/3,
+\]
+
+\(t\) quotient-one occurrences and target \(r=3\) give \(D_3=2^t\).
+
+The theorem supplies no law that puts a successful \(r\) in a polynomial
+range, makes the generic fibre member useful, or creates large correlated
+quotients from bare \(N\).
+
+The corrected candidate, passing proof-only re-audit, proof-blind statement,
+and proof-blind reconstruction have SHA-256 hashes
+`de21b1e693275cb14e05931d71a6ad6f8d30bb40dc85e3ab68ad30a7c83c78e6`,
+`99e25f64ade770f0fd9f6367e2a4f9e546ce3d78b642c21a05bed2547d0db51e`,
+`af82219350f7c27f79c25eb93a4d708f94a11ca8f32464f31fe62b743e2bc6e8`,
+and
+`8d30ce452d0712f41f2527f8245ea66b515b94f0535d9d6c2016bba435a91bbf`.
+The failed first candidate and hostile audit remain preserved at hashes
+`6cdb5cea5121d07972c2f84211d6cfd26d0a30088769355806b86eec0c26a217`
+and
+`61e5e85c08c523849ecce6feb36a516186147290802db863bf873dc753e14ba1`.
+No authoritative research computation, cross-family audit, human audit, or
+publication-level literature review supports this theorem.
+
+## P81 — canonical-residue closure is a real source change and completes the fixed P78 chain
+
+**Status:** verifier-backed operation-change theorem and fixed witness. This
+is not an all-input word selector or a factoring algorithm.
+
+For a unit \(1<g<N\), the CRT state
+
+\[
+\rho_g=(-N^{-1})\bmod g,
+\qquad
+w_g=\frac{1+N\rho_g}{g}
+\]
+
+is exactly the canonical inverse relation. If a coprime block \(b\) is added,
+
+\[
+t=(\rho_b-\rho_g)g^{-1}\bmod b,
+\]
+
+then
+
+\[
+\rho_{gb}=\rho_g+gt,
+\qquad
+w_{gb}=\frac{w_g+Nt}{b}=[w_gw_b]_N.
+\]
+
+This is exact bookkeeping for a coprime extension. It does not cover another
+copy of an existing block, an overlapping macroblock, or missing occurrence
+provenance.
+
+The proposed beam scores do not have scalar extension monotonicity. Exact
+\(N=55\) examples reverse the ordering of canonical-inverse size, quotient
+size, and inverse distance after one common coprime extension. Old-block gcd
+gain can also appear or disappear after extension. These examples prove only
+that the current scalar values are not exact dominance certificates. They do
+not prove that any polynomial-width beam fails, or even exhibit a failed run
+after all mandatory screens.
+
+The genuine operation change is canonical-residue closure. For current
+blocks generating
+
+\[
+H=\langle q_1,\ldots,q_m\rangle,
+\]
+
+take a public exponent vector and compute
+
+\[
+c=\left[\prod_jq_j^{e_j}\right]_N,
+\qquad
+w=[c^{-1}]_N.
+\]
+
+Both residues remain in \(H\), so this does not enlarge the residue subgroup.
+But it removes the positive-product and finite-occurrence-box restriction.
+Gcd-free refinement of the new canonical integers can expose individual
+integer factors whose residue classes lie outside \(H\). This is the
+representation-level gain from P78 in an executable source operation.
+
+On P78's refined state
+
+\[
+N=4033=37\cdot109,
+\qquad H_1=\langle2,5\rangle,
+\]
+
+the known oversized word becomes
+
+\[
+5\cdot2^{13}\bmod N=630,
+\qquad
+630\cdot3220=1+503N,
+\]
+
+and
+
+\[
+\gcd(630-1,N)=\gcd(630-3220,N)=37.
+\]
+
+More strongly, the literal small exponent menu already contains the
+support-two certificate
+
+\[
+5^2 2^8\bmod N=2367,
+\qquad
+2367\cdot443=1+260N,
+\]
+
+with
+
+\[
+\gcd(2367+1,N)=\gcd(2367-443,N)=37.
+\]
+
+Thus a polynomial exhaustive support-two scan closes P78's finite-box caveat
+on this fixed post-refinement state. The earlier feedback step is now part of
+a complete explicit multi-step chain: a separator-free old subgroup is
+refined to expose \(5\), then a canonical residue of the new subgroup factors
+\(N\).
+
+No theorem explains how every input reaches such a state, why every useful
+subgroup has a separator in a polynomial exponent menu, or why a capped beam
+or random word finds one with inverse-polynomial probability.
+
+The corrected candidate, proof-only re-audit, proof-blind statement, and
+proof-blind reconstruction have SHA-256 hashes
+`9e3333f490c62c68c1aab66f920394e13e4ce51974bbde543be312a5cc30309a`,
+`a8319eae8acb4d7c0c3f8181afbc35950be622706094c74cbecfb068f0783c28`,
+`331d9571034b8894d92ca9e1cb5834e65243dc7b8ca2ffefc3e75cfc681ed3e4`,
+and
+`2204a2fd2853938307ed01c71cdfb1cef850042e19f7d19364cbd96bc3a889ee`.
+The first audit of the earlier scope wording is preserved at hash
+`d26b343a84125ea3d056012ec6e88d2a21e3e2c74a599e4769dfb4059883dd01`;
+its transient unregistered arithmetic is non-authoritative. No research
+computation supports the promoted proof, and no cross-family, human, or
+publication-level literature audit has run.
+
+## P82 — uniform inverse seeds almost never add a hard large prime to a polynomial quotient scan
+
+**Status:** verifier-backed independent-source obstruction. This does not
+cover adaptive correlated feedback and is not a factoring lower bound.
+
+Let \(n=\lceil\log_2(N+1)\rceil\). Stop on primes, and trial-divide the
+remaining composite \(N\) through \(B\ge\max(3,n)\). If this does not factor
+\(N\), every prime divisor of \(N\) exceeds \(B\).
+
+Let \(U_i\) be uniform unit representatives, let
+
+\[
+V_i=\iota_N(U_i),
+\qquad
+A_i=U_iV_i,
+\qquad
+P=\prod_{i=1}^mA_i,
+\]
+
+and for \(1\le r\le R\) put
+
+\[
+C_r=1+rN,
+\qquad
+D_r=\gcd(P,C_r).
+\]
+
+Independence is unnecessary; uniform marginals suffice. With
+
+\[
+L=n+\lceil\log_2(R+1)\rceil+1,
+\]
+
+one has
+
+\[
+\Pr\!\left(
+\exists r\le R,\ \exists\text{ prime }\ell>B:\ell\mid D_r
+\right)
+\le
+\frac{2mRNL}{B\varphi(N)}.
+\]
+
+Indeed, for fixed \(i,r\) and \(\ell\mid C_r\), primality implies that
+\(\ell\mid A_i\) only if it divides \(U_i\) or \(V_i\). Each event has
+probability at most \(N/(\ell\varphi(N))\), because inversion permutes the
+units. Union over the at most \(L\) prime divisors of \(C_r\), then over all
+\(mR\) pairs.
+
+The small-factor prepass also gives
+
+\[
+\frac N{\varphi(N)}
+\le
+\exp\!\left(
+\frac{n}{B\log_2(B+1)}
+\right)
+\le e.
+\]
+
+Therefore the probability is at most \(2e mRL/B\). For fixed
+\(m\le n^a\), \(R\le n^b\), and any \(c\ge1\), take
+
+\[
+B=n^{a+b+c+3}.
+\]
+
+Trial division remains polynomial and the large-common-prime probability is
+\(O(n^{-c-1})\). This bound already unions over every numerical
+\(r\le R\), so it also covers an adaptive final choice of \(r\) inside that
+range.
+
+On the complementary event, every \(D_r\) is \(B\)-smooth. Polynomial trial
+division completely factors it, exposes the full \(B\)-smooth part of every
+\(C_r\), and can strip the same public small primes from every retained
+endpoint block. The remaining difficulty can still be a hard selection among
+many known small factors; the theorem does not claim \(D_r\le r\) or that a
+smooth fibre is useless.
+
+Thus fresh uniform inverse samples do not supply the hard large overlap needed
+to make P80 new. The live route must use adaptive canonical-residue or block
+feedback whose marginals are factor-correlated or otherwise nonuniform.
+
+The corrected candidate, passing proof-only re-audit, proof-blind statement,
+and proof-blind reconstruction have SHA-256 hashes
+`87a5706f674dfd507acaf1777ff69217c0a6040483c6651b41351c8a1bc84aac`,
+`a08ac57657391577da054b288ddcb45aaf2a7c412cd9d6e81cbd3a7ff9d0d92a`,
+`cc94c7ce5b923dec32d0e7526f8301b9b898ca914d6a02f59694677d7991826f`,
+and
+`9f0170089584861602ee959a4778945c71f483779f3bc84c911032651ee64724`.
+The failed first candidate and audit remain preserved at hashes
+`c7d24e5e57effd5242006d06c4b9b45c746398ecd6b6514dcaf6dcd7936669bd`
+and
+`68b710bdc9988d39f1d0ef63beeed38f50c397bdd7cab09f30c0841e08512e08`.
+No research computation, cross-family audit, human audit, or
+publication-level literature review has run.
+
+## P83 — a public generated subgroup has an easy near-uniform sampler; separator density is the exact gate
+
+**Status:** promoted from F77 after a proof-only hostile audit and a
+proof-blind reconstruction. This is a conditional theorem, not a factoring
+algorithm.
+
+Let
+
+\[
+H=\langle q_1,\ldots,q_s\rangle
+\le (\mathbb Z/N\mathbb Z)^\times,
+\qquad n=\lceil\log_2N\rceil.
+\]
+
+The factorization of \(N\), the generator orders, and \(|H|\) need not be
+known. Put
+
+\[
+L=3n+\lceil\log_2(s+1)\rceil,
+\qquad M=2^L.
+\]
+
+Choose independent uniform exponents
+\(E_j\in\{0,\ldots,M-1\}\) and output
+
+\[
+X=\left[\prod_{j=1}^s q_j^{E_j}\right]_N.
+\]
+
+Then the law of \(X\) has total-variation distance less than \(2^{-2n}\)
+from uniform on \(H\). The sampler uses \(O(s(n+\log s))\) random bits and
+polynomial bit complexity. The proof reduces each exponent modulo the
+unknown order of its generator: a long uniform interval is already close to
+uniform modulo every order below \(N\), and a surjective homomorphism sends
+uniform exponent tuples to uniform subgroup elements.
+
+For \(N=pq\), with distinct odd primes, let \(H_p,H_q\) be the two local
+projection images. For uniform \(X\in H\), the exact positive-sign success
+density is
+
+\[
+\delta_+
+=\Pr(1<\gcd(X-1,N)<N)
+=\frac1{|H_p|}+\frac1{|H_q|}-\frac2{|H|}.
+\]
+
+If \(\epsilon_p,\epsilon_q,\epsilon\) record whether \(-1\) lies in
+\(H_p,H_q,H\), respectively, then
+
+\[
+\delta_-
+=\Pr(1<\gcd(X+1,N)<N)
+=\frac{\epsilon_p}{|H_p|}
+ +\frac{\epsilon_q}{|H_q|}
+ -\frac{2\epsilon}{|H|}.
+\]
+
+If either density is inverse polynomial in \(n\), repeated public subgroup
+sampling and the two sign gcd tests give a classical Las Vegas polynomial-time
+factorer for that state. The negligible sampler error is smaller than every
+nonzero event mass for the finitely many small inputs, so the statement has
+no hidden asymptotic exception.
+
+Subgroup expansion alone does not give this density. In the abstract group
+\(C_L\times C_L\), the subgroup
+\(\langle(a,a),(1,-1)\rangle\) contains a separator, but its positive-sign
+density is only \(1/L\). This is a density example, not an asserted integer
+family.
+
+Thus a heuristic dense-exponent beam is unnecessary. The missing all-input
+theorem must instead prove inverse-polynomial factor-bearing density after
+feedback, find a separator with a polynomial sparse-word menu, or prove that
+further integer refinement reaches a subgroup with one of those properties.
+
+The candidate, passing proof-only audit, proof-blind statement, and
+proof-blind reconstruction have SHA-256 hashes
+`7fd5bbec5485da405ecd71869f8caee2a7daa950e7eca1815f9f7de6b943449d`,
+`2de45c5b2af5f427d1884a5479a8601e04857c441535d86279b4854fabec3896`,
+`d07645a53bc3348d46a2addea066dae150f15ab285aa37dd8c12d40bf857882b`,
+and
+`c49d9e787f81e0129802ade3b9bab2de04cc3e13fb84fa2a4c5e32c53dde4f33`.
+No research computation, cross-family audit, human audit, or
+publication-level literature review has run.
