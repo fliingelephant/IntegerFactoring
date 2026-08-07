@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Integer Factoring Research — Pause Report</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #18202a;
+      --muted: #5f6b78;
+      --line: #dce3ea;
+      --paper: #ffffff;
+      --wash: #f3f6f8;
+      --blue: #2458a6;
+      --blue-soft: #eaf2ff;
+      --green: #166b4d;
+      --green-soft: #e9f7f0;
+      --amber: #865b00;
+      --amber-soft: #fff4d6;
+      --red: #9a3c30;
+      --shadow: 0 14px 42px rgba(24, 32, 42, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { background: var(--wash); }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 0%, #e6efff 0, transparent 28rem),
+        var(--wash);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      font-size: 17px;
+      line-height: 1.58;
+    }
+
+    main {
+      width: min(1040px, calc(100% - 32px));
+      margin: 38px auto 64px;
+    }
+
+    .hero, .section {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero { padding: clamp(28px, 5vw, 54px); }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--blue);
+      font-size: 0.78rem;
+      font-weight: 760;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      max-width: 760px;
+      margin-bottom: 16px;
+      font-size: clamp(2.1rem, 6vw, 4.2rem);
+      line-height: 1.02;
+      letter-spacing: -0.045em;
+    }
+
+    h2 {
+      margin-bottom: 18px;
+      font-size: clamp(1.45rem, 3vw, 2.15rem);
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+      font-size: 1.02rem;
+      line-height: 1.3;
+    }
+
+    .lead {
+      max-width: 740px;
+      margin-bottom: 24px;
+      color: #3f4a57;
+      font-size: 1.12rem;
+    }
+
+    .status-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .pill {
+      display: inline-flex;
+      gap: 7px;
+      align-items: center;
+      min-height: 34px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      color: var(--muted);
+      background: #f4f6f8;
+      border: 1px solid var(--line);
+      font-size: 0.82rem;
+      font-weight: 680;
+    }
+
+    .pill.paused {
+      color: var(--amber);
+      background: var(--amber-soft);
+      border-color: #ecd48a;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    .section {
+      margin-top: 22px;
+      padding: clamp(24px, 4vw, 42px);
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .metric {
+      min-height: 132px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: #fbfcfd;
+    }
+
+    .metric strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--blue);
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .metric.zero strong { color: var(--red); }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.35;
+    }
+
+    .plain-result {
+      margin: 22px 0 0;
+      padding: 18px 20px;
+      border-left: 4px solid var(--green);
+      border-radius: 10px;
+      color: #24503f;
+      background: var(--green-soft);
+    }
+
+    .candidate {
+      padding: clamp(22px, 4vw, 34px);
+      border: 1px solid #bad0f4;
+      border-radius: 16px;
+      background: linear-gradient(145deg, #f7faff, var(--blue-soft));
+    }
+
+    .candidate .label {
+      margin-bottom: 10px;
+      color: var(--blue);
+      font-size: 0.76rem;
+      font-weight: 780;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .candidate .big {
+      max-width: 790px;
+      margin-bottom: 14px;
+      font-size: clamp(1.3rem, 3vw, 1.8rem);
+      font-weight: 740;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    .candidate p:last-child { margin-bottom: 0; }
+
+    .bottleneck {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 18px;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .box {
+      min-height: 132px;
+      padding: 19px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--paper);
+    }
+
+    .box.good { border-color: #a9d9c6; }
+    .box.missing { border-color: #e4ca78; }
+
+    .arrow {
+      color: var(--muted);
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .lesson, .step {
+      padding: 19px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fbfcfd;
+    }
+
+    .lesson p, .step p, .box p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .step-number {
+      display: inline-grid;
+      width: 28px;
+      height: 28px;
+      margin-bottom: 12px;
+      place-items: center;
+      border-radius: 8px;
+      color: white;
+      background: var(--blue);
+      font-size: 0.82rem;
+      font-weight: 760;
+    }
+
+    details {
+      margin-top: 18px;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      background: #fbfcfd;
+    }
+
+    summary {
+      padding: 15px 18px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .details-body {
+      padding: 0 18px 18px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .details-body p:last-child { margin-bottom: 0; }
+
+    ol, ul { padding-left: 1.25rem; }
+    li + li { margin-top: 8px; }
+
+    code {
+      padding: 0.12em 0.36em;
+      border-radius: 5px;
+      background: #edf1f4;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.84em;
+      overflow-wrap: anywhere;
+    }
+
+    a { color: var(--blue); }
+
+    footer {
+      padding: 26px 6px 0;
+      color: var(--muted);
+      font-size: 0.8rem;
+      text-align: center;
+    }
+
+    @media (max-width: 800px) {
+      .metrics { grid-template-columns: repeat(2, 1fr); }
+      .grid-2 { grid-template-columns: 1fr; }
+      .bottleneck { grid-template-columns: 1fr; }
+      .arrow { transform: rotate(90deg); text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      main { width: min(100% - 18px, 1040px); margin-top: 10px; }
+      .hero, .section { border-radius: 14px; }
+      .metrics { grid-template-columns: 1fr; }
+    }
+
+    @media print {
+      html, body { background: white; }
+      main { width: 100%; margin: 0; }
+      .hero, .section { box-shadow: none; break-inside: avoid; }
+      details { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <p class="eyebrow">Integer factoring research</p>
+      <h1>Pause report</h1>
+      <p class="lead">
+        We do not have a complete factoring method. We do have a clear map of
+        many failed routes, several exact boundaries, and two focused open
+        problems that are worth more work.
+      </p>
+      <div class="status-row" aria-label="Report status">
+        <span class="pill paused"><span class="dot"></span>Goal paused</span>
+        <span class="pill">Saved 7 August 2026</span>
+        <span class="pill">Checkpoint <code>6ad66aa</code></span>
+      </div>
+    </header>
+
+    <section class="section" aria-labelledby="work-title">
+      <p class="eyebrow">1 · Work and results</p>
+      <h2 id="work-title">The search is now narrower and clearer.</h2>
+      <p>
+        I tested ideas from algebra, probability, geometry, graphs, integer
+        size, repeated relations, and several other areas. For each serious
+        claim, I used an unfriendly audit and then asked for a new proof from
+        the saved statement alone.
+      </p>
+
+      <div class="metrics" aria-label="Research totals">
+        <div class="metric">
+          <strong>28</strong>
+          <span>idea families examined</span>
+        </div>
+        <div class="metric">
+          <strong>57</strong>
+          <span>narrow results that passed the full check process</span>
+        </div>
+        <div class="metric">
+          <strong>51</strong>
+          <span>specific routes closed or sharply limited</span>
+        </div>
+        <div class="metric zero">
+          <strong>0</strong>
+          <span>complete general factoring algorithms</span>
+        </div>
+      </div>
+
+      <p class="plain-result">
+        <strong>What this means:</strong> Many attractive constructions can
+        create equations about the hidden factors. The failure usually occurs
+        one step later: the public computation cannot select the useful case
+        without doing work that is already as hard as factoring.
+      </p>
+
+      <details>
+        <summary>Latest unfinished result: linked root choices</summary>
+        <div class="details-body">
+          <p>
+            The latest candidate asked whether many linked two-way root choices
+            create many independent chances to expose a factor. After safe
+            simplification, one connected group has only one hidden two-way
+            switch. More public polynomial equations then do one of three things:
+            they accept both easy public choices; they expose a factor at once;
+            or they ask for the hidden mixed choice, which is the original hard
+            task.
+          </p>
+          <p>
+            The first audit found real scope errors. I corrected them. The fresh
+            audit stopped when the goal was paused. Therefore, this result is a
+            candidate, not a promoted result.
+          </p>
+        </div>
+      </details>
+    </section>
+
+    <section class="section" aria-labelledby="candidate-title">
+      <p class="eyebrow">2 · Best current candidate</p>
+      <h2 id="candidate-title">Sample a product that is zero.</h2>
+
+      <div class="candidate">
+        <div class="label">Most promising clean target</div>
+        <p class="big">
+          Generate an almost-uniform random pair <em>(a, b)</em> such that
+          <em>a × b</em> is zero modulo <em>N</em>.
+        </p>
+        <p>
+          For an odd composite number, at least one sample in three from the
+          ideal distribution exposes a proper factor. A simple greatest common
+          divisor calculation then reads the factor.
+        </p>
+
+        <div class="bottleneck" aria-label="Known result and missing step">
+          <div class="box good">
+            <h3>Known</h3>
+            <p>If the sampler exists and is fast, the full factoring method follows.</p>
+          </div>
+          <div class="arrow" aria-hidden="true">→</div>
+          <div class="box missing">
+            <h3>Missing</h3>
+            <p>Create that sample from bare <em>N</em>, without already knowing a factor.</p>
+          </div>
+        </div>
+      </div>
+
+      <details>
+        <summary>Second candidate: combine many rare relations</summary>
+        <div class="details-body">
+          <p>
+            Many individually rare relations can have a useful total success
+            rate. This validates the basic idea of combining many chances. But
+            the current exact evaluation needs about the fourth root of
+            <em>N</em> steps. That is much too slow. The open question is whether
+            one small summary can evaluate the whole pool at once.
+          </p>
+        </div>
+      </details>
+    </section>
+
+    <section class="section" aria-labelledby="lessons-title">
+      <p class="eyebrow">3 · Lessons from past trials</p>
+      <h2 id="lessons-title">The hard part is selection, not detection.</h2>
+
+      <div class="grid-2">
+        <article class="lesson">
+          <h3>A final gcd is only a detector.</h3>
+          <p>
+            It can read a difference that already exists. It does not create the
+            difference between the hidden prime parts.
+          </p>
+        </article>
+
+        <article class="lesson">
+          <h3>More chances are not automatically better.</h3>
+          <p>
+            A large pool helps only when we can build and test the pool in time
+            that grows slowly with the number of digits of <em>N</em>.
+          </p>
+        </article>
+
+        <article class="lesson">
+          <h3>Public algebra often keeps both sides together.</h3>
+          <p>
+            The same public rule usually acts in the same way on both hidden
+            prime parts. This keeps the useful mismatch out of reach.
+          </p>
+        </article>
+
+        <article class="lesson">
+          <h3>A weak size or probability hint can still matter.</h3>
+          <p>
+            This path remains open. But the hint must be created from bare
+            <em>N</em>, and a fast procedure must convert it into a factor.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="plan-title">
+      <p class="eyebrow">4 · Future plan</p>
+      <h2 id="plan-title">Resume at one exact point, then test three paths.</h2>
+
+      <div class="grid-2">
+        <article class="step">
+          <span class="step-number">1</span>
+          <h3>Finish the paused check</h3>
+          <p>
+            Re-audit the corrected linked-root result. If it passes, ask for a
+            new proof with no access to the original proof.
+          </p>
+        </article>
+
+        <article class="step">
+          <span class="step-number">2</span>
+          <h3>Attack the sampling problem</h3>
+          <p>
+            Look for a nonlocal or enlarged random process that produces the
+            required zero-product distribution.
+          </p>
+        </article>
+
+        <article class="step">
+          <span class="step-number">3</span>
+          <h3>Compress many relations</h3>
+          <p>
+            Search for one short calculation that tests a large pool of rare
+            relations without listing each relation.
+          </p>
+        </article>
+
+        <article class="step">
+          <span class="step-number">4</span>
+          <h3>Test non-algebraic hints</h3>
+          <p>
+            Ask whether bare <em>N</em> can produce a small but useful bias in
+            size, order, completion count, or another measurable quantity.
+          </p>
+        </article>
+      </div>
+
+      <details>
+        <summary>Exact resume record and source files</summary>
+        <div class="details-body">
+          <p>
+            First re-audit the candidate file with SHA-256
+            <code>b29bc27bc16766c52bbd8d4e83e6e7c4f67e49f7c2f6f615beddc11f3bffccd1</code>.
+            Do not promote it before both the audit and the independent rebuild pass.
+          </p>
+          <ul>
+            <li><a href="notes/Progress.md">Research progress</a></li>
+            <li><a href="REGISTRY.md">Route registry</a></li>
+            <li><a href="experiments/F49_coherent_dickson_root_kill/RESULT.md">Corrected candidate</a></li>
+            <li><a href="experiments/F49_coherent_dickson_root_audit/RESULT.md">First audit</a></li>
+            <li><a href="PROCESS_LESSONS.md">Process lessons</a></li>
+          </ul>
+        </div>
+      </details>
+    </section>
+
+    <footer>
+      Goal status: paused · No complete factoring algorithm claimed · Local checkpoint only
+    </footer>
+  </main>
+</body>
+</html>
