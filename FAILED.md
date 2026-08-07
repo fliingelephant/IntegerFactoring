@@ -2345,3 +2345,50 @@ or amplifier for a small deterministic bias, recover an exceptional frequency
 adaptively, use a dense nonlinear statistic of the joint ((x,h)) graph, design
 a correlated or nonuniform factor-free base source, or supply a new decoder
 whose guarantee uses typical nonzero values rather than sparse hits.
+
+## X55 — arbitrary residual reweighting does not make the local Gibbs wrapper an amplifier
+
+**Status:** promoted as P61 after two preserved failed audits, a passing fresh
+whole-proof re-audit of the twice-corrected theorem, and a strict proof-blind
+reconstruction.
+
+**Family:** F23.
+
+**Classification:** method failure for every residual-only target
+\(w(kx)\), one-free-coordinate Gibbs update, and coordinate or residual gcd
+decoder. It is not a lower bound for direct residual samplers, joint moves, or
+factoring.
+
+**What was tried.** Replace P59's one scalar activity by an arbitrary
+nonnegative arithmetic weight \(w(d)\) on the derived residual \(d=kx\). This
+can make the local conditional highly nonuniform and can put deliberate mass
+on useful residues.
+
+**Exact obstruction.** At a held unit, the new residual has exactly the
+normalized law \(\nu_w\). At a held zero, the refreshed coordinate is exactly
+uniform. Before the first monitored hit, these are the only two cases. The
+per-refresh factor hazard is therefore at most
+
+\[
+\max\{\nu_w(H_N),|H_N|/N\}.
+\]
+
+If the first term is uniformly useful and its weight description and exact
+sampler can be built in expected polynomial time from bare \(N\) without
+advice, then sampling the public unit conditional directly already factors.
+If it is small, the local wrapper cannot amplify it. This pathwise statement
+covers every safe warm start for the named screens.
+
+**Evidence.** The twice-corrected candidate, passing re-audit, and proof-blind
+reconstruction have hashes
+`e2c9fcba130bb64b21c5f53dfac546cebf1b4a70603fb072f642518d1a8e1826`,
+`721b707c9af57cc13af681e0ff27a180b54544354044ddb336b95a8225c67819`,
+and `f56fc521ae8deab489999c59e56ec02944b6d8377c31ac89717676e23f1c4a6b`.
+The two failed audits remain preserved. No computation or cross-family audit
+was used.
+
+**What would make a retry materially new.** Change the move or the information
+carrier: use a joint block update, a weight that depends on \((k,x)\) beyond
+their product, several interacting residuals, a valuation-amplifying lift, a
+nonlocal arithmetic proposal, or a global transcript decoder. Another
+residual-only local reweighting is covered by P61.

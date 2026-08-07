@@ -7069,3 +7069,98 @@ SHA-256 hashes
 and `a87a7016f48a2583165cd8b8db89b76e3a8dbba31154393ce065df3ccfc5570d`.
 The computation manifest has hash
 `b3fd206c0edba6903ad79444cf5a380207b970eff9b2a8eb80aed1da7cd5e8a1`.
+
+## P61 — a residual-only local Gibbs wrapper cannot amplify factor mass
+
+**Status:** promoted narrow sampler reduction and pathwise obstruction.
+
+**Verification record:** the first hostile audit accepted the core probability
+theorem but required five scope corrections. A fresh re-audit found two more
+interface errors: nonuniform factor advice could be hidden in the weight
+description, and the warm-start scope was too narrow. The twice-corrected
+artifact passed a second fresh whole-proof audit and a strict proof-blind
+reconstruction. No cross-family or human audit has run.
+
+Let \(R=\mathbb Z/N\mathbb Z\), let \(w:R\to\mathbb R_{\ge0}\) satisfy
+\(w(0)>0\), and give \((k,x)\) unnormalized weight \(w(kx)\). Put
+
+\[
+W=\sum_{d\in R}w(d),
+\qquad
+\nu_w(d)=\frac{w(d)}W.
+\]
+
+Conditioned on \(kx=0\), the target is exactly uniform on
+\(\Omega_N=\{(k,x):kx=0\}\). If one coordinate is held at \(b\), the exact
+one-coordinate Gibbs law is
+
+\[
+Q_{b,w}(a)=\frac{w(ab)}{\sum_{y\in R}w(yb)}.
+\]
+
+At a held unit, the new residual \(D=ab\) has law \(\nu_w\). At a held zero,
+the refreshed coordinate is uniform on \(R\). Define
+
+\[
+H_N=\{d:1<\gcd(d,N)<N\},
+\qquad
+h_N=|H_N|,
+\qquad
+\theta_w=\nu_w(H_N).
+\]
+
+There is an immediate direct reduction. Suppose one uniform public algorithm
+takes only bare \(N\), constructs a polynomial-size description of \(w_N\)
+without advice, and exactly samples \(Q_{1,w_N}\), with all construction, bit,
+and fair-bit costs under one fixed expected polynomial bound. If
+\(\theta_{w_N}\) is uniformly inverse-polynomial, independent direct calls to
+that conditional followed by gcd factor in expected polynomial time. The Gibbs
+chain adds nothing to this source.
+
+Conversely, monitor both coordinates and the residual during the local chain.
+From every safe warm start, and under deterministic, random, lazy, or
+past-measurable adaptive one-coordinate scan, the complete survival history
+leaves the held coordinate either zero or a unit. The next conditional hazard
+is therefore at most
+
+\[
+\rho_w=\max\left\{\theta_w,\frac{h_N}{N}\right\}.
+\]
+
+For the first monitored hit time \(\tau\),
+
+\[
+\Pr(\tau>t)\ge(1-\rho_w)^t,
+\qquad
+\Pr(\tau\le t)\le t\rho_w,
+\qquad
+\mathbb E\tau\ge\frac1{\rho_w}
+\]
+
+when \(\rho_w>0\); if \(\rho_w=0\), no hit occurs. For balanced distinct
+semiprimes, \(h_N/N=O(N^{-1/2})\). For \(N=p^2\),
+\(h_N/N<N^{-1/2}\). Thus negligible \(\theta_{w_N}\) gives negligible success
+for every polynomial number of local refreshes and a superpolynomial expected
+delay. The sharper condition
+
+\[
+\theta_{w_N}=O\!\left(N^{-1/2}\operatorname{poly}(\log N)\right)
+\]
+
+gives
+\(\mathbb E\tau=\Omega(\sqrt N/\operatorname{poly}(\log N))\).
+
+P61 is not a factoring lower bound and does not rule out constructing a useful
+residual law. It proves only that the named residual-only one-coordinate
+wrapper cannot amplify such a law. Joint block moves, genuinely joint
+\((k,x)\)-weights, interacting residuals, valuation lifts, nonlocal proposals,
+global transcript decoders, and different arithmetic screens remain open.
+
+The twice-corrected candidate, passing re-audit, and proof-blind reconstruction
+have SHA-256 hashes
+`e2c9fcba130bb64b21c5f53dfac546cebf1b4a70603fb072f642518d1a8e1826`,
+`721b707c9af57cc13af681e0ff27a180b54544354044ddb336b95a8225c67819`,
+and `f56fc521ae8deab489999c59e56ec02944b6d8377c31ac89717676e23f1c4a6b`.
+The two preserved failed audits have SHA-256 hashes
+`4d830ab8cbcb4a5b5e6cd23b2ba2fdf9cd2c5a7a8df046a1968d700eaae24124`
+and `bbbdea3abe7373c86d50b52de3a34aed2657d5dc00a2666281dd1897f5507ec6`.

@@ -1383,3 +1383,30 @@ need exponentially many samples.
 whole structured graph rather than wait for a rare value. The open operations
 are exact small-bias amplification, adaptive exceptional-frequency recovery,
 dense nonlinear processing, or a deliberately correlated base source.
+
+### C58 — arbitrary residual weights do not make the local sampler an amplifier
+
+**Status:** verifier-backed and promoted as P61/X55. Two hostile audits found
+seven real scope or interface errors. The twice-corrected theorem passed a
+fresh whole-proof audit and a strict proof-blind reconstruction. No cross-family
+audit has run.
+
+**Verified boundary.** Give a pair \((k,x)\) any nonnegative weight that
+depends only on its product \(kx\), and refresh one coordinate exactly. At a
+held unit, the new product has exactly the chosen residual law. At a held zero,
+the new coordinate is uniform. These are the only cases before a gcd finds a
+factor. Thus the local wrapper cannot raise the per-step success chance above
+the larger of the residual law's existing factor mass and the raw density of
+proper nonunits.
+
+If a useful residual law and its exact sampler can be built uniformly from
+bare \(N\) in expected polynomial time, that sampler already factors directly.
+The wrapper adds no amplification. If its factor mass is small, polynomially
+many local refreshes remain ineffective on balanced semiprimes and prime
+squares.
+
+**Algorithmic consequence.** We are not waiting for a better scalar weight.
+A real sampler retry must change an operation: update both coordinates jointly,
+couple several residuals, use a lift, or decode a whole trajectory. P61 does not
+rule out a direct factor-correlated residual source; it says that finding one
+would already be the main algorithmic breakthrough.
