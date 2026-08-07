@@ -8353,3 +8353,104 @@ proof-blind statement, and corrected reconstruction have SHA-256 hashes
 and `1a0d7f05721045fa0a8fb5295f674efb75f51aae47bd1ec2f63e0b6a2b4ba7f0`.
 No computation, cross-family audit, human audit, or publication-level
 literature review supports this theorem.
+
+## P74 — one square-class closure adds one canonical root coset
+
+**Status:** promoted exact incremental decoder theorem after hostile audit and
+strict proof-blind reconstruction. This is not a closure-frequency theorem, a
+selector, or a factoring algorithm.
+
+Let $N>1$ be odd, and let indexed positive relation values
+$A_1,\ldots,A_m$ satisfy $A_i\equiv1\pmod N$. After complete exact gcd-free
+refinement, let
+
+\[
+M\in\mathbb F_2^{r\times m},
+\qquad K=\ker M
+\]
+
+represent their rational square classes. For $x\in K$, put
+
+\[
+\prod_iA_i^{x_i}=R(x)^2,
+\qquad
+\psi(x)=R(x)\pmod N,
+\]
+
+where $R(x)>0$ is the exact integer root. The overlap identity
+
+\[
+R(x)R(y)
+=R(x+y)\prod_{i:x_i=y_i=1}A_i
+\]
+
+shows that $\psi:K\to\mu_2(N)$ is a homomorphism. Let
+$H=\psi(K)$ be the complete old root image.
+
+Append one indexed value $A_{m+1}\equiv1\pmod N$, jointly refine, and write
+the new parity matrix as $[M\mid b]$. If $b$ is outside the old column span,
+the kernel is exactly $K\times\{0\}$ and there is no new decoder output. If
+$b$ closes, choose any $c$ with $Mc=b$ and put $z_c=(c,1)$. Then
+
+\[
+K'=(K\times\{0\})\oplus\langle z_c\rangle.
+\]
+
+The induced root and full new root image are
+
+\[
+s_c=\sqrt{A_{m+1}\prod_iA_i^{c_i}}\pmod N,
+\qquad
+H'=\langle H,s_c\rangle.
+\]
+
+Different solutions need not give the same literal root. If $c'$ is another
+solution, then
+
+\[
+s_{c'}=s_c\psi(c'+c).
+\]
+
+Therefore the exact canonical object added by the closure is the coset
+
+\[
+s_cH\in\mu_2(N)/H,
+\]
+
+not a preferred residue representative.
+
+Now suppose that a basis of the old kernel has already been screened with
+both sign gcds and no proper factor was found. For arbitrary odd, possibly
+nonsquarefree $N$, every non-global root of one splits the full odd
+prime-power CRT components between the two signs. Hence failed old basis
+screens prove
+
+\[
+H\subseteq G=\{1,-1\}.
+\]
+
+At the next closure, the enlarged complete decoder has a factor-bearing root
+if and only if $s_c\notin G$. The class $s_cG$ is then independent of the
+chosen lift. Thus one induced root test, together with the already screened
+old basis, is complete. Before the old decode, only the $H$-coset is
+canonical; replacing $H$ by the global signs can be false.
+
+This gives an exact two-gate target for feedback:
+
+1. the new parity column must close in the current square-class span;
+2. its induced root coset must be non-global.
+
+At $N=21$, two indexed copies of $22$ pass the first gate but have global
+root $22\equiv1$. At $N=55$, the zero-column relation $21^2$ passes both
+gates and its root exposes $5$ and $11$. The theorem proves exact incremental
+accounting only. It gives no distribution or all-input method that makes
+either gate occur.
+
+The candidate, hostile audit, proof-blind statement, and proof-blind
+reconstruction have SHA-256 hashes
+`87738f81027c00ded3e4861550b0de8faffa8fbc5787751780a406773d631328`,
+`64200e4aef7643e078f05011c465d5124ca211a0cbc9abc88dc0ab1191005d9d`,
+`199d4b6eb19c780a08d2f4acf668236ecdfe2307fcb57ed0d7ecde8432da65da`,
+and `d23f801dd93b3b9d3b195ace94b8c1790fb5ef225a1cf516d4146474abaa837b`.
+No computation, cross-family audit, human audit, or publication-level
+literature review supports this theorem.

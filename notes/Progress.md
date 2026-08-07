@@ -1709,3 +1709,24 @@ feedback sampler must first create closure and must then make the decoded root
 non-global. P73 proves the first event's exact accounting, but supplies neither
 its frequency nor the second event. It therefore sharpens the selector target
 without giving a factoring algorithm.
+
+### C71 — a closure contributes one canonical root coset
+
+**Status:** promoted as P74 after hostile audit and strict proof-blind
+reconstruction. No computation, cross-family audit, or human audit ran.
+
+**Verified boundary.** A closing feedback column adds exactly one new kernel
+direction. Its literal root depends on the chosen linear lift, but only by an
+old decoder root. The canonical new information is therefore one coset modulo
+the old root image.
+
+After the old kernel basis has been screened without success, the old image
+contains only the two global signs. The new closure is factor-bearing exactly
+when one induced root is non-global. One new root test is then complete for
+the enlarged decoder, including for odd nonsquarefree inputs.
+
+**Algorithmic consequence.** Feedback has two separate gates: square-class
+closure and a non-global root label. P74 makes the second gate exact and cheap
+after closure. It does not make either gate frequent. The remaining work is
+still source-side: generate polynomially many additions for which both gates
+occur with an all-input inverse-polynomial law.
