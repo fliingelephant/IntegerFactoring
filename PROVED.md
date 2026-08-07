@@ -7585,3 +7585,193 @@ and `47724940db357442e06c30c1fdd50727ceab5b7ce1f5ac303dbb2784577f7d1c`.
 The passing re-audit pinned mathematical-content hash
 `5fc697fe596b37b973813004a2463f5a234dc56c6be5f44a88d094a4a1b124d5`;
 the later candidate changes were status and scope-label edits only.
+
+## P66 — any explicit polynomial-size congruence list has a complete factor-free square decoder
+
+**Status:** promoted deterministic conditional decoder. This is not a source
+theorem and not a factoring algorithm.
+
+**Prior-art boundary:** gcd-free or coprime bases are known infrastructure;
+see Bach--Shallit and Bernstein. Detecting multiplicative relations with such
+bases is also standard. The promoted project result is the exact synthesis and
+scope below. No publication-level novelty is claimed without a dedicated
+literature review.
+
+Let $a_1,\ldots,a_m$ be positive integers, let $N\ge3$ be odd, and suppose
+each $a_i$ comes with a known unit $x_i\bmod N$ such that
+
+\[
+x_i^2\equiv a_i\pmod N.
+\]
+
+Put
+
+\[
+L=m+\sum_i\left\lceil\log_2(a_i+1)\right\rceil,
+\qquad
+n=\left\lceil\log_2(N+1)\right\rceil.
+\]
+
+There is a deterministic algorithm polynomial in $L+n$ that uses gcd, exact
+division, exact integer square tests, and binary linear algebra, but no prime
+factorization, to compute pairwise-coprime blocks $g_j$ and exponent
+coordinates
+
+\[
+a_i=\prod_j g_j^{e_{ji}}.
+\]
+
+One parity row $e_{ji}\bmod2$ for each nonsquare block gives a matrix $M$
+with the exact equivalence
+
+\[
+Mc=0
+\quad\Longleftrightarrow\quad
+\prod_i a_i^{c_i}\text{ is an integer square}.
+\]
+
+For every supplied $c\in\ker M$, its exact positive root $R(c)$ is computable
+in polynomial time. The theorem supplies an evaluator; it does not list all
+$2^{\dim\ker M}$ vectors. Define
+
+\[
+X(c)=\prod_i x_i^{c_i}\pmod N,
+\qquad
+\rho(c)=R(c)X(c)^{-1}\pmod N.
+\]
+
+The positive-root overlap identity makes $\rho$ a homomorphism from
+$\ker M$ to the square roots of $1\bmod N$. Therefore, if any square subset
+has $R(c)\not\equiv\pm X(c)\pmod N$, every binary basis of $\ker M$ contains
+a vector with the same non-global property. Testing only the basis vectors via
+
+\[
+\gcd(R(c)-X(c),N),
+\qquad
+\gcd(R(c)+X(c),N)
+\]
+
+then returns proper divisors. This covers arbitrary odd, possibly
+nonsquarefree, $N$. Inputs $1$, duplicate integers, square integers, composite
+nonsquare blocks, and repeated prime powers are all retained correctly.
+Nonunit $x_i$ are outside the homomorphism premise; a proper
+$\gcd(x_i,N)$ is already a factor.
+
+P66 meets P01 with equality. It computes the true finite-list square-class
+rank and does not compress it. It also does not make a dependency exist or
+make a normalized root non-global. For inverse quotients, use
+$a_i=Nk_i+1$ and $x_i=1$. The complete remaining step is source-side: produce
+such a useful list from bare $N$ with an all-input inverse-polynomial law.
+
+The final candidate, failed first audit, passing fresh re-audit, and strict
+proof-blind reconstruction have SHA-256 hashes
+`f30c5c1b25abe0d0a5df11f84afd2cf5e70ce4b3dcea9d368b25e2eb5b4022bf`,
+`c826f43ae4d86b13d8910195ef1c41fda8895cdc7731f78af7fa35663f6d4314`,
+`7f3107bec589462939d6ab02a135c86cf510cffea696f8439c9e2169c8a6f3e2`,
+and `d3b61761b7bd980fc5fa3019f5106413c0d0d9740a60ab21a85ff0d64887112c`.
+The passing re-audit pinned mathematical-content hash
+`a103f1d42350e67ccda23792fc72b2d84beee2436c920678e3cfb83e5c03520c`;
+the later candidate change was status-only. No research computation,
+cross-family audit, or human audit ran.
+
+## P67 — inverse-quotient trajectories have a sharper global bound and exact adjacent laws
+
+**Status:** promoted narrow structural theorem and sublogarithmic contraction
+obstruction. It proves neither polynomial trajectory depth nor factoring.
+
+For a trajectory $u_0,\ldots,u_L$, let $v_i$ be the canonical inverse at
+each unit source state and put
+
+\[
+r_i=u_i-u_{i+1},
+\qquad
+t_i=N-v_i.
+\]
+
+Every transition satisfies
+
+\[
+Nr_i=u_i t_i+1.
+\]
+
+The $t_i$ are positive and distinct. Combining this fact with logarithmic
+telescoping gives the all-input bound
+
+\[
+\boxed{
+\frac{L(L+1)}2<N\log N,
+\qquad
+L<\sqrt{2N\log N}.
+}
+\]
+
+This includes a last transition to a proper nonunit. It is strictly sharper
+than P62's $N^{1/2+o(1)}$ bound, but it is still exponential in the input bit
+length.
+
+When two consecutive unit transitions exist, define
+
+\[
+\delta_i=r_i t_{i+1}-r_{i+1}t_i.
+\]
+
+Then $\delta_i$ is a positive integer and
+
+\[
+\delta_i u_i=r_i^2t_{i+1}+r_{i+1}-r_i,
+\qquad
+N\delta_i=r_i t_i t_{i+1}+t_{i+1}-t_i.
+\]
+
+In particular, if $r_i,t_i,t_{i+1}\le B$, then
+$B^3+B\ge N+1$. Also, $t_i/r_i$ and $v_i/u_{i+1}$ are the two Farey parents
+of $N/u_i$, with
+
+\[
+v_i r_i-t_i u_{i+1}=1.
+\]
+
+The next transition uses $N/u_{i+1}$, not $v_i/u_{i+1}$. This numerator reset
+is why the local Farey identity does not itself give Euclidean descent.
+
+There is an explicit logarithmic-depth family. For positive integer $L$, put
+
+\[
+M=\operatorname{lcm}(2,\ldots,L+1),
+\quad
+A=M^2+M+1,
+\quad
+B=(M+1)^2,
+\quad
+N=AB.
+\]
+
+Then $N$ is a nonsquare composite, $1<B/A<2$, and
+
+\[
+L+1\longrightarrow L\longrightarrow\cdots\longrightarrow1
+\]
+
+is an all-unit trajectory with $\log N=\Theta(L)$. The family is not hard:
+the first Fermat square test factors $N$ into $A$ and $B$. Its exact force is
+narrower. For every nonnegative integer-valued $h(N)=o(\log N)$ and every
+fixed $c<1$, these inputs eventually satisfy
+
+\[
+D_N^{h(N)}(L+1)>c(L+1).
+\]
+
+Thus no all-input proof can promise a fixed multiplicative contraction within
+sublogarithmically many steps. A different invariant may still prove a
+polynomial depth bound.
+
+The final candidate, failed first audit, passing fresh re-audit, and strict
+proof-blind reconstruction have SHA-256 hashes
+`8d81f35c7dc3e20495acff9bffd71cd40becc224137e2cb95a7b68bfbb57229e`,
+`d92188adcfbfee156b117495a0e651415f27368118e26c768cb3c7a0bebc5586`,
+`b1189aafb5777e30e2fdff5b6153cb61c1690beb6e55465e6690f0a38f9f1607`,
+and `1779aaaa7297ec31a0ecf0b5b6be907df36b44ec3ad14010d91d0de41007e5fb`.
+The passing re-audit pinned mathematical-content hash
+`e65df85135f4793096d49147ba066682c9afd134b7e166e5386bc1898698b05f`;
+the later candidate change was status-only. No research computation,
+cross-family audit, or human audit ran.

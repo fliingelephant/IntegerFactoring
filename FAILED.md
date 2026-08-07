@@ -2575,3 +2575,49 @@ deliberately correlated start rule, or a decoder that acts on a dispersed
 batch. A statistic other than exact output distance must state its own
 factor-correlation and inverse-polynomial success law. More independent draws
 with the same polynomial width are covered by P65/X59.
+
+## X60 — no fixed contraction can hold within every sublogarithmic descent block
+
+**Status:** promoted as the narrow obstruction inside P67 after a failed first
+audit, a passing fresh whole-artifact re-audit, and strict proof-blind
+reconstruction.
+
+**Family:** F26.
+
+**Classification:** method failure for any proof that claims one fixed
+multiplicative decrease after $o(\log N)$ inverse-quotient transitions on every
+input. It is not evidence against a polynomial trajectory bound based on a
+different global potential.
+
+**Exact obstruction.** For positive integer $L$, let
+
+\[
+M=\operatorname{lcm}(2,\ldots,L+1),
+\quad
+N=(M^2+M+1)(M+1)^2.
+\]
+
+Then
+
+\[
+L+1\to L\to\cdots\to1
+\]
+
+is an exact unit-state trajectory and $\log N=\Theta(L)$. For every
+nonnegative integer-valued $h(N)=o(\log N)$,
+
+\[
+\frac{D_N^{h(N)}(L+1)}{L+1}\longrightarrow1.
+\]
+
+Thus no fixed factor $c<1$ can satisfy
+$D_N^{h(N)}(u)\le cu$ after a sublogarithmic block for all inputs and starts.
+
+**Scope.** The family is immediately Fermat-easy and has only logarithmic
+depth. It neither gives a hard factoring family nor rules out a
+$\operatorname{poly}(\log N)$ depth theorem.
+
+**What would make a retry materially new.** Use the cumulative distinct
+inverse labels, the positive adjacent determinant identities, or another
+global invariant. Do not assume that the local Farey parent is the next
+trajectory fraction; the numerator resets to $N$.

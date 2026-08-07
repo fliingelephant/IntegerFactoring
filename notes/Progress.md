@@ -1510,3 +1510,56 @@ longer only one scalar identity followed by one gcd. The missing theorem is
 source-side: prove that some polynomial-time source from bare $N$ creates a
 squareclass dependency whose root is non-global often enough. Completion bias
 alone is not yet factor bias, and P65 is not a factoring algorithm.
+
+### C63 — exact batch decoding is complete; the missing object is the useful list
+
+**Status:** verifier-backed and promoted as P66. The first hostile audit found
+a false novelty boundary and an incomplete complexity parameter. The corrected
+and strengthened theorem passed a fresh whole-artifact re-audit and strict
+proof-blind reconstruction. No cross-family or human audit has run.
+
+**Verified boundary.** We do not need a short interval, small factors, or the
+prime factorization of the relation values to decode exact square relations.
+Ordinary gcd refinement splits any explicit polynomial-size list into
+pairwise-coprime blocks. One square test per block and binary linear algebra
+then describe every square subset exactly. Testing one basis of those subsets
+cannot miss a factor-bearing normalized root.
+
+The gcd-free basis is known technology. The useful project result is the clean
+separation it gives us: decoder difficulty is finished for exact relations of
+polynomial total size. The decoder keeps the full true rank. It does not create
+a relation and does not compress the hard information.
+
+**Algorithmic consequence.** The target is now precise. A source from bare $N$
+must make a polynomial-size list with two properties: its integer square
+classes must have a dependency, and at least one dependency must compare two
+different local square roots. The second property matters. A list can contain
+many exact square relations and still give only global $+1$ or $-1$ roots.
+
+### C64 — descent has more structure, but its runtime gap remains exponential
+
+**Status:** verifier-backed and promoted as P67/X60 after a failed first audit,
+a passing fresh whole-artifact re-audit, and strict proof-blind reconstruction.
+No computation, cross-family audit, or human audit ran.
+
+**Verified boundary.** Distinct inverse labels improve the unconditional
+trajectory bound to
+
+\[
+L<\sqrt{2N\log N}.
+\]
+
+Two adjacent steps also satisfy exact positive determinant identities. Each
+step is a Farey decomposition, but the next step resets the numerator. This is
+why the local continued-fraction picture does not become an ordinary Euclidean
+descent.
+
+An explicit nonsquare balanced composite family moves only from $u$ to $u-1$
+for logarithmically many steps. This rules out every fixed contraction within
+$o(\log N)$ steps. The family is factored by the first Fermat test, so it says
+nothing about hard factoring inputs.
+
+**Algorithmic consequence.** A polynomial depth theorem is still possible,
+but it must use a cumulative invariant rather than a fixed local contraction.
+Even such a theorem would only make the transcript cheap. P66 shows that a
+separate non-global relation law is still necessary.
