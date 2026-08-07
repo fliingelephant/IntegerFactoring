@@ -176,11 +176,11 @@ The registry entry was inserted before launch.
   explicitly preserves source exit status, replay the same seeds and inputs,
   and compare all rank/root fields with attempt 1.
 
-## F59-D02 — preregistered deterministic-offset certificate replay
+## F59-D02 — completed deterministic-offset certificate replay
 
-- Status: preregistered but not yet authorized for launch. No D02 source
-  execution has occurred. Its source and runner inherited the two SA01 defects;
-  both will be amended and rehashed before launch.
+- Status: completed successfully and passed F59-A02 plus the hostile repaired-
+  path source re-audit. The source gcd-checks the final produced endpoint. The
+  runner preserves the timeout/Python status and refuses to overwrite output.
 - Purpose: explain the 19 global-only offset dependencies retained by D01.
   In particular, separate the guaranteed singleton
   $(N-1)^2$ from any additional arithmetic relation, and determine whether
@@ -198,6 +198,17 @@ The registry entry was inserted before launch.
   `ac77fea0c4e53c65abec85a0187d0b249ca7e844cd8ac7c2c63fde2ae5294358`.
 - Superseded prelaunch runner SHA-256:
   `ac0021d1ca5911be2c5bdf753cc579285d3ebe9c487e8832ebfd41020904228a`.
+- Authoritative launch source SHA-256:
+  `05341e985a0e5c72911d8d118f2f33dda72241e468a190bd3355f481f348cf13`.
+- Authoritative launch runner SHA-256:
+  `c4db954bd60311adc2aebd9fcbca3acaec73a2e46e5b8cc8066c0aadcac780e5`.
+- Authoritative log SHA-256:
+  `50b3db5e8fe8123f334fd395d8c4f3fb05a839d41e8d9b7a644e198bc5cae018`.
+- Authoritative output SHA-256:
+  `23c1272fdaebfd932fb727b75d73e47f46b34a0d468b761c39956b9075073b6e`.
+- Prelaunch repair scope: one final-endpoint gcd check and explicit runner exit
+  propagation only. Inputs, relation lists, decoder, variants, output fields,
+  timeout, and decision rules are unchanged.
 
 For each input, D02 reconstructs the deterministic starts $N-c$ for
 $c=1,\ldots,n$ and follows at most $n$ transitions. It applies the same
@@ -231,3 +242,219 @@ Decision rule:
 - A non-global root is a discovery trigger.
 - Every outcome remains finite deterministic evidence. It cannot prove an
   all-input source law or obstruction.
+
+Observed outcome: the full numeric kernel dimension is 19. Twelve basis
+vectors are the forced $(N-1)^2$ singleton. Seven survive both deletion
+variants. All 19 basis roots are global; no non-global root was found. F59-D03
+later proves that all 19 tested basis vectors are symbolic global decoys.
+
+## F59-D01-R2 — completed corrected same-seed replay
+
+- Status: completed successfully and passed F59-A03 plus the hostile repaired-
+  path source re-audit.
+- Purpose: repair the two SA01 defects while preserving D01's inputs, PRNG
+  order, relation lists, decoder, metrics, and decision rules exactly.
+- Inputs, ratios, batch caps, trial counts, master seed, and child-seed order:
+  identical to F59-D01.
+- Core source: `scripts/F59_replay_core.py`.
+- Main source: `scripts/F59_D01_replay.py`.
+- Runner: `run_F59_D01_replay.sh`.
+- Timeout: 600 seconds, enforced by `/opt/homebrew/bin/timeout 600s`.
+- Runtime: `/opt/homebrew/bin/python3`, expected Python 3.14.5.
+- Log: `logs/F59-D01-R2.log`.
+- Output: `output/F59-D01-R2.json`.
+- Preregistered core SHA-256:
+  `7b2b1a1d1b0bc46ccaaec6a178f4ff96aa7ecc26e4eb2a441521128ef14fbec9`.
+- Preregistered main-source SHA-256:
+  `a95a28233e05593c00be40a56b957fc1f41cceab3ea7dcf076996eb6ccc1347c`.
+- Preregistered runner SHA-256:
+  `a54cb42fa1286f8b6d66fb83db8192a8deb9fa36a80984cf7c919af2947b27cd`.
+- Authoritative log SHA-256:
+  `dc684686e111283c9ee727514b03d333e874cbac02d83a1e9bb3b21866e37bdb`.
+- Authoritative output SHA-256:
+  `d6a56efdeb8cdebe5253fc0b26c65b6580deef7acc89e4a40cf227cc0311fe79`.
+- Preserved attempt-1 checkpoint: git commit `ec62343` contains the exact
+  source, runner, output, log, audits, and failed disposition.
+
+The only mathematical source change is an endpoint gcd check after the final
+allowed transition. It records a factor if the produced endpoint is a proper
+nonunit. It does not append another relation and cannot change a relation list,
+rank, kernel, or basis root. A new self-check fixes the exact counterexample
+$N=15,u=7$, one-step cap, whose produced endpoint is $6$ and whose gcd is $3$.
+
+The runner refuses to overwrite an existing R2 output. It redirects the source
+log without a pipeline, captures the timeout/Python status, prints the log,
+and exits with the captured status.
+
+Required post-run comparison:
+
+- all 192 child seeds and every input label must match D01;
+- every relation count, quotient metric, gcd-refinement metric, rank, kernel,
+  basis-root count, and useful certificate must match D01;
+- the 22 independent rejection events must match;
+- random-tail and offset direct-event counts may only stay equal or increase;
+- any other difference is a replay failure;
+- every result remains finite evidence only.
+
+Observed outcome: every declared non-direct field and every one of the 192
+child seeds matches D01. Independent, random-tail, and offset direct-event
+counts also match exactly. Thus the endpoint repair changes none of the finite
+rank or root evidence in this replay.
+
+## F59-A02 — completed independent offset-certificate audit
+
+- Status: completed with verdict `pass`.
+- Audited run: F59-D02.
+- Source: `scripts/F59_A02_offset_audit.py`.
+- Runner: `run_F59_A02.sh`.
+- Timeout: 60 seconds, enforced by `/opt/homebrew/bin/timeout 60s`.
+- Runtime: `/opt/homebrew/bin/python3`, expected Python 3.14.5.
+- Log: `logs/F59-A02.log`.
+- Output: `output/F59-A02.json`.
+- Preregistered source SHA-256:
+  `8c55170679b5cf5d1f26528cd4c972b00bed75adba05e01eceafd36a0586b0ae`.
+- Preregistered runner SHA-256:
+  `479956d3338b5359a603256cb9e7838ade841e90f543ce295de6345a98270c37`.
+- Pinned D02 source SHA-256:
+  `05341e985a0e5c72911d8d118f2f33dda72241e468a190bd3355f481f348cf13`.
+- Pinned D02 runner SHA-256:
+  `c4db954bd60311adc2aebd9fcbca3acaec73a2e46e5b8cc8066c0aadcac780e5`.
+- Pinned D02 log SHA-256:
+  `50b3db5e8fe8123f334fd395d8c4f3fb05a839d41e8d9b7a644e198bc5cae018`.
+- Pinned D02 output SHA-256:
+  `23c1272fdaebfd932fb727b75d73e47f46b34a0d468b761c39956b9075073b6e`.
+- Authoritative audit log SHA-256:
+  `9322513b3e042295602c4eebb94f3ee565c406656ee2d841ff2b006501933a08`.
+- Authoritative audit output SHA-256:
+  `baae2e6069a0ae702038e9b6f91765338c30591507a409a230308ccdda420cc6`.
+
+The audit independently reconstructs all offset trajectories, including the
+final capped endpoint. It verifies primality and products, direct gcd events,
+deduplication, every basis support, exact integer-square roots, root signs,
+endpoint parity, loop flags, gcd certificates, and all aggregate counts. It
+also records the complete arithmetic-only certificate summaries. A pass is an
+artifact and finite-certificate result only; it is not an all-input theorem.
+
+## F59-A03 — completed corrected-replay comparison audit
+
+- Status: completed with verdict `pass`.
+- Audited runs: F59-D01 and F59-D01-R2.
+- Source: `scripts/F59_A03_replay_audit.py`.
+- Runner: `run_F59_A03.sh`.
+- Timeout: 60 seconds, enforced by `/opt/homebrew/bin/timeout 60s`.
+- Runtime: `/opt/homebrew/bin/python3`, expected Python 3.14.5.
+- Log: `logs/F59-A03.log`.
+- Output: `output/F59-A03.json`.
+- Preregistered source SHA-256:
+  `d87a925d4c00e83e82b23c926450d612cf1a612429ec6ac069ba1aa525f3b867`.
+- Preregistered runner SHA-256:
+  `2c8388ded0c25e7393826b548b82538acb93819ae05283c880563e3f85d41e6f`.
+- Pinned R2 log SHA-256:
+  `dc684686e111283c9ee727514b03d333e874cbac02d83a1e9bb3b21866e37bdb`.
+- Pinned R2 output SHA-256:
+  `d6a56efdeb8cdebe5253fc0b26c65b6580deef7acc89e4a40cf227cc0311fe79`.
+- Authoritative audit log SHA-256:
+  `8e569990ffb680571bb22893e8fc148c0786388ece2fcb6fe975332e982d5b7b`.
+- Authoritative audit output SHA-256:
+  `10a9c0c1e4da7a9c4ade1cdc7b2fc8c1a102fef62a95e8890fd7b4caea0092f4`.
+
+The audit pins both executions. It requires all 12 inputs, all 192 child
+seeds, relation counts, quotient metrics, refinement metrics, ranks, kernel
+dimensions, and root results to match exactly. Independent-source direct gcd
+events must also match exactly. Tail and offset direct events may only
+increase, and the increase must agree with the recomputed summaries. Any
+other difference fails the replay.
+
+## F59-D03 — completed R05 symbolic-specialization classification
+
+- Status: R05 completed successfully. R01 failed during Sage import. R02 timed out while
+  factoring already-split quadratics. R03 removed that factorization but still
+  timed out because it represented every trajectory step as a Sage object.
+  R04 replaced those objects but redundantly lifted every trajectory and was
+  stopped at the same limit.
+- Purpose: decide whether D02's numeric square dependencies are generic
+  algebraic identities or dependencies created only after substituting the
+  tested integer $N$.
+- Input: the pinned F59-D02 output.
+- Source: `scripts/F59_D03_symbolic_specialization.py`.
+- Runner: `run_F59_D03.sh`.
+- Timeout: 120 seconds, enforced by `/opt/homebrew/bin/timeout 120s`.
+- Runtime: `/usr/local/bin/sage -python`, expected SageMath 10.9.
+- Log: `logs/F59-D03.log`.
+- Output: `output/F59-D03.json`.
+- Superseded R01/R02 source SHA-256:
+  `abe7bb3783a92d4e3e65c8e86fa65c4337642e76bddb5c4bec33e63670acc42b`.
+- Superseded first-launch runner SHA-256:
+  `7980ca081b380b1e07b2266741b8b3619ab217db2ea81ce81387d22f0523f3be`.
+- Failed pre-source import log: `logs/F59-D03-R01-failed.log`.
+- Failed pre-source import log SHA-256:
+  `ee03036d9e3a9dad3e5875ca6636ee32453427f13917d984f7f9ceef262cadbe`.
+- Corrected launch runner SHA-256:
+  `5a3aeebce9e857a47d1091ba066aa1e74dd9f6d450038fb6c82e1b26d1554d3e`.
+- Launch-only repair: set Sage's `DOT_SAGE` cache to the writable fixed path
+  `/private/tmp/F59-D03-sage-cache`. The source, input, timeout, output,
+  mathematical method, and decision rules are unchanged.
+- Timed-out R02 log: `logs/F59-D03-R02-timeout.log` (empty because the source
+  emits only after completion).
+- Timed-out R02 log SHA-256:
+  `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`.
+- Superseded R03 source SHA-256:
+  `90227e01248259d7c9a399a174b547de425b9bac422449ec0a975ce3630ef0e9`.
+- R03 optimization: use the two already-known affine endpoint factors for
+  every generic squareclass column and exact integer-bitset elimination. Sage
+  factorization remains only for the 19 selected products. This is
+  mathematically identical to the preregistered factor-and-rank test and does
+  not change its inputs or discovery triggers.
+- Timed-out R03 log: `logs/F59-D03-R03-timeout.log` (empty because the source
+  emits only after completion).
+- Timed-out R03 log SHA-256:
+  `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`.
+- Superseded R04 source SHA-256:
+  `cea4fd1419311f54678f9eddd9f15de9d05d3bd77ba3fd7923298fa5a7157fae`.
+- R04 optimization: represent all affine polynomials by exact pairs of Python
+  rational numbers. Test the complete numeric kernel basis symbolically. If
+  all basis vectors are generic and every relation denominator is a unit
+  modulo $N$, generic-kernel containment in both directions proves equality,
+  so constructing the full generic matrix is redundant. Sage independently
+  verifies the resulting 19 selected polynomial identities. This preserves
+  the original generic-versus-specialized question and discovery triggers.
+- Timed-out R04 log: `logs/F59-D03-R04-timeout.log` (empty because the source
+  emits only after completion).
+- Timed-out R04 log SHA-256:
+  `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`.
+- Preregistered R05 source SHA-256:
+  `5306268bf01ac569f2c75ca0be635dc1b8ed6bffc0065f6a307bbd6abf515d42`.
+- R05 optimization: lift only relations used by D02's complete numeric kernel
+  basis. If every basis vector is a square over $\mathbb Q[T]$, the complete
+  numeric kernel is contained in the generic kernel. The reverse containment
+  follows because a rational polynomial square that specializes to an integer
+  has an integer rational square root. Thus the unused trajectories cannot
+  change the comparison. Sage still verifies every selected identity.
+- Pinned D02 output SHA-256:
+  `23c1272fdaebfd932fb727b75d73e47f46b34a0d468b761c39956b9075073b6e`.
+- Authoritative R05 log SHA-256:
+  `7ca87cd0e1255ef7879450bdb50ed0a1b429f4dbefded71e8dcfb20c5d989ebe`.
+- Authoritative R05 output SHA-256:
+  `9c62739d882055f480b14b0d2d6b271cb894842c9a07b9d2965220d475d20f84`.
+
+For each relation in D02's complete numeric kernel basis, D03 lifts the current
+value, its modular inverse, and its quotient to affine polynomials over
+$\mathbb Q[T]$. It tests every basis vector symbolically. The two kernel
+containments above then decide equality without lifting unused trajectories or
+materializing a generic matrix. D03 also reconstructs each exact root
+polynomial, checks its constant term and denominator, verifies its
+specialization against the stored root, and asks Sage to verify the final
+polynomial square identity.
+
+Discovery triggers are: a larger numeric kernel than generic kernel, a D02
+basis relation that is not a square over $\mathbb Q(T)$, a nonunit symbolic
+root denominator, or a symbolic root that is non-global after specialization.
+Every outcome is a finite symbolic certificate. It does not prove an
+all-input sampling theorem.
+
+Observed outcome: all 19 numeric kernel-basis vectors are exact squares over
+$\mathbb Q[T]$. Their symbolic roots have constant term $1$ or $-1$, and each
+coefficient denominator is coprime to its tested $N$. Hence the generic and
+numeric kernels agree on all 12 batches, and every tested dependency is a
+global-root decoy. The seven residual certificate instances reduce to four
+symbolic identities. No discovery trigger fired.

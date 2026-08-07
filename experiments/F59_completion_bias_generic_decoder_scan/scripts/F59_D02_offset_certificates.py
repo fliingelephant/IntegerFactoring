@@ -61,7 +61,7 @@ def walk_prefix(modulus, start_offset, step_cap, direct_events):
             if proper_divisor(divisor, modulus):
                 key = str(divisor)
                 direct_events[key] = direct_events.get(key, 0) + 1
-            break
+            return records
         inverse = pow(state, -1, modulus)
         quotient = (state * inverse - 1) // modulus
         assert state * inverse == modulus * quotient + 1
@@ -76,6 +76,12 @@ def walk_prefix(modulus, start_offset, step_cap, direct_events):
             }
         )
         state = quotient
+
+    if state != 1:
+        divisor = math.gcd(state, modulus)
+        if proper_divisor(divisor, modulus):
+            key = str(divisor)
+            direct_events[key] = direct_events.get(key, 0) + 1
     return records
 
 
