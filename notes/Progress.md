@@ -1419,23 +1419,23 @@ re-audit found one stale manifest statement. The corrected artifact then passed
 a second fresh whole-artifact audit and a strict proof-blind reconstruction. No
 cross-family audit has run.
 
-**Verified boundary.** For a unit (u<N), multiply it by its canonical
-inverse modulo (N), subtract one, and divide exactly by (N). The result is
+**Verified boundary.** For a unit $u<N$, multiply it by its canonical
+inverse modulo $N$, subtract one, and divide exactly by $N$. The result is
 
 \[
 D_N(u)=u-r_u,
 \]
 
-where (r_u) is the canonical inverse of (N\bmod u). The state therefore
+where $r_u$ is the canonical inverse of $N\bmod u$. The state therefore
 strictly decreases. Its reverse fibre consists exactly of complementary factors
-of (Nk+1). Grouping steps by their decrement gives the unbounded depth bound
-(N^{1/2+o(1)}), while an explicit square family has trajectories linear in
+of $Nk+1$. Grouping steps by their decrement gives the unbounded depth bound
+$N^{1/2+o(1)}$, while an explicit square family has trajectories linear in
 its bit length. A universal two-step halving rule is false even for a balanced
 semiprime.
 
 **Algorithmic consequence.** This mechanism does move away from “compute one
 ring scalar and take one gcd.” It keeps an ordered integer state and creates a
-sequence of exact factorizations (u_i v_i=N u_{i+1}+1). However, the proved
+sequence of exact factorizations $u_i v_i=N u_{i+1}+1$. However, the proved
 depth is still exponential in the input length, and no useful hit probability
 is known. The next test must use the whole sequence. A parity, lattice,
 continued-fraction, or other joint decoder must extract more than the union of
@@ -1447,8 +1447,8 @@ rare coordinate gcd events. F26 remains open.
 fresh hostile whole-artifact audit and a strict proof-blind reconstruction. No
 cross-family audit has run.
 
-**Verified boundary.** The noninvertible map (x(x-1)) appears to branch
-backward. But when (5) is a non-square modulo a hidden prime, the first new
+**Verified boundary.** The noninvertible map $x(x-1)$ appears to branch
+backward. But when $5$ is a non-square modulo a hidden prime, the first new
 branch does not exist. The complete basin of its two public roots then stays at
 two points for all time. Unit scaling and affine relabeling only rename the
 same process. Infinitely many balanced semiprimes have this obstruction on
@@ -1463,3 +1463,25 @@ preimages occupy inverse-polynomial density for every hidden-prime family. Or
 it must use a different output, such as a full-orbit period, collision,
 valuation, or joint transcript decoder. General polynomial dynamics remain
 open.
+
+### C61 — label parity is empty, arithmetic parity is the real decoder
+
+**Status:** verifier-backed and promoted as P64/X58. The first hostile audit
+found two real overclaims. The corrected proof passed a fresh whole-proof audit
+and a strict proof-blind reconstruction. No cross-family audit has run.
+
+**Verified boundary.** Pooling inverse pairs by repeated public endpoint names
+does not help. Every nonloop parity cycle contributes $1\bmod N$. Self-loop
+roots can make new root values when multiplied, but each nontrivial loop already
+factors under a direct screen. After those screens, the whole formal parity
+kernel gives only $\pm1$.
+
+This does not close true integer square relations. Distinct labels can share
+prime factors. The pair $(2,8)$ modulo $15$ already gives the square $16$
+and the factor $3$, even though neither label repeats.
+
+**Algorithmic consequence.** Whole-batch decoding remains live, but its matrix
+must record arithmetic prime-valuation parity or another real relation. A graph
+whose vertices are only exact endpoint names discards that information. The
+next candidate uses the public quotient indices $k$ and the fact that common
+factors of $Nk_i+1,Nk_j+1$ divide $k_i-k_j$.

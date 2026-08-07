@@ -2420,9 +2420,9 @@ that a short public offset menu might often hit a factor-bearing state.
 2D_N(D_N(u))\le u
 \]
 
-fails at (N=11), where (7\to5\to4), and at the balanced distinct
-semiprime (N=35), where (19\to13\to10). The exact general theorem gives
-only the near-square-root upper bound (N^{1/2+o(1)}), which is exponential
+fails at $N=11$, where $7\to5\to4$, and at the balanced distinct
+semiprime $N=35$, where $19\to13\to10$. The exact general theorem gives
+only the near-square-root upper bound $N^{1/2+o(1)}$, which is exponential
 in the input bit length.
 
 The larger finite scan also removed the offset-menu optimism: on its largest
@@ -2440,7 +2440,7 @@ Two earlier failed audits are preserved.
 
 **What would make a retry materially new.** Prove a different amortized
 potential bound, prove an inverse-polynomial factor-hit law, or use many public
-relations (u_i v_i=N u_{i+1}+1) through a genuinely joint decoder. Retrying
+relations $u_i v_i=N u_{i+1}+1$ through a genuinely joint decoder. Retrying
 the false two-step inequality or citing the small-input hit rates is covered by
 P62/X56.
 
@@ -2451,17 +2451,17 @@ reconstruction.
 
 **Family:** F29.
 
-**Classification:** method failure for the fixed map (x(x-1)), its unit
+**Classification:** method failure for the fixed map $x(x-1)$, its unit
 scalings and affine conjugates, uniform uncorrelated starts, and gcd tickets at
 the two relabeled roots. It is not a failure of general polynomial dynamics.
 
-**What was tried.** Iterate a cheap noninvertible quadratic. Its (t)-fold
-composition has degree (2^t), so one might expect a rapidly growing inverse
+**What was tried.** Iterate a cheap noninvertible quadratic. Its $t$-fold
+composition has degree $2^t$, so one might expect a rapidly growing inverse
 tree feeding the two public roots. Random unit scaling was intended to prevent
 an adversarial fixed alignment.
 
-**Exact obstruction.** If (5) is a quadratic nonresidue modulo a hidden
-prime (r), the equation (x(x-1)=1) has no solution. Therefore
+**Exact obstruction.** If $5$ is a quadratic nonresidue modulo a hidden
+prime $r$, the equation $x(x-1)=1$ has no solution. Therefore
 
 \[
 H^{-1}(\{0,1\})=\{0,1\},
@@ -2469,9 +2469,9 @@ H^{-1}(\{0,1\})=\{0,1\},
 
 and iteration never adds a point to the useful basin. Unit scaling and affine
 relabeling are exact conjugacies, so they cannot change that basin. On the
-infinite balanced family (p,q\equiv2\pmod5), the full two-root success
-probability is exactly ((2p+2q-6)/(pq)=\Theta(N^{-1/2})) for raw starts and
-((p+q-4)/((p-1)(q-1))=\Theta(N^{-1/2})) for unit starts.
+infinite balanced family $p,q\equiv2\pmod5$, the full two-root success
+probability is exactly $(2p+2q-6)/(pq)=\Theta(N^{-1/2})$ for raw starts and
+$(p+q-4)/((p-1)(q-1))=\Theta(N^{-1/2})$ for unit starts.
 
 **Evidence.** The candidate, hostile audit, proof-blind reconstruction, and
 manifest have hashes
@@ -2482,8 +2482,50 @@ and `bee0d78de357e606232f7166ec4e880811b394630f03efe18c18d0fff161f6dc`.
 The finite cross-check had no failed run and supports no unbounded claim.
 
 **What would make a retry materially new.** Use an unrelated or
-(N)-dependent map and prove inverse-polynomial average backward-basin density
+$N$-dependent map and prove inverse-polynomial average backward-basin density
 for every hidden-prime pair; add extra state, a valuation lift, a correlated
 factor-free start, or a full-orbit decoder that uses periods or collisions
 without waiting for a target hit. Another affine relabeling of this map is
 covered by P63/X57.
+
+## X58 — binary cycle pooling of inverse-pair labels is factoring-empty
+
+**Status:** promoted as P64 after a preserved failed audit, a passing fresh
+re-audit, and strict proof-blind reconstruction.
+
+**Family:** F26.
+
+**Classification:** method failure for the formal endpoint-incidence parity
+decoder on inverse-pair batches. It is not a failure of arithmetic square-class
+pooling or whole-transcript decoding.
+
+**What was tried.** Pool many inverse pairs rather than wait for one lucky
+coordinate. Build a binary incidence matrix on their public endpoint labels,
+find a kernel vector, take the visible integer square root of the selected
+product, and use the resulting root of $1\bmod N$.
+
+**Exact obstruction.** Modular inversion is an involution. Every nonloop
+component has only one unordered endpoint pair. A formal parity vector selects
+an even number of its parallel edges, whose root contribution is $1\bmod N$.
+The remaining generators are self-loop roots. Directly screening each such
+root either factors $N$ or proves it is globally $\pm1$; after those
+screens, every pooled output is $\pm1$.
+
+The first audit correctly found that several unscreened loops can multiply to
+a new root value, and that repeated edges do form binary multigraph cycles.
+The corrected theorem claims only no new factoring information after loop
+screens. The nonloop cycle generators decode to $1$; they do exist.
+
+**Evidence.** The corrected candidate, passing re-audit, and reconstruction
+have hashes
+`028d41a7db2f4600964aeb24a9547bd614f080a84ec438f09fbf14fd78d86c07`,
+`45af2b5438e659e38734c721f6a5f7d73e34a66b83c27953df5a58e3c6575238`,
+and `19199147c5c20b7d037ca77d90132df4dbbe90d874f8a395f0e81bd798971154`.
+The failed first audit is preserved.
+
+**What would make a retry materially new.** Use the true rational-prime
+valuation parity of the integer endpoints, the ordered quotient indices and
+their differences, smooth or partial relations, a lattice or
+continued-fraction decoder, or a hidden-period/stabilizer operation with a
+stated extra signal. Another parity kernel on repeated public endpoint names is
+covered by P64/X58.

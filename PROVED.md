@@ -7176,14 +7176,14 @@ that correction, a second fresh whole-artifact audit passed. A strict
 proof-blind reconstruction also succeeded. No cross-family or human audit has
 run.
 
-For a unit (u\in\{1,\ldots,N-1\}), let (v) be its least positive
-inverse modulo (N), and define the integer quotient
+For a unit $u\in\{1,\ldots,N-1\}$, let $v$ be its least positive
+inverse modulo $N$, and define the integer quotient
 
 \[
 D_N(u)=\frac{uv-1}{N}.
 \]
 
-For (2\le u<N), let (r_u) be the least positive inverse of (N\bmod u).
+For $2\le u<N$, let $r_u$ be the least positive inverse of $N\bmod u$.
 Then
 
 \[
@@ -7202,18 +7202,18 @@ The reverse fibres are exact:
 D_N^{-1}(k)=\{u:k<u<N,\ u\mid Nk+1\}.
 \]
 
-If (v=(Nk+1)/u), then automatically (k<v<N), both (u,v) are units
-modulo (N), and both map to (k). Hence non-square fibres pair complementary
-factors of the public integer (Nk+1). This is a structural description, not
+If $v=(Nk+1)/u$, then automatically $k<v<N$, both $u,v$ are units
+modulo $N$, and both map to $k$. Hence non-square fibres pair complementary
+factors of the public integer $Nk+1$. This is a structural description, not
 an efficient reverse sampler, because finding those divisors is not supplied.
 
-For a trajectory with (L) transitions, put
+For a trajectory with $L$ transitions, put
 
 \[
 \Delta_N=\max_{1\le m<N^2}\tau(m).
 \]
 
-For every (1\le B<N), grouping steps by their decrement gives
+For every $1\le B<N$, grouping steps by their decrement gives
 
 \[
 L\le \frac NB+B\Delta_N+1.
@@ -7225,7 +7225,7 @@ The standard maximal-order bound for the divisor function gives
 L\le N^{1/2+o(1)}.
 \]
 
-This improves the trivial (L<N) state bound, but it is still exponential in
+This improves the trivial $L<N$ state bound, but it is still exponential in
 the binary input length. It is not a polynomial-time runtime theorem.
 
 Long trajectories are genuine. With
@@ -7241,13 +7241,13 @@ the exact trajectory is
 L+1\to L\to\cdots\to2\to1,
 \]
 
-and both its length and the bit length of (N_L) are \(\Theta(L)\). These
+and both its length and the bit length of $N_L$ are \(\Theta(L)\). These
 inputs are easy perfect squares, so this family is only a warning against a
-universal (o(\log N)) depth claim.
+universal $o(\log N)$ depth claim.
 
 The proposed uniform two-step contraction is false. Exact witnesses are
-(7\to5\to4) for (N=11) and (19\to13\to10) for the balanced
-semiprime (N=35). The second witness shows that the shortcut already fails
+$7\to5\to4$ for $N=11$ and $19\to13\to10$ for the balanced
+semiprime $N=35$. The second witness shows that the shortcut already fails
 in the intended semiprime regime.
 
 Finite scans found sparse named gcd tickets on the larger tested balanced
@@ -7289,24 +7289,24 @@ Let
 H(x)=x(x-1).
 \]
 
-For an odd prime (r\ne5) with Legendre symbol
+For an odd prime $r\ne5$ with Legendre symbol
 
 \[
 \left(\frac5r\right)=-1,
 \]
 
-the target set (A=\{0,1\}) has the exact inverse image
+the target set $A=\{0,1\}$ has the exact inverse image
 
 \[
 \boxed{H^{-1}(A)=A}.
 \]
 
-The equation (H(x)=0) gives (0,1), while (H(x)=1) has discriminant
-(5) and no root. Hence an orbit reaches (A) at any time if and only if it
-starts in (A). The formal degree of (H^{\circ t}) is (2^t), but its
+The equation $H(x)=0$ gives $0,1$, while $H(x)=1$ has discriminant
+$5$ and no root. Hence an orbit reaches $A$ at any time if and only if it
+starts in $A$. The formal degree of $H^{\circ t}$ is $2^t$, but its
 useful backward basin still has only two points.
 
-Let (N=pq), where (p\ne q) are odd primes satisfying the same nonresidue
+Let $N=pq$, where $p\ne q$ are odd primes satisfying the same nonresidue
 condition. From a uniform residue start, screen both public roots at every
 iterate:
 
@@ -7328,26 +7328,26 @@ For a uniform unit start it is
 \boxed{\frac{p+q-4}{(p-1)(q-1)}}.
 \]
 
-For every unit (c), the map
+For every unit $c$, the map
 
 \[
 H_c(x)=\frac{x(x-c)}c
 \]
 
-is conjugate to (H) by (x=cy). Its targets (0,c) have the same basin
+is conjugate to $H$ by $x=cy$. Its targets $0,c$ have the same basin
 and exact probabilities. General affine conjugacy preserves the basin and a
 uniform raw-residue start; translation does not automatically preserve a raw
 unit start. A nonunit parameter, mixed target, mixed root, or mixed public
 difference is screened first and already factors on its proper-gcd branch.
 
-Every prime (r\equiv2\pmod5) has ((5/r)=-1). The prime number theorem in
+Every prime $r\equiv2\pmod5$ has $(5/r)=-1$. The prime number theorem in
 arithmetic progressions supplies infinitely many balanced pairs of distinct
 such primes. On that family, both displayed probabilities are
-(\Theta(N^{-1/2})). Polynomially many restarts therefore have negligible
-success, and repeat-until-success needs (\Omega(\sqrt N)) expected restarts.
+$\Theta(N^{-1/2})$. Polynomially many restarts therefore have negligible
+success, and repeat-until-success needs $\Omega(\sqrt N)$ expected restarts.
 
 There is also a general necessary condition. For a public CRT-compatible map
-(F_N), local target set (A_r), and time cap (t), put
+$F_N$, local target set $A_r$, and time cap $t$, put
 
 \[
 B_{r,t}=\{u\in\mathbb F_r:F_{N,r}^{\,i}(u)\in A_r
@@ -7365,7 +7365,7 @@ The same inequality can be averaged over independent public map randomness on
 the factor-free construction branch. It is necessary, not sufficient: the two
 local hit signatures can still synchronize.
 
-P63 does not cover unrelated or (N)-dependent maps, extra state, correlated
+P63 does not cover unrelated or $N$-dependent maps, extra state, correlated
 or nonuniform starts, valuation lifts, arbitrary nonroot targets, or full-orbit
 decoders using periods and collisions. It is not a factoring algorithm. It
 proves that noninvertibility and exponentially growing formal degree are not
@@ -7378,3 +7378,89 @@ manifest have SHA-256 hashes
 `7cf5802d24c804a561641cb7164403a9a1291aac7c9ed16e1c72266b53cdbc8b`,
 `e19d8b1c57daab4eb65a2dd5b02ab891a6234a24df8a6345ef738478c848d86c`,
 and `bee0d78de357e606232f7166ec4e880811b394630f03efe18c18d0fff161f6dc`.
+
+## P64 — formal parity of inverse-pair labels adds no factoring information
+
+**Status:** promoted narrow whole-batch decoder obstruction.
+
+**Verification record:** the first hostile audit found a false claim about
+products of several self-loop roots and a false no-cycle sentence. The
+corrected candidate passed a fresh whole-proof re-audit. A strict proof-blind
+reconstruction then succeeded. No cross-family or human audit has run.
+
+Let $N\ge3$ be odd, and let $\iota(x)$ be the canonical inverse of a
+unit $x\bmod N$. Consider any finite, possibly adaptive, batch of inverse
+pairs
+
+\[
+(a_j,b_j),
+\qquad b_j=\iota(a_j),
+\]
+
+with repetitions allowed. Select a subset in which every public endpoint
+label occurs an even number of times. Its visible integer product is a square
+
+\[
+\prod_j a_jb_j=X^2,
+\qquad X^2\equiv1\pmod N.
+\]
+
+The inversion involution has only two types of orbit. On a two-element orbit
+$\{x,\iota(x)\}$, endpoint parity selects an even number $2h$ of
+parallel relations, whose root contribution is
+
+\[
+(x\iota(x))^h\equiv1\pmod N.
+\]
+
+On a singleton orbit, the submitted relation is a self-loop $(z,z)$ with
+$z^2\equiv1\pmod N$. Hence every formal-parity output lies in the subgroup
+generated by submitted self-loop labels. Several loops can multiply to a new
+root value; the theorem does not deny that.
+
+Each submitted loop is directly screened by
+
+\[
+\gcd(z-1,N),
+\qquad
+\gcd(z+1,N).
+\]
+
+For odd $N$, every prime-power divisor of $N$ divides exactly one of
+$z-1,z+1$. The screen therefore returns a proper factor, or proves
+$z\equiv\pm1\pmod N$. After all loop screens fail to factor, every pooled
+output is also $\pm1$. Thus formal endpoint parity adds no factoring
+information beyond direct loop screening.
+
+This is strictly narrower than true arithmetic square parity. If $C$ is the
+endpoint-label incidence matrix over $\mathbb F_2$, and $V$ maps labels
+to their rational-prime valuation parities, then
+
+\[
+\ker C\subseteq\ker(VC),
+\]
+
+and the inclusion can be strict. For $N=15$, the single inverse pair
+$(2,8)$ is not a formal label-parity relation, but
+
+\[
+2\cdot8=16=4^2,
+\qquad \gcd(4-1,15)=3.
+\]
+
+This success uses the arithmetic square classes of the integer labels. It is
+outside P64.
+
+P64 does not cover smoothness, arithmetic factor-base pooling, chronological
+quotient equations, lattices, continued fractions, hidden periods, HSP or
+Shor simulation, stabilizer recursion, nonlinear graph constructions, or
+factoring generally. It closes only the formal endpoint-incidence kernel of
+inverse pairs.
+
+The corrected candidate, passing re-audit, and proof-blind reconstruction have
+SHA-256 hashes
+`028d41a7db2f4600964aeb24a9547bd614f080a84ec438f09fbf14fd78d86c07`,
+`45af2b5438e659e38734c721f6a5f7d73e34a66b83c27953df5a58e3c6575238`,
+and `19199147c5c20b7d037ca77d90132df4dbbe90d874f8a395f0e81bd798971154`.
+The preserved failed first audit has SHA-256
+`958db4092d9bd9177df0ed7748be0f6f2b9aa0887bcb0d17f3d58d8f94223666`.
