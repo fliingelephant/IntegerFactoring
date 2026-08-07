@@ -2260,3 +2260,88 @@ proved mixed-root law, a derivative or controlled lift, a genuinely coupled
 multicomponent or auxiliary-witness decoder, or a proved lucky distribution.
 Another one-component polynomial identity followed by endpoint gcds is covered
 by P58.
+
+## X53 — scalar one-defect local Gibbs cannot manufacture a factor stratum
+
+**Status:** promoted as P59 after a preserved failed audit, a clean hostile
+re-audit of the corrected proof, and a fresh proof-blind reconstruction.
+
+**Family:** F23.
+
+**Classification:** method failure for the exact scalar-activity,
+one-derived-defect, one-free-coordinate Gibbs construction. It is not a lower
+bound for nonlocal or general augmented samplers.
+
+**What was tried.** Enlarge the useful zero-product locus (kx=0) to all pairs
+((k,x)), record the residual (d=kx), give nonzero defects positive weight,
+and resample one free coordinate from its exact conditional law. This is a real
+change from a chain confined to the zero-product locus: the stochastic chain is
+noninvertible and can pass between its two unit axes through nonzero defects.
+
+**Exact obstruction.** Until a factor is found, every coordinate seen by the
+gcd screens is zero or a unit. Holding either type fixed makes a local refresh
+draw a proper nonunit with at most its raw residue density. If (h_N) is the
+number of proper nonunit residues, the per-refresh hazard is at most (h_N/N)
+for the canonical activity and at most (h_N/(N-1)) for every positive scalar
+activity. Balanced semiprimes and prime squares therefore require
+\(\Omega(\sqrt N)\) expected refreshes. The target itself has constant useful
+mass, so explicit total-variation witnesses show the same mixing obstruction.
+
+**Evidence.** The corrected candidate, clean re-audit, and proof-blind
+reconstruction have hashes
+`bec5fbfb0de76677d78aa36187485b06848be9891a033fd1a1f91cf4ddfd88b1`,
+`1bdb02879801a922bbb5c3e464b65436a1f1b7408c3aafd9bff5585693e3dff4`,
+and `908054491f1d5b6d47cd286a586d05fba04e4ce94e180891a4da801011bd3203`.
+The failed first audit remains at
+`experiments/F50_zero_product_defect_gibbs_audit`. No computation or
+cross-family audit was used.
+
+**What would make a retry materially new.** Use a joint block proposal, a
+nonconstant arithmetic residual law, several defects with a cancellation move,
+a valuation-amplifying lift, a genuinely joint transcript decoder, or a proved
+factor-correlated warm start. Changing only the scalar weight, scan order,
+laziness, or acceptance probability is covered by P59.
+
+## X54 — sparse statistics of the canonical exponent-\(N\) high digit do not manufacture a metric hint
+
+**Status:** promoted as P60 after a preserved failed audit, a clean hostile
+re-audit of the corrected theorem, exact reproduction of all retained
+computations, and a fresh proof-blind reconstruction.
+
+**Family:** F12, with a direct boundary for F24-style metric decoding.
+
+**Classification:** method failure for fixed or past-measurable sparse menus,
+collisions, direct or pairwise-difference gcds, thin hidden-prime bands, the
+central-half statistic, and independently uniform searches for heavy Fourier
+modes by raw empirical means. It is not a distributional or factoring lower
+bound.
+
+**What was tried.** Use the canonical integer high digit (h) of
+(a^N\bmod N^2), or its normalized value \(\lambda=hx^{-1}\), as metric side
+information manufactured from bare (N). Test magnitude, collisions, residue
+bands, gcds, reflection bias, and Fourier concentration instead of waiting for
+an exact polynomial zero.
+
+**Exact obstruction.** On balanced distinct odd semiprimes, the low digit is
+uniform and the two high digits obey affine local Fermat-quotient carry laws.
+Every exact output has mass at most (1/(p-1)), and each hidden local residue
+also has (O(1/p)) mass. Polynomial-size sparse tests are therefore
+exponentially unlikely. Reflection makes the mean public and the central-half
+bias exponentially small. Parseval makes inverse-polynomial-heavy modes rare
+under a uniform unit frequency, while a frequency that isolates one CRT side
+already exposes that factor by gcd.
+
+**Evidence.** The corrected candidate, clean re-audit, proof-blind
+reconstruction, and computation manifest have hashes
+`2a1e111ffdbc20e76582201cb6f7fab24669cb0609711e030cf6c88e95828f90`,
+`9a7158a0dffe858eb3df619e547f8eab5429253b1e615b9328082075307ba2a5`,
+`a87a7016f48a2583165cd8b8db89b76e3a8dbba31154393ce065df3ccfc5570d`,
+and `b3fd206c0edba6903ad79444cf5a380207b970eff9b2a8eb80aed1da7cd5e8a1`.
+The failed first audit remains at
+`experiments/F51_high_digit_metric_audit`. No cross-family audit was used.
+
+**What would make a retry materially new.** Give an exact symbolic evaluator
+or amplifier for a small deterministic bias, recover an exceptional frequency
+adaptively, use a dense nonlinear statistic of the joint ((x,h)) graph, design
+a correlated or nonuniform factor-free base source, or supply a new decoder
+whose guarantee uses typical nonzero values rather than sparse hits.

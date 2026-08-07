@@ -6878,3 +6878,194 @@ SHA-256 hashes
 `b34c2965b4be06ca59c9c27ba54814a76c1cac286bcfb13beee65917f9093aba`,
 `7a916baae18362ba03e92e59b9f06a20c220064ba5f0e094464aa556827aed8b`,
 and `0deccee4937143f443455a3564a4b61812f1cfe8a815bb54c42915506daeeeae`.
+
+## P59 — one derived defect does not remove the local Gibbs density bottleneck
+
+**Status:** promoted narrow sampler obstruction.
+
+**Verification record:** the first hostile audit found two literal scope errors:
+an unordered balance hypothesis and a totient identity stated beyond distinct
+semiprimes. The corrected proof passed a fresh whole-proof hostile re-audit and
+a strict proof-blind reconstruction. No cross-family or human audit has run.
+
+Let (R=\mathbb Z/N\mathbb Z), and use the constrained graph
+
+\[
+\widehat\Omega_N=\{(k,x,d)\in R^3:d=kx\}.
+\]
+
+Here (k,x) are the two free coordinates and (d) is recomputed after every
+refresh; literal one-coordinate Gibbs on three independently held coordinates
+would be reducible. Give a state weight (1) when (d=0) and a positive
+scalar weight \(\lambda\) when (d\ne0). Conditioned on (d=0), the target is
+exactly uniform on
+
+\[
+\Omega_N=\{(k,x):kx=0\pmod N\}.
+\]
+
+For the public choice \(\lambda=1/N\), the zero-defect sector has stationary
+mass greater than (1/2). A random-scan refresh of one free coordinate has an
+exact fair-bit implementation with (O(\log N)) expected random bits and
+polynomial expected bit cost. The chain is reversible, irreducible, and
+aperiodic. Unlike the cold in-locus heat bath, it can cross from one unit axis
+to the other through a nonzero defect in two positive-probability updates.
+
+Put
+
+\[
+H_N=\{a\in R:1<\gcd(a,N)<N\},\qquad h_N=|H_N|.
+\]
+
+Before a coordinate gcd finds a factor, every observed coordinate is zero or a
+unit. Conditional on every such history, one refresh enters (H_N) with
+probability at most
+
+\[
+\frac{h_N}{N}
+\]
+
+for \(\lambda=1/N\), and at most (h_N/(N-1)) for every positive scalar
+activity. These are pathwise bounds; no independence between updates is used.
+Thus, from any safe start, the expected coordinate-gcd hitting time is at least
+
+\[
+\frac{N}{h_N}
+\quad\text{or respectively}\quad
+\frac{N-1}{h_N}.
+\]
+
+For distinct primes (p<q),
+
+\[
+h_{pq}=p+q-2,
+\qquad
+|\Omega_{pq}|=(2p-1)(2q-1).
+\]
+
+On every fixed-balance family (q/p\le C), the expected hitting time is
+\(\Omega_C(\sqrt N)\). The stationary factor-bearing mass is bounded below by
+a constant, so the same history bound gives an explicit
+\(\Omega_C(\sqrt N)\) fixed-threshold total-variation mixing obstruction.
+For (N=p^2), (h_N=p-1) and
+
+\[
+|\Omega_{p^2}|=3p^2-2p,
+\]
+
+which gives \(\Omega(\sqrt N)\) hitting and mixing bounds, including the exact
+small case (p=2). More generally, the proof records the corresponding
+prime-power counts without claiming a growing lower bound when (p) is fixed.
+
+P59 closes only one common good-state weight, one common positive defect-state
+weight, and a local refresh of one free coordinate, with coordinate-gcd
+extraction. It does not cover a nonconstant residual weight, a nonuniform
+arithmetic proposal, a joint ((k,x)) move, multiple defects with cancellation,
+a lifted or valuation-amplifying move, a transcript decoder, or a charged warm
+start. Those changes alter the operation which creates or detects a CRT stratum.
+
+The corrected candidate, clean re-audit, and proof-blind reconstruction have
+SHA-256 hashes
+`bec5fbfb0de76677d78aa36187485b06848be9891a033fd1a1f91cf4ddfd88b1`,
+`1bdb02879801a922bbb5c3e464b65436a1f1b7408c3aafd9bff5585693e3dff4`,
+and `908054491f1d5b6d47cd286a586d05fba04e4ce94e180891a4da801011bd3203`.
+
+## P60 — canonical exponent-\(N\) high digits have exact local laws but sparse metric signals
+
+**Status:** promoted narrow source-side obstruction.
+
+**Verification record:** the first hostile audit verified every formula and all
+five computations but rejected an overbroad Fourier inference. The corrected
+proof passed a fresh whole-proof hostile re-audit and a strict proof-blind
+reconstruction. All five retained computations reproduced byte-identically.
+No cross-family or human audit has run.
+
+Let
+
+\[
+N=pq,\qquad 3\le p<q<2p,
+\]
+
+for distinct primes. For a uniform unit (a\bmod N), define canonical values
+
+\[
+A=a^N\bmod N^2=x+Nh,
+\qquad
+\lambda=h x^{-1}\bmod N,
+\qquad 0\le x,h,\lambda<N.
+\]
+
+The map (a\mapsto x=a^N\bmod N) is an automorphism of the unit group, so
+(x) is exactly uniform. With the Fermat quotient
+
+\[
+Q_r(u)=\frac{u^{r-1}-1}{r}\pmod r,
+\]
+
+the high digits satisfy the exact local laws
+
+\[
+q\lambda\equiv Q_p(x)\pmod p,
+\qquad
+p\lambda\equiv Q_q(x)\pmod q,
+\]
+
+and
+
+\[
+qh\equiv xQ_p(x)\pmod p,
+\qquad
+ph\equiv xQ_q(x)\pmod q.
+\]
+
+Writing an integer representative of (x) in one local residue class makes
+the missing CRT carry affine. Exact counting then gives, for
+(Z\in\{h,\lambda\}),
+
+\[
+\Pr(Z\equiv c\pmod p)\le\frac2{q-1},
+\qquad
+\Pr(Z\equiv c\pmod q)\le\frac1{p-1},
+\qquad
+\max_z\Pr(Z=z)\le\frac1{p-1}.
+\]
+
+Consequently, polynomially many fixed or past-measurable exact-value menus,
+exact collisions, direct gcds, and pairwise-difference gcds have total success
+probability (2^{-\Omega(\log N)}). A hidden-prime residue band of absolute
+half-width (B<p/2) has mass (O(B/p+1/p)). At the precision used by P51's
+ordinary-LLL certificate, collecting the required batch from this raw source
+needs (2^{\Omega(\sqrt n)}) samples, where (n) is the input bit length.
+The theorem does not grant P51's independent hidden-quotient law even after a
+band hit.
+
+The integer high digit has the exact reflection
+
+\[
+h(N-x)=N-1-h(x),
+\qquad
+\mathbb E h=\frac{N-1}{2}.
+\]
+
+Its central-half bias is exponentially small, but this does not control other
+intervals or imply uniformity. Parseval and the point-mass bound show that a
+uniform unit frequency is exponentially unlikely to be an
+inverse-polynomial-heavy Fourier mode. A local-isolating frequency is already a
+nonzero multiple of (p) or (q), so its public gcd factors (N). The
+sampling estimate for a fixed mode is only the exact mean-square error of the
+raw empirical mean; it is not a lower bound for other estimators.
+
+One exact source sample uses (O(n)) expected fair bits and (O(n^3)) bit
+operations with schoolbook arithmetic. P60 does not prove pseudorandomness or a
+factoring lower bound. It leaves deterministic exceptional frequencies,
+adaptive recovery, exact symbolic evaluation or amplification of tiny biases,
+dense or nonlinear joint statistics, correlated or nonuniform bases, other
+estimators, and all-input constructions open.
+
+The corrected candidate, clean re-audit, and proof-blind reconstruction have
+SHA-256 hashes
+`2a1e111ffdbc20e76582201cb6f7fab24669cb0609711e030cf6c88e95828f90`,
+`9a7158a0dffe858eb3df619e547f8eab5429253b1e615b9328082075307ba2a5`,
+and `a87a7016f48a2583165cd8b8db89b76e3a8dbba31154393ce065df3ccfc5570d`.
+The computation manifest has hash
+`b3fd206c0edba6903ad79444cf5a380207b970eff9b2a8eb80aed1da7cd5e8a1`.

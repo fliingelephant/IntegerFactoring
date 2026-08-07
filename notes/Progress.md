@@ -1343,3 +1343,43 @@ that more equations inside the same component do not create more information.
 A retry must add a genuinely different operation: metric order, nonlocal or
 stochastic sampling, derivatives/lifts, or a joint decoder across structures not
 covered by the one-idempotent algebra.
+
+### C56 — one-defect Gibbs crosses the public axes but not the factor barrier
+
+**Status:** verifier-backed and promoted as P59/X53. The first hostile audit
+found two scope errors. The corrected theorem passed a fresh whole-proof audit
+and a strict proof-blind reconstruction. No cross-family audit has run.
+
+**Verified boundary.** The sampler records (d=kx), gives (d=0) and
+(d\ne0) different scalar weights, and refreshes one of the two free
+coordinates exactly. It is stochastic, leaves the zero-product set, and can
+cross between the two public unit axes. Nevertheless, before success, a local
+refresh can create a proper nonunit only at its raw density. This forces
+\(\Omega(\sqrt N)\) hitting and fixed-threshold mixing time on balanced
+semiprimes and prime squares, for every positive scalar activity.
+
+**Algorithmic consequence.** The defect idea is not closed, but the algorithm
+must now change its move. A useful retry needs a joint block move, interacting
+defects, valuation amplification, a nonuniform arithmetic proposal, or a
+factor-correlated warm start. Another scalar reweighting of the same local
+refresh cannot help.
+
+### C57 — the canonical high digit is structured but its easy metric signals are thin
+
+**Status:** verifier-backed and promoted as P60/X54. The first hostile audit
+rejected an overbroad Fourier claim. The corrected theorem passed a fresh audit,
+all five computations reproduced exactly, and a strict proof-blind
+reconstruction succeeded. No cross-family audit has run.
+
+**Verified boundary.** For balanced distinct odd semiprimes, the high digit of
+(a^N\bmod N^2) has exact local Fermat-quotient laws and visible nonuniform
+structure. This is genuine factor-dependent arithmetic, not a uniform-output
+fiction. However, every exact value and hidden local residue has only
+(O(1/\sqrt N)) mass. Fixed sparse menus, collisions, direct gcds, thin bands,
+the central-half bias, and uniform searches for large Fourier modes therefore
+need exponentially many samples.
+
+**Algorithmic consequence.** The source is not dead. A retry must use the
+whole structured graph rather than wait for a rare value. The open operations
+are exact small-bias amplification, adaptive exceptional-frequency recovery,
+dense nonlinear processing, or a deliberately correlated base source.
