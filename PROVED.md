@@ -8798,6 +8798,7 @@ and `be625fdc995dae3cec63a36984014e0fa791c62ecd792899cb9dbf5614c74195`.
 No research computation, cross-family audit, human audit, or
 publication-level literature review has run.
 
+
 ## P78 — endpoint refinement can create a factor-bearing subgroup beyond a separator-free old subgroup
 
 **Status:** promoted exact representation-level feedback theorem and selector
@@ -9630,5 +9631,1175 @@ proof-blind reconstruction have SHA-256 hashes
 `d07645a53bc3348d46a2addea066dae150f15ab285aa37dd8c12d40bf857882b`,
 and
 `c49d9e787f81e0129802ade3b9bab2de04cc3e13fb84fa2a4c5e32c53dde4f33`.
+No research computation, cross-family audit, human audit, or
+publication-level literature review has run.
+
+## P84 — feedback expansion has an exact projection-kernel gate and a permanent old-subgroup density ceiling
+
+**Status:** verifier-backed exact feedback boundary after a hostile proof-only
+audit and a proof-blind reconstruction. This is not a factoring algorithm, a
+hardness theorem, or a theorem about the square-class decoder.
+
+Let \(N=pq\) for distinct odd primes. Let an old block-generated subgroup
+\(H\le(\mathbb Z/N\mathbb Z)^\times\) contain no positive separator, and put
+\(h=|H|\). Both hidden projections of \(H\) are injective, since a
+nonidentity projection-kernel element would itself be a positive separator.
+Hence
+
+\[
+|H|=|H_p|=|H_q|=h,
+\]
+
+and \(H\) is the graph of an isomorphism between its local images.
+
+For any later subgroup \(K\ge H\), define
+
+\[
+c=[K:H],
+\qquad
+a=[K_p:H_p],
+\qquad
+b=[K_q:H_q].
+\]
+
+The induced quotient projections are surjective, so \(a\mid c\) and
+\(b\mid c\). Their unquotiented kernels have sizes \(c/a\) and \(c/b\) and
+intersect only in the identity. Therefore the exact positive-separator count
+and uniform density in \(K\) are
+
+\[
+\boxed{\frac ca+\frac cb-2},
+\qquad
+\boxed{\delta_+(K)=\frac{c/a+c/b-2}{ch}}.
+\]
+
+A factor-bearing positive word exists exactly when
+
+\[
+\boxed{c>a\quad\text{or}\quad c>b.}
+\]
+
+Raw subgroup growth \(c>1\) is not sufficient.
+
+One exact old unit-block split \(B=uv\), with \(B\bmod N\in H\), is the
+cyclic case:
+
+\[
+\langle H,u,v\rangle=\langle H,u\rangle.
+\]
+
+Here \(c,a,b\) are the global and two local orders of the coset of \(u\).
+Every enlarged-subgroup element has a unique form \(u^tz\), with
+\(0\le t<c\) and \(z\in H\). The \(p\)-kernel exponents are exactly the
+multiples of \(a\), and the \(q\)-kernel exponents are exactly the multiples
+of \(b\). Each such exponent has one unique old-subgroup cancellation
+element. This characterizes the missing word but does not compute it.
+
+The stronger boundary is coset-level. Every \(H\)-coset contains at most
+four elements that can pass either direct sign gcd. Thus every mixture of
+uniform \(H\)-coset laws has total direct-sign success probability at most
+
+\[
+\boxed{\frac4h}.
+\]
+
+Uniform sampling from every \(K\ge H\) is such a law, with separate bounds
+
+\[
+\delta_+(K)\le\frac2h,
+\qquad
+\delta_-(K)\le\frac2h.
+\]
+
+The ceiling does not depend on \([K:H]\). If \(h\) is exponential in the
+input bit length, even maximal subgroup expansion leaves dense
+random-exponent direct-sign sampling exponentially sparse.
+
+The exact adaptive form also holds. If trial \(t\), conditional on every
+prior history, is within deterministic total-variation error
+\(\varepsilon_t\) of an \(H\)-invariant law, then
+
+\[
+\Pr(\text{some direct-sign success in \(T\) trials})
+\le
+\frac{4T}{h}+\sum_{t=1}^T\varepsilon_t.
+\]
+
+If \(X\) is uniform on \(H\) and independent of arbitrary group-valued
+\(Y\), each fixed law \(X^{\pm1}Y^{\pm1}\) is \(H\)-invariant. This covers
+fixed or predictable pair lists and all distinct pairs in a polynomial
+independent pool. It does not cover value-dependent pair selection.
+
+The ceiling is sharp at group scale. For \(L>2\), the diagonal subgroup of
+\(C_L\times C_L\) has size \(L\) and no positive separator. Adjoining
+\(z=(u,v)\), where \(u,v\ne0\) and \(v-u\) generates \(C_L\), gives the full
+product although \(z\) is not a separator, and
+
+\[
+\delta_+=\frac{2L-2}{L^2}.
+\]
+
+This is an abstract example, not a canonical-inverse integer family.
+
+The result removes “expand the subgroup, then sample it densely” as the
+missing theorem in the large synchronized regime. It leaves precisely the
+non-\(H\)-invariant branches: a public targeted cancellation word, direct
+integer overlap, quotient-fibre targeting, or square-class closure followed
+by a non-global root. It does not bound any of these operations.
+
+The final candidate, hostile audit, proof-blind statement, and corrected
+proof-blind reconstruction have SHA-256 hashes
+b9f77023c1b63ee392d72167f2902b771bd33237e7e23ed01f31b739649a7f24,
+9656ce11a6857e52644d1242cd1a12c69284e9e36f245ca49add94f78de9152f,
+ea87352c021194438aa42793c975bf75a5043b8964c00c98a96636ea1707239d,
+and
+ce8d175c46d2c5a5bf09258ddab026bf404c32139af6d012ccfe317696a38b67.
+The audit pinned pre-clarification mathematical hash
+73bbd8d875a3c91acb3332bcab765acee3784491c322784c0c6a526ea131427b;
+the final edits only state its scope corrections explicitly and remove one
+trailing space. No research
+computation, cross-family audit, human audit, or publication-level literature
+review has run.
+
+## P85 — every fixed sublinear word menu can miss a maximal one-generator correlation break
+
+**Status:** promoted from F79 after a proof-only hostile audit and a
+proof-blind reconstruction. This is an abstract group-level boundary, not an
+integer hard family, a computational lower bound, or a factoring algorithm.
+
+Let \(L>2\) be prime, write \(C_L\) additively as \(\mathbb F_L\), and fix any
+menu
+
+\[
+S\subseteq\mathbb F_L^2,
+\qquad |S|\le L-3,
+\]
+
+before choosing a new generator. A pair \((A,B)\in S\) denotes the word
+\(Az+Bg\). There are distinct nonzero \(r,s\in\mathbb F_L\) such that, with
+
+\[
+g=(1,1),\qquad H=\langle g\rangle,
+\qquad z=(r,s),
+\]
+
+the old subgroup \(H\) has no positive separator, \(z\) is not itself a
+separator, and
+
+\[
+\langle H,z\rangle=\mathbb F_L^2,
+\]
+
+yet no word in the declared menu is a separator.
+
+For each pair with \(A\ne0\), the word
+
+\[
+Az+Bg=(Ar+B,As+B)
+\]
+
+can have a zero coordinate only when \(r\) or \(s\) equals the one forbidden
+ratio \(-B/A\). There are at most \(L-3\) such values. Their complement
+contains two distinct nonzero choices for \(r,s\). The determinant \(s-r\)
+is nonzero, so \(g,z\) generate the full product even though the complete
+menu misses every positive separator. The cardinality guarantee is sharp:
+there is a menu of size \(L-2\) that hits every admissible pair of distinct
+nonzero \(r,s\).
+
+Consequently, every predeclared menu of \(T(n)\) exponent pairs is avoidable
+in this model when \(L>T(n)+2\). The complete integer box
+
+\[
+|A|,|B|\le E(n)
+\]
+
+is avoidable when
+
+\[
+L>(2E(n)+1)^2+2,
+\]
+
+after reducing its pairs modulo \(L\). The same statement applies to a fixed
+union of schedules only when its total number of distinct residue pairs fits
+the bound.
+
+The quantifier order is essential:
+
+\[
+\text{menu first}\quad\longrightarrow\quad\text{generator second}.
+\]
+
+After seeing \(z=(r,s)\), the adaptive word \(z-rg=(0,s-r)\) succeeds.
+Therefore P85 does not cover a value-dependent or adaptive selector,
+quotient-fibre processing, integer refinement, square-class decoding, or a
+canonical-inverse integer realization. In an odd-order local realization,
+local \(-1\) lies outside the modeled subgroup, so the negative sign adds no
+target inside this model.
+
+Thus maximal subgroup expansion does not justify a fixed polynomial word
+catalogue. A live feedback algorithm must use numerical or refinement data
+observed after the new integer block appears.
+
+The candidate, hostile audit, proof-blind statement, and corrected
+proof-blind reconstruction have SHA-256 hashes
+`1182b0088dcf105324c929d622dc0c63952dbbf00951659ca27e725a3784566e`,
+`9835898bde0a460abaf2bec0f296339383ff87bce11e90ed6e615ca3cabb401b`,
+`ccb4db80e17d96ecf1f19681170f0981eb559461ef5dc1a86bbc3fc7b2738212`,
+and
+`d8d0a27467a1ae6045fd15f7cf39530d3fe86e04bc50b0e1ea972dabe39ba599`.
+The reconstruction's only post-proof edit restored TeX formatting; it did
+not change any mathematical claim. No research computation, cross-family
+audit, human audit, or publication-level literature review has run.
+
+## P86 — power contraction escapes the old-coset ceiling and completes a second fixed feedback chain
+
+**Status:** promoted from F80 after a proof-only hostile audit and a corrected
+proof-blind reconstruction. This is an exact conditional mechanism and fixed
+witness, not an all-input smoothness theorem or a factoring algorithm.
+
+Let \(K\) be a finite subgroup of
+\((\mathbb Z/N\mathbb Z)^\times\), let \(M\ge1\), and put
+
+\[
+K^M=\{x^M:x\in K\}.
+\]
+
+The power map is a surjective homomorphism from \(K\) to \(K^M\). All fibres
+have equal size, so uniform \(X\in K\) gives uniform \(X^M\in K^M\). For
+\(N=pq\), projection commutes with powering, and the exact positive-sign
+density is
+
+\[
+\delta_+(K^M)
+=
+\frac1{|K_p^M|}
++\frac1{|K_q^M|}
+-\frac2{|K^M|}.
+\]
+
+This operation can leave P84's hypothesis: \(K^M\) need not contain the old
+subgroup \(H\), so the powered law need not be \(H\)-invariant.
+
+For one public unit \(u\), let
+
+\[
+r_p=\operatorname{ord}_p(u),
+\qquad
+r_q=\operatorname{ord}_q(u).
+\]
+
+Then
+
+\[
+\boxed{
+1<\gcd(u^M-1,N)<N
+\iff
+(r_p\mid M)\mathbin{\mathrm{xor}}(r_q\mid M).
+}
+\]
+
+For
+
+\[
+M_B=\operatorname{lcm}(1,\ldots,B),
+\]
+
+the bound \(M_B\le B!\) gives
+\(\log_2M_B=O(B\log B)\). If \(B\) is polynomial in the bit length of
+\(N\), constructing \(M_B\), computing the modular power, and taking the
+gcd all have deterministic polynomial bit complexity.
+
+The P78 history gives a complete fixed witness at
+
+\[
+N=4033=37\cdot109.
+\]
+
+Before feedback, \(H_0=\langle2\rangle\), and \(2\) has exact order \(36\)
+in both hidden fields. The canonical feedback relation with
+
+\[
+g=2^{11}=2048,
+\qquad
+g^{-1}_{\mathrm{can}}=3905
+\]
+
+splits the old integer block \(1985\) through
+
+\[
+\gcd(1985,3905)=5.
+\]
+
+Thus refinement exposes the public descendant block \(u=5\). With
+
+\[
+M=M_9=2520,
+\]
+
+one has
+
+\[
+5^M\equiv1\pmod{37},
+\qquad
+5^M\equiv63\pmod{109},
+\qquad
+5^M\equiv3442\pmod{4033}.
+\]
+
+The public final operation therefore returns
+
+\[
+\boxed{\gcd(5^{2520}-1,4033)=37.}
+\]
+
+Every old \(h\in H_0\) instead has \(h^{2520}=1\) globally. The new block is
+therefore essential relative to this declared old-subgroup, fixed-exponent
+channel. It is not necessary against all public algorithms: \(5\) is also a
+small ordinary Pollard-style base that could be tried without feedback.
+
+The theorem proves that power contraction is a real post-feedback operation,
+distinct from uniform supergroup sampling and from P81's mixed cancellation
+word. It gives no law that feedback produces a block with a one-sided
+polynomial-smooth local order on every input.
+
+The candidate, hostile audit, corrected proof-blind statement, and corrected
+proof-blind reconstruction have SHA-256 hashes
+e5b205098b837a37616df563b82cd3f65dc953129bdb213797d97e122af771bf,
+af40985d221049090ea7fa14ffb23841aa3536b52e64927b813d69799fb47067,
+3235f8bab26c75804ae1d9dbda3ed3563e88884a40cce9161b2e99beac017a5b,
+and
+b67b34e8cae0883ad8063f7adfeda1b35123b7cfbbe0c974138d56ee284177e7.
+The first proof-blind statement accidentally omitted the plus sign between
+the two reciprocal projection terms. It correctly failed reconstruction;
+those two hashes are
+93df9398feeb558bdfdccfef0ec501a626bd1a624fceaf0deccda7388d2b0080
+and
+51ce2322c3ec0d00cd771d1a61fe47155a2198b53bf876f1eb7becb1a29ab353.
+No research computation, cross-family audit, human audit, or
+publication-level literature review has run.
+
+## P87 — feedback subgroup gain has an exact order branch and a phase branch
+
+**Status:** promoted from F81 after a corrected proof-only hostile audit and
+a proof-blind reconstruction. This is an exact one-block classification and
+a conditional polynomial decoder, not an all-input feedback law or a
+factoring algorithm.
+
+Let \(N=pq\) for distinct odd primes, let
+\(u\in(\mathbb Z/N\mathbb Z)^\times\), and put
+
+\[
+r_p=\operatorname{ord}_p(u),
+\qquad
+r_q=\operatorname{ord}_q(u),
+\qquad
+r=\operatorname{lcm}(r_p,r_q).
+\]
+
+Then \(\langle u\rangle\) contains a positive direct-sign separator if and
+only if
+
+\[
+\boxed{r_p\ne r_q}.
+\]
+
+Its exact positive-separator count and uniform density are
+
+\[
+\boxed{\frac r{r_p}+\frac r{r_q}-2},
+\qquad
+\boxed{\frac1{r_p}+\frac1{r_q}-\frac2r}.
+\]
+
+For every public exponent \(E\ge1\),
+
+\[
+\boxed{
+1<\gcd(u^E-1,N)<N
+\iff
+(r_p\mid E)\mathbin{\mathrm{xor}}(r_q\mid E).
+}
+\]
+
+If \(r_p=r_q\), the two local negative-sign conditions also synchronize.
+Thus no pure power can factor through either direct sign.
+
+For a positive integer \(a\), define its largest full prime-power divisor by
+
+\[
+\sigma(a)=\max_{\ell^e\mid a}\ell^e,
+\qquad
+\sigma(1)=1.
+\]
+
+Let
+
+\[
+M_B=\operatorname{lcm}(1,\ldots,B)
+\]
+
+and define the punctured-lcm bank
+
+\[
+\mathcal E_B
+=
+\{M_B\}
+\cup
+\left\{
+\frac{M_B}{\ell^j}:
+\ell\le B\text{ prime},\
+1\le j\le\lfloor\log_\ell B\rfloor
+\right\}.
+\]
+
+This bank is complete for the bounded part of the order branch:
+
+\[
+\boxed{
+\exists E\in\mathcal E_B:\ 1<\gcd(u^E-1,N)<N
+\iff
+r_p\ne r_q
+\text{ and }
+\min\{\sigma(r_p),\sigma(r_q)\}\le B.
+}
+\]
+
+The bank has at most \(B+1\) exponents. For
+\(B=\operatorname{poly}(\log N)\), its construction and all modular-power
+and gcd tests have deterministic polynomial bit complexity. The condition
+\(\sigma(r)\le B\) is stronger than ordinary \(B\)-smoothness: it bounds
+each complete prime-power component, not only the prime divisors.
+
+At \(N=4033=37\cdot109\), the feedback descendant \(u=5\) has
+
+\[
+\operatorname{ord}_{37}(5)=36,
+\qquad
+\operatorname{ord}_{109}(5)=27,
+\]
+
+with \(\sigma(36)=9\) and \(\sigma(27)=27\). The member
+\(M_9=2520\) therefore separates the two local orders, as in P86.
+
+There is also a genuinely different phase branch. For prime \(L>2\), work
+additively in \(\mathbb F_L^2\) and put
+
+\[
+g=(1,1),
+\qquad
+H=\langle g\rangle,
+\qquad
+z=(a,b),
+\]
+
+where \(a,b\) are distinct and nonzero. Both coordinates of \(z\) have
+order \(L\), so no scalar multiple of \(z\) is a separator. Nevertheless,
+
+\[
+\langle H,z\rangle=\mathbb F_L^2,
+\qquad
+z-ag=(0,b-a)
+\]
+
+is a separator. Hence maximal subgroup gain need not create an order
+mismatch. A post-feedback algorithm must retain both operations: a
+punctured power bank for the order branch, and an adaptive mixed-cancellation
+or further-refinement rule for the phase branch.
+
+No public branch detector, all-input source law, canonical-integer hard
+family, computational lower bound, or factoring algorithm is proved.
+
+The corrected candidate, corrected hostile audit, proof-blind statement,
+and proof-blind reconstruction have SHA-256 hashes
+1aea866b07229545b14c7dbb34955e6d092adce65ccf8d47b93c2ecbf93dc94e,
+1972cb59af7640eab0a9c1817279db464659cf02071673978975f40a3185aec2,
+67359dc153a68ec0536aa7cfce9a91a8ee151ad55141293d05c9ea414c690ec5,
+and
+2469fbeade02d8440f0e8fed4273b3d578602e2adbaec1d3e11781febbba1e54.
+The first candidate and first hostile audit have hashes
+4fa0278a3299fe49fc2e60062c562c2ed7c327a0e03cdeb7b44208cfbf64701e
+and
+059697ec65cb4203f85b5c89473a7d88e4f1e790ea25c997bbf4a307ef893b50.
+The first audit correctly rejected the use of standard smoothness
+terminology. No research computation, cross-family audit, human audit, or
+publication-level literature review has run.
+
+## P88 — canonical integer feedback has a literal phase-only expansion
+
+**Status:** promoted from F82 after a hostile whole-proof and provenance
+audit and a proof-blind reconstruction. This is a fixed mechanism witness,
+not an all-input selector or a factoring algorithm.
+
+Let
+
+\[
+N=2047=23\cdot89.
+\]
+
+The public canonical relations
+
+\[
+11\cdot1861=1+10N,
+\qquad
+312\cdot269=1+41N
+\]
+
+have four pairwise-coprime endpoints, none of which is a nontrivial integer
+perfect power. Their residues generate exactly
+
+\[
+H_0=\langle11\rangle.
+\]
+
+The element 11 has exact order 22 in both hidden fields. Its \(+1\) and
+\(-1\) states are therefore synchronized, so no direct sign gcd from
+\(H_0\) is proper.
+
+Now take the canonical-residue feedback word
+
+\[
+g=[11^7]_N=1778,
+\qquad
+w=1735,
+\]
+
+for which
+
+\[
+1778\cdot1735=1+1507N.
+\]
+
+Both residues already lie in \(H_0\). The relation adds no new modular
+subgroup element, and all immediate endpoint sign and difference tests are
+trivial. Neither feedback endpoint is an integer perfect power. However,
+
+\[
+\boxed{\gcd(312,1778)=2.}
+\]
+
+Joint integer refinement therefore exposes the public block 2. This block
+does not lie in \(H_0\), so the available block-generated subgroup strictly
+expands even though the selected residue was redundant.
+
+The new block is phase-only:
+
+\[
+2^{11}=2048=1+N
+\]
+
+and 2 has exact order 11 in both hidden fields. Hence, for every \(e\ge0\),
+
+\[
+\gcd(2^e-1,N)\in\{1,N\},
+\qquad
+\gcd(2^e+1,N)=1.
+\]
+
+No pure power of the newly exposed block can factor \(N\). The mixed public
+word does:
+
+\[
+2\cdot11=22,
+\qquad
+\boxed{\gcd(22+1,2047)=23.}
+\]
+
+Thus a post-split policy that discards the old generators and tests only
+pure powers of the new block is incomplete. This does not rule out powering
+arbitrary mixed elements of the expanded subgroup or any unrelated
+factoring method. The block 2 is visible by trial division of the old
+endpoint 312 and is an ordinary small public base, so feedback is not
+necessary for this fixed integer under stronger preprocessing. No frequency,
+hard-family, branch-detector, all-input selector, or factoring theorem
+follows.
+
+The candidate, hostile audit, proof-blind statement, and proof-blind
+reconstruction have SHA-256 hashes
+85f9b310a0e1a10af3cdae8c081b1f374e3be3bddf2437c2d40c39b16ec45990,
+fdb0f290efba7ff188a50fe1dc93d93b4df99cc51e0783675ac49c5f293720df,
+dee4543c9f3eed076446c789c64dd2055fb0e9612302d44473c948a5cac0426c,
+and
+9e8027e15a2702f925af91513bb74e56feed61ed26ffe587b4071de59b3588f1.
+The finite search is authenticated discovery evidence, not an independent
+replay or asymptotic result. No cross-family audit, human audit, or
+publication-level literature review has run.
+
+## P89 — prime saturation has a complete deterministic support-two decoder
+
+**Status:** promoted from F83 after a hostile proof-only audit and a
+proof-blind reconstruction. This is a conditional factor-free decoder for
+an explicit relation list, not a relation source or a factoring algorithm.
+
+Let \(N=pq\) for distinct odd primes. Let \(q_1,\ldots,q_s\) be
+pairwise-coprime positive unit blocks, and let
+
+\[
+A_i=\prod_{j=1}^s q_j^{e_{ji}}\equiv1\pmod N,
+\qquad
+1\le i\le m,
+\]
+
+be explicit relations with exponent matrix \(E\). For a public prime
+\(\ell\), put
+
+\[
+V=\ker(E\bmod\ell).
+\]
+
+For canonical coordinate representatives of \(c\in V\), define
+
+\[
+\widetilde R(c)
+=
+\prod_jq_j^{(\sum_i e_{ji}c_i)/\ell},
+\qquad
+R(c)=[\widetilde R(c)]_N.
+\]
+
+The exponents are integers, \(R(c)^\ell=1\pmod N\), and
+
+\[
+\rho:c\longmapsto(R(c)\bmod p,R(c)\bmod q)
+\]
+
+is a homomorphism. Let
+
+\[
+K_r=\{c\in V:R(c)=1\pmod r\},
+\qquad r\in\{p,q\}.
+\]
+
+Each local kernel is either all of \(V\) or a hyperplane, including when
+\(\ell\) equals one hidden characteristic. The exact decoder gate is
+
+\[
+\boxed{
+1<\gcd(R(c)-1,N)<N
+\iff
+c\in K_p\mathbin\triangle K_q.
+}
+\]
+
+If the two local map ranks are \(d_p,d_q\in\{0,1\}\) and their joint rank
+is \(d\), uniform \(c\in V\) succeeds with exact probability
+
+\[
+\boxed{
+\ell^{-d_p}+\ell^{-d_q}-2\ell^{-d}.
+}
+\]
+
+When \(K_p\ne K_q\), this is either
+\(1-1/\ell\) or \(2(\ell-1)/\ell^2\).
+
+For any public basis \(b_1,\ldots,b_D\) of \(V\), define
+
+\[
+\mathcal C
+=
+\{b_i\}
+\cup
+\{b_i+t b_j:i<j,\ t\in\mathbb F_\ell^\times\}.
+\]
+
+This support-two menu is complete:
+
+\[
+\boxed{
+K_p\ne K_q
+\iff
+\exists c\in\mathcal C:
+1<\gcd(R(c)-1,N)<N.
+}
+\]
+
+Its exact size is
+
+\[
+D+(\ell-1)\binom D2.
+\]
+
+The proof covers zero and proportional local functionals and dimensions
+zero and one. For \(\ell=2\), basis vectors alone are complete. If the
+explicit relation presentation has bit length \(L\) and the numerical value
+of \(\ell\) is polynomial in \(L+\log N\), all linear algebra, modular-root
+construction, and gcd tests have deterministic polynomial total bit
+complexity. The executable decoder uses no hidden factor, order, or local
+character.
+
+A fixed operation-separation certificate is
+
+\[
+N=215=5\cdot43,
+\qquad
+8\cdot27=216=1+N.
+\]
+
+On blocks 2 and 3 the exponent column is \((3,3)^T\). Its binary kernel is
+zero, but modulo 3 the column is zero and the exact cube root is 6. Thus
+
+\[
+\boxed{\gcd(6-1,215)=5.}
+\]
+
+This witness does not separate odd-prime saturation from every endpoint
+screen, because
+
+\[
+\gcd(8+27,215)=5.
+\]
+
+The theorem changes the decoder: 2-saturation is only one prime case, and
+odd-prime kernels require support-two combinations. It gives no public law
+that manufactures \(K_p\ne K_q\), selects a useful prime on every input, or
+produces an all-input factoring algorithm. Proportional nonzero local
+characters have equal identity kernels and remain outside this decoder.
+
+The candidate, hostile audit, proof-blind statement, and proof-blind
+reconstruction have SHA-256 hashes
+9fef7c952aa61895552374f6f64e360f09c25d4ec12b2fa8937727f8f0fd4163,
+6558ed289102a3b3e7927d4b9579572902321f9343c0c5e7efea2e2a9b03c9d4,
+7868d3f7c31a558bed9d0e2afd129a593658285de07aefff1208e40e0ddc64b4,
+and
+55f204f4cce33814238c670c446273040f91dadbb06da8f19275dec7135a5103.
+No research computation, cross-family audit, human audit, or
+publication-level literature review has run.
+
+## P90 — exhaustive direct-sign failure is exactly a diagonal graph state
+
+**Status:** promoted from F84 after a hostile proof-only audit and a
+proof-blind reconstruction. This is a state characterization and an exact
+feedback-transition theorem, not a public state recognizer, selector, or
+factoring algorithm.
+
+Let \(N=pq\) for distinct odd primes and let
+
+\[
+H\le(\mathbb Z/N\mathbb Z)^\times
+\cong\mathbb F_p^\times\times\mathbb F_q^\times.
+\]
+
+The following conditions are equivalent:
+
+1. every \(x\in H\) has
+   \(\gcd(x-1,N)\in\{1,N\}\);
+2. both hidden projections of \(H\) are isomorphisms onto their images;
+3. \(H\) is the graph of an isomorphism
+   \(H_p\to H_q\); and
+4. every \(x\in H\) has equal local orders modulo \(p\) and \(q\).
+
+In this state, negative signs synchronize as well. Every identity-target
+prime-saturation root map has equal local kernels, for every prime, so all
+such decoders fail automatically. The quantifier over the full subgroup is
+essential: failure of a finite direct menu and all currently available
+saturation tests does not certify a graph state. For example,
+\(N=35\), \(H=\langle2\rangle\) passes the two direct tests on the listed
+generator and has no relation roots, but \(2^3\) separates the factors.
+
+Now suppose canonical feedback appends integer endpoints whose residues
+already lie in an old graph subgroup \(H\). Exact gcd-free refinement can
+still expose smaller integer blocks and produce a larger public subgroup
+\(K\ge H\). Put
+
+\[
+c=[K:H],
+\qquad
+a=[K_p:H_p],
+\qquad
+b=[K_q:H_q].
+\]
+
+The quotient projections are surjective, \(a\mid c\), \(b\mid c\), and the
+exact number of positive separators in \(K\) is
+
+\[
+\boxed{\frac ca+\frac cb-2.}
+\]
+
+Thus the old graph breaks exactly when
+
+\[
+\boxed{c>a\quad\text{or}\quad c>b.}
+\]
+
+This identifies the precise framework-level effect. Residue-neutral
+feedback can change the algorithm's available subgroup because integer
+factor blocks need not lie in the subgroup containing their product.
+Lockstep growth with \(c=a=b\) does not help.
+
+For the P88 canonical phase witness at \(N=2047\), refinement exposes the
+block 2 and gives
+
+\[
+\boxed{c=11,\qquad a=b=1.}
+\]
+
+Neither local projection image grows, yet the old graph breaks and the new
+subgroup contains exactly 20 positive separators. This is a pure phase
+expansion. The theorem does not make the hidden indices public, enumerate
+the subgroup, choose a separator, or prove that feedback creates this event
+on general inputs.
+
+The candidate, hostile audit, proof-blind statement, and proof-blind
+reconstruction have SHA-256 hashes
+7a53ba1df08ad90c54e034fe23712587563f764fcaf1efb3e4a8445103a4319d,
+98debf97ea45cd4f444e993d8c07f93d4b93c534ce7871da8af5ac26f5d2cd0b,
+c903631dd78edc6487c3f3f890d3078a2f332a46012449456dc402cc523b7812,
+and
+c949c944d9c674551f92bfa0abc8decfbd178d0577a04643051101ae5103b6bd.
+No research computation, cross-family audit, human audit, or
+publication-level literature review has run.
+
+## P91 — one prime-saturation closure adds one canonical root coset
+
+**Status:** promoted from F85 after a hostile proof-only audit with explicit
+scope corrections and a proof-blind reconstruction. This is an incremental
+factor-free decoder theorem, not a relation source or a factoring algorithm.
+
+Let \(E\) be the exponent matrix of an explicit relation list on
+pairwise-coprime unit blocks, let \(\ell\) be a public prime, and put
+
+\[
+V=\ker(E\bmod\ell).
+\]
+
+After complete joint gcd-free refinement, append one relation column \(b\).
+If
+
+\[
+b\notin\operatorname{colspan}_{\mathbb F_\ell}(E),
+\]
+
+then no new saturation vector appears:
+
+\[
+\ker[E\mid b]=V\times\{0\}.
+\]
+
+If \(Ec+b=0\) and \(z=(c,1)\), then
+
+\[
+\boxed{
+\ker[E\mid b]
+=(V\times\{0\})\oplus\langle z\rangle.
+}
+\]
+
+Let \(H\) be the old image of the exact \(\ell\)-th-root map, and let
+\(s_c\) be the exact public root induced by \(z\). The full new root image is
+
+\[
+\boxed{H'=\langle H,s_c\rangle.}
+\]
+
+Changing the solution \(c\) multiplies \(s_c\) by an old root. Therefore
+the canonical new object, relative to the full lifted block and exponent
+presentation, is the coset \(s_cH\), not one preferred root.
+
+Assume the complete old prime-saturation decoder has failed. If all old
+basis roots are one, then \(H=1\), and the single test
+\(\gcd(s_c-1,N)\) is complete for the new image. Otherwise, any public
+nonidentity old basis root \(h\) generates the old graph line, and the menu
+
+\[
+\boxed{\{s_ch^t:0\le t<\ell\}}
+\]
+
+is complete. It contains exactly two positive separators if the new coset
+leaves the old graph and none if it does not. Thus one appended relation
+needs at most \(\ell\) new gcd tests, rather than a fresh scan of all
+support-two kernel combinations. The procedure is polynomial when the
+numerical value of \(\ell\) is polynomial in the explicit presentation
+size. A public implementation first tests \(\gcd(\ell,N)\).
+
+The result gives no law that makes the new column close, makes the induced
+coset leave the graph, or selects a useful prime. The final candidate adds
+only the audit's explicit nonnegative-exponent, presentation, and
+\(\gcd(\ell,N)\) scope qualifications to the audited theorem.
+
+The final candidate, hostile audit, proof-blind statement, and proof-blind
+reconstruction have SHA-256 hashes
+51f858a40d1756dd27efbabfac0aeedb16cb86eef5ef48679b81b861b0cb069f,
+eb6bb95999fcb80ce521029474a91e75a605e392a95c0912f0215f58ebb31dc8,
+cd439393760f0e4d5ad88fbe8321cb8a752dab270cfc8353223d8c3eb040706d,
+and
+27d68ef66df52d13f1ccd6ad31740f68629833f9dcc1a0bb8bf2bed41159fa9f.
+No research computation, cross-family audit, human audit, or
+publication-level literature review has run.
+
+## P92 — whole-subgroup power contraction makes a bounded phase expansion enumerable
+
+**Status:** promoted from F86 after a hostile proof-only audit and a
+proof-blind reconstruction. This is a conditional deterministic
+post-feedback algorithm, not an all-input source law or factoring algorithm.
+
+Let \(H\) be a diagonal graph subgroup of order \(h\), and let \(K\ge H\)
+be a strict pure phase extension:
+
+\[
+K_p=H_p,
+\qquad
+K_q=H_q.
+\]
+
+Then \(K/H\) is cyclic of order \(c\mid h\), and after identifying the old
+graph,
+
+\[
+K=H\cdot(\{1\}\times D)
+\]
+
+for a cyclic group \(D\) of order \(c\), with trivial intersection. For a
+public exponent \(M\), put
+
+\[
+h_M=\frac h{\gcd(h,M)},
+\qquad
+c_M=\frac c{\gcd(c,M)}.
+\]
+
+Then
+
+\[
+\boxed{|K^M|=h_Mc_M.}
+\]
+
+If \(c_M>1\), the powered subgroup contains exactly \(2c_M-2\) positive
+separators.
+
+Let \(M_B=\operatorname{lcm}(1,\ldots,B)\) and let the punctured bank contain
+\(M_B\) and every \(M_B/\ell^j\) with \(\ell^j\le B\). If the largest full
+prime-power component \(\sigma(h)\) is at most \(B\), then some bank exponent
+\(E\) gives
+
+\[
+\boxed{c_E=\ell,\qquad h_E\le B,\qquad |K^E|\le B^2}
+\]
+
+for a prime \(\ell\mid c\). The image contains exactly
+\(2\ell-2\) separators and has density at least \(1/B\).
+
+A public algorithm powers every generator of \(K\) by every bank exponent,
+enumerates the resulting subgroup with a \(B^2\) cap, and gcd-tests every
+visited element. This is deterministic polynomial time for
+\(B=\operatorname{poly}(\log N)\). It uses no hidden branch detector,
+order, projection, or cancellation word.
+
+For the P88 state
+
+\[
+N=2047,
+\qquad
+H=\langle11\rangle,
+\qquad
+K=\langle11,2\rangle,
+\]
+
+one has \(h=22\), \(c=11\), and the bank exponent \(E=2520\) gives a
+subgroup of order 121 with 20 positive separators. This completes that
+fixed phase witness even though every pure power of the exposed block 2
+fails. The theorem changes the operation from selecting one mixed word to
+contracting and completely enumerating a whole public subgroup.
+
+The missing theorem is still source-side. Nothing here proves that feedback
+creates a strict pure phase extension or that \(\sigma(h)\) is polynomially
+bounded on all inputs. The final candidate differs from the audited version
+only by wording and TeX corrections; the proof-blind reconstruction verifies
+the final mathematical statement.
+
+The final candidate, hostile audit, proof-blind statement, and proof-blind
+reconstruction have SHA-256 hashes
+1b53676cae4856a1a745c44aae8c0c49d9750d57cae26d2157dd34f0a9e644c2,
+c5ce39d4d4b1a63fe31a691509d259a88a427869d91018ca41122340d7efd16a,
+e864530fbf489c1af09aef0371fcb86857d9c502c8bca887c1767138d1c9af3c,
+and
+9186362a09e28c77c4ff6bdc4be5a8d25de56c970b325bc5a7d417396de9b488.
+No research computation, cross-family audit, human audit, or
+publication-level literature review has run.
+
+## P93 — bounded subgroup exponent makes every positive separator enumerable
+
+**Status:** promoted from F87 after a hostile proof-only audit and a
+proof-blind reconstruction. This is a conditional deterministic decoder for
+a supplied subgroup of a squarefree semiprime, not a subgroup source or an
+all-input factoring algorithm.
+
+Let \(N=pq\) for distinct odd primes. Let \(K\) be given by a public
+polynomial-size generator list and let
+
+\[
+\lambda=\exp(K).
+\]
+
+Assume that \(K\) contains a positive separator and that every full
+prime-power component of \(\lambda\) is at most \(B\):
+
+\[
+\boxed{\sigma(\lambda)\le B.}
+\]
+
+For \(M_B=\operatorname{lcm}(1,\ldots,B)\), use the same punctured bank as
+P92. Choose any separator \(x\), a prime
+\(\ell\mid\operatorname{ord}(x)\), and put
+
+\[
+C=v_\ell(\operatorname{ord}(x)),
+\qquad
+H=v_\ell(\lambda),
+\qquad
+e=v_\ell(M_B).
+\]
+
+The bank exponent
+
+\[
+E=M_B/\ell^{e-C+1}
+\]
+
+keeps \(x^E\) as a positive separator of exact order \(\ell\), kills every
+other primary component, and makes \(K^E\) an \(\ell\)-group of exponent at
+most \(\ell^{H-C+1}\le B\). Because a subgroup of the product of two cyclic
+local groups has rank at most two,
+
+\[
+\boxed{|K^E|\le B^2.}
+\]
+
+The same capped public enumeration as in P92 therefore finds a factor in
+deterministic polynomial time. It does not know the separator, the useful
+prime, an element order, the subgroup exponent, either hidden factor, or an
+order/phase branch. It covers unequal-order and equal-order phase separators
+uniformly.
+
+For \(N=2047\), \(K=\langle11,2\rangle\) has exponent 22. With \(B=11\),
+the exponent 2520 again gives a group of order 121 containing 20 positive
+separators.
+
+The theorem removes the branch detector and mixed-word selector only under
+the supplied separator and bounded-exponent promises. It gives no law that
+canonical feedback creates such a subgroup, and its rank-two size bound is
+specific to the two-field CRT setting. The final candidate differs from the
+audited version only by TeX corrections; the proof-blind reconstruction
+verifies the final mathematical statement.
+
+The final candidate, hostile audit, proof-blind statement, and proof-blind
+reconstruction have SHA-256 hashes
+e12d85db167da5b6611e30dd808194b33d1944a2090819d1e08b27625335d984,
+a42cf3d89d8e3f1b7f79c834ab03bd6d0d195e4e15f6c36c0d749c693126ebe8,
+f4647ddba86b2ff7ce85936f8fd977158f78ece9d2ef55692fac01213eb5494f,
+and
+a051db102398e38564632656332d667a6cdd7bfe6f00595d7cb8b586eeb8de34.
+No research computation, cross-family audit, human audit, or
+publication-level literature review has run.
+
+## P94 — the public exponent N−1 isolates a bounded pure-phase component
+
+**Status:** promoted from F88 after a hostile proof-only audit and a
+proof-blind reconstruction. This is a conditional deterministic decoder for
+a supplied pure-phase feedback state, not an all-input source law or
+factoring algorithm.
+
+Let \(N=pq\) for distinct odd primes. Let \(H\) be a diagonal graph subgroup
+of order \(h\), and let \(K\ge H\) be a strict pure phase extension with
+
+\[
+K_p=H_p,
+\qquad
+K_q=H_q,
+\qquad
+c=[K:H]>1.
+\]
+
+The phase quotient is cyclic and
+
+\[
+c\mid h.
+\]
+
+More importantly, the synchronized old order has a public annihilator:
+
+\[
+\boxed{h\mid N-1.}
+\]
+
+Indeed, \(h\mid p-1\) and \(h\mid q-1\), so
+\(pq\equiv1\pmod h\). This replaces P92's global bounded-order hypothesis
+by a public integer already available from bare \(N\).
+
+Choose a prime \(\ell\mid c\), and write
+
+\[
+e=v_\ell(N-1),
+\qquad
+H_\ell=v_\ell(h),
+\qquad
+C_\ell=v_\ell(c).
+\]
+
+For
+
+\[
+E=\frac{N-1}{\ell^{e-C_\ell+1}},
+\]
+
+the exact powered-state parameters are
+
+\[
+\boxed{
+c_E=\ell,
+\qquad
+h_E=\ell^{H_\ell-C_\ell+1},
+\qquad
+|K^E|=\ell^{H_\ell-C_\ell+2}.
+}
+\]
+
+The image contains exactly \(2\ell-2\) positive separators. All
+non-\(\ell\) components of the old graph and phase quotient disappear,
+including large primes that the algorithm never factors or scans. In the
+strongest case \(C_\ell=H_\ell\), the image has order \(\ell^2\), with no
+condition on the other prime-power components of \(h\).
+
+A public algorithm scans primes \(\ell\le L\) dividing \(N-1\), every
+puncture \((N-1)/\ell^j\), and enumerates each powered subgroup with cap
+\(S\). It deterministically factors \(N\) whenever some
+\(\ell\mid c\) satisfies
+
+\[
+\boxed{
+\ell\le L,
+\qquad
+\ell^{H_\ell-C_\ell+2}\le S.
+}
+\]
+
+For polynomial numerical bounds \(L,S\), the scan has polynomial bit
+complexity. It uses no hidden factor, subgroup order, phase index,
+valuation, branch detector, or cancellation word.
+
+For the P88 state at \(N=2047\), one has \(h=22\), \(c=11\), and
+
+\[
+\boxed{E=(N-1)/11=186.}
+\]
+
+The powered subgroup has order 121 and contains 20 positive separators.
+This is the strongest current algorithmic completion of the literal phase
+witness: it powers and enumerates a whole subgroup instead of selecting one
+scalar for one gcd.
+
+The remaining promise is exact. Feedback must first create a strict pure
+phase extension, and its quotient must contain a scanned prime whose full
+residual image fits the polynomial cap. A small raw valuation gap alone is
+not sufficient. General order/phase mixtures, arbitrary composites, and an
+all-input source law remain open.
+
+The candidate, hostile audit, proof-blind statement, and proof-blind
+reconstruction have SHA-256 hashes
+c8a4d65af2ad0148ec3c05feb8147efc964e3f2fd2e9b97049ed7872d34b1c39,
+b319de808fc88d9f811fc61d59619ede7b12bbebd4b22b4c01660705339ac687,
+f6b264e4c7e45fbac65fe8071dc59b68332715f559102f09df3da076f384d054,
+and
+537468a5dcd233bae1970a7f10f09005e70bdb5d2dd5b0dfb24c338932d62ba3.
 No research computation, cross-family audit, human audit, or
 publication-level literature review has run.

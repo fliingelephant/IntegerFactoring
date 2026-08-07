@@ -1992,3 +1992,382 @@ is exponential in the input length.
 sampler. Feedback must force inverse-polynomial factor-bearing density, make
 a rare separator accessible by a polynomial sparse-word menu, or continue
 integer refinement until one of these conditions holds.
+
+### C81 — feedback expansion has a hidden projection-kernel gate and an old-subgroup density ceiling
+
+**Status:** verifier-backed and promoted as P84 after a hostile proof-only
+audit and a proof-blind reconstruction. The only post-audit edits make the
+pair-selection and \(L>2\) scope explicit. No research computation,
+cross-family audit, human audit, or literature audit ran.
+
+For \(N=pq\), let an old block subgroup \(H\) contain no positive sign
+separator. Then both hidden projections of \(H\) are injective, so \(H\) is
+the graph of an isomorphism and
+
+\[
+|H|=|H_p|=|H_q|=:h.
+\]
+
+For any later subgroup \(K\ge H\), put
+
+\[
+c=[K:H],\qquad a=[K_p:H_p],\qquad b=[K_q:H_q].
+\]
+
+The exact number of positive separators created in \(K\) is
+
+\[
+\frac ca+\frac cb-2.
+\]
+
+Thus subgroup growth \(c>1\) is not the gate. The gate is a nontrivial
+kernel in one hidden quotient projection: \(c>a\) or \(c>b\). A single old
+integer block split is the cyclic case, and every useful word is a power of
+the new block cancelled by one unique old-subgroup element in one hidden
+component.
+
+More strongly, every coset of \(H\) contains at most four elements that can
+pass either sign gcd. Hence every \(H\)-invariant law, including uniform
+sampling from any later supergroup, has total direct-sign success at most
+
+\[
+\frac4h.
+\]
+
+The same ceiling survives adaptive mixtures, negligible sampling error, and
+polynomially many pairwise products that retain one independent uniform
+\(H\)-mask. If \(h\) is exponential in the input length, no amount of raw
+subgroup expansion makes such sampling efficient.
+
+**Algorithmic consequence.** Dense random exponent sampling is not the
+feedback theorem to seek in the large synchronized regime. The live targets
+are a public nonuniform cancellation-word selector, a direct integer overlap,
+or P74's separate square-class closure plus non-global-root gate. The hidden
+indices and cancellation word are not yet publicly computable, so no
+factoring algorithm follows.
+
+### C82 — a predeclared sparse word menu can miss a maximal diagonal escape
+
+**Status:** verifier-backed and promoted as P85 after a hostile proof-only
+audit and a proof-blind reconstruction. No research computation,
+cross-family audit, human audit, or literature audit ran.
+
+Let \(L>2\) be prime and let
+\(S\subseteq\mathbb F_L^2\) be any exponent menu with
+\(|S|\le L-3\), fixed before the new generator is chosen. In the diagonal
+model
+
+\[
+g=(1,1),
+\qquad
+H=\langle g\rangle\le\mathbb F_L^2,
+\]
+
+there are distinct nonzero \(r,s\) such that \(z=(r,s)\) is not a separator,
+\(\langle H,z\rangle=\mathbb F_L^2\), but no prescribed word
+
+\[
+Az+Bg,
+\qquad
+(A,B)\in S,
+\]
+
+is a separator. The proof avoids the at most \(|S|\) forbidden ratios
+\(-B/A\); the determinant \(s-r\) then gives maximal expansion.
+
+**Algorithmic consequence.** A fixed polynomial catalogue of bounded,
+power-of-two, or least-common-multiple exponent pairs cannot be a universal
+group-theoretic explanation for P81's small fixed witness. The theorem does
+not cover a menu chosen from the numerical value of the new block, an
+adaptive CRT beam, quotient-fibre targeting, integer refinement, or
+square-class decoding.
+
+### C83 — feedback can expose a base for smooth order contraction
+
+**Status:** verifier-backed and promoted as P86 after a hostile proof-only
+audit and a corrected proof-blind reconstruction. The first reconstruction
+statement omitted one plus sign and correctly failed; both failed artifacts
+remain preserved. No research computation, cross-family audit, human audit,
+or literature audit ran.
+
+For uniform \(X\) in a finite subgroup \(K\), the power \(X^M\) is uniform
+on the image subgroup \(K^M\). This operation can contract the old subgroup,
+so P84's old-coset ceiling does not apply. For one block \(u\) on
+\(N=pq\),
+
+\[
+1<\gcd(u^M-1,N)<N
+\]
+
+holds exactly when \(M\) is divisible by one, but not both, of the two local
+orders of \(u\).
+
+The P78 feedback witness gives an exact positive instance. Before feedback,
+\(H_0=\langle2\rangle\) has order \(36\) in both hidden components. Feedback
+splits an old block and exposes \(u=5\). With
+
+\[
+M=\operatorname{lcm}(1,\ldots,9)=2520,
+\]
+
+one has
+
+\[
+5^M\equiv1\pmod{37},
+\qquad
+5^M\equiv63\pmod{109},
+\]
+
+so the public modular power and gcd return \(37\). Every old
+\(h\in H_0\) instead has \(h^M=1\) globally. Thus the new block is essential
+for this declared power-contraction channel.
+
+**Algorithmic consequence.** After a split, a smooth power ladder is a real
+alternative to uniform subgroup sampling or a cancellation-word search.
+The missing all-input theorem must prove that feedback creates a block with a
+polynomial-bit local order-divisibility mismatch. No such smoothness law is
+known.
+
+### C84 — feedback subgroup gain splits into order and phase branches
+
+**Status:** verifier-backed and promoted as P87 after a corrected hostile
+proof-only audit and a proof-blind reconstruction. The first audit correctly
+rejected standard smoothness terminology; the corrected theorem uses the
+exact full-prime-power bound. No research computation, cross-family audit,
+human audit, or literature audit ran.
+
+For a public block \(u\) on \(N=pq\), let its two hidden local orders be
+\(r_p,r_q\). A pure power of \(u\) can expose a factor if and only if
+
+\[
+r_p\ne r_q.
+\]
+
+For
+
+\[
+\sigma(r)=\max_{\ell^e\mid r}\ell^e,
+\qquad
+M_B=\operatorname{lcm}(1,\ldots,B),
+\]
+
+the polynomial punctured-lcm bank
+
+\[
+\{M_B\}
+\cup
+\{M_B/\ell^j:\ell^j\le B\}
+\]
+
+is complete exactly when the orders differ and
+
+\[
+\min\{\sigma(r_p),\sigma(r_q)\}\le B.
+\]
+
+This condition is stronger than ordinary \(B\)-smoothness.
+
+Equal local orders define a different branch. Every pure power has
+synchronized \(+1\) and \(-1\) status, yet a mixed word with the old
+subgroup can still factor. The diagonal \(C_L\times C_L\) construction gives
+a maximal abstract example.
+
+**Algorithmic consequence.** Run the punctured power bank after every
+feedback split, but do not treat its failure as evidence that subgroup growth
+was useless. A phase branch requires a mixed cancellation selector,
+additional integer refinement, or a different closure operation. No public
+branch detector or all-input source law is proved.
+
+### C85 — redundant canonical residues can cause a literal phase-only expansion
+
+**Status:** verifier-backed and promoted as P88 after a hostile whole-proof
+and provenance audit and a proof-blind reconstruction. The finite search is
+authenticated discovery evidence only. No cross-family audit, human audit,
+or literature audit ran.
+
+At \(N=2047=23\cdot89\), the old canonical endpoint blocks generate
+\(H_0=\langle11\rangle\), and 11 has order 22 in both hidden fields. The
+feedback pair for \([11^7]_N=1778\) stays inside \(H_0\), and all immediate
+sign and difference screens fail. Its integer representative nevertheless
+overlaps the old endpoint 312:
+
+\[
+\gcd(312,1778)=2.
+\]
+
+This exposes a block outside \(H_0\). The block 2 has order 11 in both
+hidden fields, so every pure direct-sign power fails. The mixed word succeeds:
+
+\[
+\gcd(2\cdot11+1,2047)=23.
+\]
+
+**Algorithmic consequence.** Canonical feedback can change the available
+subgroup without adding a new residue, and the change can be phase-only. A
+power bank on the new block is not a complete post-split policy. This fixed
+witness is not hard: trial division of 312 already exposes 2, and no general
+mixed-word selector is proved.
+
+### C86 — 2-saturation is only one case of a complete prime-root decoder
+
+**Status:** verifier-backed and promoted as P89 after a hostile proof-only
+audit and a proof-blind reconstruction. No research computation,
+cross-family audit, human audit, or literature audit ran.
+
+For any public prime \(\ell\), reduce the explicit relation exponent matrix
+modulo \(\ell\). Each kernel vector gives an exact \(\ell\)-th root of one
+modulo \(N\). Its two hidden identity kernels are linear subspaces. A proper
+factor exists exactly when those kernels differ.
+
+For any public kernel basis, all basis vectors and all support-two
+combinations form a complete deterministic menu. Its size is
+
+\[
+D+(\ell-1)\binom D2.
+\]
+
+For a numerically polynomial-size prime, the full decoder has polynomial bit
+complexity. At \(N=215\), 3-saturation gives the useful cube root 6 while the
+2-saturation relation space is zero. The endpoint sum also factors that
+fixed witness, so it proves only an operation separation.
+
+**Algorithmic consequence.** Run small-prime saturation, not only
+2-saturation, after relation refinement. The decoder is complete once the
+local identity kernels differ. The unsolved source question is whether bare
+\(N\) and feedback can make that difference with inverse-polynomial
+probability.
+
+### C87 — exhaustive failure is a graph state, and feedback breaks it through a quotient kernel
+
+**Status:** verifier-backed and promoted as P90 after a hostile proof-only
+audit and a proof-blind reconstruction. No research computation,
+cross-family audit, human audit, or literature audit ran.
+
+A subgroup in which every direct sign test fails is exactly the graph of an
+isomorphism between its two hidden projection images. Every element then has
+the same order in both fields. Negative signs and all prime-saturation
+identity kernels synchronize automatically.
+
+Residue-neutral feedback can still change the state. Its integer endpoints
+can split an old integer block and expose factor blocks outside the old
+subgroup. For old graph \(H\) and refined subgroup \(K\), put
+
+\[
+c=[K:H],\qquad a=[K_p:H_p],\qquad b=[K_q:H_q].
+\]
+
+The refined subgroup has exactly
+
+\[
+\frac ca+\frac cb-2
+\]
+
+positive separators. The graph breaks exactly when \(c>a\) or \(c>b\).
+At \(N=2047\), feedback gives \(c=11\) and \(a=b=1\): no local image grows,
+but 20 separators appear.
+
+**Algorithmic consequence.** The new information is not a new residue. It
+is a new factorization of an integer representative, which changes the
+available generators and their cross-field pairing. The hidden quotient
+indices do not yet give a public selector or source law.
+
+### C88 — one closing relation adds one prime-root coset
+
+**Status:** verifier-backed and promoted as P91 after a hostile proof-only
+audit with scope corrections and a proof-blind reconstruction. No research
+computation, cross-family audit, human audit, or literature audit ran.
+
+For a public prime \(\ell\), one appended relation column either leaves the
+old relation kernel unchanged or adds exactly one new kernel direction. In
+the second case, the new \(\ell\)-th roots form one coset of the old root
+image.
+
+After the complete old decoder fails, this whole new coset has a short
+complete public test. If the old root image is trivial, test one induced
+root. Otherwise, choose any public nonidentity old basis root \(h\) and test
+
+\[
+\{s h^t:0\le t<\ell\}.
+\]
+
+If the coset leaves the old graph, exactly two of these roots expose a
+factor. If it does not, none do.
+
+**Algorithmic consequence.** After each new relation, update every relevant
+small-prime saturation decoder incrementally. At most \(\ell\) new gcd tests
+are needed. The result does not make a relation close or make its root coset
+leave the graph.
+
+### C89 — whole-subgroup contraction solves the bounded pure-phase branch
+
+**Status:** verifier-backed and promoted as P92 after a hostile proof-only
+audit and a proof-blind reconstruction. No research computation,
+cross-family audit, human audit, or literature audit ran.
+
+For a pure phase extension \(K\) of an old graph \(H\), the quotient
+\(K/H\) is cyclic and its order divides \(|H|\). If every full prime-power
+component of \(|H|\) is at most \(B\), one punctured least-common-multiple
+exponent contracts the full public subgroup to at most \(B^2\) elements and
+keeps a factor-bearing phase component.
+
+A public algorithm powers every generator, enumerates each contracted image
+with a \(B^2\) cap, and gcd-tests every element. It needs no branch detector
+or mixed-word selector. At \(N=2047\), exponent 2520 gives an image of order
+121 with 20 positive separators, although every pure power of the new block
+2 fails.
+
+**Algorithmic consequence.** The phase route now has a real subgroup-wide
+algorithm under an exact bounded-order promise. The remaining gap is to
+prove that feedback creates this promise on every input or with useful
+probability.
+
+### C90 — bounded subgroup exponent unifies the order and phase decoders
+
+**Status:** verifier-backed and promoted as P93 after a hostile proof-only
+audit and a proof-blind reconstruction. No research computation,
+cross-family audit, human audit, or literature audit ran.
+
+Let a public subgroup of a two-field unit group contain any positive
+separator. If every full prime-power component of its exponent is at most
+\(B\), a punctured least-common-multiple power keeps a separator and shrinks
+the full image to at most \(B^2\) elements.
+
+The same capped subgroup enumeration therefore handles both unequal-order
+and equal-order phase cases. It does not need to know which branch occurred,
+which word separates, or the subgroup exponent.
+
+**Algorithmic consequence.** The decoder problem is solved under the
+bounded-exponent promise. The open problem is now sharply source-side: bare
+\(N\) and feedback must create a factor-bearing subgroup with an accessible
+primary component. No all-input law is known.
+
+### C91 — N−1 is a public annihilator for every synchronized graph state
+
+**Status:** verifier-backed and promoted as P94 after a hostile proof-only
+audit and a proof-blind reconstruction. No research computation,
+cross-family audit, human audit, or literature audit ran.
+
+For a pure phase extension of a graph subgroup of order \(h\), one always
+has
+
+\[
+h\mid N-1.
+\]
+
+Thus the algorithm does not need a smooth old subgroup order. It scans small
+primes dividing the public number \(N-1\), removes one controlled prime power,
+and enumerates the contracted subgroup with a public cap. For a phase prime
+\(\ell\), the exact residual size is
+
+\[
+\ell^{H_\ell-C_\ell+2}.
+\]
+
+If this size is polynomial, the scan is a deterministic polynomial-time
+factor extractor. At \(N=2047\), the public exponent 186 produces an image
+of order 121 with 20 separators.
+
+**Algorithmic consequence.** This removes the global smoothness promise from
+the pure phase route. The remaining source theorem must show that feedback
+creates a strict phase quotient with a small enough prime component and
+residual image. This condition is not yet proved for general inputs.
