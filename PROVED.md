@@ -8454,3 +8454,106 @@ reconstruction have SHA-256 hashes
 and `d23f801dd93b3b9d3b195ace94b8c1790fb5ef225a1cf516d4146474abaa837b`.
 No computation, cross-family audit, human audit, or publication-level
 literature review supports this theorem.
+
+## P75 — the inverse-diagonal target has useful mass but resists three simple samplers
+
+**Status:** promoted metric-target and access-obstruction theorem after
+hostile audit, audit-directed precision corrections, and fresh proof-blind
+reconstruction. It is not a general sampling lower bound or a factoring
+algorithm.
+
+Let $N=pq$ for distinct odd primes. For a canonical unit
+$u\in\{1,\ldots,N-1\}$, let $v(u)$ be its canonical inverse and put
+
+\[
+d(u)=u-v(u),
+\qquad
+\delta(u)=|d(u)|.
+\]
+
+For a signed difference $d$, the exact fibre is
+
+\[
+F_d=left\{u:
+\max(1,1+d)\le u\le\min(N-1,N-1+d),\quad
+u^2-du-1\equiv0\pmod N
+\right\}.
+\]
+
+With $\Delta_d=d^2+4$, the congruence has, before the canonical interval
+cut, exactly
+
+\[
+\left(1+\left(\frac{\Delta_d}{p}\right)\right)
+\left(1+\left(\frac{\Delta_d}{q}\right)\right)
+\]
+
+roots. Hence every signed fibre has at most four elements. Inversion gives
+$|F_d|=|F_{-d}|$. The public discriminant ticket
+$\gcd(d(u)^2+4,N)$ detects a local root of $u^2=-1$; uniform proposals hit a
+proper ticket with probability at most $2/(p-1)+2/(q-1)$.
+
+Now weight the inverse graph by
+
+\[
+w(u)=\frac1{1+\delta(u)},
+\qquad
+\pi(u)=\frac{w(u)}{Z_N}.
+\]
+
+The four roots of one have distance zero. Two are global and two expose the
+factors. The four-point fibre bound gives
+
+\[
+4\le Z_N\le8H_{N-1}-4,
+\]
+
+so the two useful roots have mass
+
+\[
+\pi(M_N)=\frac2{Z_N}
+\ge\frac1{4H_{N-1}-2}
+=\Omega\!\left(\frac1{\log N}\right).
+\]
+
+Therefore a sampler within total-variation distance
+$1/(8H_{N-1}-4)$ of $\pi$ would still factor with inverse-polynomial
+probability. The target signal is large enough; efficient access is the open
+part.
+
+Three natural access rules fail.
+
+1. Uniform rejection accepts with probability $Z_N/\varphi(N)$ and needs
+   $\Omega(N/\log N)$ proposals in expectation.
+2. Independent uniform-proposal Metropolis--Hastings has
+   $\Omega(N/\log N)$ worst-start mixing time. From a uniform start, its
+   probability of entering the useful two-point set by time $t$ is at most
+   $2(t+1)/\varphi(N)$, so polynomially many steps also miss the required
+   target accuracy on balanced inputs.
+3. Nearest-neighbor descent has sealed factor-free minima. If
+   $u^2+u-1\equiv0\pmod N$ and $\gcd(N,5)=1$, then $u,u+1$ are inverse
+   states of distance one, while both outer neighbors have larger distance.
+   The discriminant ticket is $5$ and is trivial. The smallest clean example
+   with two distinct odd prime factors is
+
+   \[
+   N=209=11\cdot19,
+   \]
+
+   where the four consecutive distances at $79,80,81,82$ are
+   $48,1,1,48$.
+
+The first two costs are exponential in the input bit length. These results
+rule out only the named rejection, proposal kernel, and line descent. Larger
+or block-guided moves, nonuniform correlated sources, and other metric
+samplers remain open. P75 therefore manufactures a mathematically adequate
+metric target, but not a way to sample it from bare $N$.
+
+The corrected candidate, amended hostile audit, proof-blind statement, and
+fresh proof-blind reconstruction have SHA-256 hashes
+`0037947187b324ff655a539bbff8dd82d68c8fe52e8c0a0edcd34fab20b8568e`,
+`329b0986ee40cb177d7cf57b3bc341d3855da76109f9a7613e3f8b81a47d1787`,
+`c25264a5fcc7490b734daeca8cff985d4071423c2e97f818c8f480e8653ea79c`,
+and `694851544bef297dfc529597eecdae0b5d17e86d51f72bce6e4116bbc03bc5d8`.
+No computation, cross-family audit, human audit, or publication-level
+literature review supports this theorem.

@@ -1730,3 +1730,25 @@ closure and a non-global root label. P74 makes the second gate exact and cheap
 after closure. It does not make either gate frequent. The remaining work is
 still source-side: generate polynomially many additions for which both gates
 occur with an all-input inverse-polynomial law.
+
+### C72 — the inverse-diagonal target has signal but no simple access
+
+**Status:** promoted as P75 after hostile audit, two audit-directed precision
+corrections, and fresh proof-blind reconstruction. No computation,
+cross-family audit, or human audit ran.
+
+**Verified boundary.** Weighting a unit by the inverse of one plus its
+distance from its canonical inverse puts $\Omega(1/\log N)$ mass on the two
+factor-revealing roots for a distinct-prime semiprime. Each signed-distance
+fibre has at most four states. Thus the target distribution is strong enough
+for polynomial factoring if it can be sampled accurately.
+
+Uniform rejection and independent uniform-proposal Metropolis sampling need
+$\Omega(N/\log N)$ time. Nearest-neighbor descent has a clean distance-one
+trap, first occurring at $N=209$. These are access obstructions, not a general
+lower bound for metric sampling.
+
+**Algorithmic consequence.** Bare $N$ can define a public metric target with
+inverse-polynomial factor mass. The unresolved step is to access that target
+without already locating its sparse high-weight states. Block-guided or
+correlated proposals remain open; the three simplest mechanisms do not work.
