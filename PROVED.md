@@ -8672,3 +8672,128 @@ SHA-256 hashes
 and `08114b9f4bc476449bdd48135c371f1ce2a53c3adca24465107ec343eaede7c5`.
 No cross-family audit, human audit, or publication-level literature review
 has run.
+
+## P77 — raw balanced relation partitions do not give a universal selector
+
+**Status:** promoted exact magnitude and counterexample theorem after hostile
+audit and strict proof-blind reconstruction. This is not a hardness theorem
+for partition algorithms and not a factoring algorithm.
+
+Let one retained exact relation be
+
+\[
+A=\prod_jq_j^{E_j}=1+kN,
+\]
+
+where the \(q_j\) are pairwise-coprime gcd-free blocks. A
+balanced-canonical split chooses complementary exponent vectors and requires
+
+\[
+A=gh,
+\qquad
+1<g,h<N.
+\]
+
+Such a split can exist only when
+
+\[
+A\le(N-1)^2,
+\qquad
+k\le N-2.
+\]
+
+Equality forces the global pair \(g=h=N-1\). An aggregate of at least two
+nontrivial relation occurrences satisfies
+
+\[
+A\ge(N+1)^2.
+\]
+
+For every \(1<g<N\), its raw complement \(A/g\) is then greater than \(N\).
+The canonical inverse endpoint is the raw complement reduced modulo \(N\),
+so ordinary integer or logarithmic partitioning optimizes the wrong number.
+
+For one relation, an exact complementary split only re-presents the old
+value. It introduces no new integer block, has the same square-class column,
+and an appended duplicate has modular root \(1\). It changes the later search
+only if the algorithm explicitly charges another occurrence and enlarges the
+allowed exponent capacity.
+
+Multiplicative balance also has the wrong precision scale. If \(g\le h\) and
+
+\[
+\beta=\frac12\log(h/g),
+\]
+
+then exactly
+
+\[
+h-g=2\sqrt A\,\sinh\beta.
+\]
+
+When \(A=\Theta(N^2)\), guaranteeing an additive
+\(\operatorname{poly}(\log N)\) gap from a log-balance certificate requires
+\(\beta=2^{-\Omega(\log N)}\). This is a precision boundary, not a
+complexity lower bound for every exact algorithm.
+
+Even a free exact closest-partition oracle does not give a factoring law. At
+\(N=209\), the relation
+
+\[
+80\cdot81=6480
+\]
+
+is the unique closest divisor pair and passes none of the named direct or
+discriminant screens. The same block box contains the farther split
+
+\[
+45\cdot144=6480,
+\qquad
+\gcd(45-1,209)=11.
+\]
+
+There is also an infinite exact support obstruction. Put
+
+\[
+F(z)=z^2+z-1.
+\]
+
+For every positive multiple \(t\ge5\) of \(5\), let
+
+\[
+a=F(t),
+\qquad
+b=F(t+1),
+\qquad
+N=ab.
+\]
+
+The factors \(a,b>1\) are odd, coprime, and asymptotically equal. CRT gives
+a unique canonical \(u\) with \(u\equiv t\pmod a\) and
+\(u\equiv t+1\pmod b\). Then
+
+\[
+u(u+1)=1+kN
+\]
+
+for some \(k\ge1\). In the exact two-block box
+\(\{u,u+1\}\), this consecutive pair is the sole admissible unordered split.
+All four endpoint sign screens, the discriminant-\(5\) screen, and the
+integer-square screen fail. Every distribution supported on this declared
+split set therefore has zero useful mass for those tickets.
+
+The scope is essential. This family is not a general factoring lower bound:
+if \(t\) is supplied, then \(\gcd(u-t,N)=a\). Modular reduction of oversized
+cross-relation complements, internal block refinement, other block
+statistics, and explicitly charged occurrence amplification are outside the
+theorem. The result closes raw balance as a universal justification, not the
+broader endpoint-refinement route from P76.
+
+The candidate, hostile audit, proof-blind statement, and proof-blind
+reconstruction have SHA-256 hashes
+`0501b6f40e150c53b22ffd9119e42f9136bec0f77945ed451fc852f03841fe36`,
+`3bfe6b0150e982e0ee191b4124e11e5ce81d7c1cec0d1fd332395c19e889f810`,
+`218244fb1c1532df0e9f3bbbc836e1e6e0d607f49517ca9d82901ef8211df5f3`,
+and `be625fdc995dae3cec63a36984014e0fa791c62ecd792899cb9dbf5614c74195`.
+No research computation, cross-family audit, human audit, or
+publication-level literature review has run.

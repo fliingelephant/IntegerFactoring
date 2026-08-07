@@ -1779,3 +1779,26 @@ different separator outside the declared small menu. The next question is
 therefore precise: can a public polynomial rule predict which endpoint
 overlaps will strictly refine the blocks and then pass either a direct screen
 or P74's two closure gates?
+
+### C74 — exact balance is the wrong universal guide
+
+**Status:** promoted as P77 after hostile audit and strict proof-blind
+reconstruction. No research computation, cross-family audit, or human audit
+has run.
+
+**Verified boundary.** Balancing two sides of one exact relation only changes
+where its existing blocks appear. It does not add a new relation value, a new
+block, or a new root label. Combining two nontrivial relation values makes the
+raw complementary side larger than \(N\), so ordinary number partitioning no
+longer targets the canonical modular inverse.
+
+Exact closeness is also not monotone toward a factor. At \(N=209\), the
+closest pair \(80,81\) fails while a farther pair \(45,144\) reveals \(11\).
+An infinite balanced family has only one allowed pair, at distance one, and
+that pair fails every declared direct, discriminant, and square screen.
+
+**Algorithmic consequence.** Do not spend the next round on a generic
+balanced-partition solver or on more precise log balancing. The live feature
+is the change in integer block structure after canonical endpoint feedback.
+We must predict refinement gain or a non-global closure, not closeness by
+itself.
