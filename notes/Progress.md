@@ -2540,3 +2540,44 @@ reconstruction have SHA-256 hashes
 `a9ddb299aee512ec028cd8ed52c631f86675e2d134b2aa1e3c8b2c80c1f387bb`,
 and
 `6857799dc1aa91aeb87336a8586ae9eeb074ee6d64c162348aee7ac1c1e80030`.
+
+### C97 — feedback progress has two exact presentation gates
+
+**Status:** verifier-backed and promoted as P100. Two earlier versions
+failed hostile audit. The corrected theorem passed a fresh hostile audit
+and a proof-blind reconstruction. No research computation, cross-family
+audit, human audit, or literature audit ran.
+
+Let \(E\) be the known relation matrix, and let \(\Delta\) be the exact
+exponent map after block refinement. Modulo a prime \(\ell\), refinement
+creates a new known saturation dependency exactly when
+
+\[
+\operatorname{im}E\cap\ker\Delta\ne0.
+\]
+
+After this update, a new relation column \(u\) creates one new dependency
+exactly when \(u\) is in the old column span. A fresh cofactor with exponent
+one prevents closure for every prime on that step. Many relations with
+distinct stable private rows still create no dependency. They help only
+after a later relation reuses a row, or a refinement opens the multiplicity
+gate.
+
+On P99's full-group source event, feedback cannot enlarge the abstract
+subgroup. Its possible value is the new public presentation: named blocks,
+block splits, and known relation cycles. A nonclosing relation cannot always
+be discarded, because it can be the first half of a later closure.
+
+**Algorithmic consequence.** A feedback algorithm must track exponent
+refinement and relation incidence. It must prove an inverse-polynomial law
+for a multiplicity event or a closing cycle. Counting relations, sampling
+the already-full subgroup, or applying one final gcd is not enough. Even a
+closing cycle gives only a candidate root coset; it need not give a factor.
+
+The corrected candidate, final hostile audit, proof-blind statement, and
+proof-blind reconstruction have SHA-256 hashes
+`1992f91ad7a4d3dce8dd51836098f0f7dce2411dc043a055fa7f1363463af2d1`,
+`77559859ca5a1f642a3101d531b770955beb68871aeb7df3a2cb1a8931265664`,
+`69229c3b4e2590812dc8bf45aa536f8837b337107957f3ac2914956879067def`,
+and
+`2f4a28fa711707c7767ce1d13bf5a197eeb830d64c64a6ef44cbe02f6ae6894b`.
