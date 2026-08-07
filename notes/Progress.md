@@ -1410,3 +1410,33 @@ A real sampler retry must change an operation: update both coordinates jointly,
 couple several residuals, use a lift, or decode a whole trajectory. P61 does not
 rule out a direct factor-correlated residual source; it says that finding one
 would already be the main algorithmic breakthrough.
+
+### C59 — inverse-quotient descent is real dissipation, but its fast decoder is missing
+
+**Status:** verifier-backed and promoted as P62/X56. The first hostile audit
+found a reverse-fibre error and several scope or provenance errors. A fresh
+re-audit found one stale manifest statement. The corrected artifact then passed
+a second fresh whole-artifact audit and a strict proof-blind reconstruction. No
+cross-family audit has run.
+
+**Verified boundary.** For a unit (u<N), multiply it by its canonical
+inverse modulo (N), subtract one, and divide exactly by (N). The result is
+
+\[
+D_N(u)=u-r_u,
+\]
+
+where (r_u) is the canonical inverse of (N\bmod u). The state therefore
+strictly decreases. Its reverse fibre consists exactly of complementary factors
+of (Nk+1). Grouping steps by their decrement gives the unbounded depth bound
+(N^{1/2+o(1)}), while an explicit square family has trajectories linear in
+its bit length. A universal two-step halving rule is false even for a balanced
+semiprime.
+
+**Algorithmic consequence.** This mechanism does move away from “compute one
+ring scalar and take one gcd.” It keeps an ordered integer state and creates a
+sequence of exact factorizations (u_i v_i=N u_{i+1}+1). However, the proved
+depth is still exponential in the input length, and no useful hit probability
+is known. The next test must use the whole sequence. A parity, lattice,
+continued-fraction, or other joint decoder must extract more than the union of
+rare coordinate gcd events. F26 remains open.

@@ -63,6 +63,8 @@ def descent_trace(N, u0):
         assert (u * v - k * N) * _sage_const_1  == _sage_const_1 
 
         carry_gcd = int(gcd(k, N))
+        state_minus_one_gcd = int(gcd(u - _sage_const_1 , N))
+        state_plus_one_gcd = int(gcd(u + _sage_const_1 , N))
         inverse_minus_gcd = int(gcd(u - v, N))
         inverse_plus_gcd = int(gcd(u + v, N))
         square_minus_one_gcd = int(gcd(u * u - _sage_const_1 , N))
@@ -70,6 +72,8 @@ def descent_trace(N, u0):
 
         tickets = [
             ("carry_gcd", carry_gcd),
+            ("state_minus_one_gcd", state_minus_one_gcd),
+            ("state_plus_one_gcd", state_plus_one_gcd),
             ("inverse_minus_gcd", inverse_minus_gcd),
             ("inverse_plus_gcd", inverse_plus_gcd),
         ]
@@ -93,8 +97,10 @@ def descent_trace(N, u0):
             {
                 "u": u,
                 "v": v,
-                "k": k,
+                "k": int(k),
                 "carry_gcd": carry_gcd,
+                "state_minus_one_gcd": state_minus_one_gcd,
+                "state_plus_one_gcd": state_plus_one_gcd,
                 "inverse_minus_gcd": inverse_minus_gcd,
                 "inverse_plus_gcd": inverse_plus_gcd,
                 "square_minus_one_gcd": square_minus_one_gcd,
@@ -107,7 +113,7 @@ def descent_trace(N, u0):
     return {
         "u0": u0,
         "states": states,
-        "carry_sequence": [step["k"] for step in steps],
+        "carry_sequence": [int(step["k"]) for step in steps],
         "steps": steps,
         "depth": len(steps),
         "terminal": terminal,
@@ -143,16 +149,6 @@ for N, p, q in semiprimes:
     carry_groups = defaultdict(list)
     for trace in unit_traces:
         carry_groups[tuple(trace["carry_sequence"])].append(trace["u0"])
-    collision_groups = [
-        {
-            "carry_sequence": list(key),
-            "starts": starts,
-            "multiplicity": len(starts),
-        }
-        for key, starts in sorted(carry_groups.items())
-        if len(starts) > _sage_const_1 
-    ]
-
     direct_successes = sum(t["first_direct_hit"] is not None for t in unit_traces)
     extended_successes = sum(t["first_extended_hit"] is not None for t in unit_traces)
     direct_divisor_counts = {str(p): _sage_const_0 , str(q): _sage_const_0 }
@@ -169,6 +165,17 @@ for N, p, q in semiprimes:
     for c in range(_sage_const_1 , offset_cap + _sage_const_1 ):
         trace = descent_trace(N, N - c)
         offset_traces.append({"offset": c, "trace": trace})
+
+    offset_direct_hits = [
+        item["offset"]
+        for item in offset_traces
+        if item["trace"]["first_direct_hit"] is not None
+    ]
+    offset_extended_hits = [
+        item["offset"]
+        for item in offset_traces
+        if item["trace"]["first_extended_hit"] is not None
+    ]
 
     records.append(
         {
@@ -188,13 +195,13 @@ for N, p, q in semiprimes:
                 if t["depth"] == max(s["depth"] for s in unit_traces)
             ],
             "carry_transcript_distinct_count": len(carry_groups),
-            "carry_transcript_collision_groups": collision_groups,
             "max_carry_transcript_multiplicity": max(len(v) for v in carry_groups.values()),
-            "uniform_unit_traces": unit_traces,
             "offset_menu": {
                 "definition": "c=1,...,min(N-1,n^2), start u=N-c",
                 "offset_cap": offset_cap,
-                "traces": offset_traces,
+                "direct_hit_offsets": offset_direct_hits,
+                "extended_hit_offsets": offset_extended_hits,
+                "max_depth": max(item["trace"]["depth"] for item in offset_traces),
             },
         }
     )
@@ -216,8 +223,7 @@ min_extended = min(
 max_depth_record = max(records, key=lambda row: row["max_depth"])
 offset_all_fail = []
 for row in records:
-    traces = row["offset_menu"]["traces"]
-    if all(item["trace"]["first_extended_hit"] is None for item in traces):
+    if not row["offset_menu"]["extended_hit_offsets"]:
         offset_all_fail.append(row["N"])
 
 payload = {
@@ -232,13 +238,15 @@ payload = {
         "tickets": [
             "gcd(current,N)",
             "gcd(carry,N)",
+            "gcd(u-1,N)",
+            "gcd(u+1,N)",
             "gcd(u-v,N)",
             "gcd(u+v,N)",
             "gcd(u^2-1,N)=gcd(u-v,N)",
         ],
         "transcript_collision": "two starts have identical complete carry sequences",
     },
-    "disposition": "finite exact discovery/certificate only; not evidence for any unbounded probability or runtime claim",
+    "disposition": "compact finite exact discovery/certificate only; full attempt-3 trajectories are preserved in the manifest archive",
     "semiprime_count": len(records),
     "summary": {
         "minimum_uniform_direct_success": {
@@ -261,7 +269,7 @@ payload = {
 
 OUTPUT.parent.mkdir(parents=True, exist_ok=True)
 with OUTPUT.open("w", encoding="utf-8") as handle:
-    json.dump(payload, handle, indent=_sage_const_2 , sort_keys=True)
+    json.dump(payload, handle, indent=_sage_const_2 , sort_keys=True, default=int)
     handle.write("\n")
 
 print(json.dumps({"output": str(OUTPUT), "summary": payload["summary"]}, sort_keys=True))

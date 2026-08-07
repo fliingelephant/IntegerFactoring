@@ -7164,3 +7164,110 @@ and `f56fc521ae8deab489999c59e56ec02944b6d8377c31ac89717676e23f1c4a6b`.
 The two preserved failed audits have SHA-256 hashes
 `4d830ab8cbcb4a5b5e6cd23b2ba2fdf9cd2c5a7a8df046a1968d700eaae24124`
 and `bbbdea3abe7373c86d50b52de3a34aed2657d5dc00a2666281dd1897f5507ec6`.
+
+## P62 — inverse-quotient descent has exact divisor fibres and a near-square-root depth bound
+
+**Status:** promoted narrow structural theorem and exact depth-shortcut failure.
+
+**Verification record:** the first hostile audit accepted the main mathematics
+but found one incorrect reverse-fibre statement and several provenance and scope
+errors. A fresh re-audit found one remaining stale manifest statement. After
+that correction, a second fresh whole-artifact audit passed. A strict
+proof-blind reconstruction also succeeded. No cross-family or human audit has
+run.
+
+For a unit (u\in\{1,\ldots,N-1\}), let (v) be its least positive
+inverse modulo (N), and define the integer quotient
+
+\[
+D_N(u)=\frac{uv-1}{N}.
+\]
+
+For (2\le u<N), let (r_u) be the least positive inverse of (N\bmod u).
+Then
+
+\[
+\boxed{D_N(u)=u-r_u},
+\qquad
+D_N(u)=u-r\iff u\mid Nr-1.
+\]
+
+Thus every defined nonterminal step strictly decreases its canonical integer
+state. This operation uses order, modular inversion, and exact integer division.
+It is not only a polynomial-algebra computation in \(\mathbb Z/N\mathbb Z\).
+
+The reverse fibres are exact:
+
+\[
+D_N^{-1}(k)=\{u:k<u<N,\ u\mid Nk+1\}.
+\]
+
+If (v=(Nk+1)/u), then automatically (k<v<N), both (u,v) are units
+modulo (N), and both map to (k). Hence non-square fibres pair complementary
+factors of the public integer (Nk+1). This is a structural description, not
+an efficient reverse sampler, because finding those divisors is not supplied.
+
+For a trajectory with (L) transitions, put
+
+\[
+\Delta_N=\max_{1\le m<N^2}\tau(m).
+\]
+
+For every (1\le B<N), grouping steps by their decrement gives
+
+\[
+L\le \frac NB+B\Delta_N+1.
+\]
+
+The standard maximal-order bound for the divisor function gives
+
+\[
+L\le N^{1/2+o(1)}.
+\]
+
+This improves the trivial (L<N) state bound, but it is still exponential in
+the binary input length. It is not a polynomial-time runtime theorem.
+
+Long trajectories are genuine. With
+
+\[
+M_L=\operatorname{lcm}(2,\ldots,L+1),
+\qquad N_L=(M_L+1)^2,
+\]
+
+the exact trajectory is
+
+\[
+L+1\to L\to\cdots\to2\to1,
+\]
+
+and both its length and the bit length of (N_L) are \(\Theta(L)\). These
+inputs are easy perfect squares, so this family is only a warning against a
+universal (o(\log N)) depth claim.
+
+The proposed uniform two-step contraction is false. Exact witnesses are
+(7\to5\to4) for (N=11) and (19\to13\to10) for the balanced
+semiprime (N=35). The second witness shows that the shortcut already fails
+in the intended semiprime regime.
+
+Finite scans found sparse named gcd tickets on the larger tested balanced
+semiprimes, but they prove no asymptotic hit law. P62 proves no
+inverse-polynomial success probability and gives no whole-transcript decoder.
+The public relations
+
+\[
+u_i v_i=N u_{i+1}+1
+\]
+
+remain available for a genuinely joint parity, lattice, continued-fraction, or
+other decoder. Therefore F26 remains open and P62 is not a factoring algorithm.
+
+The corrected candidate, passing final re-audit, proof-blind reconstruction,
+and computation manifest have SHA-256 hashes
+`139d11d7858cfdcd40880ddde86ed40316038a94c5269fba6e9be19f547568e2`,
+`fc172deb00838b4f77c4af813bc8747280bd5a3d74b139d0f9c06d86f0edc14d`,
+`75e512ce136e60edfe3dffefc98df006c76059698e25b41227523b778be04f18`,
+and `c36ee5112f7bb335ab39a938e4774c2bbe57733d85ea8ede68b0424796e2fcb9`.
+The two preserved failed audits have SHA-256 hashes
+`73fcda541a72c074af717e16a12bc73a07980bd735d5a3df4fba7f82d808e6aa`
+and `1c321a097632d847b77fccdbe8274a24de1613a436a49ec69c6072d23aacd9a9`.

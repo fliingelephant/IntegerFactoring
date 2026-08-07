@@ -2392,3 +2392,54 @@ carrier: use a joint block update, a weight that depends on \((k,x)\) beyond
 their product, several interacting residuals, a valuation-amplifying lift, a
 nonlocal arithmetic proposal, or a global transcript decoder. Another
 residual-only local reweighting is covered by P61.
+
+## X56 — uniform two-step contraction does not explain inverse-quotient descent
+
+**Status:** promoted as the exact auxiliary-claim failure inside P62. F26
+remains open.
+
+**Family:** F26.
+
+**Classification:** evidence against one proposed depth proof and against the
+small-input finite optimism. It is not a method failure for inverse-quotient
+descent or for whole-transcript decoding.
+
+**What was tried.** Use the strict integer descent
+
+\[
+D_N(u)=\frac{u(u^{-1}\bmod N)-1}{N}
+\]
+
+and prove that every two steps reduce the state by at least one half. This
+would have forced logarithmic trajectory depth. Small semiprimes also suggested
+that a short public offset menu might often hit a factor-bearing state.
+
+**Exact obstruction.** The contraction inequality
+
+\[
+2D_N(D_N(u))\le u
+\]
+
+fails at (N=11), where (7\to5\to4), and at the balanced distinct
+semiprime (N=35), where (19\to13\to10). The exact general theorem gives
+only the near-square-root upper bound (N^{1/2+o(1)}), which is exponential
+in the input bit length.
+
+The larger finite scan also removed the offset-menu optimism: on its largest
+tested balanced semiprime, only 15 of 50,000 seeded unit draws hit an extended
+gcd ticket, and none of 1,369 fixed offsets did. These counts are finite
+evidence only. They do not prove a negligible all-input success law.
+
+**Evidence.** The corrected candidate, passing final re-audit, proof-blind
+reconstruction, and manifest have hashes
+`139d11d7858cfdcd40880ddde86ed40316038a94c5269fba6e9be19f547568e2`,
+`fc172deb00838b4f77c4af813bc8747280bd5a3d74b139d0f9c06d86f0edc14d`,
+`75e512ce136e60edfe3dffefc98df006c76059698e25b41227523b778be04f18`,
+and `c36ee5112f7bb335ab39a938e4774c2bbe57733d85ea8ede68b0424796e2fcb9`.
+Two earlier failed audits are preserved.
+
+**What would make a retry materially new.** Prove a different amortized
+potential bound, prove an inverse-polynomial factor-hit law, or use many public
+relations (u_i v_i=N u_{i+1}+1) through a genuinely joint decoder. Retrying
+the false two-step inequality or citing the small-input hit rates is covered by
+P62/X56.

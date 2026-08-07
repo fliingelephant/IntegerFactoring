@@ -1,0 +1,667 @@
+{
+  "conjecture": "if u and D_N(u) are units and D_N(u)>1, then 2*D_N(D_N(u))<=u",
+  "disposition": "finite counterexample search only; no unbounded contraction or depth claim",
+  "exhaustive_scope": {
+    "N_max": 4095,
+    "N_min": 3,
+    "starts": "every u in {2,...,N-1} with gcd(u,N)=1"
+  },
+  "family": "F26",
+  "first_violations": [
+    {
+      "N": 11,
+      "first": 5,
+      "second": 4,
+      "u": 7
+    },
+    {
+      "N": 19,
+      "first": 8,
+      "second": 5,
+      "u": 9
+    },
+    {
+      "N": 21,
+      "first": 4,
+      "second": 3,
+      "u": 5
+    },
+    {
+      "N": 23,
+      "first": 9,
+      "second": 7,
+      "u": 13
+    },
+    {
+      "N": 23,
+      "first": 13,
+      "second": 9,
+      "u": 15
+    },
+    {
+      "N": 25,
+      "first": 7,
+      "second": 5,
+      "u": 8
+    },
+    {
+      "N": 25,
+      "first": 11,
+      "second": 7,
+      "u": 12
+    },
+    {
+      "N": 27,
+      "first": 13,
+      "second": 12,
+      "u": 16
+    },
+    {
+      "N": 27,
+      "first": 13,
+      "second": 12,
+      "u": 22
+    },
+    {
+      "N": 28,
+      "first": 9,
+      "second": 8,
+      "u": 11
+    },
+    {
+      "N": 29,
+      "first": 19,
+      "second": 17,
+      "u": 23
+    },
+    {
+      "N": 29,
+      "first": 19,
+      "second": 17,
+      "u": 24
+    },
+    {
+      "N": 31,
+      "first": 5,
+      "second": 4,
+      "u": 6
+    },
+    {
+      "N": 31,
+      "first": 14,
+      "second": 9,
+      "u": 15
+    },
+    {
+      "N": 32,
+      "first": 7,
+      "second": 5,
+      "u": 9
+    },
+    {
+      "N": 32,
+      "first": 19,
+      "second": 16,
+      "u": 21
+    },
+    {
+      "N": 32,
+      "first": 19,
+      "second": 16,
+      "u": 29
+    },
+    {
+      "N": 33,
+      "first": 16,
+      "second": 15,
+      "u": 23
+    },
+    {
+      "N": 34,
+      "first": 11,
+      "second": 10,
+      "u": 15
+    },
+    {
+      "N": 35,
+      "first": 13,
+      "second": 10,
+      "u": 19
+    },
+    {
+      "N": 35,
+      "first": 23,
+      "second": 21,
+      "u": 26
+    },
+    {
+      "N": 35,
+      "first": 23,
+      "second": 21,
+      "u": 31
+    },
+    {
+      "N": 36,
+      "first": 7,
+      "second": 6,
+      "u": 11
+    },
+    {
+      "N": 37,
+      "first": 11,
+      "second": 8,
+      "u": 12
+    },
+    {
+      "N": 37,
+      "first": 17,
+      "second": 11,
+      "u": 18
+    },
+    {
+      "N": 37,
+      "first": 17,
+      "second": 11,
+      "u": 21
+    },
+    {
+      "N": 37,
+      "first": 18,
+      "second": 17,
+      "u": 23
+    },
+    {
+      "N": 37,
+      "first": 18,
+      "second": 17,
+      "u": 29
+    },
+    {
+      "N": 41,
+      "first": 4,
+      "second": 3,
+      "u": 5
+    },
+    {
+      "N": 41,
+      "first": 9,
+      "second": 7,
+      "u": 10
+    },
+    {
+      "N": 41,
+      "first": 25,
+      "second": 14,
+      "u": 27
+    },
+    {
+      "N": 43,
+      "first": 6,
+      "second": 5,
+      "u": 7
+    },
+    {
+      "N": 43,
+      "first": 20,
+      "second": 13,
+      "u": 21
+    },
+    {
+      "N": 44,
+      "first": 27,
+      "second": 19,
+      "u": 29
+    },
+    {
+      "N": 44,
+      "first": 31,
+      "second": 19,
+      "u": 35
+    },
+    {
+      "N": 45,
+      "first": 11,
+      "second": 10,
+      "u": 16
+    },
+    {
+      "N": 46,
+      "first": 5,
+      "second": 4,
+      "u": 7
+    },
+    {
+      "N": 47,
+      "first": 17,
+      "second": 13,
+      "u": 20
+    },
+    {
+      "N": 47,
+      "first": 17,
+      "second": 13,
+      "u": 25
+    },
+    {
+      "N": 47,
+      "first": 25,
+      "second": 17,
+      "u": 28
+    },
+    {
+      "N": 49,
+      "first": 15,
+      "second": 11,
+      "u": 16
+    },
+    {
+      "N": 49,
+      "first": 12,
+      "second": 11,
+      "u": 19
+    },
+    {
+      "N": 49,
+      "first": 23,
+      "second": 15,
+      "u": 24
+    },
+    {
+      "N": 50,
+      "first": 7,
+      "second": 6,
+      "u": 9
+    },
+    {
+      "N": 50,
+      "first": 9,
+      "second": 7,
+      "u": 11
+    },
+    {
+      "N": 51,
+      "first": 25,
+      "second": 24,
+      "u": 29
+    },
+    {
+      "N": 51,
+      "first": 29,
+      "second": 25,
+      "u": 37
+    },
+    {
+      "N": 51,
+      "first": 35,
+      "second": 24,
+      "u": 38
+    },
+    {
+      "N": 51,
+      "first": 29,
+      "second": 25,
+      "u": 40
+    },
+    {
+      "N": 51,
+      "first": 25,
+      "second": 24,
+      "u": 44
+    },
+    {
+      "N": 51,
+      "first": 35,
+      "second": 24,
+      "u": 47
+    },
+    {
+      "N": 53,
+      "first": 12,
+      "second": 7,
+      "u": 13
+    },
+    {
+      "N": 53,
+      "first": 13,
+      "second": 12,
+      "u": 15
+    },
+    {
+      "N": 53,
+      "first": 13,
+      "second": 12,
+      "u": 23
+    },
+    {
+      "N": 53,
+      "first": 28,
+      "second": 19,
+      "u": 33
+    },
+    {
+      "N": 53,
+      "first": 33,
+      "second": 28,
+      "u": 35
+    },
+    {
+      "N": 53,
+      "first": 39,
+      "second": 25,
+      "u": 44
+    },
+    {
+      "N": 53,
+      "first": 39,
+      "second": 25,
+      "u": 47
+    },
+    {
+      "N": 53,
+      "first": 33,
+      "second": 28,
+      "u": 50
+    },
+    {
+      "N": 55,
+      "first": 26,
+      "second": 17,
+      "u": 27
+    },
+    {
+      "N": 55,
+      "first": 38,
+      "second": 29,
+      "u": 41
+    },
+    {
+      "N": 55,
+      "first": 41,
+      "second": 38,
+      "u": 47
+    },
+    {
+      "N": 55,
+      "first": 41,
+      "second": 38,
+      "u": 48
+    },
+    {
+      "N": 55,
+      "first": 38,
+      "second": 29,
+      "u": 51
+    },
+    {
+      "N": 57,
+      "first": 7,
+      "second": 6,
+      "u": 8
+    },
+    {
+      "N": 57,
+      "first": 7,
+      "second": 6,
+      "u": 10
+    },
+    {
+      "N": 57,
+      "first": 14,
+      "second": 13,
+      "u": 17
+    },
+    {
+      "N": 57,
+      "first": 31,
+      "second": 25,
+      "u": 34
+    },
+    {
+      "N": 58,
+      "first": 17,
+      "second": 12,
+      "u": 21
+    },
+    {
+      "N": 58,
+      "first": 21,
+      "second": 17,
+      "u": 23
+    },
+    {
+      "N": 59,
+      "first": 11,
+      "second": 8,
+      "u": 13
+    },
+    {
+      "N": 59,
+      "first": 13,
+      "second": 11,
+      "u": 16
+    },
+    {
+      "N": 59,
+      "first": 16,
+      "second": 13,
+      "u": 21
+    },
+    {
+      "N": 59,
+      "first": 21,
+      "second": 16,
+      "u": 31
+    },
+    {
+      "N": 59,
+      "first": 41,
+      "second": 25,
+      "u": 44
+    },
+    {
+      "N": 59,
+      "first": 44,
+      "second": 41,
+      "u": 49
+    },
+    {
+      "N": 59,
+      "first": 44,
+      "second": 41,
+      "u": 53
+    },
+    {
+      "N": 61,
+      "first": 4,
+      "second": 3,
+      "u": 5
+    },
+    {
+      "N": 61,
+      "first": 5,
+      "second": 4,
+      "u": 6
+    },
+    {
+      "N": 61,
+      "first": 11,
+      "second": 9,
+      "u": 12
+    },
+    {
+      "N": 61,
+      "first": 10,
+      "second": 9,
+      "u": 13
+    },
+    {
+      "N": 61,
+      "first": 11,
+      "second": 9,
+      "u": 14
+    },
+    {
+      "N": 61,
+      "first": 14,
+      "second": 11,
+      "u": 15
+    },
+    {
+      "N": 61,
+      "first": 11,
+      "second": 9,
+      "u": 16
+    },
+    {
+      "N": 61,
+      "first": 14,
+      "second": 11,
+      "u": 19
+    },
+    {
+      "N": 61,
+      "first": 19,
+      "second": 14,
+      "u": 20
+    },
+    {
+      "N": 61,
+      "first": 29,
+      "second": 19,
+      "u": 30
+    },
+    {
+      "N": 61,
+      "first": 20,
+      "second": 19,
+      "u": 33
+    },
+    {
+      "N": 61,
+      "first": 20,
+      "second": 19,
+      "u": 37
+    },
+    {
+      "N": 61,
+      "first": 33,
+      "second": 20,
+      "u": 38
+    },
+    {
+      "N": 62,
+      "first": 39,
+      "second": 22,
+      "u": 41
+    },
+    {
+      "N": 62,
+      "first": 37,
+      "second": 34,
+      "u": 45
+    },
+    {
+      "N": 62,
+      "first": 37,
+      "second": 34,
+      "u": 51
+    },
+    {
+      "N": 63,
+      "first": 37,
+      "second": 27,
+      "u": 44
+    },
+    {
+      "N": 63,
+      "first": 44,
+      "second": 37,
+      "u": 47
+    },
+    {
+      "N": 63,
+      "first": 37,
+      "second": 27,
+      "u": 53
+    },
+    {
+      "N": 63,
+      "first": 44,
+      "second": 37,
+      "u": 59
+    },
+    {
+      "N": 65,
+      "first": 41,
+      "second": 29,
+      "u": 43
+    },
+    {
+      "N": 67,
+      "first": 10,
+      "second": 7,
+      "u": 11
+    },
+    {
+      "N": 67,
+      "first": 11,
+      "second": 10,
+      "u": 18
+    }
+  ],
+  "random_records": [
+    {
+      "bits": 16,
+      "eligible_pairs": 81884,
+      "moduli": 50,
+      "sampled_units": 100000,
+      "strict_violations": 12549
+    },
+    {
+      "bits": 24,
+      "eligible_pairs": 81323,
+      "moduli": 50,
+      "sampled_units": 100000,
+      "strict_violations": 12384
+    },
+    {
+      "bits": 32,
+      "eligible_pairs": 81476,
+      "moduli": 50,
+      "sampled_units": 100000,
+      "strict_violations": 12450
+    },
+    {
+      "bits": 48,
+      "eligible_pairs": 80654,
+      "moduli": 50,
+      "sampled_units": 100000,
+      "strict_violations": 12447
+    }
+  ],
+  "random_scope": {
+    "bit_lengths": [
+      16,
+      24,
+      32,
+      48
+    ],
+    "moduli_per_bit_length": 50,
+    "seed": 16006403,
+    "units_per_modulus": 2000
+  },
+  "run": "F43-D03",
+  "summary": {
+    "eligible_pairs": 3887362,
+    "equalities": 3242,
+    "max_twice_second_over_start": {
+      "N": 2666124659,
+      "denominator": 1526018684,
+      "first": 1525584129,
+      "numerator": 3042888848,
+      "second": 1521444424,
+      "u": 1526018684
+    },
+    "strict_violations": 593870
+  }
+}
