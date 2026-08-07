@@ -4,7 +4,7 @@ This is working state for nontrivial intermediate statements and the current syn
 
 ## Current synthesis
 
-The source material has been read in full. Twenty-eight approach families have been opened, primarily from materially different mechanisms in `notes/Inspirations.md` with additional factor-trace, noncommutative, hidden-modulus metric, non-gcd tensor-contraction, joint-amortization, positive-sampling, and finite-field or integer-quotient dissipative routes; promoted narrow results and exact open gaps are tracked below and in the registry. The closest current structural frontier is canonical feedback followed by public subgroup normalization. Integer refinement can enlarge the usable subgroup without adding a new modular residue. For every distinct odd semiprime, bare \(N\) also supplies two public generators of a guaranteed factor-bearing coprime-order rectangle with probability at least \(6/\pi^2\). Thus the main missing operation is no longer a generic subgroup sampler. It is axis localization when both hidden local orders are large, or a feedback rule that changes that rectangle with a proved all-input progress law. Other live frontiers are a factor-free sampler for the quadratic-energy/zero-product law, a genuinely joint decoder using typical nonzero relation data, a fine manufactured metric hint, a useful class-group/isogeny orientation, or an exactly contractible positive factor-witness network beyond the proved local wiring boundaries. `notes/Zhihu.md` supplies background and motivation only.
+The source material has been read in full. Twenty-eight approach families have been opened, primarily from materially different mechanisms in `notes/Inspirations.md` with additional factor-trace, noncommutative, hidden-modulus metric, non-gcd tensor-contraction, joint-amortization, positive-sampling, and finite-field or integer-quotient dissipative routes; promoted narrow results and exact open gaps are tracked below and in the registry. The closest current structural frontier is canonical feedback and representation access. Bare \(N\) supplies a constant-probability generating list for the full unit group, or an immediate factor, so abstract subgroup generation is not the missing source. Feedback can still expose a named canonical integer, a gcd-free block, or a known relation whose useful word in the original generators is not public. For every distinct odd semiprime, two further public samples generate a guaranteed factor-bearing coprime-order rectangle with probability at least \(6/\pi^2\), but the hidden axes can have exponentially small uniform density. P98 shows that repeated \(N-1\) powers erase every feedback expansion outside one stable core. Thus a successful feedback algorithm needs an inverse-polynomial law for creating a usable named separator or relation before stabilization, or a non-power axis decoder. Other live frontiers are a factor-free sampler for the quadratic-energy/zero-product law, a genuinely joint decoder using typical nonzero relation data, a fine manufactured metric hint, a useful class-group/isogeny orientation, or an exactly contractible positive factor-witness network beyond the proved local wiring boundaries. `notes/Zhihu.md` supplies background and motivation only.
 
 ## Working claims
 
@@ -2451,5 +2451,92 @@ Vegas factorer for distinct odd semiprimes.
 **Algorithmic consequence.** The sampler question is solved at the subgroup
 source level for this input class. The exact remaining problem is axis
 localization when both coprime hidden orders are large, or a feedback step
-that changes the rectangle. The result does not supply that decoder, handle
+that exposes an axis before stable normalization. The result does not supply that decoder, handle
 other composite forms, or prove a factoring algorithm.
+
+### C95 — repeated N−1 normalization erases feedback outside one stable core
+
+**Status:** verifier-backed and promoted as P98 after a hostile proof-only
+audit and a proof-blind reconstruction. No research computation,
+cross-family audit, human audit, or literature audit ran.
+
+For a distinct odd semiprime, let \(S=G^{N-1}\) be the full P97 powered
+rectangle and let
+
+\[
+g=\gcd(p-1,q-1).
+\]
+
+Then
+
+\[
+G/S\cong C_g\times C_g,
+\qquad
+g\mid N-1.
+\]
+
+Thus every feedback supergroup \(S\le K\le G\) adds only a quotient killed
+by the public exponent \(N-1\). After at most
+\(n=\lceil\log_2(N+1)\rceil\) repeated powers, every such \(K\) has the same
+image
+
+\[
+T\cong C_{A_*}\times C_{B_*},
+\]
+
+where \(A_*,B_*\) are the parts of the P97 local orders coprime to \(N-1\).
+Every exponent whose prime divisors occur in \(N-1\) is an automorphism on
+\(T\) and preserves both hidden identity tests.
+
+There are distinct-prime semiprimes with both stable orders arbitrarily
+large. When \(\gcd(AB,g)=1\), one \(N-1\) power already sends every
+feedback supergroup back to the original rectangle \(S\).
+
+**Algorithmic consequence.** The \(4033\) and \(2047\) witnesses use
+transient components. They do not test the stable hard case. A feedback
+algorithm must factor before the transient part dies, use canonical integer
+information without only \(N-1\)-smooth powers, or add a non-power axis
+decoder. This is a proved boundary, not a factoring result.
+
+The final candidate, hostile audit, proof-blind statement, and proof-blind
+reconstruction have SHA-256 hashes
+`6c9d9166ca335d115fab18bef6c7c7d90a4bafd7aee3789a071618f6a3f918c0`,
+`b64ae5e9d2365002d55571b17578a93e75a88a836ee7bd9f983b75e837ac739b`,
+`fa3b1b9f81e14b8c054a0b8b9b0f589781f46615277cf12adc25da98ee5a6cc7`,
+and
+`1e5ddb53a9b14e3bd020d55ad5771e672cc10a0f0b03f624bc055edaed21df17`.
+
+### C96 — bare N already supplies full unit-group generators
+
+**Status:** verifier-backed and promoted as P99 after a hostile proof-only
+audit and a proof-blind reconstruction. The final candidate includes the
+audit's two wording corrections. No research computation, cross-family
+audit, human audit, or literature audit ran.
+
+For every \(N\), a batch of
+\(n=\lceil\log_2(N+1)\rceil\) exact uniform nonzero residues has probability
+at least one absolute constant of either finding a proper factor by gcd or
+generating the complete unit group \(G_N\). For a distinct odd semiprime,
+three raw units generate \(G_N\) with probability at least
+\(1/(\zeta(2)\zeta(3))\).
+
+The complete unit group contains a factor-revealing element for every
+composite \(N\). However, the generator batch does not give a public word
+for such an element. Conditioned on full generation, later multiplicative
+feedback cannot enlarge the abstract subgroup. Its possible gain is to
+make one already-contained residue usable as a named integer, block, or
+known relation.
+
+**Algorithmic consequence.** The missing result is not a novel generic
+subgroup sampler. It is a polynomial-time factor localizer on a generating
+list, or a feedback progress law that creates public representation access
+with inverse-polynomial probability. P99 supplies neither and does not prove
+a factoring algorithm.
+
+The final candidate, hostile audit, proof-blind statement, and proof-blind
+reconstruction have SHA-256 hashes
+`90a4a39313544a554201a463066f539c16f2f2dc09aef4e2dbfb135c5e42bb34`,
+`7d98b6232cbd5dc89271e53b87f526623d39c40dfd54af546e14f99aac014c4f`,
+`a9ddb299aee512ec028cd8ed52c631f86675e2d134b2aa1e3c8b2c80c1f387bb`,
+and
+`6857799dc1aa91aeb87336a8586ae9eeb074ee6d64c162348aee7ac1c1e80030`.

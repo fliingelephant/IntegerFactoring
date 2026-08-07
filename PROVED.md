@@ -11112,3 +11112,238 @@ and
 7e1d572adb0ce54008e521bd23e8fa777c9f39755c6f4b4d5b3c7bbe6412116b.
 No research computation, cross-family audit, human audit, or
 publication-level literature review has run.
+
+## P98 — feedback cannot change the stable N−1-powered core
+
+**Status:** promoted from F92 after a hostile proof-only audit and a
+proof-blind reconstruction. This is a structural boundary for retained
+multiplicative feedback after the P97 source succeeds. It is not an axis
+decoder or a factoring algorithm.
+
+Let \(N=pq\) for distinct odd primes. Put
+
+\[
+E=N-1,
+\qquad
+g=\gcd(p-1,q-1),
+\qquad
+A=(p-1)/g,
+\qquad
+B=(q-1)/g,
+\]
+
+and let
+
+\[
+G=(\mathbb Z/N\mathbb Z)^\times,
+\qquad
+S=G^E.
+\]
+
+P97 gives \(S\cong C_A\times C_B\) with \(\gcd(A,B)=1\). The quotient
+above this full powered rectangle is exactly
+
+\[
+\boxed{G/S\cong C_g\times C_g},
+\qquad
+g\mid E.
+\]
+
+Consequently, every retained multiplicative no-factor feedback state
+\(S\le K\le G\) satisfies
+
+\[
+(K/S)^E=1,
+\qquad
+S^E\le K^E\le S.
+\]
+
+Let \(A_*\) and \(B_*\) be the largest divisors of \(A\) and \(B\)
+coprime to \(E\), and let
+
+\[
+T\cong C_{A_*}\times C_{B_*}
+\]
+
+be the corresponding CRT product. For
+\(n=\lceil\log_2(N+1)\rceil\), every such feedback supergroup has the same
+stable image:
+
+\[
+\boxed{K^{E^n}=T.}
+\]
+
+Every exponent supported only on primes dividing \(E\) acts as an
+automorphism of \(T\). It preserves the two hidden coordinate identity
+tests and therefore cannot turn a nonseparator in \(T\) into a separator.
+This includes every repeated \(N-1\) power and every existing puncture made
+by deleting prime powers from \(N-1\).
+
+The exact identity
+
+\[
+E/g=gAB+A+B
+\]
+
+implies
+
+\[
+\gcd(A,E/g)=\gcd(B,E/g)=1.
+\]
+
+Thus the transient primes in the P97 local orders are precisely primes
+already present in \(g\). If \(\gcd(AB,g)=1\), then \(T=S\), and one
+\(N-1\) power sends every feedback supergroup back to the original P97
+rectangle.
+
+Stable hard cases are not exceptional. For every numerical \(H\), there
+are distinct odd primes \(p,q\) with
+
+\[
+g=2,
+\qquad
+A>H,
+\qquad
+B>H,
+\qquad
+\gcd(AB,E)=1.
+\]
+
+The proof uses CRT and Dirichlet's theorem. It is an existence family, not
+an executable factoring step or an input-density theorem.
+
+The fixed witnesses \(4033\) and \(2047\) are transient: their P97 order
+pairs are \((1,3)\) and \((1,4)\), supported on primes dividing \(N-1\).
+They prove a real feedback operation but do not test the stable two-large-
+order case. A small stable example is
+
+\[
+2773=47\cdot59,
+\qquad
+(A,B)=(23,29),
+\qquad
+\gcd(23\cdot29,2772)=1.
+\]
+
+The theorem assumes that the P97 generators of \(S\) were retained and
+that feedback only changes the multiplicative unit subgroup between \(S\)
+and \(G\). It does not constrain useful transient steps before
+normalization, canonical integer side information, non-multiplicative data,
+or states that discard the P97 generators. It treats distinct odd
+semiprimes only and gives no axis localizer, progress law, lower bound, or
+factoring algorithm.
+
+The candidate, hostile audit, proof-blind statement, and proof-blind
+reconstruction have SHA-256 hashes
+6c9d9166ca335d115fab18bef6c7c7d90a4bafd7aee3789a071618f6a3f918c0,
+b64ae5e9d2365002d55571b17578a93e75a88a836ee7bd9f983b75e837ac739b,
+fa3b1b9f81e14b8c054a0b8b9b0f589781f46615277cf12adc25da98ee5a6cc7,
+and
+1e5ddb53a9b14e3bd020d55ad5771e672cc10a0f0b03f624bc055edaed21df17.
+No research computation, cross-family audit, human audit, or
+publication-level literature review has run.
+
+## P99 — bare N supplies constant-probability generators of the full unit group
+
+**Status:** promoted from F93 after a hostile proof-only audit and a
+proof-blind reconstruction. This is an all-input source theorem and a
+correction to the abstract-subgroup interpretation of feedback. It is not a
+factor localizer or a factoring algorithm.
+
+For a finite abelian group \(H\), let
+
+\[
+r_\ell=\dim_{\mathbb F_\ell}(H/\ell H).
+\]
+
+The exact probability that \(d\) independent uniform elements generate
+\(H\) is
+
+\[
+\boxed{
+\prod_{\ell\mid |H|}
+\prod_{i=0}^{r_\ell-1}(1-\ell^{i-d}).
+}
+\]
+
+In particular, if \(|H|<2^n\), then \(n\) uniform elements generate
+\(H\) with probability at least the absolute constant
+
+\[
+c_0=
+\prod_{\ell\ \mathrm{prime}}
+\prod_{k=2}^{\infty}(1-\ell^{-k})
+>e^{-4/3}>0.
+\]
+
+For any \(N\ge2\), put
+
+\[
+G_N=(\mathbb Z/N\mathbb Z)^\times,
+\qquad
+n=\lceil\log_2(N+1)\rceil.
+\]
+
+Sample \(n\) exact uniform integers from \(1,\ldots,N-1\) and compute
+their gcds with \(N\). One batch has probability at least \(c_0\) of
+either returning a proper factor or supplying a public list that generates
+the complete unit group \(G_N\). Exact rejection sampling has expected
+polynomial fair-random-bit cost with an exponentially decaying tail, and
+the total expected bit cost is polynomial.
+
+For a distinct odd semiprime, three independent uniform units generate the
+full unit group with probability at least
+
+\[
+\boxed{1/(\zeta(2)\zeta(3))>0.}
+\]
+
+The complete unit group contains a factor-revealing element for every
+composite \(N\). For a prime power \(p^e\), the unit \(1+p\) exposes
+\(p\). For an integer with at least two primary factors, CRT gives a unit
+that is one on a proper nonempty set of components and nonidentity on the
+others. This is existential and does not publicly construct the element
+without the factorization.
+
+Condition on a batch that generates \(G_N\). Every later unit exposed by
+canonical multiplicative feedback is already in the generated abstract
+subgroup. Thus feedback cannot enlarge that subgroup on this event. This
+does not make feedback redundant. The theorem supplies no public method to
+recover an exponent word for the element. Feedback can instead expose one
+named canonical integer, one gcd-free block, one relation with known
+provenance, or one direct decoder input. Therefore
+
+\[
+\boxed{
+\text{abstract subgroup availability}
+\ne
+\text{public word and integer-presentation accessibility}.
+}
+\]
+
+This distinction is the correct scope of the \(4033\) and \(2047\)
+feedback witnesses. They prove representation-level gain relative to their
+restricted transcripts. They do not prove that feedback expands the
+abstract subgroup after a full-group generator batch is retained.
+
+If one polynomial-bounded procedure factors \(N\) with
+inverse-polynomial probability on every list generating \(G_N\), then
+fresh batches, verified outputs, and repetition give a classical Las Vegas
+expected-polynomial factorer for every composite \(N\). The source theorem
+does not supply this promised localizer, recognize the generation event,
+give useful separator density, compute orders, recover words, solve an HSP,
+or prove a factoring algorithm.
+
+The hostile audit pinned the original candidate with SHA-256 hash
+a198049a27b409516926c716b3ea281c95b430cd6c3382abc3de0a3a4ee764c5.
+The final candidate applies its two wording corrections: exact interval
+sampling has expected polynomial random-bit cost, and no classical hardness
+claim is made for word recovery. The final candidate, hostile audit,
+proof-blind statement, and proof-blind reconstruction have SHA-256 hashes
+90a4a39313544a554201a463066f539c16f2f2dc09aef4e2dbfb135c5e42bb34,
+7d98b6232cbd5dc89271e53b87f526623d39c40dfd54af546e14f99aac014c4f,
+a9ddb299aee512ec028cd8ed52c631f86675e2d134b2aa1e3c8b2c80c1f387bb,
+and
+6857799dc1aa91aeb87336a8586ae9eeb074ee6d64c162348aee7ac1c1e80030.
+No research computation, cross-family audit, human audit, or
+publication-level literature review has run.
