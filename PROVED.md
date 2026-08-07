@@ -11425,3 +11425,173 @@ and
 The two failed candidates and their audits remain in the F94 artifact
 directory. No research computation, cross-family audit, human audit, or
 publication-level literature review has run.
+
+## P101 — two retained canonical-inverse relations can close on a stable input
+
+**Status:** promoted from F95 after a hostile audit and a proof-blind
+reconstruction. This is an exact finite mechanism witness. It is not a
+polynomial-time relation selector or a factoring algorithm.
+
+At the P98-stable semiprime
+
+\[
+N=2773=47\cdot59,
+\qquad
+\gcd(23\cdot29,N-1)=1,
+\]
+
+two canonical-inverse relation values are
+
+\[
+P_1=3\cdot1849=1+2N=3\cdot43^2
+\]
+
+and
+
+\[
+P_2=842\cdot2526=1+767N=3\cdot842^2.
+\]
+
+Public factorization-free normalization uses
+
+\[
+\gcd(P_1,P_2)=3,
+\qquad
+P_1/3=43^2,
+\qquad
+P_2/3=842^2.
+\]
+
+On the pairwise-coprime basis \((3,43,842)\), the two exponent columns are
+
+\[
+(1,2,0)^T,
+\qquad
+(1,0,2)^T.
+\]
+
+Each column is nonzero modulo two. The two columns are equal modulo two, so
+the first retained relation makes the second one close. The induced exact
+root is
+
+\[
+R=\sqrt{P_1P_2}=108{,}618,
+\]
+
+and
+
+\[
+\gcd(R-1,N)=47,
+\qquad
+\gcd(R+1,N)=59.
+\]
+
+Deleting the first nonclosing relation loses this cycle. Thus relation
+retention can create a useful state that is not represented by the latest
+scalar gcd alone. Algebraically, the event is an exact congruence-of-squares
+collision: \(43\) and \(842\) are two roots of the same unit and differ by a
+non-global CRT sign.
+
+The declared search exhausted all nontrivial residues modulo this fixed
+\(N\). It inspected 634 distinct relation values and 934 eligible relation
+pairs. This costs \(\Theta(N)\), and the result supplies no polynomial-time
+rule for selecting the second relation. Its value is the stable, exact
+existence of the retained-relation cycle.
+
+The candidate, hostile audit, proof-blind statement, and proof-blind
+reconstruction have SHA-256 hashes
+`b18011a72a0fa7c53e9520963498b5a14af73f9877abd91a96b0262fb3d48ead`,
+`11902f16cab1619a7dd54b513e24197df0edbbb7002707e51055a3f73525b9d2`,
+`f9c7e4a0a35fe58ae4cf46320dd858bbfd99e7fd18dfd799eb5f3bc10bdbc690`,
+and
+`4c2ccd6ffb429c6193000e5bec70380f91b5b5380bfce181bc289b2db9cfe58c`.
+No cross-family audit, human audit, or publication-level literature review
+has run.
+
+## P102 — canonical reduction can create a useful relation presentation inside the old subgroup
+
+**Status:** promoted from F96 after two failed wording or counting rounds, a
+fresh hostile re-audit, and a proof-blind reconstruction. This is an exact
+square-class theorem and a target-free polynomial-size selector on one fixed
+input. It is not an all-input factoring algorithm.
+
+Let \(N\) be odd, and let two positive nonsquare canonical-inverse relation
+values satisfy
+
+\[
+P_i=g_iw_i\equiv1\pmod N.
+\]
+
+They have the same nonzero class in
+\(\mathbb Q_{>0}^{\times}/(\mathbb Q_{>0}^{\times})^2\) exactly when
+\(P_1P_2\) is an integer square. Equivalently, for
+\(D=\gcd(P_1,P_2)\), there are coprime positive integers \(A,B\) with
+
+\[
+P_1=DA^2,
+\qquad
+P_2=DB^2,
+\]
+
+where \(D\) is nonsquare. For
+
+\[
+R=\sqrt{P_1P_2}=DAB,
+\]
+
+one has the exact public identities
+
+\[
+\gcd(R-1,N)=\gcd(A-B,N),
+\qquad
+\gcd(R+1,N)=\gcd(A+B,N).
+\]
+
+The collision factors \(N\) exactly when its root is not globally
+\(\pm1\). Equal square class alone is insufficient: an exact example at
+\(N=143\) produces only the global root \(-1\).
+
+For the P101 state at \(N=2773\), let
+
+\[
+H=\langle3,43\rangle=\langle43\rangle.
+\]
+
+The useful endpoint \(842\) is outside \(H\). Nevertheless, the same useful
+relation value has the target-free presentation
+
+\[
+c=[3^{99}43]_N=1263,
+\qquad
+w=c^{-1}_{\rm can}=1684,
+\]
+
+with both endpoint residues in \(H\), and
+
+\[
+cw=2{,}126{,}892=3\cdot842^2=P_2.
+\]
+
+Thus canonical reduction creates no new abstract modular element. It creates
+a new exact integer presentation. Public square normalization of that
+presentation exposes the closing root and factors \(N\). This is a genuine
+source-operation change: the twelve raw products \(3^a43^b<N\) find no
+distinct useful relation, while canonical reduction of a longer word does.
+
+A separate target-free executable receives only \(N\), blocks \(3,43\), and
+the bound \(n^2=144\). It tests \(145^2=21{,}025\) exponent pairs. The first
+distinct useful hit is \((a,b)=(99,1)\); four earlier same-class hits only
+repeat \(P_1\) and give a global root. This is a polynomial-size selector for
+the fixed input. The bound was found after a complete \(O(N)\) subgroup scan,
+so no all-input word-length or success-density law follows.
+
+The final candidate, hostile re-audit, proof-blind statement, and
+proof-blind reconstruction have SHA-256 hashes
+`4ffa68dc66bd48f62c15fc1ef16dc8e54c4157e64f5c1f49ee544e24e06783d9`,
+`d41637b590974e88d9bf73206d0681c297ec9c42e77fec8878eead0e2309a788`,
+`b2a06e0ee52c2734595e22bebaaaa8dcabd5378d1d175f2e88473704d0c6c783`,
+and
+`b7e3fd7e00149dfbcd9dbecebfca3597455720c94b8a2f07a73220eaa9d31ca2`.
+Both failed candidate rounds remain in the F96 artifact directory. No
+cross-family audit, human audit, or publication-level literature review has
+run.

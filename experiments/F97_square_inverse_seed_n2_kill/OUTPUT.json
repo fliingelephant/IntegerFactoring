@@ -1,0 +1,237 @@
+{
+  "bounds": {
+    "control_x": 43,
+    "odd_x_only": true,
+    "stop_rule": "first stable distinct odd semiprime with finite_null menu, else cap",
+    "x_max_inclusive": 2001,
+    "x_min_inclusive": 3
+  },
+  "data_policy": {
+    "input_selection_and_certificate_only": [
+      "bounded trial factorization of N_x",
+      "distinct odd semiprime test",
+      "gcd(A*B,N_x-1)=1 stable-condition test"
+    ],
+    "per_input_selector_does_not_receive": [
+      "p or q",
+      "a target endpoint",
+      "a target relation value",
+      "a target word"
+    ],
+    "per_input_selector_receives": [
+      "N_x",
+      "public normalized blocks 3 and x",
+      "fixed exponent bound n^2 and ordering"
+    ]
+  },
+  "elapsed_seconds": 0.002480082999682054,
+  "experiment_id": "F97_square_inverse_seed_n2_kill",
+  "family": "N_x=(3*x^2-1)/2 for odd x",
+  "first_counterexample": {
+    "N": 253,
+    "menu": {
+      "N": 253,
+      "distinct_same_class_collisions_through_result": 0,
+      "exponent_bound_each": 64,
+      "exponent_pairs_examined_through_result": 4225,
+      "exponent_pairs_total": 4225,
+      "first_global_sign_collision": null,
+      "first_useful_closure": null,
+      "generated_subgroup_order": 110,
+      "global_sign_collisions_through_result": 0,
+      "menu_covers_entire_generated_subgroup": true,
+      "menu_order": "increasing a+b, then increasing a; duplicate residues skipped",
+      "n": 8,
+      "seed_relation": {
+        "P": 507,
+        "g": 3,
+        "normalized_blocks": [
+          3,
+          13
+        ],
+        "w": 169
+      },
+      "status": "finite_null",
+      "unique_residues_examined_through_result": 110,
+      "x": 13
+    },
+    "selection_certificate": {
+      "A": 5,
+      "B": 11,
+      "factor_product_check": true,
+      "g": 2,
+      "gcd_AB_N_minus_1": 1,
+      "p": 11,
+      "q": 23
+    },
+    "x": 13
+  },
+  "positive_control": {
+    "N": 2773,
+    "menu": {
+      "N": 2773,
+      "distinct_same_class_collisions_through_result": 1,
+      "exponent_bound_each": 144,
+      "exponent_pairs_examined_through_result": 5150,
+      "exponent_pairs_total": 21025,
+      "first_global_sign_collision": null,
+      "first_useful_closure": {
+        "P": 2126892,
+        "c": 1263,
+        "exponent_pair_ordinal_1_based": 5150,
+        "exponents": [
+          99,
+          1
+        ],
+        "gcd_root_minus_one_n": 47,
+        "gcd_root_plus_one_n": 59,
+        "induced_root": 108618,
+        "k": 767,
+        "normalization": {
+          "D": 3,
+          "new_root": 842,
+          "seed_root": 43
+        },
+        "root_mod_n": 471,
+        "unique_residue_ordinal_1_based": 299,
+        "useful": true,
+        "w": 1684
+      },
+      "generated_subgroup_order": 1334,
+      "global_sign_collisions_through_result": 0,
+      "menu_covers_entire_generated_subgroup": false,
+      "menu_order": "increasing a+b, then increasing a; duplicate residues skipped",
+      "n": 12,
+      "seed_relation": {
+        "P": 5547,
+        "g": 3,
+        "normalized_blocks": [
+          3,
+          43
+        ],
+        "w": 1849
+      },
+      "status": "useful_closure",
+      "unique_residues_examined_through_result": 299,
+      "x": 43
+    },
+    "selection_certificate": {
+      "A": 23,
+      "B": 29,
+      "factor_product_check": true,
+      "g": 2,
+      "gcd_AB_N_minus_1": 1,
+      "p": 47,
+      "q": 59
+    },
+    "x": 43
+  },
+  "search_counts": {
+    "distinct_semiprimes_rejected_as_unstable": 0,
+    "family_inputs_examined": 6,
+    "not_distinct_odd_semiprimes_rejected": 5,
+    "stable_semiprimes_tested": 1
+  },
+  "selection_trace": [
+    {
+      "N": 13,
+      "factorization_certificate": {
+        "13": 1
+      },
+      "selection_status": "not_distinct_odd_semiprime",
+      "x": 3
+    },
+    {
+      "N": 37,
+      "factorization_certificate": {
+        "37": 1
+      },
+      "selection_status": "not_distinct_odd_semiprime",
+      "x": 5
+    },
+    {
+      "N": 73,
+      "factorization_certificate": {
+        "73": 1
+      },
+      "selection_status": "not_distinct_odd_semiprime",
+      "x": 7
+    },
+    {
+      "N": 121,
+      "factorization_certificate": {
+        "11": 2
+      },
+      "selection_status": "not_distinct_odd_semiprime",
+      "x": 9
+    },
+    {
+      "N": 181,
+      "factorization_certificate": {
+        "181": 1
+      },
+      "selection_status": "not_distinct_odd_semiprime",
+      "x": 11
+    },
+    {
+      "N": 253,
+      "factorization_certificate": {
+        "11": 1,
+        "23": 1
+      },
+      "selection_status": "selected_stable_semiprime",
+      "stable_certificate": {
+        "A": 5,
+        "B": 11,
+        "factor_product_check": true,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "p": 11,
+        "q": 23
+      },
+      "x": 13
+    }
+  ],
+  "stable_inputs_tested": [
+    {
+      "N": 253,
+      "menu": {
+        "N": 253,
+        "distinct_same_class_collisions_through_result": 0,
+        "exponent_bound_each": 64,
+        "exponent_pairs_examined_through_result": 4225,
+        "exponent_pairs_total": 4225,
+        "first_global_sign_collision": null,
+        "first_useful_closure": null,
+        "generated_subgroup_order": 110,
+        "global_sign_collisions_through_result": 0,
+        "menu_covers_entire_generated_subgroup": true,
+        "menu_order": "increasing a+b, then increasing a; duplicate residues skipped",
+        "n": 8,
+        "seed_relation": {
+          "P": 507,
+          "g": 3,
+          "normalized_blocks": [
+            3,
+            13
+          ],
+          "w": 169
+        },
+        "status": "finite_null",
+        "unique_residues_examined_through_result": 110,
+        "x": 13
+      },
+      "selection_certificate": {
+        "A": 5,
+        "B": 11,
+        "factor_product_check": true,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "p": 11,
+        "q": 23
+      },
+      "x": 13
+    }
+  ],
+  "status": "counterexample"
+}

@@ -1,0 +1,151 @@
+{
+  "algorithm_data_policy": {
+    "candidate_operations": [
+      "integer range enumeration",
+      "gcd(g,N)",
+      "least positive modular inverse",
+      "exact multiplication and division",
+      "integer square root",
+      "gcd(root-1,N)"
+    ],
+    "candidate_selection_uses_hidden_factors": false,
+    "public_trial_factorization_use": "witness certificate only; not used to select or reject pairs"
+  },
+  "bounds": {
+    "N": 2773,
+    "ell": 2,
+    "full_nontrivial_residue_range": true,
+    "g_max_inclusive": 2772,
+    "g_min_inclusive": 2,
+    "pair_order": "lexicographic after sorting unique relations by (P,g,w)"
+  },
+  "counts": {
+    "inverse_one_candidates_skipped": 0,
+    "non_square_relation_values": 631,
+    "nonunit_candidates_skipped_after_public_gcd": 104,
+    "pair_tests": 934,
+    "raw_g_candidates": 2771,
+    "square_product_pairs_seen": 1,
+    "unique_canonical_relation_values": 634,
+    "unit_candidates": 2667
+  },
+  "elapsed_seconds": 0.0012988329981453717,
+  "experiment_id": "F95_two_relation_canonical_inverse_cycle",
+  "status": "witness",
+  "witness": {
+    "cofactor_is_prime": true,
+    "column_mod_ell_1": [
+      0,
+      1,
+      0,
+      0
+    ],
+    "column_mod_ell_2": [
+      0,
+      1,
+      0,
+      0
+    ],
+    "combined_product": 11797869924,
+    "deleting_first_relation_loses_second_closure": true,
+    "distinct_relation_values": true,
+    "factor_is_prime": true,
+    "factor_product_check": true,
+    "first_kernel_dimension": 0,
+    "first_matrix_rank_mod_ell": 1,
+    "gcd_free_prime_basis_certificate": [
+      2,
+      3,
+      43,
+      421
+    ],
+    "gcd_root_minus_one_n": 47,
+    "gcd_root_plus_one_n": 59,
+    "individual_nonclosing": [
+      true,
+      true
+    ],
+    "induced_exact_root": 108618,
+    "integer_exponent_column_1": [
+      0,
+      1,
+      2,
+      0
+    ],
+    "integer_exponent_column_2": [
+      2,
+      1,
+      0,
+      2
+    ],
+    "kernel_direction_mod_ell": [
+      1,
+      1
+    ],
+    "public_column_mod_ell_1": [
+      1,
+      0,
+      0
+    ],
+    "public_column_mod_ell_2": [
+      1,
+      0,
+      0
+    ],
+    "public_factorizations_for_certificate": {
+      "2126892": {
+        "2": 2,
+        "3": 1,
+        "421": 2
+      },
+      "5547": {
+        "3": 1,
+        "43": 2
+      }
+    },
+    "public_integer_exponent_column_1": [
+      1,
+      2,
+      0
+    ],
+    "public_integer_exponent_column_2": [
+      1,
+      0,
+      2
+    ],
+    "public_square_normalized_basis": [
+      3,
+      43,
+      842
+    ],
+    "relation_1": {
+      "P": 5547,
+      "g": 3,
+      "individual_exact_square": false,
+      "k": 2,
+      "relation_index": 1,
+      "w": 1849
+    },
+    "relation_2": {
+      "P": 2126892,
+      "g": 842,
+      "individual_exact_square": false,
+      "k": 767,
+      "relation_index": 306,
+      "w": 2526
+    },
+    "root_mod_n": 471,
+    "root_square_check": true,
+    "second_closes_after_first": true,
+    "selection_order": {
+      "criterion": "first successful i<j in relations sorted by (P,g,w)",
+      "first_index": 1,
+      "pair_tests_before_and_including_witness": 934,
+      "second_index": 306
+    },
+    "two_column_kernel_dimension": 1,
+    "two_column_matrix_rank_mod_ell": 1,
+    "verified_cofactor": 59,
+    "verified_factor": 47
+  }
+}

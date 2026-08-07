@@ -2850,3 +2850,78 @@ small. In the abstract example
 for the subgroups produced by the actual integer feedback process, target a
 rare separator by a polynomial sparse-word law, or prove that another block
 split reaches a dense subgroup.
+
+## X68 — one stable square-inverse seed need not have another closing presentation in its full subgroup
+
+**Status:** promoted from F97 after a hostile audit and a proof-blind
+reconstruction.
+
+**Family:** F26/F97.
+
+**Classification:** exact failure of the universal one-step two-block
+canonical-residue rule. It is not evidence against multi-seed, multi-class,
+or multi-round feedback.
+
+**What was tried.** From a public relation
+
+\[
+3x^2=1+2N,
+\]
+
+retain blocks \(3,x\). Enumerate every canonical residue
+\([3^ax^b]_N\) with \(0\le a,b\le n^2\). Accept a distinct relation in the
+same nonzero square class whose induced root factors \(N\).
+
+**Exact obstruction.** At
+
+\[
+x=13,
+\qquad
+N=253=11\cdot23,
+\]
+
+the P98 stable certificate is
+
+\[
+g=2,
+\qquad
+A=5,
+\qquad
+B=11,
+\qquad
+\gcd(AB,N-1)=1.
+\]
+
+The seed is \(3^{-1}_{\rm can}=169=13^2\), with relation value
+\(P_1=507\). The \(65^2=4225\) declared words visit exactly all 110 elements
+of
+
+\[
+H=\langle3,13\rangle=\langle13\rangle.
+\]
+
+Four residues only repeat \(P_1\). No residue in the full subgroup produces
+a distinct relation in its square class. Thus a larger exponent bound cannot
+repair this one-step state. The same executable reproduces the positive
+\(N=2773\) witness, so the null is not a changed-menu failure.
+
+**Scope.** The factor \(11\) is smaller than \(n^2=64\). Therefore this
+counterexample refutes the isolated one-step law but not a hybrid algorithm
+that first removes polynomially bounded small factors. It also leaves open
+new seeds, retained dependencies across several square classes, block
+refinement, sources outside \(H\), and later rounds.
+
+**What would make a retry materially new.** Use a target-free multi-seed or
+multi-round rule that changes the relation incidence or block presentation,
+and prove progress on trial-hard stable inputs. Merely increasing the two
+old exponents is covered by this obstruction.
+
+The candidate, hostile audit, proof-blind statement, and proof-blind
+reconstruction have SHA-256 hashes
+`c598e7f28cd35e81aba3c92af9232da2605f1a1ed8434ef537339870da860d99`,
+`b303aff44bba85f4b960194f9679942dd60656e4139ec7ab1a1a4b40f853558b`,
+`5db670600ff70bda37daf439c90f3183793e28969cc5de2e1f3c32c40ea92ab9`,
+and
+`79de9711554f1d87f13afed25897b7dc253edc6c01318b0202854c04d998beb6`.
+No cross-family audit, human audit, or publication-level literature review
+has run.

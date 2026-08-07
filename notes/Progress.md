@@ -2581,3 +2581,73 @@ proof-blind reconstruction have SHA-256 hashes
 `69229c3b4e2590812dc8bf45aa536f8837b337107957f3ac2914956879067def`,
 and
 `2f4a28fa711707c7767ce1d13bf5a197eeb830d64c64a6ef44cbe02f6ae6894b`.
+
+### C98 — a retained relation cycle factors the stable input 2773
+
+**Status:** verifier-backed and promoted as P101 after hostile audit and
+proof-blind reconstruction. No cross-family audit, human audit, or literature
+audit ran.
+
+At \(N=2773=47\cdot59\), the two canonical-inverse relations
+
+\[
+P_1=3\cdot43^2,
+\qquad
+P_2=3\cdot842^2
+\]
+
+have the same nonzero square class. Each relation is nonclosing by itself.
+After the first is retained, the second closes. Their exact root gives the
+two factors. If the first relation is deleted as an unsuccessful probe, the
+cycle is lost.
+
+This proves that amortized relation state can do more than one local scalar
+test. The exhaustive discovery scan costs order \(N\), so it does not give a
+polynomial selector for the second relation.
+
+### C99 — canonical reduction changes relation access without adding a modular element
+
+**Status:** verifier-backed and promoted as P102 after two failed wording or
+counting rounds, a fresh hostile re-audit, and proof-blind reconstruction. No
+cross-family audit, human audit, or literature audit ran.
+
+For the first \(2773\) relation, the public subgroup is
+\(H=\langle3,43\rangle\). The useful endpoint \(842\) is outside \(H\), but
+the canonical word
+
+\[
+[3^{99}43]_N=1263
+\]
+
+and its inverse \(1684\) both lie in \(H\), while their integer product is the
+same useful relation \(3\cdot842^2\). Thus the residue subgroup does not gain
+a new element. The algorithm gains a new integer presentation and a new
+decoder relation.
+
+A target-free \(145^2\)-word menu finds this presentation on the fixed input.
+Raw products below \(N\) do not. This is the first exact witness where
+canonical presentation feedback makes the relevant algorithmic difference
+inside the old subgroup. The \(n^2\) bound was post-selected after a full
+subgroup scan, so the all-input progress law remains open.
+
+### C100 — the one-seed presentation rule fails even on its full old subgroup
+
+**Status:** verifier-backed and promoted as X68 after hostile audit and
+proof-blind reconstruction. No cross-family audit, human audit, or literature
+audit ran.
+
+The F96 \(n^2\) selector is not an all-input rule. At the stable semiprime
+
+\[
+N=253=11\cdot23,
+\]
+
+the public seed \(3\cdot13^2=1+2N\) gives
+\(H=\langle3,13\rangle\) of order 110. The declared \(65^2\) word menu covers
+all of \(H\), not only a small part. No residue in \(H\) gives a distinct
+canonical relation in the seed's square class.
+
+This kills exponent-bound inflation as the repair. The input has the small
+factor \(11<n^2\), so it does not kill a trial-division hybrid. The next
+materially new test must use more than one seed or square class, or must first
+change the integer block presentation.

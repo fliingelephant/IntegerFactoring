@@ -1,0 +1,147 @@
+{
+  "all_same_square_class_records": [
+    {
+      "exponent_pair_ordinal_1_based": 2,
+      "exponents": [
+        0,
+        1
+      ],
+      "gcd_root_minus_one_n": 2773,
+      "gcd_root_plus_one_n": 1,
+      "induced_root": 5547,
+      "inverse": 129,
+      "relation_value": 5547,
+      "residue": 43,
+      "same_relation_value_as_first": true,
+      "unique_residue_ordinal_1_based": 2,
+      "useful": false
+    },
+    {
+      "exponent_pair_ordinal_1_based": 3,
+      "exponents": [
+        1,
+        0
+      ],
+      "gcd_root_minus_one_n": 2773,
+      "gcd_root_plus_one_n": 1,
+      "induced_root": 5547,
+      "inverse": 1849,
+      "relation_value": 5547,
+      "residue": 3,
+      "same_relation_value_as_first": true,
+      "unique_residue_ordinal_1_based": 3,
+      "useful": false
+    },
+    {
+      "exponent_pair_ordinal_1_based": 4,
+      "exponents": [
+        0,
+        2
+      ],
+      "gcd_root_minus_one_n": 2773,
+      "gcd_root_plus_one_n": 1,
+      "induced_root": 5547,
+      "inverse": 3,
+      "relation_value": 5547,
+      "residue": 1849,
+      "same_relation_value_as_first": true,
+      "unique_residue_ordinal_1_based": 4,
+      "useful": false
+    },
+    {
+      "exponent_pair_ordinal_1_based": 5,
+      "exponents": [
+        1,
+        1
+      ],
+      "gcd_root_minus_one_n": 2773,
+      "gcd_root_plus_one_n": 1,
+      "induced_root": 5547,
+      "inverse": 43,
+      "relation_value": 5547,
+      "residue": 129,
+      "same_relation_value_as_first": true,
+      "unique_residue_ordinal_1_based": 5,
+      "useful": false
+    },
+    {
+      "exponent_pair_ordinal_1_based": 5150,
+      "exponents": [
+        99,
+        1
+      ],
+      "gcd_root_minus_one_n": 47,
+      "gcd_root_plus_one_n": 59,
+      "induced_root": 108618,
+      "inverse": 1684,
+      "relation_value": 2126892,
+      "residue": 1263,
+      "same_relation_value_as_first": false,
+      "unique_residue_ordinal_1_based": 299,
+      "useful": true
+    }
+  ],
+  "counts": {
+    "all_same_square_class": 5,
+    "distinct_relation_value": 1,
+    "exponent_pairs": 21025,
+    "same_old_relation_value": 4,
+    "unique_residues": 433,
+    "useful": 1
+  },
+  "data_policy": {
+    "candidate_operations": [
+      "bounded exponent-pair enumeration",
+      "modular exponentiation and multiplication",
+      "canonical modular inversion",
+      "exact integer square root",
+      "gcd of induced root plus or minus one with N"
+    ],
+    "factor_received": false,
+    "target_endpoint_received": false,
+    "target_relation_value_received": false
+  },
+  "elapsed_seconds": 0.0057601660082582384,
+  "experiment_id": "F96_target_free_canonical_residue_selector",
+  "first_distinct_relation_value": {
+    "exponent_pair_ordinal_1_based": 5150,
+    "exponents": [
+      99,
+      1
+    ],
+    "gcd_root_minus_one_n": 47,
+    "gcd_root_plus_one_n": 59,
+    "induced_root": 108618,
+    "inverse": 1684,
+    "relation_value": 2126892,
+    "residue": 1263,
+    "same_relation_value_as_first": false,
+    "unique_residue_ordinal_1_based": 299,
+    "useful": true
+  },
+  "first_useful": {
+    "exponent_pair_ordinal_1_based": 5150,
+    "exponents": [
+      99,
+      1
+    ],
+    "gcd_root_minus_one_n": 47,
+    "gcd_root_plus_one_n": 59,
+    "induced_root": 108618,
+    "inverse": 1684,
+    "relation_value": 2126892,
+    "residue": 1263,
+    "same_relation_value_as_first": false,
+    "unique_residue_ordinal_1_based": 299,
+    "useful": true
+  },
+  "inputs": {
+    "N": 2773,
+    "block_a": 3,
+    "block_b": 43,
+    "exponent_bound_each": 144,
+    "first_relation_value": 5547
+  },
+  "ordering": "increasing a+b, then increasing a; duplicate residues skipped",
+  "status": "useful_hit"
+}

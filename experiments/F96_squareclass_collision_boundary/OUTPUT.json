@@ -1,0 +1,500 @@
+{
+  "bounded_global_sign_counterexample": {
+    "first_under_increasing_N_then_relation_order": {
+      "A": 68,
+      "B": 75,
+      "D": 3,
+      "N": 143,
+      "factorization_certificate": [
+        11,
+        13
+      ],
+      "gcd_A_B": 1,
+      "gcd_A_minus_B_n": 1,
+      "gcd_A_plus_B_n": 143,
+      "gcd_root_minus_one_n": 1,
+      "gcd_root_plus_one_n": 143,
+      "global_sign": "-1",
+      "induced_root": 15300,
+      "relation_1": {
+        "P": 13872,
+        "g": 102,
+        "index": 29,
+        "k": 97,
+        "square": false,
+        "w": 136
+      },
+      "relation_2": {
+        "P": 16875,
+        "g": 125,
+        "index": 32,
+        "k": 118,
+        "square": false,
+        "w": 135
+      },
+      "root_mod_n": 142,
+      "useful": false
+    },
+    "search_range": "distinct odd semiprimes N <= 199"
+  },
+  "canonical_residue_menus": {
+    "n": {
+      "distinct_relation_value_collision_count": 0,
+      "exponent_bound_each": 12,
+      "exponent_pairs_considered": 169,
+      "first_distinct_relation_value_collision": null,
+      "first_same_square_class_collision": {
+        "P": 5547,
+        "c": 43,
+        "exponent_pair_ordinal_1_based": 2,
+        "exponents": [
+          0,
+          1
+        ],
+        "gcd_root_minus_one_n": 2773,
+        "gcd_root_plus_one_n": 1,
+        "induced_root": 5547,
+        "k": 2,
+        "residue": 43,
+        "root_mod_n": 1,
+        "same_relation_value_as_first": true,
+        "unique_residue_ordinal_1_based": 2,
+        "useful": false,
+        "w": 129
+      },
+      "first_useful_same_square_class_collision": null,
+      "ordering": "increasing a+b, then increasing a; duplicate residues skipped",
+      "same_square_class_collision_count": 4,
+      "target_hits": [],
+      "unique_residues_tested": 37,
+      "useful_same_square_class_collision_count": 0
+    },
+    "n_squared": {
+      "distinct_relation_value_collision_count": 1,
+      "exponent_bound_each": 144,
+      "exponent_pairs_considered": 21025,
+      "first_distinct_relation_value_collision": {
+        "P": 2126892,
+        "c": 1263,
+        "exponent_pair_ordinal_1_based": 5150,
+        "exponents": [
+          99,
+          1
+        ],
+        "gcd_root_minus_one_n": 47,
+        "gcd_root_plus_one_n": 59,
+        "induced_root": 108618,
+        "k": 767,
+        "residue": 1263,
+        "root_mod_n": 471,
+        "same_relation_value_as_first": false,
+        "unique_residue_ordinal_1_based": 299,
+        "useful": true,
+        "w": 1684
+      },
+      "first_same_square_class_collision": {
+        "P": 5547,
+        "c": 43,
+        "exponent_pair_ordinal_1_based": 2,
+        "exponents": [
+          0,
+          1
+        ],
+        "gcd_root_minus_one_n": 2773,
+        "gcd_root_plus_one_n": 1,
+        "induced_root": 5547,
+        "k": 2,
+        "residue": 43,
+        "root_mod_n": 1,
+        "same_relation_value_as_first": true,
+        "unique_residue_ordinal_1_based": 2,
+        "useful": false,
+        "w": 129
+      },
+      "first_useful_same_square_class_collision": {
+        "P": 2126892,
+        "c": 1263,
+        "exponent_pair_ordinal_1_based": 5150,
+        "exponents": [
+          99,
+          1
+        ],
+        "gcd_root_minus_one_n": 47,
+        "gcd_root_plus_one_n": 59,
+        "induced_root": 108618,
+        "k": 767,
+        "residue": 1263,
+        "root_mod_n": 471,
+        "same_relation_value_as_first": false,
+        "unique_residue_ordinal_1_based": 299,
+        "useful": true,
+        "w": 1684
+      },
+      "ordering": "increasing a+b, then increasing a; duplicate residues skipped",
+      "same_square_class_collision_count": 5,
+      "target_hits": [],
+      "unique_residues_tested": 433,
+      "useful_same_square_class_collision_count": 1
+    }
+  },
+  "data_policy": {
+    "bounded_counterexample_scan": "public trial factorization classifies distinct odd semiprime inputs",
+    "certificate_only_steps": [
+      "complete BFS over the generated subgroup",
+      "complete canonical-relation pair census"
+    ],
+    "n2773_selector_uses_factors": false,
+    "polynomial_in_log_n_public_steps": [
+      "verification of a supplied word",
+      "fixed two-block exponent menus with bounds polynomial in bit_length(N)",
+      "gcd square normalization and induced-root gcd tests"
+    ],
+    "public_inputs": [
+      "N",
+      "first normalized blocks",
+      "F95 target for membership query"
+    ]
+  },
+  "direct_integer_feedback": {
+    "all_nonnegative_monomials_below_n_count": 12,
+    "distinct_relation_value_collision_count": 0,
+    "first_same_square_class_collision": {
+      "P": 5547,
+      "c": 3,
+      "exponents": [
+        1,
+        0
+      ],
+      "gcd_root_minus_one_n": 2773,
+      "gcd_root_plus_one_n": 1,
+      "induced_root": 5547,
+      "k": 2,
+      "root_mod_n": 1,
+      "same_relation_value_as_first": true,
+      "useful": false,
+      "w": 1849
+    },
+    "same_square_class_collision_count": 4,
+    "single_relation_capacity_candidates": [
+      {
+        "P": 5547,
+        "c": 3,
+        "exponents": [
+          1,
+          0
+        ],
+        "k": 2,
+        "raw_product": 3,
+        "w": 1849
+      },
+      {
+        "P": 5547,
+        "c": 43,
+        "exponents": [
+          0,
+          1
+        ],
+        "k": 2,
+        "raw_product": 43,
+        "w": 129
+      },
+      {
+        "P": 5547,
+        "c": 129,
+        "exponents": [
+          1,
+          1
+        ],
+        "k": 2,
+        "raw_product": 129,
+        "w": 43
+      },
+      {
+        "P": 5547,
+        "c": 1849,
+        "exponents": [
+          0,
+          2
+        ],
+        "k": 2,
+        "raw_product": 1849,
+        "w": 3
+      }
+    ],
+    "single_relation_capacity_distinct_relation_value_count": 0,
+    "single_relation_capacity_same_class_count": 4,
+    "target_endpoint_hits": [],
+    "target_relation_hits": [],
+    "useful_same_square_class_collision_count": 0
+  },
+  "elapsed_seconds": 0.02820850000716746,
+  "experiment_id": "F96_squareclass_collision_boundary",
+  "full_relation_census": {
+    "f95_pair": {
+      "A": 43,
+      "B": 842,
+      "D": 3,
+      "gcd_A_B": 1,
+      "gcd_A_minus_B_n": 47,
+      "gcd_A_plus_B_n": 59,
+      "gcd_root_minus_one_n": 47,
+      "gcd_root_plus_one_n": 59,
+      "global_sign": "non_global",
+      "induced_root": 108618,
+      "relation_1": {
+        "P": 5547,
+        "g": 3,
+        "index": 1,
+        "k": 2,
+        "square": false,
+        "w": 1849
+      },
+      "relation_2": {
+        "P": 2126892,
+        "g": 842,
+        "index": 306,
+        "k": 767,
+        "square": false,
+        "w": 2526
+      },
+      "root_mod_n": 471,
+      "useful": true
+    },
+    "first_global_minus_pair": null,
+    "first_global_plus_pair": null,
+    "first_useful_pair": {
+      "A": 43,
+      "B": 842,
+      "D": 3,
+      "gcd_A_B": 1,
+      "gcd_A_minus_B_n": 47,
+      "gcd_A_plus_B_n": 59,
+      "gcd_root_minus_one_n": 47,
+      "gcd_root_plus_one_n": 59,
+      "global_sign": "non_global",
+      "induced_root": 108618,
+      "relation_1": {
+        "P": 5547,
+        "g": 3,
+        "index": 1,
+        "k": 2,
+        "square": false,
+        "w": 1849
+      },
+      "relation_2": {
+        "P": 2126892,
+        "g": 842,
+        "index": 306,
+        "k": 767,
+        "square": false,
+        "w": 2526
+      },
+      "root_mod_n": 471,
+      "useful": true
+    },
+    "global_minus_pairs": 0,
+    "global_plus_pairs": 0,
+    "nonsquare_relation_values": 631,
+    "same_nonzero_square_class_pairs": 3,
+    "unique_relation_values": 634,
+    "useful_pairs": 3
+  },
+  "inputs": {
+    "N": 2773,
+    "bit_length": 12,
+    "blocks": [
+      3,
+      43
+    ],
+    "first_relation": {
+      "P": 5547,
+      "c": 3,
+      "k": 2,
+      "w": 1849
+    },
+    "target": 842,
+    "target_relation": {
+      "P": 2126892,
+      "c": 842,
+      "k": 767,
+      "w": 2526
+    }
+  },
+  "status": "exact_bounded_result",
+  "subgroup": {
+    "collapse_certificate": {
+      "meaning": "3 is 43^(-2), so <3,43> equals <43>",
+      "three_times_43_squared_mod_n": 1
+    },
+    "complete_residue_scan_distinct_relation_value_count": 2,
+    "complete_residue_scan_same_class_count": 6,
+    "complete_residue_scan_same_class_fraction": "6/1334",
+    "complete_residue_scan_same_class_records": [
+      {
+        "P": 5547,
+        "c": 3,
+        "gcd_root_minus_one_n": 2773,
+        "gcd_root_plus_one_n": 1,
+        "induced_root": 5547,
+        "k": 2,
+        "residue": 3,
+        "root_mod_n": 1,
+        "same_relation_value_as_first": true,
+        "shortest_positive_word": [
+          1,
+          0
+        ],
+        "shortest_signed_word": [
+          1,
+          0
+        ],
+        "useful": false,
+        "w": 1849
+      },
+      {
+        "P": 5547,
+        "c": 43,
+        "gcd_root_minus_one_n": 2773,
+        "gcd_root_plus_one_n": 1,
+        "induced_root": 5547,
+        "k": 2,
+        "residue": 43,
+        "root_mod_n": 1,
+        "same_relation_value_as_first": true,
+        "shortest_positive_word": [
+          0,
+          1
+        ],
+        "shortest_signed_word": [
+          0,
+          1
+        ],
+        "useful": false,
+        "w": 129
+      },
+      {
+        "P": 5547,
+        "c": 129,
+        "gcd_root_minus_one_n": 2773,
+        "gcd_root_plus_one_n": 1,
+        "induced_root": 5547,
+        "k": 2,
+        "residue": 129,
+        "root_mod_n": 1,
+        "same_relation_value_as_first": true,
+        "shortest_positive_word": [
+          1,
+          1
+        ],
+        "shortest_signed_word": [
+          0,
+          -1
+        ],
+        "useful": false,
+        "w": 43
+      },
+      {
+        "P": 5547,
+        "c": 1849,
+        "gcd_root_minus_one_n": 2773,
+        "gcd_root_plus_one_n": 1,
+        "induced_root": 5547,
+        "k": 2,
+        "residue": 1849,
+        "root_mod_n": 1,
+        "same_relation_value_as_first": true,
+        "shortest_positive_word": [
+          0,
+          2
+        ],
+        "shortest_signed_word": [
+          -1,
+          0
+        ],
+        "useful": false,
+        "w": 3
+      },
+      {
+        "P": 2126892,
+        "c": 1263,
+        "gcd_root_minus_one_n": 47,
+        "gcd_root_plus_one_n": 59,
+        "induced_root": 108618,
+        "k": 767,
+        "residue": 1263,
+        "root_mod_n": 471,
+        "same_relation_value_as_first": false,
+        "shortest_positive_word": [
+          99,
+          1
+        ],
+        "shortest_signed_word": [
+          98,
+          -1
+        ],
+        "useful": true,
+        "w": 1684
+      },
+      {
+        "P": 2126892,
+        "c": 1684,
+        "gcd_root_minus_one_n": 47,
+        "gcd_root_plus_one_n": 59,
+        "induced_root": 108618,
+        "k": 767,
+        "residue": 1684,
+        "root_mod_n": 471,
+        "same_relation_value_as_first": false,
+        "shortest_positive_word": [
+          0,
+          197
+        ],
+        "shortest_signed_word": [
+          -98,
+          1
+        ],
+        "useful": true,
+        "w": 1263
+      }
+    ],
+    "complete_residue_scan_useful_count": 2,
+    "distinct_same_class_relation_values": 2,
+    "first_complete_residue_scan_same_class": {
+      "P": 5547,
+      "c": 3,
+      "gcd_root_minus_one_n": 2773,
+      "gcd_root_plus_one_n": 1,
+      "induced_root": 5547,
+      "k": 2,
+      "residue": 3,
+      "root_mod_n": 1,
+      "same_relation_value_as_first": true,
+      "shortest_positive_word": [
+        1,
+        0
+      ],
+      "shortest_signed_word": [
+        1,
+        0
+      ],
+      "useful": false,
+      "w": 1849
+    },
+    "generator_orders": [
+      667,
+      1334
+    ],
+    "size": 1334,
+    "target_inverse_is_member": false,
+    "target_inverse_shortest_positive_word": null,
+    "target_is_member": false,
+    "target_nonmembership_certificate": {
+      "43_half_order_power_mod_n": 2772,
+      "cyclic_subgroup_unique_involution": true,
+      "ratio_is_global_sign": false,
+      "ratio_squared_mod_n": 1,
+      "target_times_43_inverse_mod_n": 471
+    },
+    "target_shortest_positive_word": null
+  }
+}
