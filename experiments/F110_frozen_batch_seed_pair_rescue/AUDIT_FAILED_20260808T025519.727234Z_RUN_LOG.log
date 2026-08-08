@@ -1,0 +1,38 @@
+stage=N-only fixed-certificate replay
+command=["/opt/homebrew/opt/python@3.14/bin/python3.14", "/Users/zhou/autoresearch/IntegerFactoring/experiments/F110_frozen_batch_seed_pair_rescue/audit_n_only_certificate_replay.py", "--output", "/Users/zhou/autoresearch/IntegerFactoring/experiments/F110_frozen_batch_seed_pair_rescue/AUDIT_ATTEMPT_PUBLIC_REPLAY_OUTPUT.json"]
+timeout_seconds=300
+elapsed_seconds=0.062609
+timed_out=false
+exit_code=1
+stdout:
+stderr:
+Traceback (most recent call last):
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F110_frozen_batch_seed_pair_rescue/audit_n_only_certificate_replay.py", line 441, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F110_frozen_batch_seed_pair_rescue/audit_n_only_certificate_replay.py", line 343, in main
+    certificate = verify_exact_certificate(
+        modulus, trace.records, published["dependency_provenance"]
+    )
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F110_frozen_batch_seed_pair_rescue/audit_n_only_certificate_replay.py", line 186, in verify_exact_certificate
+    assert selected and selected[-1] < len(records)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+stage=independent Sage hidden-prime reconstruction
+command=["sage", "-python", "/Users/zhou/autoresearch/IntegerFactoring/experiments/F110_frozen_batch_seed_pair_rescue/audit_independent_verifier.py", "--output", "/Users/zhou/autoresearch/IntegerFactoring/experiments/F110_frozen_batch_seed_pair_rescue/AUDIT_ATTEMPT_OUTPUT.json"]
+timeout_seconds=900
+elapsed_seconds=4.111102
+timed_out=false
+exit_code=1
+stdout:
+stderr:
+Traceback (most recent call last):
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F110_frozen_batch_seed_pair_rescue/audit_independent_verifier.py", line 565, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F110_frozen_batch_seed_pair_rescue/audit_independent_verifier.py", line 362, in main
+    assert run_text.split("stdout:\n", 1)[1].rsplit("\nstderr:\n", 1)[0] + "\n" == output_text
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+

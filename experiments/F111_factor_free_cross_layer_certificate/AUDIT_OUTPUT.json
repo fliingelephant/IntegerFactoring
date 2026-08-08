@@ -1,0 +1,1019 @@
+{
+  "N": 3241632473,
+  "advice_boundary": {
+    "candidate_invokes_dependency_selector": false,
+    "not_verified": [
+      "a public algorithm that selects these indices",
+      "a selector for another modulus or another batch",
+      "a success probability or all-input factoring theorem"
+    ],
+    "verified": "The fixed 363-index advice identifies one useful dependency in this regenerated batch for this N."
+  },
+  "allowed_arithmetic_operations_observed": [
+    "gcd trial and direct screens",
+    "gcd-based endpoint splitting",
+    "exact perfect-power extraction",
+    "modular inversion",
+    "exact integer square root and square testing",
+    "terminal gcd extraction"
+  ],
+  "audit_verdict": "PASS",
+  "bound": 1024,
+  "candidate_artifact_hashes": {
+    "CERTIFICATE.json": "735a8535eb8cd4e8bc5e1c0fbc71d78b3acd79b3e6efa1f865d9084dea67cf6b",
+    "DESIGN.md": "cd78bb9d5ff030d2fbfff4dc1191e3a1603694351bf423254dbd1ed9e3864b31",
+    "FAILED_RUNS.md": "727d794adb41bc14425786746d0b9a809c19312765fad3f69ac890c027b59949",
+    "OUTPUT.json": "3f23f28ea3e4e0c36dfa83b1d50ea63b8da9e6a8ca5da43982c89514b70f300a",
+    "RESULT.md": "0429cafb988f0b5973420ad59bfd62bf983118f543e7b42d15d8ebd261b6d4d3",
+    "RUN.log": "afe4e0851f9fb34ebc39f51d92dd2f8790a4bd9aaefd7941624ed6c8861a4ebf",
+    "RUN_MANIFEST.md": "c01f1de370470a7f535e7e314874ed665e8add6f72107e0fabd728fa0c26c087",
+    "replay_public_certificate.py": "c5028a63de7952a5e85c388af4254365d990c3514d846dd35806f87a2a36a6dc",
+    "run_with_timeout.py": "9a87f000d1e20880f68b2304fad53d67e41cc2e5c766d40f0633c0540b137145"
+  },
+  "candidate_failed_runs_declared": 0,
+  "candidate_log_stdout_matches_output": true,
+  "candidate_manifest_pins_verified": true,
+  "candidate_output_exact_fields_verified": [
+    "N",
+    "bound",
+    "candidate_residues_attempted",
+    "dependency_provenance_kind_counts",
+    "dependency_support",
+    "direct_gcd_screens",
+    "duplicate_residues",
+    "forbidden_operations_used",
+    "frozen_pair_count",
+    "frozen_pairs",
+    "frozen_relation_count",
+    "gcd_root_minus_one_N",
+    "gcd_root_plus_one_N",
+    "initial_basis_blocks",
+    "initial_basis_stats",
+    "initial_endpoint_count",
+    "n",
+    "proper_direct_gcds",
+    "root_mod_N",
+    "selected_exact_product_bit_length",
+    "selected_exact_product_is_square",
+    "source_stop_relation_count",
+    "status",
+    "trial_screen_null"
+  ],
+  "certificate": {
+    "dependency_support": 363,
+    "gcd_product": 3241632473,
+    "gcd_root_minus_one_N": 79043,
+    "gcd_root_plus_one_N": 41011,
+    "index_stream_sha256": "3225efb124f40d833e84e4e09e5beb60fbbcde9ea21d116856558f7d484e9555",
+    "indices_strictly_increasing": true,
+    "maximum_index": 15382,
+    "minimum_index": 92,
+    "positive_exact_root_bit_length": 10810,
+    "positive_exact_root_unsigned_big_endian_sha256": "71329b88fd9d2e6abac0b32a6886480450853c884097ef5e5d8edabd637fa0c7",
+    "provenance_kind_counts": {
+      "frozen_seed_basis_pair": 327,
+      "nonadaptive_seed_pair": 36
+    },
+    "root_mod_N": 1058780986,
+    "root_squared_mod_N": 1,
+    "selected_exact_product_bit_length": 21620,
+    "selected_exact_product_is_square": true,
+    "selected_exact_product_unsigned_big_endian_sha256": "89473e8304aa37aa3a9e06152c3dd0ffe2b59b637f8395c8c1e88ea0ebb8a3f1",
+    "selected_nonadaptive_pairs": {
+      "2,4": 36
+    },
+    "selected_record_stream_sha256": "320b9f6859fb2279c9f1f80adaa1270f1f7a9b783214668abf4a4e559140043b"
+  },
+  "certificate_claim_usage": {
+    "generation_inputs": [
+      "N",
+      "n",
+      "bound",
+      "source_stop_relation_count"
+    ],
+    "post_computation_comparisons_only": [
+      "expected_root_mod_N",
+      "expected_gcd_root_minus_one_N",
+      "expected_gcd_root_plus_one_N",
+      "provenance_kind_counts",
+      "first_successful_appended_pair"
+    ],
+    "selection_advice": "dependency_relation_indices_zero_based"
+  },
+  "elapsed_seconds": 0.30216533300699666,
+  "forbidden_experiments_read": [],
+  "general_factorization_or_primality_operations_used": [],
+  "n": 32,
+  "pinned_public_basis_source": {
+    "path": "experiments/F98_multiseed_presentation_closure_kill/public_factorization_free_replay.py",
+    "sha256": "5fded40920ca52827662ba536f14a49ec9e302b934f6d0967e66be2b18c9ba4b"
+  },
+  "public_source": {
+    "appended_pair_stats": [
+      {
+        "attempts": 2050,
+        "new_relations": 0,
+        "pair": [
+          2,
+          3
+        ],
+        "reached_stop": false
+      },
+      {
+        "attempts": 1382,
+        "new_relations": 1032,
+        "pair": [
+          2,
+          4
+        ],
+        "reached_stop": true
+      }
+    ],
+    "attempt_stream_sha256": "849c2752e4c9c7cf4fec08af6124f01d6d54cf9717c550c169b1270dbcf87043",
+    "bound": 1024,
+    "candidate_residues_attempted": 67013,
+    "direct_gcd_screens": 30766,
+    "direct_screen_distribution": {
+      "1": 30765,
+      "3241632473": 1
+    },
+    "direct_screen_stream_sha256": "92dd696491442adfb8bacb1ed3a7586106fe00d28a6212c1aab0d49c676d7822",
+    "duplicate_residues": 51630,
+    "frozen_pairs": [
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        11
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        13,
+        2992276129
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        5,
+        17
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        2,
+        11
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        31
+      ],
+      [
+        2,
+        5
+      ]
+    ],
+    "frozen_relation_count": 14351,
+    "initial_basis": [
+      {
+        "signature": [
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            11,
+            2
+          ],
+          [
+            12,
+            3
+          ],
+          [
+            13,
+            1
+          ],
+          [
+            15,
+            1
+          ],
+          [
+            16,
+            1
+          ],
+          [
+            17,
+            1
+          ],
+          [
+            19,
+            1
+          ],
+          [
+            20,
+            2
+          ],
+          [
+            21,
+            2
+          ],
+          [
+            24,
+            1
+          ],
+          [
+            25,
+            1
+          ],
+          [
+            27,
+            1
+          ],
+          [
+            28,
+            4
+          ],
+          [
+            32,
+            1
+          ],
+          [
+            35,
+            4
+          ],
+          [
+            36,
+            2
+          ],
+          [
+            40,
+            1
+          ],
+          [
+            43,
+            1
+          ],
+          [
+            44,
+            3
+          ],
+          [
+            45,
+            1
+          ],
+          [
+            47,
+            1
+          ],
+          [
+            48,
+            1
+          ],
+          [
+            51,
+            1
+          ],
+          [
+            52,
+            2
+          ],
+          [
+            55,
+            2
+          ],
+          [
+            56,
+            1
+          ],
+          [
+            59,
+            2
+          ],
+          [
+            60,
+            5
+          ],
+          [
+            61,
+            2
+          ]
+        ],
+        "value": 2
+      },
+      {
+        "signature": [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            13,
+            1
+          ],
+          [
+            14,
+            2
+          ],
+          [
+            15,
+            2
+          ],
+          [
+            20,
+            1
+          ],
+          [
+            26,
+            1
+          ],
+          [
+            29,
+            1
+          ],
+          [
+            32,
+            2
+          ],
+          [
+            33,
+            2
+          ],
+          [
+            35,
+            1
+          ],
+          [
+            38,
+            1
+          ],
+          [
+            39,
+            1
+          ],
+          [
+            43,
+            1
+          ],
+          [
+            44,
+            1
+          ],
+          [
+            47,
+            1
+          ],
+          [
+            49,
+            1
+          ],
+          [
+            50,
+            3
+          ],
+          [
+            51,
+            1
+          ],
+          [
+            55,
+            2
+          ],
+          [
+            56,
+            1
+          ]
+        ],
+        "value": 3
+      },
+      {
+        "signature": [
+          [
+            5,
+            1
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            11,
+            1
+          ],
+          [
+            16,
+            1
+          ],
+          [
+            25,
+            1
+          ],
+          [
+            26,
+            1
+          ],
+          [
+            27,
+            1
+          ],
+          [
+            31,
+            1
+          ],
+          [
+            36,
+            1
+          ],
+          [
+            43,
+            2
+          ],
+          [
+            46,
+            2
+          ],
+          [
+            53,
+            1
+          ],
+          [
+            56,
+            1
+          ],
+          [
+            57,
+            1
+          ],
+          [
+            61,
+            1
+          ]
+        ],
+        "value": 5
+      },
+      {
+        "signature": [
+          [
+            5,
+            1
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            10,
+            1
+          ],
+          [
+            17,
+            1
+          ],
+          [
+            24,
+            1
+          ],
+          [
+            37,
+            1
+          ],
+          [
+            38,
+            1
+          ],
+          [
+            52,
+            1
+          ]
+        ],
+        "value": 7
+      },
+      {
+        "signature": [
+          [
+            18,
+            1
+          ],
+          [
+            40,
+            1
+          ]
+        ],
+        "value": 11
+      },
+      {
+        "signature": [
+          [
+            22,
+            1
+          ],
+          [
+            48,
+            1
+          ]
+        ],
+        "value": 13
+      },
+      {
+        "signature": [
+          [
+            30,
+            1
+          ],
+          [
+            49,
+            2
+          ]
+        ],
+        "value": 17
+      },
+      {
+        "signature": [
+          [
+            13,
+            1
+          ],
+          [
+            21,
+            1
+          ],
+          [
+            29,
+            1
+          ],
+          [
+            34,
+            1
+          ],
+          [
+            45,
+            1
+          ]
+        ],
+        "value": 19
+      },
+      {
+        "signature": [
+          [
+            27,
+            1
+          ],
+          [
+            42,
+            1
+          ],
+          [
+            47,
+            1
+          ],
+          [
+            57,
+            1
+          ]
+        ],
+        "value": 23
+      },
+      {
+        "signature": [
+          [
+            54,
+            1
+          ]
+        ],
+        "value": 29
+      },
+      {
+        "signature": [
+          [
+            58,
+            1
+          ]
+        ],
+        "value": 31
+      },
+      {
+        "signature": [
+          [
+            49,
+            1
+          ]
+        ],
+        "value": 3595103
+      },
+      {
+        "signature": [
+          [
+            27,
+            1
+          ],
+          [
+            43,
+            1
+          ],
+          [
+            47,
+            1
+          ],
+          [
+            57,
+            1
+          ]
+        ],
+        "value": 12214847
+      },
+      {
+        "signature": [
+          [
+            1,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            9,
+            1
+          ],
+          [
+            15,
+            1
+          ],
+          [
+            33,
+            1
+          ],
+          [
+            51,
+            1
+          ]
+        ],
+        "value": 20010077
+      },
+      {
+        "signature": [
+          [
+            13,
+            1
+          ],
+          [
+            21,
+            1
+          ],
+          [
+            29,
+            1
+          ],
+          [
+            35,
+            1
+          ],
+          [
+            45,
+            1
+          ]
+        ],
+        "value": 24880951
+      },
+      {
+        "signature": [
+          [
+            55,
+            1
+          ]
+        ],
+        "value": 58995227
+      },
+      {
+        "signature": [
+          [
+            5,
+            1
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            11,
+            1
+          ],
+          [
+            17,
+            1
+          ],
+          [
+            25,
+            1
+          ],
+          [
+            37,
+            1
+          ],
+          [
+            53,
+            1
+          ]
+        ],
+        "value": 69463553
+      },
+      {
+        "signature": [
+          [
+            61,
+            1
+          ]
+        ],
+        "value": 116496167
+      },
+      {
+        "signature": [
+          [
+            59,
+            1
+          ]
+        ],
+        "value": 287564171
+      },
+      {
+        "signature": [
+          [
+            31,
+            1
+          ]
+        ],
+        "value": 305094821
+      },
+      {
+        "signature": [
+          [
+            39,
+            1
+          ]
+        ],
+        "value": 514544837
+      },
+      {
+        "signature": [
+          [
+            19,
+            1
+          ],
+          [
+            41,
+            1
+          ]
+        ],
+        "value": 736734653
+      },
+      {
+        "signature": [
+          [
+            23,
+            1
+          ]
+        ],
+        "value": 2992276129
+      }
+    ],
+    "initial_basis_sha256": "b4eb7c477c8a89405da6a93fc06e685091cb61d99125bb1bd3523061469e2c42",
+    "initial_basis_stats": {
+      "gcd_calls": 6234,
+      "identical_merges": 114,
+      "overlap_splits": 72,
+      "perfect_power_splits": 19
+    },
+    "initial_endpoint_count": 62,
+    "n": 32,
+    "nonunit_direct_screens": [
+      {
+        "c": 1,
+        "difference": 0,
+        "gcd": 3241632473,
+        "provenance": {
+          "exponent": 1,
+          "kind": "frozen_seed_basis_pair",
+          "orientation": "u_power_times_v",
+          "pair_index_zero_based": 11,
+          "u": 13,
+          "v": 2992276129
+        },
+        "record_index_zero_based": 6166,
+        "sign": "minus",
+        "w": 1
+      }
+    ],
+    "proper_direct_gcds": 0,
+    "retained_record_stream_sha256": "66c23e21efe348bc5f1d8ebda3e783f0ce0cc407cab180096f50bfacfc1477be",
+    "source_stop_relation_count": 15383,
+    "trial_screen_count": 1023,
+    "trial_screen_distribution": {
+      "1": 1023
+    },
+    "trial_screen_sha256": "efebde678c490d0d9ec9d6a9fc09f873452d12d94cb3a416290a7e63fef896ba"
+  },
+  "regeneration_input_policy": "N and CERTIFICATE.json only; candidate outputs are comparison claims",
+  "result_claims_match_regeneration": true,
+  "role": "independent hostile replay of the F111 public index certificate",
+  "source_semantic_boundary": {
+    "certificate_contains_expected_terminal_gcd_values": true,
+    "endpoint_decomposition_by_gcd_and_exact_roots": true,
+    "expected_terminal_gcd_values_used_only_after_independent_gcd_computation": true,
+    "no_general_integer_factorization_call": true,
+    "no_hidden_factor_file_read": true,
+    "no_primality_test_call": true
+  },
+  "static_source_audit": {
+    "candidate_replay": {
+      "dynamic_import_sites": [
+        "exec_module",
+        "spec_from_file_location"
+      ],
+      "dynamic_import_targets": [
+        "PUBLIC_BASIS_SOURCE"
+      ],
+      "file_read_sites": [
+        {
+          "method": "read_text",
+          "receiver": "CERTIFICATE"
+        },
+        {
+          "method": "read_bytes",
+          "receiver": "path"
+        }
+      ],
+      "forbidden_factor_or_primality_calls": [],
+      "forbidden_imports": [],
+      "imports": [
+        "__future__",
+        "collections",
+        "hashlib",
+        "importlib",
+        "json",
+        "math",
+        "pathlib",
+        "time"
+      ],
+      "public_module_calls": [
+        "gcd_free_basis",
+        "relation_columns"
+      ],
+      "selector_calls": [],
+      "sha256": "c5028a63de7952a5e85c388af4254365d990c3514d846dd35806f87a2a36a6dc",
+      "sha256_file_arguments": [
+        "CERTIFICATE",
+        "PUBLIC_BASIS_SOURCE",
+        "PUBLIC_BASIS_SOURCE"
+      ],
+      "single_letter_hidden_factor_names": []
+    },
+    "pinned_public_basis": {
+      "dynamic_import_sites": [],
+      "dynamic_import_targets": [],
+      "file_read_sites": [],
+      "forbidden_factor_or_primality_calls": [],
+      "forbidden_imports": [],
+      "imports": [
+        "__future__",
+        "argparse",
+        "json",
+        "math",
+        "pathlib",
+        "time"
+      ],
+      "public_module_calls": [],
+      "selector_calls": [
+        "binary_kernel_basis",
+        "decode_relations",
+        "parity_coprime_basis"
+      ],
+      "sha256": "5fded40920ca52827662ba536f14a49ec9e302b934f6d0967e66be2b18c9ba4b",
+      "sha256_file_arguments": [],
+      "single_letter_hidden_factor_names": []
+    }
+  },
+  "status": "PASS"
+}

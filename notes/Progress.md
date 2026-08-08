@@ -4,7 +4,28 @@ This is working state for nontrivial intermediate statements and the current syn
 
 ## Current synthesis
 
-The source material has been read in full. Twenty-eight approach families have been opened, primarily from materially different mechanisms in `notes/Inspirations.md` with additional factor-trace, noncommutative, hidden-modulus metric, non-gcd tensor-contraction, joint-amortization, positive-sampling, and finite-field or integer-quotient dissipative routes; promoted narrow results and exact open gaps are tracked below and in the registry. The closest current structural frontier is canonical feedback and representation access. Bare \(N\) supplies a constant-probability generating list for the full unit group, or an immediate factor, so abstract subgroup generation is not the missing source. Feedback can still expose a named canonical integer, a gcd-free block, or a known relation whose useful word in the original generators is not public. For every distinct odd semiprime, two further public samples generate a guaranteed factor-bearing coprime-order rectangle with probability at least \(6/\pi^2\), but the hidden axes can have exponentially small uniform density. P98 shows that repeated \(N-1\) powers erase every feedback expansion outside one stable core. Thus a successful feedback algorithm needs an inverse-polynomial law for creating a usable named separator or relation before stabilization, or a non-power axis decoder. Other live frontiers are a factor-free sampler for the quadratic-energy/zero-product law, a genuinely joint decoder using typical nonzero relation data, a fine manufactured metric hint, a useful class-group/isogeny orientation, or an exactly contractible positive factor-witness network beyond the proved local wiring boundaries. `notes/Zhihu.md` supplies background and motivation only.
+The source material has been read in full. Twenty-eight approach families have
+been opened. The closest current frontier is canonical integer presentation
+and retained relation state. Bare N already gives generators of the abstract
+unit group, so abstract subgroup growth is not the missing operation. P108
+proves a sharper event: two layers that are useless alone can create a useful
+normalized-root direction only through their cross quotient. P109 removes the
+hidden stop and support choices from that fixed witness. P110 does the same
+for one fresh 54-bit all-pairs witness. F112 shows that the narrow fixed source
+fails on fourteen 46/50-bit cases. F113–F116 show that a broader nonadaptive
+all-pairs source rescues those cases and six fresh 54-bit cases. F118 then
+rescues all four preregistered 58-bit frozen-global cases. These are finite
+controls, and most are factor-assisted. They do not show that recursive
+feedback is necessary. P111 proves that a cross-pair submatrix can still have
+many private prime rows; it does not extend this privacy to the complete
+source. The next theorem target is now exact: force a rank defect and a
+non-global root for the complete self-generated carry set, or construct a
+stable full-source private-row family. Recursive block feedback remains gated
+on a genuine complete-source null. Relation count, raw nullity, and abstract
+subgroup size are not progress. Other live frontiers are
+a factor-free sampler for the quadratic-energy law, a useful metric hint, a
+class-group or isogeny orientation, and an exactly contractible positive
+factor-witness network. `notes/Zhihu.md` supplies background only.
 
 ## Working claims
 
@@ -2651,3 +2672,281 @@ This kills exponent-bound inflation as the repair. The input has the small
 factor \(11<n^2\), so it does not kill a trial-division hybrid. The next
 materially new test must use more than one seed or square class, or must first
 change the integer block presentation.
+
+### C101 — a public feedback batch can factor only after a 166-value joint decode
+
+**Status:** verifier-backed and promoted as P103 after hostile audit and
+proof-blind reconstruction. No cross-family audit, human audit, or literature
+audit ran.
+
+At the stable trial-hard input
+
+\[
+N=202{,}537{,}109=10{,}267\cdot19{,}727,
+\]
+
+one public one-round rule starts from seeds 2 through 28 and processes 27
+canonical two-block trajectories. It receives only \(N\). All 12,549
+individual canonical-inverse sign screens fail.
+
+After exact-value deduplication and factor-free gcd refinement, the retained
+9,414 relation values have binary rank 8,926 and kernel dimension 488. A
+public kernel-basis vector with 166 distinct values gives a mixed square root
+and the two factors. An independent online replay first finds a useful
+166-value dependency at occurrence 5,616. No useful support-one, -two, or
+-three dependency occurs in that prefix.
+
+**Algorithmic consequence.** This is the first stable witness here where the
+successful operation is genuinely amortized. No new scalar works alone. The
+algorithm keeps many failed integer presentations and jointly closes their
+square classes. The missing result is an all-input law that forces such a
+non-global circuit in polynomial work.
+
+### C102 — canonical power trajectories have duplicate-root and private-row traps
+
+**Status:** verifier-backed and promoted as P104/X69 after a corrected hostile
+re-audit and proof-blind reconstruction. No cross-family audit, human audit,
+or literature audit ran.
+
+If \(N=(a^m-1)/k\), the canonical pairs
+\(a^r,a^{m-r}\) can all have the identical exact value \(a^m=1+kN\).
+For odd \(m\), duplicate dependencies then have root \(+1\). The stable
+input \((3^{17}-1)/2\) gives an exact trial-hard example with a complete
+\(n^2\)-range seed trajectory and no direct factor or block split.
+
+An infinite CRT family shows the opposite trap. It gives
+\(\Theta(\sqrt{\log N})\) consecutive canonical relations whose columns all
+have private odd-prime rows. They are independent.
+
+**Algorithmic consequence.** Do not count records or raw nullity. Count
+distinct exact values, refined rank closure, and non-global root image. The
+live question is whether the actual multi-seed feedback source closes private
+rows with an inverse-polynomial all-input law.
+
+### C103 — the 166-value F98 certificate is one indivisible cross-trajectory circuit
+
+**Status:** verifier-backed and promoted as P105 after two failed wording
+audits, a final hostile re-audit, and proof-blind reconstruction. No
+cross-family audit, human audit, or literature audit ran.
+
+The 166 selected F98 relation values have a 230-by-166 prime-parity matrix of
+rank 165. All 166 columns give the unique nonzero dependency. Removing any
+one value destroys it. The shared-prime graph is connected, even without
+the prime-2 row. The values come from one seed relation and 165 feedback
+relations across five active-pair families and eight oriented trajectories.
+
+**Algorithmic consequence.** The successful event is not one lucky identity.
+It is a joint circuit made from many individually useless presentations. The
+next theorem must force a polynomial-size parity core and then prove that its
+root is not globally \(\pm1\). The fixed input does not provide that theorem.
+
+### C104 — the factor-free decoder exposes the exact hidden-prime core
+
+**Status:** verifier-backed and promoted as P106 after hostile audit, a
+wording correction, fresh re-audit, and proof-blind reconstruction. No
+cross-family audit, human audit, or literature audit ran.
+
+For any frozen finite endpoint batch, P66 gcd refinement preserves every
+hidden prime-parity row. At pairwise-coprime termination, the public masks of
+the nonsquare blocks are exactly the distinct nonzero hidden prime rows.
+Thus public and factor-assisted matrices have the same rank, kernel,
+degree-one core columns, and column components.
+
+Degree-one peeling preserves the complete kernel and has one
+order-independent terminal core. It is not safe as permanent online
+deletion, because a later relation can reuse a current private row.
+
+On the F98 batch, public peeling compresses 9,414 columns to 1,781 without
+losing any of the 488 dependencies. The 166-value factor certificate remains
+inside the core.
+
+**Algorithmic consequence.** The decoder side is complete and factor-free.
+The only decisive gap is now the source: force a rank-deficient core and a
+non-global root on every input in polynomial work.
+
+### C105 — raw carry coverage is public, but carry frequency is not progress
+
+**Status:** verifier-backed and promoted as P107 after hostile audit, corrected
+re-audit, proof-blind reconstruction, and an amended-boundary proof-blind
+re-audit. No cross-family audit, human audit, or literature audit ran.
+
+For any frozen endpoint batch and any explicit exposure product \(E\), gcd
+saturation of the P106 terminal blocks recovers exactly the distinct hidden
+prime-parity masks whose primes divide (E). No endpoint factorization is
+needed.
+
+On the F98 circuit, raw carry exposures from the full generated batch already
+span rank 165, equal to the complete circuit. Carry edges internal to the 166
+selected columns have rank only 54. Thus the useful coverage is a batch
+reservoir effect, not a local edge explanation.
+
+The F99 private-row family has a zero carry at every step but exposes only the
+prime 2. Its private rows remain full rank. Carry frequency alone therefore
+forces neither a dependency nor a non-global root.
+
+**Algorithmic consequence.** Carry coverage can now be measured publicly.
+The source theorem must force full coverage, rank defect, and mixed root signs.
+Counting zero carries does none of these.
+
+### C106 — two useless layers can create a useful root only together
+
+**Status:** verifier-backed and promoted as P108 after a hostile factor-free
+audit and an independent proof-blind reconstruction. No cross-family audit,
+human audit, or literature audit ran.
+
+At \(N=3{,}241{,}632{,}473\), the frozen relation layer has seven
+dependencies and all of their roots are global $+1$. The appended layer is
+independent when decoded alone. After global exact-value deduplication, their
+union gains 11 dependency directions that cannot come from either layer by
+itself. The normalized root image of this cross-layer quotient has rank one.
+
+A factor-free hostile verifier found a useful 363-value dependency. A
+proof-blind decoder independently found a different 367-value dependency.
+Both give the same non-global root and the factors 79,043 and 41,011. Every
+direct endpoint screen before the joint decode is nonproper.
+
+**Algorithmic consequence.** This is a genuine stateful gain. The appended
+records do not add a useful scalar and do not enlarge the abstract unit group.
+They change the square-root directions that the retained relation state can
+decode. The missing theorem is still source-side: force a nonzero normalized
+root image on every input in polynomial work.
+
+### C107 — a complete fixed source removes the hidden stop and support choices
+
+**Status:** verifier-backed and promoted as P109 after a hostile monotonicity
+audit and an isolated proof-blind full-source reconstruction. No cross-family
+audit, human audit, or literature audit ran.
+
+First-occurrence exact-value coordinates are append-only. An old dependency
+extends by zeros and keeps the same exact root. The normalized root class is a
+linear map on the binary kernel. Therefore any complete kernel basis must show
+a useful class when one exists.
+
+For $N=3{,}241{,}632{,}473$, an independent decoder ran every position in
+the fixed source. It used no success stop and no advised dependency. It kept
+12,962 distinct nonunit values, found rank 12,923 and nullity 39, and tested
+all 39 basis roots. Eleven roots factored $N$ into 41,011 and 79,043.
+
+**Algorithmic consequence.** The earlier F111 success was not caused by a
+hidden stopping rule or a supplied support. The remaining postselection is
+the source design itself: the fixed pair $(2,4)$ was chosen after earlier
+experiments. We still need an input-independent reason that a polynomial
+source creates a nonzero normalized root image.
+
+### C108 — live candidate: feedback changes the future source grammar
+
+**Status:** open algorithm candidate. It is not a proved progress law. The two
+GPT Pro comments supplied useful prompts, but this version keeps only claims
+that survive P100 and the new audits.
+
+The proposed 2-saturation decoder is not the missing component. For square
+roots, P66 already computes the equivalent complete parity kernel without
+factoring endpoints. The open problem is the adaptive source that feeds it.
+The proposed CRT beam can order probes, but its score pruning has no lossless
+dominance theorem. It remains a heuristic search tool, not an algorithm proof.
+
+Maintain three forms of public state:
+
+1. pairwise-coprime integer blocks that can be used as named word generators;
+2. every distinct retained exact relation, with its source record;
+3. the complete factor-free square-class kernel and normalized-root image.
+
+For a fixed polynomial menu, form short words in the current blocks. Reduce a
+word modulo $N$, take its canonical inverse, and run the direct gcd screens.
+Use gcd refinement to split old blocks. A split changes the generators that
+future words can use, even when the selected residue was already in the old
+abstract modular subgroup. Retain every new exact relation. Do not delete it
+only because it fails to close now; P100 proves that a later column can close
+against it. After each split or new column, update the complete decoder.
+
+A split alone cannot improve the decode of the old frozen columns. P106
+already computes their complete kernel. The split matters only when it changes
+which future relations the algorithm can generate. This is the exact boundary
+between a cosmetic refinement and real feedback.
+
+This is an algorithm-level change, not a new scalar identity. A block split
+changes the next source menu. A retained relation changes the later
+cross-layer kernel. The 4033 witness proves the first effect on a fixed state.
+P108 proves the second effect on a fixed state.
+
+The candidate has polynomial explicit cost when word support, exponent range,
+round count, block count, and retained relation count have fixed polynomial
+caps. The missing theorem is not the cost bound. It is the progress law:
+before a factor is found, some polynomial menu must cause a useful block split
+or a new nonzero normalized-root direction with inverse-polynomial frequency.
+No such law is known. F118 first seeks a larger input where the complete
+nonadaptive all-pairs source is null. Only such a null can show whether the
+recursive block update adds a new capability rather than rediscovering an
+ordinary relation-collection success.
+
+### C109 — the fresh 54-bit success does not need a hidden stop or support
+
+**Status:** verifier-backed and promoted as P110 after a hostile exact-value
+audit and an isolated proof-blind reconstruction. No cross-family audit,
+human audit, or literature audit ran.
+
+For $N=12{,}800{,}004{,}879{,}996{,}637$, the fixed complete source has
+8,348,507 positions and receives only $N$. An isolated replay regenerated an
+initial prefix of 1,336,218 positions. It retained 771,082 first residues and
+projected them to 622,151 distinct nonunit exact values. A 6,486-value exact
+dependency gives a non-global root and the factors 80,000,059 and 159,999,943.
+
+First-occurrence projection and append monotonicity prove that the dependency
+persists to the end of the fixed source. A complete factor-free decoder must
+find some useful basis vector. Thus the no-stop, no-support algorithm is
+certified for this one input, although the full source and decoder were not
+executed.
+
+**Algorithmic consequence.** The 54-bit certificate is not an artifact of an
+advised stopping position or supplied support. The unresolved issue is still
+uniform source progress. Six registered 54-bit cases are positive finite
+controls, but no theorem says that the same fixed source works on every
+non-perfect-power input.
+
+### C110 — four harder 58-bit frozen-global cases close only after cross-pair accumulation
+
+**Status:** preregistered factor-assisted finite evidence. The run is not a
+factor-free certificate and is not promoted to `PROVED.md`.
+
+F118 selected the first four 58-bit distinct semiprimes in its frozen corpus
+whose old source had positive kernel nullity but zero normalized-root image.
+The four frozen kernels already had 9,031 to 20,903 dependency directions, all
+with global roots. The fixed all-pairs continuation then found the first
+non-global basis root after 2.10 to 2.14 million source attempts, at pairs
+$(6,44)$, $(6,47)$, $(6,49)$, and $(6,50)$. No direct residue or endpoint gcd
+gave a factor.
+
+At the successful positions, the retained relation counts were 1.36 to 1.41
+million and the kernel nullities were 304,372 to 316,596. In each case, every
+earlier fundamental root was global and the next root was non-global. This
+shows again that large nullity alone is not useful progress.
+
+**Algorithmic consequence.** The registered 58-bit corpus produced no
+complete-source null, so its feedback gate did not open. Running feedback on
+these positive cases would not test whether feedback adds an algorithmic
+capability. The finite result supports cross-pair accumulation, but it gives
+no all-input law and no public dependency support.
+
+### C111 — cross-pair words can retain a large independent private-row block
+
+**Status:** verifier-backed and promoted as P111/X71 after one scope
+correction, a clean hostile re-audit, and a proof-blind reconstruction by a
+different construction. No cross-family audit, human audit, or literature
+audit ran.
+
+Prime incidence in canonical-inverse values is exactly carry congruence. Two
+values with carries $k\ne\ell$ can share a prime only if that prime divides
+$k-\ell$. This gives exact row-degree and private-row tests.
+
+An infinite trial-hard distinct-semiprime family contains
+$\Theta(n/\log n)$ genuine exponent-two cross-pair exact values whose columns
+each have a different private valuation-one prime. The selected columns are
+independent. Exact-value deduplication preserves them. Null sign screens are
+proved for each named residue, not for a different earlier residue with the
+same exact value.
+
+**Algorithmic consequence.** Cross-pair provenance and polynomial relation
+count do not force closure. This does not refute the complete fixed source:
+unselected carries can reuse the protected rows. The exact remaining gates
+are stable full-source privacy on the negative side, or rank closure followed
+by a non-global root on the positive side.

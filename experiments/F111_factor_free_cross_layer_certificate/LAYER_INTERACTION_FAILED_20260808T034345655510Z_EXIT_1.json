@@ -1,0 +1,7 @@
+{
+  "error": "verifier reads the selected F111 support",
+  "error_type": "VerificationFailure",
+  "status": "FAIL",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/zhou/autoresearch/IntegerFactoring/experiments/F111_factor_free_cross_layer_certificate/LAYER_INTERACTION_independent_verifier.py\", line 773, in main\n    output = main_audit(args.certificate.resolve(), args.public_basis_source.resolve())\n  File \"/Users/zhou/autoresearch/IntegerFactoring/experiments/F111_factor_free_cross_layer_certificate/LAYER_INTERACTION_independent_verifier.py\", line 679, in main_audit\n    require(\n    ~~~~~~~^\n        \"dependency_relation_indices_zero_based\" not in verifier_source,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        \"verifier reads the selected F111 support\",\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/Users/zhou/autoresearch/IntegerFactoring/experiments/F111_factor_free_cross_layer_certificate/LAYER_INTERACTION_independent_verifier.py\", line 27, in require\n    raise VerificationFailure(message)\nVerificationFailure: verifier reads the selected F111 support\n",
+  "verdict": "FAIL"
+}

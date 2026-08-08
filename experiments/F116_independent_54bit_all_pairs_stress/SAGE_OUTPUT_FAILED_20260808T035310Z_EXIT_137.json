@@ -1,0 +1,515 @@
+{
+  "cases": [
+    {
+      "N": 12800004879996637,
+      "candidate_residues_attempted": 1336218,
+      "dependencies_at_stop": 156071,
+      "dependency_provenance": {
+        "distinct_nonseed_trajectory_keys": 149,
+        "gcd_root_minus_one_N": 159999943,
+        "gcd_root_plus_one_N": 80000059,
+        "kind_counts": {
+          "frozen_seed_basis_pair": 1844,
+          "nonadaptive_seed_pair": 4642
+        },
+        "root_mod_N": 5266287723884331
+      },
+      "direct_witness": null,
+      "duplicate_residues": 565136,
+      "elapsed_seconds": 59.013919167002314,
+      "factor": 159999943,
+      "factor_dependency_size": 6486,
+      "factor_method": "retained_parity_dependency",
+      "first_layer": {
+        "all_dependencies_global": true,
+        "dependencies": 12290,
+        "global_dependencies": 12290,
+        "pair_count": 53,
+        "pairs": [
+          [
+            2,
+            17
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            17
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            17,
+            19
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            17,
+            19
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            29
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            17
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            2,
+            17
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            37
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            41
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            43
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            47,
+            10893621174465223
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "relations": 75837
+      },
+      "first_round_kernel_basis_size": 68,
+      "global_dependencies_at_stop": 156070,
+      "n": 54,
+      "ordinal": 3,
+      "p": 80000059,
+      "q": 159999943,
+      "relations_at_stop": 771082,
+      "seed_pair_menu_attempted": 177,
+      "seed_pair_menu_total": 1378,
+      "status": "factor",
+      "successful_pair": [
+        5,
+        29
+      ],
+      "support_audit": {
+        "crosses_frozen_and_appended_layers": true,
+        "distinct_actual_pair_menu_keys": 149,
+        "distinct_appended_pairs": 137,
+        "distinct_indexed_pair_menu_keys": 149,
+        "distinct_orientation_keys": 221,
+        "kind_counts": {
+          "frozen_seed_basis_pair": 1844,
+          "nonadaptive_seed_pair": 4642
+        },
+        "successful_pair_support_relations": 1,
+        "support": 6486,
+        "support_relations_outside_successful_pair": 6485
+      }
+    }
+  ],
+  "completed_cases": 1,
+  "elapsed_seconds": 305.0884084999998,
+  "scan_trace": [
+    {
+      "N": 12800003439999931,
+      "bound": 2916,
+      "n": 54,
+      "ordinal": 1,
+      "p": 80000023,
+      "q": 159999997,
+      "sage_primes": true,
+      "selected": false,
+      "stable": false,
+      "trial_hard": true
+    },
+    {
+      "N": 12800000239998623,
+      "bound": 2916,
+      "n": 54,
+      "ordinal": 2,
+      "p": 80000027,
+      "q": 159999949,
+      "sage_primes": true,
+      "selected": false,
+      "stable": false,
+      "trial_hard": true
+    },
+    {
+      "N": 12800004879996637,
+      "bound": 2916,
+      "first_round_status": "round_complete",
+      "global_minus": 0,
+      "global_plus": 68,
+      "kernel_basis_size": 68,
+      "n": 54,
+      "non_global_count": 0,
+      "ordinal": 3,
+      "p": 80000059,
+      "q": 159999943,
+      "sage_primes": true,
+      "selected": true,
+      "stable": true,
+      "trial_hard": true
+    },
+    {
+      "N": 12800006319995929,
+      "bound": 2916,
+      "first_round_status": "round_complete",
+      "global_minus": 0,
+      "global_plus": 117,
+      "kernel_basis_size": 117,
+      "n": 54,
+      "non_global_count": 0,
+      "ordinal": 4,
+      "p": 80000069,
+      "q": 159999941,
+      "sage_primes": true,
+      "selected": true,
+      "stable": true,
+      "trial_hard": true
+    },
+    {
+      "N": 12800007599994107,
+      "bound": 2916,
+      "n": 54,
+      "ordinal": 5,
+      "p": 80000083,
+      "q": 159999929,
+      "sage_primes": true,
+      "selected": false,
+      "stable": false,
+      "trial_hard": true
+    },
+    {
+      "N": 12800006479991909,
+      "bound": 2916,
+      "first_round_status": "round_complete",
+      "global_minus": 0,
+      "global_plus": 72,
+      "kernel_basis_size": 72,
+      "n": 54,
+      "non_global_count": 0,
+      "ordinal": 6,
+      "p": 80000087,
+      "q": 159999907,
+      "sage_primes": true,
+      "selected": true,
+      "stable": true,
+      "trial_hard": true
+    },
+    {
+      "N": 12800009679988789,
+      "bound": 2916,
+      "first_round_status": "round_complete",
+      "global_minus": 0,
+      "global_plus": 129,
+      "kernel_basis_size": 129,
+      "n": 54,
+      "non_global_count": 0,
+      "ordinal": 7,
+      "p": 80000111,
+      "q": 159999899,
+      "sage_primes": true,
+      "selected": true,
+      "stable": true,
+      "trial_hard": true
+    },
+    {
+      "N": 12800014799983163,
+      "bound": 2916,
+      "n": 54,
+      "ordinal": 8,
+      "p": 80000149,
+      "q": 159999887,
+      "sage_primes": true,
+      "selected": false,
+      "stable": false,
+      "trial_hard": true
+    },
+    {
+      "N": 12800014959981793,
+      "bound": 2916,
+      "first_round_status": "round_complete",
+      "global_minus": 0,
+      "global_plus": 106,
+      "kernel_basis_size": 106,
+      "n": 54,
+      "non_global_count": 0,
+      "ordinal": 9,
+      "p": 80000153,
+      "q": 159999881,
+      "sage_primes": true,
+      "selected": true,
+      "stable": true,
+      "trial_hard": true
+    },
+    {
+      "N": 12800021199974587,
+      "bound": 2916,
+      "n": 54,
+      "ordinal": 10,
+      "p": 80000197,
+      "q": 159999871,
+      "sage_primes": true,
+      "selected": false,
+      "stable": false,
+      "trial_hard": true
+    },
+    {
+      "N": 12800017039962011,
+      "bound": 2916,
+      "n": 54,
+      "ordinal": 11,
+      "p": 80000201,
+      "q": 159999811,
+      "sage_primes": true,
+      "selected": false,
+      "stable": false,
+      "trial_hard": true
+    },
+    {
+      "N": 12800017519955909,
+      "bound": 2916,
+      "n": 54,
+      "ordinal": 12,
+      "p": 80000213,
+      "q": 159999793,
+      "sage_primes": true,
+      "selected": false,
+      "stable": false,
+      "trial_hard": true
+    },
+    {
+      "N": 12800024559934753,
+      "bound": 2916,
+      "first_round_status": "round_complete",
+      "global_minus": 0,
+      "global_plus": 147,
+      "kernel_basis_size": 147,
+      "n": 54,
+      "non_global_count": 0,
+      "ordinal": 13,
+      "p": 80000273,
+      "q": 159999761,
+      "sage_primes": true,
+      "selected": true,
+      "stable": true,
+      "trial_hard": true
+    }
+  ],
+  "selected": [
+    {
+      "N": 12800004879996637,
+      "first_round_kernel_basis_size": 68,
+      "n": 54,
+      "ordinal": 3,
+      "p": 80000059,
+      "q": 159999943
+    },
+    {
+      "N": 12800006319995929,
+      "first_round_kernel_basis_size": 117,
+      "n": 54,
+      "ordinal": 4,
+      "p": 80000069,
+      "q": 159999941
+    },
+    {
+      "N": 12800006479991909,
+      "first_round_kernel_basis_size": 72,
+      "n": 54,
+      "ordinal": 6,
+      "p": 80000087,
+      "q": 159999907
+    },
+    {
+      "N": 12800009679988789,
+      "first_round_kernel_basis_size": 129,
+      "n": 54,
+      "ordinal": 7,
+      "p": 80000111,
+      "q": 159999899
+    },
+    {
+      "N": 12800014959981793,
+      "first_round_kernel_basis_size": 106,
+      "n": 54,
+      "ordinal": 9,
+      "p": 80000153,
+      "q": 159999881
+    },
+    {
+      "N": 12800024559934753,
+      "first_round_kernel_basis_size": 147,
+      "n": 54,
+      "ordinal": 13,
+      "p": 80000273,
+      "q": 159999761
+    }
+  ],
+  "status": "running_batches"
+}

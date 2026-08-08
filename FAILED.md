@@ -2925,3 +2925,121 @@ and
 `79de9711554f1d87f13afed25897b7dc253edc6c01318b0202854c04d998beb6`.
 No cross-family audit, human audit, or publication-level literature review
 has run.
+
+## X69 — raw feedback volume and raw nullity are not progress measures
+
+**Status:** promoted as the exact method boundary in P104.
+
+**Family:** F26/F99.
+
+**Classification:** failure of relation count, duplicate-column nullity, or
+trajectory consecutiveness as a sufficient progress certificate. This is
+not a failure of multi-seed retained-relation decoding.
+
+**What was tried.** Treat a long canonical power trajectory as progress when
+it adds many records, or when its binary relation matrix gains nullity.
+Alternatively, expect consecutive canonical residues to force a dependency.
+
+**Exact obstruction.** On the stable trial-hard input
+
+\[
+64{,}570{,}081=(3^{17}-1)/2,
+\]
+
+all 16 nontrivial residues in the seed-3 orbit give the same exact relation
+value. Every new duplicate dependency has root \(+1\), and no endpoint
+splits. Conversely, an infinite CRT family has
+\(\Theta(\sqrt{\log N})\) consecutive power relations with a private odd
+prime row in every column, so it has no dependency at all.
+
+**What would make a retry materially new.** Deduplicate exact relation
+values. Track rank after exact refinement and the image of the normalized
+root map. Prove that the actual multi-seed source reuses private rows often
+enough to create a non-global circuit. Merely increasing the number of
+records or citing consecutiveness is covered by this obstruction.
+
+The corrected candidate, hostile re-audit, proof-blind statement, and
+proof-blind reconstruction have SHA-256 hashes
+`d3a1af9e01f0209d8f06d53c2641bbad2056077bdca4d7966f9e6bdc98e592aa`,
+`5f219d88f2c4fcc40d5ce3ea4040da91b86d97535b7efeac92fb7f07df5c6ca8`,
+`53feb27185d06de2c0e8565bb1c324b02c13f64d1dfbab641ca9efa0923b1058`,
+and
+`52cc3f9bef3cf2e3abfeb49738f3dd69bd164328df6682e940fad6a54fde680c`.
+
+## X70 — a residual overlap label does not identify a metric source mechanism
+
+**Status:** promoted as a hostile-audit method boundary from F107. The exact
+finite row counts remain diagnostic only.
+
+**Family:** F26/F107.
+
+**Classification:** failure of negative provenance labels as causal or
+factor-correlation evidence. This is not a failure of cross-trajectory
+relation collection.
+
+**What was tried.** Call a shared relation prime “metric” when two selected
+trajectories do not inherit it from one declared public base and no
+selected-pair uniform-endpoint carry path explains it. Use the remaining row
+rank as evidence that canonical representatives manufacture a new metric
+effect.
+
+**Exact obstruction.** “Not base inherited” defines only a residual set. It
+does not define a metric, probability law, cause, or correlation with a
+factor of \(N\). The selected-pair carry test also omits valid paths that
+switch endpoint type. More decisively, raw adjacent carry exposures from the
+eight represented trajectories already span rank 165, equal to the complete
+fixed circuit. After all raw exposures are excluded, only 25 strict
+non-base rows of rank 25 remain. Rank intersections prevent an additive
+allocation of the circuit to named causes.
+
+**What would make a retry materially new.** Define a public statistic before
+examining the successful circuit. Audit it on the full generated batch, not
+only on selected columns. Supply a comparison law or an all-input theorem
+that connects the statistic to row reuse and a non-global root. Absence of a
+listed local explanation is not itself a new source mechanism.
+
+The independent verifier passed 7,698 checks while rejecting the candidate's
+interpretation. The authoritative audit and output SHA-256 hashes are
+`985edf65b3d3030eeba321b2b6e0c6a3e4f5fa8742a163ce0797170f1a088804`
+and
+`32c7383badfeddfe7d0642e4a1c576b5ee913249b470f008670263e25157392f`.
+
+## X71 — genuine cross-pair provenance and polynomially many columns do not force closure
+
+**Status:** promoted as the exact selected-submatrix boundary in P111.
+
+**Family:** F26/F119.
+
+**Classification:** evidence against cross-pair provenance, relation count,
+or a polynomial-size batch as a sufficient square-class closure law. This is
+not evidence that the complete all-pairs source fails.
+
+**What was tried.** Expect the two exponent-two orientations from many
+unordered small-base pairs to force prime-row reuse and hence a square
+dependency.
+
+**Exact obstruction.** P111 constructs infinitely many trial-hard distinct
+semiprimes with
+
+\[
+\Theta(n/\log n)
+\]
+
+distinct genuine exponent-two cross-pair exact values. Every selected column
+has its own valuation-one prime row, so the selected columns are linearly
+independent. The named endpoint sign screens are also null.
+
+**What would make a retry materially new.** Use interaction with the complete
+self-generated carry set, not cross-pair provenance alone. Prove either a
+stable full-source row-reuse and rank-closure law plus a non-global root, or a
+full-source private-row family. The P111 construction protects only its
+selected submatrix and does not control earlier direct factors.
+
+The corrected result, final re-audit report, and proof-blind reconstruction
+proof have SHA-256 hashes
+`552a54c8382341709305e53bd535efd9ef0ec0bc7957fa32be8ddc5c061f4575`,
+`a629dc043d915caaf9ac1240b018f5c72014849f89bf31969a57c992121cf6ae`,
+and
+`e8aa7a5f4c10bb24d99b766b1fe774912d939e9db16f565de035d92d4442db46`.
+No cross-family audit, human audit, or publication-level literature review
+has run.

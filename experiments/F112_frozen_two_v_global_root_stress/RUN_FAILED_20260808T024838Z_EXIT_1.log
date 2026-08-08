@@ -1,0 +1,19 @@
+command=["/opt/homebrew/opt/python@3.14/bin/python3.14", "/Users/zhou/autoresearch/IntegerFactoring/experiments/F112_frozen_two_v_global_root_stress/stress_frozen_two_v.py", "--workers", "4", "--checkpoint", "/Users/zhou/autoresearch/IntegerFactoring/experiments/F112_frozen_two_v_global_root_stress/OUTPUT_ATTEMPT.json"]
+timeout_seconds=1800
+returncode=1
+stdout:
+
+stderr:
+Traceback (most recent call last):
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F112_frozen_two_v_global_root_stress/stress_frozen_two_v.py", line 208, in <module>
+    main()
+    ~~~~^^
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F112_frozen_two_v_global_root_stress/stress_frozen_two_v.py", line 165, in main
+    with ProcessPoolExecutor(max_workers=args.workers) as executor:
+         ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/process.py", line 659, in __init__
+    _check_system_limits()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/process.py", line 594, in _check_system_limits
+    nsems_max = os.sysconf("SC_SEM_NSEMS_MAX")
+PermissionError: [Errno 1] Operation not permitted

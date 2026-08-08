@@ -1,0 +1,2377 @@
+{
+  "completed_rounds": 0,
+  "counterexample": null,
+  "elapsed_seconds": 0.052467957997578196,
+  "f98_source_sha256": "5fded40920ca52827662ba536f14a49ec9e302b934f6d0967e66be2b18c9ba4b",
+  "pairs_tested": 200,
+  "role": "factor-assisted bounded discovery with an N-only pinned F98 replay",
+  "scan_bounds": {
+    "enumeration": "p ascending; q from the descending opposite tail, then descending offsets",
+    "pair_cap": 200,
+    "pairs_per_p": 4,
+    "prime_max": 1200,
+    "prime_min": 300
+  },
+  "stable_pairs_tested": 57,
+  "status": "cap_complete",
+  "trace": [
+    {
+      "B": 361,
+      "N": 404801,
+      "n": 19,
+      "p": 367,
+      "pair_ordinal": 2,
+      "q": 1103,
+      "result": {
+        "B": 361,
+        "initial_decoder": {
+          "coprime_block_count": 15,
+          "duplicate_relation_value_count": 9,
+          "first_useful_certificate": {
+            "distinct_relation_values": 1,
+            "gcd_root_minus_one_N": 367,
+            "gcd_root_plus_one_N": 1103,
+            "root_mod_N": 1102,
+            "selected_columns_zero_based": [
+              1
+            ],
+            "selected_raw_indices_zero_based": [
+              2
+            ],
+            "support": 1,
+            "witness_records": [
+              {
+                "P": 1214404,
+                "c": 4,
+                "provenance": {
+                  "kind": "initial_seed",
+                  "seed": 4
+                },
+                "w": 303601
+              }
+            ]
+          },
+          "gcd_pair_tests": 443,
+          "gcd_refinements": 19,
+          "global_minus_basis_roots_before_factor": 0,
+          "global_plus_basis_roots_before_factor": 0,
+          "kernel_dimension": 1,
+          "nonsquare_row_count": 14,
+          "raw_relation_count": 18,
+          "square_block_count": 1,
+          "squareclass_rank": 8,
+          "status": "factor",
+          "unique_relation_count": 9,
+          "zero_relation_count": 0
+        },
+        "n": 19,
+        "status": "initial_decoder_factor"
+      },
+      "stable_certificate": {
+        "A": 183,
+        "B": 551,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 1,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 407689,
+      "n": 19,
+      "p": 373,
+      "pair_ordinal": 7,
+      "q": 1093,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 218579,
+          "factor": 373,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 11,
+            "kind": "feedback_trajectory",
+            "orientation": "u_times_v_power",
+            "round": 1,
+            "u": 2,
+            "v": 5
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 49237
+        },
+        "elapsed_seconds": 0.0006198749906616285,
+        "n": 19,
+        "retained_before_factor": 37,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 31,
+        "B": 91,
+        "g": 12,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 2,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 413489,
+      "n": 19,
+      "p": 379,
+      "pair_ordinal": 11,
+      "q": 1091,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 185469,
+          "factor": 1091,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 25,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 193106
+        },
+        "elapsed_seconds": 0.0006670000002486631,
+        "n": 19,
+        "retained_before_factor": 62,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 189,
+        "B": 545,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 3,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 417853,
+      "n": 19,
+      "p": 383,
+      "pair_ordinal": 14,
+      "q": 1091,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 248951,
+          "factor": 383,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 192,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 208927
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 159329
+        },
+        "elapsed_seconds": 0.000992667002719827,
+        "n": 19,
+        "retained_before_factor": 395,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 191,
+        "B": 545,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 4,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 416321,
+      "n": 19,
+      "p": 383,
+      "pair_ordinal": 15,
+      "q": 1087,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 384,
+          "factor": 383,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 7,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 345850
+        },
+        "elapsed_seconds": 0.0005223749903962016,
+        "n": 19,
+        "retained_before_factor": 26,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 191,
+        "B": 543,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 5,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 415841,
+      "n": 19,
+      "p": 389,
+      "pair_ordinal": 19,
+      "q": 1069,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 234841,
+          "factor": 389,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 20,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "plus",
+          "status": "direct_factor",
+          "w": 153381
+        },
+        "elapsed_seconds": 0.0006307500007096678,
+        "n": 19,
+        "retained_before_factor": 52,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 97,
+        "B": 267,
+        "g": 4,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 6,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 421217,
+      "n": 19,
+      "p": 397,
+      "pair_ordinal": 24,
+      "q": 1061,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 39366,
+          "factor": 397,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 9,
+            "kind": "feedback_trajectory",
+            "orientation": "u_times_v_power",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "plus",
+          "status": "direct_factor",
+          "w": 157943
+        },
+        "elapsed_seconds": 0.0005903340061195195,
+        "n": 19,
+        "retained_before_factor": 31,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 99,
+        "B": 265,
+        "g": 4,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 7,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 429041,
+      "n": 19,
+      "p": 409,
+      "pair_ordinal": 32,
+      "q": 1049,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 281802,
+          "factor": 409,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 37,
+            "kind": "feedback_trajectory",
+            "orientation": "u_times_v_power",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 346015
+        },
+        "elapsed_seconds": 0.000611708004726097,
+        "n": 19,
+        "retained_before_factor": 87,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 51,
+        "B": 131,
+        "g": 8,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 8,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 440369,
+      "n": 19,
+      "p": 419,
+      "pair_ordinal": 34,
+      "q": 1051,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 82123,
+          "factor": 419,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 109,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 179750
+        },
+        "elapsed_seconds": 0.0008122909930534661,
+        "n": 19,
+        "retained_before_factor": 230,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 209,
+        "B": 525,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 9,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 435341,
+      "n": 19,
+      "p": 419,
+      "pair_ordinal": 36,
+      "q": 1039,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 96788,
+          "factor": 419,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 109,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 170951
+        },
+        "elapsed_seconds": 0.0006863750022603199,
+        "n": 19,
+        "retained_before_factor": 230,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 209,
+        "B": 519,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 10,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 447809,
+      "n": 19,
+      "p": 431,
+      "pair_ordinal": 42,
+      "q": 1039,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 135335,
+          "factor": 431,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 30,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 144817
+        },
+        "elapsed_seconds": 0.0006488749932032079,
+        "n": 19,
+        "retained_before_factor": 72,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 215,
+        "B": 519,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 11,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 444361,
+      "n": 19,
+      "p": 431,
+      "pair_ordinal": 44,
+      "q": 1031,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 354283,
+          "factor": 431,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 44,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 222181
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 144386
+        },
+        "elapsed_seconds": 0.0006349999894155189,
+        "n": 19,
+        "retained_before_factor": 99,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 43,
+        "B": 103,
+        "g": 10,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 12,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 452609,
+      "n": 19,
+      "p": 439,
+      "pair_ordinal": 50,
+      "q": 1031,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 3072,
+          "factor": 439,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 10,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 301592
+        },
+        "elapsed_seconds": 0.000585667003178969,
+        "n": 19,
+        "retained_before_factor": 32,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 219,
+        "B": 515,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 13,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 447341,
+      "n": 19,
+      "p": 439,
+      "pair_ordinal": 52,
+      "q": 1019,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 3072,
+          "factor": 439,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 10,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 208963
+        },
+        "elapsed_seconds": 0.0005897500086575747,
+        "n": 19,
+        "retained_before_factor": 32,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 219,
+        "B": 509,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 14,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 456733,
+      "n": 19,
+      "p": 443,
+      "pair_ordinal": 53,
+      "q": 1031,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 314086,
+          "factor": 443,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 222,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 228367
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 306112
+        },
+        "elapsed_seconds": 0.000993207999272272,
+        "n": 19,
+        "retained_before_factor": 455,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 221,
+        "B": 515,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 15,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 451417,
+      "n": 19,
+      "p": 443,
+      "pair_ordinal": 55,
+      "q": 1019,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 346459,
+          "factor": 1019,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 68,
+            "kind": "feedback_trajectory",
+            "orientation": "u_times_v_power",
+            "round": 1,
+            "u": 2,
+            "v": 11
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 65215
+        },
+        "elapsed_seconds": 0.0006486669881269336,
+        "n": 19,
+        "retained_before_factor": 152,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 221,
+        "B": 509,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 16,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 466993,
+      "n": 19,
+      "p": 461,
+      "pair_ordinal": 65,
+      "q": 1013,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 90112,
+          "factor": 1013,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 13,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 11
+          },
+          "sign": "plus",
+          "status": "direct_factor",
+          "w": 179346
+        },
+        "elapsed_seconds": 0.0005942909920122474,
+        "n": 19,
+        "retained_before_factor": 41,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 5,
+        "B": 11,
+        "g": 92,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 17,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 459617,
+      "n": 19,
+      "p": 461,
+      "pair_ordinal": 67,
+      "q": 997,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 48,
+          "factor": 461,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 4,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "plus",
+          "status": "direct_factor",
+          "w": 296836
+        },
+        "elapsed_seconds": 0.0005314590089255944,
+        "n": 19,
+        "retained_before_factor": 20,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 115,
+        "B": 249,
+        "g": 4,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 18,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 455129,
+      "n": 19,
+      "p": 463,
+      "pair_ordinal": 72,
+      "q": 983,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 24576,
+          "factor": 983,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 13,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 159247
+        },
+        "elapsed_seconds": 0.0005648749938700348,
+        "n": 19,
+        "retained_before_factor": 38,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 231,
+        "B": 491,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 19,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 462797,
+      "n": 19,
+      "p": 467,
+      "pair_ordinal": 74,
+      "q": 991,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 196608,
+          "factor": 467,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 16,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 392281
+        },
+        "elapsed_seconds": 0.0005472909979289398,
+        "n": 19,
+        "retained_before_factor": 44,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 233,
+        "B": 495,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 20,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 459061,
+      "n": 19,
+      "p": 467,
+      "pair_ordinal": 75,
+      "q": 983,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 302148,
+          "factor": 467,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 234,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 229531
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 167185
+        },
+        "elapsed_seconds": 0.0009166669915430248,
+        "n": 19,
+        "retained_before_factor": 479,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 233,
+        "B": 491,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 21,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 474689,
+      "n": 19,
+      "p": 479,
+      "pair_ordinal": 77,
+      "q": 991,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 370268,
+          "factor": 479,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 86,
+            "kind": "feedback_trajectory",
+            "orientation": "u_times_v_power",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 134600
+        },
+        "elapsed_seconds": 0.0007229160110000521,
+        "n": 19,
+        "retained_before_factor": 185,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 239,
+        "B": 495,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 22,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 470857,
+      "n": 19,
+      "p": 479,
+      "pair_ordinal": 78,
+      "q": 983,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 115012,
+          "factor": 983,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 103,
+            "kind": "feedback_trajectory",
+            "orientation": "u_times_v_power",
+            "round": 1,
+            "u": 2,
+            "v": 19
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 350932
+        },
+        "elapsed_seconds": 0.0007788750081090257,
+        "n": 19,
+        "retained_before_factor": 222,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 239,
+        "B": 491,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 23,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 465109,
+      "n": 19,
+      "p": 479,
+      "pair_ordinal": 80,
+      "q": 971,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 316141,
+          "factor": 479,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 8,
+            "kind": "feedback_trajectory",
+            "orientation": "u_times_v_power",
+            "round": 1,
+            "u": 2,
+            "v": 5
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 293628
+        },
+        "elapsed_seconds": 0.0005889579915674403,
+        "n": 19,
+        "retained_before_factor": 31,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 239,
+        "B": 485,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 24,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 478721,
+      "n": 19,
+      "p": 487,
+      "pair_ordinal": 81,
+      "q": 983,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 486,
+          "factor": 487,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 5,
+            "kind": "feedback_trajectory",
+            "orientation": "u_times_v_power",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 261031
+        },
+        "elapsed_seconds": 0.0005396670021582395,
+        "n": 19,
+        "retained_before_factor": 23,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 243,
+        "B": 491,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 25,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 472877,
+      "n": 19,
+      "p": 487,
+      "pair_ordinal": 83,
+      "q": 971,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 486,
+          "factor": 487,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 5,
+            "kind": "feedback_trajectory",
+            "orientation": "u_times_v_power",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 973
+        },
+        "elapsed_seconds": 0.0005987089971313253,
+        "n": 19,
+        "retained_before_factor": 23,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 243,
+        "B": 485,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 26,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 476761,
+      "n": 19,
+      "p": 491,
+      "pair_ordinal": 86,
+      "q": 971,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 35844,
+          "factor": 491,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 34,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 11
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 379544
+        },
+        "elapsed_seconds": 0.0006103750056354329,
+        "n": 19,
+        "retained_before_factor": 83,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 49,
+        "B": 97,
+        "g": 10,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 27,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 484529,
+      "n": 19,
+      "p": 499,
+      "pair_ordinal": 89,
+      "q": 971,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 98304,
+          "factor": 499,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 15,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 34931
+        },
+        "elapsed_seconds": 0.0005883750127395615,
+        "n": 19,
+        "retained_before_factor": 42,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 249,
+        "B": 485,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 28,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 482533,
+      "n": 19,
+      "p": 499,
+      "pair_ordinal": 90,
+      "q": 967,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 317363,
+          "factor": 499,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 46,
+            "kind": "feedback_trajectory",
+            "orientation": "u_times_v_power",
+            "round": 1,
+            "u": 2,
+            "v": 13
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 251994
+        },
+        "elapsed_seconds": 0.000708916995790787,
+        "n": 19,
+        "retained_before_factor": 108,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 83,
+        "B": 161,
+        "g": 6,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 29,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 472553,
+      "n": 19,
+      "p": 499,
+      "pair_ordinal": 92,
+      "q": 947,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 98304,
+          "factor": 499,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 15,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 331836
+        },
+        "elapsed_seconds": 0.0005690419930033386,
+        "n": 19,
+        "retained_before_factor": 42,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 249,
+        "B": 473,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 30,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 486401,
+      "n": 19,
+      "p": 503,
+      "pair_ordinal": 93,
+      "q": 967,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 295765,
+          "factor": 503,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 121,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 470809
+        },
+        "elapsed_seconds": 0.0007374999986495823,
+        "n": 19,
+        "retained_before_factor": 254,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 251,
+        "B": 483,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 31,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 476341,
+      "n": 19,
+      "p": 503,
+      "pair_ordinal": 95,
+      "q": 947,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 101104,
+          "factor": 503,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 252,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 238171
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 406928
+        },
+        "elapsed_seconds": 0.000963166996371001,
+        "n": 19,
+        "retained_before_factor": 515,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 251,
+        "B": 473,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 32,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 478969,
+      "n": 19,
+      "p": 509,
+      "pair_ordinal": 99,
+      "q": 941,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 221207,
+          "factor": 509,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 37,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 5
+          },
+          "sign": "plus",
+          "status": "direct_factor",
+          "w": 365670
+        },
+        "elapsed_seconds": 0.0005854169867234305,
+        "n": 19,
+        "retained_before_factor": 88,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 127,
+        "B": 235,
+        "g": 4,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 33,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 488177,
+      "n": 19,
+      "p": 521,
+      "pair_ordinal": 103,
+      "q": 937,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 133141,
+          "factor": 521,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 72,
+            "kind": "feedback_trajectory",
+            "orientation": "u_times_v_power",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "plus",
+          "status": "direct_factor",
+          "w": 414951
+        },
+        "elapsed_seconds": 0.0006975419964874163,
+        "n": 19,
+        "retained_before_factor": 157,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 5,
+        "B": 9,
+        "g": 104,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 34,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 498317,
+      "n": 19,
+      "p": 547,
+      "pair_ordinal": 115,
+      "q": 911,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 199656,
+          "factor": 547,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 117,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 144409
+        },
+        "elapsed_seconds": 0.0007005000079516321,
+        "n": 19,
+        "retained_before_factor": 246,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 3,
+        "B": 5,
+        "g": 182,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 35,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 496129,
+      "n": 19,
+      "p": 547,
+      "pair_ordinal": 116,
+      "q": 907,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 243416,
+          "factor": 547,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 61,
+            "kind": "feedback_trajectory",
+            "orientation": "u_times_v_power",
+            "round": 1,
+            "u": 2,
+            "v": 5
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 458934
+        },
+        "elapsed_seconds": 0.0006152920104796067,
+        "n": 19,
+        "retained_before_factor": 137,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 91,
+        "B": 151,
+        "g": 6,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 36,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 512893,
+      "n": 19,
+      "p": 563,
+      "pair_ordinal": 121,
+      "q": 911,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 503784,
+          "factor": 911,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 92,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 256447
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 177646
+        },
+        "elapsed_seconds": 0.0007479170017177239,
+        "n": 19,
+        "retained_before_factor": 195,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 281,
+        "B": 455,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 37,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 510641,
+      "n": 19,
+      "p": 563,
+      "pair_ordinal": 122,
+      "q": 907,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 408176,
+          "factor": 563,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 32,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 3942
+        },
+        "elapsed_seconds": 0.0006462910096161067,
+        "n": 19,
+        "retained_before_factor": 76,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 281,
+        "B": 453,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 38,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 499381,
+      "n": 19,
+      "p": 563,
+      "pair_ordinal": 123,
+      "q": 887,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 184665,
+          "factor": 563,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 58,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 13
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 117105
+        },
+        "elapsed_seconds": 0.0006222910014912486,
+        "n": 19,
+        "retained_before_factor": 131,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 281,
+        "B": 443,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 39,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 497129,
+      "n": 19,
+      "p": 563,
+      "pair_ordinal": 124,
+      "q": 883,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 312466,
+          "factor": 563,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 32,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 221260
+        },
+        "elapsed_seconds": 0.0006732920010108501,
+        "n": 19,
+        "retained_before_factor": 76,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 281,
+        "B": 441,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 40,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 506477,
+      "n": 19,
+      "p": 571,
+      "pair_ordinal": 129,
+      "q": 887,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 394562,
+          "factor": 571,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 25,
+            "kind": "feedback_trajectory",
+            "orientation": "u_times_v_power",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 403127
+        },
+        "elapsed_seconds": 0.0005544579908018932,
+        "n": 19,
+        "retained_before_factor": 63,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 285,
+        "B": 443,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 41,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 506581,
+      "n": 19,
+      "p": 587,
+      "pair_ordinal": 139,
+      "q": 863,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 318740,
+          "factor": 587,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 294,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 253291
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 471360
+        },
+        "elapsed_seconds": 0.001043749987729825,
+        "n": 19,
+        "retained_before_factor": 599,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 293,
+        "B": 431,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 42,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 504233,
+      "n": 19,
+      "p": 587,
+      "pair_ordinal": 140,
+      "q": 859,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 8804,
+          "factor": 587,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 19,
+            "kind": "feedback_trajectory",
+            "orientation": "u_times_v_power",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 492492
+        },
+        "elapsed_seconds": 0.0005965409945929423,
+        "n": 19,
+        "retained_before_factor": 51,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 293,
+        "B": 429,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 43,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 516937,
+      "n": 19,
+      "p": 599,
+      "pair_ordinal": 145,
+      "q": 863,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 37738,
+          "factor": 599,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 300,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 258469
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 179102
+        },
+        "elapsed_seconds": 0.0010829999955603853,
+        "n": 19,
+        "retained_before_factor": 611,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 299,
+        "B": 431,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 44,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 514541,
+      "n": 19,
+      "p": 599,
+      "pair_ordinal": 146,
+      "q": 859,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 307288,
+          "factor": 599,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 41,
+            "kind": "feedback_trajectory",
+            "orientation": "u_times_v_power",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 416905
+        },
+        "elapsed_seconds": 0.0005689170066034421,
+        "n": 19,
+        "retained_before_factor": 95,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 23,
+        "B": 33,
+        "g": 26,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 45,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 515057,
+      "n": 19,
+      "p": 601,
+      "pair_ordinal": 150,
+      "q": 857,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 158665,
+          "factor": 601,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 42,
+            "kind": "feedback_trajectory",
+            "orientation": "u_times_v_power",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 307713
+        },
+        "elapsed_seconds": 0.0006266249984037131,
+        "n": 19,
+        "retained_before_factor": 95,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 75,
+        "B": 107,
+        "g": 8,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 46,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 509273,
+      "n": 19,
+      "p": 607,
+      "pair_ordinal": 155,
+      "q": 839,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 333244,
+          "factor": 607,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 22,
+            "kind": "feedback_trajectory",
+            "orientation": "u_times_v_power",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 453430
+        },
+        "elapsed_seconds": 0.0006320000102277845,
+        "n": 19,
+        "retained_before_factor": 57,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 303,
+        "B": 419,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 47,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 508177,
+      "n": 19,
+      "p": 613,
+      "pair_ordinal": 159,
+      "q": 829,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 90112,
+          "factor": 613,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 13,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 11
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 300371
+        },
+        "elapsed_seconds": 0.0005971249920548871,
+        "n": 19,
+        "retained_before_factor": 41,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 17,
+        "B": 23,
+        "g": 36,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 48,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 511913,
+      "n": 19,
+      "p": 619,
+      "pair_ordinal": 166,
+      "q": 827,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 282006,
+          "factor": 827,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 157,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 199306
+        },
+        "elapsed_seconds": 0.0007971250015543774,
+        "n": 19,
+        "retained_before_factor": 326,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 309,
+        "B": 413,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 49,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 509437,
+      "n": 19,
+      "p": 619,
+      "pair_ordinal": 167,
+      "q": 823,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 287834,
+          "factor": 619,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 310,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 254719
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 34044
+        },
+        "elapsed_seconds": 0.0011944169964408502,
+        "n": 19,
+        "retained_before_factor": 631,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 103,
+        "B": 137,
+        "g": 6,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 50,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 521837,
+      "n": 19,
+      "p": 631,
+      "pair_ordinal": 169,
+      "q": 827,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 368014,
+          "factor": 827,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 157,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 398613
+        },
+        "elapsed_seconds": 0.0008132500079227611,
+        "n": 19,
+        "retained_before_factor": 326,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 45,
+        "B": 59,
+        "g": 14,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 51,
+      "trial_hard": true
+    },
+    {
+      "B": 400,
+      "N": 524717,
+      "n": 20,
+      "p": 647,
+      "pair_ordinal": 181,
+      "q": 811,
+      "result": {
+        "B": 400,
+        "active_pair_count": 19,
+        "direct": {
+          "c": 426587,
+          "factor": 811,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 93,
+            "kind": "feedback_trajectory",
+            "orientation": "u_times_v_power",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 360896
+        },
+        "elapsed_seconds": 0.000723332996130921,
+        "n": 20,
+        "retained_before_factor": 200,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 323,
+        "B": 405,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 52,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 509189,
+      "n": 19,
+      "p": 647,
+      "pair_ordinal": 184,
+      "q": 787,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 104672,
+          "factor": 787,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 87,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 291191
+        },
+        "elapsed_seconds": 0.0007060839998302981,
+        "n": 19,
+        "retained_before_factor": 186,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 323,
+        "B": 393,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 53,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 520441,
+      "n": 19,
+      "p": 653,
+      "pair_ordinal": 186,
+      "q": 797,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 26624,
+          "factor": 653,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 11,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 13
+          },
+          "sign": "plus",
+          "status": "direct_factor",
+          "w": 393908
+        },
+        "elapsed_seconds": 0.0005727919924538583,
+        "n": 19,
+        "retained_before_factor": 37,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 163,
+        "B": 199,
+        "g": 4,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 54,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 504769,
+      "n": 19,
+      "p": 653,
+      "pair_ordinal": 188,
+      "q": 773,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 301182,
+          "factor": 653,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 18,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 5
+          },
+          "sign": "plus",
+          "status": "direct_factor",
+          "w": 445197
+        },
+        "elapsed_seconds": 0.0005477499944390729,
+        "n": 19,
+        "retained_before_factor": 50,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 163,
+        "B": 193,
+        "g": 4,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 55,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 518633,
+      "n": 19,
+      "p": 659,
+      "pair_ordinal": 190,
+      "q": 787,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 363595,
+          "factor": 787,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 87,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 44073
+        },
+        "elapsed_seconds": 0.0007143340044422075,
+        "n": 19,
+        "retained_before_factor": 186,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 329,
+        "B": 393,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 56,
+      "trial_hard": true
+    },
+    {
+      "B": 361,
+      "N": 510953,
+      "n": 19,
+      "p": 661,
+      "pair_ordinal": 194,
+      "q": 773,
+      "result": {
+        "B": 361,
+        "active_pair_count": 18,
+        "direct": {
+          "c": 286875,
+          "factor": 661,
+          "provenance": {
+            "active_relation_index_zero_based": 0,
+            "exponent": 90,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 2,
+            "v": 3
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 296790
+        },
+        "elapsed_seconds": 0.0007394999993266538,
+        "n": 19,
+        "retained_before_factor": 192,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 165,
+        "B": 193,
+        "g": 4,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 57,
+      "trial_hard": true
+    }
+  ]
+}

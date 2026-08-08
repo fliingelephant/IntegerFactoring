@@ -1,0 +1,160 @@
+{
+  "authorized_input": {
+    "RECONSTRUCT_STATEMENT.md": "9100aa6c2e0e3b9ce42c00b2888d87b41c6f0a43cac2026cd31c1aa2409fd722"
+  },
+  "boundary_verdict": "PASS",
+  "checks": 254261,
+  "factorizations_performed": 0,
+  "finite_sanity_checks": {
+    "T_range": [
+      1,
+      96
+    ],
+    "congruence_multipliers": [
+      1,
+      2,
+      3,
+      5,
+      17
+    ],
+    "families_checked": 480,
+    "sampled_family_summaries": [
+      {
+        "N_T": 3,
+        "T": 1,
+        "columns": 1,
+        "congruence_multiplier": 1,
+        "exposure_count": 0,
+        "exposure_product_is_power_of_two": true,
+        "private_row_nullity": 0,
+        "private_row_rank": 1,
+        "transition_count": 0
+      },
+      {
+        "N_T": 7,
+        "T": 1,
+        "columns": 1,
+        "congruence_multiplier": 3,
+        "exposure_count": 0,
+        "exposure_product_is_power_of_two": true,
+        "private_row_nullity": 0,
+        "private_row_rank": 1,
+        "transition_count": 0
+      },
+      {
+        "N_T": 5,
+        "T": 2,
+        "columns": 2,
+        "congruence_multiplier": 1,
+        "exposure_count": 1,
+        "exposure_product_is_power_of_two": true,
+        "private_row_nullity": 0,
+        "private_row_rank": 2,
+        "transition_count": 1
+      },
+      {
+        "N_T": 13,
+        "T": 2,
+        "columns": 2,
+        "congruence_multiplier": 3,
+        "exposure_count": 1,
+        "exposure_product_is_power_of_two": true,
+        "private_row_nullity": 0,
+        "private_row_rank": 2,
+        "transition_count": 1
+      },
+      {
+        "N_T": 257,
+        "T": 8,
+        "columns": 8,
+        "congruence_multiplier": 1,
+        "exposure_count": 7,
+        "exposure_product_is_power_of_two": true,
+        "private_row_nullity": 0,
+        "private_row_rank": 8,
+        "transition_count": 7
+      },
+      {
+        "N_T": 769,
+        "T": 8,
+        "columns": 8,
+        "congruence_multiplier": 3,
+        "exposure_count": 7,
+        "exposure_product_is_power_of_two": true,
+        "private_row_nullity": 0,
+        "private_row_rank": 8,
+        "transition_count": 7
+      },
+      {
+        "N_T": 4294967297,
+        "T": 32,
+        "columns": 32,
+        "congruence_multiplier": 1,
+        "exposure_count": 31,
+        "exposure_product_is_power_of_two": true,
+        "private_row_nullity": 0,
+        "private_row_rank": 32,
+        "transition_count": 31
+      },
+      {
+        "N_T": 12884901889,
+        "T": 32,
+        "columns": 32,
+        "congruence_multiplier": 3,
+        "exposure_count": 31,
+        "exposure_product_is_power_of_two": true,
+        "private_row_nullity": 0,
+        "private_row_rank": 32,
+        "transition_count": 31
+      },
+      {
+        "N_T": 79228162514264337593543950337,
+        "T": 96,
+        "columns": 96,
+        "congruence_multiplier": 1,
+        "exposure_count": 95,
+        "exposure_product_is_power_of_two": true,
+        "private_row_nullity": 0,
+        "private_row_rank": 96,
+        "transition_count": 95
+      },
+      {
+        "N_T": 237684487542793012780631851009,
+        "T": 96,
+        "columns": 96,
+        "congruence_multiplier": 3,
+        "exposure_count": 95,
+        "exposure_product_is_power_of_two": true,
+        "private_row_nullity": 0,
+        "private_row_rank": 96,
+        "transition_count": 95
+      }
+    ]
+  },
+  "forbidden_inputs_read": [],
+  "scope": "amended F99 boundary only",
+  "status": "complete",
+  "symbolic_derivation": {
+    "canonical_inverse": "2^e*w_e = 2^e*N_T-(N_T-1) = 1+(2^e-1)N_T, so 0<w_e<N_T and 2^e*w_e is congruent to 1 modulo N_T",
+    "exposure_support": "a_e=0 records c_e=2^e; b_e=1 records no inverse endpoint; therefore every raw exposure integer is a power of two",
+    "first_carry": "c_(e+1)=2^(e+1)=2*c_e for 1<=e<T, so a_e=0",
+    "inverse_carry": "2*w_(e+1)-w_e = 2[N_T-(N_T-1)/2^(e+1)]-[N_T-(N_T-1)/2^e] = N_T, so b_e=1",
+    "logical_limit": "carry frequency counts transitions but does not bound the full parity rank. The private identity rows give rank T and nullity zero, hence no nonempty dependency. Even where a dependency exists, a useful non-global square root additionally requires mixed CRT signs; carry data do not control those signs",
+    "private_rows": "v_(q_e)(P_e)=1 and q_e does not divide any P_j for j!=e, so row r_(q_e) is the e-th unit vector; the T private rows form I_T"
+  },
+  "universal_consequences": {
+    "carry_frequency_forces_dependency": false,
+    "carry_frequency_forces_non_global_root": false,
+    "first_carry": 0,
+    "inverse_carry": 1,
+    "nonempty_dependency_exists": false,
+    "private_row_matrix": "I_T",
+    "private_row_nullity": 0,
+    "private_row_rank": "T",
+    "raw_exposure_prime_support": "empty for T=1; exactly {2} for T>=2",
+    "raw_exposure_values": "powers of two only",
+    "transition_range": "1 <= e < T"
+  },
+  "verifier_failures": [],
+  "verifier_status": "PASS"
+}

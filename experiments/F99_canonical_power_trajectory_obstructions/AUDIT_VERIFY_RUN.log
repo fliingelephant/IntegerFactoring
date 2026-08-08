@@ -1,0 +1,18 @@
+F99 hostile independent verifier
+
+Command:
+  /opt/homebrew/bin/timeout 120 /usr/local/bin/sage experiments/F99_canonical_power_trajectory_obstructions/audit_independent_verifier.sage
+
+Final replay:
+  timeout_seconds: 120
+  exit_code: 0
+  wall_time_seconds: 2.332634791
+  exact_output_cmp: PASS
+
+SHA-256:
+  ad1c270f5fb791270ef9e29d3efc7f1648257c63bf4b824a04c1e4fb3f2d99f2  audit_independent_verifier.sage
+  a8b34a92464374e948f92d9f9bf06ae350555d2ec2640f4e7499527c9ea4dd09  AUDIT_VERIFY_OUTPUT.json
+
+One earlier sandboxed start failed because Sage could not write its cache.
+One later run passed every assertion but failed only while serializing a
+Sage Integer to JSON. The final source converts Sage integers for JSON.

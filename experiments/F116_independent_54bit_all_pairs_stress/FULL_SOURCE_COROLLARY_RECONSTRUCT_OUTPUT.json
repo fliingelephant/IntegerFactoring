@@ -1,0 +1,2775 @@
+{
+  "advised_prefix_verification": {
+    "advice_role": "fixed-input existence proof only",
+    "advice_used": true,
+    "both_terminal_gcds_are_proper": true,
+    "every_advised_record_regenerated": true,
+    "gcd_root_minus_one_N": 159999943,
+    "gcd_root_plus_one_N": 80000059,
+    "positive_root_bit_length": 336404,
+    "positive_root_sha256": "014bbc5972a53228db75169355fb6c7bc15b4bd23aef68af0011c4d8bc4015c9",
+    "root_is_non_global": true,
+    "root_mod_N": 5266287723884331,
+    "root_square_mod_N": 1,
+    "selected_product_bit_length": 672808,
+    "selected_product_is_exact_square": true,
+    "selected_product_sha256": "3dd659d9881e940191b6a9e40bf0ce7539a5032effeb116ee2f340ee466d83f7",
+    "selected_record_trace_scheme": "domain, then raw index/c/w/P and six provenance integers per selected record, then selected count; canonical unsigned integer encoding",
+    "selected_record_trace_sha256": "ce461ce04cf2ffa8891a2cc299e6ca389c8c2851b2c6f8e8676fd5cce13b12e1",
+    "support_count": 6486,
+    "support_first_index_zero_based": 655,
+    "support_last_index_zero_based": 771081
+  },
+  "boundary": {
+    "advice_used_by_certified_complete_algorithm": false,
+    "advice_used_by_prefix_proof": true,
+    "arbitrary_integer_factoring_algorithm_claimed": false,
+    "complete_decoder_execution_claimed": false,
+    "full_source_execution_claimed": false,
+    "integer_factorization_used": false,
+    "known_factor_used": false,
+    "primality_test_used": false,
+    "probability_law_claimed": false,
+    "success_density_claimed": false,
+    "success_on_other_inputs_claimed": false,
+    "supplied_N_only": true
+  },
+  "checks": {
+    "advice_indices_sorted_distinct_in_range": true,
+    "advised_exact_product_is_square": true,
+    "advised_root_is_non_global": true,
+    "advised_root_squares_to_one_mod_N": true,
+    "advised_terminal_gcds_are_proper": true,
+    "all_advised_values_congruent_one": true,
+    "all_direct_screens_classified": true,
+    "all_generated_residues_invertible": true,
+    "all_improper_direct_screens_are_identities": true,
+    "all_seeds_retained": true,
+    "authorized_hashes_match": true,
+    "complete_source_position_formula": true,
+    "every_advised_raw_record_regenerated": true,
+    "exact_projection_accounting": true,
+    "full_source_corollary_certified": true,
+    "input_keys_exact": true,
+    "n_and_B_match_N": true,
+    "no_factorization_or_primality_used": true,
+    "no_proper_direct_screen": true,
+    "prefix_source_accounting": true,
+    "prefix_stop_reached_exactly": true,
+    "projected_dependency_is_nonzero": true,
+    "projected_exact_product_is_square": true,
+    "projected_root_squares_to_one_mod_N": true,
+    "projection_preserves_normalized_root_class": true,
+    "projection_preserves_terminal_gcds": true,
+    "seed_basis_reconstructs_exactly": true,
+    "trial_screen_all_units": true
+  },
+  "complete_no_advice_algorithm_corollary": {
+    "algorithm_input": [
+      "N"
+    ],
+    "both_terminal_gcds_of_non_global_root_are_proper": true,
+    "certified_for_supplied_N": true,
+    "claim_kind": "existence proof from verified prefix, exact projection, append monotonicity, and complete-basis detection",
+    "complete_decoder_executed_in_this_reconstruction": false,
+    "complete_source_executed_in_this_reconstruction": false,
+    "complete_source_position_count": 8348507,
+    "complete_source_position_formula": "(n-1)+(B+1)*n*(n-1)",
+    "derives_n_as_bit_length": true,
+    "every_complete_kernel_basis_detects_nonzero_class": true,
+    "frozen_pair_count": 53,
+    "normalized_root_map_is_kernel_homomorphism": true,
+    "old_dependency_extends_by_zero_new_coordinates": true,
+    "old_exact_values_remain_initial_after_append": true,
+    "receives_dependency_support": false,
+    "receives_prefix_length": false,
+    "sets_B_equal_n_squared": true,
+    "total_pair_count": 1431,
+    "unordered_seed_pair_count": 1378
+  },
+  "direct_screens": {
+    "counts": {
+      "minus": {
+        "improper_N": 1,
+        "proper": 0,
+        "unit": 771081
+      },
+      "plus": {
+        "improper_N": 0,
+        "proper": 0,
+        "unit": 771082
+      }
+    },
+    "improper_screen_count": 1,
+    "improper_screens": [
+      {
+        "c": 1,
+        "provenance": [
+          1,
+          45,
+          47,
+          10893621174465223,
+          1,
+          0
+        ],
+        "raw_index_zero_based": 70008,
+        "sign": "minus",
+        "w": 1
+      }
+    ],
+    "proper_screen_count": 0,
+    "proper_screens": []
+  },
+  "exact_value_projection": {
+    "all_selected_raw_records_are_global_first_occurrences": true,
+    "all_selected_values_are_distinct_nonunits": true,
+    "distinct_exact_value_sequence_sha256": "a99a25d65a68665ee5c27085448ce221a432a0df232f8117617e7e8d45043bba",
+    "distinct_nonunit_exact_column_count": 622151,
+    "duplicate_pair_direction_root_is_value_and_global_plus": true,
+    "first_raw_index_sequence_sha256": "1b7f1f4f6d41d988765dc9fd002ca694584d9851d6828c76ee864be1bc33f0b3",
+    "projected_column_sequence_sha256": "bda44b6d08bfc25f23a3773a628b70f70c6c6f1d070594cc0f8584c0db3d555f",
+    "projected_dependency_is_nonzero": true,
+    "projected_gcd_root_minus_one_N": 159999943,
+    "projected_gcd_root_plus_one_N": 80000059,
+    "projected_positive_root_bit_length": 336404,
+    "projected_positive_root_sha256": "014bbc5972a53228db75169355fb6c7bc15b4bd23aef68af0011c4d8bc4015c9",
+    "projected_product_bit_length": 672808,
+    "projected_product_is_exact_square": true,
+    "projected_product_sha256": "3dd659d9881e940191b6a9e40bf0ce7539a5032effeb116ee2f340ee466d83f7",
+    "projected_root_mod_N": 5266287723884331,
+    "projected_support_count": 6486,
+    "raw_column_count": 771082,
+    "raw_repeated_exact_value_count": 148930,
+    "raw_unit_column_count": 1,
+    "raw_unit_maps_to_zero_and_global_plus": true,
+    "same_normalized_root_class_as_raw": true,
+    "same_root_residue_as_raw": true,
+    "selected_distinct_nonunit_value_count": 6486,
+    "selected_global_first_occurrence_count": 6486,
+    "selected_repeated_occurrence_count": 0,
+    "selected_unit_count": 0,
+    "unit_and_duplicate_directions_generate_projection_kernel": true
+  },
+  "executed_advised_prefix": {
+    "advice_affects_source_order_or_retention": false,
+    "all_pair_layers_completed": 176,
+    "all_pair_layers_started": 177,
+    "all_pair_summaries": [
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 5834,
+        "pair": [
+          2,
+          3
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 0,
+        "retained_records": 0
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1463,
+        "pair": [
+          2,
+          4
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 1,
+        "retained_records": 4371
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 5834,
+        "pair": [
+          2,
+          5
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 2,
+        "retained_records": 0
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2918,
+        "pair": [
+          2,
+          6
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 3,
+        "retained_records": 2916
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 5834,
+        "pair": [
+          2,
+          7
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 4,
+        "retained_records": 0
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 4376,
+        "pair": [
+          2,
+          8
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 5,
+        "retained_records": 1458
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1463,
+        "pair": [
+          2,
+          9
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 6,
+        "retained_records": 4371
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2918,
+        "pair": [
+          2,
+          10
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 7,
+        "retained_records": 2916
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 5834,
+        "pair": [
+          2,
+          11
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 8,
+        "retained_records": 0
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2919,
+        "pair": [
+          2,
+          12
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 9,
+        "retained_records": 2915
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 5,
+        "pair": [
+          2,
+          13
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 10,
+        "retained_records": 5829
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2918,
+        "pair": [
+          2,
+          14
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 11,
+        "retained_records": 2916
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 4,
+        "pair": [
+          2,
+          15
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 12,
+        "retained_records": 5830
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 4619,
+        "pair": [
+          2,
+          16
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 13,
+        "retained_records": 1215
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 5834,
+        "pair": [
+          2,
+          17
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 14,
+        "retained_records": 0
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2918,
+        "pair": [
+          2,
+          18
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 15,
+        "retained_records": 2916
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 4,
+        "pair": [
+          2,
+          19
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 16,
+        "retained_records": 5830
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2918,
+        "pair": [
+          2,
+          20
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 17,
+        "retained_records": 2916
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 4,
+        "pair": [
+          2,
+          21
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 18,
+        "retained_records": 5830
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2918,
+        "pair": [
+          2,
+          22
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 19,
+        "retained_records": 2916
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 4,
+        "pair": [
+          2,
+          23
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 20,
+        "retained_records": 5830
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2919,
+        "pair": [
+          2,
+          24
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 21,
+        "retained_records": 2915
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1463,
+        "pair": [
+          2,
+          25
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 22,
+        "retained_records": 4371
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2918,
+        "pair": [
+          2,
+          26
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 23,
+        "retained_records": 2916
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1464,
+        "pair": [
+          2,
+          27
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 24,
+        "retained_records": 4370
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2918,
+        "pair": [
+          2,
+          28
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 25,
+        "retained_records": 2916
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 5834,
+        "pair": [
+          2,
+          29
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 26,
+        "retained_records": 0
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2918,
+        "pair": [
+          2,
+          30
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 27,
+        "retained_records": 2916
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 3,
+        "pair": [
+          2,
+          31
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 28,
+        "retained_records": 5831
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 4329,
+        "pair": [
+          2,
+          32
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 29,
+        "retained_records": 1505
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 3,
+        "pair": [
+          2,
+          33
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 30,
+        "retained_records": 5831
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2918,
+        "pair": [
+          2,
+          34
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 31,
+        "retained_records": 2916
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 3,
+        "pair": [
+          2,
+          35
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 32,
+        "retained_records": 5831
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 4375,
+        "pair": [
+          2,
+          36
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 33,
+        "retained_records": 1459
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 5834,
+        "pair": [
+          2,
+          37
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 34,
+        "retained_records": 0
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2918,
+        "pair": [
+          2,
+          38
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 35,
+        "retained_records": 2916
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 3,
+        "pair": [
+          2,
+          39
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 36,
+        "retained_records": 5831
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2919,
+        "pair": [
+          2,
+          40
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 37,
+        "retained_records": 2915
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 5834,
+        "pair": [
+          2,
+          41
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 38,
+        "retained_records": 0
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2918,
+        "pair": [
+          2,
+          42
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 39,
+        "retained_records": 2916
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 5834,
+        "pair": [
+          2,
+          43
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 40,
+        "retained_records": 0
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2918,
+        "pair": [
+          2,
+          44
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 41,
+        "retained_records": 2916
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 3,
+        "pair": [
+          2,
+          45
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 42,
+        "retained_records": 5831
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2918,
+        "pair": [
+          2,
+          46
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 43,
+        "retained_records": 2916
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 3,
+        "pair": [
+          2,
+          47
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 44,
+        "retained_records": 5831
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2920,
+        "pair": [
+          2,
+          48
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 45,
+        "retained_records": 2914
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1463,
+        "pair": [
+          2,
+          49
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 46,
+        "retained_records": 4371
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2918,
+        "pair": [
+          2,
+          50
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 47,
+        "retained_records": 2916
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 3,
+        "pair": [
+          2,
+          51
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 48,
+        "retained_records": 5831
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2918,
+        "pair": [
+          2,
+          52
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 49,
+        "retained_records": 2916
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 3,
+        "pair": [
+          2,
+          53
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 50,
+        "retained_records": 5831
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2918,
+        "pair": [
+          2,
+          54
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 51,
+        "retained_records": 2916
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1465,
+        "pair": [
+          3,
+          4
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 52,
+        "retained_records": 4369
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 5834,
+        "pair": [
+          3,
+          5
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 53,
+        "retained_records": 0
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2920,
+        "pair": [
+          3,
+          6
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 54,
+        "retained_records": 2914
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 4,
+        "pair": [
+          3,
+          7
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 55,
+        "retained_records": 5830
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1466,
+        "pair": [
+          3,
+          8
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 56,
+        "retained_records": 4368
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1461,
+        "pair": [
+          3,
+          9
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 57,
+        "retained_records": 4373
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 5,
+        "pair": [
+          3,
+          10
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 58,
+        "retained_records": 5829
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 5834,
+        "pair": [
+          3,
+          11
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 59,
+        "retained_records": 0
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2919,
+        "pair": [
+          3,
+          12
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 60,
+        "retained_records": 2915
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 4,
+        "pair": [
+          3,
+          13
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 61,
+        "retained_records": 5830
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 4,
+        "pair": [
+          3,
+          14
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 62,
+        "retained_records": 5830
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2918,
+        "pair": [
+          3,
+          15
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 63,
+        "retained_records": 2916
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1709,
+        "pair": [
+          3,
+          16
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 64,
+        "retained_records": 4125
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 4,
+        "pair": [
+          3,
+          17
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 65,
+        "retained_records": 5830
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2922,
+        "pair": [
+          3,
+          18
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 66,
+        "retained_records": 2912
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 3,
+        "pair": [
+          3,
+          19
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 67,
+        "retained_records": 5831
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 5,
+        "pair": [
+          3,
+          20
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 68,
+        "retained_records": 5829
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2918,
+        "pair": [
+          3,
+          21
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 69,
+        "retained_records": 2916
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 4,
+        "pair": [
+          3,
+          22
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 70,
+        "retained_records": 5830
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 3,
+        "pair": [
+          3,
+          23
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 71,
+        "retained_records": 5831
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2920,
+        "pair": [
+          3,
+          24
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 72,
+        "retained_records": 2914
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1462,
+        "pair": [
+          3,
+          25
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 73,
+        "retained_records": 4372
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 4,
+        "pair": [
+          3,
+          26
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 74,
+        "retained_records": 5830
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 4376,
+        "pair": [
+          3,
+          27
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 75,
+        "retained_records": 1458
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 4,
+        "pair": [
+          3,
+          28
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 76,
+        "retained_records": 5830
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 3,
+        "pair": [
+          3,
+          29
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 77,
+        "retained_records": 5831
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2918,
+        "pair": [
+          3,
+          30
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 78,
+        "retained_records": 2916
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 3,
+        "pair": [
+          3,
+          31
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 79,
+        "retained_records": 5831
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1421,
+        "pair": [
+          3,
+          32
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 80,
+        "retained_records": 4413
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2918,
+        "pair": [
+          3,
+          33
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 81,
+        "retained_records": 2916
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 4,
+        "pair": [
+          3,
+          34
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 82,
+        "retained_records": 5830
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 3,
+        "pair": [
+          3,
+          35
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 83,
+        "retained_records": 5831
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 4375,
+        "pair": [
+          3,
+          36
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 84,
+        "retained_records": 1459
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 3,
+        "pair": [
+          3,
+          37
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 85,
+        "retained_records": 5831
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 3,
+        "pair": [
+          3,
+          38
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 86,
+        "retained_records": 5831
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2918,
+        "pair": [
+          3,
+          39
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 87,
+        "retained_records": 2916
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 5,
+        "pair": [
+          3,
+          40
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 88,
+        "retained_records": 5829
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 3,
+        "pair": [
+          3,
+          41
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 89,
+        "retained_records": 5831
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2918,
+        "pair": [
+          3,
+          42
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 90,
+        "retained_records": 2916
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 3,
+        "pair": [
+          3,
+          43
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 91,
+        "retained_records": 5831
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 4,
+        "pair": [
+          3,
+          44
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 92,
+        "retained_records": 5830
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2919,
+        "pair": [
+          3,
+          45
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 93,
+        "retained_records": 2915
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 3,
+        "pair": [
+          3,
+          46
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 94,
+        "retained_records": 5831
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 3,
+        "pair": [
+          3,
+          47
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 95,
+        "retained_records": 5831
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2920,
+        "pair": [
+          3,
+          48
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 96,
+        "retained_records": 2914
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1462,
+        "pair": [
+          3,
+          49
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 97,
+        "retained_records": 4372
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 5,
+        "pair": [
+          3,
+          50
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 98,
+        "retained_records": 5829
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2918,
+        "pair": [
+          3,
+          51
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 99,
+        "retained_records": 2916
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 4,
+        "pair": [
+          3,
+          52
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 100,
+        "retained_records": 5830
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 3,
+        "pair": [
+          3,
+          53
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 101,
+        "retained_records": 5831
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2923,
+        "pair": [
+          3,
+          54
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 102,
+        "retained_records": 2911
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1463,
+        "pair": [
+          4,
+          5
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 103,
+        "retained_records": 4371
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2144,
+        "pair": [
+          4,
+          6
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 104,
+        "retained_records": 3690
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1463,
+        "pair": [
+          4,
+          7
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 105,
+        "retained_records": 4371
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 4860,
+        "pair": [
+          4,
+          8
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 106,
+        "retained_records": 974
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2920,
+        "pair": [
+          4,
+          9
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 107,
+        "retained_records": 2914
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1463,
+        "pair": [
+          4,
+          10
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 108,
+        "retained_records": 4371
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1462,
+        "pair": [
+          4,
+          11
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 109,
+        "retained_records": 4372
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2921,
+        "pair": [
+          4,
+          12
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 110,
+        "retained_records": 2913
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1462,
+        "pair": [
+          4,
+          13
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 111,
+        "retained_records": 4372
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1462,
+        "pair": [
+          4,
+          14
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 112,
+        "retained_records": 4372
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1461,
+        "pair": [
+          4,
+          15
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 113,
+        "retained_records": 4373
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 4667,
+        "pair": [
+          4,
+          16
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 114,
+        "retained_records": 1167
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1461,
+        "pair": [
+          4,
+          17
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 115,
+        "retained_records": 4373
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1463,
+        "pair": [
+          4,
+          18
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 116,
+        "retained_records": 4371
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1461,
+        "pair": [
+          4,
+          19
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 117,
+        "retained_records": 4373
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2919,
+        "pair": [
+          4,
+          20
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 118,
+        "retained_records": 2915
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1461,
+        "pair": [
+          4,
+          21
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 119,
+        "retained_records": 4373
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1461,
+        "pair": [
+          4,
+          22
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 120,
+        "retained_records": 4373
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1461,
+        "pair": [
+          4,
+          23
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 121,
+        "retained_records": 4373
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2922,
+        "pair": [
+          4,
+          24
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 122,
+        "retained_records": 2912
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2918,
+        "pair": [
+          4,
+          25
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 123,
+        "retained_records": 2916
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1461,
+        "pair": [
+          4,
+          26
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 124,
+        "retained_records": 4373
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2918,
+        "pair": [
+          4,
+          27
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 125,
+        "retained_records": 2916
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2919,
+        "pair": [
+          4,
+          28
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 126,
+        "retained_records": 2915
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1461,
+        "pair": [
+          4,
+          29
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 127,
+        "retained_records": 4373
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1461,
+        "pair": [
+          4,
+          30
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 128,
+        "retained_records": 4373
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1461,
+        "pair": [
+          4,
+          31
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 129,
+        "retained_records": 4373
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 4862,
+        "pair": [
+          4,
+          32
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 130,
+        "retained_records": 972
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1461,
+        "pair": [
+          4,
+          33
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 131,
+        "retained_records": 4373
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1461,
+        "pair": [
+          4,
+          34
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 132,
+        "retained_records": 4373
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1461,
+        "pair": [
+          4,
+          35
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 133,
+        "retained_records": 4373
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 4375,
+        "pair": [
+          4,
+          36
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 134,
+        "retained_records": 1459
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1461,
+        "pair": [
+          4,
+          37
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 135,
+        "retained_records": 4373
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1461,
+        "pair": [
+          4,
+          38
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 136,
+        "retained_records": 4373
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1461,
+        "pair": [
+          4,
+          39
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 137,
+        "retained_records": 4373
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2919,
+        "pair": [
+          4,
+          40
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 138,
+        "retained_records": 2915
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1461,
+        "pair": [
+          4,
+          41
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 139,
+        "retained_records": 4373
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1461,
+        "pair": [
+          4,
+          42
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 140,
+        "retained_records": 4373
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1461,
+        "pair": [
+          4,
+          43
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 141,
+        "retained_records": 4373
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2918,
+        "pair": [
+          4,
+          44
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 142,
+        "retained_records": 2916
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1461,
+        "pair": [
+          4,
+          45
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 143,
+        "retained_records": 4373
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1461,
+        "pair": [
+          4,
+          46
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 144,
+        "retained_records": 4373
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1461,
+        "pair": [
+          4,
+          47
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 145,
+        "retained_records": 4373
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2921,
+        "pair": [
+          4,
+          48
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 146,
+        "retained_records": 2913
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2918,
+        "pair": [
+          4,
+          49
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 147,
+        "retained_records": 2916
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1461,
+        "pair": [
+          4,
+          50
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 148,
+        "retained_records": 4373
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1461,
+        "pair": [
+          4,
+          51
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 149,
+        "retained_records": 4373
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2918,
+        "pair": [
+          4,
+          52
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 150,
+        "retained_records": 2916
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1461,
+        "pair": [
+          4,
+          53
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 151,
+        "retained_records": 4373
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1464,
+        "pair": [
+          4,
+          54
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 152,
+        "retained_records": 4370
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 7,
+        "pair": [
+          5,
+          6
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 153,
+        "retained_records": 5827
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 4,
+        "pair": [
+          5,
+          7
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 154,
+        "retained_records": 5830
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1950,
+        "pair": [
+          5,
+          8
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 155,
+        "retained_records": 3884
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1463,
+        "pair": [
+          5,
+          9
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 156,
+        "retained_records": 4371
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2921,
+        "pair": [
+          5,
+          10
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 157,
+        "retained_records": 2913
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 3,
+        "pair": [
+          5,
+          11
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 158,
+        "retained_records": 5831
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 7,
+        "pair": [
+          5,
+          12
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 159,
+        "retained_records": 5827
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 3,
+        "pair": [
+          5,
+          13
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 160,
+        "retained_records": 5831
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 4,
+        "pair": [
+          5,
+          14
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 161,
+        "retained_records": 5830
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2919,
+        "pair": [
+          5,
+          15
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 162,
+        "retained_records": 2915
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1709,
+        "pair": [
+          5,
+          16
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 163,
+        "retained_records": 4125
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 3,
+        "pair": [
+          5,
+          17
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 164,
+        "retained_records": 5831
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 7,
+        "pair": [
+          5,
+          18
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 165,
+        "retained_records": 5827
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 3,
+        "pair": [
+          5,
+          19
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 166,
+        "retained_records": 5831
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 2920,
+        "pair": [
+          5,
+          20
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 167,
+        "retained_records": 2914
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 4,
+        "pair": [
+          5,
+          21
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 168,
+        "retained_records": 5830
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 3,
+        "pair": [
+          5,
+          22
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 169,
+        "retained_records": 5831
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 3,
+        "pair": [
+          5,
+          23
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 170,
+        "retained_records": 5831
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 7,
+        "pair": [
+          5,
+          24
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 171,
+        "retained_records": 5827
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1460,
+        "pair": [
+          5,
+          25
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 172,
+        "retained_records": 4374
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 3,
+        "pair": [
+          5,
+          26
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 173,
+        "retained_records": 5831
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 1463,
+        "pair": [
+          5,
+          27
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 174,
+        "retained_records": 4371
+      },
+      {
+        "attempted_positions": 5834,
+        "duplicate_residues": 4,
+        "pair": [
+          5,
+          28
+        ],
+        "pair_complete": true,
+        "pair_index_zero_based": 175,
+        "retained_records": 5830
+      },
+      {
+        "attempted_positions": 179,
+        "duplicate_residues": 3,
+        "pair": [
+          5,
+          29
+        ],
+        "pair_complete": false,
+        "pair_index_zero_based": 176,
+        "retained_records": 176
+      }
+    ],
+    "attempted_position_count": 1336218,
+    "duplicate_residue_count": 565136,
+    "executed": true,
+    "frozen_layer": {
+      "attempted_positions": 309202,
+      "completed_before_prefix_stop": true,
+      "duplicate_residues": 233418,
+      "pair_count": 53,
+      "retained_records": 75784
+    },
+    "global_seen_residue_count": 771082,
+    "maximum_endpoint_bit_length": 54,
+    "maximum_relation_value_bit_length": 108,
+    "nonunit_generated_residues": [],
+    "prefix_length_is_only_source_stop": true,
+    "record_trace_scheme": "domain, then raw index/c/w and six provenance integers per retained record, then retained count; canonical unsigned integer encoding",
+    "record_trace_sha256": "5978faf5abdbb44f7d67956ae6430c7f206b316dd145357bef7028d4320aac98",
+    "retained_record_count": 771082,
+    "stop_record": {
+      "attempted_position_one_based": 1336218,
+      "c": 9376877912284379,
+      "provenance": [
+        2,
+        176,
+        5,
+        29,
+        89,
+        0
+      ],
+      "raw_index_zero_based": 771081,
+      "w": 6461503751599984
+    }
+  },
+  "factor_free_decoder_theorem": {
+    "algorithm": "ordered three-way gcd refinement of endpoint-mask entries, square terminal removal, and complete binary elimination",
+    "complete_binary_kernel_algorithm_specified_in_source": true,
+    "nonsquare_terminal_masks_equal_hidden_prime_parity_kernel": true,
+    "preserves_each_column_modulo_exact_squares": true,
+    "replacement": "(x,A),(y,B) -> (gcd(x,y),A xor B),(x/gcd,A),(y/gcd,B)",
+    "requires_endpoint_factorization": false,
+    "terminal_values_pairwise_coprime": true
+  },
+  "failures": [],
+  "isolation": {
+    "F111_files_read": [],
+    "PROVED_md_read": false,
+    "candidate_implementation_read": false,
+    "files_read": [
+      "FULL_SOURCE_COROLLARY_RECONSTRUCT_STATEMENT.md",
+      "RECONSTRUCT_INPUT.json"
+    ],
+    "input_sha256": "5194ee596916810edb78fa802c3179341746423c6fb65f2548a600c598b05015",
+    "other_F116_files_read": [],
+    "statement_sha256": "dacb0f606313045ce3f0e7b6ff75433bad437ac2b372056f71a021cfce5dce1b"
+  },
+  "public_input": {
+    "B": 2916,
+    "N": 12800004879996637,
+    "advised_prefix_retained_record_count": 771082,
+    "advised_raw_support_count": 6486,
+    "advised_raw_support_sha256": "080851d4e856eaec12d20b9e5609b824bd3aa03180cb2b4de13868c70fbd8cdb",
+    "n": 54
+  },
+  "role": "isolated advised-prefix verification and no-advice full-source corollary",
+  "seed_basis": {
+    "block_list": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41,
+      43,
+      47,
+      53,
+      12144217153697,
+      31013607193423,
+      52747272857129,
+      67085979454909,
+      148027267319689,
+      293620183627163,
+      341333463466577,
+      366666806458237,
+      821621934864649,
+      864000329399773,
+      1098039634313437,
+      1170732153658229,
+      1267633333526237,
+      1288312179480181,
+      2492632529262503,
+      2725926965184469,
+      2868966611033729,
+      3125582586975923,
+      4480001707998823,
+      4758976173332083,
+      5236365632725897,
+      7757578715149477,
+      10893621174465223
+    ],
+    "endpoint_count": 106,
+    "frozen_pair_list": [
+      [
+        2,
+        17
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        11
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        17
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        17,
+        19
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        11
+      ],
+      [
+        17,
+        19
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        2,
+        29
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        17
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        11
+      ],
+      [
+        2,
+        17
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        37
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        41
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        43
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        47,
+        10893621174465223
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "operation_counts": {
+      "basis_appends": 356,
+      "basis_gcd_tests": 18035,
+      "equal_value_merges": 193,
+      "final_block_count": 39,
+      "final_signature_entries": 214,
+      "generated_work_pushes": 689,
+      "initial_work_items": 106,
+      "maximum_work_size": 109,
+      "overlap_events": 317,
+      "perfect_power_exponent_tests": 9883,
+      "perfect_power_extractions": 27,
+      "unequal_value_splits": 124,
+      "unit_discards": 122,
+      "work_pops": 795
+    },
+    "seed_record_count": 53,
+    "seed_supports": [
+      [
+        2,
+        17,
+        31,
+        12144217153697
+      ],
+      [
+        3,
+        5,
+        341333463466577
+      ],
+      [
+        2,
+        7,
+        13,
+        52747272857129
+      ],
+      [
+        3,
+        5,
+        341333463466577
+      ],
+      [
+        2,
+        3,
+        53,
+        67085979454909
+      ],
+      [
+        2,
+        7,
+        13,
+        52747272857129
+      ],
+      [
+        2,
+        7,
+        13,
+        52747272857129
+      ],
+      [
+        2,
+        3,
+        53,
+        67085979454909
+      ],
+      [
+        2,
+        5,
+        4480001707998823
+      ],
+      [
+        2,
+        11,
+        5236365632725897
+      ],
+      [
+        2,
+        3,
+        366666806458237
+      ],
+      [
+        2,
+        7,
+        13,
+        52747272857129
+      ],
+      [
+        2,
+        7,
+        13,
+        52747272857129
+      ],
+      [
+        3,
+        5,
+        341333463466577
+      ],
+      [
+        2,
+        3,
+        366666806458237
+      ],
+      [
+        2,
+        17,
+        31,
+        12144217153697
+      ],
+      [
+        2,
+        3,
+        53,
+        67085979454909
+      ],
+      [
+        17,
+        19,
+        23,
+        31013607193423
+      ],
+      [
+        2,
+        5,
+        4480001707998823
+      ],
+      [
+        2,
+        3,
+        5,
+        7,
+        148027267319689
+      ],
+      [
+        2,
+        11,
+        5236365632725897
+      ],
+      [
+        17,
+        19,
+        23,
+        31013607193423
+      ],
+      [
+        2,
+        3,
+        366666806458237
+      ],
+      [
+        3,
+        5,
+        341333463466577
+      ],
+      [
+        2,
+        7,
+        13,
+        52747272857129
+      ],
+      [
+        2,
+        3,
+        2725926965184469
+      ],
+      [
+        2,
+        7,
+        13,
+        52747272857129
+      ],
+      [
+        2,
+        29,
+        2868966611033729
+      ],
+      [
+        2,
+        3,
+        5,
+        7,
+        148027267319689
+      ],
+      [
+        2,
+        17,
+        31,
+        12144217153697
+      ],
+      [
+        2,
+        3,
+        366666806458237
+      ],
+      [
+        3,
+        11,
+        7757578715149477
+      ],
+      [
+        2,
+        17,
+        31,
+        12144217153697
+      ],
+      [
+        2,
+        3,
+        5,
+        7,
+        148027267319689
+      ],
+      [
+        2,
+        3,
+        2725926965184469
+      ],
+      [
+        2,
+        37,
+        821621934864649
+      ],
+      [
+        2,
+        5,
+        19,
+        2492632529262503
+      ],
+      [
+        2,
+        3,
+        13,
+        4758976173332083
+      ],
+      [
+        2,
+        5,
+        864000329399773
+      ],
+      [
+        2,
+        41,
+        1170732153658229
+      ],
+      [
+        2,
+        3,
+        5,
+        7,
+        148027267319689
+      ],
+      [
+        2,
+        43,
+        3125582586975923
+      ],
+      [
+        2,
+        7,
+        11,
+        1288312179480181
+      ],
+      [
+        3,
+        5,
+        31,
+        293620183627163
+      ],
+      [
+        2,
+        3,
+        23,
+        1267633333526237
+      ],
+      [
+        47,
+        10893621174465223
+      ],
+      [
+        2,
+        3,
+        366666806458237
+      ],
+      [
+        2,
+        3,
+        5,
+        7,
+        148027267319689
+      ],
+      [
+        2,
+        5,
+        864000329399773
+      ],
+      [
+        2,
+        3,
+        17,
+        1098039634313437
+      ],
+      [
+        2,
+        7,
+        13,
+        52747272857129
+      ],
+      [
+        2,
+        3,
+        53,
+        67085979454909
+      ],
+      [
+        2,
+        3,
+        2725926965184469
+      ]
+    ]
+  },
+  "status": "PASS",
+  "timings_seconds": {
+    "advised_raw_dependency_replay": 0.2778058330004569,
+    "exact_value_projection": 0.6240895420050947,
+    "prefix_source_including_seed_basis": 3.000932541996008,
+    "total": 3.9154292089951923,
+    "trial_screen": 0.0001552090106997639
+  },
+  "trial_screen": {
+    "nonunit_gcds": [],
+    "position_count": 2915,
+    "range": [
+      2,
+      2916
+    ]
+  },
+  "uniform_polynomial_bit_cost": {
+    "basis_root_tests": "at most m tests on O(n^5)-bit products",
+    "complete_source_positions": "T=(n-1)+(n^2+1)n(n-1)=O(n^4)",
+    "dependency_product_bits": "at most 2nm=O(n^5)",
+    "distinct_exact_columns": "m<=T=O(n^4)",
+    "endpoint_bits": "at most n",
+    "kernel_basis_size": "at most m=O(n^4)",
+    "matrix_dimensions": "at most O(n^5) rows by O(n^4) columns",
+    "refinement_count": "at most L because each overlap lowers the active value product by a divisor at least 2",
+    "refinement_initial_entries": "2m=O(n^4)",
+    "refinement_total_input_bits": "L<=2mn=O(n^5)",
+    "relation_value_bits": "at most 2n",
+    "uniform_polynomial_bit_time": true
+  }
+}

@@ -1,0 +1,18 @@
+utc_attempt=20260808T013636.874466Z
+timeout_seconds=1800
+command=["/opt/homebrew/opt/python@3.14/bin/python3.14","/Users/zhou/autoresearch/IntegerFactoring/experiments/F103_public_factor_free_parity_core/proof_blind_reconstruction.py","--modulus","202537109","--output","/Users/zhou/autoresearch/IntegerFactoring/experiments/F103_public_factor_free_parity_core/proof_blind_reconstruction_attempts/20260808T013636.874466Z.output.json"]
+exit_code=1
+stdout:
+stage=stream
+stderr:
+Traceback (most recent call last):
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F103_public_factor_free_parity_core/proof_blind_reconstruction.py", line 683, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F103_public_factor_free_parity_core/proof_blind_reconstruction.py", line 630, in main
+    raw_records, replay = reconstruct_stream(args.modulus)
+                          ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F103_public_factor_free_parity_core/proof_blind_reconstruction.py", line 471, in reconstruct_stream
+    assert not initial_kernel
+           ^^^^^^^^^^^^^^^^^^
+AssertionError

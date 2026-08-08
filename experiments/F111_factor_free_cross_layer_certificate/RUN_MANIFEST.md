@@ -1,0 +1,24 @@
+# F111 run manifest
+
+```text
+command=/opt/homebrew/opt/python@3.14/bin/python3.14 experiments/F111_factor_free_cross_layer_certificate/run_with_timeout.py
+hard_timeout_seconds=120
+inner_elapsed_seconds=0.05514075000246521
+exit_code=0
+status=PASS
+```
+
+## SHA-256 pins
+
+```text
+cd78bb9d5ff030d2fbfff4dc1191e3a1603694351bf423254dbd1ed9e3864b31  DESIGN.md
+735a8535eb8cd4e8bc5e1c0fbc71d78b3acd79b3e6efa1f865d9084dea67cf6b  CERTIFICATE.json
+c5028a63de7952a5e85c388af4254365d990c3514d846dd35806f87a2a36a6dc  replay_public_certificate.py
+9a87f000d1e20880f68b2304fad53d67e41cc2e5c766d40f0633c0540b137145  run_with_timeout.py
+3f23f28ea3e4e0c36dfa83b1d50ea63b8da9e6a8ca5da43982c89514b70f300a  OUTPUT.json
+afe4e0851f9fb34ebc39f51d92dd2f8790a4bd9aaefd7941624ed6c8861a4ebf  RUN.log
+727d794adb41bc14425786746d0b9a809c19312765fad3f69ac890c027b59949  FAILED_RUNS.md
+5fded40920ca52827662ba536f14a49ec9e302b934f6d0967e66be2b18c9ba4b  ../F98_multiseed_presentation_closure_kill/public_factorization_free_replay.py
+```
+
+No candidate run failed.

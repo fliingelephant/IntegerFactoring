@@ -1,0 +1,14 @@
+command=["/opt/homebrew/opt/python@3.14/bin/python3.14", "/Users/zhou/autoresearch/IntegerFactoring/experiments/F109_recursive_feedback_rescue/test_recursive_rescue.py"]
+timeout_seconds=600
+returncode=1
+stdout:
+
+stderr:
+Traceback (most recent call last):
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F109_recursive_feedback_rescue/test_recursive_rescue.py", line 213, in <module>
+    main()
+    ~~~~^^
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F109_recursive_feedback_rescue/test_recursive_rescue.py", line 173, in main
+    assert isolated["status"] == "factor"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

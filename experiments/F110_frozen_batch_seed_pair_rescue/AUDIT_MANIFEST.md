@@ -1,0 +1,57 @@
+# F110 hostile-audit manifest
+
+## Authoritative run
+
+```text
+command=python3 experiments/F110_frozen_batch_seed_pair_rescue/run_hostile_audit_with_timeout.py
+working_directory=/Users/zhou/autoresearch/IntegerFactoring
+public_replay_timeout_seconds=300
+public_replay_elapsed_seconds=0.725360
+public_replay_exit_code=0
+sage_verifier_timeout_seconds=900
+sage_verifier_elapsed_seconds=5.309204
+sage_verifier_exit_code=0
+status=PASS
+python=3.14.5
+sage=10.9
+```
+
+The runner does not import or execute the candidate.  It first runs the N-only
+fixed-certificate replay.  It then runs the independent Sage hidden-prime
+reconstruction.  It preserves every failed attempt under a timestamped name.
+
+## Candidate and pinned-input SHA-256 pins
+
+```text
+afe07753f790778bd701c73ad39cc5d1e4c12a56a1ac5844d7f653bde1837f4b  DESIGN.md
+faf2bf6e58710401808374e81af6c36d4e4df69dcc6b4d74d3c09d6ca663535b  FAILED_RUNS.md
+87b339efc536763aac40e04a39878f56cb36a49e64d9af492f3196de9a601458  OUTPUT.json
+aa2c010284d5454889ec99163cf7e208806b1716016b41bf91847113b12551de  RESULT.md
+d7e6f51d9133937139030cec9c470a92a2afeb54a4fb444171349bb3cadc6a1c  RUN.log
+0656512043bc1f4e40fba2bb87071f6545064faf1fa6c961b450c5ba897ea9d0  RUN_MANIFEST.md
+00315172e6f1b25ea8f46261693475b266becce940cd84e98799518bb6920f2d  run_with_timeout.py
+2fa5068fbd8eb724d8f169fbf03be7e019db072c8b4fab2537c2c2e725204131  test_frozen_batch_rescue.py
+ce23482d464dee551f3b585dedd803d3af24753592c4b639f5ee796b05d9e356  ../F109_recursive_feedback_rescue/OUTPUT.json
+cbf50afc19a387ee58dffa9b0cca9a4ac2e732265c1b841cb535907cce364479  ../F98_multiseed_presentation_closure_kill/search_factor_assisted.py
+```
+
+## Audit SHA-256 pins
+
+```text
+425f15ba95c6609142fa02cbdd134257fb4c91478ad78f6ae0e23857d21a3b94  AUDIT.md
+b5e0c537cb65e037ff03d9253f4088cdb2559a43055ab73d29be36bfa7361620  AUDIT_FAILED_RUNS.md
+d05b241cbb3a64194a44268d3fc068596f255d65ef50c7c48222fbed5b677d39  audit_independent_verifier.py
+369e8235d4241f79278ce71bcd8cde4ce23ef199a9591fa10805b737f331c63d  audit_n_only_certificate_replay.py
+fb6f909e76c609b50ad766042db5f489eac4e8529e7176d35453cc3dd61ceea2  run_hostile_audit_with_timeout.py
+fbda724bdef7eec61bff6cd44ba19f1702268a41364e3fd96166bae71a81bbc3  AUDIT_OUTPUT.json
+89f2390cb8fe2ab1803d8dce7f06a07484570c449e3bb230666b039c7d485bec  AUDIT_PUBLIC_REPLAY_OUTPUT.json
+ee7cf88df38aaf7df9777eabc8c8f3d3c7083132176466fa863e243ac77f0af8  AUDIT_RUN.log
+```
+
+## Preserved failed attempts
+
+```text
+2c89edc6d3edb77f27c5e810ee25dec60226b5f598dea8f055b139ff11b209fa  AUDIT_FAILED_20260808T025519.727234Z_RUN_LOG.log
+7099d24f57a7cd9c859775f5fe25f7e8e8ca5f8f4e34e0f5922ba15f9df0c195  AUDIT_FAILED_20260808T025645.749694Z_RUN_LOG.log
+89f2390cb8fe2ab1803d8dce7f06a07484570c449e3bb230666b039c7d485bec  AUDIT_FAILED_20260808T025645.749694Z_PUBLIC_OUTPUT.json
+```

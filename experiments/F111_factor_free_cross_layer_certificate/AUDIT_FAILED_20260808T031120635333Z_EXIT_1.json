@@ -1,0 +1,7 @@
+{
+  "audit_verdict": "FAIL",
+  "error": "Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit",
+  "error_type": "ValueError",
+  "status": "FAIL",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/zhou/autoresearch/IntegerFactoring/experiments/F111_factor_free_cross_layer_certificate/independent_certificate_audit.py\", line 687, in main\n    output = audit(args.candidate_dir.resolve(), args.public_basis_source.resolve())\n  File \"/Users/zhou/autoresearch/IntegerFactoring/experiments/F111_factor_free_cross_layer_certificate/independent_certificate_audit.py\", line 618, in audit\n    product_ascii = str(selected_product).encode()\n                    ~~~^^^^^^^^^^^^^^^^^^\nValueError: Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit\n"
+}

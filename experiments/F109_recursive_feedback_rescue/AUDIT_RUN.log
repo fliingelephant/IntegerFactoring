@@ -1,0 +1,7455 @@
+command=["/usr/local/bin/sage", "-python", "/Users/zhou/autoresearch/IntegerFactoring/experiments/F109_recursive_feedback_rescue/audit_independent_verifier.py"]
+timeout_seconds=900
+elapsed_seconds=10.057435833005002
+returncode=0
+stdout:
+{
+  "aggregate": {
+    "all_candidate_projections_exact_match": true,
+    "all_first_round_kernel_bases_nonempty_and_plus_one": true,
+    "all_recursive_runs_factor": true,
+    "all_trigger_pair_values_in_initial_seed_range": true,
+    "all_trigger_pairs_first_processed_at_success": true,
+    "case_count": 7,
+    "seventh_isolated_pair_directly_factors": true,
+    "six_isolated_complete_kernel_bases_global": true,
+    "six_isolated_pair_batches_null": true,
+    "six_successful_dependencies_use_residues_outside_isolated_menu": true
+  },
+  "cases": [
+    {
+      "B": 1024,
+      "N": 3241632473,
+      "candidate_projection_exact_match": true,
+      "elapsed_seconds": 0.5829956670058891,
+      "factored_endpoint_cache_size": 30746,
+      "final_pair_is_numeric_subset_of_initial_seed_range": true,
+      "first_round_exact_value_deduplicated": {
+        "basis_roots": {
+          "minus_one": 0,
+          "non_global": 0,
+          "plus_one": 7
+        },
+        "columns": 11885,
+        "distinct_nonzero_prime_masks": 13288,
+        "duplicate_products": 2465,
+        "kernel_dimension": 7,
+        "rank": 11878,
+        "raw_relations": 14351,
+        "unique_products": 11885,
+        "zero_products": 1
+      },
+      "isolated_final_pair": {
+        "attempted": 2081,
+        "basis_roots": {
+          "minus_one": 0,
+          "non_global": 0,
+          "plus_one": 284
+        },
+        "bound": 1024,
+        "complete_basis_spans_kernel": true,
+        "dependencies": 284,
+        "distinct_nonzero_prime_masks": 2297,
+        "global_dependencies": 284,
+        "n": 32,
+        "pair": [
+          2,
+          13
+        ],
+        "rank": 1793,
+        "repeated": 4,
+        "retained": 2077,
+        "status": "null"
+      },
+      "n": 32,
+      "p": 41011,
+      "q": 79043,
+      "recursive": {
+        "all_processed_pair_count": 70,
+        "completed_rounds": [
+          {
+            "active": 31,
+            "distinct_pairs": 7,
+            "new_dependencies": 2454,
+            "new_relations": 14320,
+            "pair_sequence": [
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                11
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                13,
+                2992276129
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                5,
+                17
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                3,
+                7
+              ],
+              [
+                2,
+                11
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                31
+              ],
+              [
+                2,
+                5
+              ]
+            ],
+            "repeated_pair_occurrences": 24,
+            "round": 1,
+            "zero_new_relation_pairs": 24
+          },
+          {
+            "active": 32,
+            "distinct_pairs": 1,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair_sequence": [
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ]
+            ],
+            "repeated_pair_occurrences": 32,
+            "round": 2,
+            "zero_new_relation_pairs": 32
+          }
+        ],
+        "dependencies": 2969,
+        "distinct_processed_pair_count": 8,
+        "factor": 79043,
+        "factor_dependency_size": 378,
+        "factor_method": "retained_parity_dependency",
+        "global_dependencies": 2968,
+        "relations": 16160,
+        "round": 3,
+        "status": "feedback_factor",
+        "success": {
+          "c": 2477260455,
+          "dependency_relation_indices_zero_based": [
+            69,
+            147,
+            155,
+            326,
+            330,
+            336,
+            356,
+            357,
+            457,
+            476,
+            483,
+            486,
+            504,
+            530,
+            636,
+            638,
+            662,
+            757,
+            763,
+            766,
+            768,
+            769,
+            772,
+            774,
+            810,
+            827,
+            831,
+            844,
+            848,
+            859,
+            887,
+            889,
+            896,
+            956,
+            970,
+            972,
+            974,
+            980,
+            1008,
+            1026,
+            1063,
+            1076,
+            1096,
+            1097,
+            1110,
+            1186,
+            1216,
+            1218,
+            1233,
+            1239,
+            1249,
+            1251,
+            1266,
+            1268,
+            1274,
+            1298,
+            1302,
+            1304,
+            1305,
+            1366,
+            1372,
+            1376,
+            1382,
+            1397,
+            1455,
+            1517,
+            1525,
+            1548,
+            1570,
+            1578,
+            1613,
+            1615,
+            1620,
+            1621,
+            1623,
+            1632,
+            1690,
+            1692,
+            1694,
+            1717,
+            1719,
+            1721,
+            1725,
+            1780,
+            1784,
+            1896,
+            1958,
+            1963,
+            1972,
+            2103,
+            2181,
+            2240,
+            2259,
+            2265,
+            2368,
+            2401,
+            2525,
+            2531,
+            2560,
+            2562,
+            2581,
+            2589,
+            2598,
+            2651,
+            2787,
+            2789,
+            2823,
+            2833,
+            2901,
+            3003,
+            3025,
+            3053,
+            3069,
+            3115,
+            3127,
+            3139,
+            3141,
+            3145,
+            3155,
+            3163,
+            3173,
+            3229,
+            3275,
+            3330,
+            3357,
+            3413,
+            3419,
+            3425,
+            3559,
+            3565,
+            3567,
+            3575,
+            3583,
+            3615,
+            3623,
+            3627,
+            3701,
+            3861,
+            3865,
+            3867,
+            3869,
+            3871,
+            3980,
+            3986,
+            4004,
+            4043,
+            4079,
+            4147,
+            4159,
+            4172,
+            4193,
+            4280,
+            4282,
+            4407,
+            4422,
+            4539,
+            4579,
+            4597,
+            4625,
+            4627,
+            4632,
+            4633,
+            4688,
+            4743,
+            4745,
+            4793,
+            4799,
+            4803,
+            4807,
+            4809,
+            4829,
+            4849,
+            4855,
+            4865,
+            4867,
+            4957,
+            4961,
+            4963,
+            4965,
+            4987,
+            5065,
+            5113,
+            5138,
+            5207,
+            5209,
+            5219,
+            5223,
+            5225,
+            5321,
+            5377,
+            5403,
+            5461,
+            5486,
+            5488,
+            5489,
+            5495,
+            5497,
+            5499,
+            5525,
+            5527,
+            5639,
+            5651,
+            5701,
+            5707,
+            5747,
+            5749,
+            5755,
+            5759,
+            5775,
+            5812,
+            6049,
+            6051,
+            6059,
+            6061,
+            6086,
+            6123,
+            6127,
+            6142,
+            6171,
+            6313,
+            6673,
+            6675,
+            6719,
+            7009,
+            7399,
+            7617,
+            7651,
+            7745,
+            7799,
+            8332,
+            8333,
+            8497,
+            8532,
+            8607,
+            8635,
+            8698,
+            8718,
+            8732,
+            8734,
+            8833,
+            8922,
+            8924,
+            9127,
+            9177,
+            9468,
+            9536,
+            9545,
+            9589,
+            9623,
+            9625,
+            9841,
+            9949,
+            9959,
+            10261,
+            10317,
+            10320,
+            10322,
+            10377,
+            10488,
+            10686,
+            10690,
+            10979,
+            11004,
+            11088,
+            11170,
+            11172,
+            11258,
+            11260,
+            11320,
+            11322,
+            11324,
+            11408,
+            11460,
+            11462,
+            11464,
+            11782,
+            11794,
+            11805,
+            11807,
+            11838,
+            11840,
+            11853,
+            11854,
+            11924,
+            12019,
+            12071,
+            12234,
+            12236,
+            12253,
+            12255,
+            12456,
+            12555,
+            12559,
+            12563,
+            12629,
+            12700,
+            13161,
+            13165,
+            13276,
+            13353,
+            13368,
+            13546,
+            13643,
+            13683,
+            13685,
+            13704,
+            13719,
+            13919,
+            13934,
+            14064,
+            14076,
+            14107,
+            14124,
+            14130,
+            14199,
+            14213,
+            14215,
+            14219,
+            14247,
+            14249,
+            14284,
+            14285,
+            14321,
+            14367,
+            14452,
+            14540,
+            14542,
+            14635,
+            14639,
+            14659,
+            14661,
+            14667,
+            14692,
+            14737,
+            14739,
+            14795,
+            14845,
+            14859,
+            14869,
+            15053,
+            15055,
+            15063,
+            15065,
+            15090,
+            15119,
+            15121,
+            15173,
+            15194,
+            15221,
+            15251,
+            15380,
+            15433,
+            15435,
+            15445,
+            15457,
+            15459,
+            15465,
+            15467,
+            15469,
+            15471,
+            15585,
+            15587,
+            15693,
+            15699,
+            15703,
+            15828,
+            15841,
+            15843,
+            15921,
+            15929,
+            15937,
+            15975,
+            15986,
+            16033,
+            16081,
+            16147,
+            16155,
+            16159
+          ],
+          "dependency_support": 378,
+          "gcd_root_minus_one_N": 79043,
+          "gcd_root_plus_one_N": 41011,
+          "kind": "dependency",
+          "provenance": {
+            "active_relation_index_zero_based": 69,
+            "exponent": 906,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 3,
+            "u": 2,
+            "v": 13
+          },
+          "root_mod_N": 1058780986,
+          "support_pair_counts": {
+            "13,2992276129": 11,
+            "2,11": 71,
+            "2,13": 55,
+            "2,3": 89,
+            "2,31": 33,
+            "2,5": 58,
+            "3,7": 37,
+            "5,17": 24
+          },
+          "support_residues_outside_isolated_menu_count": 323,
+          "support_residues_outside_isolated_menu_first": [
+            1171102231,
+            10487907,
+            849520467,
+            828711660,
+            73214167,
+            585713336,
+            68448559,
+            132387161
+          ],
+          "support_source_counts": {
+            "feedback_round_1": 323,
+            "feedback_round_3": 55
+          },
+          "w": 430670596
+        },
+        "success_round_processed_pairs": [
+          {
+            "active_relation_index_zero_based": 63,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 19,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2050,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 49,
+            "repeated_candidates": 2050
+          },
+          {
+            "active_relation_index_zero_based": 64,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 20,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2050,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 50,
+            "repeated_candidates": 2050
+          },
+          {
+            "active_relation_index_zero_based": 65,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 20,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2050,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 51,
+            "repeated_candidates": 2050
+          },
+          {
+            "active_relation_index_zero_based": 66,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 21,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2050,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 52,
+            "repeated_candidates": 2050
+          },
+          {
+            "active_relation_index_zero_based": 67,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 21,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2050,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 53,
+            "repeated_candidates": 2050
+          },
+          {
+            "active_relation_index_zero_based": 68,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 22,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2050,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 54,
+            "repeated_candidates": 2050
+          },
+          {
+            "active_relation_index_zero_based": 69,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 22,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 1813,
+            "new_dependencies": 496,
+            "new_relations": 1809,
+            "pair": [
+              2,
+              13
+            ],
+            "prior_processed_pair_occurrences": 0,
+            "repeated_candidates": 4
+          }
+        ],
+        "trigger_pair": [
+          2,
+          13
+        ],
+        "trigger_pair_members_are_initial_seed_values": true
+      },
+      "stable_certificate": {
+        "A": 20505,
+        "B": 39521,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1
+      },
+      "trial_hard": true
+    },
+    {
+      "B": 1156,
+      "N": 12809029193,
+      "candidate_projection_exact_match": true,
+      "elapsed_seconds": 0.8930105829931563,
+      "factored_endpoint_cache_size": 49724,
+      "final_pair_is_numeric_subset_of_initial_seed_range": true,
+      "first_round_exact_value_deduplicated": {
+        "basis_roots": {
+          "minus_one": 0,
+          "non_global": 0,
+          "plus_one": 6
+        },
+        "columns": 16320,
+        "distinct_nonzero_prime_masks": 18461,
+        "duplicate_products": 4499,
+        "kernel_dimension": 6,
+        "rank": 16314,
+        "raw_relations": 20820,
+        "unique_products": 16320,
+        "zero_products": 1
+      },
+      "isolated_final_pair": {
+        "attempted": 2347,
+        "basis_roots": {
+          "minus_one": 0,
+          "non_global": 0,
+          "plus_one": 210
+        },
+        "bound": 1156,
+        "complete_basis_spans_kernel": true,
+        "dependencies": 210,
+        "distinct_nonzero_prime_masks": 2886,
+        "global_dependencies": 210,
+        "n": 34,
+        "pair": [
+          3,
+          5
+        ],
+        "rank": 2133,
+        "repeated": 4,
+        "retained": 2343,
+        "status": "null"
+      },
+      "n": 34,
+      "p": 80107,
+      "q": 159899,
+      "recursive": {
+        "all_processed_pair_count": 88,
+        "completed_rounds": [
+          {
+            "active": 33,
+            "distinct_pairs": 9,
+            "new_dependencies": 4485,
+            "new_relations": 20787,
+            "pair_sequence": [
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                5,
+                11
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                17,
+                1506944611
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                13,
+                19
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                3,
+                7
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                23
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                5,
+                9222501019
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                29,
+                2650143971
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                7
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ]
+            ],
+            "repeated_pair_occurrences": 24,
+            "round": 1,
+            "zero_new_relation_pairs": 24
+          },
+          {
+            "active": 34,
+            "distinct_pairs": 1,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair_sequence": [
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ]
+            ],
+            "repeated_pair_occurrences": 34,
+            "round": 2,
+            "zero_new_relation_pairs": 34
+          }
+        ],
+        "dependencies": 5498,
+        "distinct_processed_pair_count": 12,
+        "factor": 80107,
+        "factor_dependency_size": 580,
+        "factor_method": "retained_parity_dependency",
+        "global_dependencies": 5497,
+        "relations": 26446,
+        "round": 3,
+        "status": "feedback_factor",
+        "success": {
+          "c": 11339611024,
+          "dependency_relation_indices_zero_based": [
+            9,
+            17,
+            53,
+            93,
+            95,
+            128,
+            133,
+            137,
+            158,
+            160,
+            253,
+            259,
+            283,
+            285,
+            287,
+            291,
+            306,
+            310,
+            314,
+            316,
+            318,
+            321,
+            403,
+            411,
+            415,
+            468,
+            478,
+            482,
+            498,
+            500,
+            504,
+            536,
+            570,
+            572,
+            585,
+            587,
+            620,
+            637,
+            647,
+            651,
+            653,
+            673,
+            675,
+            697,
+            699,
+            709,
+            711,
+            764,
+            779,
+            813,
+            893,
+            897,
+            904,
+            916,
+            918,
+            947,
+            951,
+            1036,
+            1040,
+            1054,
+            1072,
+            1121,
+            1132,
+            1144,
+            1148,
+            1184,
+            1211,
+            1218,
+            1222,
+            1250,
+            1252,
+            1254,
+            1271,
+            1297,
+            1313,
+            1315,
+            1317,
+            1372,
+            1374,
+            1421,
+            1423,
+            1426,
+            1466,
+            1487,
+            1489,
+            1491,
+            1497,
+            1499,
+            1540,
+            1542,
+            1550,
+            1554,
+            1624,
+            1641,
+            1643,
+            1645,
+            1712,
+            1726,
+            1732,
+            1734,
+            1752,
+            1760,
+            1788,
+            1876,
+            1878,
+            1924,
+            1928,
+            1939,
+            1943,
+            1947,
+            1949,
+            1951,
+            1955,
+            1957,
+            1959,
+            1961,
+            2004,
+            2006,
+            2040,
+            2042,
+            2048,
+            2060,
+            2085,
+            2091,
+            2145,
+            2180,
+            2182,
+            2306,
+            2312,
+            2340,
+            2346,
+            2360,
+            2369,
+            2405,
+            2409,
+            2461,
+            2463,
+            2467,
+            2475,
+            2482,
+            2534,
+            2573,
+            2595,
+            2623,
+            2635,
+            2807,
+            2813,
+            2817,
+            2839,
+            2843,
+            2877,
+            2889,
+            2964,
+            3018,
+            3030,
+            3062,
+            3069,
+            3073,
+            3112,
+            3120,
+            3276,
+            3280,
+            3347,
+            3353,
+            3370,
+            3372,
+            3376,
+            3379,
+            3381,
+            3400,
+            3404,
+            3441,
+            3443,
+            3450,
+            3475,
+            3479,
+            3489,
+            3584,
+            3614,
+            3654,
+            3657,
+            3669,
+            3673,
+            3677,
+            3681,
+            3683,
+            3687,
+            3758,
+            3773,
+            3775,
+            3777,
+            3783,
+            3863,
+            3910,
+            3931,
+            3940,
+            3942,
+            4008,
+            4029,
+            4033,
+            4081,
+            4095,
+            4097,
+            4129,
+            4261,
+            4305,
+            4307,
+            4322,
+            4369,
+            4485,
+            4489,
+            4540,
+            4546,
+            4587,
+            4591,
+            4593,
+            4619,
+            4621,
+            4670,
+            4675,
+            4695,
+            4814,
+            4839,
+            4841,
+            4844,
+            4889,
+            4904,
+            4924,
+            4986,
+            5036,
+            5041,
+            5046,
+            5052,
+            5147,
+            5218,
+            5328,
+            5416,
+            5676,
+            5749,
+            5758,
+            5762,
+            5776,
+            5824,
+            5844,
+            5893,
+            5894,
+            5908,
+            5910,
+            6060,
+            6066,
+            6094,
+            6464,
+            6468,
+            6558,
+            6632,
+            6726,
+            6741,
+            6913,
+            6923,
+            6933,
+            7332,
+            7490,
+            7498,
+            7708,
+            7940,
+            8032,
+            8282,
+            8310,
+            8422,
+            8490,
+            8814,
+            9403,
+            9551,
+            9743,
+            9882,
+            10198,
+            10218,
+            10236,
+            10238,
+            10359,
+            10415,
+            10433,
+            10455,
+            10476,
+            10911,
+            11137,
+            11308,
+            11409,
+            11812,
+            11814,
+            11872,
+            11885,
+            11889,
+            11891,
+            11957,
+            11965,
+            11967,
+            11972,
+            11974,
+            12003,
+            12005,
+            12007,
+            12041,
+            12044,
+            12093,
+            12125,
+            12133,
+            12149,
+            12195,
+            12199,
+            12243,
+            12449,
+            12484,
+            12486,
+            12535,
+            12745,
+            12915,
+            12917,
+            12957,
+            12967,
+            12969,
+            12974,
+            13060,
+            13132,
+            13134,
+            13166,
+            13216,
+            13272,
+            13355,
+            13387,
+            13445,
+            13447,
+            13449,
+            13466,
+            13485,
+            13489,
+            13491,
+            13495,
+            13497,
+            13499,
+            13516,
+            13589,
+            13591,
+            13750,
+            13752,
+            13805,
+            13807,
+            13809,
+            13813,
+            13916,
+            13928,
+            13936,
+            13938,
+            13940,
+            14261,
+            14266,
+            14329,
+            14341,
+            14350,
+            14489,
+            14531,
+            14544,
+            14546,
+            14701,
+            14734,
+            14780,
+            14840,
+            14926,
+            15009,
+            15156,
+            15240,
+            15241,
+            15330,
+            15334,
+            15336,
+            15394,
+            15400,
+            15512,
+            15518,
+            15522,
+            15524,
+            15530,
+            15534,
+            15538,
+            15541,
+            15563,
+            15588,
+            15592,
+            15672,
+            15782,
+            15849,
+            15911,
+            15961,
+            16004,
+            16009,
+            16040,
+            16042,
+            16074,
+            16076,
+            16278,
+            16358,
+            16402,
+            16457,
+            16546,
+            16670,
+            16680,
+            16697,
+            16822,
+            16858,
+            16897,
+            16940,
+            16977,
+            16989,
+            17017,
+            17134,
+            17241,
+            17265,
+            17778,
+            17858,
+            18006,
+            18224,
+            18354,
+            18568,
+            18614,
+            18660,
+            18996,
+            19120,
+            19206,
+            19662,
+            20044,
+            20418,
+            20540,
+            20696,
+            20698,
+            20710,
+            20938,
+            20942,
+            20956,
+            20960,
+            21107,
+            21110,
+            21118,
+            21375,
+            21439,
+            21562,
+            21566,
+            21568,
+            21572,
+            21610,
+            21614,
+            21616,
+            21618,
+            21916,
+            21949,
+            22177,
+            22206,
+            22210,
+            22218,
+            22220,
+            22222,
+            22226,
+            22460,
+            22464,
+            22466,
+            22560,
+            22564,
+            22566,
+            22612,
+            22626,
+            22628,
+            22636,
+            22658,
+            22740,
+            22777,
+            22865,
+            22904,
+            22910,
+            22935,
+            22970,
+            22972,
+            23052,
+            23117,
+            23133,
+            23138,
+            23152,
+            23252,
+            23254,
+            23256,
+            23364,
+            23430,
+            23497,
+            23581,
+            23613,
+            23647,
+            23877,
+            23889,
+            24249,
+            24323,
+            24329,
+            24557,
+            24569,
+            24573,
+            24610,
+            24651,
+            24652,
+            24659,
+            24707,
+            24709,
+            24716,
+            24767,
+            24822,
+            24867,
+            24869,
+            25010,
+            25016,
+            25033,
+            25053,
+            25300,
+            25302,
+            25310,
+            25448,
+            25490,
+            25492,
+            25501,
+            25531,
+            25535,
+            25541,
+            25594,
+            25613,
+            25617,
+            25619,
+            25621,
+            25641,
+            25643,
+            25653,
+            25665,
+            25671,
+            25679,
+            25681,
+            25691,
+            25694,
+            25698,
+            25752,
+            25756,
+            25813,
+            25819,
+            25823,
+            25825,
+            25840,
+            25844,
+            25945,
+            25947,
+            25949,
+            25953,
+            25991,
+            25997,
+            25999,
+            26009,
+            26011,
+            26013,
+            26055,
+            26063,
+            26066,
+            26103,
+            26105,
+            26121,
+            26152,
+            26185,
+            26212,
+            26223,
+            26225,
+            26236,
+            26270,
+            26272,
+            26353,
+            26355,
+            26366,
+            26380,
+            26382,
+            26445
+          ],
+          "dependency_support": 580,
+          "gcd_root_minus_one_N": 80107,
+          "gcd_root_plus_one_N": 159899,
+          "kind": "dependency",
+          "provenance": {
+            "active_relation_index_zero_based": 87,
+            "exponent": 504,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 3,
+            "u": 3,
+            "v": 5
+          },
+          "root_mod_N": 1057252187,
+          "support_pair_counts": {
+            "13,19": 17,
+            "17,1506944611": 11,
+            "2,109": 47,
+            "2,3": 127,
+            "2,5": 89,
+            "2,7": 38,
+            "29,2650143971": 13,
+            "3,23": 50,
+            "3,5": 60,
+            "3,7": 61,
+            "5,11": 42,
+            "5,9222501019": 23
+          },
+          "support_residues_outside_isolated_menu_count": 518,
+          "support_residues_outside_isolated_menu_first": [
+            3188646,
+            11883878976,
+            10033578542,
+            7107871895,
+            821208701,
+            7390878309,
+            4168439041,
+            8336878082
+          ],
+          "support_source_counts": {
+            "feedback_round_1": 433,
+            "feedback_round_3": 145,
+            "initial_seed": 2
+          },
+          "w": 4093225613
+        },
+        "success_round_processed_pairs": [
+          {
+            "active_relation_index_zero_based": 67,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 20,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 52,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 68,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 21,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 53,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 69,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 21,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 292,
+            "new_relations": 2312,
+            "pair": [
+              2,
+              109
+            ],
+            "prior_processed_pair_occurrences": 0,
+            "repeated_candidates": 2
+          },
+          {
+            "active_relation_index_zero_based": 70,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 22,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 54,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 71,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 22,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 488,
+            "new_relations": 2309,
+            "pair": [
+              2,
+              7
+            ],
+            "prior_processed_pair_occurrences": 0,
+            "repeated_candidates": 5
+          },
+          {
+            "active_relation_index_zero_based": 72,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 23,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 55,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 73,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 23,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 56,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 74,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 24,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 57,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 75,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 24,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 58,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 76,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 25,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 59,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 77,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 25,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 60,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 78,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 26,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 61,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 79,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 26,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 62,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 80,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 27,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 63,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 81,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 27,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 64,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 82,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 28,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 65,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 83,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 28,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 66,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 84,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 29,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 67,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 85,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 29,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              7
+            ],
+            "prior_processed_pair_occurrences": 1,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 86,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 30,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 68,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 87,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 30,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 1009,
+            "new_dependencies": 212,
+            "new_relations": 1005,
+            "pair": [
+              3,
+              5
+            ],
+            "prior_processed_pair_occurrences": 0,
+            "repeated_candidates": 4
+          }
+        ],
+        "trigger_pair": [
+          3,
+          5
+        ],
+        "trigger_pair_members_are_initial_seed_values": true
+      },
+      "stable_certificate": {
+        "A": 40053,
+        "B": 79949,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1
+      },
+      "trial_hard": true
+    },
+    {
+      "B": 1156,
+      "N": 12828426053,
+      "candidate_projection_exact_match": true,
+      "elapsed_seconds": 0.9990968749916647,
+      "factored_endpoint_cache_size": 49722,
+      "final_pair_is_numeric_subset_of_initial_seed_range": true,
+      "first_round_exact_value_deduplicated": {
+        "basis_roots": {
+          "minus_one": 0,
+          "non_global": 0,
+          "plus_one": 6
+        },
+        "columns": 18049,
+        "distinct_nonzero_prime_masks": 20246,
+        "duplicate_products": 5080,
+        "kernel_dimension": 6,
+        "rank": 18043,
+        "raw_relations": 23130,
+        "unique_products": 18049,
+        "zero_products": 1
+      },
+      "isolated_final_pair": {
+        "attempted": 2347,
+        "basis_roots": {
+          "minus_one": 0,
+          "non_global": 0,
+          "plus_one": 356
+        },
+        "bound": 1156,
+        "complete_basis_spans_kernel": true,
+        "dependencies": 356,
+        "distinct_nonzero_prime_masks": 2640,
+        "global_dependencies": 356,
+        "n": 34,
+        "pair": [
+          2,
+          7
+        ],
+        "rank": 1986,
+        "repeated": 5,
+        "retained": 2342,
+        "status": "null"
+      },
+      "n": 34,
+      "p": 80363,
+      "q": 159631,
+      "recursive": {
+        "all_processed_pair_count": 72,
+        "completed_rounds": [
+          {
+            "active": 33,
+            "distinct_pairs": 10,
+            "new_dependencies": 5068,
+            "new_relations": 23097,
+            "pair_sequence": [
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                13,
+                19
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                3,
+                17
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                13,
+                19
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                3,
+                7
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                23,
+                1115515309
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                5,
+                4105096337
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                29,
+                6193033267
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                31
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                17
+              ]
+            ],
+            "repeated_pair_occurrences": 23,
+            "round": 1,
+            "zero_new_relation_pairs": 23
+          },
+          {
+            "active": 34,
+            "distinct_pairs": 1,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair_sequence": [
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ]
+            ],
+            "repeated_pair_occurrences": 34,
+            "round": 2,
+            "zero_new_relation_pairs": 34
+          }
+        ],
+        "dependencies": 5466,
+        "distinct_processed_pair_count": 12,
+        "factor": 159631,
+        "factor_dependency_size": 418,
+        "factor_method": "retained_parity_dependency",
+        "global_dependencies": 5465,
+        "relations": 26639,
+        "round": 3,
+        "status": "feedback_factor",
+        "success": {
+          "c": 9676412728,
+          "dependency_relation_indices_zero_based": [
+            62,
+            162,
+            168,
+            170,
+            176,
+            264,
+            417,
+            450,
+            470,
+            476,
+            478,
+            484,
+            568,
+            574,
+            576,
+            642,
+            822,
+            839,
+            848,
+            852,
+            854,
+            870,
+            872,
+            874,
+            888,
+            944,
+            1039,
+            1043,
+            1054,
+            1056,
+            1136,
+            1228,
+            1230,
+            1233,
+            1289,
+            1291,
+            1293,
+            1313,
+            1342,
+            1345,
+            1348,
+            1395,
+            1397,
+            1399,
+            1448,
+            1450,
+            1454,
+            1461,
+            1508,
+            1514,
+            1623,
+            1625,
+            1712,
+            1728,
+            1736,
+            1739,
+            1740,
+            1854,
+            1862,
+            1970,
+            1974,
+            1978,
+            1983,
+            1984,
+            1987,
+            1989,
+            1990,
+            1992,
+            1996,
+            2002,
+            2037,
+            2041,
+            2043,
+            2045,
+            2047,
+            2148,
+            2156,
+            2170,
+            2183,
+            2191,
+            2284,
+            2337,
+            2353,
+            2357,
+            2360,
+            2364,
+            2443,
+            2448,
+            2449,
+            2451,
+            2453,
+            2485,
+            2573,
+            2724,
+            2854,
+            2875,
+            2949,
+            3006,
+            3050,
+            3074,
+            3091,
+            3127,
+            3130,
+            3134,
+            3245,
+            3249,
+            3251,
+            3312,
+            3323,
+            3327,
+            3339,
+            3343,
+            3392,
+            3509,
+            3513,
+            3537,
+            3610,
+            3621,
+            3625,
+            3649,
+            3655,
+            3705,
+            3709,
+            3749,
+            3751,
+            3755,
+            3759,
+            3777,
+            3779,
+            3811,
+            3954,
+            4005,
+            4024,
+            4076,
+            4178,
+            4232,
+            4283,
+            4311,
+            4313,
+            4358,
+            4370,
+            4618,
+            4655,
+            4664,
+            4805,
+            4843,
+            4872,
+            4908,
+            5074,
+            5145,
+            5324,
+            5458,
+            5460,
+            5504,
+            5510,
+            6274,
+            6385,
+            6414,
+            6501,
+            6882,
+            6968,
+            7175,
+            7270,
+            7272,
+            7378,
+            7380,
+            7413,
+            7430,
+            7440,
+            7606,
+            7700,
+            7718,
+            7732,
+            7822,
+            7944,
+            7969,
+            7971,
+            7973,
+            8136,
+            8208,
+            8219,
+            8260,
+            8269,
+            8282,
+            8396,
+            8443,
+            8445,
+            8555,
+            8557,
+            8659,
+            8743,
+            8745,
+            8747,
+            8834,
+            8911,
+            9105,
+            9107,
+            9278,
+            9353,
+            9646,
+            9723,
+            9770,
+            9874,
+            9917,
+            10098,
+            10198,
+            10224,
+            10267,
+            10269,
+            10473,
+            10520,
+            10527,
+            10579,
+            10581,
+            10635,
+            10637,
+            10715,
+            10736,
+            10861,
+            11051,
+            11053,
+            11082,
+            11084,
+            11410,
+            11415,
+            11427,
+            11681,
+            11759,
+            11787,
+            12193,
+            12271,
+            12273,
+            12587,
+            12773,
+            12791,
+            12829,
+            12831,
+            12941,
+            13027,
+            13157,
+            13159,
+            13237,
+            13455,
+            13519,
+            13547,
+            14002,
+            14115,
+            14142,
+            14249,
+            14278,
+            14287,
+            14430,
+            14525,
+            14558,
+            14610,
+            14697,
+            14755,
+            14757,
+            14825,
+            15181,
+            15217,
+            15289,
+            15346,
+            15623,
+            15630,
+            15649,
+            15762,
+            15795,
+            15863,
+            15923,
+            16207,
+            16257,
+            16669,
+            16673,
+            16845,
+            16847,
+            17579,
+            18263,
+            18357,
+            18511,
+            18546,
+            18564,
+            18566,
+            18568,
+            18657,
+            18730,
+            18734,
+            18736,
+            18738,
+            18909,
+            18915,
+            19056,
+            19195,
+            19276,
+            19296,
+            19472,
+            19474,
+            19635,
+            19655,
+            19670,
+            19698,
+            19917,
+            19972,
+            20039,
+            20166,
+            20304,
+            20306,
+            20308,
+            20310,
+            20314,
+            20334,
+            20470,
+            20476,
+            20478,
+            20520,
+            20522,
+            20542,
+            20546,
+            20598,
+            20600,
+            20635,
+            20822,
+            20935,
+            21129,
+            21131,
+            21133,
+            21198,
+            21577,
+            21579,
+            21634,
+            21636,
+            21638,
+            21678,
+            21680,
+            21763,
+            21765,
+            21844,
+            21908,
+            21958,
+            22086,
+            22251,
+            22292,
+            22296,
+            22300,
+            22345,
+            22398,
+            22484,
+            22588,
+            22886,
+            22894,
+            22908,
+            22918,
+            23064,
+            23068,
+            23070,
+            23072,
+            23149,
+            23245,
+            23247,
+            23329,
+            23502,
+            23513,
+            23663,
+            23783,
+            23835,
+            23904,
+            23940,
+            23942,
+            24008,
+            24010,
+            24136,
+            24141,
+            24143,
+            24145,
+            24355,
+            24424,
+            24426,
+            24819,
+            24831,
+            24836,
+            24865,
+            24883,
+            24933,
+            24967,
+            25137,
+            25139,
+            25141,
+            25182,
+            25205,
+            25260,
+            25332,
+            25386,
+            25388,
+            25390,
+            25445,
+            25572,
+            25668,
+            25951,
+            26045,
+            26048,
+            26058,
+            26062,
+            26064,
+            26265,
+            26268,
+            26290,
+            26316,
+            26318,
+            26324,
+            26366,
+            26367,
+            26398,
+            26400,
+            26404,
+            26521,
+            26539,
+            26632,
+            26638
+          ],
+          "dependency_support": 418,
+          "gcd_root_minus_one_N": 159631,
+          "gcd_root_plus_one_N": 80363,
+          "kind": "dependency",
+          "provenance": {
+            "active_relation_index_zero_based": 71,
+            "exponent": 601,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 3,
+            "u": 2,
+            "v": 7
+          },
+          "root_mod_N": 8212536058,
+          "support_pair_counts": {
+            "13,19": 18,
+            "2,17": 35,
+            "2,3": 82,
+            "2,31": 42,
+            "2,5": 60,
+            "2,7": 24,
+            "23,1115515309": 19,
+            "29,6193033267": 9,
+            "3,17": 37,
+            "3,7": 29,
+            "5,23": 38,
+            "5,4105096337": 25
+          },
+          "support_residues_outside_isolated_menu_count": 394,
+          "support_residues_outside_isolated_menu_first": [
+            786432,
+            2112209385,
+            4069249027,
+            8138498054,
+            965854167,
+            7521807960,
+            1278181760,
+            1201672159
+          ],
+          "support_source_counts": {
+            "feedback_round_1": 356,
+            "feedback_round_3": 62
+          },
+          "w": 10227504972
+        },
+        "success_round_processed_pairs": [
+          {
+            "active_relation_index_zero_based": 67,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 20,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 49,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 68,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 21,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 50,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 69,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 21,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 105,
+            "new_relations": 2311,
+            "pair": [
+              5,
+              23
+            ],
+            "prior_processed_pair_occurrences": 0,
+            "repeated_candidates": 3
+          },
+          {
+            "active_relation_index_zero_based": 70,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 22,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 51,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 71,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 22,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 1203,
+            "new_dependencies": 274,
+            "new_relations": 1198,
+            "pair": [
+              2,
+              7
+            ],
+            "prior_processed_pair_occurrences": 0,
+            "repeated_candidates": 5
+          }
+        ],
+        "trigger_pair": [
+          2,
+          7
+        ],
+        "trigger_pair_members_are_initial_seed_values": true
+      },
+      "stable_certificate": {
+        "A": 40181,
+        "B": 79815,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1
+      },
+      "trial_hard": true
+    },
+    {
+      "B": 1156,
+      "N": 12854972153,
+      "candidate_projection_exact_match": true,
+      "elapsed_seconds": 1.01725262500986,
+      "factored_endpoint_cache_size": 47412,
+      "final_pair_is_numeric_subset_of_initial_seed_range": true,
+      "first_round_exact_value_deduplicated": {
+        "basis_roots": {
+          "minus_one": 0,
+          "non_global": 0,
+          "plus_one": 13
+        },
+        "columns": 16575,
+        "distinct_nonzero_prime_masks": 18536,
+        "duplicate_products": 4243,
+        "kernel_dimension": 13,
+        "rank": 16562,
+        "raw_relations": 20819,
+        "unique_products": 16575,
+        "zero_products": 1
+      },
+      "isolated_final_pair": {
+        "attempted": 2347,
+        "basis_roots": {
+          "minus_one": 0,
+          "non_global": 0,
+          "plus_one": 366
+        },
+        "bound": 1156,
+        "complete_basis_spans_kernel": true,
+        "dependencies": 366,
+        "distinct_nonzero_prime_masks": 2627,
+        "global_dependencies": 366,
+        "n": 34,
+        "pair": [
+          2,
+          7
+        ],
+        "rank": 1976,
+        "repeated": 5,
+        "retained": 2342,
+        "status": "null"
+      },
+      "n": 34,
+      "p": 80687,
+      "q": 159319,
+      "recursive": {
+        "all_processed_pair_count": 72,
+        "completed_rounds": [
+          {
+            "active": 33,
+            "distinct_pairs": 9,
+            "new_dependencies": 4236,
+            "new_relations": 20786,
+            "pair_sequence": [
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                19
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                3,
+                7
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                13
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                17
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                19
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                3,
+                7
+              ],
+              [
+                2,
+                11
+              ],
+              [
+                3,
+                19
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                5,
+                4113591089
+              ],
+              [
+                2,
+                13
+              ],
+              [
+                3,
+                19
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                29,
+                2659649411
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                17
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                3,
+                7
+              ],
+              [
+                2,
+                17
+              ]
+            ],
+            "repeated_pair_occurrences": 24,
+            "round": 1,
+            "zero_new_relation_pairs": 24
+          },
+          {
+            "active": 34,
+            "distinct_pairs": 1,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair_sequence": [
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ]
+            ],
+            "repeated_pair_occurrences": 34,
+            "round": 2,
+            "zero_new_relation_pairs": 34
+          }
+        ],
+        "dependencies": 4656,
+        "distinct_processed_pair_count": 11,
+        "factor": 80687,
+        "factor_dependency_size": 523,
+        "factor_method": "retained_parity_dependency",
+        "global_dependencies": 4655,
+        "relations": 23519,
+        "round": 3,
+        "status": "feedback_factor",
+        "success": {
+          "c": 7661795728,
+          "dependency_relation_indices_zero_based": [
+            7,
+            44,
+            63,
+            108,
+            123,
+            125,
+            155,
+            216,
+            218,
+            220,
+            222,
+            282,
+            288,
+            292,
+            302,
+            324,
+            325,
+            327,
+            328,
+            337,
+            341,
+            351,
+            359,
+            368,
+            409,
+            486,
+            522,
+            524,
+            526,
+            528,
+            529,
+            530,
+            531,
+            533,
+            534,
+            536,
+            542,
+            550,
+            562,
+            639,
+            674,
+            699,
+            703,
+            732,
+            736,
+            749,
+            824,
+            844,
+            885,
+            902,
+            906,
+            960,
+            983,
+            1007,
+            1011,
+            1013,
+            1015,
+            1114,
+            1116,
+            1118,
+            1124,
+            1173,
+            1175,
+            1287,
+            1289,
+            1291,
+            1297,
+            1301,
+            1341,
+            1342,
+            1428,
+            1497,
+            1516,
+            1520,
+            1566,
+            1574,
+            1614,
+            1618,
+            1620,
+            1621,
+            1623,
+            1629,
+            1639,
+            1715,
+            1724,
+            1732,
+            1740,
+            1744,
+            1748,
+            1750,
+            1776,
+            1782,
+            1986,
+            2003,
+            2020,
+            2027,
+            2029,
+            2055,
+            2196,
+            2298,
+            2300,
+            2314,
+            2316,
+            2352,
+            2455,
+            2457,
+            2461,
+            2463,
+            2585,
+            2587,
+            2599,
+            2621,
+            2625,
+            2629,
+            2633,
+            2677,
+            2727,
+            2729,
+            2738,
+            2829,
+            2831,
+            2871,
+            2914,
+            2977,
+            2981,
+            3035,
+            3043,
+            3045,
+            3149,
+            3184,
+            3186,
+            3188,
+            3192,
+            3209,
+            3213,
+            3215,
+            3218,
+            3224,
+            3247,
+            3307,
+            3344,
+            3370,
+            3523,
+            3531,
+            3593,
+            3597,
+            3670,
+            3686,
+            3692,
+            3709,
+            3711,
+            3713,
+            3737,
+            3742,
+            3744,
+            3746,
+            3748,
+            3750,
+            3767,
+            3777,
+            3787,
+            3794,
+            3797,
+            3799,
+            3803,
+            3868,
+            3870,
+            3929,
+            3933,
+            3946,
+            4029,
+            4040,
+            4042,
+            4051,
+            4055,
+            4057,
+            4059,
+            4077,
+            4082,
+            4083,
+            4085,
+            4091,
+            4163,
+            4165,
+            4265,
+            4297,
+            4325,
+            4327,
+            4341,
+            4345,
+            4443,
+            4445,
+            4477,
+            4479,
+            4508,
+            4570,
+            4607,
+            4609,
+            4655,
+            4726,
+            4728,
+            4770,
+            4827,
+            4885,
+            4921,
+            4950,
+            4990,
+            4996,
+            5043,
+            5138,
+            5218,
+            5220,
+            5504,
+            5506,
+            5602,
+            5604,
+            5606,
+            5608,
+            5612,
+            5766,
+            5794,
+            5956,
+            5958,
+            5986,
+            5988,
+            6092,
+            6104,
+            6106,
+            6145,
+            6414,
+            6416,
+            6418,
+            6622,
+            6740,
+            6744,
+            6839,
+            6841,
+            6886,
+            7032,
+            7034,
+            7048,
+            7151,
+            7167,
+            7274,
+            7276,
+            7340,
+            7356,
+            7394,
+            7400,
+            7462,
+            7464,
+            7560,
+            7562,
+            7678,
+            7724,
+            7854,
+            7858,
+            7931,
+            7936,
+            7938,
+            7944,
+            7946,
+            8035,
+            8037,
+            8078,
+            8080,
+            8420,
+            8424,
+            8469,
+            8472,
+            8478,
+            8488,
+            8546,
+            8548,
+            8654,
+            8658,
+            8725,
+            8884,
+            8958,
+            9095,
+            9097,
+            9196,
+            9269,
+            9312,
+            9332,
+            9342,
+            9344,
+            9384,
+            9390,
+            9489,
+            9491,
+            9506,
+            9516,
+            9599,
+            9664,
+            9668,
+            9672,
+            9782,
+            9784,
+            9786,
+            9906,
+            9912,
+            9928,
+            9932,
+            9934,
+            9962,
+            10060,
+            10141,
+            10158,
+            10268,
+            10314,
+            10318,
+            10322,
+            10597,
+            10662,
+            10664,
+            10744,
+            10752,
+            10836,
+            10850,
+            10930,
+            10932,
+            10934,
+            11054,
+            11060,
+            11066,
+            11124,
+            11126,
+            11130,
+            11138,
+            11142,
+            11246,
+            11250,
+            11256,
+            11302,
+            11389,
+            11410,
+            11424,
+            11436,
+            11440,
+            11444,
+            11468,
+            11474,
+            11478,
+            11540,
+            11714,
+            11716,
+            11723,
+            11742,
+            11767,
+            11850,
+            11918,
+            12030,
+            12042,
+            12046,
+            12096,
+            12098,
+            12104,
+            12108,
+            12116,
+            12370,
+            12430,
+            12432,
+            12434,
+            12444,
+            12446,
+            12450,
+            12452,
+            12562,
+            12725,
+            12915,
+            13017,
+            13112,
+            13118,
+            13120,
+            13137,
+            13154,
+            13156,
+            13307,
+            13314,
+            13326,
+            13328,
+            13586,
+            13615,
+            13684,
+            13690,
+            13718,
+            13909,
+            14166,
+            14168,
+            14172,
+            14226,
+            14230,
+            14255,
+            14344,
+            14348,
+            14367,
+            14377,
+            14379,
+            14552,
+            14554,
+            14694,
+            14698,
+            14752,
+            14758,
+            14760,
+            14764,
+            14776,
+            14901,
+            14906,
+            15078,
+            15086,
+            15090,
+            15098,
+            15198,
+            15199,
+            15269,
+            15280,
+            15286,
+            15288,
+            15290,
+            15374,
+            15376,
+            15380,
+            15424,
+            15428,
+            15478,
+            15482,
+            15525,
+            15550,
+            15554,
+            15702,
+            15712,
+            15790,
+            15794,
+            15796,
+            15922,
+            15992,
+            16173,
+            16207,
+            16228,
+            16447,
+            16605,
+            16623,
+            16695,
+            16700,
+            16872,
+            16876,
+            16905,
+            17016,
+            17048,
+            17285,
+            17293,
+            17359,
+            17481,
+            17560,
+            17736,
+            17808,
+            17825,
+            18003,
+            18088,
+            18092,
+            18177,
+            18388,
+            18595,
+            19033,
+            19487,
+            19837,
+            19861,
+            20067,
+            20155,
+            20299,
+            20327,
+            20601,
+            20657,
+            20893,
+            20896,
+            20899,
+            20919,
+            21029,
+            21052,
+            21147,
+            21312,
+            21447,
+            21449,
+            21453,
+            21934,
+            22037,
+            22243,
+            22247,
+            22249,
+            22257,
+            22265,
+            22283,
+            22307,
+            22315,
+            22374,
+            22399,
+            22605,
+            22615,
+            22623,
+            22625,
+            22646,
+            22848,
+            22849,
+            22867,
+            22873,
+            22877,
+            22879,
+            22881,
+            22883,
+            22903,
+            22953,
+            22981,
+            22989,
+            23099,
+            23103,
+            23107,
+            23210,
+            23244,
+            23479,
+            23514,
+            23518
+          ],
+          "dependency_support": 523,
+          "gcd_root_minus_one_N": 80687,
+          "gcd_root_plus_one_N": 159319,
+          "kind": "dependency",
+          "provenance": {
+            "active_relation_index_zero_based": 71,
+            "exponent": 196,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 3,
+            "u": 2,
+            "v": 7
+          },
+          "root_mod_N": 569246786,
+          "support_pair_counts": {
+            "2,11": 52,
+            "2,13": 62,
+            "2,163": 43,
+            "2,17": 42,
+            "2,3": 102,
+            "2,5": 95,
+            "2,7": 5,
+            "29,2659649411": 11,
+            "3,19": 40,
+            "3,7": 45,
+            "5,4113591089": 25
+          },
+          "support_residues_outside_isolated_menu_count": 517,
+          "support_residues_outside_isolated_menu_first": [
+            1536,
+            774840978,
+            2469052167,
+            12760771392,
+            12572369870,
+            2814048404,
+            8650651198,
+            4446330243
+          ],
+          "support_source_counts": {
+            "feedback_round_1": 474,
+            "feedback_round_3": 48,
+            "initial_seed": 1
+          },
+          "w": 8313647135
+        },
+        "success_round_processed_pairs": [
+          {
+            "active_relation_index_zero_based": 67,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 20,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 44,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 68,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 21,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 45,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 69,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 21,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 302,
+            "new_relations": 2312,
+            "pair": [
+              2,
+              163
+            ],
+            "prior_processed_pair_occurrences": 0,
+            "repeated_candidates": 2
+          },
+          {
+            "active_relation_index_zero_based": 70,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 22,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 46,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 71,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 22,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 393,
+            "new_dependencies": 97,
+            "new_relations": 388,
+            "pair": [
+              2,
+              7
+            ],
+            "prior_processed_pair_occurrences": 0,
+            "repeated_candidates": 5
+          }
+        ],
+        "trigger_pair": [
+          2,
+          7
+        ],
+        "trigger_pair_members_are_initial_seed_values": true
+      },
+      "stable_certificate": {
+        "A": 40343,
+        "B": 79659,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1
+      },
+      "trial_hard": true
+    },
+    {
+      "B": 1156,
+      "N": 12859936021,
+      "candidate_projection_exact_match": true,
+      "elapsed_seconds": 0.9052182080049533,
+      "factored_endpoint_cache_size": 45094,
+      "final_pair_is_numeric_subset_of_initial_seed_range": true,
+      "first_round_exact_value_deduplicated": {
+        "basis_roots": {
+          "minus_one": 0,
+          "non_global": 0,
+          "plus_one": 22
+        },
+        "columns": 16842,
+        "distinct_nonzero_prime_masks": 18519,
+        "duplicate_products": 6860,
+        "kernel_dimension": 22,
+        "rank": 16820,
+        "raw_relations": 23703,
+        "unique_products": 16842,
+        "zero_products": 1
+      },
+      "isolated_final_pair": {
+        "attempted": 2347,
+        "basis_roots": {
+          "minus_one": 0,
+          "non_global": 0,
+          "plus_one": 312
+        },
+        "bound": 1156,
+        "complete_basis_spans_kernel": true,
+        "dependencies": 312,
+        "distinct_nonzero_prime_masks": 2643,
+        "global_dependencies": 312,
+        "n": 34,
+        "pair": [
+          2,
+          13
+        ],
+        "rank": 2031,
+        "repeated": 4,
+        "retained": 2343,
+        "status": "null"
+      },
+      "n": 34,
+      "p": 80779,
+      "q": 159199,
+      "recursive": {
+        "all_processed_pair_count": 49,
+        "completed_rounds": [
+          {
+            "active": 33,
+            "distinct_pairs": 11,
+            "new_dependencies": 6865,
+            "new_relations": 23670,
+            "pair_sequence": [
+              [
+                2,
+                19
+              ],
+              [
+                3,
+                8573290681
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                5,
+                10287948817
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                3,
+                11431054241
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                11,
+                7014510557
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                2,
+                17
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                19
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                2,
+                17
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                31
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                17
+              ]
+            ],
+            "repeated_pair_occurrences": 22,
+            "round": 1,
+            "zero_new_relation_pairs": 22
+          }
+        ],
+        "dependencies": 7052,
+        "distinct_processed_pair_count": 12,
+        "factor": 80779,
+        "factor_dependency_size": 634,
+        "factor_method": "retained_parity_dependency",
+        "global_dependencies": 7051,
+        "relations": 24826,
+        "round": 2,
+        "status": "feedback_factor",
+        "success": {
+          "c": 6711333320,
+          "dependency_relation_indices_zero_based": [
+            48,
+            65,
+            67,
+            83,
+            85,
+            201,
+            325,
+            327,
+            417,
+            429,
+            434,
+            440,
+            468,
+            490,
+            556,
+            558,
+            603,
+            608,
+            627,
+            662,
+            668,
+            679,
+            688,
+            694,
+            696,
+            700,
+            710,
+            712,
+            714,
+            716,
+            727,
+            765,
+            866,
+            912,
+            914,
+            936,
+            942,
+            946,
+            948,
+            950,
+            956,
+            966,
+            972,
+            982,
+            986,
+            999,
+            1066,
+            1070,
+            1072,
+            1080,
+            1104,
+            1126,
+            1128,
+            1138,
+            1140,
+            1144,
+            1172,
+            1174,
+            1206,
+            1214,
+            1234,
+            1666,
+            1668,
+            1712,
+            1722,
+            1724,
+            1828,
+            1832,
+            1857,
+            1969,
+            1982,
+            1986,
+            1988,
+            1996,
+            2064,
+            2074,
+            2111,
+            2162,
+            2172,
+            2176,
+            2180,
+            2223,
+            2240,
+            2246,
+            2289,
+            2310,
+            2314,
+            2448,
+            2450,
+            2608,
+            2626,
+            2698,
+            2702,
+            2712,
+            2720,
+            3088,
+            3450,
+            3526,
+            3530,
+            3610,
+            3684,
+            3686,
+            3822,
+            3826,
+            3828,
+            3878,
+            3884,
+            4026,
+            4072,
+            4074,
+            4126,
+            4146,
+            4218,
+            4270,
+            4272,
+            4278,
+            4280,
+            4310,
+            4314,
+            4452,
+            4456,
+            4458,
+            4460,
+            4468,
+            4604,
+            4652,
+            4654,
+            4682,
+            4684,
+            4757,
+            4759,
+            4881,
+            4887,
+            4889,
+            4923,
+            4925,
+            4927,
+            4945,
+            4947,
+            4951,
+            4981,
+            4987,
+            4991,
+            5059,
+            5071,
+            5111,
+            5119,
+            5147,
+            5149,
+            5201,
+            5231,
+            5282,
+            5287,
+            5299,
+            5345,
+            5353,
+            5395,
+            5451,
+            5453,
+            5455,
+            5487,
+            5491,
+            5545,
+            5549,
+            5577,
+            5603,
+            5671,
+            5673,
+            5685,
+            5723,
+            5788,
+            5805,
+            5815,
+            5852,
+            5859,
+            5863,
+            5865,
+            5935,
+            5939,
+            5951,
+            5973,
+            6011,
+            6019,
+            6021,
+            6025,
+            6215,
+            6239,
+            6251,
+            6283,
+            6293,
+            6311,
+            6319,
+            6397,
+            6422,
+            6424,
+            6443,
+            6445,
+            6461,
+            6509,
+            6581,
+            6623,
+            6625,
+            6643,
+            6655,
+            6683,
+            6687,
+            6700,
+            6707,
+            6727,
+            6735,
+            6741,
+            6757,
+            6765,
+            6767,
+            6777,
+            6779,
+            6825,
+            6833,
+            6853,
+            6857,
+            6861,
+            6873,
+            6883,
+            6885,
+            6886,
+            6912,
+            6933,
+            6935,
+            6937,
+            6939,
+            6941,
+            6945,
+            6947,
+            6951,
+            6977,
+            6987,
+            7061,
+            7069,
+            7073,
+            7075,
+            7105,
+            7107,
+            7189,
+            7465,
+            7489,
+            7491,
+            7515,
+            7519,
+            7541,
+            7543,
+            7549,
+            7641,
+            7737,
+            7767,
+            7799,
+            7895,
+            7921,
+            7927,
+            7977,
+            7979,
+            8147,
+            8159,
+            8177,
+            8221,
+            8297,
+            8299,
+            8889,
+            8921,
+            8955,
+            8959,
+            9057,
+            9073,
+            9165,
+            9183,
+            9278,
+            9302,
+            9374,
+            9508,
+            9529,
+            9536,
+            9542,
+            9544,
+            9627,
+            9632,
+            9645,
+            9686,
+            9766,
+            9774,
+            9778,
+            9780,
+            9832,
+            9846,
+            9892,
+            9894,
+            9900,
+            9960,
+            9968,
+            9970,
+            9984,
+            10056,
+            10104,
+            10114,
+            10322,
+            10328,
+            10336,
+            10338,
+            10342,
+            10362,
+            10373,
+            10392,
+            10394,
+            10426,
+            10438,
+            10455,
+            10459,
+            10465,
+            10478,
+            10554,
+            10574,
+            10644,
+            10749,
+            10795,
+            10799,
+            10823,
+            10836,
+            10856,
+            10868,
+            10870,
+            10898,
+            10921,
+            10927,
+            10930,
+            10934,
+            10949,
+            10960,
+            10991,
+            11049,
+            11230,
+            11232,
+            11234,
+            11240,
+            11242,
+            11246,
+            11278,
+            11316,
+            11318,
+            11326,
+            11370,
+            11374,
+            11375,
+            11377,
+            11410,
+            11414,
+            11431,
+            11443,
+            11460,
+            11462,
+            11484,
+            11527,
+            11529,
+            11618,
+            11620,
+            11694,
+            11695,
+            11915,
+            12058,
+            12078,
+            12168,
+            12183,
+            12261,
+            12263,
+            12383,
+            12387,
+            12389,
+            12401,
+            12421,
+            12499,
+            12501,
+            12505,
+            12637,
+            12643,
+            12645,
+            12658,
+            12660,
+            12684,
+            12699,
+            12703,
+            12738,
+            12742,
+            12759,
+            12771,
+            12775,
+            12777,
+            12779,
+            12834,
+            12871,
+            12879,
+            12887,
+            12889,
+            12989,
+            12999,
+            13000,
+            13001,
+            13048,
+            13050,
+            13071,
+            13073,
+            13079,
+            13107,
+            13112,
+            13134,
+            13170,
+            13185,
+            13195,
+            13223,
+            13275,
+            13277,
+            13281,
+            13313,
+            13317,
+            13319,
+            13352,
+            13357,
+            13370,
+            13414,
+            13416,
+            13461,
+            13467,
+            13469,
+            13475,
+            13743,
+            13795,
+            13797,
+            13825,
+            13835,
+            13920,
+            13945,
+            13949,
+            13953,
+            13955,
+            14065,
+            14071,
+            14082,
+            14091,
+            14117,
+            14185,
+            14187,
+            14199,
+            14203,
+            14215,
+            14221,
+            14237,
+            14243,
+            14255,
+            14266,
+            14283,
+            14299,
+            14301,
+            14349,
+            14353,
+            14369,
+            14373,
+            14375,
+            14380,
+            14381,
+            14385,
+            14421,
+            14700,
+            14726,
+            14728,
+            14852,
+            15180,
+            15196,
+            15336,
+            15912,
+            15914,
+            15964,
+            15966,
+            15988,
+            16070,
+            16180,
+            16182,
+            16762,
+            16799,
+            17044,
+            17048,
+            17050,
+            17077,
+            17098,
+            17130,
+            17132,
+            17252,
+            17258,
+            17277,
+            17546,
+            17582,
+            17619,
+            17667,
+            17729,
+            17737,
+            17789,
+            17793,
+            18049,
+            18118,
+            18256,
+            18404,
+            18416,
+            18434,
+            18456,
+            18504,
+            18634,
+            18636,
+            18646,
+            18698,
+            18700,
+            18701,
+            18734,
+            18763,
+            18771,
+            18888,
+            18890,
+            18936,
+            18948,
+            18977,
+            19030,
+            19032,
+            19228,
+            19328,
+            19340,
+            19367,
+            19384,
+            19386,
+            19394,
+            19548,
+            19567,
+            19582,
+            19700,
+            19886,
+            20123,
+            20218,
+            20264,
+            20266,
+            20277,
+            20381,
+            20543,
+            20566,
+            20574,
+            20576,
+            20578,
+            20580,
+            20636,
+            20650,
+            20664,
+            20686,
+            20874,
+            20993,
+            21007,
+            21166,
+            21180,
+            21250,
+            21308,
+            21310,
+            21314,
+            21325,
+            21369,
+            21382,
+            21388,
+            21469,
+            21501,
+            21539,
+            21775,
+            21823,
+            21827,
+            21835,
+            21855,
+            21877,
+            21879,
+            21923,
+            21989,
+            21993,
+            22096,
+            22097,
+            22101,
+            22302,
+            22373,
+            22522,
+            22643,
+            22852,
+            22903,
+            23111,
+            23133,
+            23212,
+            23239,
+            23247,
+            23322,
+            23400,
+            23422,
+            23424,
+            23463,
+            23528,
+            23655,
+            23661,
+            23690,
+            23691,
+            23697,
+            23784,
+            23790,
+            23814,
+            23816,
+            23818,
+            23981,
+            23983,
+            24018,
+            24121,
+            24186,
+            24187,
+            24253,
+            24309,
+            24311,
+            24313,
+            24319,
+            24321,
+            24325,
+            24511,
+            24513,
+            24515,
+            24521,
+            24558,
+            24559,
+            24561,
+            24563,
+            24599,
+            24678,
+            24825
+          ],
+          "dependency_support": 634,
+          "gcd_root_minus_one_N": 80779,
+          "gcd_root_plus_one_N": 159199,
+          "kind": "dependency",
+          "provenance": {
+            "active_relation_index_zero_based": 48,
+            "exponent": 563,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 2,
+            "u": 2,
+            "v": 13
+          },
+          "root_mod_N": 11131830875,
+          "support_pair_counts": {
+            "11,7014510557": 16,
+            "2,13": 29,
+            "2,17": 41,
+            "2,19": 87,
+            "2,3": 86,
+            "2,31": 38,
+            "2,5": 100,
+            "2,7": 109,
+            "3,11431054241": 7,
+            "3,5": 43,
+            "3,8573290681": 38,
+            "5,10287948817": 40
+          },
+          "support_residues_outside_isolated_menu_count": 605,
+          "support_residues_outside_isolated_menu_first": [
+            9728,
+            6968495376,
+            3802051934,
+            667611992,
+            12684627848,
+            974659809,
+            318106137,
+            6044016603
+          ],
+          "support_source_counts": {
+            "feedback_round_1": 605,
+            "feedback_round_2": 29
+          },
+          "w": 9131928996
+        },
+        "success_round_processed_pairs": [
+          {
+            "active_relation_index_zero_based": 33,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 1,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 19
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              19
+            ],
+            "prior_processed_pair_occurrences": 2,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 34,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 2,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 19
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              5
+            ],
+            "prior_processed_pair_occurrences": 5,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 35,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 2,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 19
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 10,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 36,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 3,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 19
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              7
+            ],
+            "prior_processed_pair_occurrences": 7,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 37,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 3,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 19
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              19
+            ],
+            "prior_processed_pair_occurrences": 3,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 38,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 4,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 19
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              7
+            ],
+            "prior_processed_pair_occurrences": 8,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 39,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 4,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 19
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              5
+            ],
+            "prior_processed_pair_occurrences": 6,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 40,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 5,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 19
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 11,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 41,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 5,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 19
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              19
+            ],
+            "prior_processed_pair_occurrences": 4,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 42,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 6,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 19
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              19
+            ],
+            "prior_processed_pair_occurrences": 5,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 43,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 6,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 19
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              19
+            ],
+            "prior_processed_pair_occurrences": 6,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 44,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 7,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 19
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 12,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 45,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 7,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 19
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              5
+            ],
+            "prior_processed_pair_occurrences": 7,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 46,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 8,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 19
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 13,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 47,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 8,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 19
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 14,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 48,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 9,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 19
+            },
+            "attempted_candidates": 1127,
+            "new_dependencies": 169,
+            "new_relations": 1123,
+            "pair": [
+              2,
+              13
+            ],
+            "prior_processed_pair_occurrences": 0,
+            "repeated_candidates": 4
+          }
+        ],
+        "trigger_pair": [
+          2,
+          13
+        ],
+        "trigger_pair_members_are_initial_seed_values": true
+      },
+      "stable_certificate": {
+        "A": 13463,
+        "B": 26533,
+        "g": 6,
+        "gcd_AB_N_minus_1": 1
+      },
+      "trial_hard": true
+    },
+    {
+      "B": 1156,
+      "N": 12862140737,
+      "candidate_projection_exact_match": true,
+      "elapsed_seconds": 0.7652184170001419,
+      "factored_endpoint_cache_size": 44512,
+      "final_pair_is_numeric_subset_of_initial_seed_range": true,
+      "first_round_exact_value_deduplicated": {
+        "basis_roots": {
+          "minus_one": 0,
+          "non_global": 0,
+          "plus_one": 24
+        },
+        "columns": 15045,
+        "distinct_nonzero_prime_masks": 16812,
+        "duplicate_products": 3460,
+        "kernel_dimension": 24,
+        "rank": 15021,
+        "raw_relations": 18506,
+        "unique_products": 15045,
+        "zero_products": 1
+      },
+      "isolated_final_pair": {
+        "attempted": 2347,
+        "basis_roots": {
+          "minus_one": 0,
+          "non_global": 0,
+          "plus_one": 333
+        },
+        "bound": 1156,
+        "complete_basis_spans_kernel": true,
+        "dependencies": 333,
+        "distinct_nonzero_prime_masks": 2665,
+        "global_dependencies": 333,
+        "n": 34,
+        "pair": [
+          2,
+          5
+        ],
+        "rank": 2009,
+        "repeated": 5,
+        "retained": 2342,
+        "status": "null"
+      },
+      "n": 34,
+      "p": 80803,
+      "q": 159179,
+      "recursive": {
+        "all_processed_pair_count": 72,
+        "completed_rounds": [
+          {
+            "active": 33,
+            "distinct_pairs": 8,
+            "new_dependencies": 3463,
+            "new_relations": 18473,
+            "pair_sequence": [
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                13
+              ],
+              [
+                5,
+                1028971259
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                7
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                11
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                13
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                12058256941
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                7
+              ],
+              [
+                2,
+                11
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                5,
+                1028971259
+              ],
+              [
+                2,
+                13
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                2,
+                29
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ]
+            ],
+            "repeated_pair_occurrences": 25,
+            "round": 1,
+            "zero_new_relation_pairs": 25
+          },
+          {
+            "active": 34,
+            "distinct_pairs": 1,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair_sequence": [
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ]
+            ],
+            "repeated_pair_occurrences": 34,
+            "round": 2,
+            "zero_new_relation_pairs": 34
+          }
+        ],
+        "dependencies": 3735,
+        "distinct_processed_pair_count": 10,
+        "factor": 159179,
+        "factor_dependency_size": 509,
+        "factor_method": "retained_parity_dependency",
+        "global_dependencies": 3734,
+        "relations": 20980,
+        "round": 3,
+        "status": "feedback_factor",
+        "success": {
+          "c": 208144810,
+          "dependency_relation_indices_zero_based": [
+            142,
+            156,
+            206,
+            223,
+            286,
+            292,
+            302,
+            303,
+            304,
+            308,
+            310,
+            334,
+            338,
+            340,
+            346,
+            396,
+            440,
+            512,
+            524,
+            550,
+            552,
+            556,
+            594,
+            596,
+            602,
+            604,
+            652,
+            662,
+            677,
+            679,
+            681,
+            683,
+            694,
+            700,
+            728,
+            730,
+            734,
+            796,
+            824,
+            826,
+            828,
+            830,
+            898,
+            900,
+            912,
+            925,
+            1006,
+            1012,
+            1018,
+            1022,
+            1034,
+            1036,
+            1041,
+            1043,
+            1045,
+            1047,
+            1049,
+            1053,
+            1096,
+            1100,
+            1102,
+            1116,
+            1118,
+            1128,
+            1213,
+            1240,
+            1266,
+            1268,
+            1298,
+            1342,
+            1366,
+            1394,
+            1441,
+            1443,
+            1484,
+            1488,
+            1501,
+            1508,
+            1510,
+            1514,
+            1518,
+            1596,
+            1602,
+            1646,
+            1658,
+            1662,
+            1668,
+            1669,
+            1673,
+            1675,
+            1768,
+            1777,
+            1830,
+            1832,
+            1848,
+            1850,
+            1872,
+            1914,
+            1916,
+            1918,
+            1922,
+            1924,
+            1942,
+            1956,
+            1958,
+            2002,
+            2029,
+            2036,
+            2057,
+            2068,
+            2070,
+            2072,
+            2084,
+            2152,
+            2158,
+            2174,
+            2224,
+            2228,
+            2240,
+            2244,
+            2254,
+            2353,
+            2355,
+            2377,
+            2379,
+            2514,
+            2541,
+            2592,
+            2602,
+            2656,
+            2704,
+            3008,
+            3020,
+            3070,
+            3080,
+            3118,
+            3136,
+            3140,
+            3290,
+            3292,
+            3294,
+            3352,
+            3576,
+            3596,
+            3690,
+            3806,
+            3912,
+            3922,
+            4089,
+            4142,
+            4144,
+            4208,
+            4210,
+            4220,
+            4264,
+            4270,
+            4298,
+            4338,
+            4340,
+            4382,
+            4516,
+            4518,
+            4552,
+            4564,
+            4568,
+            4626,
+            4630,
+            4679,
+            4738,
+            4753,
+            4809,
+            4887,
+            5007,
+            5009,
+            5099,
+            5106,
+            5139,
+            5177,
+            5374,
+            5593,
+            5758,
+            5813,
+            5925,
+            6114,
+            6542,
+            6682,
+            7060,
+            7120,
+            7156,
+            7226,
+            7228,
+            7282,
+            7486,
+            7549,
+            7702,
+            7713,
+            7891,
+            7943,
+            8066,
+            8070,
+            8142,
+            8146,
+            8248,
+            8250,
+            8252,
+            8256,
+            8432,
+            8436,
+            8543,
+            8545,
+            8945,
+            8949,
+            8958,
+            8984,
+            9041,
+            9043,
+            9054,
+            9056,
+            9089,
+            9179,
+            9266,
+            9279,
+            9326,
+            9467,
+            9624,
+            9626,
+            9632,
+            9639,
+            9641,
+            9720,
+            9788,
+            9796,
+            9828,
+            9832,
+            9834,
+            9838,
+            9864,
+            9974,
+            10014,
+            10027,
+            10066,
+            10068,
+            10095,
+            10144,
+            10224,
+            10228,
+            10334,
+            10400,
+            10462,
+            10464,
+            10466,
+            10468,
+            10491,
+            10504,
+            10521,
+            10554,
+            10578,
+            10584,
+            10599,
+            10622,
+            10640,
+            10642,
+            10748,
+            10750,
+            10761,
+            10886,
+            10896,
+            10934,
+            10938,
+            10942,
+            11014,
+            11056,
+            11066,
+            11072,
+            11082,
+            11092,
+            11100,
+            11154,
+            11158,
+            11250,
+            11372,
+            11423,
+            11630,
+            11679,
+            11687,
+            11773,
+            11791,
+            11807,
+            11813,
+            11817,
+            11819,
+            11865,
+            11881,
+            11891,
+            11893,
+            11991,
+            12009,
+            12041,
+            12055,
+            12057,
+            12063,
+            12067,
+            12073,
+            12139,
+            12141,
+            12184,
+            12241,
+            12332,
+            12364,
+            12402,
+            12415,
+            12421,
+            12435,
+            12439,
+            12445,
+            12461,
+            12465,
+            12469,
+            12512,
+            12562,
+            12777,
+            12778,
+            12783,
+            12815,
+            12817,
+            12818,
+            12847,
+            12863,
+            12893,
+            12909,
+            12911,
+            12949,
+            13028,
+            13061,
+            13164,
+            13321,
+            13331,
+            13459,
+            13469,
+            13475,
+            13477,
+            13479,
+            13487,
+            13489,
+            13538,
+            13539,
+            13541,
+            13621,
+            13697,
+            13731,
+            13753,
+            13757,
+            13773,
+            13777,
+            13794,
+            13824,
+            13829,
+            13902,
+            13918,
+            13928,
+            13946,
+            13948,
+            13952,
+            13955,
+            13969,
+            13971,
+            13974,
+            13976,
+            14005,
+            14006,
+            14027,
+            14033,
+            14058,
+            14069,
+            14082,
+            14096,
+            14128,
+            14132,
+            14145,
+            14152,
+            14184,
+            14250,
+            14276,
+            14288,
+            14317,
+            14330,
+            14338,
+            14430,
+            14440,
+            14469,
+            14577,
+            14665,
+            14731,
+            14732,
+            14883,
+            14930,
+            14969,
+            15001,
+            15050,
+            15099,
+            15101,
+            15105,
+            15107,
+            15257,
+            15300,
+            15353,
+            15369,
+            15373,
+            15424,
+            15465,
+            15571,
+            15701,
+            15777,
+            16066,
+            16068,
+            16086,
+            16113,
+            16134,
+            16203,
+            16438,
+            16446,
+            16658,
+            16662,
+            16678,
+            16682,
+            16828,
+            16964,
+            16966,
+            16968,
+            17091,
+            17233,
+            17274,
+            17276,
+            17296,
+            17439,
+            17441,
+            17526,
+            17528,
+            17558,
+            17562,
+            17642,
+            17818,
+            18023,
+            18054,
+            18059,
+            18066,
+            18084,
+            18163,
+            18238,
+            18374,
+            18376,
+            18404,
+            18408,
+            18410,
+            18438,
+            18440,
+            18442,
+            18513,
+            18552,
+            18595,
+            18597,
+            18599,
+            18640,
+            18671,
+            18975,
+            19154,
+            19211,
+            19215,
+            19221,
+            19315,
+            19317,
+            19319,
+            19321,
+            19330,
+            19332,
+            19338,
+            19345,
+            19403,
+            19528,
+            19540,
+            19559,
+            19604,
+            19606,
+            19609,
+            19623,
+            19625,
+            19627,
+            19668,
+            19706,
+            19854,
+            19856,
+            19963,
+            20320,
+            20438,
+            20588,
+            20589,
+            20590,
+            20722,
+            20724,
+            20789,
+            20791,
+            20875,
+            20911,
+            20912,
+            20916,
+            20918,
+            20926,
+            20964,
+            20979
+          ],
+          "dependency_support": 509,
+          "gcd_root_minus_one_N": 159179,
+          "gcd_root_plus_one_N": 80803,
+          "kind": "dependency",
+          "provenance": {
+            "active_relation_index_zero_based": 71,
+            "exponent": 83,
+            "kind": "feedback_trajectory",
+            "orientation": "u_times_v_power",
+            "round": 3,
+            "u": 2,
+            "v": 5
+          },
+          "root_mod_N": 4154890259,
+          "support_pair_counts": {
+            "2,11": 61,
+            "2,12058256941": 61,
+            "2,13": 46,
+            "2,29": 39,
+            "2,3": 121,
+            "2,5": 8,
+            "2,7": 75,
+            "3,7": 35,
+            "5,1028971259": 19,
+            "5,7": 44
+          },
+          "support_residues_outside_isolated_menu_count": 501,
+          "support_residues_outside_isolated_menu_first": [
+            5739438555,
+            1506113031,
+            1491849322,
+            293468702,
+            3193597791,
+            12686641591,
+            7246168065,
+            7088827264
+          ],
+          "support_source_counts": {
+            "feedback_round_1": 457,
+            "feedback_round_3": 52
+          },
+          "w": 9067312144
+        },
+        "success_round_processed_pairs": [
+          {
+            "active_relation_index_zero_based": 67,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 20,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 53,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 68,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 21,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 54,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 69,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 21,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 180,
+            "new_relations": 2311,
+            "pair": [
+              5,
+              7
+            ],
+            "prior_processed_pair_occurrences": 0,
+            "repeated_candidates": 3
+          },
+          {
+            "active_relation_index_zero_based": 70,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 22,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2314,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 55,
+            "repeated_candidates": 2314
+          },
+          {
+            "active_relation_index_zero_based": 71,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 22,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 168,
+            "new_dependencies": 70,
+            "new_relations": 163,
+            "pair": [
+              2,
+              5
+            ],
+            "prior_processed_pair_occurrences": 0,
+            "repeated_candidates": 5
+          }
+        ],
+        "trigger_pair": [
+          2,
+          5
+        ],
+        "trigger_pair_members_are_initial_seed_values": true
+      },
+      "stable_certificate": {
+        "A": 40401,
+        "B": 79589,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1
+      },
+      "trial_hard": true
+    },
+    {
+      "B": 1444,
+      "N": 204816942773,
+      "candidate_projection_exact_match": true,
+      "elapsed_seconds": 1.9226489580032649,
+      "factored_endpoint_cache_size": 98382,
+      "final_pair_is_numeric_subset_of_initial_seed_range": true,
+      "first_round_exact_value_deduplicated": {
+        "basis_roots": {
+          "minus_one": 0,
+          "non_global": 0,
+          "plus_one": 4
+        },
+        "columns": 17799,
+        "distinct_nonzero_prime_masks": 21344,
+        "duplicate_products": 5322,
+        "kernel_dimension": 4,
+        "rank": 17795,
+        "raw_relations": 23122,
+        "unique_products": 17799,
+        "zero_products": 1
+      },
+      "isolated_final_pair": {
+        "attempted": 127,
+        "basis_roots": {
+          "minus_one": 0,
+          "non_global": 0,
+          "plus_one": 42
+        },
+        "bound": 1444,
+        "dependencies": 42,
+        "global_dependencies": 42,
+        "n": 38,
+        "pair": [
+          2,
+          13
+        ],
+        "repeated": 4,
+        "result": {
+          "c": 68137094950,
+          "channel": "direct_minus",
+          "factor": 639839,
+          "provenance": {
+            "exponent": 44,
+            "kind": "fixed_pair_trajectory",
+            "orientation": "u_times_v_power",
+            "u": 2,
+            "v": 13
+          },
+          "w": 54674882390
+        },
+        "retained": 122,
+        "status": "factor"
+      },
+      "n": 38,
+      "p": 320107,
+      "q": 639839,
+      "recursive": {
+        "all_processed_pair_count": 123,
+        "completed_rounds": [
+          {
+            "active": 37,
+            "distinct_pairs": 8,
+            "new_dependencies": 5302,
+            "new_relations": 23085,
+            "pair_sequence": [
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                13,
+                189061793329
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                3,
+                17
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                3,
+                7
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                23
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                7
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                29,
+                98877144787
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                17
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ]
+            ],
+            "repeated_pair_occurrences": 29,
+            "round": 1,
+            "zero_new_relation_pairs": 29
+          },
+          {
+            "active": 38,
+            "distinct_pairs": 1,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair_sequence": [
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ]
+            ],
+            "repeated_pair_occurrences": 38,
+            "round": 2,
+            "zero_new_relation_pairs": 38
+          },
+          {
+            "active": 38,
+            "distinct_pairs": 8,
+            "new_dependencies": 1875,
+            "new_relations": 14433,
+            "pair_sequence": [
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                11
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                17
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                7,
+                101
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                1129
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                5
+              ]
+            ],
+            "repeated_pair_occurrences": 33,
+            "round": 3,
+            "zero_new_relation_pairs": 33
+          }
+        ],
+        "dependencies": 8360,
+        "distinct_processed_pair_count": 19,
+        "factor": 639839,
+        "factor_dependency_size": 0,
+        "factor_method": "direct_endpoint_minus",
+        "global_dependencies": 8360,
+        "relations": 52078,
+        "round": 4,
+        "status": "feedback_factor",
+        "success": {
+          "c": 68137094950,
+          "gcd": 639839,
+          "kind": "direct",
+          "provenance": {
+            "active_relation_index_zero_based": 122,
+            "exponent": 44,
+            "kind": "feedback_trajectory",
+            "orientation": "u_times_v_power",
+            "round": 4,
+            "u": 2,
+            "v": 13
+          },
+          "w": 54674882390
+        },
+        "success_round_processed_pairs": [
+          {
+            "active_relation_index_zero_based": 113,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 41,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2890,
+            "new_dependencies": 2,
+            "new_relations": 2889,
+            "pair": [
+              47,
+              59
+            ],
+            "prior_processed_pair_occurrences": 0,
+            "repeated_candidates": 1
+          },
+          {
+            "active_relation_index_zero_based": 114,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 42,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2890,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              5
+            ],
+            "prior_processed_pair_occurrences": 22,
+            "repeated_candidates": 2890
+          },
+          {
+            "active_relation_index_zero_based": 115,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 42,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2890,
+            "new_dependencies": 755,
+            "new_relations": 2887,
+            "pair": [
+              2,
+              29
+            ],
+            "prior_processed_pair_occurrences": 0,
+            "repeated_candidates": 3
+          },
+          {
+            "active_relation_index_zero_based": 116,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 43,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2890,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 76,
+            "repeated_candidates": 2890
+          },
+          {
+            "active_relation_index_zero_based": 117,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 43,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2890,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 77,
+            "repeated_candidates": 2890
+          },
+          {
+            "active_relation_index_zero_based": 118,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 44,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2890,
+            "new_dependencies": 118,
+            "new_relations": 2887,
+            "pair": [
+              5,
+              23
+            ],
+            "prior_processed_pair_occurrences": 0,
+            "repeated_candidates": 3
+          },
+          {
+            "active_relation_index_zero_based": 119,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 44,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2890,
+            "new_dependencies": 0,
+            "new_relations": 0,
+            "pair": [
+              2,
+              3
+            ],
+            "prior_processed_pair_occurrences": 78,
+            "repeated_candidates": 2890
+          },
+          {
+            "active_relation_index_zero_based": 120,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 45,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2890,
+            "new_dependencies": 173,
+            "new_relations": 2888,
+            "pair": [
+              3,
+              71
+            ],
+            "prior_processed_pair_occurrences": 0,
+            "repeated_candidates": 2
+          },
+          {
+            "active_relation_index_zero_based": 121,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 45,
+              "kind": "feedback_trajectory",
+              "orientation": "u_times_v_power",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 2890,
+            "new_dependencies": 67,
+            "new_relations": 2887,
+            "pair": [
+              7,
+              19
+            ],
+            "prior_processed_pair_occurrences": 0,
+            "repeated_candidates": 3
+          },
+          {
+            "active_relation_index_zero_based": 122,
+            "active_relation_provenance": {
+              "active_relation_index_zero_based": 0,
+              "exponent": 46,
+              "kind": "feedback_trajectory",
+              "orientation": "u_power_times_v",
+              "round": 1,
+              "u": 2,
+              "v": 3
+            },
+            "attempted_candidates": 90,
+            "new_dependencies": 43,
+            "new_relations": 85,
+            "pair": [
+              2,
+              13
+            ],
+            "prior_processed_pair_occurrences": 0,
+            "repeated_candidates": 4
+          }
+        ],
+        "trigger_pair": [
+          2,
+          13
+        ],
+        "trigger_pair_members_are_initial_seed_values": true
+      },
+      "stable_certificate": {
+        "A": 160053,
+        "B": 319919,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1
+      },
+      "trial_hard": true
+    }
+  ],
+  "elapsed_seconds": 7.088140209001722,
+  "independence": {
+    "candidate_code_imported": false,
+    "endpoint_factorization_backend": "SageMath 10.9 / Pari",
+    "gf2_implementation": "independent incremental column elimination plus independent row-rank cross-checks",
+    "pinned_f98_code_imported": false
+  },
+  "pins": {
+    "audit_source_sha256": "74946e8bae3b4b3461c162e012261ea321399f1e00ed76b6487d510828000f27",
+    "candidate_artifacts": {
+      "DESIGN.md": "1780f158b0a0b53812b12cbca39eddfc3038f28e1b320b88e82f900c76f85ae4",
+      "FAILED_RUNS.md": "aaaa7d3f21ff245d7dfcaa0fa79baa2ed7ba1344c9baf5df96b9af7648f09ab2",
+      "OUTPUT.json": "ce23482d464dee551f3b585dedd803d3af24753592c4b639f5ee796b05d9e356",
+      "RESULT.md": "e19e656156fbd170ccdc1209516d513abdc486b27df52bdfe023303f64c82d7b",
+      "RUN.log": "4432bcf455c6f74d018452cdc56255095c47481253bc5bac458c5c64c262aa9d",
+      "RUN_FAILED_R01_ASSERTED_ISOLATED_SUCCESS.log": "f0e9d8281b1b07f97d9e2d005f9959461bcbff4f6822b5c20cbc2fbd6c44f0c6",
+      "RUN_MANIFEST.md": "76e3fc6d6a25d89b7ad67825a5ade79a2a7c05702603d972ef0d5beb6984b08b",
+      "run_with_timeout.py": "05749e3626f600edeac67c6fe50e69dfe3a2a41792a9a2d0f7043bbe48041fb5",
+      "test_recursive_rescue.py": "a223723f2bfef64a97ff7a14532627927d11870e9965b40a96b05c89f27b612e"
+    },
+    "pinned_f98_factor_assisted_source": {
+      "path": "experiments/F98_multiseed_presentation_closure_kill/search_factor_assisted.py",
+      "sha256": "cbf50afc19a387ee58dffa9b0cca9a4ac2e732265c1b841cb535907cce364479"
+    }
+  },
+  "scope": {
+    "factor_assisted": true,
+    "finite_cases_only": true,
+    "no_factor_free_promotion_claim": true,
+    "queue_order": "FIFO by retained relation index; the active batch is frozen at round start; invariance under other queue, pair, exponent, or orientation orders was not tested"
+  },
+  "status": "PASS",
+  "verdict": "candidate observations verified; interpretation must remain finite, factor-assisted, and queue-order-specific"
+}
+
+stderr:

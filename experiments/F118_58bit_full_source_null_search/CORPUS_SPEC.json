@@ -1,0 +1,16 @@
+{
+  "family": "F118_58bit_full_source_null_search",
+  "p_start_inclusive": 320000000,
+  "q_start_inclusive": 639999999,
+  "pair_cap": 16,
+  "selected_cap": 4,
+  "required_bit_length": 58,
+  "require_distinct_primes": true,
+  "require_trial_hard": true,
+  "require_p98_stable": true,
+  "selection_rule": "first cases whose complete frozen F116 layer has positive exact kernel nullity, no direct factor, and zero normalized-root quotient image",
+  "candidate_order": "p consecutive primes upward; q consecutive primes downward; pair equal ordinals",
+  "full_source": "F116 seeds, exact deterministic seed gcd basis, complete frozen trajectories, then every unordered pair 2 <= u < v <= n in lexicographic order, exponents 0..n^2 and both orientations",
+  "decoder": "factor-assisted hidden-prime parity rows with exact online normalized-root invariant; P106-equivalent to public P66 rows",
+  "hard_timeout_seconds": 1200
+}

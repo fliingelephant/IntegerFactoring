@@ -1,0 +1,7 @@
+{
+  "audit_verdict": "FAIL",
+  "error": "candidate replay has an unexpected file-read site",
+  "error_type": "AuditFailure",
+  "status": "FAIL",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/zhou/autoresearch/IntegerFactoring/experiments/F111_factor_free_cross_layer_certificate/independent_certificate_audit.py\", line 684, in main\n    output = audit(args.candidate_dir.resolve(), args.public_basis_source.resolve())\n  File \"/Users/zhou/autoresearch/IntegerFactoring/experiments/F111_factor_free_cross_layer_certificate/independent_certificate_audit.py\", line 606, in audit\n    static_audit = source_static_audit(\n        candidate_paths[\"replay_public_certificate.py\"], public_source\n    )\n  File \"/Users/zhou/autoresearch/IntegerFactoring/experiments/F111_factor_free_cross_layer_certificate/independent_certificate_audit.py\", line 407, in source_static_audit\n    require(\n    ~~~~~~~^\n        candidate_result[\"file_read_sites\"]\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<4 lines>...\n        \"candidate replay has an unexpected file-read site\",\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/Users/zhou/autoresearch/IntegerFactoring/experiments/F111_factor_free_cross_layer_certificate/independent_certificate_audit.py\", line 24, in require\n    raise AuditFailure(message)\nAuditFailure: candidate replay has an unexpected file-read site\n"
+}

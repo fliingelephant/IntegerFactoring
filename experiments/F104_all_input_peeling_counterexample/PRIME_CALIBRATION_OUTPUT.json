@@ -1,0 +1,569 @@
+{
+  "completed_rounds": 1,
+  "counterexample": null,
+  "elapsed_seconds": 2.0268159999977797,
+  "exact_replay_source_sha256": "41c8ddee5d51d85349af2b61e239f81f9c6e12fb13d1eca92f0440f5d5eece50",
+  "f98_source_sha256": "5fded40920ca52827662ba536f14a49ec9e302b934f6d0967e66be2b18c9ba4b",
+  "pairs_tested": 30,
+  "role": "factor-assisted hidden-prime candidate scan; candidate requires factor-free P66 replay",
+  "scan_bounds": {
+    "enumeration": "p ascending; q from the descending opposite tail, then descending offsets",
+    "pair_cap": 30,
+    "pairs_per_p": 1,
+    "prime_max": 40000,
+    "prime_min": 20011
+  },
+  "source_sha256": "2b38a3920524a434988ab4fa105d5770a2ef755e5d519c4248b0d2d6bebda79f",
+  "stable_pairs_tested": 4,
+  "status": "cap_complete",
+  "trace": [
+    {
+      "B": 900,
+      "N": 802636333,
+      "n": 30,
+      "p": 20147,
+      "pair_ordinal": 17,
+      "q": 39839,
+      "result": {
+        "B": 900,
+        "active_pair_count": 29,
+        "direct": {
+          "c": 403403380,
+          "factor": 20147,
+          "provenance": {
+            "active_relation_index_zero_based": 2,
+            "exponent": 264,
+            "kind": "feedback_trajectory",
+            "orientation": "u_times_v_power",
+            "round": 1,
+            "u": 2,
+            "v": 5
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 245390459
+        },
+        "elapsed_seconds": 0.00795004099200014,
+        "n": 30,
+        "retained_before_factor": 4148,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 10073,
+        "B": 19919,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 1,
+      "trial_hard": true
+    },
+    {
+      "B": 900,
+      "N": 802514521,
+      "n": 30,
+      "p": 20149,
+      "pair_ordinal": 18,
+      "q": 39829,
+      "result": {
+        "B": 900,
+        "active_pair_count": 29,
+        "direct": {
+          "c": 415391785,
+          "factor": 20149,
+          "provenance": {
+            "active_relation_index_zero_based": 1,
+            "exponent": 74,
+            "kind": "feedback_trajectory",
+            "orientation": "u_power_times_v",
+            "round": 1,
+            "u": 3,
+            "v": 535009681
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 3788013
+        },
+        "elapsed_seconds": 0.003993083999375813,
+        "n": 30,
+        "retained_before_factor": 1965,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 1679,
+        "B": 3319,
+        "g": 12,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 2,
+      "trial_hard": true
+    },
+    {
+      "B": 900,
+      "N": 803309033,
+      "n": 30,
+      "p": 20173,
+      "pair_ordinal": 20,
+      "q": 39821,
+      "result": {
+        "B": 900,
+        "active_pair_count": 29,
+        "direct": {
+          "c": 521875511,
+          "factor": 20173,
+          "provenance": {
+            "active_relation_index_zero_based": 7,
+            "exponent": 841,
+            "kind": "feedback_trajectory",
+            "orientation": "u_times_v_power",
+            "round": 1,
+            "u": 3,
+            "v": 357026237
+          },
+          "sign": "minus",
+          "status": "direct_factor",
+          "w": 20636980
+        },
+        "elapsed_seconds": 0.01171033299760893,
+        "n": 30,
+        "retained_before_factor": 5299,
+        "status": "trajectory_direct_factor"
+      },
+      "stable_certificate": {
+        "A": 5043,
+        "B": 9955,
+        "g": 4,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 3,
+      "trial_hard": true
+    },
+    {
+      "B": 900,
+      "N": 803101753,
+      "n": 30,
+      "p": 20183,
+      "pair_ordinal": 22,
+      "q": 39791,
+      "result": {
+        "B": 900,
+        "N": 803101753,
+        "active_pair_count": 29,
+        "active_pairs": [
+          {
+            "relation_index_zero_based": 0,
+            "u": 2,
+            "v": 7
+          },
+          {
+            "relation_index_zero_based": 1,
+            "u": 3,
+            "v": 535401169
+          },
+          {
+            "relation_index_zero_based": 2,
+            "u": 2,
+            "v": 5
+          },
+          {
+            "relation_index_zero_based": 3,
+            "u": 2,
+            "v": 5
+          },
+          {
+            "relation_index_zero_based": 4,
+            "u": 2,
+            "v": 3
+          },
+          {
+            "relation_index_zero_based": 5,
+            "u": 2,
+            "v": 7
+          },
+          {
+            "relation_index_zero_based": 6,
+            "u": 2,
+            "v": 11
+          },
+          {
+            "relation_index_zero_based": 7,
+            "u": 3,
+            "v": 5
+          },
+          {
+            "relation_index_zero_based": 8,
+            "u": 2,
+            "v": 5
+          },
+          {
+            "relation_index_zero_based": 9,
+            "u": 2,
+            "v": 11
+          },
+          {
+            "relation_index_zero_based": 10,
+            "u": 2,
+            "v": 3
+          },
+          {
+            "relation_index_zero_based": 11,
+            "u": 2,
+            "v": 7
+          },
+          {
+            "relation_index_zero_based": 12,
+            "u": 2,
+            "v": 7
+          },
+          {
+            "relation_index_zero_based": 13,
+            "u": 3,
+            "v": 5
+          },
+          {
+            "relation_index_zero_based": 14,
+            "u": 2,
+            "v": 11
+          },
+          {
+            "relation_index_zero_based": 15,
+            "u": 2,
+            "v": 3
+          },
+          {
+            "relation_index_zero_based": 16,
+            "u": 2,
+            "v": 3
+          },
+          {
+            "relation_index_zero_based": 17,
+            "u": 2,
+            "v": 5
+          },
+          {
+            "relation_index_zero_based": 18,
+            "u": 2,
+            "v": 5
+          },
+          {
+            "relation_index_zero_based": 19,
+            "u": 3,
+            "v": 5
+          },
+          {
+            "relation_index_zero_based": 20,
+            "u": 2,
+            "v": 11
+          },
+          {
+            "relation_index_zero_based": 21,
+            "u": 2,
+            "v": 23
+          },
+          {
+            "relation_index_zero_based": 22,
+            "u": 2,
+            "v": 3
+          },
+          {
+            "relation_index_zero_based": 23,
+            "u": 3,
+            "v": 5
+          },
+          {
+            "relation_index_zero_based": 24,
+            "u": 2,
+            "v": 7
+          },
+          {
+            "relation_index_zero_based": 25,
+            "u": 3,
+            "v": 5
+          },
+          {
+            "relation_index_zero_based": 26,
+            "u": 2,
+            "v": 7
+          },
+          {
+            "relation_index_zero_based": 27,
+            "u": 29,
+            "v": 276931639
+          },
+          {
+            "relation_index_zero_based": 28,
+            "u": 2,
+            "v": 3
+          }
+        ],
+        "duplicate_relation_value_count": 3867,
+        "elapsed_seconds": 1.9984153749974212,
+        "initial_basis_size": 22,
+        "initial_basis_stats": {
+          "gcd_calls": 5196,
+          "identical_merges": 108,
+          "overlap_splits": 68,
+          "perfect_power_splits": 17
+        },
+        "initial_decoder": {
+          "global_minus_basis_roots_before_factor": 0,
+          "global_plus_basis_roots_before_factor": 0,
+          "kernel_dimension": 0,
+          "nonsquare_row_count": 17,
+          "squareclass_rank": 12,
+          "status": "null",
+          "unique_relation_count": 12
+        },
+        "initial_seed_count": 29,
+        "matrix": {
+          "columns": 10538,
+          "core_columns": 1730,
+          "core_columns_sha256": "f0cb0217059ec6ff22547b551fe0256f5d5edd24bf5372150ce022735b981ebc",
+          "core_nonempty": true,
+          "core_nullity": 306,
+          "core_rank": 1424,
+          "core_rank_deficient": true,
+          "core_row_degree_histogram": {
+            "2": 830,
+            "3": 254,
+            "4": 94,
+            "5": 53,
+            "6": 44,
+            "7": 21,
+            "8": 12,
+            "9": 15,
+            "10": 11,
+            "11": 7,
+            "12": 8,
+            "13": 4,
+            "14": 6,
+            "15": 4,
+            "16": 9,
+            "17": 5,
+            "18": 4,
+            "19": 1,
+            "20": 2,
+            "22": 4,
+            "23": 1,
+            "24": 2,
+            "26": 1,
+            "29": 1,
+            "30": 1,
+            "31": 1,
+            "34": 1,
+            "35": 1,
+            "36": 2,
+            "37": 1,
+            "38": 1,
+            "39": 1,
+            "40": 2,
+            "41": 1,
+            "42": 1,
+            "43": 1,
+            "44": 1,
+            "45": 2,
+            "46": 1,
+            "49": 2,
+            "54": 1,
+            "55": 1,
+            "59": 1,
+            "67": 1,
+            "70": 1,
+            "74": 2,
+            "102": 1,
+            "104": 1,
+            "125": 1,
+            "127": 1,
+            "136": 1,
+            "137": 1,
+            "146": 1,
+            "194": 1,
+            "197": 1,
+            "200": 1,
+            "282": 1,
+            "342": 1,
+            "429": 1,
+            "507": 1,
+            "723": 1,
+            "736": 1
+          },
+          "core_rows": 1436,
+          "hidden_prime_diagnostic": {
+            "blocks": 10865,
+            "gcd_tests": 0,
+            "refinements": 0,
+            "square_blocks": 0
+          },
+          "initial_degree_one_rows": 6958,
+          "kernel_preserved": true,
+          "nullity": 306,
+          "p66_mask_equivalence_theorem_used": true,
+          "peel_order_independent_two_orders": true,
+          "peeled_columns": 8808,
+          "public_kernel_basis_roots": {
+            "basis_size": 306,
+            "first_non_global": {
+              "gcd_root_minus_one_N": 20183,
+              "gcd_root_plus_one_N": 39791,
+              "root_mod_N": 166207006,
+              "support": 225
+            },
+            "global_minus": 61,
+            "global_plus": 83,
+            "non_global_count": 162
+          },
+          "rank": 10232,
+          "row_degree_histogram": {
+            "1": 6958,
+            "2": 1931,
+            "3": 746,
+            "4": 360,
+            "5": 201,
+            "6": 126,
+            "7": 79,
+            "8": 40,
+            "9": 45,
+            "10": 37,
+            "11": 34,
+            "12": 23,
+            "13": 12,
+            "14": 18,
+            "15": 18,
+            "16": 10,
+            "17": 10,
+            "18": 10,
+            "19": 15,
+            "20": 13,
+            "21": 6,
+            "22": 11,
+            "23": 8,
+            "24": 4,
+            "25": 5,
+            "26": 4,
+            "27": 7,
+            "28": 3,
+            "29": 5,
+            "30": 5,
+            "31": 1,
+            "32": 4,
+            "33": 7,
+            "34": 3,
+            "35": 3,
+            "36": 2,
+            "37": 1,
+            "38": 1,
+            "40": 1,
+            "41": 3,
+            "42": 1,
+            "43": 2,
+            "44": 2,
+            "45": 1,
+            "46": 1,
+            "47": 4,
+            "48": 1,
+            "49": 1,
+            "50": 2,
+            "53": 3,
+            "54": 2,
+            "56": 1,
+            "57": 1,
+            "58": 1,
+            "59": 1,
+            "60": 1,
+            "61": 2,
+            "63": 1,
+            "65": 2,
+            "67": 1,
+            "68": 1,
+            "69": 2,
+            "70": 1,
+            "71": 1,
+            "73": 1,
+            "76": 1,
+            "79": 1,
+            "80": 1,
+            "81": 2,
+            "83": 3,
+            "84": 1,
+            "85": 1,
+            "90": 1,
+            "97": 1,
+            "98": 1,
+            "104": 1,
+            "107": 1,
+            "108": 1,
+            "113": 1,
+            "115": 1,
+            "126": 1,
+            "137": 1,
+            "140": 1,
+            "143": 1,
+            "153": 1,
+            "154": 1,
+            "156": 1,
+            "160": 1,
+            "161": 2,
+            "162": 1,
+            "167": 1,
+            "182": 1,
+            "206": 1,
+            "213": 1,
+            "221": 1,
+            "224": 1,
+            "264": 1,
+            "275": 1,
+            "279": 2,
+            "312": 1,
+            "352": 1,
+            "357": 1,
+            "406": 1,
+            "432": 1,
+            "514": 1,
+            "519": 1,
+            "556": 1,
+            "631": 1,
+            "685": 1,
+            "855": 1,
+            "953": 1,
+            "1091": 1,
+            "1408": 1,
+            "1597": 1,
+            "2296": 1,
+            "2804": 1,
+            "3846": 1,
+            "4520": 1
+          },
+          "row_source": "distinct nonzero hidden prime-parity masks",
+          "rows": 10865
+        },
+        "n": 30,
+        "new_feedback_relations": 14377,
+        "retained_relation_count": 14406,
+        "status": "round_complete",
+        "unique_provenance_kinds": {
+          "feedback_trajectory": 10526,
+          "initial_seed": 12
+        },
+        "unique_relation_count": 10538,
+        "zero_relation_value_count": 1
+      },
+      "stable_certificate": {
+        "A": 10091,
+        "B": 19895,
+        "g": 2,
+        "gcd_AB_N_minus_1": 1,
+        "stable": true
+      },
+      "stable_ordinal": 4,
+      "trial_hard": true
+    }
+  ],
+  "workflow_change": {
+    "acceptance": "separate factor-free P66 replay required",
+    "discovery_rows": "distinct nonzero hidden prime-parity masks",
+    "generation_and_screens": "unchanged pinned N-only replay",
+    "justification": "terminal P66 and hidden prime rows have the same distinct nonzero masks"
+  }
+}

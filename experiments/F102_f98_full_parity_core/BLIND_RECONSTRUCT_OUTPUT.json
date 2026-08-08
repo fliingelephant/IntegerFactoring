@@ -1,0 +1,453 @@
+{
+  "checks": {
+    "all_166_certificate_columns_in_full_core": true,
+    "all_factorizations_multiply_back_and_all_bases_are_prime": true,
+    "certificate_public_witness_replay": {
+      "mismatch_count": 0,
+      "mismatch_sample": [],
+      "raw_indices_exact": true,
+      "selected_column_indices": [
+        3,
+        3955,
+        3962,
+        4046,
+        4107,
+        4108,
+        4117,
+        4177,
+        4224,
+        4368,
+        4450,
+        4499,
+        4530,
+        4531,
+        4582,
+        4614,
+        4676,
+        4742,
+        4920,
+        5097,
+        5098,
+        5188,
+        5237,
+        5307,
+        5326,
+        5340,
+        5418,
+        5446,
+        5448,
+        5476,
+        5495,
+        5520,
+        5524,
+        5526,
+        5529,
+        5531,
+        5596,
+        5598,
+        5634,
+        5636,
+        5771,
+        5803,
+        5832,
+        5835,
+        5836,
+        5895,
+        5912,
+        5931,
+        5937,
+        5939,
+        5941,
+        5944,
+        5978,
+        6010,
+        6021,
+        6026,
+        6035,
+        6066,
+        6081,
+        6169,
+        6171,
+        6194,
+        6282,
+        6340,
+        6412,
+        6414,
+        6418,
+        6420,
+        6423,
+        6427,
+        6435,
+        6491,
+        6513,
+        6540,
+        6542,
+        6546,
+        6643,
+        6661,
+        6665,
+        6675,
+        6709,
+        6732,
+        6797,
+        6799,
+        6823,
+        6954,
+        6964,
+        6977,
+        6983,
+        6997,
+        7002,
+        7004,
+        7037,
+        7082,
+        7084,
+        7086,
+        7088,
+        7153,
+        7181,
+        7232,
+        7266,
+        7272,
+        7280,
+        7283,
+        7303,
+        7358,
+        7362,
+        7372,
+        7374,
+        7500,
+        7504,
+        7566,
+        7579,
+        7606,
+        7632,
+        7634,
+        7635,
+        7645,
+        7647,
+        7857,
+        7865,
+        7867,
+        7869,
+        7888,
+        7890,
+        7937,
+        7963,
+        7965,
+        7966,
+        7988,
+        7990,
+        8022,
+        8024,
+        8148,
+        8150,
+        8238,
+        8273,
+        8275,
+        8332,
+        8394,
+        8408,
+        8414,
+        8545,
+        8546,
+        8579,
+        8613,
+        8767,
+        8773,
+        8841,
+        8916,
+        9007,
+        9011,
+        9016,
+        9020,
+        9100,
+        9188,
+        9189,
+        9192,
+        9194,
+        9213,
+        9264,
+        9344,
+        9346,
+        9349,
+        9394,
+        9405
+      ],
+      "selected_columns_exact": true,
+      "support": 166,
+      "witness_count": 166
+    },
+    "factorization_transcript_sha256": "fdb679e188f7f2cfc29e47236b69fa85a355a83d172e0fe0330bf6a601cc0465",
+    "full_claims": {
+      "mismatches": {},
+      "observed": {
+        "columns": 9414,
+        "core_columns": 1781,
+        "core_components": [
+          1781
+        ],
+        "core_nullity": 488,
+        "core_rank": 1293,
+        "core_rows": 1299,
+        "initial_degree_one_rows": 7884,
+        "nullity": 488,
+        "ordered_core_column_sha256": "5e18521931048141bdc4c09f23af1b8b9e7d0b5b95bb70b42b420443c6f2cbc8",
+        "peeled_columns": 7633,
+        "rank": 8926,
+        "rows": 11034
+      },
+      "status": "PASS"
+    },
+    "prefix_claims": {
+      "mismatches": {},
+      "observed": {
+        "columns": 4293,
+        "core_columns": 373,
+        "core_components": [
+          373
+        ],
+        "core_nullity": 2,
+        "core_rank": 371,
+        "core_rows": 387,
+        "initial_degree_one_rows": 4062,
+        "nullity": 2,
+        "ordered_core_column_sha256": "9b75bad6177686931cc714931b37bdf4e42823db4d0121b7e8859dff3c1260df",
+        "peeled_columns": 3920,
+        "rank": 4291,
+        "rows": 5658
+      },
+      "status": "PASS"
+    }
+  },
+  "elapsed_seconds": 0.33768606185913086,
+  "failed_attempts_preserved": [
+    {
+      "name": "start_feedback_at_exponent_2",
+      "observed": {
+        "prefix_columns": 4290,
+        "prefix_core_columns": 371,
+        "prefix_core_sha256": "90c747d576d82820b353f78bc2151629c04c40b839a389356570758b1523f33b",
+        "prefix_nullity": 1,
+        "raw_records": 12555
+      },
+      "reason": "The selected raw prefix has the wrong rank defect and core.",
+      "status": "FAIL"
+    },
+    {
+      "name": "retain_only_endpoints_strictly_above_n",
+      "observed": {
+        "distinct_nonidentity_values": 9414,
+        "distinct_values_including_identity": 9414,
+        "duplicate_occurrences": 3136,
+        "public_witness_index_mismatches": 87,
+        "raw_identity_records": 0,
+        "raw_records": 12550
+      },
+      "reason": "It emits no P=1 record, has the wrong raw length, and misses public witness indices.",
+      "status": "FAIL"
+    },
+    {
+      "name": "family_first_occurrence_without_shared_start_deduplication",
+      "observed": {
+        "distinct_nonidentity_values": 9414,
+        "distinct_values_including_identity": 9415,
+        "duplicate_occurrences": 3135,
+        "public_witness_index_mismatches": 150,
+        "raw_identity_records": 3,
+        "raw_records": 12550
+      },
+      "reason": "It retains the shared inverse-family identity start twice.",
+      "status": "FAIL"
+    }
+  ],
+  "full": {
+    "columns": 9414,
+    "core_columns": 1781,
+    "core_components": [
+      1781
+    ],
+    "core_nullity": 488,
+    "core_rank": 1293,
+    "core_rows": 1299,
+    "core_value_sha256_diagnostics": {
+      "comma_final": "d20e2e6e044ebcd5f7df98fa6f955775ccc51517b3a1a632289d2d56e26b5fae",
+      "comma_no_final": "eda80d2e3d223e931d7e575477d9667bc6d1154f596a65703b4f4239afd54b9e",
+      "json_compact": "17c6f9bb68b5a1a69a97d6c422d4340fb0d48a75cd76cb108be919cdfc35d933",
+      "json_default": "3944766ff410b8b01236befb8cd0eade71ecc918615827d0ea77a3a9b16d9617",
+      "newline_final": "826987934ec61e8c030bd5b11296e009d362aa28f7f907928febd641123cb707",
+      "newline_no_final": "d2ed3eeab930c9044fa1b96ab9422eef2dba8cf8256ab51a6db487f2ab45efa0",
+      "space_no_final": "7ad06fa58985f11ab014b86d0907bc7a547c2d717307a08e7c24394a3513ad88",
+      "u64_be": "a8a766d9f8a80f22a199c1dd416b15f4ab68735837944be5ba2a1e33d6fc15f3",
+      "u64_le": "8b12bd1e3e8c2be8644bcf9d3834e07262652cf403de316b407a30e86093fdce"
+    },
+    "deletion_sequences_different": true,
+    "feedback_columns_in_core": 1778,
+    "feedback_families": [
+      [
+        0,
+        2,
+        3
+      ],
+      [
+        2,
+        2,
+        9493927
+      ],
+      [
+        5,
+        3,
+        7
+      ],
+      [
+        9,
+        11,
+        36824929
+      ],
+      [
+        11,
+        13,
+        124638221
+      ],
+      [
+        12,
+        2,
+        5
+      ],
+      [
+        15,
+        2,
+        17
+      ],
+      [
+        25,
+        3,
+        17
+      ]
+    ],
+    "feedback_family_count": 8,
+    "final_minimum_incident_row_degree": 2,
+    "hash_payload": "ascending zero-based core column indices joined by ASCII commas, without a trailing comma",
+    "initial_degree_one_rows": 7884,
+    "nullity": 488,
+    "ordered_core_column_sha256": "5e18521931048141bdc4c09f23af1b8b9e7d0b5b95bb70b42b420443c6f2cbc8",
+    "orders_same": true,
+    "orientation_counts": {
+      "u_power_times_v": 1138,
+      "u_times_v_power": 640
+    },
+    "peeled_columns": 7633,
+    "peeling_order_digests": {
+      "fifo": "7303c606d0cd3b5aa8776a4565c4faf15bf1a8966c7ea517c5be225e6be37931",
+      "seeded_shuffled_lifo": "b68ae45869a6bd00f50cb1c40ee86da32bea03c7e38c5539e70b3cb24a05ef71"
+    },
+    "rank": 8926,
+    "rows": 11034,
+    "seed_values_in_core": [
+      2,
+      11,
+      27
+    ]
+  },
+  "input": {
+    "B": 784,
+    "N": 202537109,
+    "active_pair_records": 27,
+    "distinct_active_pair_families": 8,
+    "n": 28,
+    "public_artifact_sha256": "ee17d7e3ba088f382c0a1c3adec6d1e328ab7a4a814df8d1f6273e41d19c24ab",
+    "required_public_artifact_sha256": "ee17d7e3ba088f382c0a1c3adec6d1e328ab7a4a814df8d1f6273e41d19c24ab"
+  },
+  "prefix_before_raw_index_5616": {
+    "columns": 4293,
+    "core_columns": 373,
+    "core_components": [
+      373
+    ],
+    "core_nullity": 2,
+    "core_rank": 371,
+    "core_rows": 387,
+    "core_value_sha256_diagnostics": {
+      "comma_final": "fa9545dcfc349bd9fd5af92bb40d7152d2c0d8995d73aa10719ad1bd24595b72",
+      "comma_no_final": "174ef8a5a922ffbc1f2a46757b0fea54ab31d0bd287b9fa5946bd5f0e42e19ff",
+      "json_compact": "e47cab45eab4993e06ebc7aeeb28a8992d3e1ee8c4d0bf1cb36771fae72e8f1d",
+      "json_default": "4d2531857c93d7247b4290d9fefadfa1a4d471d00652e8795d79b3a556ae0bbe",
+      "newline_final": "72ac16b549f9bf328a7d7be5e176a61975080e0516920d7ac21b32f4c12376bf",
+      "newline_no_final": "cfe6d464deb40d0d2cc1e905dba7b188789d211da5907c472be5227ad14f53bd",
+      "space_no_final": "b125764c318a1ba0a960b33965a1a14441f9974057f6c6ec4861d9d511ae7904",
+      "u64_be": "2cc3c561526d92359782b8c78dd18ecfd3181a211dfe0f0fbc626e23a4492fc5",
+      "u64_le": "76bc4cd4d97fa5e71775d109ab0b450ff05428a5b4f9cab228c0d4a61198444c"
+    },
+    "deletion_sequences_different": true,
+    "feedback_columns_in_core": 371,
+    "feedback_families": [
+      [
+        0,
+        2,
+        3
+      ],
+      [
+        2,
+        2,
+        9493927
+      ],
+      [
+        5,
+        3,
+        7
+      ],
+      [
+        9,
+        11,
+        36824929
+      ]
+    ],
+    "feedback_family_count": 4,
+    "final_minimum_incident_row_degree": 2,
+    "hash_payload": "ascending zero-based core column indices joined by ASCII commas, without a trailing comma",
+    "initial_degree_one_rows": 4062,
+    "nullity": 2,
+    "ordered_core_column_sha256": "9b75bad6177686931cc714931b37bdf4e42823db4d0121b7e8859dff3c1260df",
+    "orders_same": true,
+    "orientation_counts": {
+      "u_power_times_v": 241,
+      "u_times_v_power": 130
+    },
+    "peeled_columns": 3920,
+    "peeling_order_digests": {
+      "fifo": "955aff8179e3ae433e2ccc7c6096bac5bc0fa99bc860de2bf87454a64299c25a",
+      "seeded_shuffled_lifo": "b93b91904f220439f776a41df9a9a914a14015374768fe84d4a2187f1ff1959a"
+    },
+    "rank": 4291,
+    "rows": 5658,
+    "seed_values_in_core": [
+      11,
+      27
+    ]
+  },
+  "scope": {
+    "not_claimed": [
+      "The prime matrix is public.",
+      "Connectedness implies a useful root.",
+      "Every composite input has a nonempty or rank-deficient core.",
+      "Useful circuits have inverse-polynomial density.",
+      "This construction is a factoring algorithm."
+    ],
+    "passed": "Frozen F98 prime-parity matrix, prefix, peeling-order invariance, complete-kernel preservation by zero extension (with equal nullity as a finite cross-check), and certificate containment."
+  },
+  "status": "PASS",
+  "stream": {
+    "distinct_nonidentity_values": 9414,
+    "distinct_values_including_identity": 9415,
+    "duplicate_occurrences": 3134,
+    "raw_identity_records": 2,
+    "raw_records": 12549
+  },
+  "stream_rule": {
+    "endpoint_first_occurrence": "Suppress c in 2,...,n and later repeats of c inside one family.",
+    "feedback": "For each first active-pair family, e = 1,...,B, in u_power_times_v then u_times_v_power order.",
+    "matrix_columns": "Discard P=1, then retain the first raw occurrence of each exact P.",
+    "seeds": "c = 2,...,n; w = c^(-1) mod N; P = c*w",
+    "shared_start": "Among inverse-pair families with uv = 1, retain the common e=1 identity start once."
+  }
+}

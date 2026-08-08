@@ -11595,3 +11595,778 @@ and
 Both failed candidate rounds remain in the F96 artifact directory. No
 cross-family audit, human audit, or publication-level literature review has
 run.
+
+## P103 — one public feedback batch can factor only through an amortized relation circuit
+
+**Status:** promoted from F98 after a hostile audit and a proof-blind
+reconstruction. This is an exact fixed-input mechanism witness. It is not an
+all-input success law or a factoring algorithm for arbitrary integers.
+
+Let
+
+\[
+N=202{,}537{,}109=10{,}267\cdot19{,}727.
+\]
+
+Both factors are prime and exceed the declared trial bound
+\(n^2=784\), where \(n=28\). The stable-core certificate is
+
+\[
+g=2,\qquad (A,B)=(5133,9863),\qquad \gcd(AB,N-1)=1.
+\]
+
+The public one-round rule receives only \(N\). It starts from the canonical
+inverse presentations for seeds 2 through 28, refines their integer
+endpoints into a pairwise-coprime exact basis, and deterministically selects
+27 block pairs. For each pair \((u,v)\), it processes both trajectories
+
+\[
+[u^e v]_N,\qquad [uv^e]_N,\qquad 0\le e\le784.
+\]
+
+It retains 27 seed relations and 12,522 new first-occurrence relations.
+Every one of the 12,549 individual tests
+
+\[
+\gcd(c-w,N),\qquad\gcd(c+w,N),
+\quad w=c^{-1}_{\rm can},
+\]
+
+is nonproper. Thus no selected presentation factors \(N\) by itself.
+
+The factor-free joint decoder removes one value \(P=1\) and 3,134 repeated
+exact values. On the remaining 9,414 distinct relation values, exact gcd
+refinement gives 11,015 nonsquare rows, rank 8,926, and kernel dimension
+488. A public kernel-basis vector uses 166 distinct exact values. Its exact
+positive root satisfies
+
+\[
+R\equiv132{,}013{,}085\pmod N,
+\]
+
+\[
+\gcd(R-1,N)=19{,}727,
+\qquad
+\gcd(R+1,N)=10{,}267.
+\]
+
+An independent online elimination on the first 5,616 retained occurrences
+first finds a useful dependency at occurrence 5,616. After repeated exact
+values are normalized away, the dependency contains 166 distinct values and
+gives the opposite mixed root. Exhaustive factor-free checks find no useful
+dependency of support one, two, or three in that prefix. They do not prove
+that 166 is globally minimal.
+
+This is a real algorithmic change from evaluating one new scalar and taking
+one gcd. No local scalar succeeds. The public state retains many individually
+useless integer presentations, finds one exact square-class circuit, and
+only then applies the final two gcds. The mechanism is close in form to
+classical relation collection. No novelty relative to that literature is
+claimed.
+
+The bounded rule has polynomial bit complexity: it generates
+\(O(n^3)\) candidate positions in this round, keeps polynomially many
+\(O(n)\)-bit endpoints, performs exact gcd refinement, and runs binary
+linear algebra on the explicit polynomial-size matrix. The theorem gives no
+reason that a useful circuit must occur on another input.
+
+The candidate, hostile audit, proof-blind statement, and proof-blind
+reconstruction have SHA-256 hashes
+`f2d28d074d53bc93c675553b28e083b93b0d6dd35d1a65edb430c69a6cd26fb0`,
+`0c924e0b4805470c0e0a4547950b9b2a3d1b9a57cacfc5204f680d42354b9856`,
+`92fd51676c579d26d573818782754d8db0687c7c554270b377f8421b33742e48`,
+and
+`7c3544af839a121b60fb05c07933966c85b4494b468bb0abeb0879b66075cb5a`.
+No cross-family audit, human audit, or publication-level literature review
+has run.
+
+## P104 — power feedback can create only duplicate roots or no relation at all
+
+**Status:** promoted from corrected F99 after a failed scope audit, a fresh
+hostile re-audit, and a proof-blind reconstruction. This is an exact
+trajectory obstruction. It does not refute P103 or the full multi-seed rule.
+
+Suppose
+
+\[
+N=\frac{a^m-1}{k},
+\qquad 1\le k<a,
+\]
+
+and both \(a^r\) and \(a^{m-r}\) are canonical representatives for
+\(1\le r<m\). Then
+
+\[
+c_r=a^r,\qquad w_r=a^{m-r},\qquad c_rw_r=a^m=1+kN.
+\]
+
+Every relation on this orbit is the same exact integer. If \(m\) is odd and
+\(a\) is one prime basis block, all nonzero parity columns are identical.
+Every duplicate-column dependency has normalized root \(+1\), and endpoint
+refinement exposes no new block. Raw kernel nullity can therefore grow while
+the normalized-root image does not grow.
+
+The stable trial-hard instance
+
+\[
+N=64{,}570{,}081=1{,}871\cdot34{,}511
+=\frac{3^{17}-1}{2}
+\]
+
+realizes this obstruction. Both factors exceed \(n^2=676\), and
+
+\[
+g=170,\qquad(A,B)=(11,203),\qquad\gcd(AB,N-1)=1.
+\]
+
+The complete range \(0\le e\le676\) visits 17 residues. Every nontrivial
+presentation has exact value \(3^{17}=1+2N\), every direct sign gcd is one,
+and every duplicate dependency has root \(+1\). Other seeds can still make
+progress on this modulus.
+
+There is also an opposite infinite obstruction. For every sufficiently
+large \(T\), CRT, Dirichlet, and Linnik constructions give an odd semiprime
+\(N_T\) with \(T\) consecutive states \(c_e=2^e\). Each relation
+
+\[
+P_e=1+(2^e-1)N_T
+\]
+
+has a private prime with odd valuation that divides no other \(P_j\). Their
+square classes are linearly independent. The input length is
+\(\Theta(T^2)\), so this gives \(T=\Theta(\sqrt{\log N_T})\) consecutive
+relations with no dependency.
+
+The two examples prove only that record count, raw nullity, and
+consecutiveness are not progress laws. A successful multi-seed theorem must
+prove reuse of parity rows and a non-global normalized root. The private-row
+family does not establish stability, null direct screens, no block split, or
+an \(n^2\)-long obstruction.
+
+The corrected candidate, fresh hostile re-audit, proof-blind statement, and
+proof-blind reconstruction have SHA-256 hashes
+`d3a1af9e01f0209d8f06d53c2641bbad2056077bdca4d7966f9e6bdc98e592aa`,
+`5f219d88f2c4fcc40d5ce3ea4040da91b86d97535b7efeac92fb7f07df5c6ca8`,
+`53feb27185d06de2c0e8565bb1c324b02c13f64d1dfbab641ca9efa0923b1058`,
+and
+`52cc3f9bef3cf2e3abfeb49738f3dd69bd164328df6682e940fad6a54fde680c`.
+The failed candidate and failed audit remain in the F99 directory. No
+cross-family audit, human audit, or publication-level literature review has
+run.
+
+## P105 — the selected F98 factor certificate is one connected cross-trajectory circuit
+
+**Status:** promoted from F100 after two failed wording audits, a final
+hostile re-audit, and a proof-blind reconstruction. This is an exact
+fixed-input structural result. It is not an all-input circuit-existence law.
+
+Take the 166 distinct exact relation values used by the public F98
+certificate for
+
+\[
+N=202{,}537{,}109=10{,}267\cdot19{,}727.
+\]
+
+Factor these values for diagnosis only and form their prime-valuation parity
+matrix, including the row for prime 2. The matrix has 230 rows, 166 columns,
+rank 165, and nullity one. The sum of all 166 columns is zero, while deleting
+any one column leaves rank 165. Therefore the displayed dependency is the
+unique nonzero dependency on this selected set, and every proper subset is
+independent.
+
+The shared-prime incidence graph is connected. It remains connected after
+the prime-2 row is removed. The certificate contains one seed relation and
+165 feedback relations. These feedback relations come from five active-pair
+families and eight oriented trajectories. Thus the successful F98 event is
+not a duplicate relation, one trajectory, or a local pair or triple. It is
+one cross-trajectory parity circuit.
+
+The exact root is again
+
+\[
+R\equiv132{,}013{,}085\pmod N,
+\qquad
+(\gcd(R-1,N),\gcd(R+1,N))=(19{,}727,10{,}267).
+\]
+
+This strengthens the finite interpretation of P103: the successful decoder
+amortizes many individually useless presentations. It does not show that a
+similar circuit occurs for another input. In particular, the computation
+does not separate a general feedback effect from a fixed-input
+smoothness/shared-prime effect.
+
+The final candidate, final hostile re-audit, proof-blind statement, and
+proof-blind reconstruction have SHA-256 hashes
+`b22c749489acb53338b6feed4cbec333b4cfdc92fba01e0a2544006526e768f5`,
+`8ebf65e6657d9e813ea1c22228c81916714bde753c1f9a979909b1ad62d992f1`,
+`1235cbf1c34eb47502286e4607337d9f43392853847bddb8711c0ad05072c82f`,
+and
+`3a3ef8d468fafe113a3b801b7ca933d68b303b098a064f51a2da091cdf10cfa4`.
+Both failed audits remain in the F100 directory. No cross-family audit,
+human audit, or publication-level literature review has run.
+
+## P106 — factor-free gcd refinement exposes the exact hidden-prime parity core
+
+**Status:** promoted from corrected F105 after a hostile audit, an exact
+wording correction, a fresh narrow re-audit, and the independent F103
+proof-blind reconstruction. This is a decoder theorem for a frozen explicit
+batch. It is not a source theorem or an all-input factoring algorithm.
+
+Let the explicit endpoint batch consist of integer-mask pairs
+
+\[
+(a_i,m_i),\qquad a_i>1,\quad m_i\in\mathbb F_2^s.
+\]
+
+For every prime \(p\), define the unavailable prime-parity row
+
+\[
+r_p=\sum_i(v_p(a_i)\bmod2)m_i.
+\]
+
+The public P66 refinement selects two entries \((x,u),(y,v)\) with
+\(d=\gcd(x,y)>1\), and replaces them by the nontrivial, nonzero-mask entries
+
+\[
+(d,u+v),\qquad(x/d,u),\qquad(y/d,v).
+\]
+
+For \(\alpha=v_p(x)\), \(\beta=v_p(y)\), and
+\(\gamma=\min(\alpha,\beta)\), the new contribution is
+
+\[
+\gamma(u+v)+(\alpha-\gamma)u+(\beta-\gamma)v
+=\alpha u+\beta v
+\quad\text{over }\mathbb F_2.
+\]
+
+Thus every hidden prime row is invariant. Each eligible split strictly
+decreases the sum of the prime-factor counts with multiplicity, so every
+schedule terminates. At termination the integer blocks are pairwise
+coprime. A hidden nonzero row is then exactly the mask of its unique block
+with odd prime valuation. Conversely, every nonsquare terminal block has an
+odd-valuation prime. Therefore the public nonsquare-block rows and the hidden
+prime rows have the same set of distinct nonzero masks. They can differ only
+by duplicate nonzero rows and, if retained, hidden zero rows.
+
+Consequently the public and hidden matrices have exactly the same rank,
+kernel, degree-one relation core, and column-incidence components. No
+factorization of the endpoint values is needed.
+
+Degree-one peeling is lossless on the frozen matrix. If a row has one active
+column, that coordinate is zero in every kernel vector. Deleting the column
+preserves the full kernel by zero extension. Every exhaustive peeling order
+leaves the same unique greatest column set in which no incident row has
+degree one.
+
+This is not a safe permanent online deletion rule. A later relation can reuse
+a row that is private in the current prefix and create a new dependency.
+
+The fixed public F103 replay illustrates the theorem. Its 9,414 distinct
+relation values have rank 8,926 and nullity 488. Public peeling removes 7,633
+columns and leaves a connected core with 1,781 columns, 1,298 public rows,
+rank 1,293, and the same nullity 488. The factor-assisted prime matrix has
+1,299 core rows but exactly the same core columns. The public 166-value
+factor certificate lies inside this core. A frozen 4,293-column prefix has
+rank 4,291; peeling leaves 373 columns and rank 371. Thus column surplus is
+not necessary for a finite rank defect.
+
+The theorem makes the decoder side complete. It does not make a core
+nonempty or rank deficient, and it does not make a square root non-global.
+The remaining problem is entirely source-side: force a polynomial-size core
+with a dependency whose normalized root is not globally \(\pm1\).
+
+The corrected theorem candidate, final hostile re-audit, proof-blind
+statement, and proof-blind reconstruction report have SHA-256 hashes
+`ffcc2334acb34619ea2308ec9c544fbb1d0ecce4c696f9ce01c3caf9bbb53f45`,
+`69868b43e9e10bf1fad7f981ad06406db0a635b6d919c986ffd44032a2193430`,
+`85a3cc9997df45cec233741e41099e2eddf94ba0c5ef18a82aeb81cf8073cc74`,
+and
+`2aa63a861a050da79adba855bf29000db77e99654fc066ee193186ae0e9ecb49`.
+The first audit's implementation failure and wording caveats remain
+preserved. No cross-family audit, human audit, or publication-level
+literature review has run.
+
+## P107 — carry-exposed parity rows are exactly computable without factoring
+
+**Status:** promoted from corrected F108 after a hostile audit, a fresh narrow
+re-audit, a proof-blind reconstruction, and an amended-boundary proof-blind
+re-audit. This is a public diagnostic theorem for a frozen explicit batch. It
+is not a source theorem or an all-input factoring algorithm.
+
+Let factor-free gcd refinement turn a frozen endpoint batch into pairwise
+coprime integer-mask blocks \((q_j,m_j)\). Let \(E\) be the product of any
+explicit public exposure list. Define \(S_E(q_j)\) as the largest divisor of
+\(q_j\) supported on primes dividing \(E\). Repeated gcd and exact division
+compute it without identifying a prime. If \(r_p\) is the hidden parity row
+for prime \(p\), then
+
+\[
+\{m_j:S_E(q_j)\text{ is nonsquare}\}
+=
+\{r_p:p\mid E,\ r_p\ne0\}
+\]
+
+as sets of distinct masks. The proof combines the P106 row invariant with
+gcd saturation: a terminal block contains the complete \(p\)-power in its
+supported part exactly when \(p\mid E\). The computation is polynomial in the
+total explicit endpoint and exposure-list bit length. It is polynomial in
+\(\log N\) when those lists have polynomial size and polynomial-bit entries.
+
+For the public 166-column F98 circuit at \(N=202{,}537{,}109\), all 54 raw
+round-one trajectories give 15,935 exposure insertions after 6,008 two-zero
+duplicates are excluded. The theorem recovers 200 distinct public masks of
+rank 165, equal to the full circuit rank. The eight represented trajectories
+already give 191 masks of rank 165. These are raw full-batch exposures. If
+both adjacent values must lie inside the selected 166 columns, only 34 or 82
+exposure events remain, and their rank is 54. Raw exposure is therefore a
+reservoir property, not an internal-circuit carry explanation.
+
+The F99 private-row family gives an exact boundary. Every transition has one
+zero carry and exposes only powers of two, while distinct private primes form
+an identity submatrix of rank \(T\). Carry frequency alone forces neither a
+dependency nor the mixed CRT signs needed for a non-global root.
+
+This theorem makes carry coverage public and testable. It does not prove that
+the source covers the full row space on another input, that a dependency
+exists, or that a dependency root is non-global.
+
+The corrected result, final hostile re-audit, amended proof-blind statement,
+original proof-blind report, and amended-boundary proof-blind re-audit have
+SHA-256 hashes
+`739e23ee12a251bb2f4a4cdbe0df3cebfa8cdf6fe6b2e12fcaca5bb513677eae`,
+`6e17edd24681e003a894943a6e6f37975d2cc1fb8b8d66f87cc54d4804c48a0f`,
+`9100aa6c2e0e3b9ce42c00b2888d87b41c6f0a43cac2026cd31c1aa2409fd722`,
+`d2f3c31138834cbd521545715f13775c5f315329e5d73ba29ca5cd99aae225a3`,
+and
+`6d667a98dc565bba20d356ece41dc81bcc0f1ff1adb40bd6506b49faa50d3a03`.
+The original under-specified statement failure and both hostile-audit
+environment failures remain preserved. No cross-family audit, human audit,
+or publication-level literature review has run.
+
+## P108 — two individually useless relation layers can create a useful root only through their cross quotient
+
+**Status:** promoted from F111 after a hostile factor-free layer-interaction
+audit and an independent proof-blind reconstruction. This is an exact linear
+algebra theorem and one fixed-input mechanism witness. It is not an all-input
+source law or a factoring algorithm for arbitrary integers.
+
+Apply one global first-occurrence exact-value deduplication to two ordered
+relation layers. Let $M_F$ contain the first layer's columns, and let $M_A$
+contain only second-layer values that are new relative to the first layer.
+Put
+
+\[
+M_U=[M_F\;M_A].
+\]
+
+Write $K_F,K_A,K_U$ for their kernels. The map
+
+\[
+(x,y)\longmapsto M_Fx=M_Ay
+\]
+
+induces an exact isomorphism
+
+\[
+\boxed{
+K_U/(K_F\oplus K_A)
+\simeq
+\operatorname{im}M_F\cap\operatorname{im}M_A.
+}
+\]
+
+Consequently,
+
+\[
+\dim K_U-\dim K_F-\dim K_A
+=
+\operatorname{rank}M_F+
+\operatorname{rank}M_A-
+\operatorname{rank}M_U.
+\]
+
+This quotient measures dependencies that require both layers. It is separate
+from raw nullity. For any exact square dependency, take its positive integer
+root modulo $N$, then quotient the root image by the two global roots
+\(\{+1,-1\}\). If the normalized root map is zero on both pure kernels but
+nonzero on the displayed quotient, every useful dependency crosses the layer
+boundary.
+
+The factor-free F111 replay realizes this event at
+
+\[
+N=3{,}241{,}632{,}473.
+\]
+
+After first-occurrence exact-value deduplication, the frozen layer has
+
+\[
+11{,}885\text{ columns},\quad
+\operatorname{rank}=11{,}878,\quad
+\dim K_F=7.
+\]
+
+All seven basis roots are global $+1$. When decoded in isolation, the
+appended source has 837 distinct exact values, rank 837, and no dependency.
+Of these values, 153 already occur in the frozen layer. The global
+first-occurrence rule therefore gives $M_A$ 684 new columns, which are also
+independent by themselves. The complete union has
+
+\[
+12{,}569\text{ columns},\quad
+\operatorname{rank}=12{,}551,\quad
+\dim K_U=18.
+\]
+
+Hence the cross quotient has dimension
+
+\[
+18-7-0
+=11{,}878+684-12{,}551
+=11.
+\]
+
+Its normalized root-map image has rank one. Thus neither layer supplies a
+useful root, while their union does. Every useful union dependency necessarily
+uses both layers.
+
+The hostile verifier found a 363-value cross-layer dependency. A separate
+proof-blind decoder, which did not read that support or any layer-audit
+artifact, independently found a different 367-value dependency. Both give
+
+\[
+R\equiv1{,}058{,}780{,}986\pmod N,
+\qquad R^2\equiv1\pmod N,
+\]
+
+and
+
+\[
+\gcd(R-1,N)=79{,}043,
+\qquad
+\gcd(R+1,N)=41{,}011.
+\]
+
+All direct endpoint screens before the joint decode are nonproper. Both
+decoders use gcd refinement, exact division, perfect-power extraction, exact
+integer square roots, and binary linear algebra. They do not factor an
+endpoint, call a primality routine, read a known factor, or read the published
+dependency indices.
+
+This is a real stateful algorithmic distinction from computing one new scalar
+and taking one gcd. The new layer changes the accessible normalized-root
+image only through its interaction with retained old relations. It does not
+show growth of the abstract unit group. It also gives no reason that the
+cross intersection or its non-global root image must be nonzero on another
+input.
+
+The hostile layer audit, its machine output, the proof-blind statement, and
+the proof-blind reconstruction report have SHA-256 hashes
+`6133c966d6e14e966314dd43360998289102507d1cb144f5f9a29d158310d95e`,
+`6b9c66ca97c47d1307212db9ba5fa299df3c66c3312af6ee8f110c9d3e8e52a8`,
+`a4c50da4ba3d76d2137115bdd423b5738b35f14d13dc6b1fed1d76c9f54627e6`,
+and
+`820ef26300e9de99fdce93dd551665621f460d81b79e49f17b6b39a482ce7f35`.
+One hostile-verifier self-check failure and the proof-blind command-format
+errors remain preserved. No cross-family audit, human audit, or
+publication-level literature review has run.
+
+## P109 — exact-value extension preserves useful roots, so a complete fixed source needs no certificate stop
+
+**Status:** promoted from F111 after a hostile monotone-extension audit and an
+isolated proof-blind full-source reconstruction. This is one general extension
+theorem and one fixed-input polynomial-time computation. It is not an
+all-input source law.
+
+Let an ordered source produce positive exact relation values
+$P_i\equiv1\pmod N$. Remove $P_i=1$, and keep only the first occurrence of
+each exact integer value. Appending source records leaves every old coordinate in place.
+Thus an old kernel vector extends by zeros on the new coordinates. Its exact
+selected product, positive square root, and normalized root class do not
+change.
+
+The normalized root map from the binary square-class kernel to the square
+roots of one modulo $N$, modulo global sign, is a homomorphism. Therefore, if
+its image is nonzero, every complete kernel basis contains at least one vector
+with nonzero normalized class. The theorem preserves the useful image, not a
+particular basis vector.
+
+For
+
+\[
+N=3{,}241{,}632{,}473,
+\]
+
+an isolated decoder executed the full fixed source from only $N$, $n=32$,
+and $B=n^2=1024$. It used seeds $2,\ldots,n$, every frozen seed-basis
+trajectory, then the constant pairs $(2,3)$ and $(2,4)$. It used
+no retained-record stop, dependency support, known divisor, endpoint
+factorization, or primality routine.
+
+The source attempted 67,681 positions and retained 15,884 first residues. The
+$(2,3)$ append added no new residue. The $(2,4)$ append added 1,533. Global
+exact-value deduplication left 12,962 columns. Factor-free refinement and a
+complete binary decode gave
+
+\[
+\operatorname{rank}=12{,}923,
+\qquad
+\operatorname{nullity}=39.
+\]
+
+All 39 basis products were tested by exact integer square root and terminal
+gcd. Twenty-three roots were global $+1$, five were global $-1$, and eleven
+had nonzero normalized class. The useful roots exposed the proper divisors
+$41{,}011$ and $79{,}043$. No earlier direct sign screen gave a proper
+divisor.
+
+The full program has $O(n^3)$ source positions. Its relation values,
+factor-free refinement state, binary matrix, dependency products, complete
+kernel basis, and every root test have polynomial bit size. It is therefore a
+uniform polynomial-bit-time computation. The pair choices are now constant
+program text, but they were historically selected after experiments. Nothing
+here proves that this fixed source has a useful root on another input.
+
+The hostile audit report and output, proof-blind statement, reconstruction
+report and output, and final reconstruction manifest have SHA-256 hashes
+`55bdaf32d841a47a5ad8ce4cb422eb80c4bb0d0bc6991699fd8eff50f3ab7b95`,
+`f629bc58e14d3a21877f8642145ac6bab3ef1cf8d85a4589ba321eb219763095`,
+`1cdea0d4292e3f80a54551a3cc5f4c1160cfdf4af2e4ed6a110f35fbeef8936b`,
+`138a41f1506ae5a4261e0b390d731f7413efc9232fe366bfedad577f04f9735c`,
+`94f3550d27f2a5d6101b648c4e8432a7fb2e6ed9cdb1e12ad5695b70938dd4fd`,
+and
+`b6b0114948dc125a07d228d956b4434662550f522622f459bfc103c9b210b83b`.
+No cross-family audit, human audit, or publication-level literature review
+has run.
+
+## P110 — the complete all-seed-pair source is a no-advice polynomial algorithm on one fresh 54-bit input
+
+**Status:** promoted from F116 after a hostile exact-value audit and an
+isolated proof-blind reconstruction. This is a fixed-input success theorem. It
+does not give an all-input source law.
+
+For
+
+\[
+N=12{,}800{,}004{,}879{,}996{,}637,
+\]
+
+set $n=54$ and $B=n^2=2916$. The fixed source tries seeds $2,\ldots,n$,
+all frozen seed-basis trajectories, and then both orientations of every
+unordered seed pair $2\leq u<v\leq n$ through exponent $B$. It keeps the
+first occurrence of each residue and the first occurrence of each nonunit
+exact relation value. It then uses the complete factor-free square-class
+decoder and tests every vector in a complete kernel basis.
+
+This complete algorithm receives only $N$. It receives no retained-record
+stop, dependency support, known divisor, endpoint factorization, or primality
+advice. Its source has exactly
+
+\[
+(n-1)+(B+1)n(n-1)=8{,}348{,}507
+\]
+
+positions, and its complete decoder has polynomial bit cost.
+
+The isolated reconstruction regenerated an initial prefix of 1,336,218 source
+positions. It retained 771,082 first residues. Global exact-value projection
+left 622,151 distinct nonunit columns. An advised set of 6,486 regenerated
+records consists entirely of distinct nonunit exact values at their global
+first occurrences. Their 672,808-bit exact product is a square. Its positive
+root satisfies
+
+\[
+R\equiv5{,}266{,}287{,}723{,}884{,}331\pmod N,
+\qquad R^2\equiv1\pmod N,
+\]
+
+and
+
+\[
+\gcd(R-1,N)=159{,}999{,}943,
+\qquad
+\gcd(R+1,N)=80{,}000{,}059.
+\]
+
+No direct sign screen in the prefix gives a proper divisor. Exact-value
+projection preserves this nonzero normalized root class. P109 append
+monotonicity then extends it through the unexecuted remainder of the fixed
+source. The factor-free decoder theorem and root-map homomorphism imply that
+every complete kernel basis for the final source contains at least one useful
+vector. Therefore the specified no-advice algorithm factors this supplied
+$N$.
+
+The complete 8,348,507-position source and its complete decoder were not run.
+The advised prefix and support are proof data, not algorithm inputs. Nothing
+here proves success on another input, a success density, an inverse-polynomial
+probability, or a classical polynomial-time factoring algorithm for arbitrary
+integers.
+
+The hostile audit report and output, proof-blind statement, reconstruction
+report and output, and final manifest have SHA-256 hashes
+`020b8cc8c9c8c15fb9a42186496ffb20e7302519ffa5ec2319c24ae62b9c1cd6`,
+`e25bbbeb6453230753ea569bba8d9b2d2dc97b59088c37988056c4472768cab4`,
+`dacb0f606313045ce3f0e7b6ff75433bad437ac2b372056f71a021cfce5dce1b`,
+`8e64015edf3dbd2df9002edbed7c81324d88ea8decc91cf114f9d06527e8e34f`,
+`0c1fdcbf734592fee9b9f7722816f5cbfbee6f00d53bc8a6fa1fc8d8b8fb0ca1`,
+and
+`996639d418ca78603f4af384c8328596dd59d72c5701020d855757243c06a745`.
+No cross-family audit, human audit, or publication-level literature review
+has run.
+
+## P111 — carry congruences admit an infinite trial-hard cross-pair private-row submatrix
+
+**Status:** promoted from F119 after a hostile audit found one endpoint-scope
+error, the theorem was corrected, the corrected bytes passed a fresh
+re-audit, and a proof-blind agent reconstructed the theorem by a different
+CRT construction. This is an infinite selected-submatrix theorem. It is not
+a complete-source obstruction or a factoring algorithm.
+
+For a unit $1\leq c<N$, let $w$ be its least positive inverse and write
+
+\[
+P_N(c)=cw=1+\kappa_N(c)N.
+\]
+
+For distinct nonzero carries $k,\ell$,
+
+\[
+\gcd(1+kN,1+\ell N)
+=\gcd(1+kN,|k-\ell|)
+=\gcd(1+\ell N,|k-\ell|).
+\]
+
+Indeed, every $1+kN$ is coprime to $N$, so subtraction removes the factor
+$N$. Consequently, for every prime $r\nmid N$,
+
+\[
+r\mid1+kN
+\quad\Longleftrightarrow\quad
+k\equiv-N^{-1}\pmod r.
+\]
+
+Thus a prime row can occur only in one carry residue class. If a finite carry
+set has diameter $D$, row $r$ has degree at most
+$1+\lfloor D/r\rfloor$. If column $k$ has no private odd-valuation row, then
+
+\[
+\operatorname{sf}(1+kN)
+\mid
+\prod_{\ell\ne k}|k-\ell|,
+\]
+
+where $\operatorname{sf}$ is the product of primes with odd valuation.
+
+The following construction shows that genuine cross-pair provenance does not
+itself force row reuse. For sufficiently large $t$, choose $t$ primes
+$a\in(t^2,2t^2)$ and set
+
+\[
+C_t=\{a^2b:a\ne b\},
+\qquad |C_t|=t(t-1),
+\qquad L_t=\prod_a a^2.
+\]
+
+The values in $C_t$ are distinct and divide $L_t$. For each $c\in C_t$,
+choose a distinct prime $q_c\in(t^{10},2t^{10})$ and put $d_c=c-1$. Let
+
+\[
+Q_t=L_t\prod_{c\in C_t}q_c^2.
+\]
+
+CRT gives a reduced class $R_t\pmod {Q_t}$ with
+
+\[
+R_t\equiv1\pmod {L_t},
+\qquad
+R_t\equiv(q_c-1)d_c^{-1}\pmod {q_c^2}
+\quad(c\in C_t).
+\]
+
+Choose a prime $p_t$ with $Q_t<p_t<2Q_t$. Choose a reduced representative
+between $2Q_t$ and $5Q_t$ for the required class modulo $Q_t$. Dirichlet's
+theorem and Linnik's theorem then give a distinct prime $\ell_t>2Q_t$ of size
+$Q_t^{O(1)}$ such that
+
+\[
+p_t\ell_t\equiv R_t\pmod {Q_t}.
+\]
+
+Set $N_t=p_t\ell_t$. Then $N_t\equiv1\pmod c$ for every $c\in C_t$, so
+
+\[
+w_c=N_t-\frac{N_t-1}{c}
+\]
+
+is the canonical inverse of $c$, and
+
+\[
+P_{N_t}(c)=cw_c=1+(c-1)N_t.
+\]
+
+The protecting congruence gives
+
+\[
+P_{N_t}(c)\equiv q_c\pmod {q_c^2},
+\]
+
+so $q_c$ has valuation one in this value. For $d\in C_t$, $d\ne c$,
+
+\[
+P_{N_t}(d)
+\equiv(c-d)(c-1)^{-1}\not\equiv0\pmod {q_c},
+\]
+
+because $q_c$ exceeds every selected word difference. The $q_c$ rows
+therefore form an identity submatrix. All $t(t-1)$ selected square-class
+columns are independent.
+
+Moreover,
+
+\[
+\log Q_t=\Theta(t^2\log t),
+\qquad
+n_t=\operatorname{bitlength}(N_t)=\Theta(t^2\log t).
+\]
+
+Hence
+
+\[
+t(t-1)=\Theta(n_t/\log n_t).
+\]
+
+For large $t$, every base is at most $n_t$, exponent two is inside the
+declared $n_t^2$ range, and every $c<N_t$. Thus these are genuine words in
+the fixed unordered-seed-pair menu. Both factors exceed $n_t^2$, so the
+inputs are trial-hard distinct semiprimes and not perfect powers.
+
+For each named residue $c$, both endpoint sign gcds are one. A proper sign
+gcd modulo a factor $s$ would force $c^2\equiv1$ or $-1\pmod s$, while
+$0<c^2-1<c^2+1<Q_t<s$. This also covers an earlier occurrence of the same
+canonical residue. It does not cover a different earlier residue that has
+the same exact integer value. Exact-value deduplication preserves the value
+and its private row, but sign screens depend on the endpoint representation.
+
+The construction controls privacy only inside the selected submatrix. A
+seed, frozen, or other all-pairs carry can be congruent to $c-1\pmod {q_c}$
+and reuse the row. It also does not exclude an earlier direct factor. A
+complete-source obstruction still needs stable privacy for the final
+self-generated carry set. A positive factoring theorem instead needs both a
+rank defect and a non-global normalized root. These are three separate
+conditions.
+
+The corrected result, final hostile re-audit, proof-blind statement,
+reconstruction proof and report, reconstruction manifest, and final re-audit
+manifest have SHA-256 hashes
+`552a54c8382341709305e53bd535efd9ef0ec0bc7957fa32be8ddc5c061f4575`,
+`a629dc043d915caaf9ac1240b018f5c72014849f89bf31969a57c992121cf6ae`,
+`4a4aaf43119609e7745b5f88623a3ea9fb3c72aac7d15b16062d1aef0e692986`,
+`e8aa7a5f4c10bb24d99b766b1fe774912d939e9db16f565de035d92d4442db46`,
+`5f9c9dae4ff42ad4c8685dcd3c0a39a95931c792f0fe8973b9b79749450ba5ef`,
+`f60e3e3bc9923df29145c4d9e831a6ea8888af237f73ff76bee27a4f91426d82`,
+and
+`3379c8903638149795cd0bc8baeebe7de6ae4732d23891821fa7e09826aa5b30`.
+The original overbroad result hash retains `PASS_WITH_CORRECTIONS`. No
+cross-family audit, human audit, or publication-level literature review has
+run.

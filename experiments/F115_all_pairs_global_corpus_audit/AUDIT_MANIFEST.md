@@ -1,0 +1,74 @@
+# F115 hostile audit manifest
+
+## Authoritative run
+
+```text
+command=python3 experiments/F115_all_pairs_global_corpus_audit/run_F115_hostile_audit_with_timeout.py
+inner_command=/usr/local/bin/sage -python experiments/F115_all_pairs_global_corpus_audit/audit_independent_verifier.py
+working_directory=/Users/zhou/autoresearch/IntegerFactoring
+hard_timeout_seconds=1800
+elapsed_seconds=276.73245433300326
+inner_elapsed_seconds=274.73509474999446
+exit_code=0
+status=FAIL_AS_WRITTEN_PASS_CORRECTED
+sage_version=10.9
+```
+
+The independent verifier imports no candidate implementation.  It replays all
+100 F112 cases and all 14 F113/F114 continuations with SageMath/Pari endpoint
+factorization.
+
+## Preserved failed audit
+
+The first attempt stopped before replay because the verifier asserted an
+incorrect excluded-file overlap.  The corrected JSON set calculation gives 24
+overlapping and 62 additional distinct cases.  The failure is preserved as:
+
+```text
+17a3995f6301a6b86ffa379e0100d9859809db9465386290b2684c9fb5c40d87  AUDIT_FAILED_20260808T031508Z_EXECUTION.log
+```
+
+## Frozen candidate SHA-256 pins
+
+```text
+2fa5068fbd8eb724d8f169fbf03be7e019db072c8b4fab2537c2c2e725204131  ../F110_frozen_batch_seed_pair_rescue/test_frozen_batch_rescue.py
+b27316ffe98f84830802abd018ef6a5f0e902d1a7d399d8dd727befeef61fec1  ../F112_frozen_two_v_global_root_stress/DESIGN.md
+fe98ec27dc6635b645bfe18e775337d4586681ae7b722cc8a59033a7e47681ab  ../F112_frozen_two_v_global_root_stress/FAILED_RUNS.md
+1c5bc0c9078f2424134790f410f15b9ed10f2fefc92e87b7e59121096602ee96  ../F112_frozen_two_v_global_root_stress/OUTPUT_FAILED_20260808T025244Z_CLAIM.json
+cf41d85d1a97f72449107d8823b203b6e3139c3a912b34518ffd76b76645efaf  ../F112_frozen_two_v_global_root_stress/RESULT.md
+e94e192901fc46f338b09da8e843bdf4dc313ed4ab01500f3e78c20fb7502fa5  ../F112_frozen_two_v_global_root_stress/RUN_FAILED_20260808T024838Z_EXIT_1.log
+f8db33c5b976d635f8b48bf81f85b4901d9704ef94502c516ac88fa1d964cc49  ../F112_frozen_two_v_global_root_stress/RUN_FAILED_20260808T025244Z_CLAIM.log
+e9eac88c6df2f29a90e9b5d51a7774430b4847fa5d107bb152e1df558f5a994a  ../F112_frozen_two_v_global_root_stress/RUN_MANIFEST.md
+1599eae0247456b13491031c7a2fb338b422da45f73c0e79d0ddcc598db52a20  ../F112_frozen_two_v_global_root_stress/run_with_timeout.py
+3eb11e927f3b376db890fe46a9b528af1b40229b1cbf83185994dc336e9a4acf  ../F112_frozen_two_v_global_root_stress/stress_frozen_two_v.py
+53638547a451884c9e10b448362c10dde15962c69aa6bf7e9f72b01bbc4a0b5c  ../F113_all_seed_pairs_n46_rescue/DESIGN.md
+51eaaea476702216bb5cf3c067de2cf8ec8a6aab398577959ae967144d58c857  ../F113_all_seed_pairs_n46_rescue/FAILED_RUNS.md
+3a35acf0bc1815e41607b7ac60902b45eb0763bd04b84d77da3e397855f41edb  ../F113_all_seed_pairs_n46_rescue/OUTPUT.json
+2e84a7a9af7ec1180eb21e43195299b7cdb5f6c3b825a40f79cf67fb1107d7a6  ../F113_all_seed_pairs_n46_rescue/RESULT.md
+1c8538eb1ddd63e39619aedede2f7036c9707b4e8096f7599ec2fbd5214ad4fe  ../F113_all_seed_pairs_n46_rescue/RUN.log
+35d9051a288ae00909e4e276615241231179f71de9a9cac7abdf2037c9aa23b5  ../F113_all_seed_pairs_n46_rescue/RUN_MANIFEST.md
+375199b0d4cbcee9b8a514511e09f580f9e86a8e327087c3727424654f960b91  ../F113_all_seed_pairs_n46_rescue/run_with_timeout.py
+c254ba6ec5b8bcc1ce816b60865ae0bce0cd9725aee2bdee1144acd03df290ab  ../F113_all_seed_pairs_n46_rescue/test_all_seed_pairs.py
+9c269e4e72473956e7fbacef0dd27632354cf54cdff4c1694a1e584e042912e1  ../F114_all_seed_pairs_n50_rescue/DESIGN.md
+dd69c3396c420aa387260cb706ce51f2a518b4a0f0dc4cfcbe91f959a1c28d5c  ../F114_all_seed_pairs_n50_rescue/FAILED_RUNS.md
+e63cd04be683e2f64ad2c49e1ffe2bcb7c8094aa9520a4a299e9def968f6f4f6  ../F114_all_seed_pairs_n50_rescue/OUTPUT.json
+ab3ea8da963d1741a25568c519cf49f4969ea09d94a9829501d6f2da7c5afb0d  ../F114_all_seed_pairs_n50_rescue/RESULT.md
+6266bfda2cadd379dba1821c7b70d635dd574536a6a25cf341fec7fd19df3f7d  ../F114_all_seed_pairs_n50_rescue/RUN.log
+4ad9522199e5c4e6b7227aa7e3fca9282363d4ed17a40194a6936d71b5689516  ../F114_all_seed_pairs_n50_rescue/RUN_FAILED_20260808T025529Z_EXIT_1.log
+0201d5391e88e0ab92c17685ce4c456c52a79fe3dd754068f34de2b44d510295  ../F114_all_seed_pairs_n50_rescue/RUN_MANIFEST.md
+3c3ce288bd6c37f1655f6484c9af0f09bae1060862acae6d222db3ee6b1f8eb9  ../F114_all_seed_pairs_n50_rescue/run_with_timeout.py
+4ff3be00160bd2a7a7d1a3b5e1245c118b6a8f2219f9b1b63401265b50f25cb5  ../F114_all_seed_pairs_n50_rescue/test_all_seed_pairs_n50.py
+```
+
+## Audit artifact SHA-256 pins
+
+```text
+e0c725521b7307de3c3bb579d1eeee173192f152f6fdae9281ad83ea35e08a6f  AUDIT.md
+5a130e11bef2f9253c538e83458b5775823313d713376520e380e75b82bb8a2c  AUDIT_FAILED_RUNS.md
+bfca59151b428d41631ee445892a42b77d35bd41e468cea111cbd97a97e9626a  audit_independent_verifier.py
+242b7d568ee4890e3987cae5b63ea25f16bcded9d6a44209261fa6e3c1f608a5  run_F115_hostile_audit_with_timeout.py
+c2ccfc1e7e71149597a5c5bc080a8ec13c2e8f7390af3b39087a5026a456e343  AUDIT_OUTPUT.json
+2b90982e288ccfc9081a4e0f551ef29a2eed19eea4f18f218cb69641fd156e5e  AUDIT_RUN.log
+```
+
+`AUDIT_MANIFEST.md` is not self-hashed.

@@ -1,0 +1,18 @@
+stage=N-only fixed-certificate replay
+command=["/opt/homebrew/opt/python@3.14/bin/python3.14", "/Users/zhou/autoresearch/IntegerFactoring/experiments/F110_frozen_batch_seed_pair_rescue/audit_n_only_certificate_replay.py", "--output", "/Users/zhou/autoresearch/IntegerFactoring/experiments/F110_frozen_batch_seed_pair_rescue/AUDIT_ATTEMPT_PUBLIC_REPLAY_OUTPUT.json"]
+timeout_seconds=300
+elapsed_seconds=0.725360
+timed_out=false
+exit_code=0
+stdout:
+stderr:
+
+stage=independent Sage hidden-prime reconstruction
+command=["sage", "-python", "/Users/zhou/autoresearch/IntegerFactoring/experiments/F110_frozen_batch_seed_pair_rescue/audit_independent_verifier.py", "--output", "/Users/zhou/autoresearch/IntegerFactoring/experiments/F110_frozen_batch_seed_pair_rescue/AUDIT_ATTEMPT_OUTPUT.json"]
+timeout_seconds=900
+elapsed_seconds=5.309204
+timed_out=false
+exit_code=0
+stdout:
+stderr:
+

@@ -1,0 +1,15 @@
+command=["/usr/local/bin/sage", "-python", "/Users/zhou/autoresearch/IntegerFactoring/experiments/F115_all_pairs_global_corpus_audit/audit_independent_verifier.py"]
+timeout_seconds=1800
+elapsed_seconds=4.071700000000419
+returncode=1
+stdout:
+
+stderr:
+Traceback (most recent call last):
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F115_all_pairs_global_corpus_audit/audit_independent_verifier.py", line 621, in <module>
+    main()
+    ~~~~^^
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F115_all_pairs_global_corpus_audit/audit_independent_verifier.py", line 510, in main
+    assert corpus["excluded_overlap_with_selected"] == 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

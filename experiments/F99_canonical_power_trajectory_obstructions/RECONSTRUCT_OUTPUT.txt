@@ -1,0 +1,16 @@
+IDENTITY N=64570081 3^17=129140163 factors=1871*34511
+LUCAS n=2 base_prime=true
+LUCAS n=5 n-1=2^2 witness=2 pow=1 checks=[q=2:res=4:gcd=1]
+LUCAS n=11 n-1=2*5 witness=2 pow=1 checks=[q=2:res=10:gcd=1,q=5:res=4:gcd=1]
+LUCAS n=17 n-1=2^4 witness=3 pow=1 checks=[q=2:res=16:gcd=1]
+LUCAS n=1871 n-1=2*5*11*17 witness=14 pow=1 checks=[q=2:res=1870:gcd=1,q=5:res=932:gcd=1,q=11:res=1838:gcd=1,q=17:res=81:gcd=1]
+LUCAS n=3 n-1=2 witness=2 pow=1 checks=[q=2:res=2:gcd=1]
+LUCAS n=7 n-1=2*3 witness=3 pow=1 checks=[q=2:res=6:gcd=1,q=3:res=2:gcd=1]
+LUCAS n=29 n-1=2^2*7 witness=2 pow=1 checks=[q=2:res=28:gcd=1,q=7:res=16:gcd=1]
+LUCAS n=34511 n-1=2*5*7*17*29 witness=7 pow=1 checks=[q=2:res=34510:gcd=1,q=5:res=30233:gcd=1,q=7:res=8712:gcd=1,q=17:res=26842:gcd=1,q=29:res=16242:gcd=1]
+SIZE bitlength=26 square=676 2^25=33554432 N=64570081 2^26=67108864 factors_above_bound=True
+DECOMPOSITION g=170 A=11 B=203 AB=2233 gcd(AB,N-1)=1
+ORDERS ord_3_mod_1871=17 ord_3_mod_34511=17 ord_3_mod_64570081=17
+ORBIT exponents=0..676 distinct_residues=17
+RELATION common_value=129140163=1+2N rows=[r=1:c=3:w=43046721:gcd-=1:gcd+=1 ; r=2:c=9:w=14348907:gcd-=1:gcd+=1 ; r=3:c=27:w=4782969:gcd-=1:gcd+=1 ; r=4:c=81:w=1594323:gcd-=1:gcd+=1 ; r=5:c=243:w=531441:gcd-=1:gcd+=1 ; r=6:c=729:w=177147:gcd-=1:gcd+=1 ; r=7:c=2187:w=59049:gcd-=1:gcd+=1 ; r=8:c=6561:w=19683:gcd-=1:gcd+=1 ; r=9:c=19683:w=6561:gcd-=1:gcd+=1 ; r=10:c=59049:w=2187:gcd-=1:gcd+=1 ; r=11:c=177147:w=729:gcd-=1:gcd+=1 ; r=12:c=531441:w=243:gcd-=1:gcd+=1 ; r=13:c=1594323:w=81:gcd-=1:gcd+=1 ; r=14:c=4782969:w=27:gcd-=1:gcd+=1 ; r=15:c=14348907:w=9:gcd-=1:gcd+=1 ; r=16:c=43046721:w=3:gcd-=1:gcd+=1]
+VERDICT PASS

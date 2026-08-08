@@ -1,0 +1,7 @@
+{
+  "failures": [
+    "IndexError: list index out of range"
+  ],
+  "status": "FAIL",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/zhou/autoresearch/IntegerFactoring/experiments/F103_public_factor_free_parity_core/AUDIT_VERIFY.py\", line 836, in main\n    output = run(args)\n  File \"/Users/zhou/autoresearch/IntegerFactoring/experiments/F103_public_factor_free_parity_core/AUDIT_VERIFY.py\", line 718, in run\n    certificate = exact_root_evidence(full_matrix[\"values\"], selected, EXPECTED_N)\n  File \"/Users/zhou/autoresearch/IntegerFactoring/experiments/F103_public_factor_free_parity_core/AUDIT_VERIFY.py\", line 349, in exact_root_evidence\n    product = math.prod(values[column] for column in columns)\n  File \"/Users/zhou/autoresearch/IntegerFactoring/experiments/F103_public_factor_free_parity_core/AUDIT_VERIFY.py\", line 349, in <genexpr>\n    product = math.prod(values[column] for column in columns)\n                        ~~~~~~^^^^^^^^\nIndexError: list index out of range\n"
+}

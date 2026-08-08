@@ -1,0 +1,45 @@
+{
+  "artifacts": {
+    "log": {
+      "path": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F102_f98_full_parity_core/BLIND_RECONSTRUCT_RUN.log",
+      "sha256": "77aa9f42587cf726af6576962d8c13853c4dd3f5f0bb7f442b8fa65abc7d4826"
+    },
+    "output": {
+      "path": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F102_f98_full_parity_core/BLIND_RECONSTRUCT_OUTPUT.json",
+      "sha256": "528a07f15d6ed5638b2f90c430fafb3db57c33338bb6e2d6b788c73ca6c82873"
+    },
+    "public_input": {
+      "path": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F98_multiseed_presentation_closure_kill/PUBLIC_REPLAY_OUTPUT.json",
+      "sha256": "ee17d7e3ba088f382c0a1c3adec6d1e328ab7a4a814df8d1f6273e41d19c24ab"
+    },
+    "reconstruction": {
+      "path": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F102_f98_full_parity_core/RECONSTRUCT.md",
+      "sha256": "ab3f12562913d80f5c6b1909bd0ecf7a0684aca3105ccc5c4bb403749ef142c9"
+    },
+    "source": {
+      "path": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F102_f98_full_parity_core/blind_reconstruct_f102.py",
+      "sha256": "5d3a1159fd6ba8c3571c79b8765787008a51ca1929934a33d08b49323b1f4f23"
+    },
+    "statement": {
+      "path": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F102_f98_full_parity_core/RECONSTRUCTION_STATEMENT.md",
+      "sha256": "63ef2aa07b8cd0196bc9d917e94d3405702b1ac9f593e545f142b6506509c816"
+    }
+  },
+  "command": "DOT_SAGE=/tmp/f102_blind_sage timeout 300s sage -python blind_reconstruct_f102.py --timeout 240 --write-artifacts",
+  "exit_status": 0,
+  "failed_attempts_preserved_in": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F102_f98_full_parity_core/BLIND_RECONSTRUCT_OUTPUT.json",
+  "hard_timeout": {
+    "external_seconds": 300,
+    "internal_sigalrm_seconds": 240
+  },
+  "read_scope": [
+    "/Users/zhou/autoresearch/IntegerFactoring/experiments/F102_f98_full_parity_core/RECONSTRUCTION_STATEMENT.md",
+    "/Users/zhou/autoresearch/IntegerFactoring/experiments/F98_multiseed_presentation_closure_kill/PUBLIC_REPLAY_OUTPUT.json"
+  ],
+  "run_utc": "2026-08-08T01:36:10.896807+00:00",
+  "runtime": {
+    "python": "3.14.3 (main, Mar  8 2026, 09:55:32) [Clang 17.0.0 (clang-1700.6.3.2)]",
+    "sage": "10.9"
+  },
+  "status": "PASS"
+}
