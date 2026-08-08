@@ -1,0 +1,128 @@
+{
+  "B": 1681,
+  "N": 2000887089301,
+  "attempt_stream_sha256": "3e603e9d0ab4c497c1258aa48f78aa933714b7329f509554ea9049d689473d97",
+  "attempts": 437360,
+  "completed_pairs": 90,
+  "decoder": {
+    "all_basis_dependencies_exclude_private": true,
+    "basis_count_matches_nullity": true,
+    "basis_stream_sha256": "b31a46156f794321aeb528f78c72bb0b18bd74f92537dd9d8f86c9b721ece1b5",
+    "columns": 191839,
+    "eliminations": 1008908,
+    "first_root_class": {
+      "minus_global": {
+        "column_index": 72786,
+        "contains_private_column": false,
+        "gcd_root_minus_one": 1,
+        "gcd_root_plus_one": 2000887089301,
+        "root": 2000887089300
+      },
+      "non_global": {
+        "column_index": 72648,
+        "contains_private_column": false,
+        "gcd_root_minus_one": 1000289,
+        "gcd_root_plus_one": 2000309,
+        "root": 721509455990
+      },
+      "plus_global": {
+        "column_index": 7896,
+        "contains_private_column": false,
+        "gcd_root_minus_one": 2000887089301,
+        "gcd_root_plus_one": 1,
+        "root": 1
+      }
+    },
+    "fundamental_basis_dependencies": 7274,
+    "maximum_reduced_support": 224,
+    "minus_global_basis_roots": 1601,
+    "non_global_basis_roots": 2928,
+    "normalized_root_quotient_image_dimension": 1,
+    "nullity": 7274,
+    "plus_global_basis_roots": 2745,
+    "private_basis_dependencies": 0,
+    "rank": 184565,
+    "root_histogram": {
+      "1": 2745,
+      "1279377633311": 1507,
+      "2000887089300": 1601,
+      "721509455990": 1421
+    }
+  },
+  "direct_screens": {
+    "endpoint_minus_proper": 2,
+    "endpoint_plus_proper": 0,
+    "event_stream_sha256": "e21f2ce67fc672ca9bc28f2bf70361dc6e09696b16a786aa2c8f6e8fc9a8c59f",
+    "events": [
+      {
+        "cofactor": 2000309,
+        "event_index": 0,
+        "factor": 1000289,
+        "inverse": 1483206522841,
+        "method": "direct_endpoint_minus",
+        "provenance": {
+          "attempt_index_zero_based": 166901,
+          "exponent": 1012,
+          "kind": "nonadaptive_seed_pair",
+          "orientation": 1,
+          "pair_index_zero_based": 9,
+          "u": 2,
+          "v": 12
+        },
+        "residue": 1407720713745
+      },
+      {
+        "cofactor": 2000309,
+        "event_index": 1,
+        "factor": 1000289,
+        "inverse": 12852713362,
+        "method": "direct_endpoint_minus",
+        "provenance": {
+          "attempt_index_zero_based": 300527,
+          "exponent": 545,
+          "kind": "nonadaptive_seed_pair",
+          "orientation": 1,
+          "pair_index_zero_based": 49,
+          "u": 3,
+          "v": 14
+        },
+        "residue": 1947294605549
+      }
+    ],
+    "proper_event_count": 2,
+    "residue_proper": 0
+  },
+  "distinct_nonunit_exact_values": 191839,
+  "elapsed_seconds": 7.139757917000679,
+  "exact_value_duplicates": 48217,
+  "expected_attempts": 2758520,
+  "factor_cache": {
+    "current_size": 300000,
+    "hits": 0,
+    "maximum_size": 300000,
+    "misses": 383678
+  },
+  "n": 41,
+  "peak_rss": {
+    "platform": "darwin",
+    "ru_maxrss_raw": 630472704,
+    "unit": "bytes on macOS; KiB on Linux"
+  },
+  "phase": "all_pairs",
+  "private_column": {
+    "column_index": 0,
+    "exact_value": 2000887089302,
+    "observed_row_degree": 1,
+    "odd_row_column_indices": [
+      0
+    ],
+    "prime": 1000443544651
+  },
+  "residue_duplicates": 197303,
+  "retained_exact_stream_sha256": "8e983260bf3c2f6b55d81b0a281749ad309a1916fc04dfc40a984b4ebf274184",
+  "status": "RUNNING",
+  "total_pairs": 780,
+  "unique_residues": 240057,
+  "unique_units": 240057,
+  "unit_exact_values_removed": 1
+}

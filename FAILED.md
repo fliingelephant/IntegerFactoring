@@ -2926,6 +2926,51 @@ and
 No cross-family audit, human audit, or publication-level literature review
 has run.
 
+## X72 — a complete canonical source need not reuse every present prime row
+
+**Status:** promoted as the exact full-universe row-reuse boundary in P112.
+
+**Family:** F26/F120.
+
+**Classification:** counterexample to universal exact-value row reuse. This
+is not a counterexample to square-class closure, a useful root, or factoring.
+
+**What was tried.** Prove that a sufficiently broad canonical-inverse source
+must reuse every prime row, so no relation column can remain permanently
+isolated.
+
+**Exact obstruction.** After global exact-value deduplication, every prime row
+satisfies
+
+\[
+\deg(r)\le\left\lfloor\frac{N-1}{r}\right\rfloor.
+\]
+
+The proof-certified trial-hard semiprime
+
+\[
+N=2{,}000{,}887{,}089{,}301
+\]
+
+has prime $r=(N+1)/2$ in the seed-2 exact value $N+1=2r$. This row has
+degree one against the complete canonical universe. Its column can never
+occur in a binary dependency.
+
+**What would make a retry materially new.** Prove closure only after lossless
+private-row peeling, and separately prove that the normalized-root image is
+non-global. On the feedback side, prove that a new named integer presentation
+changes the future source on a trial-hard input where the complete static
+source is null. P112 does not cover that representation-level mechanism.
+
+The candidate result, fresh hostile report, and blind reconstruction proof
+have SHA-256 hashes
+`a8a63cc9a2bfab6acea2ded42e851fe3d6a185e15f9962bbe802a0ecb1866445`,
+`862f30200ccef7491e16bd366b69dea67f1e438caeb5b7b8698edd47d91f338a`,
+and
+`ab367ec8a2853b365e881b88bd4dc1dc2adf1e0ba6d226755934651b5433a56f`.
+No cross-family audit, human audit, or publication-level literature review
+has run.
+
 ## X69 — raw feedback volume and raw nullity are not progress measures
 
 **Status:** promoted as the exact method boundary in P104.

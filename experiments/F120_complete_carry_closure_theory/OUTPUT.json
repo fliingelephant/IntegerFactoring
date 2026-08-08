@@ -1,0 +1,38 @@
+{
+  "candidate": {
+    "N": 2000887089301,
+    "bit_length": 41,
+    "carry": 1,
+    "checks": {
+      "distinct_semiprime": true,
+      "ell_proven_prime": true,
+      "inverse_identity": true,
+      "large_row": true,
+      "p_proven_prime": true,
+      "private_proven_prime": true,
+      "trial_hard": true
+    },
+    "ell": 2000309,
+    "exact_value": 2000887089302,
+    "ordinal": 23,
+    "p": 1000289,
+    "private_prime": 1000443544651,
+    "seed": 2,
+    "seed_inverse": 1000443544651,
+    "trial_bound": 1681
+  },
+  "candidate_trace_sha256": "c18cd4ebff7cd0bbcfae418e8dfd9c5cf57b58f654fa73e6c092cb536fe3a5aa",
+  "pairs_tested": 23,
+  "registration": {
+    "ell_start": 2000000,
+    "experiment": "F120 finite trial-hard semiprime REUSE falsifier",
+    "hard_timeout_name": "F120_SEMIPRIME_PRIVATE_ROW_HARD_TIMEOUT",
+    "hard_timeout_seconds": 60,
+    "p_start": 1000000,
+    "pair_cap": 10000,
+    "purpose": "Find one finite trial-hard distinct-semiprime input with (N+1)/2 prime; this can falsify universal REUSE but cannot prove an infinite family.",
+    "source": "find_semiprime_private_row.py",
+    "source_sha256": "04f5abd4140a885f2d3e22f38a597e88e95063aee1479a40d01e9d0c0c178e94"
+  },
+  "status": "FOUND"
+}

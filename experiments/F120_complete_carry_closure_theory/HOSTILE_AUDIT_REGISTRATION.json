@@ -1,0 +1,30 @@
+{
+  "audit": "F120 hostile independent audit",
+  "candidate_artifact_sha256": {
+    "FAILED_ROUTES.md": "a87f6076ff69a9bc1c95976cc95849cd9971d5334a00830adaba3b4ccba20c47",
+    "FAILED_RUNS.md": "11aae8f244c3ca7256a6b3b73f914ac4b442e5ddafd6523d7c3857a8c66399c4",
+    "MANIFEST.md": "de8107968f6edfa30bd07d7909c0bbe4b7840199bc669113e993d4f6b1ac1f78",
+    "OUTPUT.json": "bc84fec9d4b8ab17d4a84c5b9a64b753c0625023f7b963e805f4828ee4d361f9",
+    "OUTPUT_FAILED_20260808T054832Z_EXIT_1.json": "278b311e583cf2e96331aa53dc9037db7f6bcaebb19b41116393caca2275bd48",
+    "QUESTION.md": "d11a55ce9dc747af2c43935fd352f083d483fd478400512bf7e9c01328064ad6",
+    "REGISTRATION.json": "4a014f6d0704d1ba083e53c2e44858838b10938cad0a9d90869cc16e629f09d1",
+    "RESULT.md": "a8a63cc9a2bfab6acea2ded42e851fe3d6a185e15f9962bbe802a0ecb1866445",
+    "RUN.log": "52170ca6a746993fab8a0e03d7c6529d76e8e1527c96948d32f036c992413c5f",
+    "RUN_FAILED_20260808T054832Z_EXIT_1.log": "0a6aeb91b2adc447c20743029a62dcb2b85bc1efd3227f28be533853334c61a7",
+    "find_semiprime_private_row.py": "04f5abd4140a885f2d3e22f38a597e88e95063aee1479a40d01e9d0c0c178e94",
+    "run_with_timeout.py": "fe383ace9cfbdb39a3398bf69375947219b8902454ccfacde229e1819dcb1be2"
+  },
+  "hard_timeout_name": "F120_HOSTILE_AUDIT_HARD_TIMEOUT",
+  "hard_timeout_seconds": 60,
+  "independence_rule": "Read candidate artifacts as data. Do not import or execute candidate code.",
+  "source": "hostile_audit_verify.py",
+  "source_sha256": "00bb4ec2fa001525bbdbf1fdaf5f26279b132c9095190cf224454b432a3402a5",
+  "tests": [
+    "reconstruct the first accepted ordinal pair",
+    "prove all reported primes by complete trial division",
+    "verify exact arithmetic, trial-hardness, signs, and valuation",
+    "verify candidate trace serialization without executing candidate code",
+    "exhaust odd moduli 3 through 301 for the degree bound",
+    "exhibit equal products from distinct inverse orbits"
+  ]
+}

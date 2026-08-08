@@ -1,0 +1,23 @@
+named_timeout=F120_SEMIPRIME_PRIVATE_ROW_HARD_TIMEOUT
+hard_timeout_seconds=60
+registration_sha256=4a014f6d0704d1ba083e53c2e44858838b10938cad0a9d90869cc16e629f09d1
+command=["/usr/local/bin/sage", "-python", "/Users/zhou/autoresearch/IntegerFactoring/experiments/F120_complete_carry_closure_theory/find_semiprime_private_row.py", "--registration", "/Users/zhou/autoresearch/IntegerFactoring/experiments/F120_complete_carry_closure_theory/REGISTRATION.json", "--output", "/Users/zhou/autoresearch/IntegerFactoring/experiments/F120_complete_carry_closure_theory/ATTEMPT_20260808T054830Z.json"]
+Traceback (most recent call last):
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F120_complete_carry_closure_theory/find_semiprime_private_row.py", line 11, in <module>
+    from sage.all import ZZ
+  File "/var/tmp/sage-10.9-current/local/lib/python3.14/site-packages/sage/all.py", line 335, in <module>
+    sage.misc.lazy_import.save_cache_file()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "sage/misc/lazy_import.pyx", line 1162, in sage.misc.lazy_import.save_cache_file
+    with atomic_write(cache_file, binary=True) as f:
+  File "/var/tmp/sage-10.9-current/local/lib/python3.14/site-packages/sage/misc/temporary_file.py", line 346, in __enter__
+    fd, name = tempfile.mkstemp(dir=self.tmpdir)
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/var/tmp/sage-10.9-current/local/lib/python3.14/tempfile.py", line 358, in mkstemp
+    return _mkstemp_inner(dir, prefix, suffix, flags, output_type)
+  File "/var/tmp/sage-10.9-current/local/lib/python3.14/tempfile.py", line 257, in _mkstemp_inner
+    fd = _os.open(file, flags, 0o600)
+PermissionError: [Errno 1] Operation not permitted: '/Users/zhou/.sage/cache/tmpnr9du8_9'
+returncode=1
+elapsed_seconds=2.049947
+status=FAILED result_status=None

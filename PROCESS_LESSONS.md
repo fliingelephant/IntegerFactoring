@@ -54,3 +54,13 @@
   defect or nullity.
 - After repeated finite rescues, move the main effort to an exact source law or
   a stable counterfamily. More cases improve confidence, not the theorem.
+- Abstract subgroup growth is not enough when bare $N$ already gives the
+  full unit group. Track whether feedback creates a short, named integer
+  presentation that the next source can use.
+- One permanently private row does not block the decoder. Peel its column and
+  test the remaining kernel and normalized-root image.
+- For an append-only source, one verified successful prefix certifies success
+  of the full source. Stop after the certificate when a no-stop run consumes
+  too much memory; do not require terminal counts that add no theorem value.
+- Test feedback only after the complete static source is null. A restricted
+  state can make an ordinary static relation look like a feedback rescue.

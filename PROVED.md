@@ -12370,3 +12370,84 @@ and
 The original overbroad result hash retains `PASS_WITH_CORRECTIONS`. No
 cross-family audit, human audit, or publication-level literature review has
 run.
+
+## P112 — canonical prime rows obey a complete-universe degree bound
+
+**Status:** promoted from F120 after a fresh hostile audit passed and a
+proof-blind reconstruction passed with two wording corrections. The modular
+inverse formula below is stated only for $c\ge2$, and the three algorithmic
+gates are stated as exact matrix properties. This is a row-reuse theorem and
+one finite counterexample. It is not a factoring obstruction.
+
+Let $N\ge3$ be odd. For each unit $1\le c<N$, let $w(c)$ be its least
+positive inverse and set
+
+\[
+P_N(c)=c\,w(c)=1+\kappa_N(c)N.
+\]
+
+Let the columns be the distinct integer values $P_N(c)>1$, after global
+exact-value deduplication. For a prime $r$, put a one in a column when its
+$r$-adic valuation is odd. Then
+
+\[
+\deg(r)\le
+\left\lfloor\frac{N-1}{r}\right\rfloor.
+\]
+
+For each distinct column containing $r$, choose one endpoint divisible by
+$r$. Two different exact values cannot choose the same endpoint, because
+that endpoint has a unique inverse modulo $N$. The chosen endpoints are
+distinct positive multiples of $r$ below $N$, which proves the bound.
+Different inverse orbits can share one exact product; global exact-value
+deduplication is therefore essential.
+
+Consequently, every present row with $r>(N-1)/2$ has degree one in the
+complete canonical universe. It remains private under every fixed-modulus
+source extension inside that universe. The exact carry also satisfies
+
+\[
+0\le\kappa_N(c)<\min(c,w(c)),
+\qquad
+\kappa_N(c)\equiv-N^{-1}\pmod c
+\quad(c\ge2).
+\]
+
+At $c=1$, the carry is zero; no inverse modulo one is used.
+
+There is a proof-certified trial-hard distinct semiprime witness:
+
+\[
+N=2{,}000{,}887{,}089{,}301
+=1{,}000{,}289\cdot2{,}000{,}309.
+\]
+
+Here
+
+\[
+r=(N+1)/2=1{,}000{,}443{,}544{,}651
+\]
+
+is prime. Seed $2$ has least inverse $r$, exact value $N+1=2r$, and
+odd $r$-valuation. Since $r>(N-1)/2$, this row is private against every
+canonical exact-value column. Both endpoint sign gcds are one. The two
+factors of $N$ exceed $41^2$, and $N$ is not a perfect power.
+
+If a row is private, its unique column has coefficient zero in every binary
+dependency. Deleting that row and column gives a coordinate-preserving kernel
+bijection. It preserves every positive exact root and its residue modulo
+$N$ on the surviving columns. Thus the finite witness refutes the universal
+claim that every present row must be reused. It does not decide whether the
+remaining columns contain a dependency or whether any dependency has a
+non-global square root. It also does not rule out feedback that exposes a new
+named integer representation of an existing exact value.
+
+The candidate result, fresh hostile report, blind reconstruction proof, and
+blind reconstruction report have SHA-256 hashes
+`a8a63cc9a2bfab6acea2ded42e851fe3d6a185e15f9962bbe802a0ecb1866445`,
+`862f30200ccef7491e16bd366b69dea67f1e438caeb5b7b8698edd47d91f338a`,
+`ab367ec8a2853b365e881b88bd4dc1dc2adf1e0ba6d226755934651b5433a56f`,
+and
+`4f6008ca54c4bf4efa4b8a2fa849b85c78eeaf467047898eaee701820a41b952`.
+No cross-family audit, human audit, or publication-level literature review
+has run.

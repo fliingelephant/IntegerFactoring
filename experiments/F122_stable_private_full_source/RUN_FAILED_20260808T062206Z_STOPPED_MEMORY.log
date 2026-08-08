@@ -1,0 +1,19 @@
+named_timeout=F122_STABLE_PRIVATE_FULL_SOURCE_HARD_TIMEOUT
+hard_timeout_seconds=900
+registration_sha256=6de022df99a2fc877356cbaf53c858a38548095b7e9aad9f2d720218aec2fe0c
+DOT_SAGE=/Users/zhou/autoresearch/IntegerFactoring/experiments/F122_stable_private_full_source/.sage
+command=["/usr/local/bin/sage", "-python", "/Users/zhou/autoresearch/IntegerFactoring/experiments/F122_stable_private_full_source/scan_complete_source.py", "--corpus", "/Users/zhou/autoresearch/IntegerFactoring/experiments/F122_stable_private_full_source/CORPUS.json", "--output", "/Users/zhou/autoresearch/IntegerFactoring/experiments/F122_stable_private_full_source/ATTEMPT_20260808T062206Z.json"]
+Traceback (most recent call last):
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F122_stable_private_full_source/scan_complete_source.py", line 532, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F122_stable_private_full_source/scan_complete_source.py", line 468, in main
+    attempt(left_power * right % modulus, 2, menu_index, left, right, exponent, 0)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F122_stable_private_full_source/scan_complete_source.py", line 439, in attempt
+    decoder.add(factors, column_index, contains_private)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F122_stable_private_full_source/scan_complete_source.py", line 182, in add
+    common = parity.intersection(known_parity)
+  File "cysignals/signals.pyx", line 357, in cysignals.signals.python_check_interrupt
+KeyboardInterrupt

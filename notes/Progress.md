@@ -17,12 +17,16 @@ all-pairs source rescues those cases and six fresh 54-bit cases. F118 then
 rescues all four preregistered 58-bit frozen-global cases. These are finite
 controls, and most are factor-assisted. They do not show that recursive
 feedback is necessary. P111 proves that a cross-pair submatrix can still have
-many private prime rows; it does not extend this privacy to the complete
-source. The next theorem target is now exact: force a rank defect and a
-non-global root for the complete self-generated carry set, or construct a
-stable full-source private-row family. Recursive block feedback remains gated
-on a genuine complete-source null. Relation count, raw nullity, and abstract
-subgroup size are not progress. Other live frontiers are
+many private prime rows. P112 strengthens the row boundary: on one trial-hard
+semiprime, one seed row stays private even in the complete canonical
+exact-value universe. This refutes universal row reuse, but it does not stop
+other columns from closing. F122 confirms this distinction on that same
+input: a public static prefix already factors it. The next theorem target is
+still exact: force a rank defect and a non-global root for the complete
+self-generated carry set, or find a trial-hard complete-source null on which
+feedback gives a new usable presentation. Recursive block feedback remains
+gated on such a null. Relation count, raw nullity, and abstract subgroup size
+are not progress. Other live frontiers are
 a factor-free sampler for the quadratic-energy law, a useful metric hint, a
 class-group or isogeny orientation, and an exactly contractible positive
 factor-witness network. `notes/Zhihu.md` supplies background only.
@@ -2950,3 +2954,80 @@ count do not force closure. This does not refute the complete fixed source:
 unselected carries can reuse the protected rows. The exact remaining gates
 are stable full-source privacy on the negative side, or rank closure followed
 by a non-global root on the positive side.
+
+### C112 — one canonical prime row can stay private in the complete universe
+
+**Status:** verifier-backed and promoted as P112/X72 after a fresh hostile
+audit and a proof-blind reconstruction. The reconstruction passed with two
+notation and definition corrections. No cross-family audit, human audit, or
+publication-level literature review ran.
+
+After global exact-value deduplication, a prime row $r$ has degree at most
+
+\[
+\left\lfloor\frac{N-1}{r}\right\rfloor.
+\]
+
+The proof assigns each distinct $r$-divisible exact value to a different
+endpoint below $N$ that is divisible by $r$. Thus every present row with
+$r>(N-1)/2$ is permanently private inside the complete canonical universe.
+
+The trial-hard distinct semiprime
+
+\[
+N=2{,}000{,}887{,}089{,}301
+=1{,}000{,}289\cdot2{,}000{,}309
+\]
+
+has the certified prime
+
+\[
+r=(N+1)/2=1{,}000{,}443{,}544{,}651.
+\]
+
+Seed $2$ has inverse $r$ and exact value $N+1=2r$. Its $r$ row is
+private against every canonical exact-value column. Both direct sign screens
+are null.
+
+**Algorithmic consequence.** A complete canonical source does not force
+every relation row to be reused. This does not prove source failure. A private
+row and its column peel away exactly. All dependencies and useful roots on the
+remaining columns stay unchanged. Feedback through a different named integer
+representation also remains outside this theorem.
+
+### C113 — the 4033 feedback witness changes names, not the complete relation set
+
+**Status:** exact F121 candidate result. It is not promoted because no fresh
+hostile audit or proof-blind reconstruction ran.
+
+At $N=4033$, the restricted P78 state makes feedback look useful: endpoint
+refinement exposes a new named block. The complete fixed static source removes
+that advantage. It already contains the same exact relation values. Adding the
+hypothetical feedback block produces 50 new residue presentations but zero new
+exact-value columns. The static source also has the square
+$12100=110^2$, and its sign gcds expose 109 and 37.
+
+**Algorithmic consequence.** The small witness proves that feedback can change
+the next word grammar relative to a restricted state. It does not prove that
+feedback adds a capability beyond the complete static source. This is the
+correct limit of the 4033 example.
+
+### C114 — a private row can coexist with an early public static factor
+
+**Status:** registered F122 prefix evidence. It is not promoted as a completed
+source run. The first run was interrupted. The retry was stopped at about
+993 MB of memory, and both partial runs are preserved.
+
+On the P112 semiprime, the complete static source still contains the private
+seed row. Every observed dependency excludes that column, as P112 requires.
+However, a fixed public word already gives a direct factor at attempt 166,901:
+pair $(2,12)$, exponent 1012, and orientation
+$[2\cdot12^{1012}]_N$. Its two canonical endpoints have difference gcd
+$1{,}000{,}289$ with $N$. The append-only source therefore succeeds even
+though the terminal enumeration was stopped.
+
+**Algorithmic consequence.** Stable privacy defeats universal row reuse, not
+factoring. It also closes the feedback gate on this input: feedback cannot be
+called a rescue when the static source already succeeds. A valid feedback
+test still needs a trial-hard input on which the complete static source is
+null.

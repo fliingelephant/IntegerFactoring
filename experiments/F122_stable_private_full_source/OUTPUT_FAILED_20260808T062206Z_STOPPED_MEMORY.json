@@ -1,0 +1,145 @@
+{
+  "B": 1681,
+  "N": 2000887089301,
+  "attempt_stream_sha256": "afb5a5f97d05bde7d78ca87ed109eb6768e5fc13a41060b038f3c42b9552e398",
+  "attempts": 1278360,
+  "completed_pairs": 340,
+  "decoder": {
+    "all_basis_dependencies_exclude_private": true,
+    "basis_count_matches_nullity": true,
+    "basis_stream_sha256": "061c81043ddd015c4090d0e84d80e44a51ce7db29e6ce80fdc8b6890f9493dc6",
+    "columns": 704274,
+    "eliminations": 16297157,
+    "first_root_class": {
+      "minus_global": {
+        "column_index": 72786,
+        "contains_private_column": false,
+        "gcd_root_minus_one": 1,
+        "gcd_root_plus_one": 2000887089301,
+        "root": 2000887089300
+      },
+      "non_global": {
+        "column_index": 72648,
+        "contains_private_column": false,
+        "gcd_root_minus_one": 1000289,
+        "gcd_root_plus_one": 2000309,
+        "root": 721509455990
+      },
+      "plus_global": {
+        "column_index": 7896,
+        "contains_private_column": false,
+        "gcd_root_minus_one": 2000887089301,
+        "gcd_root_plus_one": 1,
+        "root": 1
+      }
+    },
+    "fundamental_basis_dependencies": 86763,
+    "maximum_reduced_support": 272,
+    "minus_global_basis_roots": 21436,
+    "non_global_basis_roots": 42071,
+    "normalized_root_quotient_image_dimension": 1,
+    "nullity": 86763,
+    "plus_global_basis_roots": 23256,
+    "private_basis_dependencies": 0,
+    "rank": 617511,
+    "root_histogram": {
+      "1": 23256,
+      "1279377633311": 20896,
+      "2000887089300": 21436,
+      "721509455990": 21175
+    }
+  },
+  "direct_screens": {
+    "endpoint_minus_proper": 3,
+    "endpoint_plus_proper": 0,
+    "event_stream_sha256": "d3a16267334b43eef2405e2aabea8599fe7952c63c3a31c7c1a9eccbdee73768",
+    "events": [
+      {
+        "cofactor": 2000309,
+        "event_index": 0,
+        "factor": 1000289,
+        "inverse": 1483206522841,
+        "method": "direct_endpoint_minus",
+        "provenance": {
+          "attempt_index_zero_based": 166901,
+          "exponent": 1012,
+          "kind": "nonadaptive_seed_pair",
+          "orientation": 1,
+          "pair_index_zero_based": 9,
+          "u": 2,
+          "v": 12
+        },
+        "residue": 1407720713745
+      },
+      {
+        "cofactor": 2000309,
+        "event_index": 1,
+        "factor": 1000289,
+        "inverse": 12852713362,
+        "method": "direct_endpoint_minus",
+        "provenance": {
+          "attempt_index_zero_based": 300527,
+          "exponent": 545,
+          "kind": "nonadaptive_seed_pair",
+          "orientation": 1,
+          "pair_index_zero_based": 49,
+          "u": 3,
+          "v": 14
+        },
+        "residue": 1947294605549
+      },
+      {
+        "cofactor": 2000309,
+        "event_index": 2,
+        "factor": 1000289,
+        "inverse": 1115700344243,
+        "method": "direct_endpoint_minus",
+        "provenance": {
+          "attempt_index_zero_based": 997965,
+          "exponent": 1090,
+          "kind": "nonadaptive_seed_pair",
+          "orientation": 1,
+          "pair_index_zero_based": 256,
+          "u": 9,
+          "v": 14
+        },
+        "residue": 820789139529
+      }
+    ],
+    "proper_event_count": 3,
+    "residue_proper": 0
+  },
+  "distinct_nonunit_exact_values": 704274,
+  "elapsed_seconds": 84.21868020900001,
+  "exact_value_duplicates": 197210,
+  "expected_attempts": 2758520,
+  "factor_cache": {
+    "current_size": 300000,
+    "hits": 0,
+    "maximum_size": 300000,
+    "misses": 1408548
+  },
+  "n": 41,
+  "peak_rss": {
+    "platform": "darwin",
+    "ru_maxrss_raw": 992903168,
+    "unit": "bytes on macOS; KiB on Linux"
+  },
+  "phase": "all_pairs",
+  "private_column": {
+    "column_index": 0,
+    "exact_value": 2000887089302,
+    "observed_row_degree": 1,
+    "odd_row_column_indices": [
+      0
+    ],
+    "prime": 1000443544651
+  },
+  "residue_duplicates": 376875,
+  "retained_exact_stream_sha256": "562cbcc5ab1f7bd9916e5c752e7217bc3a7f6a9bf5ac9058b0b757585c0beb73",
+  "status": "RUNNING",
+  "total_pairs": 780,
+  "unique_residues": 901485,
+  "unique_units": 901485,
+  "unit_exact_values_removed": 1
+}
