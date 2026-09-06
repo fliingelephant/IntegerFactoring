@@ -47,3 +47,30 @@ the cited artifact. Historical instructions inside preserved packets remain
 historical instructions.
 
 The order of entries is for reading convenience. Order is never identity.
+
+## Stable source selectors
+
+Source references are TOML objects, not `path:line` strings:
+
+```toml
+source = { path = "REGISTRY.md", table = "routes", key = "F12" }
+route_evidence = [
+  { path = "REGISTRY.md", table = "runs", key = "F13-R01" },
+  { path = "experiments/F47_teichmuller_cocycle_pooling_kill/RESULT.md", field = "Family" },
+]
+```
+
+`table = "routes"` selects the registry table whose first header is `ID`;
+`table = "runs"` selects the table whose first header is `Run`. `key` is the
+exact complete first-cell label, including any run or version suffix. These
+namespaces remain distinct even if a route and a run share the same label.
+
+`field` selects the exact bold metadata label and its continuation lines, up to
+a blank line, another metadata field, or a heading. For example, `field = "Status"` can retrieve
+a route declaration that appears on the second line of the status paragraph.
+
+The reader requires exactly one matching row or field. A missing or duplicate
+selector is an error. It does not guess a nearby row, use a numeric prefix, or
+fall back to a line number. Inserting lines and reordering rows do not change
+the target. Intentionally changing a key or field name requires updating its
+references. Any displayed line number is a current location hint, not identity.

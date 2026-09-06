@@ -32,6 +32,10 @@ SOURCES = (
 )
 CATALOG_FIELDS = ("id", "kind", "title", "source", "status", "scope")
 HEAD_LIMIT = 2_000
+HEAD_EVIDENCE_LIMIT = 10
+_FILE_CACHE = {}
+_TABLE_CACHE = {}
+_FIELD_CACHE = {}
 
 
 def safe_path(relative):
@@ -39,6 +43,12 @@ def safe_path(relative):
     if path != ROOT and ROOT not in path.parents:
         raise ValueError(f"path leaves repository: {relative}")
     return path
+
+
+def file_lines(path):
+    if path not in _FILE_CACHE:
+        _FILE_CACHE[path] = path.read_bytes().splitlines(keepends=True)
+    return _FILE_CACHE[path]
 
 
 def load(path, table):
@@ -71,7 +81,7 @@ def recorded_text(lines, label, complete=False):
 def source_records():
     records = []
     for source, kind, prefix, level in SOURCES:
-        lines = safe_path(source).read_bytes().splitlines(keepends=True)
+        lines = file_lines(safe_path(source))
         heading = re.compile(rf"^{'#' * level}\s+({prefix}\d+)\s+(?:—|--|-)\s*(.*)$")
         starts = []
         for index, raw in enumerate(lines):
@@ -144,15 +154,104 @@ def entries():
     return combined
 
 
-def source_line(reference):
-    relative, separator, number = reference.rpartition(":")
-    if not separator or not number.isdigit() or int(number) < 1:
-        raise ValueError(f"invalid source line reference: {reference}")
-    path = safe_path(relative)
-    lines = path.read_bytes().splitlines(keepends=True)
-    if int(number) > len(lines):
-        raise ValueError(f"source line does not exist: {reference}")
-    return path, lines[int(number) - 1]
+def table_rows(path, table):
+    if path != safe_path("REGISTRY.md") or table not in {"routes", "runs"}:
+        raise ValueError(f"invalid table selector: {path.relative_to(ROOT)} table={table}")
+    if path not in _TABLE_CACHE:
+        lines = file_lines(path)
+        parsed = []
+        headers = {"routes": [], "runs": []}
+        for index, raw in enumerate(lines):
+            text = raw.decode().rstrip("\r\n")
+            cells = [cell.strip() for cell in text.split("|")[1:-1]] if text.startswith("|") else []
+            parsed.append(cells)
+            if cells and cells[0] in {"ID", "Run"}:
+                headers[{"ID": "routes", "Run": "runs"}[cells[0]]].append(index)
+        namespaces = {}
+        for name in ("routes", "runs"):
+            if len(headers[name]) != 1:
+                namespaces[name] = None
+                continue
+            start = headers[name][0]
+            end = next(
+                (index for index in range(start + 1, len(lines)) if lines[index].decode().startswith("## ")),
+                len(lines),
+            )
+            rows = {}
+            for index in range(start + 1, end):
+                cells = parsed[index]
+                if cells and cells[0] and set(cells[0]) != {"-"}:
+                    rows.setdefault(cells[0], []).append((index + 1, lines[index], cells))
+            namespaces[name] = rows
+        _TABLE_CACHE[path] = namespaces
+    rows = _TABLE_CACHE[path][table]
+    if rows is None:
+        raise ValueError(f"expected one {table} table header in {path.relative_to(ROOT)}")
+    return rows
+
+
+def packet_fields(path, field):
+    if path not in _FIELD_CACHE:
+        lines = file_lines(path)
+        matches = {}
+        metadata = re.compile(r"^\*\*([^*]+?)(?::|\.)\*\*\s*")
+        for start, raw in enumerate(lines):
+            text = raw.decode().rstrip("\r\n")
+            match = metadata.match(text)
+            if not match:
+                continue
+            end = start + 1
+            while end < len(lines):
+                continuation = lines[end].decode().rstrip("\r\n")
+                if not continuation.strip() or metadata.match(continuation) or re.match(r"^#{1,6}\s", continuation):
+                    break
+                end += 1
+            matches.setdefault(match.group(1), []).append((start + 1, b"".join(lines[start:end])))
+        _FIELD_CACHE[path] = matches
+    return _FIELD_CACHE[path].get(field, [])
+
+
+def resolve_reference(reference):
+    if not isinstance(reference, dict):
+        raise ValueError("references must be TOML inline tables, not positional strings")
+    keys = set(reference)
+    if keys == {"path", "table", "key"}:
+        if not all(isinstance(reference[name], str) and reference[name] for name in keys):
+            raise ValueError("table reference values must be nonempty strings")
+        path = safe_path(reference["path"])
+        matches = table_rows(path, reference["table"]).get(reference["key"], [])
+        selector = f"{reference['path']} table={reference['table']} key={reference['key']}"
+        kind = "table"
+    elif keys == {"path", "field"}:
+        if not all(isinstance(reference[name], str) and reference[name] for name in keys):
+            raise ValueError("field reference values must be nonempty strings")
+        path = safe_path(reference["path"])
+        matches = packet_fields(path, reference["field"])
+        selector = f"{reference['path']} field={reference['field']}"
+        kind = "field"
+    else:
+        raise ValueError(f"invalid reference object keys: {sorted(keys)}")
+    if len(matches) != 1:
+        raise ValueError(f"reference must resolve exactly once ({len(matches)} matches): {selector}")
+    line, raw, *extra = matches[0]
+    return {"path": path, "line": line, "raw": raw, "kind": kind, "cells": extra[0] if extra else None}
+
+
+def reference_display(reference):
+    resolved = resolve_reference(reference)
+    return f"{resolved['path'].relative_to(ROOT)}:{resolved['line']}"
+
+
+def reference_selector(reference):
+    if not isinstance(reference, dict):
+        raise ValueError("references must be TOML inline tables")
+    order = ("path", "table", "key", "field")
+    fields = ", ".join(
+        f"{key} = {json.dumps(reference[key], ensure_ascii=False)}"
+        for key in order
+        if key in reference
+    )
+    return "{ " + fields + " }"
 
 
 def preferred_doc(relative):
@@ -228,7 +327,9 @@ def head(identifier):
     print(f"ID: {entry['id']}\nKind: {kind}\nTitle: {entry.get('title', '')}")
     if kind in {"historical-result", "closure", "working-note"}:
         record = {item["id"]: item for item in source_records()}[entry["id"]]
-        print(f"Source: {record['source']}:{record['line']}")
+        print(f"Source file: {record['source']}")
+        print(f"Record ID: {record['id']}")
+        print(f"Current location: {record['source']}:{record['line']}")
         display("Recorded status", entry.get("status"))
         print("Current validation: head does not validate mathematics; check validates structure only.")
         if display("Recorded scope", entry.get("scope")):
@@ -236,7 +337,8 @@ def head(identifier):
         else:
             print(f"Head is insufficient to assess mathematical scope; use: records.py show {entry['id']}")
     elif kind == "route":
-        print(f"Source: {entry.get('source', 'not recorded')}")
+        print(f"Source selector: {reference_selector(entry['source'])}")
+        print(f"Current location: {reference_display(entry['source'])}")
         display("Summary", entry.get("summary"))
         print("Current validation: navigation metadata only; use show for the exact registry row.")
     else:
@@ -244,8 +346,14 @@ def head(identifier):
         route_ids = entry.get("route_ids", [])
         print(f"Path: {relative}")
         print("Route IDs: " + (", ".join(route_ids) if route_ids else "unresolved"))
-        if entry.get("route_evidence"):
-            print("Route evidence: " + ", ".join(entry["route_evidence"]))
+        evidence = entry.get("route_evidence", [])
+        if evidence:
+            print("Route evidence selectors:")
+            for reference in evidence[:HEAD_EVIDENCE_LIMIT]:
+                print(f"  {reference_selector(reference)}")
+                print(f"  Current location: {reference_display(reference)}")
+            if len(evidence) > HEAD_EVIDENCE_LIMIT:
+                print(f"  {len(evidence) - HEAD_EVIDENCE_LIMIT} additional selectors omitted.")
         document = preferred_doc(relative)
         shown = str(document.relative_to(ROOT)) if document else "none; show will list packet documents"
         print(f"Preferred document: {shown}")
@@ -260,7 +368,7 @@ def show(identifier):
         record = {item["id"]: item for item in source_records()}[entry["id"]]
         sys.stdout.buffer.write(record["raw"])
     elif entry["kind"] == "route":
-        sys.stdout.buffer.write(source_line(entry["source"])[1])
+        sys.stdout.buffer.write(resolve_reference(entry["source"])["raw"])
     else:
         document = preferred_doc(entry["path"])
         if document:
@@ -303,11 +411,14 @@ def check():
         if not require(valid, f"invalid route ID: {identifier}"):
             continue
         route_ids.add(identifier)
-        if not require(isinstance(reference, str), f"route source is missing: {identifier}"):
+        if not require(isinstance(reference, dict), f"route source is invalid: {identifier}"):
             continue
-        line = source_line(reference)[1].decode()
         code = identifier.removeprefix("route:")
-        require(bool(re.match(rf"^\|\s*{re.escape(code)}\s*\|", line)), f"route source mismatch: {reference}")
+        resolve_reference(reference)
+        require(
+            reference.get("table") == "routes" and reference.get("key") == code,
+            f"route source selector mismatch: {identifier}",
+        )
 
     paths = set()
     unresolved = 0
@@ -329,19 +440,20 @@ def check():
         for route_id in linked:
             require(route_id in route_ids, f"unknown route {route_id} in {identifier}")
         require(not linked or bool(evidence), f"mapped experiment lacks route_evidence: {identifier}")
-        if not require(isinstance(evidence, list) and all(isinstance(item, str) for item in evidence), f"invalid route_evidence: {identifier}"):
+        if not require(isinstance(evidence, list) and all(isinstance(item, dict) for item in evidence), f"invalid route_evidence: {identifier}"):
             continue
-        evidence_lines = [(path, raw.decode()) for path, raw in map(source_line, evidence)]
+        resolved_evidence = [(reference, resolve_reference(reference)) for reference in evidence]
         for route_id in linked:
             code = route_id.removeprefix("route:")
-            token = re.compile(rf"(?<![A-Za-z0-9]){re.escape(code)}(?![A-Za-z0-9])")
+            token = re.compile(rf"(?<![A-Za-z0-9-]){re.escape(code)}(?![A-Za-z0-9-])")
             supported = False
-            for path, line in evidence_lines:
-                if path == ROOT / "REGISTRY.md":
-                    cells = line.split("|")
-                    supported = len(cells) >= 4 and (cells[1].strip() == code or bool(token.search(cells[2])))
+            for reference, resolved in resolved_evidence:
+                if resolved["kind"] == "table" and reference["table"] == "routes":
+                    supported = reference["key"] == code
+                elif resolved["kind"] == "table":
+                    supported = bool(token.search(resolved["cells"][1]))
                 else:
-                    supported = bool(token.search(line))
+                    supported = bool(token.search(resolved["raw"].decode()))
                 if supported:
                     break
             require(supported, f"route evidence does not support {code}: {identifier}")

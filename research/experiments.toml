@@ -1,136 +1,136 @@
-schema_version = 1
+schema_version = 2
 
 [[experiments]]
 id = "experiment:F04"
 path = "experiments/F04"
 route_ids = ["route:F04"]
-route_evidence = ["REGISTRY.md:201", "REGISTRY.md:202"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F04-R01–R28" }, { path = "REGISTRY.md", table = "runs", key = "F04-R23" }]
 
 [[experiments]]
 id = "experiment:F04_audit"
 path = "experiments/F04_audit"
 route_ids = ["route:F04"]
-route_evidence = ["REGISTRY.md:203", "REGISTRY.md:204"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F04-A01" }, { path = "REGISTRY.md", table = "runs", key = "F04-A02" }]
 
 [[experiments]]
 id = "experiment:F04_full_column_matroid_kill"
 path = "experiments/F04_full_column_matroid_kill"
 route_ids = ["route:F04"]
-route_evidence = ["REGISTRY.md:225"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F04-FCM-001–006" }]
 
 [[experiments]]
 id = "experiment:F04_joint_matroid_audit"
 path = "experiments/F04_joint_matroid_audit"
 route_ids = ["route:F04"]
-route_evidence = ["REGISTRY.md:226"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F04-JMA-A01–A09" }]
 
 [[experiments]]
 id = "experiment:F04_joint_matroid_kill"
 path = "experiments/F04_joint_matroid_kill"
 route_ids = ["route:F04"]
-route_evidence = ["REGISTRY.md:224"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F04-JM-R01–R07" }]
 
 [[experiments]]
 id = "experiment:F04_joint_matroid_reconstruct"
 path = "experiments/F04_joint_matroid_reconstruct"
 route_ids = ["route:F04"]
-route_evidence = ["REGISTRY.md:227"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F04-JMR-004–025" }]
 
 [[experiments]]
 id = "experiment:F04_psc_audit"
 path = "experiments/F04_psc_audit"
 route_ids = ["route:F04"]
-route_evidence = ["REGISTRY.md:209"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F04-PSC-A01–A06" }]
 
 [[experiments]]
 id = "experiment:F04_psc_coefficient_audit"
 path = "experiments/F04_psc_coefficient_audit"
 route_ids = ["route:F04"]
-route_evidence = ["REGISTRY.md:212"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F04-PCH-A01–A07" }]
 
 [[experiments]]
 id = "experiment:F04_psc_coefficient_hard"
 path = "experiments/F04_psc_coefficient_hard"
 route_ids = ["route:F04"]
-route_evidence = ["REGISTRY.md:211"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F04-PCH-R01–R10" }]
 
 [[experiments]]
 id = "experiment:F04_psc_coefficient_reconstruct"
 path = "experiments/F04_psc_coefficient_reconstruct"
 route_ids = ["route:F04"]
-route_evidence = ["REGISTRY.md:213"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F04-PCH-V-run_001, audit_fix_001" }]
 
 [[experiments]]
 id = "experiment:F04_psc_reconstruct"
 path = "experiments/F04_psc_reconstruct"
 route_ids = ["route:F04"]
-route_evidence = ["REGISTRY.md:210"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F04-PSC-V-R01–R03, P04" }]
 
 [[experiments]]
 id = "experiment:F04_psckill"
 path = "experiments/F04_psckill"
 route_ids = ["route:F04"]
-route_evidence = ["REGISTRY.md:208"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F04-PSC-R01–R06" }]
 
 [[experiments]]
 id = "experiment:F04_rank_audit"
 path = "experiments/F04_rank_audit"
 route_ids = ["route:F04"]
-route_evidence = ["REGISTRY.md:207"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F04-RA-A01–A02" }]
 
 [[experiments]]
 id = "experiment:F04_rankkill"
 path = "experiments/F04_rankkill"
 route_ids = ["route:F04"]
-route_evidence = ["REGISTRY.md:206"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F04-K-R01–R07" }]
 
 [[experiments]]
 id = "experiment:F04_reconstruct"
 path = "experiments/F04_reconstruct"
 route_ids = ["route:F04"]
-route_evidence = ["REGISTRY.md:205"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F04-V-B1–B3, F1–F3, A1–A2" }]
 
 [[experiments]]
 id = "experiment:F09_phase_audit"
 path = "experiments/F09_phase_audit"
 route_ids = ["route:F09"]
-route_evidence = ["REGISTRY.md:215"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F09-PA-A01–A02" }]
 
 [[experiments]]
 id = "experiment:F09_phase_reconstruct"
 path = "experiments/F09_phase_reconstruct"
 route_ids = ["route:F09"]
-route_evidence = ["REGISTRY.md:216"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F09-V-R01" }]
 
 [[experiments]]
 id = "experiment:F09_phasekill"
 path = "experiments/F09_phasekill"
 route_ids = ["route:F09"]
-route_evidence = ["REGISTRY.md:214"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F09-R01–R04" }]
 
 [[experiments]]
 id = "experiment:F100_f98_dependency_structure"
 path = "experiments/F100_f98_dependency_structure"
 route_ids = ["route:F26"]
-route_evidence = ["REGISTRY.md:188"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F100-D01/A01/R01" }]
 
 [[experiments]]
 id = "experiment:F101_larger_c2t_direct_null_stress"
 path = "experiments/F101_larger_c2t_direct_null_stress"
 route_ids = ["route:F26"]
-route_evidence = ["REGISTRY.md:189"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F101-F01 (failed pre-launch)" }]
 
 [[experiments]]
 id = "experiment:F102_f98_full_parity_core"
 path = "experiments/F102_f98_full_parity_core"
 route_ids = ["route:F26"]
-route_evidence = ["REGISTRY.md:190"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F102-D01/A01/R01" }]
 
 [[experiments]]
 id = "experiment:F103_public_factor_free_parity_core"
 path = "experiments/F103_public_factor_free_parity_core"
 route_ids = ["route:F26"]
-route_evidence = ["REGISTRY.md:191"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F103-D01/A01/R01" }]
 
 [[experiments]]
 id = "experiment:F104_all_input_peeling_counterexample"
@@ -141,7 +141,7 @@ route_ids = []
 id = "experiment:F105_factor_free_prime_core_equivalence"
 path = "experiments/F105_factor_free_prime_core_equivalence"
 route_ids = ["route:F26"]
-route_evidence = ["REGISTRY.md:192"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F105-D01/A01/R01" }]
 
 [[experiments]]
 id = "experiment:F106_f98_carry_origin_diagnosis"
@@ -167,19 +167,19 @@ route_ids = []
 id = "experiment:F10_aut_audit"
 path = "experiments/F10_aut_audit"
 route_ids = ["route:F10"]
-route_evidence = ["REGISTRY.md:218"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F10-A01–A04" }]
 
 [[experiments]]
 id = "experiment:F10_aut_reconstruct"
 path = "experiments/F10_aut_reconstruct"
 route_ids = ["route:F10"]
-route_evidence = ["REGISTRY.md:219"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F10-V1" }]
 
 [[experiments]]
 id = "experiment:F10_autkill"
 path = "experiments/F10_autkill"
 route_ids = ["route:F10"]
-route_evidence = ["REGISTRY.md:217"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F10-R01–R06" }]
 
 [[experiments]]
 id = "experiment:F110_frozen_batch_seed_pair_rescue"
@@ -190,49 +190,49 @@ route_ids = []
 id = "experiment:F111_factor_free_cross_layer_certificate"
 path = "experiments/F111_factor_free_cross_layer_certificate"
 route_ids = ["route:F26"]
-route_evidence = ["REGISTRY.md:169", "REGISTRY.md:170"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F111-LI" }, { path = "REGISTRY.md", table = "runs", key = "F111-M" }]
 
 [[experiments]]
 id = "experiment:F112_frozen_two_v_global_root_stress"
 path = "experiments/F112_frozen_two_v_global_root_stress"
 route_ids = ["route:F26"]
-route_evidence = ["REGISTRY.md:171"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F112-D01" }]
 
 [[experiments]]
 id = "experiment:F113_all_seed_pairs_n46_rescue"
 path = "experiments/F113_all_seed_pairs_n46_rescue"
 route_ids = ["route:F26"]
-route_evidence = ["REGISTRY.md:172"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F113/F114" }]
 
 [[experiments]]
 id = "experiment:F114_all_seed_pairs_n50_rescue"
 path = "experiments/F114_all_seed_pairs_n50_rescue"
 route_ids = ["route:F26"]
-route_evidence = ["REGISTRY.md:172"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F113/F114" }]
 
 [[experiments]]
 id = "experiment:F115_all_pairs_global_corpus_audit"
 path = "experiments/F115_all_pairs_global_corpus_audit"
 route_ids = ["route:F26"]
-route_evidence = ["REGISTRY.md:173"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F115-A01" }]
 
 [[experiments]]
 id = "experiment:F116_independent_54bit_all_pairs_stress"
 path = "experiments/F116_independent_54bit_all_pairs_stress"
 route_ids = ["route:F26"]
-route_evidence = ["REGISTRY.md:175"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F116-R" }]
 
 [[experiments]]
 id = "experiment:F117_prime_square_full_source_counterexample"
 path = "experiments/F117_prime_square_full_source_counterexample"
 route_ids = ["route:F26"]
-route_evidence = ["REGISTRY.md:176"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F117-D01" }]
 
 [[experiments]]
 id = "experiment:F118_58bit_full_source_null_search"
 path = "experiments/F118_58bit_full_source_null_search"
 route_ids = ["route:F26"]
-route_evidence = ["REGISTRY.md:177"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F118-D01" }]
 
 [[experiments]]
 id = "experiment:F119_all_pairs_private_row_theory"
@@ -243,19 +243,19 @@ route_ids = []
 id = "experiment:F11_structured_cvp_audit"
 path = "experiments/F11_structured_cvp_audit"
 route_ids = ["route:F11"]
-route_evidence = ["experiments/F11_structured_cvp_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F11_structured_cvp_kill/RESULT.md", field = "Approach-family ID" }]
 
 [[experiments]]
 id = "experiment:F11_structured_cvp_kill"
 path = "experiments/F11_structured_cvp_kill"
 route_ids = ["route:F11"]
-route_evidence = ["experiments/F11_structured_cvp_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F11_structured_cvp_kill/RESULT.md", field = "Approach-family ID" }]
 
 [[experiments]]
 id = "experiment:F11_structured_cvp_reconstruct"
 path = "experiments/F11_structured_cvp_reconstruct"
 route_ids = ["route:F11"]
-route_evidence = ["experiments/F11_structured_cvp_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F11_structured_cvp_kill/RESULT.md", field = "Approach-family ID" }]
 
 [[experiments]]
 id = "experiment:F120_complete_carry_closure_theory"
@@ -276,13 +276,13 @@ route_ids = []
 id = "experiment:F123_carry_recurrence_determinant"
 path = "experiments/F123_carry_recurrence_determinant"
 route_ids = ["route:F26-C"]
-route_evidence = ["REGISTRY.md:110"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F123-D01" }]
 
 [[experiments]]
 id = "experiment:F124_qword_full_subgroup_kill"
 path = "experiments/F124_qword_full_subgroup_kill"
 route_ids = ["route:F26-Q"]
-route_evidence = ["REGISTRY.md:111"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F124-D01" }]
 
 [[experiments]]
 id = "experiment:F125_finite_carry_programming_theorem"
@@ -313,19 +313,19 @@ route_ids = []
 id = "experiment:F12_elliptic_collision_audit"
 path = "experiments/F12_elliptic_collision_audit"
 route_ids = ["route:F02"]
-route_evidence = ["REGISTRY.md:198", "REGISTRY.md:199"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F12-R01–R10" }, { path = "REGISTRY.md", table = "runs", key = "F12-A-R01" }]
 
 [[experiments]]
 id = "experiment:F12_elliptic_collision_kill"
 path = "experiments/F12_elliptic_collision_kill"
 route_ids = ["route:F02"]
-route_evidence = ["REGISTRY.md:198"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F12-R01–R10" }]
 
 [[experiments]]
 id = "experiment:F12_elliptic_collision_reconstruct"
 path = "experiments/F12_elliptic_collision_reconstruct"
 route_ids = ["route:F02"]
-route_evidence = ["REGISTRY.md:198", "REGISTRY.md:200"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F12-R01–R10" }, { path = "REGISTRY.md", table = "runs", key = "F12-V-001a–002" }]
 
 [[experiments]]
 id = "experiment:F130_adaptive_qpoly_named_refinement"
@@ -336,7 +336,7 @@ route_ids = []
 id = "experiment:F131_two_column_global_root_trap"
 path = "experiments/F131_two_column_global_root_trap"
 route_ids = ["route:F26-Q"]
-route_evidence = ["REGISTRY.md:112"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F131-D01" }]
 
 [[experiments]]
 id = "experiment:F132_qpoly_unary_allblock_audit"
@@ -372,43 +372,43 @@ route_ids = []
 id = "experiment:F138_owner_pivot_carry_gate"
 path = "experiments/F138_owner_pivot_carry_gate"
 route_ids = ["route:F26-Q"]
-route_evidence = ["REGISTRY.md:113"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F138-D01" }]
 
 [[experiments]]
 id = "experiment:F139_value_dependent_pivot_packing_boundary"
 path = "experiments/F139_value_dependent_pivot_packing_boundary"
 route_ids = ["route:F26-Q"]
-route_evidence = ["REGISTRY.md:114"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F139-D01" }]
 
 [[experiments]]
 id = "experiment:F13_teichmuller_lift_audit"
 path = "experiments/F13_teichmuller_lift_audit"
 route_ids = ["route:F12"]
-route_evidence = ["REGISTRY.md:221", "REGISTRY.md:222"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F13-R01" }, { path = "REGISTRY.md", table = "runs", key = "F13-A01–A03" }]
 
 [[experiments]]
 id = "experiment:F13_teichmuller_lift_kill"
 path = "experiments/F13_teichmuller_lift_kill"
 route_ids = ["route:F12"]
-route_evidence = ["REGISTRY.md:221"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F13-R01" }]
 
 [[experiments]]
 id = "experiment:F13_teichmuller_lift_reconstruct"
 path = "experiments/F13_teichmuller_lift_reconstruct"
 route_ids = ["route:F12"]
-route_evidence = ["REGISTRY.md:221", "REGISTRY.md:223"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F13-R01" }, { path = "REGISTRY.md", table = "runs", key = "F13-V-E01–E02, R01" }]
 
 [[experiments]]
 id = "experiment:F140_small_j_global_potential"
 path = "experiments/F140_small_j_global_potential"
 route_ids = ["route:F26-Q"]
-route_evidence = ["REGISTRY.md:115"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F140-D01" }]
 
 [[experiments]]
 id = "experiment:F141_unreduced_presentation_lift"
 path = "experiments/F141_unreduced_presentation_lift"
 route_ids = ["route:F26-Q"]
-route_evidence = ["REGISTRY.md:116"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F141-D01" }]
 
 [[experiments]]
 id = "experiment:F142_squared_anchor_rank_gate"
@@ -464,7 +464,7 @@ route_ids = []
 id = "experiment:F14_torus_qfactorial_reconstruct"
 path = "experiments/F14_torus_qfactorial_reconstruct"
 route_ids = ["route:F02"]
-route_evidence = ["REGISTRY.md:220"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F14-V-R01" }]
 
 [[experiments]]
 id = "experiment:F150_reciprocal_anchor_cycle_trap"
@@ -505,7 +505,7 @@ route_ids = []
 id = "experiment:F157_sparse_section_feedback_capability"
 path = "experiments/F157_sparse_section_feedback_capability"
 route_ids = ["route:F26-Q"]
-route_evidence = ["REGISTRY.md:117"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F157-D01" }]
 
 [[experiments]]
 id = "experiment:F158_certified_quadratic_tower_winwin"
@@ -521,13 +521,13 @@ route_ids = []
 id = "experiment:F15_hurwitz_bias_audit"
 path = "experiments/F15_hurwitz_bias_audit"
 route_ids = ["route:F14"]
-route_evidence = ["REGISTRY.md:231"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F15-BA01" }]
 
 [[experiments]]
 id = "experiment:F15_hurwitz_bias_kill"
 path = "experiments/F15_hurwitz_bias_kill"
 route_ids = ["route:F14"]
-route_evidence = ["REGISTRY.md:230"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F15-B01" }]
 
 [[experiments]]
 id = "experiment:F15_hurwitz_bias_reconstruct"
@@ -538,7 +538,7 @@ route_ids = []
 id = "experiment:F15_hurwitz_gcd_audit"
 path = "experiments/F15_hurwitz_gcd_audit"
 route_ids = ["route:F14"]
-route_evidence = ["REGISTRY.md:228"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F15-A01" }]
 
 [[experiments]]
 id = "experiment:F15_hurwitz_gcd_kill"
@@ -579,7 +579,7 @@ route_ids = []
 id = "experiment:F165_recursive_section_feedback"
 path = "experiments/F165_recursive_section_feedback"
 route_ids = ["route:F26-Q"]
-route_evidence = ["REGISTRY.md:118", "REGISTRY.md:119", "REGISTRY.md:120", "REGISTRY.md:121"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F165-D01" }, { path = "REGISTRY.md", table = "runs", key = "F165-R01 (withdrawn before run)" }, { path = "REGISTRY.md", table = "runs", key = "F165-R02 (failed before mathematical launch)" }, { path = "REGISTRY.md", table = "runs", key = "F165-R03 (failed reconstruction; implementation bug)" }]
 
 [[experiments]]
 id = "experiment:F166_f161_lcm_shortcut"
@@ -605,19 +605,19 @@ route_ids = []
 id = "experiment:F16_affine_stabilizer_audit"
 path = "experiments/F16_affine_stabilizer_audit"
 route_ids = ["route:F13"]
-route_evidence = ["REGISTRY.md:19"]
+route_evidence = [{ path = "REGISTRY.md", table = "routes", key = "F13" }]
 
 [[experiments]]
 id = "experiment:F16_affine_stabilizer_kill"
 path = "experiments/F16_affine_stabilizer_kill"
 route_ids = ["route:F13"]
-route_evidence = ["REGISTRY.md:19"]
+route_evidence = [{ path = "REGISTRY.md", table = "routes", key = "F13" }]
 
 [[experiments]]
 id = "experiment:F16_affine_stabilizer_reconstruct"
 path = "experiments/F16_affine_stabilizer_reconstruct"
 route_ids = ["route:F13"]
-route_evidence = ["REGISTRY.md:19"]
+route_evidence = [{ path = "REGISTRY.md", table = "routes", key = "F13" }]
 
 [[experiments]]
 id = "experiment:F170_dual_order_torus_closure"
@@ -673,7 +673,7 @@ route_ids = []
 id = "experiment:F17_classgroup_ambiguity_audit"
 path = "experiments/F17_classgroup_ambiguity_audit"
 route_ids = ["route:F16"]
-route_evidence = ["REGISTRY.md:229"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F17-D00/A00/A01/A02" }]
 
 [[experiments]]
 id = "experiment:F17_classgroup_ambiguity_kill"
@@ -939,7 +939,7 @@ route_ids = []
 id = "experiment:F21_mixed_handed_four_square_kill"
 path = "experiments/F21_mixed_handed_four_square_kill"
 route_ids = ["route:F14"]
-route_evidence = ["REGISTRY.md:232"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F14-M02" }]
 
 [[experiments]]
 id = "experiment:F21_mixed_handed_four_square_reconstruct"
@@ -1130,25 +1130,25 @@ route_ids = []
 id = "experiment:F24_amortized_mixed_relation_decoder"
 path = "experiments/F24_amortized_mixed_relation_decoder"
 route_ids = ["route:F02"]
-route_evidence = ["experiments/F24_amortized_mixed_relation_decoder/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F24_amortized_mixed_relation_decoder/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F24_amortized_mixed_relation_decoder_audit"
 path = "experiments/F24_amortized_mixed_relation_decoder_audit"
 route_ids = ["route:F02"]
-route_evidence = ["experiments/F24_amortized_mixed_relation_decoder/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F24_amortized_mixed_relation_decoder/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F24_amortized_mixed_relation_decoder_reaudit"
 path = "experiments/F24_amortized_mixed_relation_decoder_reaudit"
 route_ids = ["route:F02"]
-route_evidence = ["experiments/F24_amortized_mixed_relation_decoder/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F24_amortized_mixed_relation_decoder/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F24_amortized_mixed_relation_decoder_reconstruct"
 path = "experiments/F24_amortized_mixed_relation_decoder_reconstruct"
 route_ids = ["route:F02"]
-route_evidence = ["experiments/F24_amortized_mixed_relation_decoder/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F24_amortized_mixed_relation_decoder/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F250_pell_p66_hypercycle"
@@ -1209,25 +1209,25 @@ route_ids = []
 id = "experiment:F25_hidden_modulus_relation_lattice"
 path = "experiments/F25_hidden_modulus_relation_lattice"
 route_ids = ["route:F19"]
-route_evidence = ["experiments/F25_hidden_modulus_relation_lattice/RESULT.md:8"]
+route_evidence = [{ path = "experiments/F25_hidden_modulus_relation_lattice/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F25_hidden_modulus_relation_lattice_audit"
 path = "experiments/F25_hidden_modulus_relation_lattice_audit"
 route_ids = ["route:F19"]
-route_evidence = ["experiments/F25_hidden_modulus_relation_lattice/RESULT.md:8"]
+route_evidence = [{ path = "experiments/F25_hidden_modulus_relation_lattice/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F25_hidden_modulus_relation_lattice_reaudit"
 path = "experiments/F25_hidden_modulus_relation_lattice_reaudit"
 route_ids = ["route:F19"]
-route_evidence = ["experiments/F25_hidden_modulus_relation_lattice/RESULT.md:8"]
+route_evidence = [{ path = "experiments/F25_hidden_modulus_relation_lattice/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F25_hidden_modulus_relation_lattice_reconstruct"
 path = "experiments/F25_hidden_modulus_relation_lattice_reconstruct"
 route_ids = ["route:F19"]
-route_evidence = ["experiments/F25_hidden_modulus_relation_lattice/RESULT.md:8"]
+route_evidence = [{ path = "experiments/F25_hidden_modulus_relation_lattice/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F260_las_vegas_integer_symbolic_search"
@@ -1333,25 +1333,25 @@ route_ids = []
 id = "experiment:F26_holographic_factor_network"
 path = "experiments/F26_holographic_factor_network"
 route_ids = ["route:F20"]
-route_evidence = ["experiments/F26_holographic_factor_network/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F26_holographic_factor_network/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F26_holographic_factor_network_audit"
 path = "experiments/F26_holographic_factor_network_audit"
 route_ids = ["route:F20"]
-route_evidence = ["experiments/F26_holographic_factor_network/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F26_holographic_factor_network/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F26_holographic_factor_network_reaudit"
 path = "experiments/F26_holographic_factor_network_reaudit"
 route_ids = ["route:F20"]
-route_evidence = ["experiments/F26_holographic_factor_network/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F26_holographic_factor_network/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F26_holographic_factor_network_reconstruct"
 path = "experiments/F26_holographic_factor_network_reconstruct"
 route_ids = ["route:F20"]
-route_evidence = ["experiments/F26_holographic_factor_network/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F26_holographic_factor_network/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F270_canonical_scalar_cross_family_union_posthoc"
@@ -1417,31 +1417,31 @@ route_ids = []
 id = "experiment:F27_public_output_dual_metric_audit"
 path = "experiments/F27_public_output_dual_metric_audit"
 route_ids = ["route:F19"]
-route_evidence = ["experiments/F27_public_output_dual_metric_kill/RESULT.md:8"]
+route_evidence = [{ path = "experiments/F27_public_output_dual_metric_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F27_public_output_dual_metric_kill"
 path = "experiments/F27_public_output_dual_metric_kill"
 route_ids = ["route:F19"]
-route_evidence = ["experiments/F27_public_output_dual_metric_kill/RESULT.md:8"]
+route_evidence = [{ path = "experiments/F27_public_output_dual_metric_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F27_public_output_dual_metric_reaudit"
 path = "experiments/F27_public_output_dual_metric_reaudit"
 route_ids = ["route:F19"]
-route_evidence = ["experiments/F27_public_output_dual_metric_kill/RESULT.md:8"]
+route_evidence = [{ path = "experiments/F27_public_output_dual_metric_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F27_public_output_dual_metric_reconstruct"
 path = "experiments/F27_public_output_dual_metric_reconstruct"
 route_ids = ["route:F19"]
-route_evidence = ["experiments/F27_public_output_dual_metric_kill/RESULT.md:8"]
+route_evidence = [{ path = "experiments/F27_public_output_dual_metric_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F27_public_output_dual_metric_reconstruct_corrected"
 path = "experiments/F27_public_output_dual_metric_reconstruct_corrected"
 route_ids = ["route:F19"]
-route_evidence = ["experiments/F27_public_output_dual_metric_kill/RESULT.md:8"]
+route_evidence = [{ path = "experiments/F27_public_output_dual_metric_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F280_bounded_height_all_local_order_source"
@@ -1467,241 +1467,241 @@ route_ids = []
 id = "experiment:F28_positive_matching_factor_graph_audit"
 path = "experiments/F28_positive_matching_factor_graph_audit"
 route_ids = ["route:F21"]
-route_evidence = ["experiments/F28_positive_matching_factor_graph_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F28_positive_matching_factor_graph_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F28_positive_matching_factor_graph_kill"
 path = "experiments/F28_positive_matching_factor_graph_kill"
 route_ids = ["route:F21"]
-route_evidence = ["experiments/F28_positive_matching_factor_graph_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F28_positive_matching_factor_graph_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F28_positive_matching_factor_graph_reaudit"
 path = "experiments/F28_positive_matching_factor_graph_reaudit"
 route_ids = ["route:F21"]
-route_evidence = ["experiments/F28_positive_matching_factor_graph_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F28_positive_matching_factor_graph_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F28_positive_matching_factor_graph_reaudit2"
 path = "experiments/F28_positive_matching_factor_graph_reaudit2"
 route_ids = ["route:F21"]
-route_evidence = ["experiments/F28_positive_matching_factor_graph_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F28_positive_matching_factor_graph_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F28_positive_matching_factor_graph_reaudit3"
 path = "experiments/F28_positive_matching_factor_graph_reaudit3"
 route_ids = ["route:F21"]
-route_evidence = ["experiments/F28_positive_matching_factor_graph_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F28_positive_matching_factor_graph_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F28_positive_matching_factor_graph_reconstruct"
 path = "experiments/F28_positive_matching_factor_graph_reconstruct"
 route_ids = ["route:F21"]
-route_evidence = ["experiments/F28_positive_matching_factor_graph_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F28_positive_matching_factor_graph_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F29_full_lattice_random_code_audit"
 path = "experiments/F29_full_lattice_random_code_audit"
 route_ids = ["route:F19"]
-route_evidence = ["experiments/F29_full_lattice_random_code_kill/RESULT.md:6"]
+route_evidence = [{ path = "experiments/F29_full_lattice_random_code_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F29_full_lattice_random_code_kill"
 path = "experiments/F29_full_lattice_random_code_kill"
 route_ids = ["route:F19"]
-route_evidence = ["experiments/F29_full_lattice_random_code_kill/RESULT.md:6"]
+route_evidence = [{ path = "experiments/F29_full_lattice_random_code_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F29_full_lattice_random_code_reaudit"
 path = "experiments/F29_full_lattice_random_code_reaudit"
 route_ids = ["route:F19"]
-route_evidence = ["experiments/F29_full_lattice_random_code_kill/RESULT.md:6"]
+route_evidence = [{ path = "experiments/F29_full_lattice_random_code_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F29_full_lattice_random_code_reconstruct"
 path = "experiments/F29_full_lattice_random_code_reconstruct"
 route_ids = ["route:F19"]
-route_evidence = ["experiments/F29_full_lattice_random_code_kill/RESULT.md:6"]
+route_evidence = [{ path = "experiments/F29_full_lattice_random_code_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F30_internal_edge_matching_composition_audit"
 path = "experiments/F30_internal_edge_matching_composition_audit"
 route_ids = ["route:F21"]
-route_evidence = ["experiments/F30_internal_edge_matching_composition_kill/RESULT.md:6"]
+route_evidence = [{ path = "experiments/F30_internal_edge_matching_composition_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F30_internal_edge_matching_composition_kill"
 path = "experiments/F30_internal_edge_matching_composition_kill"
 route_ids = ["route:F21"]
-route_evidence = ["experiments/F30_internal_edge_matching_composition_kill/RESULT.md:6"]
+route_evidence = [{ path = "experiments/F30_internal_edge_matching_composition_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F30_internal_edge_matching_composition_reconstruct"
 path = "experiments/F30_internal_edge_matching_composition_reconstruct"
 route_ids = ["route:F21"]
-route_evidence = ["experiments/F30_internal_edge_matching_composition_kill/RESULT.md:6"]
+route_evidence = [{ path = "experiments/F30_internal_edge_matching_composition_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F31_low_degree_joint_amortization_audit"
 path = "experiments/F31_low_degree_joint_amortization_audit"
 route_ids = ["route:F22"]
-route_evidence = ["experiments/F31_low_degree_joint_amortization_kill/RESULT.md:6"]
+route_evidence = [{ path = "experiments/F31_low_degree_joint_amortization_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F31_low_degree_joint_amortization_kill"
 path = "experiments/F31_low_degree_joint_amortization_kill"
 route_ids = ["route:F22"]
-route_evidence = ["experiments/F31_low_degree_joint_amortization_kill/RESULT.md:6"]
+route_evidence = [{ path = "experiments/F31_low_degree_joint_amortization_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F31_low_degree_joint_amortization_reaudit"
 path = "experiments/F31_low_degree_joint_amortization_reaudit"
 route_ids = ["route:F22"]
-route_evidence = ["experiments/F31_low_degree_joint_amortization_kill/RESULT.md:6"]
+route_evidence = [{ path = "experiments/F31_low_degree_joint_amortization_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F31_low_degree_joint_amortization_reaudit2"
 path = "experiments/F31_low_degree_joint_amortization_reaudit2"
 route_ids = ["route:F22"]
-route_evidence = ["experiments/F31_low_degree_joint_amortization_kill/RESULT.md:6"]
+route_evidence = [{ path = "experiments/F31_low_degree_joint_amortization_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F31_low_degree_joint_amortization_reaudit3"
 path = "experiments/F31_low_degree_joint_amortization_reaudit3"
 route_ids = ["route:F22"]
-route_evidence = ["experiments/F31_low_degree_joint_amortization_kill/RESULT.md:6"]
+route_evidence = [{ path = "experiments/F31_low_degree_joint_amortization_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F31_low_degree_joint_amortization_reconstruct"
 path = "experiments/F31_low_degree_joint_amortization_reconstruct"
 route_ids = ["route:F22"]
-route_evidence = ["experiments/F31_low_degree_joint_amortization_kill/RESULT.md:6"]
+route_evidence = [{ path = "experiments/F31_low_degree_joint_amortization_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F31_low_degree_joint_amortization_reconstruct2"
 path = "experiments/F31_low_degree_joint_amortization_reconstruct2"
 route_ids = ["route:F22"]
-route_evidence = ["experiments/F31_low_degree_joint_amortization_kill/RESULT.md:6"]
+route_evidence = [{ path = "experiments/F31_low_degree_joint_amortization_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F32_quadratic_fourier_energy_audit"
 path = "experiments/F32_quadratic_fourier_energy_audit"
 route_ids = ["route:F23"]
-route_evidence = ["experiments/F32_quadratic_fourier_energy_kill/RESULT.md:6"]
+route_evidence = [{ path = "experiments/F32_quadratic_fourier_energy_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F32_quadratic_fourier_energy_kill"
 path = "experiments/F32_quadratic_fourier_energy_kill"
 route_ids = ["route:F23"]
-route_evidence = ["experiments/F32_quadratic_fourier_energy_kill/RESULT.md:6"]
+route_evidence = [{ path = "experiments/F32_quadratic_fourier_energy_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F32_quadratic_fourier_energy_reaudit"
 path = "experiments/F32_quadratic_fourier_energy_reaudit"
 route_ids = ["route:F23"]
-route_evidence = ["experiments/F32_quadratic_fourier_energy_kill/RESULT.md:6"]
+route_evidence = [{ path = "experiments/F32_quadratic_fourier_energy_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F32_quadratic_fourier_energy_reconstruct"
 path = "experiments/F32_quadratic_fourier_energy_reconstruct"
 route_ids = ["route:F23"]
-route_evidence = ["experiments/F32_quadratic_fourier_energy_kill/RESULT.md:6"]
+route_evidence = [{ path = "experiments/F32_quadratic_fourier_energy_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F32_quadratic_fourier_energy_reconstruct2"
 path = "experiments/F32_quadratic_fourier_energy_reconstruct2"
 route_ids = ["route:F23"]
-route_evidence = ["experiments/F32_quadratic_fourier_energy_kill/RESULT.md:6"]
+route_evidence = [{ path = "experiments/F32_quadratic_fourier_energy_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F33_quadratic_energy_positive_lift_audit"
 path = "experiments/F33_quadratic_energy_positive_lift_audit"
 route_ids = ["route:F23"]
-route_evidence = ["experiments/F33_quadratic_energy_positive_lift_kill/RESULT.md:7"]
+route_evidence = [{ path = "experiments/F33_quadratic_energy_positive_lift_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F33_quadratic_energy_positive_lift_kill"
 path = "experiments/F33_quadratic_energy_positive_lift_kill"
 route_ids = ["route:F23"]
-route_evidence = ["experiments/F33_quadratic_energy_positive_lift_kill/RESULT.md:7"]
+route_evidence = [{ path = "experiments/F33_quadratic_energy_positive_lift_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F33_quadratic_energy_positive_lift_reaudit"
 path = "experiments/F33_quadratic_energy_positive_lift_reaudit"
 route_ids = ["route:F23"]
-route_evidence = ["experiments/F33_quadratic_energy_positive_lift_kill/RESULT.md:7"]
+route_evidence = [{ path = "experiments/F33_quadratic_energy_positive_lift_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F33_quadratic_energy_positive_lift_reaudit2"
 path = "experiments/F33_quadratic_energy_positive_lift_reaudit2"
 route_ids = ["route:F23"]
-route_evidence = ["experiments/F33_quadratic_energy_positive_lift_kill/RESULT.md:7"]
+route_evidence = [{ path = "experiments/F33_quadratic_energy_positive_lift_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F33_quadratic_energy_positive_lift_reconstruct"
 path = "experiments/F33_quadratic_energy_positive_lift_reconstruct"
 route_ids = ["route:F23"]
-route_evidence = ["experiments/F33_quadratic_energy_positive_lift_kill/RESULT.md:7"]
+route_evidence = [{ path = "experiments/F33_quadratic_energy_positive_lift_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F34_zero_product_automorphism_orientation_audit"
 path = "experiments/F34_zero_product_automorphism_orientation_audit"
 route_ids = ["route:F23"]
-route_evidence = ["experiments/F34_zero_product_automorphism_orientation_kill/RESULT.md:6"]
+route_evidence = [{ path = "experiments/F34_zero_product_automorphism_orientation_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F34_zero_product_automorphism_orientation_kill"
 path = "experiments/F34_zero_product_automorphism_orientation_kill"
 route_ids = ["route:F23"]
-route_evidence = ["experiments/F34_zero_product_automorphism_orientation_kill/RESULT.md:6"]
+route_evidence = [{ path = "experiments/F34_zero_product_automorphism_orientation_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F34_zero_product_automorphism_orientation_reconstruct"
 path = "experiments/F34_zero_product_automorphism_orientation_reconstruct"
 route_ids = ["route:F23"]
-route_evidence = ["experiments/F34_zero_product_automorphism_orientation_kill/RESULT.md:6"]
+route_evidence = [{ path = "experiments/F34_zero_product_automorphism_orientation_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F35_low_degree_zero_product_bijection_audit"
 path = "experiments/F35_low_degree_zero_product_bijection_audit"
 route_ids = ["route:F23"]
-route_evidence = ["experiments/F35_low_degree_zero_product_bijection_kill/RESULT.md:8"]
+route_evidence = [{ path = "experiments/F35_low_degree_zero_product_bijection_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F35_low_degree_zero_product_bijection_kill"
 path = "experiments/F35_low_degree_zero_product_bijection_kill"
 route_ids = ["route:F23"]
-route_evidence = ["experiments/F35_low_degree_zero_product_bijection_kill/RESULT.md:8"]
+route_evidence = [{ path = "experiments/F35_low_degree_zero_product_bijection_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F35_low_degree_zero_product_bijection_reaudit"
 path = "experiments/F35_low_degree_zero_product_bijection_reaudit"
 route_ids = ["route:F23"]
-route_evidence = ["experiments/F35_low_degree_zero_product_bijection_kill/RESULT.md:8"]
+route_evidence = [{ path = "experiments/F35_low_degree_zero_product_bijection_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F35_low_degree_zero_product_bijection_reconstruct"
 path = "experiments/F35_low_degree_zero_product_bijection_reconstruct"
 route_ids = ["route:F23"]
-route_evidence = ["experiments/F35_low_degree_zero_product_bijection_kill/RESULT.md:8"]
+route_evidence = [{ path = "experiments/F35_low_degree_zero_product_bijection_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F36_fused_matchgate_cell_audit"
 path = "experiments/F36_fused_matchgate_cell_audit"
 route_ids = ["route:F20"]
-route_evidence = ["experiments/F36_fused_matchgate_cell_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F36_fused_matchgate_cell_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F36_fused_matchgate_cell_kill"
 path = "experiments/F36_fused_matchgate_cell_kill"
 route_ids = ["route:F20"]
-route_evidence = ["experiments/F36_fused_matchgate_cell_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F36_fused_matchgate_cell_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F36_fused_matchgate_cell_reconstruct"
 path = "experiments/F36_fused_matchgate_cell_reconstruct"
 route_ids = ["route:F20"]
-route_evidence = ["experiments/F36_fused_matchgate_cell_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F36_fused_matchgate_cell_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F37_smooth_multiplier_cloud_audit"
@@ -1727,67 +1727,67 @@ route_ids = []
 id = "experiment:F38_horizontal_matchgate_strip_audit"
 path = "experiments/F38_horizontal_matchgate_strip_audit"
 route_ids = ["route:F20"]
-route_evidence = ["experiments/F38_horizontal_matchgate_strip_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F38_horizontal_matchgate_strip_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F38_horizontal_matchgate_strip_kill"
 path = "experiments/F38_horizontal_matchgate_strip_kill"
 route_ids = ["route:F20"]
-route_evidence = ["experiments/F38_horizontal_matchgate_strip_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F38_horizontal_matchgate_strip_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F38_horizontal_matchgate_strip_reaudit"
 path = "experiments/F38_horizontal_matchgate_strip_reaudit"
 route_ids = ["route:F20"]
-route_evidence = ["experiments/F38_horizontal_matchgate_strip_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F38_horizontal_matchgate_strip_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F38_horizontal_matchgate_strip_reconstruct"
 path = "experiments/F38_horizontal_matchgate_strip_reconstruct"
 route_ids = ["route:F20"]
-route_evidence = ["experiments/F38_horizontal_matchgate_strip_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F38_horizontal_matchgate_strip_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F39_inverse_metric_cloud_audit"
 path = "experiments/F39_inverse_metric_cloud_audit"
 route_ids = ["route:F24"]
-route_evidence = ["experiments/F39_inverse_metric_cloud_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F39_inverse_metric_cloud_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F39_inverse_metric_cloud_kill"
 path = "experiments/F39_inverse_metric_cloud_kill"
 route_ids = ["route:F24"]
-route_evidence = ["experiments/F39_inverse_metric_cloud_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F39_inverse_metric_cloud_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F39_inverse_metric_cloud_reconstruct"
 path = "experiments/F39_inverse_metric_cloud_reconstruct"
 route_ids = ["route:F24"]
-route_evidence = ["experiments/F39_inverse_metric_cloud_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F39_inverse_metric_cloud_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F40_fibre_completion_bias_audit"
 path = "experiments/F40_fibre_completion_bias_audit"
 route_ids = ["route:F14"]
-route_evidence = ["experiments/F40_fibre_completion_bias_kill/RESULT.md:6"]
+route_evidence = [{ path = "experiments/F40_fibre_completion_bias_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F40_fibre_completion_bias_kill"
 path = "experiments/F40_fibre_completion_bias_kill"
 route_ids = ["route:F14"]
-route_evidence = ["experiments/F40_fibre_completion_bias_kill/RESULT.md:6"]
+route_evidence = [{ path = "experiments/F40_fibre_completion_bias_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F40_fibre_completion_bias_reaudit"
 path = "experiments/F40_fibre_completion_bias_reaudit"
 route_ids = ["route:F14"]
-route_evidence = ["experiments/F40_fibre_completion_bias_kill/RESULT.md:6"]
+route_evidence = [{ path = "experiments/F40_fibre_completion_bias_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F40_fibre_completion_bias_reconstruct"
 path = "experiments/F40_fibre_completion_bias_reconstruct"
 route_ids = ["route:F14"]
-route_evidence = ["experiments/F40_fibre_completion_bias_kill/RESULT.md:6"]
+route_evidence = [{ path = "experiments/F40_fibre_completion_bias_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F41_metric_acd_decoder_audit"
@@ -1813,31 +1813,31 @@ route_ids = []
 id = "experiment:F42_newton_basin_audit"
 path = "experiments/F42_newton_basin_audit"
 route_ids = ["route:F25"]
-route_evidence = ["experiments/F42_newton_basin_kill/RESULT.md:4"]
+route_evidence = [{ path = "experiments/F42_newton_basin_kill/RESULT.md", field = "Status" }]
 
 [[experiments]]
 id = "experiment:F42_newton_basin_kill"
 path = "experiments/F42_newton_basin_kill"
 route_ids = ["route:F25"]
-route_evidence = ["experiments/F42_newton_basin_kill/RESULT.md:4"]
+route_evidence = [{ path = "experiments/F42_newton_basin_kill/RESULT.md", field = "Status" }]
 
 [[experiments]]
 id = "experiment:F42_newton_basin_reconstruct"
 path = "experiments/F42_newton_basin_reconstruct"
 route_ids = ["route:F25"]
-route_evidence = ["experiments/F42_newton_basin_kill/RESULT.md:4"]
+route_evidence = [{ path = "experiments/F42_newton_basin_kill/RESULT.md", field = "Status" }]
 
 [[experiments]]
 id = "experiment:F43_inverse_quotient_descent_audit"
 path = "experiments/F43_inverse_quotient_descent_audit"
 route_ids = ["route:F26"]
-route_evidence = ["REGISTRY.md:197"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F43-A01" }]
 
 [[experiments]]
 id = "experiment:F43_inverse_quotient_descent_kill"
 path = "experiments/F43_inverse_quotient_descent_kill"
 route_ids = ["route:F26"]
-route_evidence = ["REGISTRY.md:193", "REGISTRY.md:194", "REGISTRY.md:195", "REGISTRY.md:196"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F43-D01a–b (failed)" }, { path = "REGISTRY.md", table = "runs", key = "F43-D01c–d" }, { path = "REGISTRY.md", table = "runs", key = "F43-D02" }, { path = "REGISTRY.md", table = "runs", key = "F43-D03" }]
 
 [[experiments]]
 id = "experiment:F43_inverse_quotient_descent_reaudit"
@@ -1858,19 +1858,19 @@ route_ids = []
 id = "experiment:F44_jacobi_correlation_audit"
 path = "experiments/F44_jacobi_correlation_audit"
 route_ids = ["route:F09"]
-route_evidence = ["experiments/F44_jacobi_correlation_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F44_jacobi_correlation_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F44_jacobi_correlation_kill"
 path = "experiments/F44_jacobi_correlation_kill"
 route_ids = ["route:F09"]
-route_evidence = ["experiments/F44_jacobi_correlation_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F44_jacobi_correlation_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F44_jacobi_correlation_reconstruct"
 path = "experiments/F44_jacobi_correlation_reconstruct"
 route_ids = ["route:F09"]
-route_evidence = ["experiments/F44_jacobi_correlation_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F44_jacobi_correlation_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F45_hadamard_paley_audit"
@@ -1891,193 +1891,193 @@ route_ids = []
 id = "experiment:F46_lucas_torus_gap_audit"
 path = "experiments/F46_lucas_torus_gap_audit"
 route_ids = ["route:F27"]
-route_evidence = ["experiments/F46_lucas_torus_gap_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F46_lucas_torus_gap_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F46_lucas_torus_gap_kill"
 path = "experiments/F46_lucas_torus_gap_kill"
 route_ids = ["route:F27"]
-route_evidence = ["experiments/F46_lucas_torus_gap_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F46_lucas_torus_gap_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F46_lucas_torus_gap_reconstruct"
 path = "experiments/F46_lucas_torus_gap_reconstruct"
 route_ids = ["route:F27"]
-route_evidence = ["experiments/F46_lucas_torus_gap_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F46_lucas_torus_gap_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F47_teichmuller_cocycle_pooling_audit"
 path = "experiments/F47_teichmuller_cocycle_pooling_audit"
 route_ids = ["route:F12"]
-route_evidence = ["experiments/F47_teichmuller_cocycle_pooling_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F47_teichmuller_cocycle_pooling_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F47_teichmuller_cocycle_pooling_kill"
 path = "experiments/F47_teichmuller_cocycle_pooling_kill"
 route_ids = ["route:F12"]
-route_evidence = ["experiments/F47_teichmuller_cocycle_pooling_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F47_teichmuller_cocycle_pooling_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F47_teichmuller_cocycle_pooling_reconstruct"
 path = "experiments/F47_teichmuller_cocycle_pooling_reconstruct"
 route_ids = ["route:F12"]
-route_evidence = ["experiments/F47_teichmuller_cocycle_pooling_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F47_teichmuller_cocycle_pooling_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F48_dickson_trace_index_audit"
 path = "experiments/F48_dickson_trace_index_audit"
 route_ids = ["route:F28"]
-route_evidence = ["experiments/F48_dickson_trace_index_kill/RESULT.md:6"]
+route_evidence = [{ path = "experiments/F48_dickson_trace_index_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F48_dickson_trace_index_kill"
 path = "experiments/F48_dickson_trace_index_kill"
 route_ids = ["route:F28"]
-route_evidence = ["experiments/F48_dickson_trace_index_kill/RESULT.md:6"]
+route_evidence = [{ path = "experiments/F48_dickson_trace_index_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F48_dickson_trace_index_reconstruct"
 path = "experiments/F48_dickson_trace_index_reconstruct"
 route_ids = ["route:F28"]
-route_evidence = ["experiments/F48_dickson_trace_index_kill/RESULT.md:6"]
+route_evidence = [{ path = "experiments/F48_dickson_trace_index_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F49_coherent_dickson_root_audit"
 path = "experiments/F49_coherent_dickson_root_audit"
 route_ids = ["route:F28"]
-route_evidence = ["experiments/F49_coherent_dickson_root_kill/RESULT.md:13"]
+route_evidence = [{ path = "experiments/F49_coherent_dickson_root_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F49_coherent_dickson_root_kill"
 path = "experiments/F49_coherent_dickson_root_kill"
 route_ids = ["route:F28"]
-route_evidence = ["experiments/F49_coherent_dickson_root_kill/RESULT.md:13"]
+route_evidence = [{ path = "experiments/F49_coherent_dickson_root_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F49_coherent_dickson_root_reaudit"
 path = "experiments/F49_coherent_dickson_root_reaudit"
 route_ids = ["route:F28"]
-route_evidence = ["experiments/F49_coherent_dickson_root_kill/RESULT.md:13"]
+route_evidence = [{ path = "experiments/F49_coherent_dickson_root_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F49_coherent_dickson_root_reaudit_v2"
 path = "experiments/F49_coherent_dickson_root_reaudit_v2"
 route_ids = ["route:F28"]
-route_evidence = ["experiments/F49_coherent_dickson_root_kill/RESULT.md:13"]
+route_evidence = [{ path = "experiments/F49_coherent_dickson_root_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F49_coherent_dickson_root_reconstruct"
 path = "experiments/F49_coherent_dickson_root_reconstruct"
 route_ids = ["route:F28"]
-route_evidence = ["experiments/F49_coherent_dickson_root_kill/RESULT.md:13"]
+route_evidence = [{ path = "experiments/F49_coherent_dickson_root_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F50_zero_product_defect_gibbs_audit"
 path = "experiments/F50_zero_product_defect_gibbs_audit"
 route_ids = ["route:F23"]
-route_evidence = ["experiments/F50_zero_product_defect_gibbs_kill/RESULT.md:12"]
+route_evidence = [{ path = "experiments/F50_zero_product_defect_gibbs_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F50_zero_product_defect_gibbs_kill"
 path = "experiments/F50_zero_product_defect_gibbs_kill"
 route_ids = ["route:F23"]
-route_evidence = ["experiments/F50_zero_product_defect_gibbs_kill/RESULT.md:12"]
+route_evidence = [{ path = "experiments/F50_zero_product_defect_gibbs_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F50_zero_product_defect_gibbs_reaudit"
 path = "experiments/F50_zero_product_defect_gibbs_reaudit"
 route_ids = ["route:F23"]
-route_evidence = ["experiments/F50_zero_product_defect_gibbs_kill/RESULT.md:12"]
+route_evidence = [{ path = "experiments/F50_zero_product_defect_gibbs_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F50_zero_product_defect_gibbs_reconstruct"
 path = "experiments/F50_zero_product_defect_gibbs_reconstruct"
 route_ids = ["route:F23"]
-route_evidence = ["experiments/F50_zero_product_defect_gibbs_kill/RESULT.md:12"]
+route_evidence = [{ path = "experiments/F50_zero_product_defect_gibbs_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F51_high_digit_metric_audit"
 path = "experiments/F51_high_digit_metric_audit"
 route_ids = ["route:F12"]
-route_evidence = ["experiments/F51_high_digit_metric_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F51_high_digit_metric_kill/RESULT.md", field = "Approach-family" }]
 
 [[experiments]]
 id = "experiment:F51_high_digit_metric_kill"
 path = "experiments/F51_high_digit_metric_kill"
 route_ids = ["route:F12"]
-route_evidence = ["experiments/F51_high_digit_metric_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F51_high_digit_metric_kill/RESULT.md", field = "Approach-family" }]
 
 [[experiments]]
 id = "experiment:F51_high_digit_metric_reaudit"
 path = "experiments/F51_high_digit_metric_reaudit"
 route_ids = ["route:F12"]
-route_evidence = ["experiments/F51_high_digit_metric_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F51_high_digit_metric_kill/RESULT.md", field = "Approach-family" }]
 
 [[experiments]]
 id = "experiment:F51_high_digit_metric_reconstruct"
 path = "experiments/F51_high_digit_metric_reconstruct"
 route_ids = ["route:F12"]
-route_evidence = ["experiments/F51_high_digit_metric_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F51_high_digit_metric_kill/RESULT.md", field = "Approach-family" }]
 
 [[experiments]]
 id = "experiment:F52_residual_weight_gibbs_reduction"
 path = "experiments/F52_residual_weight_gibbs_reduction"
 route_ids = ["route:F23"]
-route_evidence = ["experiments/F52_residual_weight_gibbs_reduction/RESULT.md:12"]
+route_evidence = [{ path = "experiments/F52_residual_weight_gibbs_reduction/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F52_residual_weight_gibbs_reduction_audit"
 path = "experiments/F52_residual_weight_gibbs_reduction_audit"
 route_ids = ["route:F23"]
-route_evidence = ["experiments/F52_residual_weight_gibbs_reduction/RESULT.md:12"]
+route_evidence = [{ path = "experiments/F52_residual_weight_gibbs_reduction/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F52_residual_weight_gibbs_reduction_reaudit"
 path = "experiments/F52_residual_weight_gibbs_reduction_reaudit"
 route_ids = ["route:F23"]
-route_evidence = ["experiments/F52_residual_weight_gibbs_reduction/RESULT.md:12"]
+route_evidence = [{ path = "experiments/F52_residual_weight_gibbs_reduction/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F52_residual_weight_gibbs_reduction_reaudit_v2"
 path = "experiments/F52_residual_weight_gibbs_reduction_reaudit_v2"
 route_ids = ["route:F23"]
-route_evidence = ["experiments/F52_residual_weight_gibbs_reduction/RESULT.md:12"]
+route_evidence = [{ path = "experiments/F52_residual_weight_gibbs_reduction/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F52_residual_weight_gibbs_reduction_reconstruct"
 path = "experiments/F52_residual_weight_gibbs_reduction_reconstruct"
 route_ids = ["route:F23"]
-route_evidence = ["experiments/F52_residual_weight_gibbs_reduction/RESULT.md:12"]
+route_evidence = [{ path = "experiments/F52_residual_weight_gibbs_reduction/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F53_noninvertible_joint_zero_product_moves"
 path = "experiments/F53_noninvertible_joint_zero_product_moves"
 route_ids = ["route:F23"]
-route_evidence = ["experiments/F53_noninvertible_joint_zero_product_moves/RESULT.md:9"]
+route_evidence = [{ path = "experiments/F53_noninvertible_joint_zero_product_moves/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F53_noninvertible_joint_zero_product_moves_audit"
 path = "experiments/F53_noninvertible_joint_zero_product_moves_audit"
 route_ids = ["route:F23"]
-route_evidence = ["experiments/F53_noninvertible_joint_zero_product_moves/RESULT.md:9"]
+route_evidence = [{ path = "experiments/F53_noninvertible_joint_zero_product_moves/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F54_polynomial_root_basin_audit"
 path = "experiments/F54_polynomial_root_basin_audit"
 route_ids = ["route:F29"]
-route_evidence = ["experiments/F54_polynomial_root_basin_kill/RESULT.md:5"]
+route_evidence = [{ path = "experiments/F54_polynomial_root_basin_kill/RESULT.md", field = "Status" }]
 
 [[experiments]]
 id = "experiment:F54_polynomial_root_basin_kill"
 path = "experiments/F54_polynomial_root_basin_kill"
 route_ids = ["route:F29"]
-route_evidence = ["REGISTRY.md:233", "experiments/F54_polynomial_root_basin_kill/RESULT.md:5"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F54-D01" }, { path = "experiments/F54_polynomial_root_basin_kill/RESULT.md", field = "Status" }]
 
 [[experiments]]
 id = "experiment:F54_polynomial_root_basin_reconstruct"
 path = "experiments/F54_polynomial_root_basin_reconstruct"
 route_ids = ["route:F29"]
-route_evidence = ["experiments/F54_polynomial_root_basin_kill/RESULT.md:5"]
+route_evidence = [{ path = "experiments/F54_polynomial_root_basin_kill/RESULT.md", field = "Status" }]
 
 [[experiments]]
 id = "experiment:F55_inverse_pair_parity_audit"
@@ -2103,25 +2103,25 @@ route_ids = []
 id = "experiment:F56_clustered_inverse_relation_decoder"
 path = "experiments/F56_clustered_inverse_relation_decoder"
 route_ids = ["route:F26"]
-route_evidence = ["experiments/F56_clustered_inverse_relation_decoder/RESULT.md:5"]
+route_evidence = [{ path = "experiments/F56_clustered_inverse_relation_decoder/RESULT.md", field = "Status" }]
 
 [[experiments]]
 id = "experiment:F56_clustered_inverse_relation_decoder_audit"
 path = "experiments/F56_clustered_inverse_relation_decoder_audit"
 route_ids = ["route:F26"]
-route_evidence = ["experiments/F56_clustered_inverse_relation_decoder/RESULT.md:5"]
+route_evidence = [{ path = "experiments/F56_clustered_inverse_relation_decoder/RESULT.md", field = "Status" }]
 
 [[experiments]]
 id = "experiment:F56_clustered_inverse_relation_decoder_reaudit"
 path = "experiments/F56_clustered_inverse_relation_decoder_reaudit"
 route_ids = ["route:F26"]
-route_evidence = ["experiments/F56_clustered_inverse_relation_decoder/RESULT.md:5"]
+route_evidence = [{ path = "experiments/F56_clustered_inverse_relation_decoder/RESULT.md", field = "Status" }]
 
 [[experiments]]
 id = "experiment:F56_clustered_inverse_relation_decoder_reconstruct"
 path = "experiments/F56_clustered_inverse_relation_decoder_reconstruct"
 route_ids = ["route:F26"]
-route_evidence = ["experiments/F56_clustered_inverse_relation_decoder/RESULT.md:5"]
+route_evidence = [{ path = "experiments/F56_clustered_inverse_relation_decoder/RESULT.md", field = "Status" }]
 
 [[experiments]]
 id = "experiment:F57_inverse_descent_depth_audit"
@@ -2167,7 +2167,7 @@ route_ids = []
 id = "experiment:F59_completion_bias_generic_decoder_scan"
 path = "experiments/F59_completion_bias_generic_decoder_scan"
 route_ids = ["route:F26"]
-route_evidence = ["REGISTRY.md:234", "REGISTRY.md:235", "REGISTRY.md:236", "REGISTRY.md:237", "REGISTRY.md:238", "REGISTRY.md:239", "REGISTRY.md:240", "REGISTRY.md:241"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F59-D01 (failed complete-scan status)" }, { path = "REGISTRY.md", table = "runs", key = "F59-A01" }, { path = "REGISTRY.md", table = "runs", key = "F59-SA01" }, { path = "REGISTRY.md", table = "runs", key = "F59-D02" }, { path = "REGISTRY.md", table = "runs", key = "F59-D01-R2" }, { path = "REGISTRY.md", table = "runs", key = "F59-A02" }, { path = "REGISTRY.md", table = "runs", key = "F59-A03" }, { path = "REGISTRY.md", table = "runs", key = "F59-D03" }]
 
 [[experiments]]
 id = "experiment:F60_generic_specialization_decoy"
@@ -2188,7 +2188,7 @@ route_ids = []
 id = "experiment:F60_generic_specialization_decoy_reconstruct"
 path = "experiments/F60_generic_specialization_decoy_reconstruct"
 route_ids = ["route:F26"]
-route_evidence = ["REGISTRY.md:242", "REGISTRY.md:243"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F60-RECON-D02-VERIFY-01" }, { path = "REGISTRY.md", table = "runs", key = "F60-RECON-D02-VERIFY-SAGE-01–04" }]
 
 [[experiments]]
 id = "experiment:F61_gcdfree_block_feedback_kill"
@@ -2289,49 +2289,49 @@ route_ids = []
 id = "experiment:F65_sparse_block_selector_scan"
 path = "experiments/F65_sparse_block_selector_scan"
 route_ids = ["route:F26"]
-route_evidence = ["REGISTRY.md:244", "REGISTRY.md:245", "REGISTRY.md:246", "REGISTRY.md:247"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F65-D01" }, { path = "REGISTRY.md", table = "runs", key = "F65-A01" }, { path = "REGISTRY.md", table = "runs", key = "F65-D02" }, { path = "REGISTRY.md", table = "runs", key = "F65-SA01" }]
 
 [[experiments]]
 id = "experiment:F66_inverse_diagonal_metric_kill"
 path = "experiments/F66_inverse_diagonal_metric_kill"
 route_ids = ["route:F24"]
-route_evidence = ["experiments/F66_inverse_diagonal_metric_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F66_inverse_diagonal_metric_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F66_inverse_diagonal_metric_kill_audit"
 path = "experiments/F66_inverse_diagonal_metric_kill_audit"
 route_ids = ["route:F24"]
-route_evidence = ["experiments/F66_inverse_diagonal_metric_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F66_inverse_diagonal_metric_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F66_inverse_diagonal_metric_kill_reconstruct"
 path = "experiments/F66_inverse_diagonal_metric_kill_reconstruct"
 route_ids = ["route:F24"]
-route_evidence = ["experiments/F66_inverse_diagonal_metric_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F66_inverse_diagonal_metric_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F67_metric_guided_cross_feedback_kill"
 path = "experiments/F67_metric_guided_cross_feedback_kill"
 route_ids = ["route:F26"]
-route_evidence = ["experiments/F67_metric_guided_cross_feedback_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F67_metric_guided_cross_feedback_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F67_metric_guided_cross_feedback_kill_audit"
 path = "experiments/F67_metric_guided_cross_feedback_kill_audit"
 route_ids = ["route:F26"]
-route_evidence = ["experiments/F67_metric_guided_cross_feedback_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F67_metric_guided_cross_feedback_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F67_metric_guided_cross_feedback_kill_reaudit"
 path = "experiments/F67_metric_guided_cross_feedback_kill_reaudit"
 route_ids = ["route:F26"]
-route_evidence = ["experiments/F67_metric_guided_cross_feedback_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F67_metric_guided_cross_feedback_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F67_metric_guided_cross_feedback_kill_reconstruct"
 path = "experiments/F67_metric_guided_cross_feedback_kill_reconstruct"
 route_ids = ["route:F26"]
-route_evidence = ["experiments/F67_metric_guided_cross_feedback_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F67_metric_guided_cross_feedback_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F68_root_labelled_feedback_closure"
@@ -2352,19 +2352,19 @@ route_ids = []
 id = "experiment:F69_balanced_block_partition_kill"
 path = "experiments/F69_balanced_block_partition_kill"
 route_ids = ["route:F26"]
-route_evidence = ["experiments/F69_balanced_block_partition_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F69_balanced_block_partition_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F69_balanced_block_partition_kill_audit"
 path = "experiments/F69_balanced_block_partition_kill_audit"
 route_ids = ["route:F26"]
-route_evidence = ["experiments/F69_balanced_block_partition_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F69_balanced_block_partition_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F69_balanced_block_partition_kill_reconstruct"
 path = "experiments/F69_balanced_block_partition_kill_reconstruct"
 route_ids = ["route:F26"]
-route_evidence = ["experiments/F69_balanced_block_partition_kill/RESULT.md:3"]
+route_evidence = [{ path = "experiments/F69_balanced_block_partition_kill/RESULT.md", field = "Family" }]
 
 [[experiments]]
 id = "experiment:F70_refinement_gain_selector_kill"
@@ -2585,7 +2585,7 @@ route_ids = []
 id = "experiment:F82_canonical_phase_only_feedback_search"
 path = "experiments/F82_canonical_phase_only_feedback_search"
 route_ids = ["route:F26"]
-route_evidence = ["REGISTRY.md:248", "REGISTRY.md:249"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F82-D01" }, { path = "REGISTRY.md", table = "runs", key = "F82-D02" }]
 
 [[experiments]]
 id = "experiment:F83_prime_saturation_decoder"
@@ -2656,28 +2656,28 @@ route_ids = []
 id = "experiment:F95_two_relation_canonical_inverse_cycle"
 path = "experiments/F95_two_relation_canonical_inverse_cycle"
 route_ids = ["route:F26"]
-route_evidence = ["REGISTRY.md:181"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F95-D01" }]
 
 [[experiments]]
 id = "experiment:F96_squareclass_collision_boundary"
 path = "experiments/F96_squareclass_collision_boundary"
 route_ids = ["route:F26"]
-route_evidence = ["REGISTRY.md:182", "REGISTRY.md:183"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F96-D01" }, { path = "REGISTRY.md", table = "runs", key = "F96-D02" }]
 
 [[experiments]]
 id = "experiment:F97_square_inverse_seed_n2_kill"
 path = "experiments/F97_square_inverse_seed_n2_kill"
 route_ids = ["route:F26"]
-route_evidence = ["REGISTRY.md:184"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F97-D01" }]
 
 [[experiments]]
 id = "experiment:F98_multiseed_presentation_closure_kill"
 path = "experiments/F98_multiseed_presentation_closure_kill"
 route_ids = ["route:F26"]
-route_evidence = ["REGISTRY.md:185"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F98-D01" }]
 
 [[experiments]]
 id = "experiment:F99_canonical_power_trajectory_obstructions"
 path = "experiments/F99_canonical_power_trajectory_obstructions"
 route_ids = ["route:F26"]
-route_evidence = ["REGISTRY.md:187"]
+route_evidence = [{ path = "REGISTRY.md", table = "runs", key = "F99-D01/A01/R01" }]

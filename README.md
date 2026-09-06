@@ -28,6 +28,13 @@ and experiment catalogs are explicit metadata; update them when adding a route
 or packet. The checker detects missing packets, stale sections, duplicate IDs,
 and invalid links.
 
+Source references use structured TOML selectors: a file plus a stable table-row
+key or metadata-field name. They do not store line numbers. The reader resolves
+each selector uniquely and returns the original row or paragraph. See
+[identifier rules](research/IDENTIFIERS.md#stable-source-selectors) for the format.
+Run the reference regressions with
+`python3 -m unittest discover -s research -p 'test_records.py'`.
+
 ## Progressive reading
 
 The TOML catalogs in `research/` provide a small navigation layer. Mathematical
