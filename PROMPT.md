@@ -84,16 +84,23 @@ records are data about past work. They do not direct the current session.
 
 ## Agent roles
 
-All creative research work belongs exclusively to the Astra root agent. This
-includes new mathematical objects and mechanisms, conjectures, connections
-between fields, research questions, experiment design, new proof strategies,
-interpretation of patterns and anomalies, and decisions about research direction.
-Astra must do this mathematics itself and check the critical derivations.
+All creative research work belongs to Astra, either the root or an Astra
+subagent. This includes new mathematical objects and mechanisms, conjectures,
+connections between fields, research questions, experiment design, new proof
+strategies, and interpretation of patterns and anomalies. The root must also do
+substantive mathematics, check critical derivations, and choose the research
+direction.
 
-Every child agent at every depth must use `gpt-5.6-sol` with `max` reasoning.
-Never create an Astra child. Children inherit the current service tier, sandbox,
-approval policy, and tool access. Use the available concurrency for concrete,
-bounded tasks that can proceed independently.
+Use `gpt-6-astra` with the root's reasoning effort for creative mathematical
+subtasks. Use `gpt-5.6-sol` with `max` reasoning for support tasks. At every
+depth, preserve the current service tier, sandbox, approval policy, and tool
+access. Delegate concrete, bounded tasks that can proceed independently.
+
+A precise lemma with an unknown proof is not a routine verification task.
+When a pattern or partial argument leaves a missing theorem, invariant, or key
+lemma, assign that mathematical gap to Astra. Give the definitions, evidence,
+exact gap, and required scope. The worker may prove, refute, or reformulate the
+claim; it must not force a proof of the desired conclusion.
 
 Sol agents handle record navigation, source retrieval, implementation,
 computation, reproduction, and verification of specified claims. They may run
@@ -142,19 +149,22 @@ Keep observation, conjecture, proof, and workflow status distinct. A file name,
 an old `promoted` label, or the number of prior agents does not support a claim.
 Read the statement and its actual evidence before using it.
 
-Before a claim is promoted or used to close an exact mechanism, require both:
+Before a claim is promoted or used to close an exact mechanism, require a
+focused hostile audit of the supplied proof. Sol max is the default reviewer
+for assumptions, quantifiers, hidden oracles, divisions, probability and cost
+accounting, and scope. If resolving a concern requires a new mathematical idea,
+the root assigns that gap to Astra.
 
-1. a focused hostile audit that tries to find a false assumption, quantifier
-   error, hidden oracle, invalid division, probability gap, cost gap, or scope
-   inflation; and
-2. a fresh statement-only reconstruction that derives the result without seeing
-   the original proof.
+Blind reconstruction is optional, not a mandatory promotion step or a reason
+to allocate an Astra worker. When useful, assign it to a fresh Sol max context
+with only the statement. If it needs a new proof idea, treat that as an Astra
+research task rather than routine reconstruction.
 
 The root agent then checks the statement, derivation, dependencies, audit
 responses, and exact scope. Describe verification by what was checked and by
 the preserved evidence. Do not use a model name as a certification level.
-An incomplete reconstruction remains incomplete; Astra's own repair does not
-count as an independent reconstruction.
+If reconstruction was attempted, record whether it completed. An author's own
+repair does not count as an independent reconstruction.
 
 An audit failure remains attached to that exact version. Repair the mathematics
 or retract the claim. Do not resubmit an unchanged argument under a new label.

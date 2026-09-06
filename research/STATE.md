@@ -42,12 +42,13 @@ evidence of all-input complexity. Use the experiment catalog to locate packets.
 
 ## Next research cycle
 
-The Astra root performs all creative research: it chooses mathematical objects,
-questions, conjectures, experiment designs, and new proof strategies, then
-interprets the results itself. Sol max workers navigate records, implement and
-run Astra-designed searches, reproduce results, and verify specified claims
-within resource budgets. They report anomalies and any need for a new
-mathematical idea to Astra. A promising finite pattern can justify further
+The Astra root performs creative mathematics and can assign bounded mathematical
+gaps to Astra subagents. Turning a pattern into a theorem or proving a missing
+key lemma remains creative work even when the statement is precise. Sol max
+workers navigate records, implement and run Astra-designed searches, reproduce
+results, and verify supplied arguments within resource budgets. They return
+tasks that need new mathematical ideas to Astra. Blind reconstruction is
+optional and defaults to Sol max. A promising finite pattern can justify
 investigation before a full algorithm or QP transition exists.
 
 Before relying on an old result, retrieve the exact statement and scope. Before
