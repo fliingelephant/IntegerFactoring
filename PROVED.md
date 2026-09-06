@@ -25246,3 +25246,120 @@ Input SHA-256:
 
 The implemented one-patch support oracle, affine-tree pruning, grouped
 cap-line bound, F287 dynamics, and F290 transforms are not promoted here.
+
+## P236 -- One rational-root quadratic-Gauss/Cauchy kernel has an output-sensitive polynomial-time Taylor/Laurent algorithm
+
+**Status:** promoted after fresh statement-only Sol reconstruction and root
+scope verification. The only external algorithmic dependency is Hiary 2011,
+Theorem 1.1.
+
+**Scope:** one finite quadratic-Gauss/Cauchy kernel at one rational root of
+unity, including its requested Taylor or Laurent coefficients and exact pole
+removability. No outer-index contraction or factoring bound.
+
+**Statement.**
+
+For \(m,D\geq1\), integers \(a,b,c,s\), and
+
+\[
+ e_q(x)=\exp(2\pi i x/q),\qquad
+ t_0=e_D(s),\qquad
+ \ell=\frac{m}{\gcd(b,m)},
+\]
+
+define the rational function
+
+\[
+ F(t)=\sum_{z=0}^{m-1}
+ \frac{e_m(az^2+cz)}{1-t\,e_m(bz)}.
+\]
+
+Let \(J,p\geq0\) and \(\rho=t/t_0\). If \(t_0^\ell\neq1\), every coefficient through degree
+\(J\) in
+
+\[
+ F(t_0\rho)=\sum_{j=0}^J B_j(\rho-1)^j
+             +O((\rho-1)^{J+1})
+\]
+
+can be approximated to absolute error at most \(2^{-p}\). If
+\(t_0^\ell=1\), the same holds for \(A,B_0,\ldots,B_J\) in
+
+\[
+ F(t_0\rho)=\frac{A}{1-\rho}
+ +\sum_{j=0}^J B_j(\rho-1)^j+O((\rho-1)^{J+1}).
+\]
+
+There is a deterministic algorithm with bit complexity polynomial in the
+ordinary binary lengths of \(m,D,a,b,c,s\) and in the numerical output
+parameters \(J,p\). It does not enumerate \(m\) or \(\ell\), factor \(m\) or
+\(D\), or materialize a degree-\(D\) cyclotomic field. In the pole case it
+decides exactly whether \(A=0\), equivalently whether the potential pole is
+removable.
+
+The output-sensitive reading of \(J,p\) is essential: the requested output
+itself can have order \(Jp\) bits.
+
+**Proof.** Put
+
+\[
+ G(a,C;m)=\sum_{z=0}^{m-1}e_m(az^2+Cz),\qquad
+ P(t)=\sum_{n=0}^{\ell-1}t^nG(a,c+bn;m).
+\]
+
+The finite geometric identity gives
+
+\[
+ F(t)=\frac{P(t)}{1-t^\ell}.
+\]
+
+Imprimitive complete-Gauss reduction and the exhaustive odd/even primitive
+Gauss formulas restrict every nonzero \(G(a,c+bn;m)\) to one arithmetic
+progression in \(n\). On that progression its phase is a rational quadratic
+polynomial. Expanding the needed binomial weights reduces all derivatives of
+\(P(t_0\rho)\) through degree \(J+1\) to polynomially many weighted
+quadratic sums.
+
+Hiary, Annals of Mathematics 174 (2011), 859--889, Theorem 1.1 evaluates
+each normalized polynomially weighted quadratic sum with operation count and
+working precision polynomial in \(\log(\mathrm{length}+1)\), the weight
+degree, and \(\log(1/\mathrm{accuracy})\). Undoing normalization adds only
+the corresponding precision bits.
+Complete Gauss amplitudes use the same \(j=0\) case or explicit gcd,
+Jacobi, and parity formulas.
+
+The pole test is the exact divisibility condition \(D\mid s\ell\). At a
+potential pole, let \(g=\gcd(b,m)\), \(b_0=b/g\), and
+\(r_0=s\ell/D\). If \(z_0\) solves
+\(b_0z_0\equiv-r_0\pmod\ell\), then
+
+\[
+ A=e_m(az_0^2+cz_0)
+   G(a\ell,2az_0+c;g).
+\]
+
+The complete-Gauss gcd and parity cases decide its vanishing exactly, without
+integer factorization. Finally, triangular division by
+\(1-t_0^\ell\rho^\ell\), or by its simple zero in the Laurent case, gives
+the requested coefficients. Root-of-unity separation and coefficient bounds
+show that
+
+\[
+ p+O((J+2)(\log(m+1)+\log(D+1)+\log(J+2)+1))
+\]
+
+working bits suffice. Tightening Hiary's error parameter absorbs its stated
+polynomial prefactor.
+
+Independent proof:
+experiments/F292_localized_character/KERNEL_RECONSTRUCTION.md.
+Statement-only input:
+experiments/F292_localized_character/KERNEL_STATEMENT_ONLY.md.
+Author derivation and exact finite checks:
+experiments/F292_localized_character/KERNEL_PRIMITIVE.md.
+Input SHA-256:
+314695ff8f987a46eb8d90f1f9be4a6deb646bde324379b94a902971e957116b.
+
+This record does not cover a sum over many outer kernel indices, products of
+several Cauchy denominators, arbitrary interior \(t\), or any factoring
+runtime. Adjacent F292 and F294 author claims remain unpromoted.

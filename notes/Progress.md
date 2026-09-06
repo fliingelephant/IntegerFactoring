@@ -7324,3 +7324,269 @@ bound for the geometrically truncated signed carry. Evidence:
 experiments/F290_dyadic_fourier_support/REPORT.md, NORMALS.md,
 weighted_prefix.py/json, carry_rectangle.py/json, and
 normal_grid_check.py/json/log.
+
+### C252 -- Direction dominance removes exact families but not the high-stride phase catalogue
+
+**Status:** author-derived proofs and exact finite pilots. Independent
+reconstruction is pending.
+
+**Scope:** the F291 dyadic inverse-patch directions, strict dominance
+certificate, three low-stride families, and stated random/late controls. No
+quasipolynomial catalogue bound.
+
+**Discussion.**
+
+For a primitive direction \((A,B)\) on a depth-\(r\) patch, F291 derives the
+exact stride
+
+\[
+ g_u(A,B)=2^r\gcd(A+B\,d(u),2^{r+1}).
+\]
+
+For \(r\geq3\) and odd \(B\), maximal stride selects at most two inverse
+classes and fixes their phases up to sign. A strict score improvement at the
+direction's maximal shear certifies
+domination at every shear. Separately, the three constant low-stride
+categories \(v_2(A-NB)=0,1,2\) reduce to three exact two-dimensional CVP
+representatives.
+
+The pilots checked 59,904 global-dominance comparisons and 58,240 bounded
+low-layer comparisons without failure. They also show the residual problem:
+at 57--58 bits, roughly 30,000 direction/stride/phase keys remained. Reusing
+a direction without its translated line phase gives little saving.
+
+The next operation must enumerate or reject high-stride directions in whole
+coefficient regions without first visiting their roots or primitive pairs.
+Evidence: experiments/F291_direction_class_aggregation/RESULT.md,
+direction_reuse.py/output.json, global_dominance.py/dominance_output.json,
+and low_layers.py/low_layers_output.json.
+
+### C253 -- Localized-character descent reaches a verified scalar kernel but leaves the outer cut phases
+
+**Status:** synthesis of one promoted primitive with author-derived
+transformations and exact finite checks. Only the single-kernel result P236
+is promoted.
+
+**Scope:** F292 paired-bit frontiers, fixed-conductor lift, Cochrane and
+inverse reciprocity, and one rational-root quadratic-Gauss/Cauchy kernel. No
+outer-sum or support algorithm.
+
+**Discussion.**
+
+The generic paired-bit linear representation has candidate rank at least
+\(\sqrt M/8\). A short cap evades that rank bound because it has few high
+blocks, but discovering the contributing low rows remains numerical. The
+fixed-conductor lift keeps the cap and introduces linear additive phases; its
+direct jump still has \(H=O(\sqrt M)\) character states. Sparse carry moments
+give a formal recurrence only after their support or moments are already
+known.
+
+The inverse-Bernoulli target is a Cochrane sum. Phase-sensitive character
+orthogonality produces two Gauss factors and a Kloosterman difference.
+Elementary inverse reciprocity decreases a modulus but exposes explicit
+divisor boundary terms and does not contract the number of smaller calls.
+The odd-prime-power Kloosterman paper is a precise source lead, not a dyadic
+theorem used here.
+
+P236 removes one scalar obligation: at one rational root of unity, one
+quadratic-Gauss/Cauchy kernel, including Taylor/Laurent coefficients and
+exact removability, has output-sensitive polynomial bit cost. Evaluating
+\(B_0\) distinct outer indices still costs \(B_0\) such calls. Several
+denominators, arbitrary interior parameters, and the cut-phase family remain
+outside the verified result.
+
+The next step must aggregate the outer geometry coefficients before applying
+the scalar primitive separately. Evidence:
+experiments/F292_localized_character/REPORT.md, TWISTED_RECURRENCE.md,
+RECIPROCITY.md, KERNEL_PRIMITIVE.md, KERNEL_RECONSTRUCTION.md, and their
+exact JSON certificates.
+
+### C254 -- Canonical half-square counts are a phase-sensitive numerical convolution
+
+**Status:** root-derived identities and exact finite experiments.
+Independent reconstruction is pending.
+
+**Scope:** the F293 canonical half-square count, its sign word, complementary
+lift, character square, and the specified finite recurrence screens. No short
+coefficient evaluator.
+
+**Discussion.**
+
+Writing every unit modulo \(2^k\) as \(\pm5^t\) turns the exact half-square
+correlation into one coefficient of a cyclic square \(P_k(z)^2\). This
+retains canonical placement, but \(P_k\) has \(2^{k-2}\) signs. Reflection
+halves the direct work again without changing its numerical scale.
+
+The count obeys an exact mod-four orbit law and the complementary lift
+
+\[
+ C_M(N+M/2)=M/4-C_M(N).
+\]
+
+Its character expansion contains \(B(\chi)^2\), not
+\(\lvert B(\chi)\rvert^2\); replacing it by an autocorrelation loses the
+phase. The exact Rust trace evaluated more than 6.4 billion sign products
+through \(k=34\) with constant memory. Fixed constant-coefficient
+recurrences through order ten failed the retained Hankel and holdout tests.
+These are finite exclusions, not a lower bound against nonlinear or
+Euclidean contraction.
+
+The missing object is a succinct reciprocal coefficient evaluator that
+retains both square phase and window placement. Evidence:
+experiments/F293_carry_convolution/RESULT.md, convolution.json,
+reciprocal_trace.jsonl, recurrence_check.json, and word_moments.json.
+
+### C255 -- Near-affine descent preserves both windows but leaves an unmatched kernel family
+
+**Status:** author-derived identities and exact finite validations, including
+a separate root-supplied identity check. No recursive closure or
+quasipolynomial bound is promoted.
+
+**Scope:** F294 near-affine counts, fixed-geometry slope blocks, faithful
+inverse charts, formal-group/Gauss descent, and the tested reciprocal
+recombination. P236 applies only to each individual scalar kernel.
+
+**Discussion.**
+
+F294 evaluates special near-affine half-window counts and large
+fixed-geometry slope blocks in polynomial bit work. Actual inverse charts do
+not hold that geometry fixed: changing origins couples the slope, constant,
+and input window. The faithful normalization instead produces two
+multiplicatively wrapped windows.
+
+The formal-group coordinate and exact Gauss support reduce a modulus
+\(q=m^2\) count to an \(m\)-term affine-window/carry kernel. Separate
+coefficient-array and cyclotomic checks passed 17,872 Gauss cases, six direct
+window counts, and 76 high-lift Cauchy identities. The Euclidean floor
+recurrence then exposes floor-indexed incomplete Gauss moments and,
+termwise, up to three Cauchy denominators with resonance derivatives.
+
+Full child recombination cancels one apparent added denominator and collapses
+some reciprocal phase orbits. Exact \(q=64,256\) checks still leave nonzero
+unmatched cut-phase coefficients after every tested frame and pole term is
+retained. P236 evaluates each such scalar kernel, but no operation aggregates
+their outer coefficient family without numerical enumeration.
+
+The concrete remaining task is geometry-aware outer cut-phase aggregation,
+not another individual kernel formula. Evidence:
+experiments/F294_near_affine_quadratic/RESULT.md, FORMAL_DESCENT.md,
+RECOMBINATION.md, ROOT_GAUSS_WINDOW.md, and their exact outputs.
+
+### C256 -- Auxiliary Gauss coordinates leave a quadratic half-window moment
+
+**Status:** author-derived exact identities and finite symbolic validation.
+Independent reconstruction is pending.
+
+**Scope:** the F295 adjacent-ray coordinate transform, exact axis sums,
+retained third denominator, joint-quadratic ansatz, and one literal residue
+repair. No general lower bound or recursive evaluator.
+
+**Discussion.**
+
+Undoing the complete Gauss sum before separating cone terms lets adjacent
+Euclidean rays become coordinate axes while retaining the full window
+polynomial. Each pole-excluded axis transform then has an elementary
+Bernoulli or half-window value. Expanding the remaining odd-\(b\) denominator
+leaves an exact two-variable quadratic half-window/Bernoulli moment under a
+unit-Jacobian polynomial map.
+
+The remaining half-window is essential: completing that coordinate makes the
+tested moment zero, while a retained q=64 component is \(-4\). The proposed
+jointly quadratic closure fails by a nonzero mixed third difference. The
+literal repair that stratifies the auxiliary \(x\) coordinate needs
+\(2^{\lceil(r-2)/2\rceil}\) classes. This is an exact count for that repair,
+not a bound on other contractions.
+
+Seven complete-window checks, 256 auxiliary-Gauss identities, seven axis
+moments, and 3,584 repaired phase identities passed. The next object is the
+retained quadratic window moment, not a complete quadratic Gauss sum.
+Evidence: experiments/F295_auxiliary_gauss_coordinates/RESULT.md,
+auxiliary_coordinates.py, output.json, and run.log.
+
+### C257 -- Fixed-frame theta reciprocity shortens the bulk and exposes two boundary families
+
+**Status:** author-derived identities, exact algebraic checks, and
+high-precision finite comparisons. Independent reconstruction is pending.
+
+**Scope:** within one fixed F294 outer frequency \(b_0\), the F296 family of
+sharp floor-indexed theta prefixes, its shorter bulk, exact mod-\(a\)
+correction, centered Mordell endpoints, and retained source-formula
+discrepancy. No aggregation over the odd \(b_0\) family and no completed
+recursive cost bound.
+
+**Discussion.**
+
+Applying finite-theta reciprocity to all sharp prefixes in that fixed frame
+contracts their common bulk from length \(m\) to at most
+\(p+2\leq m/2+2\). A nested floor is removed exactly as a linear-floor bulk
+plus a residue-inequality correction modulo \(a\). The old root-of-unity cut
+weight remains. A second boundary family consists of centered Mordell
+\(h\)-values with explicit endpoint phases.
+
+The frame data \(A=b_0\beta\bmod m\), \(B=-b_0d_1\bmod m\), and
+\(Z=e_m(-b_0)\), as well as the normalized child parameter \(p=2A\), depend
+on \(b_0\). Thus this transformation does not sum the original odd
+frequencies.
+
+The cached Kuznetsov arXiv PDF visibly prints coefficient \(-1/2\) in
+equation (7), while the derivation from its equations (16)--(17) gives
+\(-i/2\). F296 retains the PDF hash, extracted image, failed printed-formula
+run, and an exact nonzero difference witness. It uses the derived coefficient
+without editing the source. Six 45-digit checks differed from the derived
+formula by less than \(2\cdot10^{-42}\); they are numerical evidence, not
+interval proofs.
+
+The shorter fixed-frame bulk alone does not contract the two boundary
+families or the original \(b_0\) family. A recurrence must retain the exact
+mod-\(a\) cut and completed Mordell endpoints, and a separate grouping must
+avoid per-\(b_0\) evaluation. Evidence:
+experiments/F296_outer_reciprocity/REPORT.md, SOURCE_FORMULA.md,
+outer_mordell.py/json/log, and outer_mordell_setup.log.
+
+### C258 -- Uncentered completed prefixes absorb the fixed-frame cut into four endpoint families
+
+**Status:** root-derived exact identities, a uniform analytic bound, and
+finite exact/numerical checks. The same-cycle Astra worker checked the signs,
+analytic domain, and cancellation collaboratively; this is not a fresh
+statement-only reconstruction or a promotion.
+
+**Scope:** within one fixed F294 outer frequency \(b_0\), the F297 centered
+and uncentered completed-prefix formulas, four explicit Fresnel endpoints,
+the regular Mordell remainder, and its coefficient construction. No endpoint
+or moment-family evaluator, aggregation over odd \(b_0\), or factoring bound.
+
+**Discussion.**
+
+F296 writes its centered endpoint as \(r_j=R_j-\delta_j\), where \(R_j\) is
+a simple linear-floor endpoint and \(\delta_j\in\{0,1\}\). Choosing
+\(R=R_j\) directly gives \(-1\leq d<1\) and
+\(-3/2\leq z=d-1/2<1/2\). The exact completed prefix then has four
+erfc/Fresnel endpoint families. Its endpoint-shift identity cancels the
+added dual-prefix term exactly when \(\delta_j=1\), so no separate indicator
+family remains.
+
+For \(\lvert z\rvert\leq3/2\), the regular remainder has the uniform
+expansion
+
+\[
+ R_2(z,t)=\sum_{j\geq0}c_j^{(2)}(t)(2z)^{2j},\qquad
+ |c_j^{(2)}(t)|\leq\frac4{5^{2j+1}},\qquad
+ \left|R_2-\sum_{j<K}c_j^{(2)}(t)(2z)^{2j}\right|
+ \leq\frac54\left(\frac9{25}\right)^K.
+\]
+
+Its coefficients have a constructive polynomial-bit approximation
+procedure. The unresolved fixed-frame work is the total evaluation of the
+four Fresnel families and the uniformly short list of polynomial moments in
+the fractional parts of their actual linear expressions. This does not group
+the original odd frequencies: \(A\), \(B\), \(Z\), and the normalized child
+\(p\) still depend on \(b_0\).
+
+Sixteen faithful q=64 and q=256 prefixes, including the q=256 cut positions
+\(j=2,6\), agree with direct sums to at most \(3.30\cdot10^{-41}\). That run
+took 0.984 seconds and 31.9 MB peak RSS. The packet also retains 6,072 exact
+endpoint-phase checks, the earlier centered and remainder comparisons, and
+the cached-source coefficient discrepancy. Evidence:
+experiments/F297_mordell_boundary/RESULT.md, uncentered_prefix.py/json/log,
+boundary_moments.py/json/log, completed_prefix.py/json/log, and their status
+files.

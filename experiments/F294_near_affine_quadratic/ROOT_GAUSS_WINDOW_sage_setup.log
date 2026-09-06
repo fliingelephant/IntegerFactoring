@@ -1,0 +1,10 @@
+Attempt 1 stopped before the script loaded because the sandbox blocked Sage's
+lazy-import cache write under ~/.sage.
+
+Attempt 2 loaded Sage, then stopped before any formula check because the Sage
+preparser converted SEED to a Sage Integer. Python 3.14 random.Random accepts
+only built-in seed types. The source now uses int(SEED). No formula changed.
+
+Attempt 3 completed the field computations, then stopped while serializing
+Sage Integer values to JSON. The output calls now use default=int. No formula
+changed.
