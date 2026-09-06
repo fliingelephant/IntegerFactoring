@@ -127,9 +127,10 @@ quasipolynomial transition before a discovery search begins. Useful exploratory
 outputs include identities, patterns, anomalies, separating examples, finite
 nulls, scaling evidence, and failures of a specific ansatz.
 
-The route's Astra chooses symbolic derivation, numerical searches, and targeted
-checks in the order that best answers the question. There is no mandatory
-kill-first round.
+Actively use SageMath, Gurobi, and other suitable tools for symbolic and numerical
+discovery, including pattern searches before a conjecture is fixed. The route's
+Astra chooses the tools, experiments, and their order to answer the question.
+There is no mandatory kill-first round.
 
 For every nontrivial computation, retain a named source file, scoped route and
 experiment IDs, a resource estimate, a timeout, a log, and an output artifact.
@@ -144,11 +145,13 @@ same resource checks and a successful pilot. Numerical evidence guides the
 research; it does not replace proof.
 
 The route's Astra states its own question or tentative mechanism before
-consulting related work. Check existing local references first: the paper index
-at `.knowledge/INDEX.md`, then `rg` on paper Markdown to locate relevant sections.
+consulting related work. If a local paper cache exists, check `.knowledge/INDEX.md`
+and use `rg` on paper Markdown to locate relevant sections. An absent cache
+does not block web retrieval.
 Use focused web searches to fill gaps and check recent results, mechanisms, and
 tools, including work on this target. Use `how-to-download-ref` when full text
-is needed but missing locally.
+is needed but missing locally. Use the default PDF format and generated citation
+keys unless the user specifies otherwise.
 
 Prefer original papers. Check the assumptions and critical mathematical steps
 used from retrieved results. Community opinions about difficulty are not
@@ -231,4 +234,5 @@ advance, record that honestly and adjust the next step. On pause or stop, leave
 a clear restart point.
 
 Create local Git checkpoint commits after coherent substantive research changes.
+Skip `/simplify` for these research checkpoints.
 Do not push, rewrite history, or publish without explicit user authorization.

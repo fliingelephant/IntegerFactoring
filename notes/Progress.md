@@ -7035,8 +7035,11 @@ give a general evaluator or circuit lower bound.
 ### C243 -- Short q-binomial jets are computable, but their useful scalar is missing
 
 **Status:** research synthesis; the precise jet and uniform-index statements are P234.
+
 **Scope:** normalized Taylor coefficients, selected moment determinants, and the
 specific finite examples in F284. No general factoring or novelty claim.
+
+**Discussion.**
 
 F284 computes 13 exact coefficients for B=2^512+12345 in about two local Sage
 seconds without constructing an enormous Gaussian polynomial. This is a real
@@ -7058,7 +7061,10 @@ Evidence: `experiments/F284_cyclotomic_binomial_search/RESULT.md`, its
 
 **Status:** P232 is independently reconstructed; the separate two-dimensional
 sampling probabilities remain author-derived candidates with exact finite checks.
+
 **Scope:** the squarefree branch and individual operator ranks, not joint decoders.
+
+**Discussion.**
 
 F285 starts with a genuinely public, logarithmic-exponent circuit for D(A^N).
 P232 identifies its kernel as Cent(A^N). Outside at most D(D+1) exceptional
@@ -7077,7 +7083,10 @@ Evidence: `experiments/F285_finite_algebra_operator_search/DIMENSION_EXTENSION.m
 
 **Status:** the global-cut survival theorem is P233. Iterated fixed-point,
 iteration-cost, and fast-forward analyses remain author-derived candidates.
+
 **Scope:** the explicitly retained real arcs and linear-form congruence cuts in F286.
+
+**Discussion.**
 
 Global tangent cuts leave all early branches by P233. Recomputing minima on
 retained arcs does produce additional pruning: one finite case reached two
@@ -7092,3 +7101,100 @@ trial division. These observations redirect the search toward joint interval
 certificates rather than simply increasing the number of sweeps.
 Evidence: `experiments/F286_diophantine_constraint_search/RESULT.md`,
 `RECONSTRUCTION.md`, `ITERATED_RESULT.md`, `ITERATED_output.json`, and `FAST_FORWARD.md`.
+
+### C246 -- Joint derivative products expose a scalar collision without a success law
+
+**Status:** candidate synthesis. The F287 identities and counts are author-derived;
+independent statement-only reconstruction is pending.
+
+**Scope:** the fixed three-by-three matrix families, witnesses at \(N=77,187\),
+and exact root counts for the 16 listed prime pairs in F287. No general
+joint-operator or all-input claim.
+
+**Discussion.**
+
+P232 leaves combined operators open. F287 derives a deficient triple product
+whose derivative rank depends on a weighted pairing that individual and adjacent
+ranks do not determine. For its fixed public family, the rank-drop condition is
+the scalar
+
+\[
+F_N(t)=t^{2N-1}+3t^N-3t^{N-1}-1.
+\]
+
+The public gcd test evaluates this scalar with polynomial bit cost per sample.
+Exact witnesses at \(N=77\) and \(N=187\) split the input while the individual
+and adjacent ranks agree. The follow-up gives reciprocal identities, exact local
+root counts on a fixed list of 16 prime pairs, and special coefficient families.
+Many pairs have no roots, and the positive twin-prime cases have density of order
+\(1/p\). No uniform inverse-quasipolynomial success bound or covering list is
+known. The isolated coefficient-three family also has a stated Carmichael
+limitation. These claims still require independent proof reconstruction.
+
+Evidence: `experiments/F287_joint_power_operators/REPORT.md`,
+`experiments/F287_joint_power_operators/SUCCESS_LAW.md`,
+`experiments/F287_joint_power_operators/pilot.json`, and
+`experiments/F287_joint_power_operators/counts.json`.
+
+### C247 -- Hyperbola support geometry overlaps known work and self-normal descent stalls
+
+**Status:** candidate proof and literature synthesis with exact finite evidence.
+Independent reconstruction and verification of the derived support reduction are pending.
+
+**Scope:** the positive hyperbola over one lattice translate, six exact boxed
+examples, and the full-text comparison in F288. No all-input success law.
+
+**Discussion.**
+
+F288 gives a self-contained reflection argument that every unboxed hull vertex
+is the unique minimizer of its own normal, and an elementary exposure interval
+for an exact factor point in one residue coset. Its six boxed examples contain
+strict nonfactor fixed points; self-normal descent did not increase factor-fan
+mass. These are finite observations, not a basin theorem.
+
+The literature comparison limits novelty. Alcantara--Blanco--Criado--Santos
+already give the integer-hyperbola hull, identify factor points as vertices, and
+give efficient access to individual vertices. Balog--Barany use the same central
+reflection body. The self-normal statement was not found verbatim, but it is an
+elementary consequence of that argument, not a substantially new geometric
+principle. The factor exposure interval is new to this repository; external
+novelty is unestablished.
+
+The cited SEEK and NEXT interfaces support a candidate polynomial-cost unboxed
+support reduction after full bit accounting. That reduction still needs
+verification. Box truncation, residue-coset unions, and a useful probability law
+need separate arguments; the F288 pilot uses enumeration linear in the numerical
+box width.
+
+Evidence: `experiments/F288_integer_hyperbola_support/RESULT.md`,
+`experiments/F288_integer_hyperbola_support/LITERATURE.md`,
+`experiments/F288_integer_hyperbola_support/RECONSTRUCTION_STATEMENT.md`, and
+`experiments/F288_integer_hyperbola_support/output.json`.
+
+### C248 -- Modular support unions permit finite descent without a general oracle law
+
+**Status:** exact finite observation from F289. Independent verification is pending.
+
+**Scope:** 35 labelled cases with
+\(B\in\{2^8,2^{10},2^{12},2^{14},2^{16}\}\),
+\(M\in\{1,2,4,8,16,64,256\}\), and the three displayed certificates at
+\(N=147053\). No asymptotic descent or factoring claim.
+
+**Discussion.**
+
+The product-congruence set is a union of residue cosets, so reflection can leave
+the set even when positivity and the product bound survive. F289 records exact
+move certificates for \(M=16,64,256\). All vertices were self-fixed in the 20
+cases with \(M\leq8\). Every one of the 15 cases with \(M\geq16\) had a move,
+but only seven increased the measured proper-factor basin and no path used more
+than three moves. Movement therefore does not establish a uniform success law.
+
+The exact pilot enumerates points up to a numerical cutoff and costs linear work
+in that cutoff. It supplies no quasipolynomial-bit support oracle for the modular
+union. Both the finite implementation and any generalization remain independently
+unchecked.
+
+Evidence: `experiments/F289_modular_support_union/RESULT.md`,
+`experiments/F289_modular_support_union/output.json`,
+`experiments/F289_modular_support_union/run.log`, and
+`experiments/F289_modular_support_union/RESOURCE_ESTIMATE.md`.

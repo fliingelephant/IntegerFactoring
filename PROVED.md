@@ -24991,8 +24991,11 @@ No computation or remote run occurred.
 
 **Status:** promoted after a fresh statement-only Sol reconstruction and root
 verification of the exact claims. No literature-level novelty claim is made.
+
 **Scope:** individual derivative ranks on the squarefree-characteristic-polynomial
 branch over a distinct-prime semiprime. Not a general factoring lower bound.
+
+**Statement.**
 
 Let N=rs with distinct primes and let A be a d-by-d matrix modulo N. Over F_r
 assume its characteristic polynomial is squarefree and define
@@ -25042,7 +25045,10 @@ The separate two-by-two probability calculation is not promoted by this record.
 
 **Status:** promoted after independent statement-only reconstruction and root
 verification. The finite computations support examples, not the proof.
+
 **Scope:** the exact continuous relaxation and bounded global-tangent menu below.
+
+**Statement.**
 
 Let N be odd, B,A positive integers, 2B^2<=N<=9B^2/4, and M=2^k with k>=1
 and M<=B/(4096A^3). For each odd u modulo M put v=N/u modulo M. Let I_u,I_v
@@ -25083,8 +25089,11 @@ The separate iterated and fast-forward analyses remain unpromoted candidates.
 **Status:** promoted after fresh statement-only reconstruction, exact Sage checks,
 and root verification. The underlying cumulant method is established mathematics;
 this record does not claim a new literature result or a factoring algorithm.
+
 **Scope:** short normalized exponential jets and their individual coefficient
 gcds under uniform indices. Selected indices and other decoders are outside the bound.
+
+**Statement.**
 
 For b>=0 let G_b(t)=[2b choose b]_t and define c_j(b) by
 

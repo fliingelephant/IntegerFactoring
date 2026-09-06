@@ -1,0 +1,3342 @@
+{
+  "experiment": "F289_modular_support_union",
+  "status": "exact_finite_pilot",
+  "decision_inputs": [
+    "N",
+    "M"
+  ],
+  "factor_label_scope": "case construction and post-hoc audit only",
+  "support": "positive integer pairs with xy>=N and xy congruent to N modulo M",
+  "normal_slope_interval": [
+    1,
+    2
+  ],
+  "tie_policy": "retain both optimal face endpoints; select smaller product",
+  "arithmetic": "exact integers and fractions",
+  "resource_plan": {
+    "processes": 1,
+    "source_alarm_seconds": 60,
+    "estimated_peak_memory_mb": "<128",
+    "initial_exponents": [
+      8,
+      10,
+      12
+    ],
+    "conditional_extended_exponents": [
+      14,
+      16
+    ],
+    "moduli": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      64,
+      256
+    ]
+  },
+  "runtime": {
+    "elapsed_seconds": 0.7739225420082221,
+    "max_rss_bytes": 74858496,
+    "extended_exponents_completed": [
+      14,
+      16
+    ]
+  },
+  "aggregates_by_modulus": [
+    {
+      "M": 1,
+      "cases": 5,
+      "hull_vertices": 23958,
+      "moves": 0,
+      "moves_with_self_normal_in_interval": 0,
+      "move_cases": 0,
+      "fixed_points": 23958,
+      "proper_factor_sinks": 10,
+      "trivial_factor_sinks": 10,
+      "false_sinks": 23938,
+      "maximum_steps": 0,
+      "mean_basin_lengths": {
+        "proper_factor": [
+          42389119,
+          1163962800
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          1121573681,
+          1163962800
+        ]
+      },
+      "mean_direct_proper_factor_length": [
+        42389119,
+        1163962800
+      ],
+      "mean_proper_factor_basin_gain": [
+        0,
+        1
+      ],
+      "all_vertices_self_fixed": true
+    },
+    {
+      "M": 2,
+      "cases": 5,
+      "hull_vertices": 14564,
+      "moves": 0,
+      "moves_with_self_normal_in_interval": 0,
+      "move_cases": 0,
+      "fixed_points": 14564,
+      "proper_factor_sinks": 10,
+      "trivial_factor_sinks": 10,
+      "false_sinks": 14544,
+      "maximum_steps": 0,
+      "mean_basin_lengths": {
+        "proper_factor": [
+          3173641,
+          56456400
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          53282759,
+          56456400
+        ]
+      },
+      "mean_direct_proper_factor_length": [
+        3173641,
+        56456400
+      ],
+      "mean_proper_factor_basin_gain": [
+        0,
+        1
+      ],
+      "all_vertices_self_fixed": true
+    },
+    {
+      "M": 4,
+      "cases": 5,
+      "hull_vertices": 12014,
+      "moves": 0,
+      "moves_with_self_normal_in_interval": 0,
+      "move_cases": 0,
+      "fixed_points": 12014,
+      "proper_factor_sinks": 10,
+      "trivial_factor_sinks": 10,
+      "false_sinks": 11994,
+      "maximum_steps": 0,
+      "mean_basin_lengths": {
+        "proper_factor": [
+          2136779,
+          37348080
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          35211301,
+          37348080
+        ]
+      },
+      "mean_direct_proper_factor_length": [
+        2136779,
+        37348080
+      ],
+      "mean_proper_factor_basin_gain": [
+        0,
+        1
+      ],
+      "all_vertices_self_fixed": true
+    },
+    {
+      "M": 8,
+      "cases": 5,
+      "hull_vertices": 10028,
+      "moves": 0,
+      "moves_with_self_normal_in_interval": 0,
+      "move_cases": 0,
+      "fixed_points": 10028,
+      "proper_factor_sinks": 10,
+      "trivial_factor_sinks": 10,
+      "false_sinks": 10008,
+      "maximum_steps": 0,
+      "mean_basin_lengths": {
+        "proper_factor": [
+          222011,
+          2714250
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          2492239,
+          2714250
+        ]
+      },
+      "mean_direct_proper_factor_length": [
+        222011,
+        2714250
+      ],
+      "mean_proper_factor_basin_gain": [
+        0,
+        1
+      ],
+      "all_vertices_self_fixed": true
+    },
+    {
+      "M": 16,
+      "cases": 5,
+      "hull_vertices": 9346,
+      "moves": 784,
+      "moves_with_self_normal_in_interval": 25,
+      "move_cases": 5,
+      "fixed_points": 8562,
+      "proper_factor_sinks": 10,
+      "trivial_factor_sinks": 10,
+      "false_sinks": 8542,
+      "maximum_steps": 2,
+      "mean_basin_lengths": {
+        "proper_factor": [
+          97890433,
+          876702750
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          778812317,
+          876702750
+        ]
+      },
+      "mean_direct_proper_factor_length": [
+        5272889,
+        51570750
+      ],
+      "mean_proper_factor_basin_gain": [
+        4,
+        425
+      ],
+      "all_vertices_self_fixed": false
+    },
+    {
+      "M": 64,
+      "cases": 5,
+      "hull_vertices": 6992,
+      "moves": 1086,
+      "moves_with_self_normal_in_interval": 31,
+      "move_cases": 5,
+      "fixed_points": 5906,
+      "proper_factor_sinks": 10,
+      "trivial_factor_sinks": 10,
+      "false_sinks": 5886,
+      "maximum_steps": 2,
+      "mean_basin_lengths": {
+        "proper_factor": [
+          52200742,
+          237175575
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          184974833,
+          237175575
+        ]
+      },
+      "mean_direct_proper_factor_length": [
+        3989266,
+        22952475
+      ],
+      "mean_proper_factor_basin_gain": [
+        452,
+        9765
+      ],
+      "all_vertices_self_fixed": false
+    },
+    {
+      "M": 256,
+      "cases": 5,
+      "hull_vertices": 4982,
+      "moves": 852,
+      "moves_with_self_normal_in_interval": 32,
+      "move_cases": 5,
+      "fixed_points": 4130,
+      "proper_factor_sinks": 10,
+      "trivial_factor_sinks": 10,
+      "false_sinks": 4110,
+      "maximum_steps": 3,
+      "mean_basin_lengths": {
+        "proper_factor": [
+          3736159915949,
+          10989187073475
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          7253027157526,
+          10989187073475
+        ]
+      },
+      "mean_direct_proper_factor_length": [
+        82611330647,
+        324897704781
+      ],
+      "mean_proper_factor_basin_gain": [
+        642652,
+        7497425
+      ],
+      "all_vertices_self_fixed": false
+    }
+  ],
+  "representative_move_certificates": [
+    {
+      "label": "B=2^8",
+      "B": 256,
+      "N": 147053,
+      "p_label": 307,
+      "q_label": 479,
+      "M": 16,
+      "P0": [
+        385,
+        397
+      ],
+      "K": 397,
+      "source_index": 50,
+      "source": [
+        317,
+        465
+      ],
+      "source_product": 147405,
+      "normal": [
+        465,
+        317
+      ],
+      "self_objective": 294810,
+      "target_index": 49,
+      "target": [
+        307,
+        479
+      ],
+      "target_product": 147053,
+      "target_objective": 294598,
+      "optimal_face": [
+        [
+          307,
+          479
+        ]
+      ],
+      "reflection": [
+        327,
+        451
+      ],
+      "reflection_product": 147477,
+      "reflection_residue": 5,
+      "required_residue": 13
+    },
+    {
+      "label": "B=2^8",
+      "B": 256,
+      "N": 147053,
+      "p_label": 307,
+      "q_label": 479,
+      "M": 64,
+      "P0": [
+        385,
+        429
+      ],
+      "K": 429,
+      "source_index": 38,
+      "source": [
+        325,
+        457
+      ],
+      "source_product": 148525,
+      "normal": [
+        457,
+        325
+      ],
+      "self_objective": 297050,
+      "target_index": 37,
+      "target": [
+        307,
+        479
+      ],
+      "target_product": 147053,
+      "target_objective": 295974,
+      "optimal_face": [
+        [
+          307,
+          479
+        ]
+      ],
+      "reflection": [
+        343,
+        435
+      ],
+      "reflection_product": 149205,
+      "reflection_residue": 21,
+      "required_residue": 45
+    },
+    {
+      "label": "B=2^8",
+      "B": 256,
+      "N": 147053,
+      "p_label": 307,
+      "q_label": 479,
+      "M": 256,
+      "P0": [
+        385,
+        493
+      ],
+      "K": 493,
+      "source_index": 28,
+      "source": [
+        279,
+        539
+      ],
+      "source_product": 150381,
+      "normal": [
+        539,
+        279
+      ],
+      "self_objective": 300762,
+      "target_index": 29,
+      "target": [
+        307,
+        479
+      ],
+      "target_product": 147053,
+      "target_objective": 299114,
+      "optimal_face": [
+        [
+          307,
+          479
+        ]
+      ],
+      "reflection": [
+        251,
+        599
+      ],
+      "reflection_product": 150349,
+      "reflection_residue": 77,
+      "required_residue": 109
+    }
+  ],
+  "cases": [
+    {
+      "N": 147053,
+      "N_bits": 18,
+      "M": 1,
+      "P0": [
+        385,
+        382
+      ],
+      "K": 385,
+      "eligible_x": 385,
+      "candidate_columns": 766,
+      "pareto_points": 766,
+      "hull_vertices": 270,
+      "moves": 0,
+      "moves_with_self_normal_in_interval": 0,
+      "support_ties": 0,
+      "fixed_points": 270,
+      "maximum_steps": 0,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 266,
+      "smallest_false_sink_defect": 1,
+      "factor_sink_points": [
+        [
+          307,
+          479
+        ],
+        [
+          479,
+          307
+        ],
+        [
+          1,
+          147053
+        ],
+        [
+          147053,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          1,
+          10
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          9,
+          10
+        ],
+        "moving": [
+          0,
+          1
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          1,
+          10
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          9,
+          10
+        ]
+      },
+      "proper_factor_basin_gain": [
+        0,
+        1
+      ],
+      "all_vertices_self_fixed": true,
+      "label": "B=2^8",
+      "B": 256,
+      "p_label": 307,
+      "q_label": 479,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 147053,
+      "N_bits": 18,
+      "M": 2,
+      "P0": [
+        385,
+        383
+      ],
+      "K": 385,
+      "eligible_x": 193,
+      "candidate_columns": 384,
+      "pareto_points": 384,
+      "hull_vertices": 156,
+      "moves": 0,
+      "moves_with_self_normal_in_interval": 0,
+      "support_ties": 0,
+      "fixed_points": 156,
+      "maximum_steps": 0,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 152,
+      "smallest_false_sink_defect": 2,
+      "factor_sink_points": [
+        [
+          307,
+          479
+        ],
+        [
+          479,
+          307
+        ],
+        [
+          1,
+          147053
+        ],
+        [
+          147053,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          1,
+          6
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          5,
+          6
+        ],
+        "moving": [
+          0,
+          1
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          1,
+          6
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          5,
+          6
+        ]
+      },
+      "proper_factor_basin_gain": [
+        0,
+        1
+      ],
+      "all_vertices_self_fixed": true,
+      "label": "B=2^8",
+      "B": 256,
+      "p_label": 307,
+      "q_label": 479,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 147053,
+      "N_bits": 18,
+      "M": 4,
+      "P0": [
+        385,
+        385
+      ],
+      "K": 385,
+      "eligible_x": 193,
+      "candidate_columns": 385,
+      "pareto_points": 385,
+      "hull_vertices": 132,
+      "moves": 0,
+      "moves_with_self_normal_in_interval": 0,
+      "support_ties": 0,
+      "fixed_points": 132,
+      "maximum_steps": 0,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 128,
+      "smallest_false_sink_defect": 4,
+      "factor_sink_points": [
+        [
+          307,
+          479
+        ],
+        [
+          479,
+          307
+        ],
+        [
+          1,
+          147053
+        ],
+        [
+          147053,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          1,
+          6
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          5,
+          6
+        ],
+        "moving": [
+          0,
+          1
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          1,
+          6
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          5,
+          6
+        ]
+      },
+      "proper_factor_basin_gain": [
+        0,
+        1
+      ],
+      "all_vertices_self_fixed": true,
+      "label": "B=2^8",
+      "B": 256,
+      "p_label": 307,
+      "q_label": 479,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 147053,
+      "N_bits": 18,
+      "M": 8,
+      "P0": [
+        385,
+        389
+      ],
+      "K": 389,
+      "eligible_x": 195,
+      "candidate_columns": 386,
+      "pareto_points": 334,
+      "hull_vertices": 116,
+      "moves": 0,
+      "moves_with_self_normal_in_interval": 0,
+      "support_ties": 0,
+      "fixed_points": 116,
+      "maximum_steps": 0,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 112,
+      "smallest_false_sink_defect": 8,
+      "factor_sink_points": [
+        [
+          307,
+          479
+        ],
+        [
+          479,
+          307
+        ],
+        [
+          1,
+          147053
+        ],
+        [
+          147053,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          4,
+          15
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          11,
+          15
+        ],
+        "moving": [
+          0,
+          1
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          4,
+          15
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          11,
+          15
+        ]
+      },
+      "proper_factor_basin_gain": [
+        0,
+        1
+      ],
+      "all_vertices_self_fixed": true,
+      "label": "B=2^8",
+      "B": 256,
+      "p_label": 307,
+      "q_label": 479,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 147053,
+      "N_bits": 18,
+      "M": 16,
+      "P0": [
+        385,
+        397
+      ],
+      "K": 397,
+      "eligible_x": 199,
+      "candidate_columns": 388,
+      "pareto_points": 312,
+      "hull_vertices": 104,
+      "moves": 14,
+      "moves_with_self_normal_in_interval": 1,
+      "support_ties": 0,
+      "fixed_points": 90,
+      "maximum_steps": 1,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 86,
+      "smallest_false_sink_defect": 16,
+      "factor_sink_points": [
+        [
+          307,
+          479
+        ],
+        [
+          479,
+          307
+        ],
+        [
+          1,
+          147053
+        ],
+        [
+          147053,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          4,
+          15
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          35,
+          51
+        ],
+        "moving": [
+          4,
+          85
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          16,
+          51
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          35,
+          51
+        ]
+      },
+      "proper_factor_basin_gain": [
+        4,
+        85
+      ],
+      "all_vertices_self_fixed": false,
+      "label": "B=2^8",
+      "B": 256,
+      "p_label": 307,
+      "q_label": 479,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 147053,
+      "N_bits": 18,
+      "M": 64,
+      "P0": [
+        385,
+        429
+      ],
+      "K": 429,
+      "eligible_x": 215,
+      "candidate_columns": 400,
+      "pareto_points": 284,
+      "hull_vertices": 78,
+      "moves": 16,
+      "moves_with_self_normal_in_interval": 1,
+      "support_ties": 0,
+      "fixed_points": 62,
+      "maximum_steps": 2,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 58,
+      "smallest_false_sink_defect": 64,
+      "factor_sink_points": [
+        [
+          307,
+          479
+        ],
+        [
+          479,
+          307
+        ],
+        [
+          1,
+          147053
+        ],
+        [
+          147053,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          26,
+          45
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          1,
+          5
+        ],
+        "moving": [
+          2,
+          9
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          4,
+          5
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          1,
+          5
+        ]
+      },
+      "proper_factor_basin_gain": [
+        2,
+        9
+      ],
+      "all_vertices_self_fixed": false,
+      "label": "B=2^8",
+      "B": 256,
+      "p_label": 307,
+      "q_label": 479,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 147053,
+      "N_bits": 18,
+      "M": 256,
+      "P0": [
+        385,
+        493
+      ],
+      "K": 493,
+      "eligible_x": 247,
+      "candidate_columns": 450,
+      "pareto_points": 150,
+      "hull_vertices": 62,
+      "moves": 20,
+      "moves_with_self_normal_in_interval": 2,
+      "support_ties": 0,
+      "fixed_points": 42,
+      "maximum_steps": 1,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 38,
+      "smallest_false_sink_defect": 256,
+      "factor_sink_points": [
+        [
+          307,
+          479
+        ],
+        [
+          479,
+          307
+        ],
+        [
+          1,
+          147053
+        ],
+        [
+          147053,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          15,
+          17
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          0,
+          1
+        ],
+        "moving": [
+          2,
+          17
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          1,
+          1
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          0,
+          1
+        ]
+      },
+      "proper_factor_basin_gain": [
+        2,
+        17
+      ],
+      "all_vertices_self_fixed": false,
+      "label": "B=2^8",
+      "B": 256,
+      "p_label": 307,
+      "q_label": 479,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 2152963,
+      "N_bits": 22,
+      "M": 1,
+      "P0": [
+        1469,
+        1466
+      ],
+      "K": 1469,
+      "eligible_x": 1469,
+      "candidate_columns": 2934,
+      "pareto_points": 2934,
+      "hull_vertices": 718,
+      "moves": 0,
+      "moves_with_self_normal_in_interval": 0,
+      "support_ties": 0,
+      "fixed_points": 718,
+      "maximum_steps": 0,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 714,
+      "smallest_false_sink_defect": 1,
+      "factor_sink_points": [
+        [
+          1181,
+          1823
+        ],
+        [
+          1823,
+          1181
+        ],
+        [
+          1,
+          2152963
+        ],
+        [
+          2152963,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          1,
+          18
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          17,
+          18
+        ],
+        "moving": [
+          0,
+          1
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          1,
+          18
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          17,
+          18
+        ]
+      },
+      "proper_factor_basin_gain": [
+        0,
+        1
+      ],
+      "all_vertices_self_fixed": true,
+      "label": "B=2^10",
+      "B": 1024,
+      "p_label": 1181,
+      "q_label": 1823,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 2152963,
+      "N_bits": 22,
+      "M": 2,
+      "P0": [
+        1469,
+        1467
+      ],
+      "K": 1469,
+      "eligible_x": 735,
+      "candidate_columns": 1468,
+      "pareto_points": 1468,
+      "hull_vertices": 442,
+      "moves": 0,
+      "moves_with_self_normal_in_interval": 0,
+      "support_ties": 0,
+      "fixed_points": 442,
+      "maximum_steps": 0,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 438,
+      "smallest_false_sink_defect": 2,
+      "factor_sink_points": [
+        [
+          1181,
+          1823
+        ],
+        [
+          1823,
+          1181
+        ],
+        [
+          1,
+          2152963
+        ],
+        [
+          2152963,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          1,
+          14
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          13,
+          14
+        ],
+        "moving": [
+          0,
+          1
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          1,
+          14
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          13,
+          14
+        ]
+      },
+      "proper_factor_basin_gain": [
+        0,
+        1
+      ],
+      "all_vertices_self_fixed": true,
+      "label": "B=2^10",
+      "B": 1024,
+      "p_label": 1181,
+      "q_label": 1823,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 2152963,
+      "N_bits": 22,
+      "M": 4,
+      "P0": [
+        1469,
+        1467
+      ],
+      "K": 1469,
+      "eligible_x": 735,
+      "candidate_columns": 1468,
+      "pareto_points": 1468,
+      "hull_vertices": 374,
+      "moves": 0,
+      "moves_with_self_normal_in_interval": 0,
+      "support_ties": 0,
+      "fixed_points": 374,
+      "maximum_steps": 0,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 370,
+      "smallest_false_sink_defect": 4,
+      "factor_sink_points": [
+        [
+          1181,
+          1823
+        ],
+        [
+          1823,
+          1181
+        ],
+        [
+          1,
+          2152963
+        ],
+        [
+          2152963,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          1,
+          14
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          13,
+          14
+        ],
+        "moving": [
+          0,
+          1
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          1,
+          14
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          13,
+          14
+        ]
+      },
+      "proper_factor_basin_gain": [
+        0,
+        1
+      ],
+      "all_vertices_self_fixed": true,
+      "label": "B=2^10",
+      "B": 1024,
+      "p_label": 1181,
+      "q_label": 1823,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 2152963,
+      "N_bits": 22,
+      "M": 8,
+      "P0": [
+        1469,
+        1471
+      ],
+      "K": 1471,
+      "eligible_x": 736,
+      "candidate_columns": 1470,
+      "pareto_points": 1470,
+      "hull_vertices": 308,
+      "moves": 0,
+      "moves_with_self_normal_in_interval": 0,
+      "support_ties": 0,
+      "fixed_points": 308,
+      "maximum_steps": 0,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 304,
+      "smallest_false_sink_defect": 8,
+      "factor_sink_points": [
+        [
+          1181,
+          1823
+        ],
+        [
+          1823,
+          1181
+        ],
+        [
+          1,
+          2152963
+        ],
+        [
+          2152963,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          1,
+          14
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          13,
+          14
+        ],
+        "moving": [
+          0,
+          1
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          1,
+          14
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          13,
+          14
+        ]
+      },
+      "proper_factor_basin_gain": [
+        0,
+        1
+      ],
+      "all_vertices_self_fixed": true,
+      "label": "B=2^10",
+      "B": 1024,
+      "p_label": 1181,
+      "q_label": 1823,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 2152963,
+      "N_bits": 22,
+      "M": 16,
+      "P0": [
+        1469,
+        1471
+      ],
+      "K": 1471,
+      "eligible_x": 736,
+      "candidate_columns": 1470,
+      "pareto_points": 1248,
+      "hull_vertices": 290,
+      "moves": 20,
+      "moves_with_self_normal_in_interval": 1,
+      "support_ties": 0,
+      "fixed_points": 270,
+      "maximum_steps": 1,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 266,
+      "smallest_false_sink_defect": 16,
+      "factor_sink_points": [
+        [
+          1181,
+          1823
+        ],
+        [
+          1823,
+          1181
+        ],
+        [
+          1,
+          2152963
+        ],
+        [
+          2152963,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          1,
+          6
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          187,
+          234
+        ],
+        "moving": [
+          4,
+          117
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          1,
+          6
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          5,
+          6
+        ]
+      },
+      "proper_factor_basin_gain": [
+        0,
+        1
+      ],
+      "all_vertices_self_fixed": false,
+      "label": "B=2^10",
+      "B": 1024,
+      "p_label": 1181,
+      "q_label": 1823,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 2152963,
+      "N_bits": 22,
+      "M": 64,
+      "P0": [
+        1469,
+        1471
+      ],
+      "K": 1471,
+      "eligible_x": 736,
+      "candidate_columns": 1470,
+      "pareto_points": 872,
+      "hull_vertices": 226,
+      "moves": 40,
+      "moves_with_self_normal_in_interval": 1,
+      "support_ties": 0,
+      "fixed_points": 186,
+      "maximum_steps": 2,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 182,
+      "smallest_false_sink_defect": 64,
+      "factor_sink_points": [
+        [
+          1181,
+          1823
+        ],
+        [
+          1823,
+          1181
+        ],
+        [
+          1,
+          2152963
+        ],
+        [
+          2152963,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          8,
+          39
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          1601,
+          2145
+        ],
+        "moving": [
+          8,
+          165
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          8,
+          39
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          31,
+          39
+        ]
+      },
+      "proper_factor_basin_gain": [
+        0,
+        1
+      ],
+      "all_vertices_self_fixed": false,
+      "label": "B=2^10",
+      "B": 1024,
+      "p_label": 1181,
+      "q_label": 1823,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 2152963,
+      "N_bits": 22,
+      "M": 256,
+      "P0": [
+        1469,
+        1471
+      ],
+      "K": 1471,
+      "eligible_x": 736,
+      "candidate_columns": 1470,
+      "pareto_points": 532,
+      "hull_vertices": 158,
+      "moves": 34,
+      "moves_with_self_normal_in_interval": 1,
+      "support_ties": 0,
+      "fixed_points": 124,
+      "maximum_steps": 2,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 120,
+      "smallest_false_sink_defect": 256,
+      "factor_sink_points": [
+        [
+          1181,
+          1823
+        ],
+        [
+          1823,
+          1181
+        ],
+        [
+          1,
+          2152963
+        ],
+        [
+          2152963,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          34,
+          141
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          20,
+          47
+        ],
+        "moving": [
+          1,
+          3
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          304,
+          611
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          307,
+          611
+        ]
+      },
+      "proper_factor_basin_gain": [
+        10,
+        39
+      ],
+      "all_vertices_self_fixed": false,
+      "label": "B=2^10",
+      "B": 1024,
+      "p_label": 1181,
+      "q_label": 1823,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 33418859,
+      "N_bits": 25,
+      "M": 1,
+      "P0": [
+        5781,
+        5781
+      ],
+      "K": 5781,
+      "eligible_x": 5781,
+      "candidate_columns": 11561,
+      "pareto_points": 11561,
+      "hull_vertices": 2022,
+      "moves": 0,
+      "moves_with_self_normal_in_interval": 0,
+      "support_ties": 0,
+      "fixed_points": 2022,
+      "maximum_steps": 0,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 2018,
+      "smallest_false_sink_defect": 1,
+      "factor_sink_points": [
+        [
+          4637,
+          7207
+        ],
+        [
+          7207,
+          4637
+        ],
+        [
+          1,
+          33418859
+        ],
+        [
+          33418859,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          3,
+          176
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          173,
+          176
+        ],
+        "moving": [
+          0,
+          1
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          3,
+          176
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          173,
+          176
+        ]
+      },
+      "proper_factor_basin_gain": [
+        0,
+        1
+      ],
+      "all_vertices_self_fixed": true,
+      "label": "B=2^12",
+      "B": 4096,
+      "p_label": 4637,
+      "q_label": 7207,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 33418859,
+      "N_bits": 25,
+      "M": 2,
+      "P0": [
+        5781,
+        5781
+      ],
+      "K": 5781,
+      "eligible_x": 2891,
+      "candidate_columns": 5781,
+      "pareto_points": 5781,
+      "hull_vertices": 1204,
+      "moves": 0,
+      "moves_with_self_normal_in_interval": 0,
+      "support_ties": 0,
+      "fixed_points": 1204,
+      "maximum_steps": 0,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 1200,
+      "smallest_false_sink_defect": 2,
+      "factor_sink_points": [
+        [
+          4637,
+          7207
+        ],
+        [
+          7207,
+          4637
+        ],
+        [
+          1,
+          33418859
+        ],
+        [
+          33418859,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          2,
+          77
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          75,
+          77
+        ],
+        "moving": [
+          0,
+          1
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          2,
+          77
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          75,
+          77
+        ]
+      },
+      "proper_factor_basin_gain": [
+        0,
+        1
+      ],
+      "all_vertices_self_fixed": true,
+      "label": "B=2^12",
+      "B": 4096,
+      "p_label": 4637,
+      "q_label": 7207,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 33418859,
+      "N_bits": 25,
+      "M": 4,
+      "P0": [
+        5781,
+        5783
+      ],
+      "K": 5783,
+      "eligible_x": 2892,
+      "candidate_columns": 5782,
+      "pareto_points": 5782,
+      "hull_vertices": 1018,
+      "moves": 0,
+      "moves_with_self_normal_in_interval": 0,
+      "support_ties": 0,
+      "fixed_points": 1018,
+      "maximum_steps": 0,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 1014,
+      "smallest_false_sink_defect": 4,
+      "factor_sink_points": [
+        [
+          4637,
+          7207
+        ],
+        [
+          7207,
+          4637
+        ],
+        [
+          1,
+          33418859
+        ],
+        [
+          33418859,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          2,
+          77
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          75,
+          77
+        ],
+        "moving": [
+          0,
+          1
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          2,
+          77
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          75,
+          77
+        ]
+      },
+      "proper_factor_basin_gain": [
+        0,
+        1
+      ],
+      "all_vertices_self_fixed": true,
+      "label": "B=2^12",
+      "B": 4096,
+      "p_label": 4637,
+      "q_label": 7207,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 33418859,
+      "N_bits": 25,
+      "M": 8,
+      "P0": [
+        5781,
+        5783
+      ],
+      "K": 5783,
+      "eligible_x": 2892,
+      "candidate_columns": 5782,
+      "pareto_points": 5782,
+      "hull_vertices": 856,
+      "moves": 0,
+      "moves_with_self_normal_in_interval": 0,
+      "support_ties": 0,
+      "fixed_points": 856,
+      "maximum_steps": 0,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 852,
+      "smallest_false_sink_defect": 8,
+      "factor_sink_points": [
+        [
+          4637,
+          7207
+        ],
+        [
+          7207,
+          4637
+        ],
+        [
+          1,
+          33418859
+        ],
+        [
+          33418859,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          4,
+          105
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          101,
+          105
+        ],
+        "moving": [
+          0,
+          1
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          4,
+          105
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          101,
+          105
+        ]
+      },
+      "proper_factor_basin_gain": [
+        0,
+        1
+      ],
+      "all_vertices_self_fixed": true,
+      "label": "B=2^12",
+      "B": 4096,
+      "p_label": 4637,
+      "q_label": 7207,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 33418859,
+      "N_bits": 25,
+      "M": 16,
+      "P0": [
+        5781,
+        5791
+      ],
+      "K": 5791,
+      "eligible_x": 2896,
+      "candidate_columns": 5784,
+      "pareto_points": 4848,
+      "hull_vertices": 812,
+      "moves": 88,
+      "moves_with_self_normal_in_interval": 5,
+      "support_ties": 0,
+      "fixed_points": 724,
+      "maximum_steps": 1,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 720,
+      "smallest_false_sink_defect": 16,
+      "factor_sink_points": [
+        [
+          4637,
+          7207
+        ],
+        [
+          7207,
+          4637
+        ],
+        [
+          1,
+          33418859
+        ],
+        [
+          33418859,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          6,
+          133
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          424937371,
+          538332795
+        ],
+        "moving": [
+          669998,
+          4047615
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          6,
+          133
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          127,
+          133
+        ]
+      },
+      "proper_factor_basin_gain": [
+        0,
+        1
+      ],
+      "all_vertices_self_fixed": false,
+      "label": "B=2^12",
+      "B": 4096,
+      "p_label": 4637,
+      "q_label": 7207,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 33418859,
+      "N_bits": 25,
+      "M": 64,
+      "P0": [
+        5781,
+        5823
+      ],
+      "K": 5823,
+      "eligible_x": 2912,
+      "candidate_columns": 5796,
+      "pareto_points": 2948,
+      "hull_vertices": 610,
+      "moves": 84,
+      "moves_with_self_normal_in_interval": 7,
+      "support_ties": 0,
+      "fixed_points": 526,
+      "maximum_steps": 2,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 522,
+      "smallest_false_sink_defect": 64,
+      "factor_sink_points": [
+        [
+          4637,
+          7207
+        ],
+        [
+          7207,
+          4637
+        ],
+        [
+          1,
+          33418859
+        ],
+        [
+          33418859,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          6,
+          133
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          32504939,
+          40225185
+        ],
+        "moving": [
+          5905576,
+          40225185
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          6,
+          133
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          127,
+          133
+        ]
+      },
+      "proper_factor_basin_gain": [
+        0,
+        1
+      ],
+      "all_vertices_self_fixed": false,
+      "label": "B=2^12",
+      "B": 4096,
+      "p_label": 4637,
+      "q_label": 7207,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 33418859,
+      "N_bits": 25,
+      "M": 256,
+      "P0": [
+        5781,
+        5887
+      ],
+      "K": 5887,
+      "eligible_x": 2944,
+      "candidate_columns": 5844,
+      "pareto_points": 1856,
+      "hull_vertices": 428,
+      "moves": 88,
+      "moves_with_self_normal_in_interval": 5,
+      "support_ties": 0,
+      "fixed_points": 340,
+      "maximum_steps": 2,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 336,
+      "smallest_false_sink_defect": 256,
+      "factor_sink_points": [
+        [
+          4637,
+          7207
+        ],
+        [
+          7207,
+          4637
+        ],
+        [
+          1,
+          33418859
+        ],
+        [
+          33418859,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          22,
+          247
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          7207,
+          9975
+        ],
+        "moving": [
+          1286,
+          6825
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          8,
+          57
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          49,
+          57
+        ]
+      },
+      "proper_factor_basin_gain": [
+        2,
+        39
+      ],
+      "all_vertices_self_fixed": false,
+      "label": "B=2^12",
+      "B": 4096,
+      "p_label": 4637,
+      "q_label": 7207,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 530255303,
+      "N_bits": 29,
+      "M": 1,
+      "P0": [
+        23029,
+        23026
+      ],
+      "K": 23029,
+      "eligible_x": 23029,
+      "candidate_columns": 46054,
+      "pareto_points": 46054,
+      "hull_vertices": 5622,
+      "moves": 0,
+      "moves_with_self_normal_in_interval": 0,
+      "support_ties": 0,
+      "fixed_points": 5622,
+      "maximum_steps": 0,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 5618,
+      "smallest_false_sink_defect": 1,
+      "factor_sink_points": [
+        [
+          18461,
+          28723
+        ],
+        [
+          28723,
+          18461
+        ],
+        [
+          1,
+          530255303
+        ],
+        [
+          530255303,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          2,
+          323
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          321,
+          323
+        ],
+        "moving": [
+          0,
+          1
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          2,
+          323
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          321,
+          323
+        ]
+      },
+      "proper_factor_basin_gain": [
+        0,
+        1
+      ],
+      "all_vertices_self_fixed": true,
+      "label": "B=2^14",
+      "B": 16384,
+      "p_label": 18461,
+      "q_label": 28723,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 530255303,
+      "N_bits": 29,
+      "M": 2,
+      "P0": [
+        23029,
+        23027
+      ],
+      "K": 23029,
+      "eligible_x": 11515,
+      "candidate_columns": 23028,
+      "pareto_points": 23028,
+      "hull_vertices": 3390,
+      "moves": 0,
+      "moves_with_self_normal_in_interval": 0,
+      "support_ties": 0,
+      "fixed_points": 3390,
+      "maximum_steps": 0,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 3386,
+      "smallest_false_sink_defect": 2,
+      "factor_sink_points": [
+        [
+          18461,
+          28723
+        ],
+        [
+          28723,
+          18461
+        ],
+        [
+          1,
+          530255303
+        ],
+        [
+          530255303,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          1,
+          80
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          79,
+          80
+        ],
+        "moving": [
+          0,
+          1
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          1,
+          80
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          79,
+          80
+        ]
+      },
+      "proper_factor_basin_gain": [
+        0,
+        1
+      ],
+      "all_vertices_self_fixed": true,
+      "label": "B=2^14",
+      "B": 16384,
+      "p_label": 18461,
+      "q_label": 28723,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 530255303,
+      "N_bits": 29,
+      "M": 4,
+      "P0": [
+        23029,
+        23027
+      ],
+      "K": 23029,
+      "eligible_x": 11515,
+      "candidate_columns": 23028,
+      "pareto_points": 23028,
+      "hull_vertices": 2798,
+      "moves": 0,
+      "moves_with_self_normal_in_interval": 0,
+      "support_ties": 0,
+      "fixed_points": 2798,
+      "maximum_steps": 0,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 2794,
+      "smallest_false_sink_defect": 4,
+      "factor_sink_points": [
+        [
+          18461,
+          28723
+        ],
+        [
+          28723,
+          18461
+        ],
+        [
+          1,
+          530255303
+        ],
+        [
+          530255303,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          3,
+          176
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          173,
+          176
+        ],
+        "moving": [
+          0,
+          1
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          3,
+          176
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          173,
+          176
+        ]
+      },
+      "proper_factor_basin_gain": [
+        0,
+        1
+      ],
+      "all_vertices_self_fixed": true,
+      "label": "B=2^14",
+      "B": 16384,
+      "p_label": 18461,
+      "q_label": 28723,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 530255303,
+      "N_bits": 29,
+      "M": 8,
+      "P0": [
+        23029,
+        23027
+      ],
+      "K": 23029,
+      "eligible_x": 11515,
+      "candidate_columns": 23028,
+      "pareto_points": 23028,
+      "hull_vertices": 2312,
+      "moves": 0,
+      "moves_with_self_normal_in_interval": 0,
+      "support_ties": 0,
+      "fixed_points": 2312,
+      "maximum_steps": 0,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 2308,
+      "smallest_false_sink_defect": 8,
+      "factor_sink_points": [
+        [
+          18461,
+          28723
+        ],
+        [
+          28723,
+          18461
+        ],
+        [
+          1,
+          530255303
+        ],
+        [
+          530255303,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          2,
+          77
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          75,
+          77
+        ],
+        "moving": [
+          0,
+          1
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          2,
+          77
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          75,
+          77
+        ]
+      },
+      "proper_factor_basin_gain": [
+        0,
+        1
+      ],
+      "all_vertices_self_fixed": true,
+      "label": "B=2^14",
+      "B": 16384,
+      "p_label": 18461,
+      "q_label": 28723,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 530255303,
+      "N_bits": 29,
+      "M": 16,
+      "P0": [
+        23029,
+        23035
+      ],
+      "K": 23035,
+      "eligible_x": 11518,
+      "candidate_columns": 23030,
+      "pareto_points": 19256,
+      "hull_vertices": 2180,
+      "moves": 194,
+      "moves_with_self_normal_in_interval": 8,
+      "support_ties": 0,
+      "fixed_points": 1986,
+      "maximum_steps": 1,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 1982,
+      "smallest_false_sink_defect": 16,
+      "factor_sink_points": [
+        [
+          18461,
+          28723
+        ],
+        [
+          28723,
+          18461
+        ],
+        [
+          1,
+          530255303
+        ],
+        [
+          530255303,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          2,
+          77
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          511086649,
+          570855285
+        ],
+        "moving": [
+          4085566,
+          51895935
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          2,
+          77
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          75,
+          77
+        ]
+      },
+      "proper_factor_basin_gain": [
+        0,
+        1
+      ],
+      "all_vertices_self_fixed": false,
+      "label": "B=2^14",
+      "B": 16384,
+      "p_label": 18461,
+      "q_label": 28723,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 530255303,
+      "N_bits": 29,
+      "M": 64,
+      "P0": [
+        23029,
+        23051
+      ],
+      "K": 23051,
+      "eligible_x": 11526,
+      "candidate_columns": 23042,
+      "pareto_points": 13870,
+      "hull_vertices": 1656,
+      "moves": 284,
+      "moves_with_self_normal_in_interval": 5,
+      "support_ties": 0,
+      "fixed_points": 1372,
+      "maximum_steps": 2,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 1368,
+      "smallest_false_sink_defect": 64,
+      "factor_sink_points": [
+        [
+          18461,
+          28723
+        ],
+        [
+          28723,
+          18461
+        ],
+        [
+          1,
+          530255303
+        ],
+        [
+          530255303,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          12,
+          413
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          471942509,
+          527492745
+        ],
+        "moving": [
+          4772288,
+          62583885
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          70,
+          1829
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          1759,
+          1829
+        ]
+      },
+      "proper_factor_basin_gain": [
+        2,
+        217
+      ],
+      "all_vertices_self_fixed": false,
+      "label": "B=2^14",
+      "B": 16384,
+      "p_label": 18461,
+      "q_label": 28723,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 530255303,
+      "N_bits": 29,
+      "M": 256,
+      "P0": [
+        23029,
+        23115
+      ],
+      "K": 23115,
+      "eligible_x": 11558,
+      "candidate_columns": 23086,
+      "pareto_points": 7774,
+      "hull_vertices": 1206,
+      "moves": 180,
+      "moves_with_self_normal_in_interval": 9,
+      "support_ties": 0,
+      "fixed_points": 1026,
+      "maximum_steps": 3,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 1022,
+      "smallest_false_sink_defect": 256,
+      "factor_sink_points": [
+        [
+          18461,
+          28723
+        ],
+        [
+          28723,
+          18461
+        ],
+        [
+          1,
+          530255303
+        ],
+        [
+          530255303,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          292,
+          7729
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          487959418246564893479,
+          578339772003269141775
+        ],
+        "moving": [
+          8866709586046924,
+          74827244404614975
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          292,
+          7729
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          7437,
+          7729
+        ]
+      },
+      "proper_factor_basin_gain": [
+        0,
+        1
+      ],
+      "all_vertices_self_fixed": false,
+      "label": "B=2^14",
+      "B": 16384,
+      "p_label": 18461,
+      "q_label": 28723,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 8464705853,
+      "N_bits": 33,
+      "M": 1,
+      "P0": [
+        92005,
+        92003
+      ],
+      "K": 92005,
+      "eligible_x": 92005,
+      "candidate_columns": 184007,
+      "pareto_points": 184007,
+      "hull_vertices": 15326,
+      "moves": 0,
+      "moves_with_self_normal_in_interval": 0,
+      "support_ties": 0,
+      "fixed_points": 15326,
+      "maximum_steps": 0,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 15322,
+      "smallest_false_sink_defect": 1,
+      "factor_sink_points": [
+        [
+          73771,
+          114743
+        ],
+        [
+          114743,
+          73771
+        ],
+        [
+          1,
+          8464705853
+        ],
+        [
+          8464705853,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          3,
+          910
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          907,
+          910
+        ],
+        "moving": [
+          0,
+          1
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          3,
+          910
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          907,
+          910
+        ]
+      },
+      "proper_factor_basin_gain": [
+        0,
+        1
+      ],
+      "all_vertices_self_fixed": true,
+      "label": "B=2^16",
+      "B": 65536,
+      "p_label": 73771,
+      "q_label": 114743,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 8464705853,
+      "N_bits": 33,
+      "M": 2,
+      "P0": [
+        92005,
+        92003
+      ],
+      "K": 92005,
+      "eligible_x": 46003,
+      "candidate_columns": 92004,
+      "pareto_points": 92004,
+      "hull_vertices": 9372,
+      "moves": 0,
+      "moves_with_self_normal_in_interval": 0,
+      "support_ties": 0,
+      "fixed_points": 9372,
+      "maximum_steps": 0,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 9368,
+      "smallest_false_sink_defect": 2,
+      "factor_sink_points": [
+        [
+          73771,
+          114743
+        ],
+        [
+          114743,
+          73771
+        ],
+        [
+          1,
+          8464705853
+        ],
+        [
+          8464705853,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          11,
+          2444
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          2433,
+          2444
+        ],
+        "moving": [
+          0,
+          1
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          11,
+          2444
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          2433,
+          2444
+        ]
+      },
+      "proper_factor_basin_gain": [
+        0,
+        1
+      ],
+      "all_vertices_self_fixed": true,
+      "label": "B=2^16",
+      "B": 65536,
+      "p_label": 73771,
+      "q_label": 114743,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 8464705853,
+      "N_bits": 33,
+      "M": 4,
+      "P0": [
+        92005,
+        92005
+      ],
+      "K": 92005,
+      "eligible_x": 46003,
+      "candidate_columns": 92005,
+      "pareto_points": 92005,
+      "hull_vertices": 7692,
+      "moves": 0,
+      "moves_with_self_normal_in_interval": 0,
+      "support_ties": 0,
+      "fixed_points": 7692,
+      "maximum_steps": 0,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 7688,
+      "smallest_false_sink_defect": 4,
+      "factor_sink_points": [
+        [
+          73771,
+          114743
+        ],
+        [
+          114743,
+          73771
+        ],
+        [
+          1,
+          8464705853
+        ],
+        [
+          8464705853,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          10,
+          2021
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          2011,
+          2021
+        ],
+        "moving": [
+          0,
+          1
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          10,
+          2021
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          2011,
+          2021
+        ]
+      },
+      "proper_factor_basin_gain": [
+        0,
+        1
+      ],
+      "all_vertices_self_fixed": true,
+      "label": "B=2^16",
+      "B": 65536,
+      "p_label": 73771,
+      "q_label": 114743,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 8464705853,
+      "N_bits": 33,
+      "M": 8,
+      "P0": [
+        92005,
+        92009
+      ],
+      "K": 92009,
+      "eligible_x": 46005,
+      "candidate_columns": 92006,
+      "pareto_points": 79678,
+      "hull_vertices": 6436,
+      "moves": 0,
+      "moves_with_self_normal_in_interval": 0,
+      "support_ties": 0,
+      "fixed_points": 6436,
+      "maximum_steps": 0,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 6432,
+      "smallest_false_sink_defect": 8,
+      "factor_sink_points": [
+        [
+          73771,
+          114743
+        ],
+        [
+          114743,
+          73771
+        ],
+        [
+          1,
+          8464705853
+        ],
+        [
+          8464705853,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          8,
+          1175
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          1167,
+          1175
+        ],
+        "moving": [
+          0,
+          1
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          8,
+          1175
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          1167,
+          1175
+        ]
+      },
+      "proper_factor_basin_gain": [
+        0,
+        1
+      ],
+      "all_vertices_self_fixed": true,
+      "label": "B=2^16",
+      "B": 65536,
+      "p_label": 73771,
+      "q_label": 114743,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 8464705853,
+      "N_bits": 33,
+      "M": 16,
+      "P0": [
+        92005,
+        92009
+      ],
+      "K": 92009,
+      "eligible_x": 46005,
+      "candidate_columns": 92008,
+      "pareto_points": 73284,
+      "hull_vertices": 5960,
+      "moves": 468,
+      "moves_with_self_normal_in_interval": 10,
+      "support_ties": 0,
+      "fixed_points": 5492,
+      "maximum_steps": 2,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 5488,
+      "smallest_false_sink_defect": 16,
+      "factor_sink_points": [
+        [
+          73771,
+          114743
+        ],
+        [
+          114743,
+          73771
+        ],
+        [
+          1,
+          8464705853
+        ],
+        [
+          8464705853,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          8,
+          1175
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          4840777329820979,
+          5037692181747225
+        ],
+        "moving": [
+          138396315842,
+          4287397601487
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          8,
+          1175
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          1167,
+          1175
+        ]
+      },
+      "proper_factor_basin_gain": [
+        0,
+        1
+      ],
+      "all_vertices_self_fixed": false,
+      "label": "B=2^16",
+      "B": 65536,
+      "p_label": 73771,
+      "q_label": 114743,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 8464705853,
+      "N_bits": 33,
+      "M": 64,
+      "P0": [
+        92005,
+        92025
+      ],
+      "K": 92025,
+      "eligible_x": 46013,
+      "candidate_columns": 92020,
+      "pareto_points": 48036,
+      "hull_vertices": 4422,
+      "moves": 662,
+      "moves_with_self_normal_in_interval": 17,
+      "support_ties": 0,
+      "fixed_points": 3760,
+      "maximum_steps": 2,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 3756,
+      "smallest_false_sink_defect": 64,
+      "factor_sink_points": [
+        [
+          73771,
+          114743
+        ],
+        [
+          114743,
+          73771
+        ],
+        [
+          1,
+          8464705853
+        ],
+        [
+          8464705853,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          62,
+          5187
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          40875820369949492728678940057,
+          44216810968081433193995758275
+        ],
+        "moving": [
+          2812468855309297539149913068,
+          44216810968081433193995758275
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          62,
+          5187
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          5125,
+          5187
+        ]
+      },
+      "proper_factor_basin_gain": [
+        0,
+        1
+      ],
+      "all_vertices_self_fixed": false,
+      "label": "B=2^16",
+      "B": 65536,
+      "p_label": 73771,
+      "q_label": 114743,
+      "factor_audit": "passed"
+    },
+    {
+      "N": 8464705853,
+      "N_bits": 33,
+      "M": 256,
+      "P0": [
+        92005,
+        92153
+      ],
+      "K": 92153,
+      "eligible_x": 46077,
+      "candidate_columns": 92072,
+      "pareto_points": 32830,
+      "hull_vertices": 3128,
+      "moves": 530,
+      "moves_with_self_normal_in_interval": 15,
+      "support_ties": 0,
+      "fixed_points": 2598,
+      "maximum_steps": 3,
+      "proper_factor_sinks": 2,
+      "trivial_factor_sinks": 2,
+      "false_sinks": 2594,
+      "smallest_false_sink_defect": 256,
+      "factor_sink_points": [
+        [
+          73771,
+          114743
+        ],
+        [
+          114743,
+          73771
+        ],
+        [
+          1,
+          8464705853
+        ],
+        [
+          8464705853,
+          1
+        ]
+      ],
+      "direct_cone_lengths": {
+        "proper_factor": [
+          88,
+          4189
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_fixed": [
+          12444404577289314275559,
+          13433593949957771416645
+        ],
+        "moving": [
+          587494150865281309134,
+          11163127366866317092705
+        ]
+      },
+      "basin_lengths": {
+        "proper_factor": [
+          198,
+          8165
+        ],
+        "trivial_factor": [
+          0,
+          1
+        ],
+        "false_sink": [
+          7967,
+          8165
+        ]
+      },
+      "proper_factor_basin_gain": [
+        22,
+        6785
+      ],
+      "all_vertices_self_fixed": false,
+      "label": "B=2^16",
+      "B": 65536,
+      "p_label": 73771,
+      "q_label": 114743,
+      "factor_audit": "passed"
+    }
+  ]
+}
