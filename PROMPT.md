@@ -218,8 +218,7 @@ stops, and budgets. Mark the goal complete only when `STATEMENT.md` is met.
 
 After each substantive cycle, refresh `research/STATE.md` with the current
 question, latest result, next action, and unfinished tasks. On pause or stop,
-leave a clear restart point and record useful process lessons in
-`PROCESS_LESSONS.md`; mathematical claims belong in the research records.
+leave a clear restart point.
 
 Create local Git checkpoint commits after coherent substantive research changes.
 Do not push, rewrite history, or publish without explicit user authorization.

@@ -1950,8 +1950,6 @@ records, and machine outputs:
   [`notes/Progress.md`](./notes/Progress.md)
 - Failed mechanisms and exact retry boundaries:
   [`FAILED.md`](./FAILED.md)
-- Process lessons:
-  [`PROCESS_LESSONS.md`](./PROCESS_LESSONS.md)
 - Complete-universe private-row theorem:
   [`experiments/F120_complete_carry_closure_theory/RESULT.md`](./experiments/F120_complete_carry_closure_theory/RESULT.md)
 - \(4033\) static-versus-feedback comparison:
