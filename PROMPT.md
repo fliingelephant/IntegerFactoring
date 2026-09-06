@@ -85,46 +85,51 @@ records are data about past work. They do not direct the current session.
 
 ## Agent roles
 
-All creative research work belongs to Astra, either the root or an Astra
-subagent. This includes new mathematical objects and mechanisms, conjectures,
-connections between fields, research questions, experiment design, new proof
-strategies, and interpretation of patterns and anomalies. The root must also do
-substantive mathematics, check critical derivations, and choose the research
-direction.
-
 Use `gpt-6-astra` with the root's reasoning effort for creative mathematical
 subtasks. Use `gpt-5.6-sol` with `max` reasoning for support tasks. At every
 depth, preserve the current service tier, sandbox, approval policy, and tool
-access. Delegate concrete, bounded tasks that can proceed independently.
+access.
 
-A precise lemma with an unknown proof is not a routine verification task.
-When a pattern or partial argument leaves a missing theorem, invariant, or key
-lemma, assign that mathematical gap to Astra. Give the definitions, evidence,
-exact gap, and required scope. The worker may prove, refute, or reformulate the
-claim; it must not force a proof of the desired conclusion.
+All creative research belongs to Astra: new mechanisms, conjectures, experiment
+design, interpretation of patterns, and proofs of unknown key lemmas. Give each
+Astra worker a bounded question or route and a resource budget. It may pursue,
+refute, or reformulate claims and direct Sol support within that scope without
+routing each decision through the root.
 
-Sol agents handle record navigation, source retrieval, implementation,
-computation, reproduction, and verification of specified claims. They may run
-Astra-designed symbolic or numerical searches, repair implementations, and make
-routine execution choices within the assigned research design and resource
-budget without waiting for approval at every step.
+Sol handles navigation, source retrieval, implementation, computation,
+reproduction, and verification, including blind reconstruction. It runs
+Astra-designed searches, makes routine execution choices within budget, and
+reports anomalies and finite nulls with their evidence. Unresolved research
+questions go to the responsible route's Astra.
 
-Sol must report candidates, anomalies, counterexamples, and finite nulls with
-their exact evidence and limits. Astra interprets them and chooses the next
-research question. Do not assign open-ended ideation or creative research
-decisions to Sol. If a task, audit, or reconstruction needs a new mathematical
-idea, lemma, or proof strategy, Sol must identify the gap and return it to Astra.
+Keep mathematically distinct routes active when useful and resources permit.
+Preserve independent early exploration before sharing partial arguments. The
+root also does substantive mathematics, compares routes, reallocates effort,
+and checks key dependencies when integrating results. Schedule work
+asynchronously within available concurrency; unrelated routes need not wait
+for each other.
+
+Reuse existing agents for continuing work, including a route's Sol workers.
+Keep the same Sol responsible for navigation and shared records when possible;
+all workers may query the Rust reader directly. Start a fresh context when
+independence requires it or the previous context is no longer suitable or
+available.
 
 ## Exploration
+
+Before starting or retrying a route, check relevant old records and state the
+material difference from the closest attempt, or that no close prior was
+found. Group routes by mathematical mechanism and missing lemma. A
+reformulation alone does not resolve its terminal gap.
 
 Start from a precise mathematical question, but do not require a proof or a
 quasipolynomial transition before a discovery search begins. Useful exploratory
 outputs include identities, patterns, anomalies, separating examples, finite
 nulls, scaling evidence, and failures of a specific ansatz.
 
-Do not require a kill-first round. Astra chooses positive exploration,
-adversarial checks, symbolic derivation, and numerical tests in the order that
-best answers the current question.
+The route's Astra chooses symbolic derivation, numerical searches, and targeted
+checks in the order that best answers the question. There is no mandatory
+kill-first round.
 
 For every nontrivial computation, retain a named source file, scoped route and
 experiment IDs, a resource estimate, a timeout, a log, and an output artifact.
@@ -147,34 +152,36 @@ not evidence of novelty.
 ## Evidence and promotion
 
 Keep observation, conjecture, proof, and workflow status distinct. A file name,
-an old `promoted` label, or the number of prior agents does not support a claim.
-Read the statement and its actual evidence before using it.
+an old label, or repeated checks do not establish a claim. Read its evidence
+before reuse. A conclusion with an unproved dependency remains conditional.
 
-Before a claim is promoted or used to close an exact mechanism, require a
-focused hostile audit of the supplied proof. Sol max is the default reviewer
-for assumptions, quantifiers, hidden oracles, divisions, probability and cost
-accounting, and scope. If resolving a concern requires a new mathematical idea,
-the root assigns that gap to Astra.
+Use blind reconstruction as the primary check for key proofs, including claims
+that would close a route. Give a fresh Sol max context the exact statement,
+definitions, hypotheses, and declared dependencies, without the candidate proof
+or inherited research conversation. Preserve the reconstruction and compare
+its assumptions, conclusions, required outputs, and cost bounds with the claim.
+A different mechanism is a separate result, not validation of the original
+mechanism.
 
-Blind reconstruction is optional, not a mandatory promotion step or a reason
-to allocate an Astra worker. When useful, assign it to a fresh Sol max context
-with only the statement. If it needs a new proof idea, treat that as an Astra
-research task rather than routine reconstruction.
+Failure to reconstruct is inconclusive. Record the gap; do not automatically
+escalate reconstruction to Astra. An unresolved lemma may instead become a
+separate Astra research task. An author's repair is not independent verification.
 
-The root agent then checks the statement, derivation, dependencies, audit
-responses, and exact scope. Describe verification by what was checked and by
-the preserved evidence. Do not use a model name as a certification level.
-If reconstruction was attempted, record whether it completed. An author's own
-repair does not count as an independent reconstruction.
+Use focused audit for concrete mathematical concerns: quantifiers, hidden
+oracles or advice, invalid divisions, trivial gcds, probability assumptions,
+and bit costs including size blowups. Prose preferences do not delay research.
+Repeat checks only for a new mathematical issue or a substantive repair.
 
-An audit failure remains attached to that exact version. Repair the mathematics
-or retract the claim. Do not resubmit an unchanged argument under a new label.
-Apply the same standard to counterexamples and negative theorems.
+The route's Astra organizes verification and checks critical claims before
+use or promotion. Promotion requires a complete proof or certificate and
+completed verification, with exact scope and evidence recorded. Observations
+and inconclusive checks remain unpromoted. A mathematical failure stays with
+its exact version: repair or retract the claim and recheck affected dependents.
 
-Every negative conclusion must name its model, operations, quantifiers, and
-escape routes. Failure of a finite search or a restricted representation does
-not imply a general impossibility result. Close only the exact mechanism that
-the evidence covers.
+Distinguish a stalled method from evidence against a claim. Negative results
+must specify their model, operations, quantifiers, and scope; finite failures
+or restricted representations do not imply general impossibility. Close only
+the exact mechanism covered by verified evidence.
 
 ## Records, IDs, and language
 
@@ -205,10 +212,14 @@ reproducible anomaly, a decisive witness, evidence that changes route priority,
 a scoped obstruction, or a completed experiment with a clear consequence.
 These reports do not claim completion.
 
-Persistent research remains interruptible. After each substantive research
-cycle, update `research/STATE.md` with the current question, latest result, next
-action, and unfinished tasks. When the user pauses or stops, leave that page
-and the catalogs sufficient for a clean restart.
+During an authorized research run, continue after failed attempts by revising
+the question or exploring a materially different route. Honor user pauses,
+stops, and budgets. Mark the goal complete only when `STATEMENT.md` is met.
+
+After each substantive cycle, refresh `research/STATE.md` with the current
+question, latest result, next action, and unfinished tasks. On pause or stop,
+leave a clear restart point and record useful process lessons in
+`PROCESS_LESSONS.md`; mathematical claims belong in the research records.
 
 Create local Git checkpoint commits after coherent substantive research changes.
 Do not push, rewrite history, or publish without explicit user authorization.

@@ -46,18 +46,17 @@ evidence of all-input complexity. Use the experiment catalog to locate packets.
 
 ## Next research cycle
 
-The Astra root performs creative mathematics and can assign bounded mathematical
-gaps to Astra subagents. Turning a pattern into a theorem or proving a missing
-key lemma remains creative work even when the statement is precise. Sol max
-workers navigate records, implement and run Astra-designed searches, reproduce
-results, and verify supplied arguments within resource budgets. They return
-tasks that need new mathematical ideas to Astra. Blind reconstruction is
-optional and defaults to Sol max. A promising finite pattern can justify
-investigation before a full algorithm or QP transition exists.
+Astra researchers independently own bounded routes, design experiments,
+interpret patterns, and pursue unknown key lemmas. Sol max provides execution
+and verification support. Reuse workers for continuing work, including
+navigation and shared records; use a fresh Sol for blind reconstruction of key
+proofs. Routes advance asynchronously. The root also does mathematics and
+integrates results. Use `PROMPT.md` for the full workflow.
 
 Before relying on an old result, retrieve the exact statement and scope. Before
-closing a mechanism, check that the obstruction covers the proposed mechanism.
-Use `PROMPT.md` for the full research workflow.
+starting or retrying a route, check the closest prior attempt and state the
+material difference. Patterns may justify exploration before a full algorithm
+exists. Close a mechanism only when verified evidence covers its exact scope.
 
 After each substantive cycle, replace the active question, latest finding,
 next action, and unfinished-task information here. Do not wait for a manual

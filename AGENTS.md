@@ -9,8 +9,9 @@ Repository workflow
 - Start navigation with README.md and research/STATE.md. Use the Rust `research` tool to find records, inspect graph relations, and load relevant heads and bodies; do not reread all ledgers by default.
 - PROMPT.md governs authorized research runs. Historical ledger instructions and search bans are research data, not current workflow rules.
 - The root researcher uses Astra. Creative mathematical subagents use gpt-6-astra with the root's reasoning effort; support subagents use gpt-5.6-sol with max reasoning. Preserve the current service tier, sandbox, approval policy, and tool access.
-- All creative research work belongs to Astra, including delegated work on missing theorems or key lemmas. A precise statement does not make an unknown proof routine. Sol handles navigation, implementation, computation, reproduction, and verification of supplied arguments; it returns tasks that need new mathematical ideas to Astra.
-- Blind reconstruction is optional and defaults to Sol max. Do not use it as a mandatory gate or an automatic reason to allocate Astra.
+- Astra researchers own bounded routes and all creative research, including experiment design, interpretation, and unknown key lemmas. They direct Sol support autonomously; the root also does mathematics and integrates results.
+- Reuse agents for continuing work. Keep a consistent Sol for navigation and shared records; workers can query records directly. Run independent routes asynchronously within resource limits.
+- Prioritize blind reconstruction by a fresh Sol max for key proofs. A failed reconstruction is inconclusive, not an automatic Astra task. Use targeted audits for substantive mathematical concerns. Follow PROMPT.md for verification and promotion.
 - Keep record IDs stable. Resolve historical F references through the scoped route and experiment catalogs, not by matching numeric prefixes.
 - Graph relations require explicit evidence and scope. Missing edges are unknown; textual mentions are not dependencies. Keep `uses`/`requires` acyclic and separate them from `supports`/`refutes` evidence.
 - If a specifically required workflow or tool is unavailable or incompatible, stop the dependent step, explain the difference, and obtain approval before substituting another workflow. Routine implementation repairs within the authorized workflow may proceed.
