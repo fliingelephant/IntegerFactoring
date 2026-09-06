@@ -1,0 +1,11 @@
+{"DOT_SAGE": "/private/tmp/f284_cyclotomic_binomial_search_sage", "command": ["/usr/local/bin/sage", "-python", "experiments/F301_factor_rectangles/rational_poles.py"], "event": "run_start", "run_id": "f301_rational_poles", "started_utc": "2026-09-06T22:12:23.884925+00:00", "timeout_seconds": 50}
+Traceback (most recent call last):
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F301_factor_rectangles/rational_poles.py", line 70, in <module>
+    assert difference.absolute_diameter() < RIF(1)/(1 << 45)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "sage/structure/element.pyx", line 1103, in sage.structure.element.Element.__richcmp__
+    return coercion_model.richcmp(self, other, op)
+  File "sage/structure/coerce.pyx", line 2070, in sage.structure.coerce.CoercionModel.richcmp
+    raise bin_op_exception('<', x, y)
+TypeError: unsupported operand parent(s) for <: 'Real Field with 200 bits of precision' and 'Real Interval Field with 200 bits of precision'
+{"disposition": "failed", "duration_seconds": 2.2891039589885622, "event": "run_end", "exit_code": 1, "finished_utc": "2026-09-06T22:12:26.174064+00:00", "run_id": "f301_rational_poles", "timed_out": false}

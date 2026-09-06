@@ -25363,3 +25363,107 @@ Input SHA-256:
 This record does not cover a sum over many outer kernel indices, products of
 several Cauchy denominators, arbitrary interior \(t\), or any factoring
 runtime. Adjacent F292 and F294 author claims remain unpromoted.
+
+## P237 -- Succinct modular rectangle emptiness would factor every integer with O(n^2) queries
+
+**Status:** promoted after fresh statement-only Sol reconstruction and root
+scope verification, including the adaptive Las Vegas randomness argument.
+
+**Scope:** a conditional all-input reduction from complete integer
+factorization to the stated succinct modular rectangle-emptiness oracle. No
+efficient implementation of that oracle, support optimizer, or rational-filter
+evaluation theorem.
+
+**Statement.** Let \(N\geq2\) have bit length \(n\). Suppose
+
+\[
+ \operatorname{Empty}(K,M,[A,B],[C,D])
+\]
+
+correctly decides whether some integers \(x\in[A,B]\), \(y\in[C,D]\) satisfy
+\(xy\equiv K\pmod M\), where \(M\) is a power of two, every endpoint lies in
+\([1,M-1]\), and all inputs have \(O(n)\) bits with a uniform fixed constant.
+Assume each call has uniform deterministic bit cost at most \(T(n)\), or is
+always correct with Las Vegas expected bit cost at most \(T(n)\).
+
+Then one uniform algorithm completely factors every \(N\) with
+\(O(n^2)\) oracle calls and polynomial additional bit work. Its total cost is
+
+\[
+ O\bigl(n^2T(n)+\operatorname{poly}(n)\bigr).
+\]
+
+In the Las Vegas case it returns only correct outputs, terminates almost
+surely, and satisfies the displayed expected bound. Thus a quasipolynomial
+\(T(n)\) would give an all-input classical quasipolynomial factoring
+algorithm.
+
+**Construction and proof.** At each recursive input \(K\), first test the
+fixed primes \(2,3,5,7,11,13\), treating equality as a prime leaf and a
+proper division as a recursive split. For the remaining \(K\geq17\), let
+\(M\) be the largest power of two at most \(K/8\), put
+\(R=17/16\), \(L_j=16R^j\), and, while \(L_j\leq\sqrt K\), form
+
+\[
+\begin{aligned}
+ I_j&=[\max(17,\lceil L_j\rceil),
+        \min(\lfloor\sqrt K\rfloor,\lfloor RL_j\rfloor)],\\
+ J_j&=[\max(1,\lceil K/(RL_j)\rceil),
+        \min(M-1,\lfloor K/L_j\rfloor)].
+\end{aligned}
+\]
+
+Omit empty pairs and query the others. If all are empty, return \(K\) as a
+prime leaf. Otherwise, keep \(J_j\) fixed and bisect the \(x\)-interval of
+one nonempty box with further emptiness queries. At a singleton \(x\), split
+\(K\) into \(x\) and \(K/x\) and recurse.
+
+Maximality of \(M\) gives \(K/16<M\leq K/8\). Every retained box has
+endpoints in \([1,M-1]\), and its products obey
+
+\[
+ \frac{16K}{17}\leq xy\leq\frac{17K}{16}.
+\]
+
+Hence \(xy-K\in(-M,M)\), so within every queried box
+
+\[
+ xy\equiv K\pmod M\quad\Longleftrightarrow\quad xy=K.
+\]
+
+If a surviving \(K\) is composite, its least prime divisor \(x\) satisfies
+\(17\leq x\leq\sqrt K\). The largest index with \(L_j\leq x\) puts \(x\)
+in \(I_j\), while \(y=K/x<K/16<M\) lies in \(J_j\). Thus a composite
+cannot reach either prime-return branch. Conversely, a nonempty box for a
+prime would give a proper exact factorization. Bisection preserves a
+nonempty rectangle and therefore ends at a proper exact divisor. Recursion
+handles prime powers, repeated factors, and arbitrarily unbalanced
+composites without an external primality test.
+
+There are \(O(\log K)\) grid indices. The exact representation
+\(L_j=16\cdot17^j/16^j\), all roundings, and every oracle endpoint have
+\(O(n)\) bits. Box search and bisection use \(O(n)\) calls per recursive
+node. A proper factor tree has fewer than \(n\) prime leaves counted with
+multiplicity and therefore \(O(n)\) nodes, giving \(O(n^2)\) calls and
+polynomial non-oracle work.
+
+For an always-correct Las Vegas oracle, use fresh independent random bits on
+each call. The adaptive query sequence has a deterministic \(O(n^2)\) call
+cap. Conditioned on the full history, the next input is fixed and its fresh
+randomness has expected cost at most \(T(n)\). Assign zero cost to unused
+call positions; conditional expectation and linearity give the displayed
+total expected cost. Finitely many almost-surely terminating calls preserve
+almost-sure termination.
+
+Independent proof:
+experiments/F301_factor_rectangles/RECTANGLE_RECONSTRUCTION.md.
+Statement-only input:
+experiments/F301_factor_rectangles/RECTANGLE_STATEMENT_ONLY.md.
+Statement SHA-256:
+e6a68b51f1dc7f0820741b290c916f4318a126d4932ae3a12da3cab28777623d.
+Reconstruction SHA-256:
+76aea453f4c0e5cbdb759982afe78939d0c6dfcc7c7fcc7cec0999e700975fa7.
+
+The numerical reference oracle and finite F301 tests are evidence for the
+implementation only. No efficient `Empty` oracle, rational-filter identity,
+or adjacent F298--F300 candidate is promoted here.

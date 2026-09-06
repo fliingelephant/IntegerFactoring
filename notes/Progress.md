@@ -7590,3 +7590,178 @@ the cached-source coefficient discrepancy. Evidence:
 experiments/F297_mordell_boundary/RESULT.md, uncentered_prefix.py/json/log,
 boundary_moments.py/json/log, completed_prefix.py/json/log, and their status
 files.
+
+### C259 -- A global parity recurrence closes its family but not its state count
+
+**Status:** author-derived exact recurrence and finite verification.
+Independent reconstruction is pending.
+
+**Scope:** the F298 global rank-one quadratic two-window moment, its parity
+symmetries, four-child recurrence, exact single-window corrections, and
+signed state merging. No quasipolynomial state bound, arbitrary short-window
+closure, inverse-chart union, or factoring algorithm.
+
+**Discussion.** F298 adds one even linear parameter \(v\) and retains both
+wrapped constants. Exact shifts reduce the complete domain to
+\(0\leq x,t<m/2\). Splitting \(x=2X+e\), \(t=2T+f\) produces four children
+of the same nonlinear family with
+
+\[
+ \gamma'\equiv2\gamma\pmod{m/2},\qquad
+ v'\equiv v+2\gamma e\pmod{m/2},
+\]
+
+and exactly updated constants. The only extra terms are single-window
+quadratic moments. Their complete dyadic strata leave at most two top atoms,
+each evaluated by an affine half-window floor sum in polynomial bit work.
+
+Identical signed child states can be canonicalized and merged exactly.
+Nevertheless, an initially odd \(\gamma\) can branch for
+\(\lceil r/2\rceil\) levels before it vanishes. The retained terminal-state
+counts grow from 40 at \(r=6\) to 28,692 at \(r=16\) in the random control;
+no polynomial or quasipolynomial bound on the whole child bank is proved.
+The recurrence remains within one F294 chart and does not aggregate its
+original \(u_0\) classes or replace the factor-isolating rectangles.
+
+The pilot passed 192 pointwise parity checks, 24 one-step global
+recurrences, 96 independent boundary-correction checks, and four full small
+recursions against direct double sums. Evidence:
+experiments/F298_global_quadratic_window/RESULT.md, parity_descent.py,
+output.json, and run.log.
+
+### C260 -- F299's faithful affine classes are exactly the P235 cover
+
+**Status:** root-derived exact equivalence, worker algebra check, and finite
+integer certificates. Independent reconstruction is pending.
+
+**Scope:** the F299 all-frequency common-conductor identity within one F294
+chart, its halfbox residue classes, their affine collapse, and the faithful
+identification with P235. No faster class aggregation, original chart-union
+evaluation, or factor-isolating rectangle interface.
+
+**Discussion.** F299 groups every odd Fourier frequency in one chart before
+any frequency-dependent theta normalization. With
+\(m=2^k\), \(r=2^{\lfloor k/2\rfloor}\), and \(L=m/r\), its positive
+halfbox expression first splits into \(r\) residue classes. For each class,
+the change \(t=x+Lv\) is a bijection and turns the three-variable strip into
+one ordinary affine half-window of modulus \(T=mL\). Two Euclidean floor
+sums evaluate that class, so the proposed Barvinok step is unnecessary.
+
+On a faithful inverse chart with original modulus \(M=m^3\), put
+\(S=mr=2^{\lfloor(\log_2M)/2\rfloor}\). As the chart base \(u_0\) and
+residue \(i_0\) vary, \(U_0=u_0+mi_0\) runs through every odd residue below
+\(S\). The resulting lattice base and finite difference are exactly
+
+\[
+ (U_0,NU_0^{-1})+
+ \mathbb Z\bigl(S,N((U_0+S)^{-1}-U_0^{-1})\bigr)+
+ \mathbb Z(0,M),
+\]
+
+which is P235's affine cover, with exactly \(S/2\) classes. Reorganizing
+those classes through F299 therefore supplies no new asymptotic mechanism.
+The arbitrary-endpoint reduced interface does not itself assemble the
+faithful chart union or the public short rectangles.
+
+The packet checked 129 frequency-coset identities, 10,896 floor
+flattenings, 5,728 affine-class points, 22 arbitrary windows, 288 abstract
+collapse points, and 100 faithful inverse points from 20 classes. Evidence:
+experiments/F299_global_covariance/REPORT.md, AFFINE_EQUIVALENCE.md,
+global_covariance.py/json/log, and affine_equivalence.py/json/log.
+
+### C261 -- Complete Salié summation leaves a Cauchy-weighted quadratic digit
+
+**Status:** root-derived identities and exact finite checks. Independent
+reconstruction is pending.
+
+**Scope:** the F300 complete Gauss-weighted dyadic sum, its one- and
+two-Cauchy-denominator variants, the parity filter, and the F294-to-P235
+scope audit. No fast mixed Cauchy evaluator, original chart union, public
+short-window reduction, or factoring bound.
+
+**Discussion.** Completing the Gauss square and summing every odd frequency
+reduces the denominator-free sum to two power-of-two square-root congruence
+classes, whose progression sums have a polynomial-bit evaluation. This is a
+complete Salié-type calculation with no sharp window.
+
+One Cauchy denominator instead leaves the Fourier transform
+
+\[
+ \sum_{x\bmod m}e_m(2wx)\,
+ \epsilon_m\!\left(d^{-1}(\gamma x^2+V)\right),
+\]
+
+and two denominators leave the same linear Fourier phase weighted by
+\(W_{-d,m}(\gamma x^2+V)-m/4\). Thus summing all frequencies preserves a
+canonical, position-sensitive quadratic digit; an unweighted quadratic
+histogram does not replace it. An exact parity filter gives an
+\(m\mapsto m/4\) descent for even \(w\), while odd \(w\) retains a
+triangular-digit transform with no supplied fast aggregate.
+
+The scope audit fixes the outer geometry. F294's original inverse modulus is
+\(m^3\); its \(q=m^2\) calculation is internal to one of \(m/2\) odd
+\(u_0\)-charts. Even a complete internal frequency sum leaves that chart
+union and the change from full chart half-windows to P237's short public
+rectangles. The inspected complete Salié formulas and complete
+Fourier--Dedekind Cauchy algorithms treat separate structures.
+
+The exact coefficient-array pilot passed 72 complete identities, 72
+one-denominator identities, nine two-denominator identities, and 60 parity
+filters for \(m=8,\ldots,256\). Evidence:
+experiments/F300_salie_cauchy/RESULT.md, SCOPE_MAP.md, SOURCE_LEADS.md,
+salie_digits.py/json/log, and salie_digits.status.json.
+
+### C262 -- Bounded rational windows reduce rectangle emptiness to a global mixed Cauchy resolvent
+
+**Status:** root-derived construction and bit-cost arguments, with exact
+integer and certified interval checks. Independent statement-only
+reconstruction is pending. This claim is not promoted by P237.
+
+**Scope:** the F301 public reference implementation, bounded-degree rational
+interval filters, their pole representation and error budget, and the
+resulting whole-graph mixed resolvent. No fast resolvent evaluator or
+unconditional factoring algorithm.
+
+**Discussion.** For \(M=2^k\), F301 builds an odd rational sign
+approximation from the dyadic scales \(2^j\), repeated by an even
+\(s\) with \(3^s\geq32M\). Its degree is
+\(D=s(k+2)=O((\log M)^2)\), and its coefficient bit lengths are
+\(O((\log M)^3)\). Multiplying two shifted steps gives a public interval
+filter \(\Phi_I\) with pointwise error at most \(2\cdot3^{-s}\). Hence its
+whole inverse-graph sum differs from the exact rectangle count by at most
+\(1/8\); another absolute \(1/8\) evaluation error permits exact recovery
+by rounding.
+
+All poles of the odd step are simple and purely imaginary, with positive
+residues. After shifting to an interval, their real coordinates are the
+exact half-integers \(A-1/2\) and \(B+1/2\); the two pole sets are separated.
+The filter has at most \(2D\) ordinary Cauchy poles with explicit
+polynomial-size conditioning and coefficient bounds.
+
+The remaining mixed kernel is
+
+\[
+ Z_{N,M}(z,w)=
+ \sum_{\substack{1\leq u<M\\u\ {\rm odd}}}
+ \frac{1}{(u-z)((Nu^{-1}\bmod M)-w)}.
+\]
+
+Substitution of the pole expansions uses \(O(D^2)=O((\log M)^4)\)
+well-conditioned calls per rectangle, plus directly computable one-variable
+marginals. Combined with P237, a uniform quasipolynomial-bit evaluator for
+these calls at the stated precision would use \(O(n^6)\) mixed calls for
+complete factorization, up to fixed polynomial factors. No such evaluator is
+given. P236 has an exponential root-of-unity denominator and does not apply
+to this ordinary-coordinate kernel without a new proof.
+
+The public reference wrapper matched trial division for all 4,095 inputs
+through 4096 and 120 seeded inputs through 24 bits; 40 labelled pairs at
+32--512 bits passed public-box coverage with no large oracle call. The filter
+checks comprise 131,064 exact integer inequalities and 67
+interval-certified original rectangles. The pole pilot isolated 93 positive
+roots and passed 24 partial-fraction checks; its repaired numeric-parent
+comparison and first failed log are retained. Evidence:
+experiments/F301_factor_rectangles/REPORT.md, RATIONAL_FILTERS.md,
+factor_rectangles.py, output.json, run.log, rational_filters.py/json/log,
+rational_filters.status.json, rational_poles.py/json,
+rational_poles_fixed.log, and rational_poles_fixed.status.json.
