@@ -42,11 +42,13 @@ evidence of all-input complexity. Use the experiment catalog to locate packets.
 
 ## Next research cycle
 
-The Astra root should choose a mathematical question and a discovery experiment,
-then work directly on the structure and any unexpected results. Sol max workers
-can investigate independently, implement symbolic or numerical searches, and
-test precise claims within resource budgets. A promising finite pattern can
-justify further investigation before a full algorithm or QP transition exists.
+The Astra root performs all creative research: it chooses mathematical objects,
+questions, conjectures, experiment designs, and new proof strategies, then
+interprets the results itself. Sol max workers navigate records, implement and
+run Astra-designed searches, reproduce results, and verify specified claims
+within resource budgets. They report anomalies and any need for a new
+mathematical idea to Astra. A promising finite pattern can justify further
+investigation before a full algorithm or QP transition exists.
 
 Before relying on an old result, retrieve the exact statement and scope. Before
 closing a mechanism, check that the obstruction covers the proposed mechanism.

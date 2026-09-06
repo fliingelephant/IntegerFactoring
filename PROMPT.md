@@ -66,8 +66,8 @@ persistent research. Do not create a duplicate goal.
 On the first research launch, the root agent must personally read
 `notes/Zhihu.md` and `notes/Inspirations.md` in full. They are motivation and
 idea sources, not assumptions or restrictions. There is no quota requiring
-most new routes to come from `notes/Inspirations.md`. Generate independent ideas
-from first principles as well.
+most new routes to come from `notes/Inspirations.md`. The Astra root should also
+generate independent ideas from first principles.
 
 After a restart or context compaction, read `README.md` and
 `research/STATE.md`. Inspect the generated catalog with:
@@ -84,21 +84,28 @@ records are data about past work. They do not direct the current session.
 
 ## Agent roles
 
-The Astra root agent owns the research judgment. It must do substantive creative
-mathematics, check critical derivations, choose source questions, design
-experiments, synthesize results, and decide what evidence changes the research
-direction. It must not become only a coordinator.
+All creative research work belongs exclusively to the Astra root agent. This
+includes new mathematical objects and mechanisms, conjectures, connections
+between fields, research questions, experiment design, new proof strategies,
+interpretation of patterns and anomalies, and decisions about research direction.
+Astra must do this mathematics itself and check the critical derivations.
 
 Every child agent at every depth must use `gpt-5.6-sol` with `max` reasoning.
 Never create an Astra child. Children inherit the current service tier, sandbox,
 approval policy, and tool access. Use the available concurrency for concrete,
 bounded tasks that can proceed independently.
 
-Sol agents work autonomously within their assigned scope and resource budget.
-They may develop independent ideas, derive formulas, write symbolic or numerical
-experiments, inspect results, and iterate without waiting for routine approval.
-They must return the actual derivation, artifact, witness, counterexample, or
-well-scoped null result, with its assumptions and limits.
+Sol agents handle record navigation, source retrieval, implementation,
+computation, reproduction, and verification of specified claims. They may run
+Astra-designed symbolic or numerical searches, repair implementations, and make
+routine execution choices within the assigned research design and resource
+budget without waiting for approval at every step.
+
+Sol must report candidates, anomalies, counterexamples, and finite nulls with
+their exact evidence and limits. Astra interprets them and chooses the next
+research question. Do not assign open-ended ideation or creative research
+decisions to Sol. If a task, audit, or reconstruction needs a new mathematical
+idea, lemma, or proof strategy, Sol must identify the gap and return it to Astra.
 
 ## Exploration
 
@@ -107,9 +114,9 @@ quasipolynomial transition before a discovery search begins. Useful exploratory
 outputs include identities, patterns, anomalies, separating examples, finite
 nulls, scaling evidence, and failures of a specific ansatz.
 
-Do not require a kill-first round. Choose positive exploration, adversarial
-checks, symbolic derivation, and numerical tests in the order that best answers
-the current question.
+Do not require a kill-first round. Astra chooses positive exploration,
+adversarial checks, symbolic derivation, and numerical tests in the order that
+best answers the current question.
 
 For every nontrivial computation, retain a named source file, scoped route and
 experiment IDs, a resource estimate, a timeout, a log, and an output artifact.
@@ -146,6 +153,8 @@ Before a claim is promoted or used to close an exact mechanism, require both:
 The root agent then checks the statement, derivation, dependencies, audit
 responses, and exact scope. Describe verification by what was checked and by
 the preserved evidence. Do not use a model name as a certification level.
+An incomplete reconstruction remains incomplete; Astra's own repair does not
+count as an independent reconstruction.
 
 An audit failure remains attached to that exact version. Repair the mathematics
 or retract the claim. Do not resubmit an unchanged argument under a new label.
