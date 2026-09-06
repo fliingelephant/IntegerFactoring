@@ -2,73 +2,85 @@
 
 The target is an all-input classical Las Vegas factoring algorithm with expected
 quasipolynomial bit complexity. [STATEMENT.md](STATEMENT.md) fixes the target.
-The repository contains research attempts and partial results, not a completed
-algorithm or a verified claim of novelty.
+This repository contains attempts and partial results, not a completed
+algorithm or a verified novelty claim.
 
 ## Start here
 
 1. Read [the current state](research/STATE.md).
 2. Read [PROMPT.md](PROMPT.md) before starting an authorized research run.
-3. Find relevant records; read their heads before their bodies.
+3. Use the Rust reader to find records, inspect heads, and open relevant bodies.
 
 ```sh
-python3 research/records.py list --kind route --limit 40
-python3 research/records.py list --query normalized
-python3 research/records.py head P132
-python3 research/records.py show P132
-python3 research/records.py head route:F12
-python3 research/records.py head experiment:F13_teichmuller_lift_kill
-python3 research/records.py check
+cargo build --release --locked --jobs 1
+./target/release/research list --kind route --limit 40
+./target/release/research list --query Frobenius --kind result
+./target/release/research head P132 --json
+./target/release/research show P132
+./target/release/research graph goal:normalized-route --format mermaid
+./target/release/research check
 ```
 
-The reader requires Python 3.11 or newer and uses only the standard library.
-See `python3 research/records.py --help` for filtering and catalog maintenance.
-Run `build` after changing P/X/C ledger sections, then run `check`. The route
-and experiment catalogs are explicit metadata; update them when adding a route
-or packet. The checker detects missing packets, stale sections, duplicate IDs,
-and invalid links.
+Use `--help` for options. `list`, `head`, `show`, `sync`, and `check`
+support JSON output for agent tooling. Dependencies are pinned in `Cargo.lock`.
+The runtime needs no Python, database, server, or model API.
 
-Source references use structured TOML selectors: a file plus a stable table-row
-key or metadata-field name. They do not store line numbers. The reader resolves
-each selector uniquely and returns the original row or paragraph. See
-[identifier rules](research/IDENTIFIERS.md#stable-source-selectors) for the format.
-Run the reference regressions with
-`python3 -m unittest discover -s research -p 'test_records.py'`.
+## Read progressively
 
-## Progressive reading
+The TOML catalogs are the navigation layer. Original mathematical bodies remain
+in their existing files. Search can inspect bodies without printing them in
+full. Heads expose recorded metadata; `show` retrieves the original text.
+Missing scope is unknown, not permission to generalize a result.
 
-The TOML catalogs in `research/` provide a small navigation layer. Mathematical
-bodies remain in their existing files. A head helps select material; it does
-not replace the exact statement, its assumptions, or a proof. A missing or
-unreviewed scope requires reading the body before using the result.
-
+- [Records](research/catalog.toml): P/X/C statements and notes.
 - [Routes](research/routes.toml): conceptual mechanisms.
-- [Experiments](research/experiments.toml): historical packets and supported
-  route mappings.
-- [Results and notes](research/catalog.toml): P/X/C records by stable ID.
-- [Identifier rules](research/IDENTIFIERS.md): namespaces and historical aliases.
-- [Evidence provenance](research/PROVENANCE.md): retained sources and known gaps.
+- [Experiments](research/experiments.toml): packets and supported route mappings.
+- [Graph](research/graph.toml): selected dependencies, obligations, and evidence.
+- [Identifiers](research/IDENTIFIERS.md): stable IDs and source selectors.
+- [Graph guide](research/GRAPH.md): relation meanings and queries.
+- [Provenance](research/PROVENANCE.md): retained sources and known gaps.
 
-At the 2026-09-06 cleanup checkpoint, all 498 historical packets are indexed. The available records
-directly support 192 route assignments; 306 remain explicitly unresolved.
-An unresolved route does not prevent opening a packet and is not a negative
-mathematical result. Do not infer a route from its experiment number.
+The imported corpus has 563 records, 32 routes, and 498 experiment packets.
+There are 192 supported packet-to-route assignments and 306 explicit unknowns.
+Unknown relationships do not prevent reading a packet and are not negative
+mathematical results. Do not infer a route from an experiment's numeric prefix.
 
-`REGISTRY.md`, `PROVED.md`, `FAILED.md`, and `notes/Progress.md` are historical
-ledgers. Their labels and research recommendations are records of earlier work,
-not instructions or independent mathematical certification. In particular,
-`FAILED.md` includes execution and verification failures, and the old
-`Current synthesis` is not the latest entry point. Use the catalogs rather than
-reading these ledgers in full at every restart.
+`REGISTRY.md`, `PROVED.md`, `FAILED.md`, and `notes/Progress.md` retain
+historical labels and recommendations. These are data about earlier work, not
+current instructions or independent mathematical certification. The old
+`Current synthesis` is not the restart entry point.
+
+## Record new work
+
+Workers write their assigned packets. The root, or one designated record keeper,
+merges records and updates shared catalogs. Keep IDs stable and unique.
+
+Use `## P<number> -- Title` in `PROVED.md`, `## X<number> -- Title` in
+`FAILED.md`, and `### C<number> -- Title` in `notes/Progress.md`. Preserve
+existing zero-padded IDs. Include an exact statement, recorded status, scope,
+proof or observation, and evidence. A malformed record heading is an error.
+
+```sh
+./target/release/research sync
+./target/release/research check
+cargo test --locked --jobs 1
+```
+
+`sync` regenerates record metadata and discovers new route rows and experiment
+directories. It preserves existing supported mappings and marks new packet
+assignments as unknown. It does not infer mathematical graph edges. Add these
+to `research/graph.toml` only with explicit sources and scope.
+
+After each substantive research cycle, refresh `research/STATE.md` with the
+current question, latest result, next action, and unfinished tasks. Keep it
+short instead of appending another historical ledger.
 
 ## Sources and evidence
 
-[Zhihu](notes/Zhihu.md) supplies motivation and technical seeds; its claims are
-not assumptions. [Inspirations](notes/Inspirations.md) is an optional idea pool.
-The [feedback brief](FEEDBACK_ROUTE_RESEARCH_BRIEF.md) describes an earlier
-research stage. Experimental programs, reports, logs, and exact certificates
-remain under `experiments/`.
+[Zhihu](notes/Zhihu.md) supplies motivation and technical seeds, not assumptions.
+[Inspirations](notes/Inspirations.md) is an optional idea pool. The
+[feedback brief](FEEDBACK_ROUTE_RESEARCH_BRIEF.md) describes an earlier stage.
+Programs, reports, logs, and certificates remain under `experiments/`.
 
-Repository content is written in English. Preserve evidence, keep identifiers
-stable, and distinguish mathematical results from finite observations and
-execution status. Runtime caches are ignored; they are not research evidence.
+Repository content is written in English. Structural validation does not prove
+mathematical claims. Runtime caches and Rust build products are ignored.

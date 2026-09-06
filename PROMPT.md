@@ -73,9 +73,10 @@ After a restart or context compaction, read `README.md` and
 `research/STATE.md`. Inspect the generated catalog with:
 
 ```text
-python3 research/records.py list
-python3 research/records.py head <ID>
-python3 research/records.py show <ID>
+./target/release/research list
+./target/release/research head <ID>
+./target/release/research show <ID>
+./target/release/research graph <ID>
 ```
 
 Open only the record bodies relevant to the current question. Do not reread the
@@ -182,6 +183,13 @@ reuse or renumber an ID. Record explicit aliases for legacy IDs. Generate the
 index from the canonical records instead of maintaining competing handwritten
 indexes.
 
+Use the Rust reader described in `README.md`; run `sync` and `check` after
+record changes. The root or one designated record keeper merges shared state.
+Workers keep their assigned artifacts separate. Graph edges need explicit
+sources and scope. Distinguish a conditional result already available from an
+obligation still missing; never infer edges from mentions or treat the partial
+graph as an exhaustive proof or research plan.
+
 Write all repository content in English. Discuss key points with the user in
 Mandarin unless the user asks for another language.
 
@@ -197,8 +205,10 @@ reproducible anomaly, a decisive witness, evidence that changes route priority,
 a scoped obstruction, or a completed experiment with a clear consequence.
 These reports do not claim completion.
 
-Persistent research remains interruptible. When the user pauses or stops it,
-leave `research/STATE.md` and the catalog sufficient for a clean restart.
+Persistent research remains interruptible. After each substantive research
+cycle, update `research/STATE.md` with the current question, latest result, next
+action, and unfinished tasks. When the user pauses or stops, leave that page
+and the catalogs sufficient for a clean restart.
 
 Create local Git checkpoint commits after coherent substantive research changes.
 Do not push, rewrite history, or publish without explicit user authorization.

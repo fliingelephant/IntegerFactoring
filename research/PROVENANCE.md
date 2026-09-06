@@ -20,6 +20,12 @@ The starting Git checkpoint is `00c2a80`. Substantial later research was already
 present as uncommitted changes and untracked experiment packets. The cleanup
 checkpoint includes that work; it does not claim to have performed it.
 
+The later Rust migration replaces the Python navigation tool and normalizes
+the catalogs to schema 3. Existing IDs, mathematical bodies, recorded status
+and scope text, route assignments, and source selectors are preserved. The
+partial graph contains explicitly sourced relations selected for navigation;
+it is not an independent proof audit or a completed dependency map.
+
 ## Known missing working-tree artifacts
 
 The following tracked files had already been deleted before cleanup:

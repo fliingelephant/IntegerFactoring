@@ -1,0 +1,77 @@
+# Partial, source-checked navigation graph. This is not a new proof audit.
+# Missing relations are unknown, not evidence of independence or completion.
+# The normalized-difference branch is an example plan, not a selected strategy.
+schema_version = 1
+
+[[nodes]]
+id = "goal:normalized-route"
+kind = "goal"
+title = "Complete factoring through the normalized-difference approach"
+scope = "A conditional route based on P230. Its balanced-semiprime result does not meet the all-input target without further work."
+source = { kind = "file", path = "STATEMENT.md" }
+
+[[nodes]]
+id = "question:normalized-evaluator"
+kind = "question"
+title = "Evaluate the P230 normalized difference in quasipolynomial time"
+scope = "On P230's balanced distinct-odd-semiprime promise, compute F_B(a) modulo N uniformly from public N and a, with B=floor(sqrt(N)), preserving exact integer normalization. P230 does not supply this evaluator."
+source = { kind = "record", path = "PROVED.md", id = "P230" }
+
+[[nodes]]
+id = "question:all-input-extension"
+kind = "question"
+title = "Extend the P230 route to the complete input class"
+scope = "Supply a proved all-input reduction or extension beyond balanced distinct odd semiprimes, including total expected bit complexity. This obligation is specific to pursuing the P230 route."
+source = { kind = "record", path = "PROVED.md", id = "P230" }
+
+[[edges]]
+from = "goal:normalized-route"
+to = "P230"
+relation = "uses"
+evidence = [{ kind = "record", path = "PROVED.md", id = "P230" }]
+note = "Uses the recorded conditional constant-success implication. It does not assert that the missing evaluator exists."
+
+[[edges]]
+from = "goal:normalized-route"
+to = "question:normalized-evaluator"
+relation = "requires"
+evidence = [{ kind = "record", path = "PROVED.md", id = "P230" }]
+note = "The supplied splitter is conditional on an evaluator that the record explicitly leaves missing."
+
+[[edges]]
+from = "goal:normalized-route"
+to = "question:all-input-extension"
+relation = "requires"
+evidence = [{ kind = "record", path = "PROVED.md", id = "P230" }]
+note = "The final scope paragraph explicitly excludes unbalanced and nonsquarefree inputs and supplies no all-input reduction."
+
+[[edges]]
+from = "P231"
+to = "P230"
+relation = "uses"
+evidence = [{ kind = "record", path = "PROVED.md", id = "P231" }]
+note = "Reuses P230's unresolved balanced-semiprime notation and normalized-difference target. P231 is a boundary for named representations, not a refutation of a general evaluator."
+
+[[edges]]
+from = "X01"
+to = "P01"
+relation = "uses"
+evidence = [{ kind = "record", path = "FAILED.md", id = "X01" }]
+note = "X01 explicitly bases its exact linear-rank obstruction on P01. Its separate finite-field one-moment example retains its own recorded status."
+
+[[edges]]
+from = "P110"
+to = "P109"
+relation = "uses"
+evidence = [{ kind = "record", path = "PROVED.md", id = "P110" }]
+note = "P110 explicitly invokes P109 append monotonicity to carry a verified prefix root through the unexecuted remainder. The conclusion is for one supplied 54-bit input, not an all-input source law."
+
+[[edges]]
+from = "experiment:F04_joint_matroid_audit"
+to = "P24"
+relation = "supports"
+evidence = [
+  { kind = "file", path = "experiments/F04_joint_matroid_audit/RESULT.md" },
+  { kind = "record", path = "PROVED.md", id = "P24" },
+]
+note = "Supports the fixed-input matrix ranks and exchanged-minor certificates at N=79403 and N=20000000499999937. This is not evidence of an all-input separator law."

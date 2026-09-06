@@ -3,6 +3,10 @@
 Navigation snapshot: 2026-09-06. This page summarizes the existing records. The
 cleanup did not re-prove their mathematical claims or establish their novelty.
 
+The Rust reader now provides typed catalog and graph queries. The initial
+[graph](graph.toml) records a few explicit relations and one conditional route
+plan; it is not a complete dependency map or a choice of research direction.
+
 ## Target and completion
 
 Read [STATEMENT.md](../STATEMENT.md) for the exact all-input classical Las Vegas
@@ -54,3 +58,7 @@ investigation before a full algorithm or QP transition exists.
 Before relying on an old result, retrieve the exact statement and scope. Before
 closing a mechanism, check that the obstruction covers the proposed mechanism.
 Use `PROMPT.md` for the full research workflow.
+
+After each substantive cycle, replace the active question, latest finding,
+next action, and unfinished-task information here. Do not wait for a manual
+pause before making the state safe to resume after context compaction.
