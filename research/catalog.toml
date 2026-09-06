@@ -1641,6 +1641,30 @@ source = { kind = "record", path = "PROVED.md", id = "P231" }
 recorded_status = "promoted from F283 after a fresh hostile proof audit and an\nindependent statement-only reconstruction. This is a scoped boundary for the\nevaluator left open by P230. It is not an evaluator, a factoring algorithm,\nor a general circuit lower bound."
 
 [[records]]
+id = "P232"
+kind = "result"
+title = "Public matrix-power derivative ranks and mutual-order exceptions"
+source = { kind = "record", path = "PROVED.md", id = "P232" }
+recorded_status = "promoted after a fresh statement-only Sol reconstruction and root\nverification of the exact claims. No literature-level novelty claim is made.\n**Scope:** individual derivative ranks on the squarefree-characteristic-polynomial\nbranch over a distinct-prime semiprime. Not a general factoring lower bound."
+scope = "individual derivative ranks on the squarefree-characteristic-polynomial\nbranch over a distinct-prime semiprime. Not a general factoring lower bound.\n\nLet N=rs with distinct primes and let A be a d-by-d matrix modulo N. Over F_r\nassume its characteristic polynomial is squarefree and define\n\n    L_A(H) = sum_(i=0)^(N-1) A^i H A^(N-1-i).\n\nThen ker(L_A)=Cent(A^N), and rank(L_A)=rank(ad_(A^N)). If m_z counts the\ndistinct eigenvalues of A with N-th power z, the rank is d^2-sum_z m_z^2.\nIn particular it is d^2-d whenever ord_s(r)>d, or whenever ord_s(r) divides\nnone of the irreducible factor degrees of the characteristic polynomial.\n\nFor a fixed odd prime p and D>=1, fewer than D(D+1) prime q in (p,2p) have\nord_q(p)<=D or ord_p(q)<=D. Outside this set, both ranks equal d^2-d for\nevery d<=D and every public matrix with unit characteristic discriminant,\nincluding adaptively selected matrices. By the prime number theorem the\nexceptional proportion is O(D^2 log(p)/p), and tends to zero when D is any\nfixed quasipolynomial in log p. Prime distribution is used only for this\nasymptotic interpretation, not the finite count."
+
+[[records]]
+id = "P233"
+kind = "result"
+title = "Global congruence-tangent cuts leave every early modular branch"
+source = { kind = "record", path = "PROVED.md", id = "P233" }
+recorded_status = "promoted after independent statement-only reconstruction and root\nverification. The finite computations support examples, not the proof.\n**Scope:** the exact continuous relaxation and bounded global-tangent menu below."
+scope = "the exact continuous relaxation and bounded global-tangent menu below.\n\nLet N be odd, B,A positive integers, 2B^2<=N<=9B^2/4, and M=2^k with k>=1\nand M<=B/(4096A^3). For each odd u modulo M put v=N/u modulo M. Let I_u,I_v\nbe the intervals between the least and greatest integers in [B,2B] in those\nresidue classes. For every 1<=a,b<=A, let T_ab be the least integer at least\n2 sqrt(abN) congruent to au+bv modulo M.\n\nEvery one of the M/2 states admits real x,y satisfying\n\n    x in I_u, y in I_v, xy=N, ax+by>=T_ab for every a,b.\n\nThe same point also satisfies the corresponding ancestor constraints modulo\n2^j, 1<=j<=k. These real points are not asserted to satisfy discrete congruences."
+
+[[records]]
+id = "P234"
+kind = "result"
+title = "Fast normalized Gaussian-binomial jets and sparse uniform-index probes"
+source = { kind = "record", path = "PROVED.md", id = "P234" }
+recorded_status = "promoted after fresh statement-only reconstruction, exact Sage checks,\nand root verification. The underlying cumulant method is established mathematics;\nthis record does not claim a new literature result or a factoring algorithm.\n**Scope:** short normalized exponential jets and their individual coefficient\ngcds under uniform indices. Selected indices and other decoders are outside the bound."
+scope = "short normalized exponential jets and their individual coefficient\ngcds under uniform indices. Selected indices and other decoders are outside the bound.\n\nFor b>=0 let G_b(t)=[2b choose b]_t and define c_j(b) by\n\n    G_b(exp(z))/binom(2b,b) = sum_(j>=0) c_j(b) z^j.\n\nFor each j>=1, c_j is a rational polynomial in b of exact degree 2j and\nleading coefficient 1/(2^j j!). Its coefficient denominator primes are at\nmost j+1. The first J+1 coefficients have an exact algorithm polynomial in\nJ+log(b+1), without materializing either G_b or the central binomial.\nThe bound is polynomial in the output count J, not log J.\n\nIf N=pq with distinct primes p,q>J+1 and b is uniform modulo N, then\n\n    Pr[exists 1<=j<=J with 1<gcd(c_j(b) mod N,N)<N]\n       <= J(J+1)(1/p+1/q)."
+
+[[records]]
 id = "X01"
 kind = "closure"
 title = "generic exact linear compression of arbitrary square classes"
@@ -3965,3 +3989,27 @@ kind = "note"
 title = "the natural normalized-difference evaluator grammars collapse to width or factor gates"
 source = { kind = "record", path = "notes/Progress.md", id = "C242" }
 recorded_status = "promoted as P231 after F283 passed a fresh hostile proof audit and\na strict statement-only reconstruction. No computation ran."
+
+[[records]]
+id = "C243"
+kind = "note"
+title = "Short q-binomial jets are computable, but their useful scalar is missing"
+source = { kind = "record", path = "notes/Progress.md", id = "C243" }
+recorded_status = "research synthesis; the precise jet and uniform-index statements are P234.\n**Scope:** normalized Taylor coefficients, selected moment determinants, and the\nspecific finite examples in F284. No general factoring or novelty claim."
+scope = "normalized Taylor coefficients, selected moment determinants, and the\nspecific finite examples in F284. No general factoring or novelty claim.\n\nF284 computes 13 exact coefficients for B=2^512+12345 in about two local Sage\nseconds without constructing an enormous Gaussian polynomial. This is a real\ncompressed evaluator outside F14's full coefficient-state model. Its normalization\nremoves the central-binomial factor that previously guaranteed a q-zero.\nSage also exposed explicit polynomial factors in moment determinants. For\nN=247,B=15, H_3 finds 13 through 5B+3; this is a small linear relation in B,\nnot a new generic source law. Uniform coefficient gcd probes obey P234's\nsparse-root bound, which does not cover deterministic B or other decoders.\n\nNext question: preserve a factor-asymmetric scalar or find a different decoder\nwith a proved useful law while retaining the compact representation. Compare\nthe exact cumulant formula with the Billey--Swanson paper before making any\nnovelty claim. An August 2026 mod-phi paper is a recorded reading lead only.\nEvidence: `experiments/F284_cyclotomic_binomial_search/RESULT.md`, its\n`RECONSTRUCTION.md`, `output/D05.json`, and `output/S01.txt`."
+
+[[records]]
+id = "C244"
+kind = "note"
+title = "Public matrix-power derivative rank measures power collisions"
+source = { kind = "record", path = "notes/Progress.md", id = "C244" }
+recorded_status = "P232 is independently reconstructed; the separate two-dimensional\nsampling probabilities remain author-derived candidates with exact finite checks.\n**Scope:** the squarefree branch and individual operator ranks, not joint decoders."
+scope = "the squarefree branch and individual operator ranks, not joint decoders.\n\nF285 starts with a genuinely public, logarithmic-exponent circuit for D(A^N).\nP232 identifies its kernel as Cent(A^N). Outside at most D(D+1) exceptional\nbalanced prime partners, every such operator of dimension<=D has synchronized\nranks, simultaneously even under adaptive matrix choices. Thus sampling more\nindividual ranks cannot change this particular obstruction. The information\nneeded by a different decoder could lie in coordinates, combined operators,\nor a different function; P232 does not exclude these.\n\nNext question: identify a joint observable that contains information beyond\nthe individual power-collision ranks, before generating another matrix menu.\nEvidence: `experiments/F285_finite_algebra_operator_search/DIMENSION_EXTENSION.md`,\n`RECONSTRUCTION.md`, and `general_dimension_results.json` (112 exact cases)."
+
+[[records]]
+id = "C245"
+kind = "note"
+title = "Constraint propagation gains pruning but can hide a numerical scan"
+source = { kind = "record", path = "notes/Progress.md", id = "C245" }
+recorded_status = "the global-cut survival theorem is P233. Iterated fixed-point,\niteration-cost, and fast-forward analyses remain author-derived candidates.\n**Scope:** the explicitly retained real arcs and linear-form congruence cuts in F286."
+scope = "the explicitly retained real arcs and linear-form congruence cuts in F286.\n\nGlobal tangent cuts leave all early branches by P233. Recomputing minima on\nretained arcs does produce additional pruning: one finite case reached two\nstates in eight sweeps, while a larger case retained all sixteen after 24.\nThe exact fixed-point construction is promising as a correctness mechanism,\nbut its iteration cost still needs a numerical-scale analysis.\n\nThe ordered forms (1,1),(1,2) reveal the issue precisely: their rounded\ncomposition advances the sum threshold by exactly M until a factor point.\nA safe coordinate-block jump exists, but one regime becomes residue-strided\ntrial division. These observations redirect the search toward joint interval\ncertificates rather than simply increasing the number of sweeps.\nEvidence: `experiments/F286_diophantine_constraint_search/RESULT.md`,\n`RECONSTRUCTION.md`, `ITERATED_RESULT.md`, `ITERATED_output.json`, and `FAST_FORWARD.md`."

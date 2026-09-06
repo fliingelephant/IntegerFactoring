@@ -1,63 +1,50 @@
 # Research State
 
-Navigation snapshot: 2026-09-06. This page summarizes the existing records. The
-cleanup did not re-prove their mathematical claims or establish their novelty.
+Updated 2026-09-07 after the first authorized Astra research cycle. The goal is
+active. The root read `notes/Zhihu.md` and `notes/Inspirations.md` in full at
+launch; their claims remain motivation, not assumptions.
 
-The Rust reader now provides typed catalog and graph queries. The initial
-[graph](graph.toml) records a few explicit relations and one conditional route
-plan; it is not a complete dependency map or a choice of research direction.
+## Target
 
-## Target and completion
+`STATEMENT.md` fixes the all-input classical Las Vegas quasipolynomial
+bit-complexity target. No algorithm meeting that target is established.
+P232-P234 below are scoped supporting facts, not a completion claim or a
+literature-level novelty claim.
 
-Read [STATEMENT.md](../STATEMENT.md) for the exact all-input classical Las Vegas
-quasipolynomial factoring target and bit-cost conventions. No complete solution
-meeting that target is established by this repository.
+## Current results
 
-No new preferred mathematical route was selected during cleanup. Earlier
-rejections apply only to their exact hypotheses and computational models.
-
-## Main research stages
-
-| Stage | What the records study | What remains missing |
+| Packet / record | What changed | Remaining question |
 | --- | --- | --- |
-| Retained relations and integer feedback | Canonical inverses, gcd-free refinement, and jointly useful square relations; `route:F26` and the feedback brief | A public, affordable source with an all-input useful-relation guarantee |
-| Integer words and order residuals | P205/P206 reduce selected semiprime tasks to constructing factor-correlated integer words | A uniformly affordable source and a sufficient success law; a reduction does not supply that source |
-| Compressed arithmetic evaluation | P230 and the [random-shift packet](../experiments/F282_shifted_normalized_difference_random_splitter/STATEMENT.md) give a conditional splitter for balanced distinct odd semiprimes | The fast normalized-difference evaluator, plus an extension or reduction to the full input class |
-| Boundaries of named evaluators | P231 and the [evaluator-boundary packet](../experiments/F283_shifted_normalized_difference_evaluator_boundary/STATEMENT.md) analyze specific representations for P230 | The record explicitly leaves other evaluators open; it is not a general circuit lower bound |
+| F284, C243, P234 | A short normalized Gaussian-binomial jet is computable in polynomial work in its output count and log index. Sage computed 13 coefficients at a 513-bit index without the enormous polynomial. Exact coefficient and moment factors were found. | Preserve the factor-bearing scalar or find a different decoder with a useful all-input law. Uniform random coefficient gcds are sparse; fixed indices and other decoders are outside that bound. |
+| F285, C244, P232, route:F30 | Public matrix-power derivative rank equals an ordinary commutator rank. At QP dimensions, most balanced prime partners synchronize all eligible individual ranks by an exact mutual-order count. | Find a joint or coordinate-sensitive observable beyond those ranks. The result excludes neither combined operators nor intermediate gcds. |
+| F286, C245, P233, route:F31 | Global tangent cuts leave every early branch. Recomputed local minima add pruning; separate candidate analyses identify fixed points and exact threshold scans. | Verify the iterative claims before using them. A useful shortcut must exceed the two-form Fermat/trial-division coordinate switching in FAST_FORWARD.md. |
 
-The older synthesis at the start of `notes/Progress.md` centers on P203-P207.
-Later sections reach C242/P231. The August feedback brief is useful historical
-context, not a current roadmap.
+P232-P234 each have a fresh statement-only Sol reconstruction and root scope
+check. The F285 two-dimensional sampler details and F286 iterative/fast-forward
+claims are still candidates. Keep these verification scopes distinct.
 
-## What computation already did
+## Next work
 
-- The [Pell word scan](../experiments/F255_pell_resultant_word_anomaly_search/RESULT.md)
-  recorded 50,304 remote inputs over a fixed word menu.
-- The [symbolic-search audit](../experiments/F263_hypergeometric_evaluator_symbolic_search/V2_RESULT_AUDIT.md)
-  covers symbolic and numerical discovery and explains
-  the recorded finite hits using a boundary mechanism.
-- The [retained-bank run](../experiments/F268_canonical_scalar_section_multirow_v4/results/F268-D04_run_20260814T0442Z/RESULT.md)
-  tested retained relations, including held-out cases.
-- Several other packets stopped during setup or preflight. Such failures are
-  not mathematical counterexamples.
+- Prioritize a concrete joint interval certificate or a coupled algebraic
+  observable that changes the operation, with a cost model and a discriminating
+  experiment. Repeating the individual-rank or two-threshold menus adds no new
+  mechanism.
+- For F284, compare the self-derived jet formula with the full Billey--Swanson
+  paper before claiming novelty. The August 2026 preprint arXiv:2608.14143 is a
+  related reading lead; only its abstract has been inspected. The local paper
+  cache is not populated yet; focused web retrieval remains available.
+- Reuse the navigation/computation Sol worker. Creative route work belongs to
+  Astra; blind reconstruction uses fresh Sol contexts. Follow `PROMPT.md`.
 
-These are pointers for selective reading, not independent validations or
-evidence of all-input complexity. Use the experiment catalog to locate packets.
+All numerical jobs from this cycle completed. F284 Sage sources, logs, status
+JSON, and failed setup attempts are retained in its packet. F285 and F286 retain
+their exact Python sources and outputs. Recheck resources before new jobs.
 
-## Next research cycle
+## Earlier navigation
 
-Astra researchers independently own bounded routes, design experiments,
-interpret patterns, and pursue unknown key lemmas. Sol max provides execution
-and verification support. Reuse workers for continuing work, including
-navigation and shared records; use a fresh Sol for blind reconstruction of key
-proofs. Routes advance asynchronously. The root also does mathematics and
-integrates results. Use `PROMPT.md` for the full workflow.
-
-Before relying on an old result, retrieve the exact statement and scope. Before
-starting or retrying a route, check the closest prior attempt and state the
-material difference. Patterns may justify exploration before a full algorithm
-exists. Close a mechanism only when verified evidence covers its exact scope.
-
-After each substantive cycle, replace the active question, latest finding,
-next action, and unfinished-task information here. Do not wait for a manual
-pause before making the state safe to resume after context compaction.
+P230/P231 concern a balanced-semiprime normalized-difference evaluator, with
+the evaluator and all-input extension still missing. They are background, not
+a selected overall strategy. Retained relations and integer feedback are
+indexed under route:F26 and its suffixes. The older synthesis in
+`notes/Progress.md` is historical; use the Rust reader to load relevant heads
+and bodies. Graph relations remain partial and explicitly sourced.

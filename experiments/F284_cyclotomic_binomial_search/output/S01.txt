@@ -1,0 +1,99 @@
+# F284 exact central Gaussian-jet factors
+
+All expressions are over QQ[B]. This is exact symbolic output, not a factoring claim.
+
+## Normalized exponential-jet coefficients
+
+c_1 = (1/2) * B^2
+  common denominator: 2
+  degree: 2
+  maximum coefficient numerator bits: 1
+
+c_2 = (1/8) * B^2 * (B^2 + 2/3*B + 1/3)
+  common denominator: 24
+  degree: 4
+  maximum coefficient numerator bits: 1
+
+c_3 = (1/48) * (B + 1)^2 * B^4
+  common denominator: 48
+  degree: 6
+  maximum coefficient numerator bits: 1
+
+c_4 = (1/384) * B^3 * (B^5 + 4*B^4 + 10/3*B^3 + 8/15*B^2 - 3/5*B - 4/15)
+  common denominator: 5760
+  degree: 8
+  maximum coefficient numerator bits: 3
+
+c_5 = (1/3840) * (B + 1)^2 * B^5 * (B^3 + 14/3*B^2 - 1/3*B - 4/3)
+  common denominator: 11520
+  degree: 10
+  maximum coefficient numerator bits: 1
+
+c_6 = (1/46080) * B^3 * (B^9 + 10*B^8 + 25*B^7 + 112/9*B^6 - 31/3*B^5 - 66/7*B^4 + 23/21*B^3 + 52/21*B^2 - 16/63)
+  common denominator: 2903040
+  degree: 12
+  maximum coefficient numerator bits: 5
+
+c_7 = (1/645120) * (B + 1)^2 * B^5 * (B^7 + 12*B^6 + 86/3*B^5 - 176/9*B^4 - 179/9*B^3 + 12*B^2 + 32/9*B - 16/9)
+  common denominator: 5806080
+  degree: 14
+  maximum coefficient numerator bits: 7
+
+c_8 = (1/10321920) * B^3 * (B^13 + 56/3*B^12 + 308/3*B^11 + 1456/9*B^10 - 1582/27*B^9 - 5504/27*B^8 + 116/15*B^7 + 5872/45*B^6 + 413/45*B^5 - 2248/45*B^4 - 304/135*B^3 + 1696/135*B^2 - 64/45)
+  common denominator: 1393459200
+  degree: 16
+  maximum coefficient numerator bits: 9
+
+c_9 = (1/185794560) * (B + 1)^2 * B^5 * (B^11 + 22*B^10 + 135*B^9 + 2228/15*B^8 - 433*B^7 - 354/5*B^6 + 2301/5*B^5 - 456/5*B^4 - 976/5*B^3 + 224/3*B^2 + 128/5*B - 64/5)
+  common denominator: 2786918400
+  degree: 18
+  maximum coefficient numerator bits: 10
+
+c_10 = (1/3715891200) * B^3 * (B^17 + 30*B^16 + 295*B^15 + 3136/3*B^14 + 1582/3*B^13 - 23084/9*B^12 - 11138/9*B^11 + 3544*B^10 + 11341/9*B^9 - 33782/11*B^8 - 25285/33*B^7 + 181288/99*B^6 + 2192/9*B^5 - 8640/11*B^4 - 256/9*B^3 + 6976/33*B^2 - 256/11)
+  common denominator: 367873228800
+  degree: 20
+  maximum coefficient numerator bits: 15
+
+c_11 = (1/81749606400) * (B + 1)^2 * B^5 * (B^15 + 104/3*B^14 + 388*B^13 + 4256/3*B^12 - 5554/9*B^11 - 61984/9*B^10 + 56900/9*B^9 + 25408/3*B^8 - 37285/3*B^7 - 8360/3*B^6 + 92848/9*B^5 - 16640/9*B^4 - 35456/9*B^3 + 4672/3*B^2 + 512*B - 256)
+  common denominator: 735746457600
+  degree: 22
+  maximum coefficient numerator bits: 14
+
+c_12 = (1/1961990553600) * B^3 * (B^21 + 44*B^20 + 682*B^19 + 13112/3*B^18 + 26213/3*B^17 - 40084/3*B^16 - 1030700/27*B^15 + 405328/9*B^14 + 71423*B^13 - 4147996/45*B^12 - 24819602/315*B^11 + 53494872/455*B^10 + 99494867/1755*B^9 - 427516412/4095*B^8 - 132848/5*B^7 + 92121056/1365*B^6 + 460672/63*B^5 - 13743936/455*B^4 - 762112/945*B^3 + 3658752/455*B^2 - 707584/819)
+  common denominator: 24103053950976000
+  degree: 24
+  maximum coefficient numerator bits: 27
+
+## Moment Hankel determinants
+
+H_1=det(mu_(i+j))_{i,j=0}^0 = 1
+  common denominator: 1
+  degree: 0
+  maximum coefficient numerator bits: 1
+
+H_2=det(mu_(i+j))_{i,j=0}^1 = (1/6) * (B + 1/2) * B^2
+  common denominator: 12
+  degree: 3
+  maximum coefficient numerator bits: 1
+
+H_3=det(mu_(i+j))_{i,j=0}^2 = (1/108) * (B - 1) * (B + 3/5) * (B + 1/2)^2 * B^5
+  common denominator: 2160
+  degree: 9
+  maximum coefficient numerator bits: 3
+
+H_4=det(mu_(i+j))_{i,j=0}^3 = (1/3888) * (B + 3/5) * (B - 1)^2 * (B + 1/2)^3 * B^8 * (B^4 - 7/10*B^3 - 549/350*B^2 - 8/175*B + 2/7)
+  common denominator: 54432000
+  degree: 18
+  maximum coefficient numerator bits: 15
+
+H_5=det(mu_(i+j))_{i,j=0}^4 = (1/209952) * (B - 1)^3 * (B + 1/2)^4 * B^11 * (B^4 - 7/10*B^3 - 549/350*B^2 - 8/175*B + 2/7) * (B^8 - 23/10*B^7 - 817/350*B^6 + 4421/875*B^5 + 24554/6125*B^4 - 28367/12250*B^3 - 927/490*B^2 + 444/1225*B + 366/1225)
+  common denominator: 14402707200000
+  degree: 30
+  maximum coefficient numerator bits: 30
+
+## Timings
+
+jet_construction: 0.001812458 seconds
+coefficient_factorization: 0.011669542 seconds
+hankel_determinants_and_factorization: 0.024622083 seconds
+total: 0.038205583 seconds

@@ -1,0 +1,18 @@
+{"DOT_SAGE": "/private/tmp/f284_cyclotomic_binomial_search_sage", "command": ["/usr/local/bin/sage", "/Users/zhou/autoresearch/IntegerFactoring/experiments/F284_cyclotomic_binomial_search/verify_cyclotomic_binomial_jets.sage", "--output", "/Users/zhou/autoresearch/IntegerFactoring/experiments/F284_cyclotomic_binomial_search/output/D01.json"], "event": "run_start", "run_id": "D01", "started_utc": "2026-09-06T15:52:42.523083+00:00", "timeout_seconds": 60}
+Traceback (most recent call last):
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F284_cyclotomic_binomial_search/verify_cyclotomic_binomial_jets.sage.py", line 274, in <module>
+    main()
+    ~~~~^^
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F284_cyclotomic_binomial_search/verify_cyclotomic_binomial_jets.sage.py", line 230, in main
+    literal_summary = verify_literal_jets(rows, q)
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F284_cyclotomic_binomial_search/verify_cyclotomic_binomial_jets.sage.py", line 136, in verify_literal_jets
+    formula_log = log_jet(m, k)
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F284_cyclotomic_binomial_search/verify_cyclotomic_binomial_jets.sage.py", line 68, in log_jet
+    coefficients[_sage_const_1 ] = QQ(k * (m - k), _sage_const_2 )
+                                   ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "sage/structure/parent.pyx", line 901, in sage.structure.parent.Parent.__call__
+    return mor._call_with_args(x, args, kwds)
+  File "sage/categories/map.pyx", line 856, in sage.categories.map.Map._call_with_args
+    raise NotImplementedError("_call_with_args not overridden "
+NotImplementedError: _call_with_args not overridden to accept arguments for <class 'sage.rings.rational.Z_to_Q'>
+{"disposition": "failed", "duration_seconds": 4.915608000010252, "event": "run_end", "exit_code": 1, "finished_utc": "2026-09-06T15:52:47.438717+00:00", "run_id": "D01", "timed_out": false}

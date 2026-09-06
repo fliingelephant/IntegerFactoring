@@ -1,0 +1,24 @@
+{"DOT_SAGE": "/private/tmp/f284_cyclotomic_binomial_search_sage", "command": ["/usr/local/bin/sage", "/Users/zhou/autoresearch/IntegerFactoring/experiments/F284_cyclotomic_binomial_search/verify_cyclotomic_binomial_jets.sage", "--output", "/Users/zhou/autoresearch/IntegerFactoring/experiments/F284_cyclotomic_binomial_search/output/D03.json"], "event": "run_start", "run_id": "D03", "started_utc": "2026-09-06T15:54:23.922300+00:00", "timeout_seconds": 60}
+Traceback (most recent call last):
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F284_cyclotomic_binomial_search/verify_cyclotomic_binomial_jets.sage.py", line 272, in <module>
+    main()
+    ~~~~^^
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F284_cyclotomic_binomial_search/verify_cyclotomic_binomial_jets.sage.py", line 260, in main
+    temporary.write_text(json.dumps(result, indent=_sage_const_2 , sort_keys=True) + "\n", encoding="utf-8")
+                         ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/tmp/sage-10.9-current/local/lib/python3.14/json/__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "/var/tmp/sage-10.9-current/local/lib/python3.14/json/encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/var/tmp/sage-10.9-current/local/lib/python3.14/json/encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "/var/tmp/sage-10.9-current/local/lib/python3.14/json/encoder.py", line 182, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type Integer is not JSON serializable
+when serializing dict item 'numerator_bits'
+when serializing list item 2
+when serializing dict item 'log_coefficients'
+when serializing dict item 'remote_jet'
+{"disposition": "failed", "duration_seconds": 2.2800328330049524, "event": "run_end", "exit_code": 1, "finished_utc": "2026-09-06T15:54:26.202359+00:00", "run_id": "D03", "timed_out": false}

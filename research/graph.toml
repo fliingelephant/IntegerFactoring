@@ -75,3 +75,45 @@ evidence = [
   { kind = "record", path = "PROVED.md", id = "P24" },
 ]
 note = "Supports the fixed-input matrix ranks and exchanged-minor certificates at N=79403 and N=20000000499999937. This is not evidence of an all-input separator law."
+
+[[edges]]
+from = "experiment:F284_cyclotomic_binomial_search"
+to = "P234"
+relation = "supports"
+evidence = [{ kind = "file", path = "experiments/F284_cyclotomic_binomial_search/RECONSTRUCTION.md" }]
+note = "Independent reconstruction of short-jet coefficient, bit-cost, and uniform-index bounds. This does not cover fixed-index or moment-determinant decoders."
+
+[[edges]]
+from = "experiment:F285_finite_algebra_operator_search"
+to = "P232"
+relation = "supports"
+evidence = [{ kind = "file", path = "experiments/F285_finite_algebra_operator_search/RECONSTRUCTION.md" }]
+note = "Independent reconstruction of individual derivative-rank and finite exceptional-prime claims; density uses PNT. Joint operators and coordinate decoders are excluded."
+
+[[edges]]
+from = "experiment:F286_diophantine_constraint_search"
+to = "P233"
+relation = "supports"
+evidence = [{ kind = "file", path = "experiments/F286_diophantine_constraint_search/RECONSTRUCTION.md" }]
+note = "Independent proof for the global-tangent continuous relaxation. Iterated local minima and fast-forward candidates are separate."
+
+[[edges]]
+from = "C243"
+to = "P234"
+relation = "uses"
+evidence = [{ kind = "record", path = "notes/Progress.md", id = "C243" }]
+note = "Uses the normalized-jet evaluator and its uniform-index coefficient-probe bound when interpreting F284."
+
+[[edges]]
+from = "C244"
+to = "P232"
+relation = "uses"
+evidence = [{ kind = "record", path = "notes/Progress.md", id = "C244" }]
+note = "Uses the exact individual-rank obstruction to identify the next joint-observable question."
+
+[[edges]]
+from = "C245"
+to = "P233"
+relation = "uses"
+evidence = [{ kind = "record", path = "notes/Progress.md", id = "C245" }]
+note = "Uses the proved global-cut boundary as the baseline; stronger iterative claims retain candidate status."

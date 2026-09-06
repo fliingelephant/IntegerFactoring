@@ -7031,3 +7031,64 @@ shift. It must avoid nonunit normalization or return its gcd, and its endpoint
 must retain the P230 asymmetry. Tailored nonlinear, adaptive, branching,
 higher-lift, and other noncanonical evaluators remain open; P231 does not
 give a general evaluator or circuit lower bound.
+
+### C243 -- Short q-binomial jets are computable, but their useful scalar is missing
+
+**Status:** research synthesis; the precise jet and uniform-index statements are P234.
+**Scope:** normalized Taylor coefficients, selected moment determinants, and the
+specific finite examples in F284. No general factoring or novelty claim.
+
+F284 computes 13 exact coefficients for B=2^512+12345 in about two local Sage
+seconds without constructing an enormous Gaussian polynomial. This is a real
+compressed evaluator outside F14's full coefficient-state model. Its normalization
+removes the central-binomial factor that previously guaranteed a q-zero.
+Sage also exposed explicit polynomial factors in moment determinants. For
+N=247,B=15, H_3 finds 13 through 5B+3; this is a small linear relation in B,
+not a new generic source law. Uniform coefficient gcd probes obey P234's
+sparse-root bound, which does not cover deterministic B or other decoders.
+
+Next question: preserve a factor-asymmetric scalar or find a different decoder
+with a proved useful law while retaining the compact representation. Compare
+the exact cumulant formula with the Billey--Swanson paper before making any
+novelty claim. An August 2026 mod-phi paper is a recorded reading lead only.
+Evidence: `experiments/F284_cyclotomic_binomial_search/RESULT.md`, its
+`RECONSTRUCTION.md`, `output/D05.json`, and `output/S01.txt`.
+
+### C244 -- Public matrix-power derivative rank measures power collisions
+
+**Status:** P232 is independently reconstructed; the separate two-dimensional
+sampling probabilities remain author-derived candidates with exact finite checks.
+**Scope:** the squarefree branch and individual operator ranks, not joint decoders.
+
+F285 starts with a genuinely public, logarithmic-exponent circuit for D(A^N).
+P232 identifies its kernel as Cent(A^N). Outside at most D(D+1) exceptional
+balanced prime partners, every such operator of dimension<=D has synchronized
+ranks, simultaneously even under adaptive matrix choices. Thus sampling more
+individual ranks cannot change this particular obstruction. The information
+needed by a different decoder could lie in coordinates, combined operators,
+or a different function; P232 does not exclude these.
+
+Next question: identify a joint observable that contains information beyond
+the individual power-collision ranks, before generating another matrix menu.
+Evidence: `experiments/F285_finite_algebra_operator_search/DIMENSION_EXTENSION.md`,
+`RECONSTRUCTION.md`, and `general_dimension_results.json` (112 exact cases).
+
+### C245 -- Constraint propagation gains pruning but can hide a numerical scan
+
+**Status:** the global-cut survival theorem is P233. Iterated fixed-point,
+iteration-cost, and fast-forward analyses remain author-derived candidates.
+**Scope:** the explicitly retained real arcs and linear-form congruence cuts in F286.
+
+Global tangent cuts leave all early branches by P233. Recomputing minima on
+retained arcs does produce additional pruning: one finite case reached two
+states in eight sweeps, while a larger case retained all sixteen after 24.
+The exact fixed-point construction is promising as a correctness mechanism,
+but its iteration cost still needs a numerical-scale analysis.
+
+The ordered forms (1,1),(1,2) reveal the issue precisely: their rounded
+composition advances the sum threshold by exactly M until a factor point.
+A safe coordinate-block jump exists, but one regime becomes residue-strided
+trial division. These observations redirect the search toward joint interval
+certificates rather than simply increasing the number of sweeps.
+Evidence: `experiments/F286_diophantine_constraint_search/RESULT.md`,
+`RECONSTRUCTION.md`, `ITERATED_RESULT.md`, `ITERATED_output.json`, and `FAST_FORWARD.md`.
