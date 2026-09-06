@@ -143,11 +143,18 @@ inspect current load and memory pressure, and run a small pilot. Keep the local
 same resource checks and a successful pilot. Numerical evidence guides the
 research; it does not replace proof.
 
-Use public sources for mathematical background, named theorems, and checking
-related mechanisms. Prefer original papers and exact statements. Do not search
-for a ready-made solution to this exact target or benchmark. Community opinions
-about difficulty are not mathematical evidence, and unfamiliar terminology is
-not evidence of novelty.
+The route's Astra states its own question or tentative mechanism before
+consulting related work. Check existing local references first: the paper index
+at `.knowledge/INDEX.md`, then `rg` on paper Markdown to locate relevant sections.
+Use focused web searches to fill gaps and check recent results, mechanisms, and
+tools, including work on this target. Use `how-to-download-ref` when full text
+is needed but missing locally.
+
+Prefer original papers. Check the assumptions and critical mathematical steps
+used from retrieved results. Community opinions about difficulty are not
+mathematical evidence, and unfamiliar terminology is not evidence of novelty.
+Record useful mathematical insights in `notes/Progress.md`, citing the source
+paper and theorem or section.
 
 ## Evidence and promotion
 
@@ -217,8 +224,11 @@ the question or exploring a materially different route. Honor user pauses,
 stops, and budgets. Mark the goal complete only when `STATEMENT.md` is met.
 
 After each substantive cycle, refresh `research/STATE.md` with the current
-question, latest result, next action, and unfinished tasks. On pause or stop,
-leave a clear restart point.
+question, latest result, next action, and unfinished tasks. State the mathematical
+advance: a derivation, testable conjecture, discriminating experiment, or concrete
+gap. A literature summary alone is not mathematical progress. If there is no
+advance, record that honestly and adjust the next step. On pause or stop, leave
+a clear restart point.
 
 Create local Git checkpoint commits after coherent substantive research changes.
 Do not push, rewrite history, or publish without explicit user authorization.
