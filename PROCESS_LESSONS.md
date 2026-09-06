@@ -1,5 +1,13 @@
 # Process lessons
 
+- Use a short navigation catalog and load exact statements by stable ID. A
+  heading is a relevance hint, not the scope of a theorem.
+- Separate route identifiers from experiment identifiers. Preserve old labels
+  with their source paths; matching numeric prefixes is not a valid mapping.
+- Give discovery runs clear questions and resource budgets. Require full proof
+  review when promoting conclusions, rather than making a finished fast
+  algorithm a prerequisite for searching for its structure.
+
 - State the public source, the decoder, and the final missing lemma as separate
   items before an experiment starts.
 - Prove useful probability and evaluation cost separately. A large pool of good

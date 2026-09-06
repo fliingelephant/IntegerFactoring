@@ -1,0 +1,29 @@
+F218-D01 remote pre-run resource check
+Command: ssh seetacloud 'hostname; date -u; nproc; uptime; free -h; df -h /tmp; ps -eo pid,pcpu,pmem,rss,comm --sort=-pcpu | head -n 12'
+
+autodl-container-d9694eab60-f7a6b268
+Wed Aug 12 21:08:15 UTC 2026
+32
+ 05:08:15 up 600 days,  9:14,  0 users,  load average: 57.67, 57.92, 57.16
+               total        used        free      shared  buff/cache   available
+Mem:           503Gi       127Gi       115Gi       4.0Gi       260Gi       367Gi
+Swap:             0B          0B          0B
+Filesystem      Size  Used Avail Use% Mounted on
+overlay          30G  8.5G   22G  29% /
+   PID %CPU %MEM   RSS COMMAND
+  2967  3.0  0.0 10600 sshd
+   960  1.9  0.0 17644 supervisord
+   980  0.1  0.0 85368 autopanel
+     1  0.0  0.0  3332 bash
+   975  0.0  0.0  9464 sshd
+   978  0.0  0.0 99580 jupyter-lab
+   979  0.0  0.0 17176 proxy
+   981  0.0  0.0 79792 tensorboard
+   984  0.0  0.0 17628 proxy
+  1066  0.0  0.0  8408 server
+  2978  0.0  0.0  3440 bash
+
+Assessment: the host load average exceeds its 32 visible CPUs, but the
+container process list is idle and 367 GiB is available.  The planned job
+uses one Python process, about 150 MB peak memory, and no GPU.  Run it with
+`nice -n 10` so it yields to existing CPU work.

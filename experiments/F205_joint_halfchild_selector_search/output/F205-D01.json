@@ -1,0 +1,4985 @@
+{
+  "cohorts": {
+    "holdout_bank_success": 56,
+    "holdout_public_easy_gcdE": 0,
+    "primary_holdout": 2444,
+    "primary_train": 4026,
+    "train_bank_success": 974,
+    "train_public_easy_gcdE": 0,
+    "transition_certificate_kinds": {
+      "frozen": {
+        "power_gcd": 1
+      },
+      "holdout": {
+        "Nminus1_gcd": 3,
+        "base_gcd": 1,
+        "power_gcd": 52
+      },
+      "small": {
+        "Nminus1_gcd": 333,
+        "Nminus1_plus_gcd": 387,
+        "base_gcd": 36,
+        "base_shift_gcd": 199,
+        "factor_first_strip": 3,
+        "power_gcd": 2847
+      },
+      "train": {
+        "Nminus1_gcd": 64,
+        "Nminus1_plus_gcd": 48,
+        "base_gcd": 1,
+        "base_shift_gcd": 17,
+        "factor_first_strip": 1,
+        "power_gcd": 843
+      }
+    }
+  },
+  "elapsed_seconds": 146.672,
+  "finite_evidence_only": true,
+  "frozen_2627": {
+    "B": 51,
+    "E": 26,
+    "K": 1313,
+    "M": 2626,
+    "N": 2627,
+    "factor_E": {
+      "2": 1,
+      "13": 1
+    },
+    "factor_K": {
+      "13": 1,
+      "101": 1
+    },
+    "labels": {
+      "K_has_split_prime": false,
+      "chi4_p": 1,
+      "common_order_capacity": 2,
+      "d": 6,
+      "d_supported_by_2KE": false,
+      "factor_d": {
+        "2": 1,
+        "3": 1
+      },
+      "full_twisted_A_N": -2660,
+      "mixed_class_principal": false,
+      "next_inverse_bit": 0,
+      "p": 37,
+      "q": 71,
+      "supported_common_part": 2,
+      "twisted_core": -34
+    },
+    "mixed_norm": null,
+    "p": 37,
+    "q": 71,
+    "transition": {
+      "certificate": {
+        "base": "5",
+        "exponent": "K.phi",
+        "kind": "power_gcd",
+        "sign": -1
+      },
+      "factor": 71,
+      "global_returns": 0,
+      "max_common_order": 1
+    }
+  },
+  "generation": {
+    "holdout_attempts": 4817,
+    "holdout_count": 2500,
+    "holdout_factor_bits": [
+      18,
+      23
+    ],
+    "holdout_seed": 20502,
+    "small_exhaustive_count": 5570,
+    "train_attempts": 10092,
+    "train_count": 5000,
+    "train_factor_bits": [
+      12,
+      17
+    ],
+    "train_seed": 20501
+  },
+  "rates": {
+    "K_has_split_prime": 0.7125698110320557,
+    "d_supported_by_2KE": 0.25973529186749295,
+    "mixed_class_principal": 0.12657256827247623,
+    "ordinary_common_capacity_le_2": 0.6766123479458342
+  },
+  "run_id": "F205-D01",
+  "runtime_versions": {
+    "numpy": "2.4.6",
+    "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+    "sympy": "1.14.0"
+  },
+  "selector": {
+    "holdout": {
+      "accuracy": 0.4946808510638298,
+      "balanced_accuracy": 0.49432926175934855,
+      "errors": 1235,
+      "label_ones": 1224,
+      "n": 2444,
+      "smallest_error": {
+        "N": 21960191263,
+        "label": 0,
+        "p": 135257,
+        "prediction": 1,
+        "q": 162359
+      },
+      "stored_errors": [
+        {
+          "N": 21960191263,
+          "label": 0,
+          "p": 135257,
+          "prediction": 1,
+          "q": 162359
+        },
+        {
+          "N": 22290863531,
+          "label": 1,
+          "p": 133519,
+          "prediction": 0,
+          "q": 166949
+        },
+        {
+          "N": 23306720471,
+          "label": 0,
+          "p": 132137,
+          "prediction": 1,
+          "q": 176383
+        },
+        {
+          "N": 24226253003,
+          "label": 0,
+          "p": 136033,
+          "prediction": 1,
+          "q": 178091
+        },
+        {
+          "N": 24583861699,
+          "label": 0,
+          "p": 133013,
+          "prediction": 1,
+          "q": 184823
+        },
+        {
+          "N": 24660618887,
+          "label": 0,
+          "p": 154613,
+          "prediction": 1,
+          "q": 159499
+        },
+        {
+          "N": 25038515143,
+          "label": 0,
+          "p": 138433,
+          "prediction": 1,
+          "q": 180871
+        },
+        {
+          "N": 25530936947,
+          "label": 0,
+          "p": 158993,
+          "prediction": 1,
+          "q": 160579
+        },
+        {
+          "N": 25950521747,
+          "label": 0,
+          "p": 141649,
+          "prediction": 1,
+          "q": 183203
+        },
+        {
+          "N": 26172873739,
+          "label": 0,
+          "p": 143909,
+          "prediction": 1,
+          "q": 181871
+        },
+        {
+          "N": 26383475303,
+          "label": 0,
+          "p": 156253,
+          "prediction": 1,
+          "q": 168851
+        },
+        {
+          "N": 26851881223,
+          "label": 0,
+          "p": 157649,
+          "prediction": 1,
+          "q": 170327
+        },
+        {
+          "N": 26934476467,
+          "label": 1,
+          "p": 138071,
+          "prediction": 0,
+          "q": 195077
+        },
+        {
+          "N": 27139067807,
+          "label": 1,
+          "p": 151303,
+          "prediction": 0,
+          "q": 179369
+        },
+        {
+          "N": 27318487627,
+          "label": 1,
+          "p": 164299,
+          "prediction": 0,
+          "q": 166273
+        },
+        {
+          "N": 27796120003,
+          "label": 0,
+          "p": 151733,
+          "prediction": 1,
+          "q": 183191
+        },
+        {
+          "N": 28085853283,
+          "label": 0,
+          "p": 137993,
+          "prediction": 1,
+          "q": 203531
+        },
+        {
+          "N": 28122370247,
+          "label": 0,
+          "p": 137653,
+          "prediction": 1,
+          "q": 204299
+        },
+        {
+          "N": 28267273219,
+          "label": 0,
+          "p": 132661,
+          "prediction": 1,
+          "q": 213079
+        },
+        {
+          "N": 28451972027,
+          "label": 0,
+          "p": 148513,
+          "prediction": 1,
+          "q": 191579
+        },
+        {
+          "N": 28472799683,
+          "label": 0,
+          "p": 149173,
+          "prediction": 1,
+          "q": 190871
+        },
+        {
+          "N": 29216498999,
+          "label": 0,
+          "p": 144829,
+          "prediction": 1,
+          "q": 201731
+        },
+        {
+          "N": 29353245379,
+          "label": 0,
+          "p": 155797,
+          "prediction": 1,
+          "q": 188407
+        },
+        {
+          "N": 29628435019,
+          "label": 0,
+          "p": 154277,
+          "prediction": 1,
+          "q": 192047
+        },
+        {
+          "N": 29751736823,
+          "label": 0,
+          "p": 171877,
+          "prediction": 1,
+          "q": 173099
+        }
+      ]
+    },
+    "number_of_predeclared_oriented_rules": 1768,
+    "qualification": "Any error refutes universality of the exact rule. Finite perfection would remain discovery evidence only.",
+    "selected_rule": {
+      "feature": "E.largest_p8_7",
+      "flip": 1,
+      "kind": "binary"
+    },
+    "top_twenty_by_train": [
+      {
+        "holdout": {
+          "accuracy": 0.4946808510638298,
+          "balanced_accuracy": 0.49432926175934855,
+          "errors": 1235,
+          "label_ones": 1224,
+          "n": 2444,
+          "smallest_error": {
+            "N": 21960191263,
+            "label": 0,
+            "p": 135257,
+            "prediction": 1,
+            "q": 162359
+          },
+          "stored_errors": [
+            {
+              "N": 21960191263,
+              "label": 0,
+              "p": 135257,
+              "prediction": 1,
+              "q": 162359
+            },
+            {
+              "N": 22290863531,
+              "label": 1,
+              "p": 133519,
+              "prediction": 0,
+              "q": 166949
+            },
+            {
+              "N": 23306720471,
+              "label": 0,
+              "p": 132137,
+              "prediction": 1,
+              "q": 176383
+            },
+            {
+              "N": 24226253003,
+              "label": 0,
+              "p": 136033,
+              "prediction": 1,
+              "q": 178091
+            },
+            {
+              "N": 24583861699,
+              "label": 0,
+              "p": 133013,
+              "prediction": 1,
+              "q": 184823
+            },
+            {
+              "N": 24660618887,
+              "label": 0,
+              "p": 154613,
+              "prediction": 1,
+              "q": 159499
+            },
+            {
+              "N": 25038515143,
+              "label": 0,
+              "p": 138433,
+              "prediction": 1,
+              "q": 180871
+            },
+            {
+              "N": 25530936947,
+              "label": 0,
+              "p": 158993,
+              "prediction": 1,
+              "q": 160579
+            },
+            {
+              "N": 25950521747,
+              "label": 0,
+              "p": 141649,
+              "prediction": 1,
+              "q": 183203
+            },
+            {
+              "N": 26172873739,
+              "label": 0,
+              "p": 143909,
+              "prediction": 1,
+              "q": 181871
+            },
+            {
+              "N": 26383475303,
+              "label": 0,
+              "p": 156253,
+              "prediction": 1,
+              "q": 168851
+            },
+            {
+              "N": 26851881223,
+              "label": 0,
+              "p": 157649,
+              "prediction": 1,
+              "q": 170327
+            },
+            {
+              "N": 26934476467,
+              "label": 1,
+              "p": 138071,
+              "prediction": 0,
+              "q": 195077
+            },
+            {
+              "N": 27139067807,
+              "label": 1,
+              "p": 151303,
+              "prediction": 0,
+              "q": 179369
+            },
+            {
+              "N": 27318487627,
+              "label": 1,
+              "p": 164299,
+              "prediction": 0,
+              "q": 166273
+            },
+            {
+              "N": 27796120003,
+              "label": 0,
+              "p": 151733,
+              "prediction": 1,
+              "q": 183191
+            },
+            {
+              "N": 28085853283,
+              "label": 0,
+              "p": 137993,
+              "prediction": 1,
+              "q": 203531
+            },
+            {
+              "N": 28122370247,
+              "label": 0,
+              "p": 137653,
+              "prediction": 1,
+              "q": 204299
+            },
+            {
+              "N": 28267273219,
+              "label": 0,
+              "p": 132661,
+              "prediction": 1,
+              "q": 213079
+            },
+            {
+              "N": 28451972027,
+              "label": 0,
+              "p": 148513,
+              "prediction": 1,
+              "q": 191579
+            },
+            {
+              "N": 28472799683,
+              "label": 0,
+              "p": 149173,
+              "prediction": 1,
+              "q": 190871
+            },
+            {
+              "N": 29216498999,
+              "label": 0,
+              "p": 144829,
+              "prediction": 1,
+              "q": 201731
+            },
+            {
+              "N": 29353245379,
+              "label": 0,
+              "p": 155797,
+              "prediction": 1,
+              "q": 188407
+            },
+            {
+              "N": 29628435019,
+              "label": 0,
+              "p": 154277,
+              "prediction": 1,
+              "q": 192047
+            },
+            {
+              "N": 29751736823,
+              "label": 0,
+              "p": 171877,
+              "prediction": 1,
+              "q": 173099
+            }
+          ]
+        },
+        "rule": {
+          "feature": "E.largest_p8_7",
+          "flip": 1,
+          "kind": "binary"
+        },
+        "train": {
+          "accuracy": 0.5330352707401887,
+          "balanced_accuracy": 0.524686801306744,
+          "errors": 1880,
+          "label_ones": 2089,
+          "n": 4026,
+          "smallest_error": {
+            "N": 4602067,
+            "label": 0,
+            "p": 2089,
+            "prediction": 1,
+            "q": 2203
+          }
+        }
+      },
+      {
+        "holdout": {
+          "accuracy": 0.5016366612111293,
+          "balanced_accuracy": 0.50150675024108,
+          "errors": 1218,
+          "label_ones": 1224,
+          "n": 2444,
+          "smallest_error": {
+            "N": 17989687139,
+            "label": 1,
+            "p": 132047,
+            "prediction": 0,
+            "q": 136237
+          },
+          "stored_errors": [
+            {
+              "N": 17989687139,
+              "label": 1,
+              "p": 132047,
+              "prediction": 0,
+              "q": 136237
+            },
+            {
+              "N": 18973004899,
+              "label": 1,
+              "p": 135019,
+              "prediction": 0,
+              "q": 140521
+            },
+            {
+              "N": 21371322799,
+              "label": 1,
+              "p": 142391,
+              "prediction": 0,
+              "q": 150089
+            },
+            {
+              "N": 21740062283,
+              "label": 0,
+              "p": 137273,
+              "prediction": 1,
+              "q": 158371
+            },
+            {
+              "N": 21960191263,
+              "label": 0,
+              "p": 135257,
+              "prediction": 1,
+              "q": 162359
+            },
+            {
+              "N": 22290863531,
+              "label": 1,
+              "p": 133519,
+              "prediction": 0,
+              "q": 166949
+            },
+            {
+              "N": 23306720471,
+              "label": 0,
+              "p": 132137,
+              "prediction": 1,
+              "q": 176383
+            },
+            {
+              "N": 24226253003,
+              "label": 0,
+              "p": 136033,
+              "prediction": 1,
+              "q": 178091
+            },
+            {
+              "N": 24583861699,
+              "label": 0,
+              "p": 133013,
+              "prediction": 1,
+              "q": 184823
+            },
+            {
+              "N": 24660618887,
+              "label": 0,
+              "p": 154613,
+              "prediction": 1,
+              "q": 159499
+            },
+            {
+              "N": 25038515143,
+              "label": 0,
+              "p": 138433,
+              "prediction": 1,
+              "q": 180871
+            },
+            {
+              "N": 25530936947,
+              "label": 0,
+              "p": 158993,
+              "prediction": 1,
+              "q": 160579
+            },
+            {
+              "N": 25950521747,
+              "label": 0,
+              "p": 141649,
+              "prediction": 1,
+              "q": 183203
+            },
+            {
+              "N": 26172873739,
+              "label": 0,
+              "p": 143909,
+              "prediction": 1,
+              "q": 181871
+            },
+            {
+              "N": 26383475303,
+              "label": 0,
+              "p": 156253,
+              "prediction": 1,
+              "q": 168851
+            },
+            {
+              "N": 26851881223,
+              "label": 0,
+              "p": 157649,
+              "prediction": 1,
+              "q": 170327
+            },
+            {
+              "N": 26934476467,
+              "label": 1,
+              "p": 138071,
+              "prediction": 0,
+              "q": 195077
+            },
+            {
+              "N": 27139067807,
+              "label": 1,
+              "p": 151303,
+              "prediction": 0,
+              "q": 179369
+            },
+            {
+              "N": 27318487627,
+              "label": 1,
+              "p": 164299,
+              "prediction": 0,
+              "q": 166273
+            },
+            {
+              "N": 27796120003,
+              "label": 0,
+              "p": 151733,
+              "prediction": 1,
+              "q": 183191
+            },
+            {
+              "N": 28085853283,
+              "label": 0,
+              "p": 137993,
+              "prediction": 1,
+              "q": 203531
+            },
+            {
+              "N": 28122370247,
+              "label": 0,
+              "p": 137653,
+              "prediction": 1,
+              "q": 204299
+            },
+            {
+              "N": 28267273219,
+              "label": 0,
+              "p": 132661,
+              "prediction": 1,
+              "q": 213079
+            },
+            {
+              "N": 28451972027,
+              "label": 0,
+              "p": 148513,
+              "prediction": 1,
+              "q": 191579
+            },
+            {
+              "N": 29216498999,
+              "label": 0,
+              "p": 144829,
+              "prediction": 1,
+              "q": 201731
+            }
+          ]
+        },
+        "rule": {
+          "feature": "E.count_p8_7_parity",
+          "flip": 1,
+          "kind": "binary"
+        },
+        "train": {
+          "accuracy": 0.5283159463487332,
+          "balanced_accuracy": 0.5241773352217642,
+          "errors": 1899,
+          "label_ones": 2089,
+          "n": 4026,
+          "smallest_error": {
+            "N": 4602067,
+            "label": 0,
+            "p": 2089,
+            "prediction": 1,
+            "q": 2203
+          }
+        }
+      },
+      {
+        "holdout": {
+          "accuracy": 0.4979541734860884,
+          "balanced_accuracy": 0.49794948033858355,
+          "errors": 1227,
+          "label_ones": 1224,
+          "n": 2444,
+          "smallest_error": {
+            "N": 17989687139,
+            "label": 1,
+            "p": 132047,
+            "prediction": 0,
+            "q": 136237
+          },
+          "stored_errors": [
+            {
+              "N": 17989687139,
+              "label": 1,
+              "p": 132047,
+              "prediction": 0,
+              "q": 136237
+            },
+            {
+              "N": 18973004899,
+              "label": 1,
+              "p": 135019,
+              "prediction": 0,
+              "q": 140521
+            },
+            {
+              "N": 21371322799,
+              "label": 1,
+              "p": 142391,
+              "prediction": 0,
+              "q": 150089
+            },
+            {
+              "N": 21960191263,
+              "label": 0,
+              "p": 135257,
+              "prediction": 1,
+              "q": 162359
+            },
+            {
+              "N": 22290863531,
+              "label": 1,
+              "p": 133519,
+              "prediction": 0,
+              "q": 166949
+            },
+            {
+              "N": 23306720471,
+              "label": 0,
+              "p": 132137,
+              "prediction": 1,
+              "q": 176383
+            },
+            {
+              "N": 24226253003,
+              "label": 0,
+              "p": 136033,
+              "prediction": 1,
+              "q": 178091
+            },
+            {
+              "N": 24583861699,
+              "label": 0,
+              "p": 133013,
+              "prediction": 1,
+              "q": 184823
+            },
+            {
+              "N": 24660618887,
+              "label": 0,
+              "p": 154613,
+              "prediction": 1,
+              "q": 159499
+            },
+            {
+              "N": 25038515143,
+              "label": 0,
+              "p": 138433,
+              "prediction": 1,
+              "q": 180871
+            },
+            {
+              "N": 25530936947,
+              "label": 0,
+              "p": 158993,
+              "prediction": 1,
+              "q": 160579
+            },
+            {
+              "N": 25950521747,
+              "label": 0,
+              "p": 141649,
+              "prediction": 1,
+              "q": 183203
+            },
+            {
+              "N": 26172873739,
+              "label": 0,
+              "p": 143909,
+              "prediction": 1,
+              "q": 181871
+            },
+            {
+              "N": 26383475303,
+              "label": 0,
+              "p": 156253,
+              "prediction": 1,
+              "q": 168851
+            },
+            {
+              "N": 26851881223,
+              "label": 0,
+              "p": 157649,
+              "prediction": 1,
+              "q": 170327
+            },
+            {
+              "N": 26934476467,
+              "label": 1,
+              "p": 138071,
+              "prediction": 0,
+              "q": 195077
+            },
+            {
+              "N": 27139067807,
+              "label": 1,
+              "p": 151303,
+              "prediction": 0,
+              "q": 179369
+            },
+            {
+              "N": 27318487627,
+              "label": 1,
+              "p": 164299,
+              "prediction": 0,
+              "q": 166273
+            },
+            {
+              "N": 27796120003,
+              "label": 0,
+              "p": 151733,
+              "prediction": 1,
+              "q": 183191
+            },
+            {
+              "N": 28085853283,
+              "label": 0,
+              "p": 137993,
+              "prediction": 1,
+              "q": 203531
+            },
+            {
+              "N": 28122370247,
+              "label": 0,
+              "p": 137653,
+              "prediction": 1,
+              "q": 204299
+            },
+            {
+              "N": 28267273219,
+              "label": 0,
+              "p": 132661,
+              "prediction": 1,
+              "q": 213079
+            },
+            {
+              "N": 28451972027,
+              "label": 0,
+              "p": 148513,
+              "prediction": 1,
+              "q": 191579
+            },
+            {
+              "N": 29216498999,
+              "label": 0,
+              "p": 144829,
+              "prediction": 1,
+              "q": 201731
+            },
+            {
+              "N": 29353245379,
+              "label": 0,
+              "p": 155797,
+              "prediction": 1,
+              "q": 188407
+            }
+          ]
+        },
+        "rule": {
+          "feature": "E.count_p8_7",
+          "flip": 1,
+          "kind": "stump",
+          "quantile": 0.1,
+          "threshold": 0.0
+        },
+        "train": {
+          "accuracy": 0.526080476900149,
+          "balanced_accuracy": 0.5237323710277277,
+          "errors": 1908,
+          "label_ones": 2089,
+          "n": 4026,
+          "smallest_error": {
+            "N": 4602067,
+            "label": 0,
+            "p": 2089,
+            "prediction": 1,
+            "q": 2203
+          }
+        }
+      },
+      {
+        "holdout": {
+          "accuracy": 0.4979541734860884,
+          "balanced_accuracy": 0.49794948033858355,
+          "errors": 1227,
+          "label_ones": 1224,
+          "n": 2444,
+          "smallest_error": {
+            "N": 17989687139,
+            "label": 1,
+            "p": 132047,
+            "prediction": 0,
+            "q": 136237
+          },
+          "stored_errors": [
+            {
+              "N": 17989687139,
+              "label": 1,
+              "p": 132047,
+              "prediction": 0,
+              "q": 136237
+            },
+            {
+              "N": 18973004899,
+              "label": 1,
+              "p": 135019,
+              "prediction": 0,
+              "q": 140521
+            },
+            {
+              "N": 21371322799,
+              "label": 1,
+              "p": 142391,
+              "prediction": 0,
+              "q": 150089
+            },
+            {
+              "N": 21960191263,
+              "label": 0,
+              "p": 135257,
+              "prediction": 1,
+              "q": 162359
+            },
+            {
+              "N": 22290863531,
+              "label": 1,
+              "p": 133519,
+              "prediction": 0,
+              "q": 166949
+            },
+            {
+              "N": 23306720471,
+              "label": 0,
+              "p": 132137,
+              "prediction": 1,
+              "q": 176383
+            },
+            {
+              "N": 24226253003,
+              "label": 0,
+              "p": 136033,
+              "prediction": 1,
+              "q": 178091
+            },
+            {
+              "N": 24583861699,
+              "label": 0,
+              "p": 133013,
+              "prediction": 1,
+              "q": 184823
+            },
+            {
+              "N": 24660618887,
+              "label": 0,
+              "p": 154613,
+              "prediction": 1,
+              "q": 159499
+            },
+            {
+              "N": 25038515143,
+              "label": 0,
+              "p": 138433,
+              "prediction": 1,
+              "q": 180871
+            },
+            {
+              "N": 25530936947,
+              "label": 0,
+              "p": 158993,
+              "prediction": 1,
+              "q": 160579
+            },
+            {
+              "N": 25950521747,
+              "label": 0,
+              "p": 141649,
+              "prediction": 1,
+              "q": 183203
+            },
+            {
+              "N": 26172873739,
+              "label": 0,
+              "p": 143909,
+              "prediction": 1,
+              "q": 181871
+            },
+            {
+              "N": 26383475303,
+              "label": 0,
+              "p": 156253,
+              "prediction": 1,
+              "q": 168851
+            },
+            {
+              "N": 26851881223,
+              "label": 0,
+              "p": 157649,
+              "prediction": 1,
+              "q": 170327
+            },
+            {
+              "N": 26934476467,
+              "label": 1,
+              "p": 138071,
+              "prediction": 0,
+              "q": 195077
+            },
+            {
+              "N": 27139067807,
+              "label": 1,
+              "p": 151303,
+              "prediction": 0,
+              "q": 179369
+            },
+            {
+              "N": 27318487627,
+              "label": 1,
+              "p": 164299,
+              "prediction": 0,
+              "q": 166273
+            },
+            {
+              "N": 27796120003,
+              "label": 0,
+              "p": 151733,
+              "prediction": 1,
+              "q": 183191
+            },
+            {
+              "N": 28085853283,
+              "label": 0,
+              "p": 137993,
+              "prediction": 1,
+              "q": 203531
+            },
+            {
+              "N": 28122370247,
+              "label": 0,
+              "p": 137653,
+              "prediction": 1,
+              "q": 204299
+            },
+            {
+              "N": 28267273219,
+              "label": 0,
+              "p": 132661,
+              "prediction": 1,
+              "q": 213079
+            },
+            {
+              "N": 28451972027,
+              "label": 0,
+              "p": 148513,
+              "prediction": 1,
+              "q": 191579
+            },
+            {
+              "N": 29216498999,
+              "label": 0,
+              "p": 144829,
+              "prediction": 1,
+              "q": 201731
+            },
+            {
+              "N": 29353245379,
+              "label": 0,
+              "p": 155797,
+              "prediction": 1,
+              "q": 188407
+            }
+          ]
+        },
+        "rule": {
+          "feature": "E.count_p8_7",
+          "flip": 1,
+          "kind": "stump",
+          "quantile": 0.25,
+          "threshold": 0.0
+        },
+        "train": {
+          "accuracy": 0.526080476900149,
+          "balanced_accuracy": 0.5237323710277277,
+          "errors": 1908,
+          "label_ones": 2089,
+          "n": 4026,
+          "smallest_error": {
+            "N": 4602067,
+            "label": 0,
+            "p": 2089,
+            "prediction": 1,
+            "q": 2203
+          }
+        }
+      },
+      {
+        "holdout": {
+          "accuracy": 0.4979541734860884,
+          "balanced_accuracy": 0.49794948033858355,
+          "errors": 1227,
+          "label_ones": 1224,
+          "n": 2444,
+          "smallest_error": {
+            "N": 17989687139,
+            "label": 1,
+            "p": 132047,
+            "prediction": 0,
+            "q": 136237
+          },
+          "stored_errors": [
+            {
+              "N": 17989687139,
+              "label": 1,
+              "p": 132047,
+              "prediction": 0,
+              "q": 136237
+            },
+            {
+              "N": 18973004899,
+              "label": 1,
+              "p": 135019,
+              "prediction": 0,
+              "q": 140521
+            },
+            {
+              "N": 21371322799,
+              "label": 1,
+              "p": 142391,
+              "prediction": 0,
+              "q": 150089
+            },
+            {
+              "N": 21960191263,
+              "label": 0,
+              "p": 135257,
+              "prediction": 1,
+              "q": 162359
+            },
+            {
+              "N": 22290863531,
+              "label": 1,
+              "p": 133519,
+              "prediction": 0,
+              "q": 166949
+            },
+            {
+              "N": 23306720471,
+              "label": 0,
+              "p": 132137,
+              "prediction": 1,
+              "q": 176383
+            },
+            {
+              "N": 24226253003,
+              "label": 0,
+              "p": 136033,
+              "prediction": 1,
+              "q": 178091
+            },
+            {
+              "N": 24583861699,
+              "label": 0,
+              "p": 133013,
+              "prediction": 1,
+              "q": 184823
+            },
+            {
+              "N": 24660618887,
+              "label": 0,
+              "p": 154613,
+              "prediction": 1,
+              "q": 159499
+            },
+            {
+              "N": 25038515143,
+              "label": 0,
+              "p": 138433,
+              "prediction": 1,
+              "q": 180871
+            },
+            {
+              "N": 25530936947,
+              "label": 0,
+              "p": 158993,
+              "prediction": 1,
+              "q": 160579
+            },
+            {
+              "N": 25950521747,
+              "label": 0,
+              "p": 141649,
+              "prediction": 1,
+              "q": 183203
+            },
+            {
+              "N": 26172873739,
+              "label": 0,
+              "p": 143909,
+              "prediction": 1,
+              "q": 181871
+            },
+            {
+              "N": 26383475303,
+              "label": 0,
+              "p": 156253,
+              "prediction": 1,
+              "q": 168851
+            },
+            {
+              "N": 26851881223,
+              "label": 0,
+              "p": 157649,
+              "prediction": 1,
+              "q": 170327
+            },
+            {
+              "N": 26934476467,
+              "label": 1,
+              "p": 138071,
+              "prediction": 0,
+              "q": 195077
+            },
+            {
+              "N": 27139067807,
+              "label": 1,
+              "p": 151303,
+              "prediction": 0,
+              "q": 179369
+            },
+            {
+              "N": 27318487627,
+              "label": 1,
+              "p": 164299,
+              "prediction": 0,
+              "q": 166273
+            },
+            {
+              "N": 27796120003,
+              "label": 0,
+              "p": 151733,
+              "prediction": 1,
+              "q": 183191
+            },
+            {
+              "N": 28085853283,
+              "label": 0,
+              "p": 137993,
+              "prediction": 1,
+              "q": 203531
+            },
+            {
+              "N": 28122370247,
+              "label": 0,
+              "p": 137653,
+              "prediction": 1,
+              "q": 204299
+            },
+            {
+              "N": 28267273219,
+              "label": 0,
+              "p": 132661,
+              "prediction": 1,
+              "q": 213079
+            },
+            {
+              "N": 28451972027,
+              "label": 0,
+              "p": 148513,
+              "prediction": 1,
+              "q": 191579
+            },
+            {
+              "N": 29216498999,
+              "label": 0,
+              "p": 144829,
+              "prediction": 1,
+              "q": 201731
+            },
+            {
+              "N": 29353245379,
+              "label": 0,
+              "p": 155797,
+              "prediction": 1,
+              "q": 188407
+            }
+          ]
+        },
+        "rule": {
+          "feature": "E.count_p8_7",
+          "flip": 1,
+          "kind": "stump",
+          "quantile": 0.5,
+          "threshold": 0.0
+        },
+        "train": {
+          "accuracy": 0.526080476900149,
+          "balanced_accuracy": 0.5237323710277277,
+          "errors": 1908,
+          "label_ones": 2089,
+          "n": 4026,
+          "smallest_error": {
+            "N": 4602067,
+            "label": 0,
+            "p": 2089,
+            "prediction": 1,
+            "q": 2203
+          }
+        }
+      },
+      {
+        "holdout": {
+          "accuracy": 0.4979541734860884,
+          "balanced_accuracy": 0.49794948033858355,
+          "errors": 1227,
+          "label_ones": 1224,
+          "n": 2444,
+          "smallest_error": {
+            "N": 17989687139,
+            "label": 1,
+            "p": 132047,
+            "prediction": 0,
+            "q": 136237
+          },
+          "stored_errors": [
+            {
+              "N": 17989687139,
+              "label": 1,
+              "p": 132047,
+              "prediction": 0,
+              "q": 136237
+            },
+            {
+              "N": 18973004899,
+              "label": 1,
+              "p": 135019,
+              "prediction": 0,
+              "q": 140521
+            },
+            {
+              "N": 21371322799,
+              "label": 1,
+              "p": 142391,
+              "prediction": 0,
+              "q": 150089
+            },
+            {
+              "N": 21960191263,
+              "label": 0,
+              "p": 135257,
+              "prediction": 1,
+              "q": 162359
+            },
+            {
+              "N": 22290863531,
+              "label": 1,
+              "p": 133519,
+              "prediction": 0,
+              "q": 166949
+            },
+            {
+              "N": 23306720471,
+              "label": 0,
+              "p": 132137,
+              "prediction": 1,
+              "q": 176383
+            },
+            {
+              "N": 24226253003,
+              "label": 0,
+              "p": 136033,
+              "prediction": 1,
+              "q": 178091
+            },
+            {
+              "N": 24583861699,
+              "label": 0,
+              "p": 133013,
+              "prediction": 1,
+              "q": 184823
+            },
+            {
+              "N": 24660618887,
+              "label": 0,
+              "p": 154613,
+              "prediction": 1,
+              "q": 159499
+            },
+            {
+              "N": 25038515143,
+              "label": 0,
+              "p": 138433,
+              "prediction": 1,
+              "q": 180871
+            },
+            {
+              "N": 25530936947,
+              "label": 0,
+              "p": 158993,
+              "prediction": 1,
+              "q": 160579
+            },
+            {
+              "N": 25950521747,
+              "label": 0,
+              "p": 141649,
+              "prediction": 1,
+              "q": 183203
+            },
+            {
+              "N": 26172873739,
+              "label": 0,
+              "p": 143909,
+              "prediction": 1,
+              "q": 181871
+            },
+            {
+              "N": 26383475303,
+              "label": 0,
+              "p": 156253,
+              "prediction": 1,
+              "q": 168851
+            },
+            {
+              "N": 26851881223,
+              "label": 0,
+              "p": 157649,
+              "prediction": 1,
+              "q": 170327
+            },
+            {
+              "N": 26934476467,
+              "label": 1,
+              "p": 138071,
+              "prediction": 0,
+              "q": 195077
+            },
+            {
+              "N": 27139067807,
+              "label": 1,
+              "p": 151303,
+              "prediction": 0,
+              "q": 179369
+            },
+            {
+              "N": 27318487627,
+              "label": 1,
+              "p": 164299,
+              "prediction": 0,
+              "q": 166273
+            },
+            {
+              "N": 27796120003,
+              "label": 0,
+              "p": 151733,
+              "prediction": 1,
+              "q": 183191
+            },
+            {
+              "N": 28085853283,
+              "label": 0,
+              "p": 137993,
+              "prediction": 1,
+              "q": 203531
+            },
+            {
+              "N": 28122370247,
+              "label": 0,
+              "p": 137653,
+              "prediction": 1,
+              "q": 204299
+            },
+            {
+              "N": 28267273219,
+              "label": 0,
+              "p": 132661,
+              "prediction": 1,
+              "q": 213079
+            },
+            {
+              "N": 28451972027,
+              "label": 0,
+              "p": 148513,
+              "prediction": 1,
+              "q": 191579
+            },
+            {
+              "N": 29216498999,
+              "label": 0,
+              "p": 144829,
+              "prediction": 1,
+              "q": 201731
+            },
+            {
+              "N": 29353245379,
+              "label": 0,
+              "p": 155797,
+              "prediction": 1,
+              "q": 188407
+            }
+          ]
+        },
+        "rule": {
+          "feature": "E.has_p8_7",
+          "flip": 1,
+          "kind": "binary"
+        },
+        "train": {
+          "accuracy": 0.526080476900149,
+          "balanced_accuracy": 0.5237323710277277,
+          "errors": 1908,
+          "label_ones": 2089,
+          "n": 4026,
+          "smallest_error": {
+            "N": 4602067,
+            "label": 0,
+            "p": 2089,
+            "prediction": 1,
+            "q": 2203
+          }
+        }
+      },
+      {
+        "holdout": {
+          "accuracy": 0.5057283142389526,
+          "balanced_accuracy": 0.5062627236687024,
+          "errors": 1208,
+          "label_ones": 1224,
+          "n": 2444,
+          "smallest_error": {
+            "N": 17989687139,
+            "label": 1,
+            "p": 132047,
+            "prediction": 0,
+            "q": 136237
+          },
+          "stored_errors": [
+            {
+              "N": 17989687139,
+              "label": 1,
+              "p": 132047,
+              "prediction": 0,
+              "q": 136237
+            },
+            {
+              "N": 18823267147,
+              "label": 1,
+              "p": 134087,
+              "prediction": 0,
+              "q": 140381
+            },
+            {
+              "N": 18973004899,
+              "label": 1,
+              "p": 135019,
+              "prediction": 0,
+              "q": 140521
+            },
+            {
+              "N": 19226180147,
+              "label": 1,
+              "p": 134399,
+              "prediction": 0,
+              "q": 143053
+            },
+            {
+              "N": 19635640159,
+              "label": 1,
+              "p": 139663,
+              "prediction": 0,
+              "q": 140593
+            },
+            {
+              "N": 21158805407,
+              "label": 1,
+              "p": 132103,
+              "prediction": 0,
+              "q": 160169
+            },
+            {
+              "N": 21371322799,
+              "label": 1,
+              "p": 142391,
+              "prediction": 0,
+              "q": 150089
+            },
+            {
+              "N": 22290863531,
+              "label": 1,
+              "p": 133519,
+              "prediction": 0,
+              "q": 166949
+            },
+            {
+              "N": 23306720471,
+              "label": 0,
+              "p": 132137,
+              "prediction": 1,
+              "q": 176383
+            },
+            {
+              "N": 24226253003,
+              "label": 0,
+              "p": 136033,
+              "prediction": 1,
+              "q": 178091
+            },
+            {
+              "N": 25654490791,
+              "label": 1,
+              "p": 136943,
+              "prediction": 0,
+              "q": 187337
+            },
+            {
+              "N": 25754649191,
+              "label": 1,
+              "p": 133979,
+              "prediction": 0,
+              "q": 192229
+            },
+            {
+              "N": 25950521747,
+              "label": 0,
+              "p": 141649,
+              "prediction": 1,
+              "q": 183203
+            },
+            {
+              "N": 26084658199,
+              "label": 1,
+              "p": 140167,
+              "prediction": 0,
+              "q": 186097
+            },
+            {
+              "N": 26777192863,
+              "label": 1,
+              "p": 131111,
+              "prediction": 0,
+              "q": 204233
+            },
+            {
+              "N": 26818491911,
+              "label": 1,
+              "p": 141851,
+              "prediction": 0,
+              "q": 189061
+            },
+            {
+              "N": 26934476467,
+              "label": 1,
+              "p": 138071,
+              "prediction": 0,
+              "q": 195077
+            },
+            {
+              "N": 27139067807,
+              "label": 1,
+              "p": 151303,
+              "prediction": 0,
+              "q": 179369
+            },
+            {
+              "N": 27318487627,
+              "label": 1,
+              "p": 164299,
+              "prediction": 0,
+              "q": 166273
+            },
+            {
+              "N": 27552601963,
+              "label": 1,
+              "p": 154487,
+              "prediction": 0,
+              "q": 178349
+            },
+            {
+              "N": 28451972027,
+              "label": 0,
+              "p": 148513,
+              "prediction": 1,
+              "q": 191579
+            },
+            {
+              "N": 29353245379,
+              "label": 0,
+              "p": 155797,
+              "prediction": 1,
+              "q": 188407
+            },
+            {
+              "N": 30093937259,
+              "label": 0,
+              "p": 140977,
+              "prediction": 1,
+              "q": 213467
+            },
+            {
+              "N": 30341016143,
+              "label": 1,
+              "p": 169483,
+              "prediction": 0,
+              "q": 179021
+            },
+            {
+              "N": 31063461367,
+              "label": 1,
+              "p": 133631,
+              "prediction": 0,
+              "q": 232457
+            }
+          ]
+        },
+        "rule": {
+          "feature": "E.sigma.mod8.0",
+          "flip": 1,
+          "kind": "binary"
+        },
+        "train": {
+          "accuracy": 0.5124192747143567,
+          "balanced_accuracy": 0.5221567702395689,
+          "errors": 1963,
+          "label_ones": 2089,
+          "n": 4026,
+          "smallest_error": {
+            "N": 4602067,
+            "label": 0,
+            "p": 2089,
+            "prediction": 1,
+            "q": 2203
+          }
+        }
+      },
+      {
+        "holdout": {
+          "accuracy": 0.5004091653027823,
+          "balanced_accuracy": 0.5008424408014572,
+          "errors": 1221,
+          "label_ones": 1224,
+          "n": 2444,
+          "smallest_error": {
+            "N": 17989687139,
+            "label": 1,
+            "p": 132047,
+            "prediction": 0,
+            "q": 136237
+          },
+          "stored_errors": [
+            {
+              "N": 17989687139,
+              "label": 1,
+              "p": 132047,
+              "prediction": 0,
+              "q": 136237
+            },
+            {
+              "N": 18823267147,
+              "label": 1,
+              "p": 134087,
+              "prediction": 0,
+              "q": 140381
+            },
+            {
+              "N": 18973004899,
+              "label": 1,
+              "p": 135019,
+              "prediction": 0,
+              "q": 140521
+            },
+            {
+              "N": 19635640159,
+              "label": 1,
+              "p": 139663,
+              "prediction": 0,
+              "q": 140593
+            },
+            {
+              "N": 21158805407,
+              "label": 1,
+              "p": 132103,
+              "prediction": 0,
+              "q": 160169
+            },
+            {
+              "N": 21371322799,
+              "label": 1,
+              "p": 142391,
+              "prediction": 0,
+              "q": 150089
+            },
+            {
+              "N": 21740062283,
+              "label": 0,
+              "p": 137273,
+              "prediction": 1,
+              "q": 158371
+            },
+            {
+              "N": 22290863531,
+              "label": 1,
+              "p": 133519,
+              "prediction": 0,
+              "q": 166949
+            },
+            {
+              "N": 23306720471,
+              "label": 0,
+              "p": 132137,
+              "prediction": 1,
+              "q": 176383
+            },
+            {
+              "N": 24226253003,
+              "label": 0,
+              "p": 136033,
+              "prediction": 1,
+              "q": 178091
+            },
+            {
+              "N": 25654490791,
+              "label": 1,
+              "p": 136943,
+              "prediction": 0,
+              "q": 187337
+            },
+            {
+              "N": 25754649191,
+              "label": 1,
+              "p": 133979,
+              "prediction": 0,
+              "q": 192229
+            },
+            {
+              "N": 25950521747,
+              "label": 0,
+              "p": 141649,
+              "prediction": 1,
+              "q": 183203
+            },
+            {
+              "N": 26084658199,
+              "label": 1,
+              "p": 140167,
+              "prediction": 0,
+              "q": 186097
+            },
+            {
+              "N": 26777192863,
+              "label": 1,
+              "p": 131111,
+              "prediction": 0,
+              "q": 204233
+            },
+            {
+              "N": 26818491911,
+              "label": 1,
+              "p": 141851,
+              "prediction": 0,
+              "q": 189061
+            },
+            {
+              "N": 26934476467,
+              "label": 1,
+              "p": 138071,
+              "prediction": 0,
+              "q": 195077
+            },
+            {
+              "N": 27139067807,
+              "label": 1,
+              "p": 151303,
+              "prediction": 0,
+              "q": 179369
+            },
+            {
+              "N": 27318487627,
+              "label": 1,
+              "p": 164299,
+              "prediction": 0,
+              "q": 166273
+            },
+            {
+              "N": 27552601963,
+              "label": 1,
+              "p": 154487,
+              "prediction": 0,
+              "q": 178349
+            },
+            {
+              "N": 28451972027,
+              "label": 0,
+              "p": 148513,
+              "prediction": 1,
+              "q": 191579
+            },
+            {
+              "N": 29216498999,
+              "label": 0,
+              "p": 144829,
+              "prediction": 1,
+              "q": 201731
+            },
+            {
+              "N": 29353245379,
+              "label": 0,
+              "p": 155797,
+              "prediction": 1,
+              "q": 188407
+            },
+            {
+              "N": 30093937259,
+              "label": 0,
+              "p": 140977,
+              "prediction": 1,
+              "q": 213467
+            },
+            {
+              "N": 30341016143,
+              "label": 1,
+              "p": 169483,
+              "prediction": 0,
+              "q": 179021
+            }
+          ]
+        },
+        "rule": {
+          "feature": "sigma.diff.mod8.0",
+          "flip": 1,
+          "kind": "binary"
+        },
+        "train": {
+          "accuracy": 0.5101838052657724,
+          "balanced_accuracy": 0.5176736416853231,
+          "errors": 1972,
+          "label_ones": 2089,
+          "n": 4026,
+          "smallest_error": {
+            "N": 4602067,
+            "label": 0,
+            "p": 2089,
+            "prediction": 1,
+            "q": 2203
+          }
+        }
+      },
+      {
+        "holdout": {
+          "accuracy": 0.5004091653027823,
+          "balanced_accuracy": 0.5008424408014572,
+          "errors": 1221,
+          "label_ones": 1224,
+          "n": 2444,
+          "smallest_error": {
+            "N": 17989687139,
+            "label": 1,
+            "p": 132047,
+            "prediction": 0,
+            "q": 136237
+          },
+          "stored_errors": [
+            {
+              "N": 17989687139,
+              "label": 1,
+              "p": 132047,
+              "prediction": 0,
+              "q": 136237
+            },
+            {
+              "N": 18823267147,
+              "label": 1,
+              "p": 134087,
+              "prediction": 0,
+              "q": 140381
+            },
+            {
+              "N": 18973004899,
+              "label": 1,
+              "p": 135019,
+              "prediction": 0,
+              "q": 140521
+            },
+            {
+              "N": 19635640159,
+              "label": 1,
+              "p": 139663,
+              "prediction": 0,
+              "q": 140593
+            },
+            {
+              "N": 21158805407,
+              "label": 1,
+              "p": 132103,
+              "prediction": 0,
+              "q": 160169
+            },
+            {
+              "N": 21371322799,
+              "label": 1,
+              "p": 142391,
+              "prediction": 0,
+              "q": 150089
+            },
+            {
+              "N": 21740062283,
+              "label": 0,
+              "p": 137273,
+              "prediction": 1,
+              "q": 158371
+            },
+            {
+              "N": 22290863531,
+              "label": 1,
+              "p": 133519,
+              "prediction": 0,
+              "q": 166949
+            },
+            {
+              "N": 23306720471,
+              "label": 0,
+              "p": 132137,
+              "prediction": 1,
+              "q": 176383
+            },
+            {
+              "N": 24226253003,
+              "label": 0,
+              "p": 136033,
+              "prediction": 1,
+              "q": 178091
+            },
+            {
+              "N": 25654490791,
+              "label": 1,
+              "p": 136943,
+              "prediction": 0,
+              "q": 187337
+            },
+            {
+              "N": 25754649191,
+              "label": 1,
+              "p": 133979,
+              "prediction": 0,
+              "q": 192229
+            },
+            {
+              "N": 25950521747,
+              "label": 0,
+              "p": 141649,
+              "prediction": 1,
+              "q": 183203
+            },
+            {
+              "N": 26084658199,
+              "label": 1,
+              "p": 140167,
+              "prediction": 0,
+              "q": 186097
+            },
+            {
+              "N": 26777192863,
+              "label": 1,
+              "p": 131111,
+              "prediction": 0,
+              "q": 204233
+            },
+            {
+              "N": 26818491911,
+              "label": 1,
+              "p": 141851,
+              "prediction": 0,
+              "q": 189061
+            },
+            {
+              "N": 26934476467,
+              "label": 1,
+              "p": 138071,
+              "prediction": 0,
+              "q": 195077
+            },
+            {
+              "N": 27139067807,
+              "label": 1,
+              "p": 151303,
+              "prediction": 0,
+              "q": 179369
+            },
+            {
+              "N": 27318487627,
+              "label": 1,
+              "p": 164299,
+              "prediction": 0,
+              "q": 166273
+            },
+            {
+              "N": 27552601963,
+              "label": 1,
+              "p": 154487,
+              "prediction": 0,
+              "q": 178349
+            },
+            {
+              "N": 28451972027,
+              "label": 0,
+              "p": 148513,
+              "prediction": 1,
+              "q": 191579
+            },
+            {
+              "N": 29216498999,
+              "label": 0,
+              "p": 144829,
+              "prediction": 1,
+              "q": 201731
+            },
+            {
+              "N": 29353245379,
+              "label": 0,
+              "p": 155797,
+              "prediction": 1,
+              "q": 188407
+            },
+            {
+              "N": 30093937259,
+              "label": 0,
+              "p": 140977,
+              "prediction": 1,
+              "q": 213467
+            },
+            {
+              "N": 30341016143,
+              "label": 1,
+              "p": 169483,
+              "prediction": 0,
+              "q": 179021
+            }
+          ]
+        },
+        "rule": {
+          "feature": "v2_sigma_diff",
+          "flip": 1,
+          "kind": "stump",
+          "quantile": 0.25,
+          "threshold": 2.0
+        },
+        "train": {
+          "accuracy": 0.5101838052657724,
+          "balanced_accuracy": 0.5176736416853231,
+          "errors": 1972,
+          "label_ones": 2089,
+          "n": 4026,
+          "smallest_error": {
+            "N": 4602067,
+            "label": 0,
+            "p": 2089,
+            "prediction": 1,
+            "q": 2203
+          }
+        }
+      },
+      {
+        "holdout": {
+          "accuracy": 0.5090016366612111,
+          "balanced_accuracy": 0.5096271295403407,
+          "errors": 1200,
+          "label_ones": 1224,
+          "n": 2444,
+          "smallest_error": {
+            "N": 17989687139,
+            "label": 1,
+            "p": 132047,
+            "prediction": 0,
+            "q": 136237
+          },
+          "stored_errors": [
+            {
+              "N": 17989687139,
+              "label": 1,
+              "p": 132047,
+              "prediction": 0,
+              "q": 136237
+            },
+            {
+              "N": 18823267147,
+              "label": 1,
+              "p": 134087,
+              "prediction": 0,
+              "q": 140381
+            },
+            {
+              "N": 18973004899,
+              "label": 1,
+              "p": 135019,
+              "prediction": 0,
+              "q": 140521
+            },
+            {
+              "N": 19226180147,
+              "label": 1,
+              "p": 134399,
+              "prediction": 0,
+              "q": 143053
+            },
+            {
+              "N": 19635640159,
+              "label": 1,
+              "p": 139663,
+              "prediction": 0,
+              "q": 140593
+            },
+            {
+              "N": 21158805407,
+              "label": 1,
+              "p": 132103,
+              "prediction": 0,
+              "q": 160169
+            },
+            {
+              "N": 21371322799,
+              "label": 1,
+              "p": 142391,
+              "prediction": 0,
+              "q": 150089
+            },
+            {
+              "N": 22290863531,
+              "label": 1,
+              "p": 133519,
+              "prediction": 0,
+              "q": 166949
+            },
+            {
+              "N": 23306720471,
+              "label": 0,
+              "p": 132137,
+              "prediction": 1,
+              "q": 176383
+            },
+            {
+              "N": 24226253003,
+              "label": 0,
+              "p": 136033,
+              "prediction": 1,
+              "q": 178091
+            },
+            {
+              "N": 25654490791,
+              "label": 1,
+              "p": 136943,
+              "prediction": 0,
+              "q": 187337
+            },
+            {
+              "N": 25754649191,
+              "label": 1,
+              "p": 133979,
+              "prediction": 0,
+              "q": 192229
+            },
+            {
+              "N": 26084658199,
+              "label": 1,
+              "p": 140167,
+              "prediction": 0,
+              "q": 186097
+            },
+            {
+              "N": 26777192863,
+              "label": 1,
+              "p": 131111,
+              "prediction": 0,
+              "q": 204233
+            },
+            {
+              "N": 26818491911,
+              "label": 1,
+              "p": 141851,
+              "prediction": 0,
+              "q": 189061
+            },
+            {
+              "N": 26934476467,
+              "label": 1,
+              "p": 138071,
+              "prediction": 0,
+              "q": 195077
+            },
+            {
+              "N": 27139067807,
+              "label": 1,
+              "p": 151303,
+              "prediction": 0,
+              "q": 179369
+            },
+            {
+              "N": 27318487627,
+              "label": 1,
+              "p": 164299,
+              "prediction": 0,
+              "q": 166273
+            },
+            {
+              "N": 27552601963,
+              "label": 1,
+              "p": 154487,
+              "prediction": 0,
+              "q": 178349
+            },
+            {
+              "N": 30093937259,
+              "label": 0,
+              "p": 140977,
+              "prediction": 1,
+              "q": 213467
+            },
+            {
+              "N": 30341016143,
+              "label": 1,
+              "p": 169483,
+              "prediction": 0,
+              "q": 179021
+            },
+            {
+              "N": 31063461367,
+              "label": 1,
+              "p": 133631,
+              "prediction": 0,
+              "q": 232457
+            },
+            {
+              "N": 31195094779,
+              "label": 1,
+              "p": 146891,
+              "prediction": 0,
+              "q": 212369
+            },
+            {
+              "N": 31239132347,
+              "label": 1,
+              "p": 157163,
+              "prediction": 0,
+              "q": 198769
+            },
+            {
+              "N": 31498416679,
+              "label": 1,
+              "p": 142979,
+              "prediction": 0,
+              "q": 220301
+            }
+          ]
+        },
+        "rule": {
+          "feature": "E.sigma.mod8.4",
+          "flip": 0,
+          "kind": "binary"
+        },
+        "train": {
+          "accuracy": 0.5047193243914555,
+          "balanced_accuracy": 0.517460365317951,
+          "errors": 1994,
+          "label_ones": 2089,
+          "n": 4026,
+          "smallest_error": {
+            "N": 5303927,
+            "label": 0,
+            "p": 2237,
+            "prediction": 1,
+            "q": 2371
+          }
+        }
+      },
+      {
+        "holdout": {
+          "accuracy": 0.4881342062193126,
+          "balanced_accuracy": 0.48772634736954895,
+          "errors": 1251,
+          "label_ones": 1224,
+          "n": 2444,
+          "smallest_error": {
+            "N": 17989687139,
+            "label": 1,
+            "p": 132047,
+            "prediction": 0,
+            "q": 136237
+          },
+          "stored_errors": [
+            {
+              "N": 17989687139,
+              "label": 1,
+              "p": 132047,
+              "prediction": 0,
+              "q": 136237
+            },
+            {
+              "N": 18823267147,
+              "label": 1,
+              "p": 134087,
+              "prediction": 0,
+              "q": 140381
+            },
+            {
+              "N": 21371322799,
+              "label": 1,
+              "p": 142391,
+              "prediction": 0,
+              "q": 150089
+            },
+            {
+              "N": 22063014583,
+              "label": 0,
+              "p": 135613,
+              "prediction": 1,
+              "q": 162691
+            },
+            {
+              "N": 22290863531,
+              "label": 1,
+              "p": 133519,
+              "prediction": 0,
+              "q": 166949
+            },
+            {
+              "N": 24226253003,
+              "label": 0,
+              "p": 136033,
+              "prediction": 1,
+              "q": 178091
+            },
+            {
+              "N": 24583861699,
+              "label": 0,
+              "p": 133013,
+              "prediction": 1,
+              "q": 184823
+            },
+            {
+              "N": 24660618887,
+              "label": 0,
+              "p": 154613,
+              "prediction": 1,
+              "q": 159499
+            },
+            {
+              "N": 25038515143,
+              "label": 0,
+              "p": 138433,
+              "prediction": 1,
+              "q": 180871
+            },
+            {
+              "N": 25530936947,
+              "label": 0,
+              "p": 158993,
+              "prediction": 1,
+              "q": 160579
+            },
+            {
+              "N": 25763974039,
+              "label": 0,
+              "p": 148469,
+              "prediction": 1,
+              "q": 173531
+            },
+            {
+              "N": 25950521747,
+              "label": 0,
+              "p": 141649,
+              "prediction": 1,
+              "q": 183203
+            },
+            {
+              "N": 26172873739,
+              "label": 0,
+              "p": 143909,
+              "prediction": 1,
+              "q": 181871
+            },
+            {
+              "N": 26777192863,
+              "label": 1,
+              "p": 131111,
+              "prediction": 0,
+              "q": 204233
+            },
+            {
+              "N": 26934476467,
+              "label": 1,
+              "p": 138071,
+              "prediction": 0,
+              "q": 195077
+            },
+            {
+              "N": 27296170991,
+              "label": 0,
+              "p": 132697,
+              "prediction": 1,
+              "q": 205703
+            },
+            {
+              "N": 27552601963,
+              "label": 1,
+              "p": 154487,
+              "prediction": 0,
+              "q": 178349
+            },
+            {
+              "N": 28085853283,
+              "label": 0,
+              "p": 137993,
+              "prediction": 1,
+              "q": 203531
+            },
+            {
+              "N": 28267273219,
+              "label": 0,
+              "p": 132661,
+              "prediction": 1,
+              "q": 213079
+            },
+            {
+              "N": 28472799683,
+              "label": 0,
+              "p": 149173,
+              "prediction": 1,
+              "q": 190871
+            },
+            {
+              "N": 28656351307,
+              "label": 1,
+              "p": 162439,
+              "prediction": 0,
+              "q": 176413
+            },
+            {
+              "N": 29216498999,
+              "label": 0,
+              "p": 144829,
+              "prediction": 1,
+              "q": 201731
+            },
+            {
+              "N": 29353245379,
+              "label": 0,
+              "p": 155797,
+              "prediction": 1,
+              "q": 188407
+            },
+            {
+              "N": 29533702027,
+              "label": 1,
+              "p": 141991,
+              "prediction": 0,
+              "q": 207997
+            },
+            {
+              "N": 29751736823,
+              "label": 0,
+              "p": 171877,
+              "prediction": 1,
+              "q": 173099
+            }
+          ]
+        },
+        "rule": {
+          "feature": "B.mod4.1",
+          "flip": 1,
+          "kind": "binary"
+        },
+        "train": {
+          "accuracy": 0.526080476900149,
+          "balanced_accuracy": 0.5172337437317631,
+          "errors": 1908,
+          "label_ones": 2089,
+          "n": 4026,
+          "smallest_error": {
+            "N": 5047859,
+            "label": 0,
+            "p": 2129,
+            "prediction": 1,
+            "q": 2371
+          }
+        }
+      },
+      {
+        "holdout": {
+          "accuracy": 0.5090016366612111,
+          "balanced_accuracy": 0.5097235615557698,
+          "errors": 1200,
+          "label_ones": 1224,
+          "n": 2444,
+          "smallest_error": {
+            "N": 17989687139,
+            "label": 1,
+            "p": 132047,
+            "prediction": 0,
+            "q": 136237
+          },
+          "stored_errors": [
+            {
+              "N": 17989687139,
+              "label": 1,
+              "p": 132047,
+              "prediction": 0,
+              "q": 136237
+            },
+            {
+              "N": 18823267147,
+              "label": 1,
+              "p": 134087,
+              "prediction": 0,
+              "q": 140381
+            },
+            {
+              "N": 18973004899,
+              "label": 1,
+              "p": 135019,
+              "prediction": 0,
+              "q": 140521
+            },
+            {
+              "N": 19226180147,
+              "label": 1,
+              "p": 134399,
+              "prediction": 0,
+              "q": 143053
+            },
+            {
+              "N": 19635640159,
+              "label": 1,
+              "p": 139663,
+              "prediction": 0,
+              "q": 140593
+            },
+            {
+              "N": 21158805407,
+              "label": 1,
+              "p": 132103,
+              "prediction": 0,
+              "q": 160169
+            },
+            {
+              "N": 21371322799,
+              "label": 1,
+              "p": 142391,
+              "prediction": 0,
+              "q": 150089
+            },
+            {
+              "N": 22290863531,
+              "label": 1,
+              "p": 133519,
+              "prediction": 0,
+              "q": 166949
+            },
+            {
+              "N": 23306720471,
+              "label": 0,
+              "p": 132137,
+              "prediction": 1,
+              "q": 176383
+            },
+            {
+              "N": 25654490791,
+              "label": 1,
+              "p": 136943,
+              "prediction": 0,
+              "q": 187337
+            },
+            {
+              "N": 25690826351,
+              "label": 1,
+              "p": 136163,
+              "prediction": 0,
+              "q": 188677
+            },
+            {
+              "N": 25754649191,
+              "label": 1,
+              "p": 133979,
+              "prediction": 0,
+              "q": 192229
+            },
+            {
+              "N": 26084658199,
+              "label": 1,
+              "p": 140167,
+              "prediction": 0,
+              "q": 186097
+            },
+            {
+              "N": 26777192863,
+              "label": 1,
+              "p": 131111,
+              "prediction": 0,
+              "q": 204233
+            },
+            {
+              "N": 26818491911,
+              "label": 1,
+              "p": 141851,
+              "prediction": 0,
+              "q": 189061
+            },
+            {
+              "N": 26934476467,
+              "label": 1,
+              "p": 138071,
+              "prediction": 0,
+              "q": 195077
+            },
+            {
+              "N": 27139067807,
+              "label": 1,
+              "p": 151303,
+              "prediction": 0,
+              "q": 179369
+            },
+            {
+              "N": 27318487627,
+              "label": 1,
+              "p": 164299,
+              "prediction": 0,
+              "q": 166273
+            },
+            {
+              "N": 27552601963,
+              "label": 1,
+              "p": 154487,
+              "prediction": 0,
+              "q": 178349
+            },
+            {
+              "N": 28656351307,
+              "label": 1,
+              "p": 162439,
+              "prediction": 0,
+              "q": 176413
+            },
+            {
+              "N": 30093937259,
+              "label": 0,
+              "p": 140977,
+              "prediction": 1,
+              "q": 213467
+            },
+            {
+              "N": 30341016143,
+              "label": 1,
+              "p": 169483,
+              "prediction": 0,
+              "q": 179021
+            },
+            {
+              "N": 31063461367,
+              "label": 1,
+              "p": 133631,
+              "prediction": 0,
+              "q": 232457
+            },
+            {
+              "N": 31195094779,
+              "label": 1,
+              "p": 146891,
+              "prediction": 0,
+              "q": 212369
+            },
+            {
+              "N": 31239132347,
+              "label": 1,
+              "p": 157163,
+              "prediction": 0,
+              "q": 198769
+            }
+          ]
+        },
+        "rule": {
+          "feature": "E.sigma.mod16.12",
+          "flip": 0,
+          "kind": "binary"
+        },
+        "train": {
+          "accuracy": 0.5012419274714357,
+          "balanced_accuracy": 0.5169831501784429,
+          "errors": 2008,
+          "label_ones": 2089,
+          "n": 4026,
+          "smallest_error": {
+            "N": 4839559,
+            "label": 1,
+            "p": 2179,
+            "prediction": 0,
+            "q": 2221
+          }
+        }
+      },
+      {
+        "holdout": {
+          "accuracy": 0.5032733224222586,
+          "balanced_accuracy": 0.5027965284474445,
+          "errors": 1214,
+          "label_ones": 1224,
+          "n": 2444,
+          "smallest_error": {
+            "N": 19226180147,
+            "label": 1,
+            "p": 134399,
+            "prediction": 0,
+            "q": 143053
+          },
+          "stored_errors": [
+            {
+              "N": 19226180147,
+              "label": 1,
+              "p": 134399,
+              "prediction": 0,
+              "q": 143053
+            },
+            {
+              "N": 21371322799,
+              "label": 1,
+              "p": 142391,
+              "prediction": 0,
+              "q": 150089
+            },
+            {
+              "N": 21740062283,
+              "label": 0,
+              "p": 137273,
+              "prediction": 1,
+              "q": 158371
+            },
+            {
+              "N": 23306720471,
+              "label": 0,
+              "p": 132137,
+              "prediction": 1,
+              "q": 176383
+            },
+            {
+              "N": 24226253003,
+              "label": 0,
+              "p": 136033,
+              "prediction": 1,
+              "q": 178091
+            },
+            {
+              "N": 24583861699,
+              "label": 0,
+              "p": 133013,
+              "prediction": 1,
+              "q": 184823
+            },
+            {
+              "N": 25654490791,
+              "label": 1,
+              "p": 136943,
+              "prediction": 0,
+              "q": 187337
+            },
+            {
+              "N": 25754649191,
+              "label": 1,
+              "p": 133979,
+              "prediction": 0,
+              "q": 192229
+            },
+            {
+              "N": 25763974039,
+              "label": 0,
+              "p": 148469,
+              "prediction": 1,
+              "q": 173531
+            },
+            {
+              "N": 25950521747,
+              "label": 0,
+              "p": 141649,
+              "prediction": 1,
+              "q": 183203
+            },
+            {
+              "N": 26172873739,
+              "label": 0,
+              "p": 143909,
+              "prediction": 1,
+              "q": 181871
+            },
+            {
+              "N": 26777192863,
+              "label": 1,
+              "p": 131111,
+              "prediction": 0,
+              "q": 204233
+            },
+            {
+              "N": 26818491911,
+              "label": 1,
+              "p": 141851,
+              "prediction": 0,
+              "q": 189061
+            },
+            {
+              "N": 27796120003,
+              "label": 0,
+              "p": 151733,
+              "prediction": 1,
+              "q": 183191
+            },
+            {
+              "N": 28085853283,
+              "label": 0,
+              "p": 137993,
+              "prediction": 1,
+              "q": 203531
+            },
+            {
+              "N": 28267273219,
+              "label": 0,
+              "p": 132661,
+              "prediction": 1,
+              "q": 213079
+            },
+            {
+              "N": 28451972027,
+              "label": 0,
+              "p": 148513,
+              "prediction": 1,
+              "q": 191579
+            },
+            {
+              "N": 28472799683,
+              "label": 0,
+              "p": 149173,
+              "prediction": 1,
+              "q": 190871
+            },
+            {
+              "N": 29353245379,
+              "label": 0,
+              "p": 155797,
+              "prediction": 1,
+              "q": 188407
+            },
+            {
+              "N": 29628435019,
+              "label": 0,
+              "p": 154277,
+              "prediction": 1,
+              "q": 192047
+            },
+            {
+              "N": 29919655187,
+              "label": 0,
+              "p": 141529,
+              "prediction": 1,
+              "q": 211403
+            },
+            {
+              "N": 30028243591,
+              "label": 0,
+              "p": 132109,
+              "prediction": 1,
+              "q": 227299
+            },
+            {
+              "N": 30093937259,
+              "label": 0,
+              "p": 140977,
+              "prediction": 1,
+              "q": 213467
+            },
+            {
+              "N": 30228487631,
+              "label": 0,
+              "p": 138829,
+              "prediction": 1,
+              "q": 217739
+            },
+            {
+              "N": 30353864363,
+              "label": 0,
+              "p": 132817,
+              "prediction": 1,
+              "q": 228539
+            }
+          ]
+        },
+        "rule": {
+          "feature": "E.sigma.mod16.8",
+          "flip": 1,
+          "kind": "binary"
+        },
+        "train": {
+          "accuracy": 0.526080476900149,
+          "balanced_accuracy": 0.5169707934943542,
+          "errors": 1908,
+          "label_ones": 2089,
+          "n": 4026,
+          "smallest_error": {
+            "N": 4602067,
+            "label": 0,
+            "p": 2089,
+            "prediction": 1,
+            "q": 2203
+          }
+        }
+      },
+      {
+        "holdout": {
+          "accuracy": 0.5114566284779051,
+          "balanced_accuracy": 0.5118597985642345,
+          "errors": 1194,
+          "label_ones": 1224,
+          "n": 2444,
+          "smallest_error": {
+            "N": 17989687139,
+            "label": 1,
+            "p": 132047,
+            "prediction": 0,
+            "q": 136237
+          },
+          "stored_errors": [
+            {
+              "N": 17989687139,
+              "label": 1,
+              "p": 132047,
+              "prediction": 0,
+              "q": 136237
+            },
+            {
+              "N": 18823267147,
+              "label": 1,
+              "p": 134087,
+              "prediction": 0,
+              "q": 140381
+            },
+            {
+              "N": 18973004899,
+              "label": 1,
+              "p": 135019,
+              "prediction": 0,
+              "q": 140521
+            },
+            {
+              "N": 19226180147,
+              "label": 1,
+              "p": 134399,
+              "prediction": 0,
+              "q": 143053
+            },
+            {
+              "N": 21158805407,
+              "label": 1,
+              "p": 132103,
+              "prediction": 0,
+              "q": 160169
+            },
+            {
+              "N": 21371322799,
+              "label": 1,
+              "p": 142391,
+              "prediction": 0,
+              "q": 150089
+            },
+            {
+              "N": 22290863531,
+              "label": 1,
+              "p": 133519,
+              "prediction": 0,
+              "q": 166949
+            },
+            {
+              "N": 24226253003,
+              "label": 0,
+              "p": 136033,
+              "prediction": 1,
+              "q": 178091
+            },
+            {
+              "N": 25038515143,
+              "label": 0,
+              "p": 138433,
+              "prediction": 1,
+              "q": 180871
+            },
+            {
+              "N": 25654490791,
+              "label": 1,
+              "p": 136943,
+              "prediction": 0,
+              "q": 187337
+            },
+            {
+              "N": 25754649191,
+              "label": 1,
+              "p": 133979,
+              "prediction": 0,
+              "q": 192229
+            },
+            {
+              "N": 25763974039,
+              "label": 0,
+              "p": 148469,
+              "prediction": 1,
+              "q": 173531
+            },
+            {
+              "N": 25950521747,
+              "label": 0,
+              "p": 141649,
+              "prediction": 1,
+              "q": 183203
+            },
+            {
+              "N": 26777192863,
+              "label": 1,
+              "p": 131111,
+              "prediction": 0,
+              "q": 204233
+            },
+            {
+              "N": 26934476467,
+              "label": 1,
+              "p": 138071,
+              "prediction": 0,
+              "q": 195077
+            },
+            {
+              "N": 27296170991,
+              "label": 0,
+              "p": 132697,
+              "prediction": 1,
+              "q": 205703
+            },
+            {
+              "N": 27552601963,
+              "label": 1,
+              "p": 154487,
+              "prediction": 0,
+              "q": 178349
+            },
+            {
+              "N": 28656351307,
+              "label": 1,
+              "p": 162439,
+              "prediction": 0,
+              "q": 176413
+            },
+            {
+              "N": 29353245379,
+              "label": 0,
+              "p": 155797,
+              "prediction": 1,
+              "q": 188407
+            },
+            {
+              "N": 29533702027,
+              "label": 1,
+              "p": 141991,
+              "prediction": 0,
+              "q": 207997
+            },
+            {
+              "N": 30228487631,
+              "label": 0,
+              "p": 138829,
+              "prediction": 1,
+              "q": 217739
+            },
+            {
+              "N": 30341016143,
+              "label": 1,
+              "p": 169483,
+              "prediction": 0,
+              "q": 179021
+            },
+            {
+              "N": 30353864363,
+              "label": 0,
+              "p": 132817,
+              "prediction": 1,
+              "q": 228539
+            },
+            {
+              "N": 30391535087,
+              "label": 0,
+              "p": 160541,
+              "prediction": 1,
+              "q": 189307
+            },
+            {
+              "N": 30771862171,
+              "label": 0,
+              "p": 170641,
+              "prediction": 1,
+              "q": 180331
+            }
+          ]
+        },
+        "rule": {
+          "feature": "B.mod4.3",
+          "flip": 0,
+          "kind": "binary"
+        },
+        "train": {
+          "accuracy": 0.5072031793343269,
+          "balanced_accuracy": 0.516360373300369,
+          "errors": 1984,
+          "label_ones": 2089,
+          "n": 4026,
+          "smallest_error": {
+            "N": 5303927,
+            "label": 0,
+            "p": 2237,
+            "prediction": 1,
+            "q": 2371
+          }
+        }
+      },
+      {
+        "holdout": {
+          "accuracy": 0.4909983633387889,
+          "balanced_accuracy": 0.49140951462552235,
+          "errors": 1244,
+          "label_ones": 1224,
+          "n": 2444,
+          "smallest_error": {
+            "N": 18823267147,
+            "label": 1,
+            "p": 134087,
+            "prediction": 0,
+            "q": 140381
+          },
+          "stored_errors": [
+            {
+              "N": 18823267147,
+              "label": 1,
+              "p": 134087,
+              "prediction": 0,
+              "q": 140381
+            },
+            {
+              "N": 19635640159,
+              "label": 1,
+              "p": 139663,
+              "prediction": 0,
+              "q": 140593
+            },
+            {
+              "N": 21158805407,
+              "label": 1,
+              "p": 132103,
+              "prediction": 0,
+              "q": 160169
+            },
+            {
+              "N": 21371322799,
+              "label": 1,
+              "p": 142391,
+              "prediction": 0,
+              "q": 150089
+            },
+            {
+              "N": 22290863531,
+              "label": 1,
+              "p": 133519,
+              "prediction": 0,
+              "q": 166949
+            },
+            {
+              "N": 24583861699,
+              "label": 0,
+              "p": 133013,
+              "prediction": 1,
+              "q": 184823
+            },
+            {
+              "N": 25530936947,
+              "label": 0,
+              "p": 158993,
+              "prediction": 1,
+              "q": 160579
+            },
+            {
+              "N": 25654490791,
+              "label": 1,
+              "p": 136943,
+              "prediction": 0,
+              "q": 187337
+            },
+            {
+              "N": 25690826351,
+              "label": 1,
+              "p": 136163,
+              "prediction": 0,
+              "q": 188677
+            },
+            {
+              "N": 25754649191,
+              "label": 1,
+              "p": 133979,
+              "prediction": 0,
+              "q": 192229
+            },
+            {
+              "N": 25950521747,
+              "label": 0,
+              "p": 141649,
+              "prediction": 1,
+              "q": 183203
+            },
+            {
+              "N": 26084658199,
+              "label": 1,
+              "p": 140167,
+              "prediction": 0,
+              "q": 186097
+            },
+            {
+              "N": 26777192863,
+              "label": 1,
+              "p": 131111,
+              "prediction": 0,
+              "q": 204233
+            },
+            {
+              "N": 26818491911,
+              "label": 1,
+              "p": 141851,
+              "prediction": 0,
+              "q": 189061
+            },
+            {
+              "N": 27139067807,
+              "label": 1,
+              "p": 151303,
+              "prediction": 0,
+              "q": 179369
+            },
+            {
+              "N": 27318487627,
+              "label": 1,
+              "p": 164299,
+              "prediction": 0,
+              "q": 166273
+            },
+            {
+              "N": 27552601963,
+              "label": 1,
+              "p": 154487,
+              "prediction": 0,
+              "q": 178349
+            },
+            {
+              "N": 27796120003,
+              "label": 0,
+              "p": 151733,
+              "prediction": 1,
+              "q": 183191
+            },
+            {
+              "N": 28085853283,
+              "label": 0,
+              "p": 137993,
+              "prediction": 1,
+              "q": 203531
+            },
+            {
+              "N": 28267273219,
+              "label": 0,
+              "p": 132661,
+              "prediction": 1,
+              "q": 213079
+            },
+            {
+              "N": 28472799683,
+              "label": 0,
+              "p": 149173,
+              "prediction": 1,
+              "q": 190871
+            },
+            {
+              "N": 28656351307,
+              "label": 1,
+              "p": 162439,
+              "prediction": 0,
+              "q": 176413
+            },
+            {
+              "N": 29353245379,
+              "label": 0,
+              "p": 155797,
+              "prediction": 1,
+              "q": 188407
+            },
+            {
+              "N": 29533702027,
+              "label": 1,
+              "p": 141991,
+              "prediction": 0,
+              "q": 207997
+            },
+            {
+              "N": 29919655187,
+              "label": 0,
+              "p": 141529,
+              "prediction": 1,
+              "q": 211403
+            }
+          ]
+        },
+        "rule": {
+          "feature": "K.mod8.1",
+          "flip": 0,
+          "kind": "binary"
+        },
+        "train": {
+          "accuracy": 0.505464480874317,
+          "balanced_accuracy": 0.5150605737010716,
+          "errors": 1991,
+          "label_ones": 2089,
+          "n": 4026,
+          "smallest_error": {
+            "N": 4602067,
+            "label": 0,
+            "p": 2089,
+            "prediction": 1,
+            "q": 2203
+          }
+        }
+      },
+      {
+        "holdout": {
+          "accuracy": 0.4909983633387889,
+          "balanced_accuracy": 0.49140951462552235,
+          "errors": 1244,
+          "label_ones": 1224,
+          "n": 2444,
+          "smallest_error": {
+            "N": 18823267147,
+            "label": 1,
+            "p": 134087,
+            "prediction": 0,
+            "q": 140381
+          },
+          "stored_errors": [
+            {
+              "N": 18823267147,
+              "label": 1,
+              "p": 134087,
+              "prediction": 0,
+              "q": 140381
+            },
+            {
+              "N": 19635640159,
+              "label": 1,
+              "p": 139663,
+              "prediction": 0,
+              "q": 140593
+            },
+            {
+              "N": 21158805407,
+              "label": 1,
+              "p": 132103,
+              "prediction": 0,
+              "q": 160169
+            },
+            {
+              "N": 21371322799,
+              "label": 1,
+              "p": 142391,
+              "prediction": 0,
+              "q": 150089
+            },
+            {
+              "N": 22290863531,
+              "label": 1,
+              "p": 133519,
+              "prediction": 0,
+              "q": 166949
+            },
+            {
+              "N": 24583861699,
+              "label": 0,
+              "p": 133013,
+              "prediction": 1,
+              "q": 184823
+            },
+            {
+              "N": 25530936947,
+              "label": 0,
+              "p": 158993,
+              "prediction": 1,
+              "q": 160579
+            },
+            {
+              "N": 25654490791,
+              "label": 1,
+              "p": 136943,
+              "prediction": 0,
+              "q": 187337
+            },
+            {
+              "N": 25690826351,
+              "label": 1,
+              "p": 136163,
+              "prediction": 0,
+              "q": 188677
+            },
+            {
+              "N": 25754649191,
+              "label": 1,
+              "p": 133979,
+              "prediction": 0,
+              "q": 192229
+            },
+            {
+              "N": 25950521747,
+              "label": 0,
+              "p": 141649,
+              "prediction": 1,
+              "q": 183203
+            },
+            {
+              "N": 26084658199,
+              "label": 1,
+              "p": 140167,
+              "prediction": 0,
+              "q": 186097
+            },
+            {
+              "N": 26777192863,
+              "label": 1,
+              "p": 131111,
+              "prediction": 0,
+              "q": 204233
+            },
+            {
+              "N": 26818491911,
+              "label": 1,
+              "p": 141851,
+              "prediction": 0,
+              "q": 189061
+            },
+            {
+              "N": 27139067807,
+              "label": 1,
+              "p": 151303,
+              "prediction": 0,
+              "q": 179369
+            },
+            {
+              "N": 27318487627,
+              "label": 1,
+              "p": 164299,
+              "prediction": 0,
+              "q": 166273
+            },
+            {
+              "N": 27552601963,
+              "label": 1,
+              "p": 154487,
+              "prediction": 0,
+              "q": 178349
+            },
+            {
+              "N": 27796120003,
+              "label": 0,
+              "p": 151733,
+              "prediction": 1,
+              "q": 183191
+            },
+            {
+              "N": 28085853283,
+              "label": 0,
+              "p": 137993,
+              "prediction": 1,
+              "q": 203531
+            },
+            {
+              "N": 28267273219,
+              "label": 0,
+              "p": 132661,
+              "prediction": 1,
+              "q": 213079
+            },
+            {
+              "N": 28472799683,
+              "label": 0,
+              "p": 149173,
+              "prediction": 1,
+              "q": 190871
+            },
+            {
+              "N": 28656351307,
+              "label": 1,
+              "p": 162439,
+              "prediction": 0,
+              "q": 176413
+            },
+            {
+              "N": 29353245379,
+              "label": 0,
+              "p": 155797,
+              "prediction": 1,
+              "q": 188407
+            },
+            {
+              "N": 29533702027,
+              "label": 1,
+              "p": 141991,
+              "prediction": 0,
+              "q": 207997
+            },
+            {
+              "N": 29919655187,
+              "label": 0,
+              "p": 141529,
+              "prediction": 1,
+              "q": 211403
+            }
+          ]
+        },
+        "rule": {
+          "feature": "K.value.mod8.1",
+          "flip": 0,
+          "kind": "binary"
+        },
+        "train": {
+          "accuracy": 0.505464480874317,
+          "balanced_accuracy": 0.5150605737010716,
+          "errors": 1991,
+          "label_ones": 2089,
+          "n": 4026,
+          "smallest_error": {
+            "N": 4602067,
+            "label": 0,
+            "p": 2089,
+            "prediction": 1,
+            "q": 2203
+          }
+        }
+      },
+      {
+        "holdout": {
+          "accuracy": 0.4909983633387889,
+          "balanced_accuracy": 0.49140951462552235,
+          "errors": 1244,
+          "label_ones": 1224,
+          "n": 2444,
+          "smallest_error": {
+            "N": 18823267147,
+            "label": 1,
+            "p": 134087,
+            "prediction": 0,
+            "q": 140381
+          },
+          "stored_errors": [
+            {
+              "N": 18823267147,
+              "label": 1,
+              "p": 134087,
+              "prediction": 0,
+              "q": 140381
+            },
+            {
+              "N": 19635640159,
+              "label": 1,
+              "p": 139663,
+              "prediction": 0,
+              "q": 140593
+            },
+            {
+              "N": 21158805407,
+              "label": 1,
+              "p": 132103,
+              "prediction": 0,
+              "q": 160169
+            },
+            {
+              "N": 21371322799,
+              "label": 1,
+              "p": 142391,
+              "prediction": 0,
+              "q": 150089
+            },
+            {
+              "N": 22290863531,
+              "label": 1,
+              "p": 133519,
+              "prediction": 0,
+              "q": 166949
+            },
+            {
+              "N": 24583861699,
+              "label": 0,
+              "p": 133013,
+              "prediction": 1,
+              "q": 184823
+            },
+            {
+              "N": 25530936947,
+              "label": 0,
+              "p": 158993,
+              "prediction": 1,
+              "q": 160579
+            },
+            {
+              "N": 25654490791,
+              "label": 1,
+              "p": 136943,
+              "prediction": 0,
+              "q": 187337
+            },
+            {
+              "N": 25690826351,
+              "label": 1,
+              "p": 136163,
+              "prediction": 0,
+              "q": 188677
+            },
+            {
+              "N": 25754649191,
+              "label": 1,
+              "p": 133979,
+              "prediction": 0,
+              "q": 192229
+            },
+            {
+              "N": 25950521747,
+              "label": 0,
+              "p": 141649,
+              "prediction": 1,
+              "q": 183203
+            },
+            {
+              "N": 26084658199,
+              "label": 1,
+              "p": 140167,
+              "prediction": 0,
+              "q": 186097
+            },
+            {
+              "N": 26777192863,
+              "label": 1,
+              "p": 131111,
+              "prediction": 0,
+              "q": 204233
+            },
+            {
+              "N": 26818491911,
+              "label": 1,
+              "p": 141851,
+              "prediction": 0,
+              "q": 189061
+            },
+            {
+              "N": 27139067807,
+              "label": 1,
+              "p": 151303,
+              "prediction": 0,
+              "q": 179369
+            },
+            {
+              "N": 27318487627,
+              "label": 1,
+              "p": 164299,
+              "prediction": 0,
+              "q": 166273
+            },
+            {
+              "N": 27552601963,
+              "label": 1,
+              "p": 154487,
+              "prediction": 0,
+              "q": 178349
+            },
+            {
+              "N": 27796120003,
+              "label": 0,
+              "p": 151733,
+              "prediction": 1,
+              "q": 183191
+            },
+            {
+              "N": 28085853283,
+              "label": 0,
+              "p": 137993,
+              "prediction": 1,
+              "q": 203531
+            },
+            {
+              "N": 28267273219,
+              "label": 0,
+              "p": 132661,
+              "prediction": 1,
+              "q": 213079
+            },
+            {
+              "N": 28472799683,
+              "label": 0,
+              "p": 149173,
+              "prediction": 1,
+              "q": 190871
+            },
+            {
+              "N": 28656351307,
+              "label": 1,
+              "p": 162439,
+              "prediction": 0,
+              "q": 176413
+            },
+            {
+              "N": 29353245379,
+              "label": 0,
+              "p": 155797,
+              "prediction": 1,
+              "q": 188407
+            },
+            {
+              "N": 29533702027,
+              "label": 1,
+              "p": 141991,
+              "prediction": 0,
+              "q": 207997
+            },
+            {
+              "N": 29919655187,
+              "label": 0,
+              "p": 141529,
+              "prediction": 1,
+              "q": 211403
+            }
+          ]
+        },
+        "rule": {
+          "feature": "N.mod16.3",
+          "flip": 0,
+          "kind": "binary"
+        },
+        "train": {
+          "accuracy": 0.505464480874317,
+          "balanced_accuracy": 0.5150605737010716,
+          "errors": 1991,
+          "label_ones": 2089,
+          "n": 4026,
+          "smallest_error": {
+            "N": 4602067,
+            "label": 0,
+            "p": 2089,
+            "prediction": 1,
+            "q": 2203
+          }
+        }
+      },
+      {
+        "holdout": {
+          "accuracy": 0.5057283142389526,
+          "balanced_accuracy": 0.5052729561770063,
+          "errors": 1208,
+          "label_ones": 1224,
+          "n": 2444,
+          "smallest_error": {
+            "N": 19635640159,
+            "label": 1,
+            "p": 139663,
+            "prediction": 0,
+            "q": 140593
+          },
+          "stored_errors": [
+            {
+              "N": 19635640159,
+              "label": 1,
+              "p": 139663,
+              "prediction": 0,
+              "q": 140593
+            },
+            {
+              "N": 21158805407,
+              "label": 1,
+              "p": 132103,
+              "prediction": 0,
+              "q": 160169
+            },
+            {
+              "N": 21371322799,
+              "label": 1,
+              "p": 142391,
+              "prediction": 0,
+              "q": 150089
+            },
+            {
+              "N": 21740062283,
+              "label": 0,
+              "p": 137273,
+              "prediction": 1,
+              "q": 158371
+            },
+            {
+              "N": 22290863531,
+              "label": 1,
+              "p": 133519,
+              "prediction": 0,
+              "q": 166949
+            },
+            {
+              "N": 23306720471,
+              "label": 0,
+              "p": 132137,
+              "prediction": 1,
+              "q": 176383
+            },
+            {
+              "N": 24226253003,
+              "label": 0,
+              "p": 136033,
+              "prediction": 1,
+              "q": 178091
+            },
+            {
+              "N": 24583861699,
+              "label": 0,
+              "p": 133013,
+              "prediction": 1,
+              "q": 184823
+            },
+            {
+              "N": 24660618887,
+              "label": 0,
+              "p": 154613,
+              "prediction": 1,
+              "q": 159499
+            },
+            {
+              "N": 25654490791,
+              "label": 1,
+              "p": 136943,
+              "prediction": 0,
+              "q": 187337
+            },
+            {
+              "N": 25754649191,
+              "label": 1,
+              "p": 133979,
+              "prediction": 0,
+              "q": 192229
+            },
+            {
+              "N": 25763974039,
+              "label": 0,
+              "p": 148469,
+              "prediction": 1,
+              "q": 173531
+            },
+            {
+              "N": 25950521747,
+              "label": 0,
+              "p": 141649,
+              "prediction": 1,
+              "q": 183203
+            },
+            {
+              "N": 26084658199,
+              "label": 1,
+              "p": 140167,
+              "prediction": 0,
+              "q": 186097
+            },
+            {
+              "N": 26172873739,
+              "label": 0,
+              "p": 143909,
+              "prediction": 1,
+              "q": 181871
+            },
+            {
+              "N": 26777192863,
+              "label": 1,
+              "p": 131111,
+              "prediction": 0,
+              "q": 204233
+            },
+            {
+              "N": 26818491911,
+              "label": 1,
+              "p": 141851,
+              "prediction": 0,
+              "q": 189061
+            },
+            {
+              "N": 26851881223,
+              "label": 0,
+              "p": 157649,
+              "prediction": 1,
+              "q": 170327
+            },
+            {
+              "N": 27796120003,
+              "label": 0,
+              "p": 151733,
+              "prediction": 1,
+              "q": 183191
+            },
+            {
+              "N": 28085853283,
+              "label": 0,
+              "p": 137993,
+              "prediction": 1,
+              "q": 203531
+            },
+            {
+              "N": 28267273219,
+              "label": 0,
+              "p": 132661,
+              "prediction": 1,
+              "q": 213079
+            },
+            {
+              "N": 28451972027,
+              "label": 0,
+              "p": 148513,
+              "prediction": 1,
+              "q": 191579
+            },
+            {
+              "N": 28472799683,
+              "label": 0,
+              "p": 149173,
+              "prediction": 1,
+              "q": 190871
+            },
+            {
+              "N": 29216498999,
+              "label": 0,
+              "p": 144829,
+              "prediction": 1,
+              "q": 201731
+            },
+            {
+              "N": 29353245379,
+              "label": 0,
+              "p": 155797,
+              "prediction": 1,
+              "q": 188407
+            }
+          ]
+        },
+        "rule": {
+          "feature": "sigma.diff.mod16.8",
+          "flip": 1,
+          "kind": "binary"
+        },
+        "train": {
+          "accuracy": 0.524093392945852,
+          "balanced_accuracy": 0.5147742693307348,
+          "errors": 1916,
+          "label_ones": 2089,
+          "n": 4026,
+          "smallest_error": {
+            "N": 4602067,
+            "label": 0,
+            "p": 2089,
+            "prediction": 1,
+            "q": 2203
+          }
+        }
+      },
+      {
+        "holdout": {
+          "accuracy": 0.5036824877250409,
+          "balanced_accuracy": 0.503695221257902,
+          "errors": 1213,
+          "label_ones": 1224,
+          "n": 2444,
+          "smallest_error": {
+            "N": 18823267147,
+            "label": 1,
+            "p": 134087,
+            "prediction": 0,
+            "q": 140381
+          },
+          "stored_errors": [
+            {
+              "N": 18823267147,
+              "label": 1,
+              "p": 134087,
+              "prediction": 0,
+              "q": 140381
+            },
+            {
+              "N": 18973004899,
+              "label": 1,
+              "p": 135019,
+              "prediction": 0,
+              "q": 140521
+            },
+            {
+              "N": 21740062283,
+              "label": 0,
+              "p": 137273,
+              "prediction": 1,
+              "q": 158371
+            },
+            {
+              "N": 22063014583,
+              "label": 0,
+              "p": 135613,
+              "prediction": 1,
+              "q": 162691
+            },
+            {
+              "N": 24583861699,
+              "label": 0,
+              "p": 133013,
+              "prediction": 1,
+              "q": 184823
+            },
+            {
+              "N": 24660618887,
+              "label": 0,
+              "p": 154613,
+              "prediction": 1,
+              "q": 159499
+            },
+            {
+              "N": 25038515143,
+              "label": 0,
+              "p": 138433,
+              "prediction": 1,
+              "q": 180871
+            },
+            {
+              "N": 25690826351,
+              "label": 1,
+              "p": 136163,
+              "prediction": 0,
+              "q": 188677
+            },
+            {
+              "N": 25754649191,
+              "label": 1,
+              "p": 133979,
+              "prediction": 0,
+              "q": 192229
+            },
+            {
+              "N": 25763974039,
+              "label": 0,
+              "p": 148469,
+              "prediction": 1,
+              "q": 173531
+            },
+            {
+              "N": 25950521747,
+              "label": 0,
+              "p": 141649,
+              "prediction": 1,
+              "q": 183203
+            },
+            {
+              "N": 26084658199,
+              "label": 1,
+              "p": 140167,
+              "prediction": 0,
+              "q": 186097
+            },
+            {
+              "N": 26172873739,
+              "label": 0,
+              "p": 143909,
+              "prediction": 1,
+              "q": 181871
+            },
+            {
+              "N": 26934476467,
+              "label": 1,
+              "p": 138071,
+              "prediction": 0,
+              "q": 195077
+            },
+            {
+              "N": 27139067807,
+              "label": 1,
+              "p": 151303,
+              "prediction": 0,
+              "q": 179369
+            },
+            {
+              "N": 27296170991,
+              "label": 0,
+              "p": 132697,
+              "prediction": 1,
+              "q": 205703
+            },
+            {
+              "N": 27318487627,
+              "label": 1,
+              "p": 164299,
+              "prediction": 0,
+              "q": 166273
+            },
+            {
+              "N": 27552601963,
+              "label": 1,
+              "p": 154487,
+              "prediction": 0,
+              "q": 178349
+            },
+            {
+              "N": 28085853283,
+              "label": 0,
+              "p": 137993,
+              "prediction": 1,
+              "q": 203531
+            },
+            {
+              "N": 28122370247,
+              "label": 0,
+              "p": 137653,
+              "prediction": 1,
+              "q": 204299
+            },
+            {
+              "N": 28656351307,
+              "label": 1,
+              "p": 162439,
+              "prediction": 0,
+              "q": 176413
+            },
+            {
+              "N": 29216498999,
+              "label": 0,
+              "p": 144829,
+              "prediction": 1,
+              "q": 201731
+            },
+            {
+              "N": 29353245379,
+              "label": 0,
+              "p": 155797,
+              "prediction": 1,
+              "q": 188407
+            },
+            {
+              "N": 29533702027,
+              "label": 1,
+              "p": 141991,
+              "prediction": 0,
+              "q": 207997
+            },
+            {
+              "N": 29628435019,
+              "label": 0,
+              "p": 154277,
+              "prediction": 1,
+              "q": 192047
+            }
+          ]
+        },
+        "rule": {
+          "feature": "R_over_M",
+          "flip": 0,
+          "kind": "stump",
+          "quantile": 0.5,
+          "threshold": 0.5088794140711668
+        },
+        "train": {
+          "accuracy": 0.5141579731743666,
+          "balanced_accuracy": 0.5141781828902927,
+          "errors": 1956,
+          "label_ones": 2089,
+          "n": 4026,
+          "smallest_error": {
+            "N": 4602067,
+            "label": 0,
+            "p": 2089,
+            "prediction": 1,
+            "q": 2203
+          }
+        }
+      },
+      {
+        "holdout": {
+          "accuracy": 0.5008183306055647,
+          "balanced_accuracy": 0.5002022393656916,
+          "errors": 1220,
+          "label_ones": 1224,
+          "n": 2444,
+          "smallest_error": {
+            "N": 19635640159,
+            "label": 1,
+            "p": 139663,
+            "prediction": 0,
+            "q": 140593
+          },
+          "stored_errors": [
+            {
+              "N": 19635640159,
+              "label": 1,
+              "p": 139663,
+              "prediction": 0,
+              "q": 140593
+            },
+            {
+              "N": 21740062283,
+              "label": 0,
+              "p": 137273,
+              "prediction": 1,
+              "q": 158371
+            },
+            {
+              "N": 21960191263,
+              "label": 0,
+              "p": 135257,
+              "prediction": 1,
+              "q": 162359
+            },
+            {
+              "N": 22063014583,
+              "label": 0,
+              "p": 135613,
+              "prediction": 1,
+              "q": 162691
+            },
+            {
+              "N": 23306720471,
+              "label": 0,
+              "p": 132137,
+              "prediction": 1,
+              "q": 176383
+            },
+            {
+              "N": 24226253003,
+              "label": 0,
+              "p": 136033,
+              "prediction": 1,
+              "q": 178091
+            },
+            {
+              "N": 24583861699,
+              "label": 0,
+              "p": 133013,
+              "prediction": 1,
+              "q": 184823
+            },
+            {
+              "N": 24660618887,
+              "label": 0,
+              "p": 154613,
+              "prediction": 1,
+              "q": 159499
+            },
+            {
+              "N": 25530936947,
+              "label": 0,
+              "p": 158993,
+              "prediction": 1,
+              "q": 160579
+            },
+            {
+              "N": 25763974039,
+              "label": 0,
+              "p": 148469,
+              "prediction": 1,
+              "q": 173531
+            },
+            {
+              "N": 25950521747,
+              "label": 0,
+              "p": 141649,
+              "prediction": 1,
+              "q": 183203
+            },
+            {
+              "N": 26084658199,
+              "label": 1,
+              "p": 140167,
+              "prediction": 0,
+              "q": 186097
+            },
+            {
+              "N": 26172873739,
+              "label": 0,
+              "p": 143909,
+              "prediction": 1,
+              "q": 181871
+            },
+            {
+              "N": 26818491911,
+              "label": 1,
+              "p": 141851,
+              "prediction": 0,
+              "q": 189061
+            },
+            {
+              "N": 26851881223,
+              "label": 0,
+              "p": 157649,
+              "prediction": 1,
+              "q": 170327
+            },
+            {
+              "N": 27796120003,
+              "label": 0,
+              "p": 151733,
+              "prediction": 1,
+              "q": 183191
+            },
+            {
+              "N": 28085853283,
+              "label": 0,
+              "p": 137993,
+              "prediction": 1,
+              "q": 203531
+            },
+            {
+              "N": 28122370247,
+              "label": 0,
+              "p": 137653,
+              "prediction": 1,
+              "q": 204299
+            },
+            {
+              "N": 28267273219,
+              "label": 0,
+              "p": 132661,
+              "prediction": 1,
+              "q": 213079
+            },
+            {
+              "N": 28451972027,
+              "label": 0,
+              "p": 148513,
+              "prediction": 1,
+              "q": 191579
+            },
+            {
+              "N": 28472799683,
+              "label": 0,
+              "p": 149173,
+              "prediction": 1,
+              "q": 190871
+            },
+            {
+              "N": 29216498999,
+              "label": 0,
+              "p": 144829,
+              "prediction": 1,
+              "q": 201731
+            },
+            {
+              "N": 29353245379,
+              "label": 0,
+              "p": 155797,
+              "prediction": 1,
+              "q": 188407
+            },
+            {
+              "N": 29628435019,
+              "label": 0,
+              "p": 154277,
+              "prediction": 1,
+              "q": 192047
+            },
+            {
+              "N": 29751736823,
+              "label": 0,
+              "p": 171877,
+              "prediction": 1,
+              "q": 173099
+            }
+          ]
+        },
+        "rule": {
+          "feature": "E.mod16.14",
+          "flip": 1,
+          "kind": "binary"
+        },
+        "train": {
+          "accuracy": 0.527819175360159,
+          "balanced_accuracy": 0.5141760822539976,
+          "errors": 1901,
+          "label_ones": 2089,
+          "n": 4026,
+          "smallest_error": {
+            "N": 4602067,
+            "label": 0,
+            "p": 2089,
+            "prediction": 1,
+            "q": 2203
+          }
+        }
+      }
+    ],
+    "train": {
+      "accuracy": 0.5330352707401887,
+      "balanced_accuracy": 0.524686801306744,
+      "errors": 1880,
+      "label_ones": 2089,
+      "n": 4026,
+      "smallest_error": {
+        "N": 4602067,
+        "label": 0,
+        "p": 2089,
+        "prediction": 1,
+        "q": 2203
+      },
+      "stored_errors": [
+        {
+          "N": 4602067,
+          "label": 0,
+          "p": 2089,
+          "prediction": 1,
+          "q": 2203
+        },
+        {
+          "N": 5005279,
+          "label": 0,
+          "p": 2129,
+          "prediction": 1,
+          "q": 2351
+        },
+        {
+          "N": 5303927,
+          "label": 0,
+          "p": 2237,
+          "prediction": 1,
+          "q": 2371
+        },
+        {
+          "N": 5379799,
+          "label": 0,
+          "p": 2269,
+          "prediction": 1,
+          "q": 2371
+        },
+        {
+          "N": 5388499,
+          "label": 0,
+          "p": 2129,
+          "prediction": 1,
+          "q": 2531
+        },
+        {
+          "N": 5400751,
+          "label": 0,
+          "p": 2309,
+          "prediction": 1,
+          "q": 2339
+        },
+        {
+          "N": 5476643,
+          "label": 0,
+          "p": 2069,
+          "prediction": 1,
+          "q": 2647
+        },
+        {
+          "N": 5532931,
+          "label": 1,
+          "p": 2111,
+          "prediction": 0,
+          "q": 2621
+        },
+        {
+          "N": 5579471,
+          "label": 0,
+          "p": 2269,
+          "prediction": 1,
+          "q": 2459
+        },
+        {
+          "N": 5599211,
+          "label": 0,
+          "p": 2237,
+          "prediction": 1,
+          "q": 2503
+        },
+        {
+          "N": 5689319,
+          "label": 0,
+          "p": 2273,
+          "prediction": 1,
+          "q": 2503
+        },
+        {
+          "N": 5905819,
+          "label": 1,
+          "p": 2243,
+          "prediction": 0,
+          "q": 2633
+        },
+        {
+          "N": 6038899,
+          "label": 0,
+          "p": 2221,
+          "prediction": 1,
+          "q": 2719
+        },
+        {
+          "N": 6055963,
+          "label": 0,
+          "p": 2069,
+          "prediction": 1,
+          "q": 2927
+        },
+        {
+          "N": 6068759,
+          "label": 1,
+          "p": 2267,
+          "prediction": 0,
+          "q": 2677
+        },
+        {
+          "N": 6463967,
+          "label": 0,
+          "p": 2293,
+          "prediction": 1,
+          "q": 2819
+        },
+        {
+          "N": 6550603,
+          "label": 0,
+          "p": 2269,
+          "prediction": 1,
+          "q": 2887
+        },
+        {
+          "N": 6563099,
+          "label": 1,
+          "p": 2111,
+          "prediction": 0,
+          "q": 3109
+        },
+        {
+          "N": 6589771,
+          "label": 1,
+          "p": 2447,
+          "prediction": 0,
+          "q": 2693
+        },
+        {
+          "N": 6724279,
+          "label": 1,
+          "p": 2411,
+          "prediction": 0,
+          "q": 2789
+        },
+        {
+          "N": 6915163,
+          "label": 0,
+          "p": 2081,
+          "prediction": 1,
+          "q": 3323
+        },
+        {
+          "N": 6935267,
+          "label": 0,
+          "p": 2389,
+          "prediction": 1,
+          "q": 2903
+        },
+        {
+          "N": 7049963,
+          "label": 0,
+          "p": 2137,
+          "prediction": 1,
+          "q": 3299
+        },
+        {
+          "N": 7053083,
+          "label": 0,
+          "p": 2549,
+          "prediction": 1,
+          "q": 2767
+        },
+        {
+          "N": 7075307,
+          "label": 1,
+          "p": 2267,
+          "prediction": 0,
+          "q": 3121
+        }
+      ]
+    }
+  },
+  "smallest_observed": {
+    "d_support_failure": {
+      "B": 51,
+      "E": 26,
+      "K": 1313,
+      "M": 2626,
+      "N": 2627,
+      "factor_E": {
+        "2": 1,
+        "13": 1
+      },
+      "factor_K": {
+        "13": 1,
+        "101": 1
+      },
+      "labels": {
+        "K_has_split_prime": false,
+        "chi4_p": 1,
+        "common_order_capacity": 2,
+        "d": 6,
+        "d_supported_by_2KE": false,
+        "factor_d": {
+          "2": 1,
+          "3": 1
+        },
+        "full_twisted_A_N": -2660,
+        "mixed_class_principal": false,
+        "next_inverse_bit": 0,
+        "p": 37,
+        "q": 71,
+        "supported_common_part": 2,
+        "twisted_core": -34
+      },
+      "mixed_norm": null,
+      "p": 37,
+      "q": 71,
+      "transition": {
+        "certificate": {
+          "base": "5",
+          "exponent": "K.phi",
+          "kind": "power_gcd",
+          "sign": -1
+        },
+        "factor": 71,
+        "global_returns": 0,
+        "max_common_order": 1
+      }
+    },
+    "fixed_bank_failure": {
+      "B": 59,
+      "E": 70,
+      "K": 1775,
+      "M": 24850,
+      "N": 3551,
+      "factor_E": {
+        "2": 1,
+        "5": 1,
+        "7": 1
+      },
+      "factor_K": {
+        "5": 2,
+        "71": 1
+      },
+      "labels": {
+        "K_has_split_prime": true,
+        "chi4_p": 1,
+        "common_order_capacity": 2,
+        "d": 2,
+        "d_supported_by_2KE": true,
+        "factor_d": {
+          "2": 1
+        },
+        "full_twisted_A_N": -3564,
+        "mixed_class_principal": true,
+        "next_inverse_bit": 0,
+        "p": 53,
+        "q": 67,
+        "supported_common_part": 2,
+        "twisted_core": -14
+      },
+      "mixed_norm": {
+        "factor": 67,
+        "root": 2538,
+        "x": 11,
+        "y": 7
+      },
+      "p": 53,
+      "q": 67,
+      "transition": {
+        "certificate": null,
+        "factor": null,
+        "global_returns": 1,
+        "max_common_order": 2
+      }
+    },
+    "no_K_split_prime": {
+      "B": 5,
+      "E": 10,
+      "K": 17,
+      "M": 170,
+      "N": 35,
+      "factor_E": {
+        "2": 1,
+        "5": 1
+      },
+      "factor_K": {
+        "17": 1
+      },
+      "labels": {
+        "K_has_split_prime": false,
+        "chi4_p": 1,
+        "common_order_capacity": 2,
+        "d": 2,
+        "d_supported_by_2KE": true,
+        "factor_d": {
+          "2": 1
+        },
+        "full_twisted_A_N": -36,
+        "mixed_class_principal": false,
+        "next_inverse_bit": 0,
+        "p": 5,
+        "q": 7,
+        "supported_common_part": 2,
+        "twisted_core": -2
+      },
+      "mixed_norm": null,
+      "p": 5,
+      "q": 7,
+      "transition": {
+        "certificate": {
+          "base": "2",
+          "kind": "Nminus1_plus_gcd"
+        },
+        "factor": 5,
+        "global_returns": 0,
+        "max_common_order": 1
+      }
+    },
+    "no_second_mixed_norm": {
+      "B": 22,
+      "E": 43,
+      "K": 263,
+      "M": 11309,
+      "N": 527,
+      "factor_E": {
+        "43": 1
+      },
+      "factor_K": {
+        "263": 1
+      },
+      "labels": {
+        "K_has_split_prime": false,
+        "chi4_p": 1,
+        "common_order_capacity": 2,
+        "d": 4,
+        "d_supported_by_2KE": true,
+        "factor_d": {
+          "2": 2
+        },
+        "full_twisted_A_N": -540,
+        "mixed_class_principal": false,
+        "next_inverse_bit": 0,
+        "p": 17,
+        "q": 31,
+        "supported_common_part": 2,
+        "twisted_core": -14
+      },
+      "mixed_norm": null,
+      "p": 17,
+      "q": 31,
+      "transition": {
+        "certificate": {
+          "base": "2",
+          "exponent": "M.phi",
+          "kind": "power_gcd",
+          "sign": 1
+        },
+        "factor": 17,
+        "global_returns": 0,
+        "max_common_order": 1
+      }
+    },
+    "ordinary_common_capacity_le_2": {
+      "B": 3,
+      "E": 6,
+      "K": 7,
+      "M": 42,
+      "N": 15,
+      "factor_E": {
+        "2": 1,
+        "3": 1
+      },
+      "factor_K": {
+        "7": 1
+      },
+      "labels": {
+        "K_has_split_prime": true,
+        "chi4_p": -1,
+        "common_order_capacity": 2,
+        "d": 2,
+        "d_supported_by_2KE": true,
+        "factor_d": {
+          "2": 1
+        },
+        "full_twisted_A_N": -12,
+        "mixed_class_principal": false,
+        "next_inverse_bit": 1,
+        "p": 3,
+        "q": 5,
+        "supported_common_part": 2,
+        "twisted_core": 2
+      },
+      "mixed_norm": null,
+      "p": 3,
+      "q": 5,
+      "transition": {
+        "certificate": {
+          "base": "2",
+          "kind": "base_shift_gcd",
+          "shift": 1
+        },
+        "factor": 3,
+        "global_returns": 0,
+        "max_common_order": 1
+      }
+    }
+  },
+  "status": "completed"
+}

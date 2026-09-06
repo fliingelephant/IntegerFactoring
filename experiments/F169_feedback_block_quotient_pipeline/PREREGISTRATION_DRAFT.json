@@ -1,0 +1,45 @@
+{
+  "experiment_id": "F169-D01",
+  "status": "DESIGN_FROZEN_NO_SOURCE_NO_RUN",
+  "family": "F26-Q",
+  "question": "Does a block first exposed by a presentation-complete depth-two feedback ledger make the promoted P154 updater factor or strictly grow the certified common-order state after base saturation?",
+  "closest_prior": [
+    "F165-D01 depth-two exact-value recursive section feedback",
+    "P154/F167 factor-first quotient-closure updater"
+  ],
+  "material_difference": "F169 retains every endpoint occurrence separately from the root-aware exact-value ledger, exposes feedback-only gcd-free integer blocks, and applies the full P154 fixed-point updater with reset and provenance semantics.",
+  "corpus_rule": "Reuse all 64 F165-D01 lexicographic prime pairs in [10000,20000] with p<q<2p; public analysis receives only N=pq.",
+  "corpus_sha256": "bd1d2987d2eaa6d3cfda3fceea72fbd471592a659137df26ae05a3d86cec7fb3",
+  "parameters": {
+    "base_seed_rule": "all units 2<=c<=n+1",
+    "recursive_feedback_levels": 2,
+    "section_support_cap": 2,
+    "initial_state": "g=N-1, M=2",
+    "absolute_relative_cap": "B(n)=n^2",
+    "quotient_closure_cap": "C(n)=n^2",
+    "generator_order": "current-stage blocks increasing, then older blocks by decreasing creation stage and increasing value",
+    "hidden_log_alignment": false
+  },
+  "required_upstream_pins": {
+    "experiments/F156_sparse_section_feedback_source/V2_STATEMENT.md": "71b640469c0f57440d8e290b63af411eb33ee08b08c814413b5a04fff1c7d3dc",
+    "experiments/F157_sparse_section_feedback_capability/search.py": "1f9bf511a8a0d5783dfcbca891d7e4022e158382395b3925cb38241ee2d6cb69",
+    "experiments/F165_recursive_section_feedback/search.py": "2a7852f8438003f0db1dd49b7721d02ae2c1cfcea8b114f1e58cc69b74f04427",
+    "experiments/F165_recursive_section_feedback/OUTPUT.json": "94ca36ee995819d384e260d50213105b58c3b91377b3a8e51ba155fa7b218dcc",
+    "experiments/F167_factor_first_quotient_closure_updater/STATEMENT.md": "e96e12303520b40c459b92ab192de48f7ffc4829daa20c60686007aba8884aad",
+    "experiments/F167_factor_first_quotient_closure_updater/PROOF.md": "8e639c631355951a1c9656fbf99df46320a4c75bf4ef745949f01705b4df6060"
+  },
+  "planned_files": {
+    "source": "experiments/F169_feedback_block_quotient_pipeline/search.py",
+    "timeout_runner": "experiments/F169_feedback_block_quotient_pipeline/run_with_timeout.py",
+    "log": "experiments/F169_feedback_block_quotient_pipeline/RUN.log",
+    "output": "experiments/F169_feedback_block_quotient_pipeline/OUTPUT.json",
+    "failed_runs": "experiments/F169_feedback_block_quotient_pipeline/FAILED_RUNS.md"
+  },
+  "timeout_name": "F169_FEEDBACK_BLOCK_QUOTIENT_PIPELINE_HARD_TIMEOUT",
+  "timeout_seconds": 1200,
+  "memory_preflight": "Run sequentially only. Record memory pressure and competing processes. Do not start below 6 GB available memory or under non-normal pressure.",
+  "positive_replay_rule": "Every factor, state-growth, closure, and capacity certificate must be reconstructed from N and public provenance only.",
+  "target_event": "A proper P154 gcd or strict P154 common-order increase after base saturation whose replay difference word has nonzero support on a feedback-only block.",
+  "null_rule": "No eligible input has the target event through level two. Repeated capacity, inert membership, source-only success, and later base-only words do not count.",
+  "inference_boundary": "Fixed finite capability test only. No density, independence, all-input, or asymptotic conclusion."
+}

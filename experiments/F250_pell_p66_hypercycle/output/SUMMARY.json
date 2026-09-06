@@ -1,0 +1,57 @@
+{
+  "experiment": "F250_pell_p66_hypercycle",
+  "heldout_interpretation": "null finite signal",
+  "parameters": {
+    "D_menu": [
+      2,
+      3,
+      5,
+      6,
+      7,
+      10,
+      11,
+      13
+    ],
+    "banks_per_input": 9,
+    "heldout_bits": [
+      36,
+      40,
+      44,
+      48
+    ],
+    "inputs_per_bit": 16,
+    "train_bits": [
+      20,
+      24,
+      28,
+      32
+    ],
+    "window_multiplier": 4
+  },
+  "preregistration_sha256": "6da9f635db9890b7eb5552965a7dc82ad4e1196f7c53dabce61fc06222d60364",
+  "process_max_rss_platform_units": 20232,
+  "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+  "scan_sha256": "dde3bfa5075b1cfa92389bfb30b11d4d2faace2b865ba5352d7872ea0d5b4948",
+  "splits": {
+    "heldout": {
+      "decoder_hit_inputs_by_bank": {},
+      "inputs": 64,
+      "inputs_with_any_decoder_hit": 0,
+      "inputs_with_predecoder_factor": 0,
+      "inputs_with_strict_screen_free_hit": 0,
+      "strict_hit_inputs_by_bank": {},
+      "strict_hits_by_bits": {},
+      "tangent_events": {}
+    },
+    "train": {
+      "decoder_hit_inputs_by_bank": {},
+      "inputs": 64,
+      "inputs_with_any_decoder_hit": 0,
+      "inputs_with_predecoder_factor": 21,
+      "inputs_with_strict_screen_free_hit": 0,
+      "strict_hit_inputs_by_bank": {},
+      "strict_hits_by_bits": {},
+      "tangent_events": {}
+    }
+  }
+}

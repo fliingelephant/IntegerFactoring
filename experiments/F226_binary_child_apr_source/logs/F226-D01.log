@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "/usr/local/bin/sage",
+    "scan_binary_child_orbits.sage"
+  ],
+  "elapsed_seconds": 2.390426166995894,
+  "exit_code": 1,
+  "max_rss_platform_units": 256557056,
+  "stderr": "Traceback (most recent call last):\n  File \"/Users/zhou/autoresearch/IntegerFactoring/experiments/F226_binary_child_apr_source/scan_binary_child_orbits.sage.py\", line 4, in <module>\n    from sage.all_cmdline import *   # import sage library\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/var/tmp/sage-10.9-current/local/lib/python3.14/site-packages/sage/all_cmdline.py\", line 17, in <module>\n    from sage.all import *\n  File \"/var/tmp/sage-10.9-current/local/lib/python3.14/site-packages/sage/all.py\", line 335, in <module>\n    sage.misc.lazy_import.save_cache_file()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"sage/misc/lazy_import.pyx\", line 1162, in sage.misc.lazy_import.save_cache_file\n    with atomic_write(cache_file, binary=True) as f:\n  File \"/var/tmp/sage-10.9-current/local/lib/python3.14/site-packages/sage/misc/temporary_file.py\", line 346, in __enter__\n    fd, name = tempfile.mkstemp(dir=self.tmpdir)\n               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/var/tmp/sage-10.9-current/local/lib/python3.14/tempfile.py\", line 358, in mkstemp\n    return _mkstemp_inner(dir, prefix, suffix, flags, output_type)\n  File \"/var/tmp/sage-10.9-current/local/lib/python3.14/tempfile.py\", line 257, in _mkstemp_inner\n    fd = _os.open(file, flags, 0o600)\nPermissionError: [Errno 1] Operation not permitted: '/Users/zhou/.sage/cache/tmp2fhny6_8'\n",
+  "stdout": ""
+}

@@ -3088,3 +3088,708 @@ and
 `e8aa7a5f4c10bb24d99b766b1fe774912d939e9db16f565de035d92d4442db46`.
 No cross-family audit, human audit, or publication-level literature review
 has run.
+
+## X73 — unary feedback does not automatically reuse or close the fed row
+
+**Status:** promoted as the exact auxiliary obstruction in P120. The first
+overstated duplicate rule and its counterexample remain preserved in F132.
+
+**Family:** F26-Q.
+
+**Classification:** method failure for using one unary feedback step, row
+reuse, or exact-value novelty as a progress certificate. This does not close
+bounded all-block feedback or retained multi-round decoding.
+
+**What was tried.** Permanently name every block found in retained endpoints,
+feed each block through canonical inversion, and treat a new exact value or a
+reused prime row as evidence that the parity matrix must move toward closure.
+
+**Exact obstruction.** A new value can cancel the fed row. At \(N=253\), the
+old value
+
+\[
+26\cdot146=2^2\cdot13\cdot73
+\]
+
+exposes \(q=13\), but its new unary value
+
+\[
+13\cdot39=3\cdot13^2
+\]
+
+has zero parity in row \(13\). Real reuse is also insufficient. At \(N=77\),
+the supports
+
+\[
+\{2,29\},\qquad\{2,3,13\}
+\]
+
+reuse row \(2\), but fresh private rows peel both columns and leave no
+2-core. For an old private column \(v\) and a new column \(u\) that both use
+row \(r\), closure occurs only when their residual symmetric difference lies
+in the span of the other old columns.
+
+An exact duplicate is decoder- and refinement-inert only after its new
+endpoint signs run. At \(N=63\), the old presentation \((8,8)\) and the new
+duplicate presentation \((2,32)\) both have exact value \(64\), but
+
+\[
+\gcd(2-32,63)=3.
+\]
+
+**What would make a retry materially new.** Prove that a growing anchored or
+multi-round source reuses enough rows and also closes the fresh residual rows,
+or directly prove a nonzero cross-layer kernel with non-global normalized
+root. Counting new relations or reporting one row of degree two is not
+sufficient.
+
+## X74 — one anchored star cannot close by sharing unrelated fresh large rows
+
+**Status:** promoted as the exact local obstruction in P122.
+
+**Family:** F26-Q.
+
+**Classification:** method failure for within-star large-prime amortization.
+This does not close retained cross-layer relations, different-anchor overlap,
+or multi-round feedback.
+
+**What was tried.** After P121 forces many relations to reuse one old large
+row in \(q\), expect the new arm cofactors \(H_A=w+NA\) to reuse their own
+large prime rows and create a parity circuit.
+
+**Exact obstruction.** For two distinct digits \(A,A'\in[0,B]\),
+
+\[
+\gcd(H_A,H_{A'})
+=\gcd(H_A,A-A')
+\le B.
+\]
+
+Thus no prime larger than \(B\) divides two different fresh cofactors. In an
+even star-only dependency, each selected fresh cofactor must have a
+\(B\)-smooth squarefree kernel. An odd dependency can use only one additional
+coset, where the fresh large parity partitions the large squarefree kernel of
+the common anchor.
+
+The obstruction concerns the fresh cofactors, not the full exact values
+\(qH_A\), which all share \(q\). It also concerns one fixed anchor. Old
+retained columns can cancel a star-private row, and a later star has a
+different inverse offset.
+
+**What would make a retry materially new.** Prove a same-digit endpoint split
+that releases a smaller generator, an old/new cross-layer match, a
+different-anchor overlap, or a wrapped/powered feedback law. More arms in the
+same star do not change the gcd obstruction.
+
+## X75 — full-endpoint recursion and wide reused rows do not force closure
+
+**Status:** promoted as the exact recursive boundary in P123. Three narrower
+wording or scope failures remain preserved in F135.
+
+**Family:** F26-Q.
+
+**Classification:** method failure for recursively feeding a complete new
+reciprocal endpoint, or for treating polynomial row multiplicity as a parity
+cycle. This does not close proper-block release, cross-layer or cross-star
+feedback, wrapped words, or multi-block words.
+
+**What was tried.** Use P121 to create many anchored values from a small block
+\(q<N/B\). Feed each complete new reciprocal endpoint back into the same
+source. If this does not recurse, use the wide common row itself as evidence
+that the retained parity matrix must close.
+
+**Exact obstruction.** A genuinely new arm has reciprocal endpoint
+\(z>N/B\), and unary feedback on \(z\) returns the same exact value. Different
+digits in the star have reciprocal gcd below \(B\). A heavy same-digit bucket
+can release a small residual block or exhaust it, but the complementary branch
+only gives \(\Omega(n^3/\log n)\) distinct columns on one covered row.
+
+That width does not imply a dependency. A quasipolynomial rooted-tree matrix
+can give every internal row high degree while remaining unitriangular and
+peeling completely. F135 also realizes a selected two-generation canonical
+forest by exact CRT conditions. It does not control unselected source
+columns.
+
+**What would make a retry materially new.** Use a proper released block, a
+retained old/new match, a different-star carry collision, a wrapped or
+multi-block word, or a proof that forces a final rank defect. After closure,
+a retry must still prove a non-global normalized root. Endpoint reversal,
+more arms, or row degree alone is covered by this obstruction.
+
+## X76 — one released parent cannot force a new child overlap
+
+**Status:** promoted as the exact pathwise boundary in P124. The first
+overstated operational version remains preserved in F137.
+
+**Family:** F26-Q.
+
+**Classification:** method failure for treating one release-and-reanchor
+step as a forced cross-star cycle. This does not close non-parent old-column
+overlap, different-star collisions, interrupted descent, or multi-block
+feedback.
+
+**What was tried.** Release a proper small block from one feedback endpoint,
+start a new anchored star at that block, and expect the old complement to
+overlap a different child arm in a large prime.
+
+**Exact obstruction.** In the child coordinates, the old complement is
+exactly the formal digit \(j\). Every other child digit \(b\) satisfies
+
+\[
+\gcd(H'_j,H'_b)=\gcd(H'_j,b-j).
+\]
+
+If \(j<C\), this gcd is below \(C\) for every different observed digit. If
+\(j\ge C\), the released block is strictly smaller than its parent. Two
+consecutive large-\(j\) steps contract by \(C/(C+1)\).
+
+This does not give a global descent. Small-\(j\) recentering can interrupt
+every pair, and a branching forest can continue to create fresh pivots.
+
+**What would make a retry materially new.** Bound the total number of
+small-\(j\) interruptions, force a collision with a non-parent retained
+column or a different star, pack several current blocks into one
+value-dependent word, or prove a global rank/root invariant. Repeating the
+same parent-child overlap argument is covered by P124.
+
+## X77 — cancelling owner rows does not imply a parity dependency
+
+**Status:** promoted as the exact two-gate obstruction in P125.
+
+**Family:** F26-Q.
+
+**Classification:** failure of universal owner-row cancellation and failure
+of minimum row degree as a rank certificate. This does not close the complete
+adaptive source or a source restricted to globally new anchored values.
+
+**What was tried.** Use old columns or different anchored stars to cancel
+every max-digit owner pivot. Then treat a matrix with no degree-one rows as a
+guaranteed square dependency.
+
+**Exact obstruction.** Row reuse first requires a carry collision
+\(\kappa\equiv\lambda\pmod r\), with odd valuation in both values. F138 gives
+400-bit balanced-semiprime values with \(r>(N-1)/2\), so the row is private
+in the complete canonical universe. The strongest value is already an F130
+support-one word; its scope is universal cancellation, not globally new F133
+values.
+
+Even if all displayed rows are reused, rank can remain full. At \(N=161\),
+four canonical columns have row degrees \((3,2,2,2,2)\), rank four, and zero
+kernel.
+
+**What would make a retry materially new.** Prove a specific final
+carry-collision pattern that creates a strict rank defect after all fresh
+rows are included. A value-dependent multi-block operation can qualify only
+if it proves this rank effect. It must then prove a non-global normalized
+root. Row degree, core size, and pivot cancellation alone are covered.
+
+## X78 — simultaneous multi-pivot preservation still need not create a dependency
+
+**Status:** promoted as the exact rank boundary in P127 after a passing final
+hostile re-audit and fresh blind reconstruction. The invalid first finite
+certificate remains preserved in F139.
+
+**Family:** F26-Q.
+
+**Classification:** method failure for treating a value-dependent pack of
+several old private rows as a rank certificate. This does not close
+unreduced-presentation relations, repeated packing layers, complete-source
+cross-collisions, or the final normalized-root problem.
+
+**What was tried.** Select globally private, pairwise-coprime old blocks from
+different owner columns. Multiply them into one public word \(q<N/B\), then
+run one complete anchored scan. Many new columns can preserve every packed
+row at the same time, so the operation is materially stronger than unary
+feedback.
+
+**Exact obstruction.** After the packed pivot rows are cancelled, closure is
+equivalent to one shifted residual-span condition:
+
+\[
+\sum_j\beta_j
+\left(\widehat u_j+\sum_i\widehat v_i\right)
+\in\operatorname{colspan}(\widehat W).
+\]
+
+The packing theorem gives no reason for this condition to hold. A peelable
+incidence system can attach one fresh private row to every packed column and
+remain full-rank at arbitrary size.
+
+The exact \(N=989\) selected certificate realizes the same boundary with
+canonical inverse relations. It packs old rows \(11,17\), preserves both in
+every nonzero carry digit, passes every declared endpoint screen, and still
+has rank six, zero kernel, and a complete peeling order. Its old-row privacy
+is only selected-ledger privacy, not a complete-source statement.
+
+There is also no theorem that two qualifying globally private owner blocks
+have product below \(N/B\). Thus the public packing operation has both a
+size gate and a residual-rank gate.
+
+The earlier \(N=667\) candidate omitted the packed base screen and actually
+factors through \(\gcd(133+331,667)=29\). It is preserved as failed evidence.
+
+**What would make a retry materially new.** Remove the product-size gate by
+retaining an unreduced or compactly factored presentation, or prove a
+specific arithmetic collision among the shifted residual classes. Any retry
+must still establish a strict final rank defect and a non-global normalized
+root. More packed rows or more carry digits alone are covered by P127.
+
+## X79 — the proposed long small-quotient path does not survive complete endpoint refinement
+
+**Status:** the frozen F140 claim failed its hostile audit. The exact failure
+is preserved in
+`experiments/F140_small_j_global_potential/HOSTILE_AUDIT_FAILED.md`, whose
+SHA-256 is
+`d2828fffa62165142706119bea6311b8a1b7c0ae2148bb4cbcec1ab997090536`.
+
+**Family:** F26-Q.
+
+**Classification:** method failure for the frozen selected-path
+construction. It does not prove a short bound on small-quotient paths, and it
+does not close an explicitly declared aggregate-feedback grammar.
+
+**What was tried.** Program public exact values so that
+`gcd(V_i,B_{i+1})=q_{i+1}` and the formal P124 quotient is one at every
+step. The intended result was a selected path of length
+`Omega(n^(1/3))` whose current blocks grow, whose endpoint screens are null,
+and whose selected parity columns remain independent.
+
+**Exact obstruction.** The public gcd need not remain one terminal gcd-free
+block. In the exact target-100 construction,
+
+\[
+\gcd(q_{23},z_{16})=107,
+\]
+
+where `z_16` is a retained reciprocal endpoint created before `q_23` is
+released. Complete endpoint refinement therefore splits `q_23` into at
+least two current blocks before the proposed anchored step can use it as one
+generator. The aggregate identity and quotient-one calculation remain true,
+but the established all-block source feeds terminal blocks, not an arbitrary
+public product of them. The audit also found an independent label gap: the
+declared exclusions do not ensure that the chosen label prime is coprime to
+the carry used in its CRT inverse condition.
+
+**What would make a retry materially new.** Declare and cost an explicit
+aggregate or multi-block feedback rule, then prove that its full retained
+endpoint transcript remains quasipolynomial and that the aggregate path
+survives all earlier refinements. Merely citing the public gcd, or repairing
+only the label exclusion, does not repair F140. A retry must still prove a
+final rank defect and a non-global normalized root.
+
+## X80 — the proposed short cross-star cycle surplus is vacuous
+
+**Status:** the frozen F144 surplus theorem failed hostile audit. The exact
+failure is preserved in
+`experiments/F144_cross_star_residual_cycle_surplus/HOSTILE_AUDIT_FAILED.md`,
+whose SHA-256 is
+`696016da383e646b05c6268e7ddb7217008ea0e4ca8778f398677aa7359821a9`.
+
+**Family:** F26-Q.
+
+**Classification:** method failure for forcing a useful dependency from many
+short positive-direction containment cycles. The general residual-cycle
+identity survives, and long selected paths are not closed.
+
+**What was tried.** For edges
+
+\[
+[q_ea_e^2]_N=r_eT_e,
+\]
+
+collect (R+1) short directed cycles among blocks above (N/R). Their
+small residual products have fewer than (R) parity rows, so binary linear
+algebra appears to force a square residual product. A metric bound was then
+intended to make the resulting root useful.
+
+**Exact obstruction.** On every directed cycle (C), tail/head balance gives
+
+\[
+N\mid A_C^2-T_C,
+\qquad
+A_C=\prod_{e\in C}a_e,
+\qquad
+T_C=\prod_{e\in C}T_e.
+\]
+
+If one edge wraps, exact integer comparison gives (A_C^2>T_C). Hence
+
+\[
+\boxed{A_C^2\ge N+T_C>N},
+\qquad
+A_C>\sqrt N.
+\]
+
+The frozen surplus regime makes every edge wrap, but its size condition
+implies (A_C\le H^K<\sqrt N) for every proposed cycle. Thus the graph has
+zero qualifying short cycles. The dimension argument is correct but cannot
+activate.
+
+**What survives.** If a collection of directed cycles has square combined
+residual product (S^2), the actual P128 values form an exact square with
+normalized root ((\prod a_e)S^{-1}). Wrapping plus
+
+\[
+\sqrt N<\prod a_e<N/2
+\]
+
+makes both sign gcds proper. The exact (N=35) conditional certificate has
+centers (13,17), anchors (2,3), root (6), and returns (5,7).
+
+**What would make a retry materially new.** Use a selected path or cycle
+whose total anchor product reaches the square-root scale while its discovery
+still costs quasipolynomial time. A bounded-anchor polylogarithmic cycle
+cannot do this. A retry must also force the residual square relation; merely
+enumerating more short cycles is covered by X80.
+
+## X81 — divisibility alone is not a direct one-child support handoff
+
+**Status:** F191 V1 failed fresh hostile audit. Its exact support law,
+counterexample, and finite bank theorem survived and were repaired into the
+verifier-backed V2/P168 result. The failed V1 audit has SHA-256
+d3ae15732f7f1beccd1d5a9c37cabf2a8ab11d821069822b7e7f69755ee2de69.
+
+**Family:** P164-to-P163 support localization.
+
+**Classification:** interface failure, not failure of the Euclidean
+support-conservation theorem.
+
+**Exact defect.** V1 asked only for quotients or carries divisible by every
+surviving support prime and then claimed a direct P163 handoff. P163 also
+requires an admissible recursive integer. A carrier can be zero, negative
+without a magnitude bound, or have magnitude at least \(N/2\). The branch
+\(\ell\mid D\) also called \(D=0\) a carrier, and the proposed roughness cap
+could be circular if its bank budget depended on that same cap.
+
+**Repair.** V2 requires
+
+\[
+0<|A_j|<N/2
+\]
+
+for every direct child, or a separate support-preserving size-localization
+theorem. It excludes zero and fixes the bank budget before choosing the
+roughness cap, unless an explicit uniform dominance function is supplied.
+
+**What remains open.** An actual P164-correlated floor or carry law may still
+force a valid support-bearing child. The failed V1 interface cannot be used
+as that law.
+
+## X82 — the fixed joint-child public feature bank has no holdout signal
+
+**Status:** preregistered finite method failure from F205-D01. It is not an
+unbounded obstruction to joint use of the two factored children.
+
+**Family:** beta-two joint children
+\(K=(N-1)/2\) and \(E=N-\lfloor\sqrt N\rfloor^2\).
+
+**Classification:** method failure for the exact predeclared public
+feature, stump, and transition bank. The broader joint-child route remains
+open.
+
+**What was tried.** Completely factor both children, construct
+\(M=\operatorname{lcm}(K,E)\) and a public CRT square root of \(N\bmod M\),
+then use residue statistics, arithmetic functions, split/inert counts,
+fixed gcd/order tests, and train-selected one-dimensional decision stumps to
+predict the first reciprocal bit. Every feature was constructed by
+`public_record(N)` before hidden factors were used for labels.
+
+**Exact finite result.** The frozen remote run completed 5,000 training,
+2,500 disjoint-bit-range holdout, 5,570 exhaustive-small, and one frozen
+record in 146.672 seconds. Train-only selection chose
+`E.largest_p8_7`, flipped, with train balanced accuracy \(0.5246868\).
+On the hard holdout cohort its balanced accuracy was \(0.4943293\), with
+1,235 errors among 2,444 rows. This is below the preregistered \(0.55\) null
+threshold. The exact transition bank first fails at
+\(3551=53\cdot67\). The smallest retained failures are \(2627\) for support
+of \(p+q-2B\) by \(2KE\), \(35\) for a split prime in \(K\), and \(527\)
+for a second mixed norm.
+
+**What would make a retry materially new.** Use the full inverse-unit torsor
+and a genuinely joint or Archimedean decoder, a new arithmetic relation, or
+an adaptive operation. More scalar residue counts or one-dimensional stumps
+are covered by this exact finite null. The run manifest and result have
+SHA-256 hashes
+`a8192676d3c8877c9767537af508c057263ee68d9341af86de47af3dd862e0d1`
+and
+`dbc3b25b1714355dea539e7136e6155a0dd87368e1bc9434fd089db79c85451b`.
+
+## X83 — F228 V1 did not turn every quotient support defect into a valid smaller child
+
+**Status:** the frozen F228 packet failed hostile audit. The audit has
+SHA-256
+`c74313d964100f3865896a144554aa87d5d05cdb42d7b85b1257b735fc2508aa`.
+
+**Family:** beta-two quotient/carry labels and APR-compatible support.
+
+**Classification:** failed candidate formulation and preregistered-predicate
+mismatch. The exact quotient, carry, inverse-lift, and harmonic identities
+survive. P200 separately repairs and exploits the zero-defect branch.
+
+**Exact defects.** For
+
+\[
+uN=Q_uB+R_u,
+\qquad A_{u,c}=Q_u+c,
+\]
+
+the odd common-primary capacity obeys
+
+\[
+\gcd(A_{u,c},D_N^{\rm odd})
+=\gcd(u-R_u+cB,D_N^{\rm odd}).
+\]
+
+The displayed defect can be zero. At
+
+\[
+2881=43\cdot67,
+\quad B=64,
+\quad u=1,
+\quad c=0,
+\]
+
+one has \(A=45\), a genuine common order-three return, but
+\(u-R_u+cB=0\), which is not a factorable recursive child. The correct
+zero branch is \(B\mid N-1\), \(H=(N-1)/B\), and \(A=uH\); this is now
+P200.
+
+The D01 source also removed hidden factors of \(N\) from its prime union
+before applying the registered omega cap, while the preregistration did not.
+This changes one frozen row and the stated aggregate total. Finally, the
+post-tail QP conclusion omitted numerical-QP bounds on the trial count,
+exponent menu, inverse surplus, and inverse target probability.
+
+**What would make a retry materially new.** Preserve the P200 zero branch;
+for nonzero defects, declare a genuinely public screened statistic and use
+fresh preregistered evidence if needed. State every QP parameter uniformly.
+The remaining mathematical target is a biased quotient/multiplier law with
+inverse-QP compatible-support mass, not the repaired bookkeeping alone.
+
+## X84 — F234 V1 mixed hidden support incidence with an operational residue-row list
+
+**Status:** the frozen F234 packet failed hostile audit. The audit has
+SHA-256
+`4d7f0a4d299a0d1ecf6a459b1949e80e42c017145ec6fbfa2156d8b583b27727`.
+
+**Family:** arbitrary shifted quotient banks, captured residual log mass,
+and known-residue rows.
+
+**Classification:** failed candidate interface. The exact hit-indicator
+expectation identities and the conditional harmonic-surplus probability
+bound survive.
+
+**Exact defects.** The frozen hit indicator counted every residual prime
+dividing a child \(uH+c\). Its proposed residue-row procedure then skipped
+primes dividing \(uB\). These sets are not equal. For example, on
+
+\[
+N=2881=43\cdot67,
+\qquad B=64,
+\qquad H=45,
+\qquad (u,c)=(7,7),
+\]
+
+the residual prime \(7\) is a genuine child hit through \(7\mid u\), but
+the stated row enumeration omits it. Thus positive captured log mass did not
+always imply one operationally tried orientation row.
+
+The full-list procedure also called the known-residue terminal on rows whose
+combined modulus \(L\) could be below the required threshold
+
+\[
+J=N^{1/4}/\operatorname{QP}(n).
+\]
+
+Its published QP cost does not apply to those subthreshold calls. The
+procedure needs an explicit \(L\ge J\) guard, with smaller false rows skipped
+or handled by a separately bounded method.
+
+**What survives.** If \(I_\ell\) is the exact indicator that a residual
+primary is captured, then raising each captured rational prime to exponent
+\(n\) gives
+
+\[
+\mathbb E\log r_p
+=\log s_p-
+\sum_{\ell^e\parallel s_p}e\log\ell\,\Pr(I_\ell=1),
+\]
+
+and similarly for \(q\). The corresponding harmonic-surplus argument also
+survives when its support is aligned with a valid verified transition.
+
+**What would make a retry materially new.** Define the hit set to match the
+rows the algorithm actually enumerates, or add a separate direct treatment
+of \(\ell\mid u\). Guard every known-residue call by its proven modulus
+threshold. F235/P204 separately avoids the row-visibility issue for the
+direct-factor route by multiplying child values into one unfactored word and
+using Miller amplification.
+
+## X85 — F236 V1 mixed two centered-carry statistics
+
+**Status:** frozen numerical packet failed hostile review. Preserve V1 and
+do not cite its maxima without the corrected statistic label.
+
+F236 used centered residues
+
+\[
+up=K_pB+x,\qquad uq=K_qB+y,\qquad xy-u^2=cB.
+\]
+
+Its exact weighted-trace and quadratic decoder survive. The frozen results,
+however, assigned the value (522{,}514), produced by a forced common
+center, to the distinct-nearest-center (u=1) statistic. Independent
+exhaustive enumeration gives (520{,}969) for the latter maximum. A
+preregistration also said half ties cannot occur, although its explicit floor
+formula and code did specify a tie convention.
+
+**What survives.** For a guessed tuple ((u,K_p,K_q,c)),
+
+\[
+T={u^2H+K_pK_qB-c\over u},\qquad
+K_qX^2-TX+K_pN=0
+\]
+
+is an exact verified factor decoder. Caps (u\le U), (|c|\le C) give
+(O(CU^3)) candidate arithmetic. Standard simultaneous approximation only
+gives carry scale (O(B/U+U^2/B)), still exponential for polynomial (U).
+
+**What a retry must do.** Name the forced-common-center and
+distinct-nearest-center carries separately, state the tie convention
+literally, and replay every maximum from the frozen raw outputs. Finite hit
+rates cannot be promoted to an inverse-QP asymptotic law.
+
+## X86 — F242 V1 imported a counterfamily without making the statement self-contained
+
+**Status:** the frozen F242 V1 packet passed hostile mathematical audit but
+failed the required strict statement-only reconstruction. The blind report
+has SHA-256
+`dc4d5ae3f0f276796b3e4e087ab1f8da597f737b9af6509527054549bcb3a282`.
+
+**Family:** quadratic Hilbert--90 sampling and Miller amplification in the
+four shifted orientations \(p\pm1,q\pm1\).
+
+**Classification:** failed verification packet, not a refutation of the
+core torus theorem.
+
+**Exact defect.** The statement's shifted-gcd identity, full-torus sampler,
+constant fibres in split and nonsplit algebras, exact return law, unequal
+two-primary Miller probability, four-orientation average, and conditional
+bit complexity all reconstructed from first principles. Its final bare-word
+warning cited a named P158/F172 family without defining that family or
+stating the size relation needed to infer exponentially large residuals.
+That claim therefore could not be reconstructed from the frozen statement
+alone.
+
+**What survives.** For fixed hidden signs \(\epsilon_p,\epsilon_q\), the
+public exponent \((N-J)W\), with
+\(J=\epsilon_p\epsilon_q=(D/N)\), contains the exact common shifted factor
+of \(p-\epsilon_p\) and \(q-\epsilon_q\). A clean Hilbert--90 sample is
+uniform on both full local tori, and its Miller-amplified factor probability
+is at least the reciprocal of twice the smaller shifted residual.
+
+**What makes the retry material.** F242 V2 removes the imported family
+claim and retains only the self-contained exact reduction and its explicit
+remaining source gap. V1, its hostile PASS, and this strict blind FAIL stay
+frozen.
+
+## X87 — F248 V1 imported special-family residual bounds without defining them
+
+**Status:** the frozen F248 V1 packet passed hostile mathematical review but
+failed the required strict statement-only reconstruction. The blind report
+has SHA-256
+`0a4ec2ec1627026dd01c4936a8f3cc71831dd3cd043fbdb8d5c87dc0f8a5ef22`.
+
+**Family:** direct exact-square events for scalar lifts and norm-one torus
+rows.
+
+**Classification:** failed verification packet, not a refutation of the
+event bounds.
+
+**Exact defect.** The full-lift, principal-fibre, fixed-past, duplicate,
+reciprocal, Pell, and inverse-point calculations reconstructed. The frozen
+statement's final specializations invoked external P208/P209 residual-size
+facts without defining the family or proving the required parameter bounds.
+The claimed exponential bank conclusions were therefore not self-contained.
+
+**What survives.** Every internal exact event law and conditional parameter
+bound survives. F248 V2 removes all imported family claims and states the
+bank conclusion only under explicit hypotheses (K=2^{o(n)}) and
+(H=2^{\Omega(n)}) or (H'=2^{\Omega(n)}). V2 passed fresh hostile and
+strict statement-only review and was promoted as P213. V1 and its hostile
+PASS `9321ec03a26e1d0ddc5f29dee2874b6498b9a0d0b0bb542c58b4d0f8b2e7c142`
+remain frozen.
+## X88 — F253 V1 called an identical Pell row a two-column dependency
+
+**Failure.** F253 V1 stated its odd-multiple theorem for every odd
+(k\ge1), then referred to the indices (j,kj) as two rows and to their
+identity as a P66 kernel vector. At (k=1), however,
+(F_{1,D}(Y)=Y) and (G_{1,D}(Y)=1): the two indices are identical and
+there is no two-column subset. Modular orbit repetition can produce the
+same issue even for (k>1).
+
+**Repair.** F253 V2 requires odd (k>1), both indexed columns to be present
+and retained, and (y_{kj}\ne y_j). Only the resulting nonzero pair vectors
+are used in the decoy span. V2 passed a fresh hostile re-audit and strict
+statement-only reconstruction and was promoted as P218. The preserved V1
+blind-failure SHA-256 is
+`05386c64670c09c99b236d668959a5c6ff8428e01aa3095a1c52e06c38b9c906`.
+
+## X89 — F265-D08's fixed-round P66 terminal is resource-infeasible
+
+**Status:** the unfrozen F265-D08 elliptic-cubic-lift theory draft survived
+hostile arithmetic review but is closed as an implementation method. It was
+not compiled or run.
+
+**Family:** elliptic cubic lift rows, private-primary peeling, complete
+support-at-most-two removal, and residual P66 square-class decoding.
+
+**Classification:** method failure of the registered quadratic terminal and
+its serial resource model. This is not evidence against elliptic lift rows,
+P66, or a subquadratic batch decoder.
+
+**Exact obstruction.** D08 correctly replaced arbitrary-shape sampled
+`cpp_int` gcd timing by a six-limb, fixed-722-round binary-gcd primitive. The
+hostile review verified its invariant, zero/equal/even endpoints, overflow
+bound, and call-site arithmetic. But the registered worst case contains
+
+\[
+9{,}386{,}560\ \text{P66 gcd calls per bank},
+\qquad
+768\ \text{banks},
+\]
+
+or exactly
+
+\[
+7{,}208{,}878{,}080\ \text{gcd calls}
+\quad\text{and}\quad
+5{,}204{,}809{,}973{,}760\ \text{fixed rounds}.
+\]
+
+Even with every other cost set to zero, the 12,600-second serial projection
+would require a complete gcd below approximately $0.999$ microseconds, or
+one fixed round below $1.383$ nanoseconds. A round performs dependent
+six-limb comparison and subtraction, trailing-zero selection, seven
+fixed-offset shift candidates, and a masked state update. The registered
+gate is therefore a legitimate preflight-stop design, not a credible large
+search.
+
+Two specification defects independently prevent materializing D08 as
+written. Its composition clause deletes the inherited definitions and timing
+contracts for `rho_factor` and `rho_factor_overflow` while later formulas
+still use them. Its mandatory independent pseudorandom self-test corpus has
+no frozen generator, seed, size, order, operand domain, or digest.
+
+**What survives.** The elliptic row law, saturated private-primary peel,
+support-two square criterion, normalized-root quotient logic, fixed-round gcd
+theorem, exact byte fixtures, and the conservative task count all survived
+the hostile theory review.
+
+**What makes a retry materially new.** Remove orders of magnitude of P66
+calls before repairing prose. A valid retry needs a complete batch
+gcd-free refinement and low-support/kernel decoder whose proved bit cost is
+near-linear or softly superlinear in the row/block input size. In particular,
+it must not enumerate all terminal block pairs or all support-two integer
+gcd/square tests. Only after that theorem and its exact resource envelope are
+fixed should an elliptic source packet be rebuilt.

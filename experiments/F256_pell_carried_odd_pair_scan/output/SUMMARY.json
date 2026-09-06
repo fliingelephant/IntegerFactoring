@@ -1,0 +1,1079 @@
+{
+  "algebra_sha256": "c2b86b948fc1f286376997638002bc1ea470167a7cf0dd8291fdbc9cbbd7d349",
+  "experiment": "F256_pell_carried_odd_pair_scan",
+  "heldout_interpretation": "null finite signal",
+  "parameters": {
+    "D_menu": [
+      2,
+      3,
+      5,
+      6,
+      7,
+      10,
+      11,
+      13
+    ],
+    "heldout_bits": [
+      36,
+      40,
+      44,
+      48
+    ],
+    "inputs_per_bit": 128,
+    "odd_multipliers": [
+      3,
+      5,
+      7,
+      9
+    ],
+    "train_bits": [
+      20,
+      24,
+      28,
+      32
+    ],
+    "window_multiplier": 12
+  },
+  "preregistration_sha256": "129bcacc40359e4f433f3fea6496e81bdb515cca24aa202033052d6f79730237",
+  "process_max_rss_platform_units": 29188,
+  "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+  "scan_sha256": "283eedcc3e924c9f1309d0320f19544d779929a68a01a3d55259a68817a2ea61",
+  "splits": {
+    "heldout": {
+      "by_D": {
+        "10": {
+          "admissible_pairs": 186480,
+          "carried_pairs": 186480,
+          "d_eq_1": 156937,
+          "d_gt_1": 29543,
+          "index_pairs": 202624
+        },
+        "11": {
+          "admissible_pairs": 183168,
+          "carried_pairs": 183168,
+          "d_eq_1": 62601,
+          "d_gt_1": 120567,
+          "index_pairs": 202624
+        },
+        "13": {
+          "admissible_pairs": 194944,
+          "carried_pairs": 194944,
+          "d_eq_1": 123642,
+          "d_gt_1": 71302,
+          "index_pairs": 202624
+        },
+        "2": {
+          "admissible_pairs": 168984,
+          "carried_pairs": 168984,
+          "d_eq_1": 87461,
+          "d_gt_1": 81523,
+          "index_pairs": 202624
+        },
+        "3": {
+          "admissible_pairs": 157452,
+          "carried_pairs": 157452,
+          "d_eq_1": 102436,
+          "d_gt_1": 55016,
+          "index_pairs": 202624
+        },
+        "5": {
+          "admissible_pairs": 182649,
+          "carried_pairs": 182649,
+          "d_eq_1": 67653,
+          "d_gt_1": 114996,
+          "index_pairs": 202624
+        },
+        "6": {
+          "admissible_pairs": 176767,
+          "carried_pairs": 176767,
+          "d_eq_1": 129679,
+          "d_gt_1": 47088,
+          "index_pairs": 202624
+        },
+        "7": {
+          "admissible_pairs": 181120,
+          "carried_pairs": 181120,
+          "d_eq_1": 128339,
+          "d_gt_1": 52781,
+          "index_pairs": 202624
+        }
+      },
+      "by_bits": {
+        "36": {
+          "by_D": {
+            "10": {
+              "admissible_pairs": 39808,
+              "carried_pairs": 39808,
+              "d_eq_1": 33387,
+              "d_gt_1": 6421,
+              "index_pairs": 43392
+            },
+            "11": {
+              "admissible_pairs": 39296,
+              "carried_pairs": 39296,
+              "d_eq_1": 13495,
+              "d_gt_1": 25801,
+              "index_pairs": 43392
+            },
+            "13": {
+              "admissible_pairs": 41856,
+              "carried_pairs": 41856,
+              "d_eq_1": 26412,
+              "d_gt_1": 15444,
+              "index_pairs": 43392
+            },
+            "2": {
+              "admissible_pairs": 36224,
+              "carried_pairs": 36224,
+              "d_eq_1": 18885,
+              "d_gt_1": 17339,
+              "index_pairs": 43392
+            },
+            "3": {
+              "admissible_pairs": 33664,
+              "carried_pairs": 33664,
+              "d_eq_1": 21832,
+              "d_gt_1": 11832,
+              "index_pairs": 43392
+            },
+            "5": {
+              "admissible_pairs": 39016,
+              "carried_pairs": 39016,
+              "d_eq_1": 14192,
+              "d_gt_1": 24824,
+              "index_pairs": 43392
+            },
+            "6": {
+              "admissible_pairs": 37760,
+              "carried_pairs": 37760,
+              "d_eq_1": 27750,
+              "d_gt_1": 10010,
+              "index_pairs": 43392
+            },
+            "7": {
+              "admissible_pairs": 38784,
+              "carried_pairs": 38784,
+              "d_eq_1": 27397,
+              "d_gt_1": 11387,
+              "index_pairs": 43392
+            }
+          },
+          "by_multiplier": {
+            "3": {
+              "admissible_pairs": 137274,
+              "carried_pairs": 137274,
+              "d_eq_1": 82113,
+              "d_gt_1": 55161,
+              "index_pairs": 147456
+            },
+            "5": {
+              "admissible_pairs": 77882,
+              "carried_pairs": 77882,
+              "d_eq_1": 46778,
+              "d_gt_1": 31104,
+              "index_pairs": 88064
+            },
+            "7": {
+              "admissible_pairs": 52282,
+              "carried_pairs": 52282,
+              "d_eq_1": 31222,
+              "d_gt_1": 21060,
+              "index_pairs": 62464
+            },
+            "9": {
+              "admissible_pairs": 38970,
+              "carried_pairs": 38970,
+              "d_eq_1": 23237,
+              "d_gt_1": 15733,
+              "index_pairs": 49152
+            }
+          },
+          "counts": {
+            "admissible_pairs": 306408,
+            "carried_pairs": 306408,
+            "d_eq_1": 183350,
+            "d_gt_1": 123058,
+            "index_pairs": 347136
+          },
+          "inputs": 128,
+          "inputs_with_cleanup_factor": 1,
+          "inputs_with_dependency": 0,
+          "inputs_with_non_global": 0,
+          "inputs_with_strict_screen_free_non_global": 0
+        },
+        "40": {
+          "by_D": {
+            "10": {
+              "admissible_pairs": 44400,
+              "carried_pairs": 44400,
+              "d_eq_1": 37397,
+              "d_gt_1": 7003,
+              "index_pairs": 48256
+            },
+            "11": {
+              "admissible_pairs": 43648,
+              "carried_pairs": 43648,
+              "d_eq_1": 14766,
+              "d_gt_1": 28882,
+              "index_pairs": 48256
+            },
+            "13": {
+              "admissible_pairs": 46208,
+              "carried_pairs": 46208,
+              "d_eq_1": 29366,
+              "d_gt_1": 16842,
+              "index_pairs": 48256
+            },
+            "2": {
+              "admissible_pairs": 40216,
+              "carried_pairs": 40216,
+              "d_eq_1": 20895,
+              "d_gt_1": 19321,
+              "index_pairs": 48256
+            },
+            "3": {
+              "admissible_pairs": 37504,
+              "carried_pairs": 37504,
+              "d_eq_1": 24400,
+              "d_gt_1": 13104,
+              "index_pairs": 48256
+            },
+            "5": {
+              "admissible_pairs": 43476,
+              "carried_pairs": 43476,
+              "d_eq_1": 16171,
+              "d_gt_1": 27305,
+              "index_pairs": 48256
+            },
+            "6": {
+              "admissible_pairs": 42111,
+              "carried_pairs": 42111,
+              "d_eq_1": 30858,
+              "d_gt_1": 11253,
+              "index_pairs": 48256
+            },
+            "7": {
+              "admissible_pairs": 43136,
+              "carried_pairs": 43136,
+              "d_eq_1": 30519,
+              "d_gt_1": 12617,
+              "index_pairs": 48256
+            }
+          },
+          "by_multiplier": {
+            "3": {
+              "admissible_pairs": 152502,
+              "carried_pairs": 152502,
+              "d_eq_1": 91344,
+              "d_gt_1": 61158,
+              "index_pairs": 163840
+            },
+            "5": {
+              "admissible_pairs": 86967,
+              "carried_pairs": 86967,
+              "d_eq_1": 52204,
+              "d_gt_1": 34763,
+              "index_pairs": 98304
+            },
+            "7": {
+              "admissible_pairs": 58295,
+              "carried_pairs": 58295,
+              "d_eq_1": 35054,
+              "d_gt_1": 23241,
+              "index_pairs": 69632
+            },
+            "9": {
+              "admissible_pairs": 42935,
+              "carried_pairs": 42935,
+              "d_eq_1": 25770,
+              "d_gt_1": 17165,
+              "index_pairs": 54272
+            }
+          },
+          "counts": {
+            "admissible_pairs": 340699,
+            "carried_pairs": 340699,
+            "d_eq_1": 204372,
+            "d_gt_1": 136327,
+            "index_pairs": 386048
+          },
+          "inputs": 128,
+          "inputs_with_cleanup_factor": 1,
+          "inputs_with_dependency": 0,
+          "inputs_with_non_global": 0,
+          "inputs_with_strict_screen_free_non_global": 0
+        },
+        "44": {
+          "by_D": {
+            "10": {
+              "admissible_pairs": 48896,
+              "carried_pairs": 48896,
+              "d_eq_1": 41046,
+              "d_gt_1": 7850,
+              "index_pairs": 52992
+            },
+            "11": {
+              "admissible_pairs": 47872,
+              "carried_pairs": 47872,
+              "d_eq_1": 16311,
+              "d_gt_1": 31561,
+              "index_pairs": 52992
+            },
+            "13": {
+              "admissible_pairs": 50944,
+              "carried_pairs": 50944,
+              "d_eq_1": 32384,
+              "d_gt_1": 18560,
+              "index_pairs": 52992
+            },
+            "2": {
+              "admissible_pairs": 44288,
+              "carried_pairs": 44288,
+              "d_eq_1": 22831,
+              "d_gt_1": 21457,
+              "index_pairs": 52992
+            },
+            "3": {
+              "admissible_pairs": 41196,
+              "carried_pairs": 41196,
+              "d_eq_1": 26861,
+              "d_gt_1": 14335,
+              "index_pairs": 52992
+            },
+            "5": {
+              "admissible_pairs": 47825,
+              "carried_pairs": 47825,
+              "d_eq_1": 17790,
+              "d_gt_1": 30035,
+              "index_pairs": 52992
+            },
+            "6": {
+              "admissible_pairs": 46336,
+              "carried_pairs": 46336,
+              "d_eq_1": 34088,
+              "d_gt_1": 12248,
+              "index_pairs": 52992
+            },
+            "7": {
+              "admissible_pairs": 47360,
+              "carried_pairs": 47360,
+              "d_eq_1": 33500,
+              "d_gt_1": 13860,
+              "index_pairs": 52992
+            }
+          },
+          "by_multiplier": {
+            "3": {
+              "admissible_pairs": 167919,
+              "carried_pairs": 167919,
+              "d_eq_1": 100745,
+              "d_gt_1": 67174,
+              "index_pairs": 180224
+            },
+            "5": {
+              "admissible_pairs": 95215,
+              "carried_pairs": 95215,
+              "d_eq_1": 57246,
+              "d_gt_1": 37969,
+              "index_pairs": 107520
+            },
+            "7": {
+              "admissible_pairs": 64496,
+              "carried_pairs": 64496,
+              "d_eq_1": 38588,
+              "d_gt_1": 25908,
+              "index_pairs": 76800
+            },
+            "9": {
+              "admissible_pairs": 47087,
+              "carried_pairs": 47087,
+              "d_eq_1": 28232,
+              "d_gt_1": 18855,
+              "index_pairs": 59392
+            }
+          },
+          "counts": {
+            "admissible_pairs": 374717,
+            "carried_pairs": 374717,
+            "d_eq_1": 224811,
+            "d_gt_1": 149906,
+            "index_pairs": 423936
+          },
+          "inputs": 128,
+          "inputs_with_cleanup_factor": 1,
+          "inputs_with_dependency": 0,
+          "inputs_with_non_global": 0,
+          "inputs_with_strict_screen_free_non_global": 0
+        },
+        "48": {
+          "by_D": {
+            "10": {
+              "admissible_pairs": 53376,
+              "carried_pairs": 53376,
+              "d_eq_1": 45107,
+              "d_gt_1": 8269,
+              "index_pairs": 57984
+            },
+            "11": {
+              "admissible_pairs": 52352,
+              "carried_pairs": 52352,
+              "d_eq_1": 18029,
+              "d_gt_1": 34323,
+              "index_pairs": 57984
+            },
+            "13": {
+              "admissible_pairs": 55936,
+              "carried_pairs": 55936,
+              "d_eq_1": 35480,
+              "d_gt_1": 20456,
+              "index_pairs": 57984
+            },
+            "2": {
+              "admissible_pairs": 48256,
+              "carried_pairs": 48256,
+              "d_eq_1": 24850,
+              "d_gt_1": 23406,
+              "index_pairs": 57984
+            },
+            "3": {
+              "admissible_pairs": 45088,
+              "carried_pairs": 45088,
+              "d_eq_1": 29343,
+              "d_gt_1": 15745,
+              "index_pairs": 57984
+            },
+            "5": {
+              "admissible_pairs": 52332,
+              "carried_pairs": 52332,
+              "d_eq_1": 19500,
+              "d_gt_1": 32832,
+              "index_pairs": 57984
+            },
+            "6": {
+              "admissible_pairs": 50560,
+              "carried_pairs": 50560,
+              "d_eq_1": 36983,
+              "d_gt_1": 13577,
+              "index_pairs": 57984
+            },
+            "7": {
+              "admissible_pairs": 51840,
+              "carried_pairs": 51840,
+              "d_eq_1": 36923,
+              "d_gt_1": 14917,
+              "index_pairs": 57984
+            }
+          },
+          "by_multiplier": {
+            "3": {
+              "admissible_pairs": 183075,
+              "carried_pairs": 183075,
+              "d_eq_1": 110061,
+              "d_gt_1": 73014,
+              "index_pairs": 196608
+            },
+            "5": {
+              "admissible_pairs": 104227,
+              "carried_pairs": 104227,
+              "d_eq_1": 62710,
+              "d_gt_1": 41517,
+              "index_pairs": 117760
+            },
+            "7": {
+              "admissible_pairs": 70435,
+              "carried_pairs": 70435,
+              "d_eq_1": 42195,
+              "d_gt_1": 28240,
+              "index_pairs": 83968
+            },
+            "9": {
+              "admissible_pairs": 52003,
+              "carried_pairs": 52003,
+              "d_eq_1": 31249,
+              "d_gt_1": 20754,
+              "index_pairs": 65536
+            }
+          },
+          "counts": {
+            "admissible_pairs": 409740,
+            "carried_pairs": 409740,
+            "d_eq_1": 246215,
+            "d_gt_1": 163525,
+            "index_pairs": 463872
+          },
+          "inputs": 128,
+          "inputs_with_cleanup_factor": 0,
+          "inputs_with_dependency": 0,
+          "inputs_with_non_global": 0,
+          "inputs_with_strict_screen_free_non_global": 0
+        }
+      },
+      "by_multiplier": {
+        "3": {
+          "admissible_pairs": 640770,
+          "carried_pairs": 640770,
+          "d_eq_1": 384263,
+          "d_gt_1": 256507,
+          "index_pairs": 688128
+        },
+        "5": {
+          "admissible_pairs": 364291,
+          "carried_pairs": 364291,
+          "d_eq_1": 218938,
+          "d_gt_1": 145353,
+          "index_pairs": 411648
+        },
+        "7": {
+          "admissible_pairs": 245508,
+          "carried_pairs": 245508,
+          "d_eq_1": 147059,
+          "d_gt_1": 98449,
+          "index_pairs": 292864
+        },
+        "9": {
+          "admissible_pairs": 180995,
+          "carried_pairs": 180995,
+          "d_eq_1": 108488,
+          "d_gt_1": 72507,
+          "index_pairs": 228352
+        }
+      },
+      "counts": {
+        "admissible_pairs": 1431564,
+        "carried_pairs": 1431564,
+        "d_eq_1": 858748,
+        "d_gt_1": 572816,
+        "index_pairs": 1620992
+      },
+      "inputs": 512,
+      "inputs_with_cleanup_factor": 3,
+      "inputs_with_dependency": 0,
+      "inputs_with_non_global": 0,
+      "inputs_with_strict_screen_free_non_global": 0
+    },
+    "train": {
+      "by_D": {
+        "10": {
+          "admissible_pairs": 115205,
+          "carried_pairs": 115204,
+          "d_eq_1": 96755,
+          "d_gt_1": 18449,
+          "index_pairs": 125184,
+          "uncarried_pairs": 1
+        },
+        "11": {
+          "admissible_pairs": 112544,
+          "carried_pairs": 112544,
+          "d_eq_1": 38111,
+          "d_gt_1": 74433,
+          "index_pairs": 125184
+        },
+        "13": {
+          "admissible_pairs": 120040,
+          "carried_pairs": 120040,
+          "d_eq_1": 76374,
+          "d_gt_1": 43666,
+          "index_pairs": 125184
+        },
+        "2": {
+          "admissible_pairs": 104320,
+          "carried_pairs": 104320,
+          "d_eq_1": 54141,
+          "d_gt_1": 50179,
+          "index_pairs": 125184
+        },
+        "3": {
+          "admissible_pairs": 96283,
+          "carried_pairs": 96282,
+          "d_eq_1": 63129,
+          "d_gt_1": 33153,
+          "index_pairs": 125184,
+          "uncarried_pairs": 1
+        },
+        "5": {
+          "admissible_pairs": 111506,
+          "carried_pairs": 111506,
+          "d_eq_1": 41977,
+          "d_gt_1": 69529,
+          "index_pairs": 125184
+        },
+        "6": {
+          "admissible_pairs": 108642,
+          "carried_pairs": 108641,
+          "d_eq_1": 79875,
+          "d_gt_1": 28766,
+          "index_pairs": 125184,
+          "uncarried_pairs": 1
+        },
+        "7": {
+          "admissible_pairs": 111377,
+          "carried_pairs": 111377,
+          "d_eq_1": 78769,
+          "d_gt_1": 32608,
+          "index_pairs": 125184
+        }
+      },
+      "by_bits": {
+        "20": {
+          "by_D": {
+            "10": {
+              "admissible_pairs": 21923,
+              "carried_pairs": 21922,
+              "d_eq_1": 18490,
+              "d_gt_1": 3432,
+              "index_pairs": 24064,
+              "uncarried_pairs": 1
+            },
+            "11": {
+              "admissible_pairs": 21319,
+              "carried_pairs": 21319,
+              "d_eq_1": 7212,
+              "d_gt_1": 14107,
+              "index_pairs": 24064
+            },
+            "13": {
+              "admissible_pairs": 22746,
+              "carried_pairs": 22746,
+              "d_eq_1": 14430,
+              "d_gt_1": 8316,
+              "index_pairs": 24064
+            },
+            "2": {
+              "admissible_pairs": 19769,
+              "carried_pairs": 19769,
+              "d_eq_1": 10282,
+              "d_gt_1": 9487,
+              "index_pairs": 24064
+            },
+            "3": {
+              "admissible_pairs": 18337,
+              "carried_pairs": 18337,
+              "d_eq_1": 12014,
+              "d_gt_1": 6323,
+              "index_pairs": 24064
+            },
+            "5": {
+              "admissible_pairs": 21234,
+              "carried_pairs": 21234,
+              "d_eq_1": 7854,
+              "d_gt_1": 13380,
+              "index_pairs": 24064
+            },
+            "6": {
+              "admissible_pairs": 20630,
+              "carried_pairs": 20629,
+              "d_eq_1": 15143,
+              "d_gt_1": 5486,
+              "index_pairs": 24064,
+              "uncarried_pairs": 1
+            },
+            "7": {
+              "admissible_pairs": 21155,
+              "carried_pairs": 21155,
+              "d_eq_1": 15161,
+              "d_gt_1": 5994,
+              "index_pairs": 24064
+            }
+          },
+          "by_multiplier": {
+            "3": {
+              "admissible_pairs": 75236,
+              "carried_pairs": 75234,
+              "d_eq_1": 45360,
+              "d_gt_1": 29874,
+              "index_pairs": 81920,
+              "uncarried_pairs": 2
+            },
+            "5": {
+              "admissible_pairs": 42860,
+              "carried_pairs": 42860,
+              "d_eq_1": 25822,
+              "d_gt_1": 17038,
+              "index_pairs": 49152
+            },
+            "7": {
+              "admissible_pairs": 28552,
+              "carried_pairs": 28552,
+              "d_eq_1": 17175,
+              "d_gt_1": 11377,
+              "index_pairs": 34816
+            },
+            "9": {
+              "admissible_pairs": 20465,
+              "carried_pairs": 20465,
+              "d_eq_1": 12229,
+              "d_gt_1": 8236,
+              "index_pairs": 26624
+            }
+          },
+          "counts": {
+            "admissible_pairs": 167113,
+            "carried_pairs": 167111,
+            "d_eq_1": 100586,
+            "d_gt_1": 66525,
+            "index_pairs": 192512,
+            "uncarried_pairs": 2
+          },
+          "inputs": 128,
+          "inputs_with_cleanup_factor": 128,
+          "inputs_with_dependency": 0,
+          "inputs_with_non_global": 0,
+          "inputs_with_strict_screen_free_non_global": 0
+        },
+        "24": {
+          "by_D": {
+            "10": {
+              "admissible_pairs": 26762,
+              "carried_pairs": 26762,
+              "d_eq_1": 22514,
+              "d_gt_1": 4248,
+              "index_pairs": 28928
+            },
+            "11": {
+              "admissible_pairs": 25880,
+              "carried_pairs": 25880,
+              "d_eq_1": 8885,
+              "d_gt_1": 16995,
+              "index_pairs": 28928
+            },
+            "13": {
+              "admissible_pairs": 27791,
+              "carried_pairs": 27791,
+              "d_eq_1": 17628,
+              "d_gt_1": 10163,
+              "index_pairs": 28928
+            },
+            "2": {
+              "admissible_pairs": 24283,
+              "carried_pairs": 24283,
+              "d_eq_1": 12623,
+              "d_gt_1": 11660,
+              "index_pairs": 28928
+            },
+            "3": {
+              "admissible_pairs": 22153,
+              "carried_pairs": 22152,
+              "d_eq_1": 14482,
+              "d_gt_1": 7670,
+              "index_pairs": 28928,
+              "uncarried_pairs": 1
+            },
+            "5": {
+              "admissible_pairs": 25680,
+              "carried_pairs": 25680,
+              "d_eq_1": 9589,
+              "d_gt_1": 16091,
+              "index_pairs": 28928
+            },
+            "6": {
+              "admissible_pairs": 25293,
+              "carried_pairs": 25293,
+              "d_eq_1": 18685,
+              "d_gt_1": 6608,
+              "index_pairs": 28928
+            },
+            "7": {
+              "admissible_pairs": 25739,
+              "carried_pairs": 25739,
+              "d_eq_1": 18257,
+              "d_gt_1": 7482,
+              "index_pairs": 28928
+            }
+          },
+          "by_multiplier": {
+            "3": {
+              "admissible_pairs": 91257,
+              "carried_pairs": 91256,
+              "d_eq_1": 54963,
+              "d_gt_1": 36293,
+              "index_pairs": 98304,
+              "uncarried_pairs": 1
+            },
+            "5": {
+              "admissible_pairs": 51401,
+              "carried_pairs": 51401,
+              "d_eq_1": 31031,
+              "d_gt_1": 20370,
+              "index_pairs": 58368
+            },
+            "7": {
+              "admissible_pairs": 35035,
+              "carried_pairs": 35035,
+              "d_eq_1": 21055,
+              "d_gt_1": 13980,
+              "index_pairs": 41984
+            },
+            "9": {
+              "admissible_pairs": 25888,
+              "carried_pairs": 25888,
+              "d_eq_1": 15614,
+              "d_gt_1": 10274,
+              "index_pairs": 32768
+            }
+          },
+          "counts": {
+            "admissible_pairs": 203581,
+            "carried_pairs": 203580,
+            "d_eq_1": 122663,
+            "d_gt_1": 80917,
+            "index_pairs": 231424,
+            "uncarried_pairs": 1
+          },
+          "inputs": 128,
+          "inputs_with_cleanup_factor": 97,
+          "inputs_with_dependency": 0,
+          "inputs_with_non_global": 0,
+          "inputs_with_strict_screen_free_non_global": 0
+        },
+        "28": {
+          "by_D": {
+            "10": {
+              "admissible_pairs": 31208,
+              "carried_pairs": 31208,
+              "d_eq_1": 26147,
+              "d_gt_1": 5061,
+              "index_pairs": 33792
+            },
+            "11": {
+              "admissible_pairs": 30544,
+              "carried_pairs": 30544,
+              "d_eq_1": 10399,
+              "d_gt_1": 20145,
+              "index_pairs": 33792
+            },
+            "13": {
+              "admissible_pairs": 32764,
+              "carried_pairs": 32764,
+              "d_eq_1": 20856,
+              "d_gt_1": 11908,
+              "index_pairs": 33792
+            },
+            "2": {
+              "admissible_pairs": 28139,
+              "carried_pairs": 28139,
+              "d_eq_1": 14577,
+              "d_gt_1": 13562,
+              "index_pairs": 33792
+            },
+            "3": {
+              "admissible_pairs": 26098,
+              "carried_pairs": 26098,
+              "d_eq_1": 17083,
+              "d_gt_1": 9015,
+              "index_pairs": 33792
+            },
+            "5": {
+              "admissible_pairs": 30183,
+              "carried_pairs": 30183,
+              "d_eq_1": 11553,
+              "d_gt_1": 18630,
+              "index_pairs": 33792
+            },
+            "6": {
+              "admissible_pairs": 29440,
+              "carried_pairs": 29440,
+              "d_eq_1": 21662,
+              "d_gt_1": 7778,
+              "index_pairs": 33792
+            },
+            "7": {
+              "admissible_pairs": 30188,
+              "carried_pairs": 30188,
+              "d_eq_1": 21207,
+              "d_gt_1": 8981,
+              "index_pairs": 33792
+            }
+          },
+          "by_multiplier": {
+            "3": {
+              "admissible_pairs": 106701,
+              "carried_pairs": 106701,
+              "d_eq_1": 64136,
+              "d_gt_1": 42565,
+              "index_pairs": 114688
+            },
+            "5": {
+              "admissible_pairs": 60681,
+              "carried_pairs": 60681,
+              "d_eq_1": 36466,
+              "d_gt_1": 24215,
+              "index_pairs": 68608
+            },
+            "7": {
+              "admissible_pairs": 41232,
+              "carried_pairs": 41232,
+              "d_eq_1": 24835,
+              "d_gt_1": 16397,
+              "index_pairs": 49152
+            },
+            "9": {
+              "admissible_pairs": 29950,
+              "carried_pairs": 29950,
+              "d_eq_1": 18047,
+              "d_gt_1": 11903,
+              "index_pairs": 37888
+            }
+          },
+          "counts": {
+            "admissible_pairs": 238564,
+            "carried_pairs": 238564,
+            "d_eq_1": 143484,
+            "d_gt_1": 95080,
+            "index_pairs": 270336
+          },
+          "inputs": 128,
+          "inputs_with_cleanup_factor": 44,
+          "inputs_with_dependency": 0,
+          "inputs_with_non_global": 0,
+          "inputs_with_strict_screen_free_non_global": 0
+        },
+        "32": {
+          "by_D": {
+            "10": {
+              "admissible_pairs": 35312,
+              "carried_pairs": 35312,
+              "d_eq_1": 29604,
+              "d_gt_1": 5708,
+              "index_pairs": 38400
+            },
+            "11": {
+              "admissible_pairs": 34801,
+              "carried_pairs": 34801,
+              "d_eq_1": 11615,
+              "d_gt_1": 23186,
+              "index_pairs": 38400
+            },
+            "13": {
+              "admissible_pairs": 36739,
+              "carried_pairs": 36739,
+              "d_eq_1": 23460,
+              "d_gt_1": 13279,
+              "index_pairs": 38400
+            },
+            "2": {
+              "admissible_pairs": 32129,
+              "carried_pairs": 32129,
+              "d_eq_1": 16659,
+              "d_gt_1": 15470,
+              "index_pairs": 38400
+            },
+            "3": {
+              "admissible_pairs": 29695,
+              "carried_pairs": 29695,
+              "d_eq_1": 19550,
+              "d_gt_1": 10145,
+              "index_pairs": 38400
+            },
+            "5": {
+              "admissible_pairs": 34409,
+              "carried_pairs": 34409,
+              "d_eq_1": 12981,
+              "d_gt_1": 21428,
+              "index_pairs": 38400
+            },
+            "6": {
+              "admissible_pairs": 33279,
+              "carried_pairs": 33279,
+              "d_eq_1": 24385,
+              "d_gt_1": 8894,
+              "index_pairs": 38400
+            },
+            "7": {
+              "admissible_pairs": 34295,
+              "carried_pairs": 34295,
+              "d_eq_1": 24144,
+              "d_gt_1": 10151,
+              "index_pairs": 38400
+            }
+          },
+          "by_multiplier": {
+            "3": {
+              "admissible_pairs": 121932,
+              "carried_pairs": 121932,
+              "d_eq_1": 73314,
+              "d_gt_1": 48618,
+              "index_pairs": 131072
+            },
+            "5": {
+              "admissible_pairs": 68643,
+              "carried_pairs": 68643,
+              "d_eq_1": 41182,
+              "d_gt_1": 27461,
+              "index_pairs": 77824
+            },
+            "7": {
+              "admissible_pairs": 46185,
+              "carried_pairs": 46185,
+              "d_eq_1": 27568,
+              "d_gt_1": 18617,
+              "index_pairs": 55296
+            },
+            "9": {
+              "admissible_pairs": 33899,
+              "carried_pairs": 33899,
+              "d_eq_1": 20334,
+              "d_gt_1": 13565,
+              "index_pairs": 43008
+            }
+          },
+          "counts": {
+            "admissible_pairs": 270659,
+            "carried_pairs": 270659,
+            "d_eq_1": 162398,
+            "d_gt_1": 108261,
+            "index_pairs": 307200
+          },
+          "inputs": 128,
+          "inputs_with_cleanup_factor": 20,
+          "inputs_with_dependency": 0,
+          "inputs_with_non_global": 0,
+          "inputs_with_strict_screen_free_non_global": 0
+        }
+      },
+      "by_multiplier": {
+        "3": {
+          "admissible_pairs": 395126,
+          "carried_pairs": 395123,
+          "d_eq_1": 237773,
+          "d_gt_1": 157350,
+          "index_pairs": 425984,
+          "uncarried_pairs": 3
+        },
+        "5": {
+          "admissible_pairs": 223585,
+          "carried_pairs": 223585,
+          "d_eq_1": 134501,
+          "d_gt_1": 89084,
+          "index_pairs": 253952
+        },
+        "7": {
+          "admissible_pairs": 151004,
+          "carried_pairs": 151004,
+          "d_eq_1": 90633,
+          "d_gt_1": 60371,
+          "index_pairs": 181248
+        },
+        "9": {
+          "admissible_pairs": 110202,
+          "carried_pairs": 110202,
+          "d_eq_1": 66224,
+          "d_gt_1": 43978,
+          "index_pairs": 140288
+        }
+      },
+      "counts": {
+        "admissible_pairs": 879917,
+        "carried_pairs": 879914,
+        "d_eq_1": 529131,
+        "d_gt_1": 350783,
+        "index_pairs": 1001472,
+        "uncarried_pairs": 3
+      },
+      "inputs": 512,
+      "inputs_with_cleanup_factor": 289,
+      "inputs_with_dependency": 0,
+      "inputs_with_non_global": 0,
+      "inputs_with_strict_screen_free_non_global": 0
+    }
+  }
+}

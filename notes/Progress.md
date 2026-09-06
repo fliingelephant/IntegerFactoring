@@ -4,32 +4,86 @@ This is working state for nontrivial intermediate statements and the current syn
 
 ## Current synthesis
 
-The source material has been read in full. Twenty-eight approach families have
-been opened. The closest current frontier is canonical integer presentation
-and retained relation state. Bare N already gives generators of the abstract
-unit group, so abstract subgroup growth is not the missing operation. P108
-proves a sharper event: two layers that are useless alone can create a useful
-normalized-root direction only through their cross quotient. P109 removes the
-hidden stop and support choices from that fixed witness. P110 does the same
-for one fresh 54-bit all-pairs witness. F112 shows that the narrow fixed source
-fails on fourteen 46/50-bit cases. F113–F116 show that a broader nonadaptive
-all-pairs source rescues those cases and six fresh 54-bit cases. F118 then
-rescues all four preregistered 58-bit frozen-global cases. These are finite
-controls, and most are factor-assisted. They do not show that recursive
-feedback is necessary. P111 proves that a cross-pair submatrix can still have
-many private prime rows. P112 strengthens the row boundary: on one trial-hard
-semiprime, one seed row stays private even in the complete canonical
-exact-value universe. This refutes universal row reuse, but it does not stop
-other columns from closing. F122 confirms this distinction on that same
-input: a public static prefix already factors it. The next theorem target is
-still exact: force a rank defect and a non-global root for the complete
-self-generated carry set, or find a trial-hard complete-source null on which
-feedback gives a new usable presentation. Recursive block feedback remains
-gated on such a null. Relation count, raw nullity, and abstract subgroup size
-are not progress. Other live frontiers are
-a factor-free sampler for the quadratic-energy law, a useful metric hint, a
-class-group or isogeny orientation, and an exactly contractible positive
-factor-witness network. `notes/Zhihu.md` supplies background only.
+The direct-factor core is no longer confined to beta-two zero defect. The
+exact quarter-bit carry terminal remains available: a residue of one hidden
+factor modulo
+
+\[
+L=\operatorname{lcm}(2^t,M)
+\]
+
+factors once \(L\ge N^{1/4}/\operatorname{QP}(n)\), where unrelated
+certified common primary blocks may accumulate in \(M\). Random uniform
+orders, APR rows, modified-AKS shifts, diffuse candidate exponents, and
+small-integer words all have exact sparse counterfamilies. Randomness helps
+only after an integer-derived source has created factor-correlated support.
+
+P205 gives the sharpest current positive interface for every odd semiprime.
+Put
+
+\[
+d=\gcd(p-1,q-1),\qquad s_p=(p-1)/d,\qquad s_q=(q-1)/d.
+\]
+
+The public exponent \(N-1\) automatically contains the full hidden common
+divisor \(d\). For any public QP-bit word \(W\), no factorization of \(W\)
+is needed. Testing a uniform unit at exponent \((N-1)W\), then using a
+Miller square chain on a verified global return, factors with probability at
+least
+
+\[
+{1\over2\min(r_p,r_q)},
+\qquad
+r_j={s_j\over\gcd(s_j,W)}.
+\]
+
+Thus one coprime residual need only be reduced to numerical QP. It need not
+be fully absorbed, converted into a factored exact order, or passed through
+a recursively factored half-size child. This strictly generalizes P204 and
+locates the useful role of randomness: after an integer word has made
+deterministic residual progress. For
+
+\[
+W_K=\prod_{k\le K}(N^k-1),
+\]
+
+the sufficient condition is a QP bound on one residual meta-order. No such
+all-input bound is known. F237 gives a finite exact warning: on one 129-bit
+zero-defect semiprime, both meta-orders exceed \(2^{61}\), and every
+\(K\le2^{57}\) leaves a residual above \(2^{58}\). This is not an
+asymptotic counterexample.
+
+P206 identifies the exact Las Vegas statistic for integer difference
+words. The baseline \((N-1)^n\) removes every residual primary supported on
+\(N-1\). For fresh integer samples \(Z,Z'\), the word
+\(|Z-Z'|^n\) removes a hidden primary exactly through a collision of two
+distinct integers modulo its rational prime. Uniform divisors of a factored
+\(N-1\) give a constant-success word when their generated subgroups are
+QP-small in every prime of one exterior residual; a prime-power divisor
+lattice can instead have zero collision energy. The source target is
+therefore inverse-QP distinct-integer aliasing, not a large random support.
+
+P207 closes the complete divisor-only multiplicative grammar. Every
+divisor \(B\mid N-1\) has an exact centered-carry identity, and the hidden
+common divisor \(d\) is a carry-zero lattice point. Its hidden center
+indices are precisely \(s_p,s_q\), up to the forced \(d=2\) half-tie.
+But any word made only by multiplicatively reusing divisors of \(N-1\)
+has exactly the same possible prime support as \((N-1)^n\). Factoring
+\((N-1)/2\) cannot improve P205 inside that grammar. A real gain must use
+an additive divisor difference, signed centered residue, or carry selector.
+
+P203 gives the matching integer boundary for the natural shifted-quotient
+word bank. A residual prime is hit exactly when the actual gap ratio
+\((q-p)B^{-1}\) lies in a small public projective rectangle. Universal
+coverage reaches only the already affordable smooth-prime scale; large rough
+progress requires a real theorem about the hidden integer gap ratios. The
+current target is therefore precise: construct a public QP-bit word that
+reduces one coprime residual to QP on every semiprime, or prove an inverse-QP
+distribution law for an adaptive integer-word schedule. Centered carries
+give an exact conditional decoder, but standard simultaneous approximation
+only yields the generic \(B/U\) scale. Generic ring operations are no longer
+the issue. The missing information is integer quotient/gap coupling.
+`notes/Zhihu.md` supplies background only.
 
 ## Working claims
 
@@ -3031,3 +3085,3949 @@ factoring. It also closes the feedback gate on this input: feedback cannot be
 called a rescue when the static source already succeeds. A valid feedback
 test still needs a trial-hard input on which the complete static source is
 null.
+
+### C115 — four canonical carries can form a CRT rank-mismatch splitter
+
+**Status:** self-audited F123 candidate. The result was supplied after a GPT
+Pro brainstorm and registered retrospectively. The exact supplied verifier
+passes. The root agent also checked the determinant identity and gcd equality
+on 3,571 small cases. No fresh hostile audit, proof-blind reconstruction,
+cross-family audit, human audit, or publication-level literature audit ran.
+
+For a public unit \(a\bmod N\), let
+
+\[
+c_j=[a^j]_N,\qquad
+w_j=[c_j^{-1}]_N,\qquad
+\kappa_j=(c_jw_j-1)/N
+\]
+
+for \(1\le j\le4\). Define
+
+\[
+\Omega_N(a)=
+\kappa_4-\kappa_1+(1+a+w_1)(\kappa_2-\kappa_3).
+\]
+
+The determinant of the four rows
+
+\[
+(1,c_j,w_j,\kappa_j)
+\]
+
+satisfies
+
+\[
+\det L_N(a)\equiv
+(a-1)^3(a+1)w_1^2\Omega_N(a)\pmod N.
+\]
+
+Hence, when \(\gcd(a(a^2-1),N)=1\),
+
+\[
+\gcd(\det L_N(a),N)=\gcd(\Omega_N(a),N).
+\]
+
+The proof is the order-three recurrence shared modulo \(N\) by
+\(1,a^j,a^{-j}\), followed by one determinant-preserving row elimination.
+The argument does not need the source note’s squarefree restriction.
+
+The exact finite certificate is
+
+\[
+N=4{,}840{,}987=1{,}847\cdot2{,}621.
+\]
+
+On the public source \(2\le a\le92,\ 1\le j\le4\), all 364 direct
+canonical-inverse screens are null. Exact-value deduplication leaves 240
+columns. Their gcd-free parity matrix has rank 240 and zero kernel. At
+\(a=68\),
+
+\[
+\Omega_N(68)=-16{,}803{,}964{,}880,
+\qquad
+\gcd(\Omega_N(68),N)=2{,}621.
+\]
+
+The corresponding local matrix ranks are four modulo 1,847 and three modulo
+2,621.
+
+**Algorithmic consequence.** This is a real finite separation from the named
+direct and exact-square channels. It is not a feedback-state transition. It
+uses the same canonical \((c,w,\kappa)\) data, but it creates no block split,
+new named generator, later source menu, or cross-layer relation. The
+determinantal language is a valid GCT-inspired analogy, but the proof is an
+elementary recurrence, determinant, and gcd. F03, F04, and Inspiration A2
+already contain the broader CRT rank-mismatch template.
+
+**Exact remaining gap.** One of the 91 displayed seeds succeeds. This can be
+consistent with accidental divisibility at the small certificate scale. No
+theorem gives inverse-polynomial asymmetric vanishing, an infinite successful
+family, or a public weight selector. The next valid test must freeze the seed
+and weight menus before a balanced corpus and compare against a matched random
+scalar baseline. A feedback-specific claim additionally needs a first
+successful determinant that depends essentially on a feedback-created block
+or trajectory.
+
+### C116 — quasipolynomial time permits complete polylog-support word closure
+
+**Status:** candidate cost lemma after a kill-first review. No all-input source
+theorem or registered expanded-source run exists.
+
+Let \(n=\lceil\log_2(N+1)\rceil\). Start from the canonical inverse relations
+for the public seeds \(2,\ldots,n\), after the usual direct gcd checks. Refine
+all integer endpoints into a pairwise-coprime, perfect-power-free public block
+basis \(q_1,\ldots,q_M\). Their total endpoint bit length is \(O(n^2)\), so
+\(M=O(n^2)\).
+
+Set
+
+\[
+B_q=(n^2+1)\lceil\log_2 n\rceil,
+\qquad
+d=2\lceil\log_2(n+1)\rceil.
+\]
+
+Enumerate every residue
+
+\[
+c=\left[\prod_{j=1}^{M}q_j^{e_j}\right]_N,
+\qquad
+0\le e_j\le B_q,
+\qquad
+|\{j:e_j\ne0\}|\le d.
+\]
+
+For each distinct residue, compute its least positive inverse \(w\), screen
+\(\gcd(c-w,N)\) and \(\gcd(c+w,N)\), retain the distinct exact values
+\(P(c)=cw\), and run the complete P66 factor-free square decoder.
+
+The source size satisfies
+
+\[
+\sum_{s=0}^{d}\binom Ms(B_q+1)^s
+\le (d+1)(M(B_q+1))^d
+=2^{O((\log n)^2)}.
+\]
+
+Each retained exact value has \(O(n)\) bits. P66 is polynomial in the explicit
+list size. The full construction and decode therefore have deterministic
+quasipolynomial bit complexity.
+
+The support cap contains each prior small-seed-pair word because an integer
+at most \(n\) uses at most \(\log_2 n\) nontrivial blocks. The coordinate cap
+contains its expanded exponents through the old \(n^2\) trajectory bound. It
+also contains the prior initial-basis support-two trajectories. The earlier
+proposal \(e_j\le n^2\) did not contain all expanded small-seed-pair records;
+the factor \(\lceil\log_2 n\rceil\) is necessary for that stated inclusion.
+
+**Non-trivial point.** Quasipolynomial time permits lossless enumeration of
+all polylog-support words and lossless retention of a dense final relation.
+The final dependency can use quasipolynomially many columns; the algorithm
+finds it by linear algebra and does not enumerate dependency subsets.
+
+**Exact remaining gap.** No theorem shows that the retained matrix closes.
+If it closes, no theorem shows that its normalized-root image is non-global.
+Generic counting cannot prove either gate because a quasipolynomial list is
+still much smaller than a hidden group of size \(2^{\Theta(n)}\), and exact
+values can carry private prime rows. The next decisive result is an actual-
+\(N\) complete-source null, or a carry-reuse theorem that forces both rank
+closure and a non-global root.
+
+### C117 — the rational-prime endpoint supergroup is too coarse for the first kill
+
+**Status:** completed registered F124-D01 finite evidence. No hostile replay
+or proof-blind reconstruction ran because the decisive decoder gate was empty.
+
+F124 enlarged the initial public block subgroup to the group generated by
+every rational prime divisor of every seed endpoint. A null for this
+factor-assisted supergroup would have refuted every static support and
+exponent cap on the same input.
+
+The fixed scan processed 69,060 balanced, trial-hard semiprimes. No supergroup
+met the preregistered size cap 32,768. The smallest size was 75,900. Of all
+cases, 69,032 supergroups were the full unit group and 28 had index two. Thus
+no full subgroup or P66 decode ran.
+
+**Exact consequence.** The test found no source null. Splitting every public
+block into its unknown rational prime factors usually expands the state to the
+full unit group, so this supergroup is not a useful small-state diagnostic on
+the declared corpus. A retry must use the exact public gcd-free blocks, an
+algebraic direct-null test that does not enumerate the group, or a different
+source obstruction. Raising only the enumeration cap does not address the
+main loss of structure.
+
+### C118 — fixed seed carries can be programmed independently
+
+**Status:** promoted as P113 after a hostile audit and independent proof-blind
+reconstruction. No cross-family or human audit ran.
+
+For any fixed finite list of distinct prime seeds \(g_i\) and admissible
+carries \(1\le k_i<g_i\), CRT and primes in fixed arithmetic progressions
+give infinitely many balanced semiprimes \(N=pq\) with \(p,q>n^2\) for which
+
+\[
+g_i^{-1}{}_{\rm can}={1+k_iN\over g_i}.
+\]
+
+All direct endpoint signs can remain null. If the carries are distinct, each
+selected exact value can also receive a prescribed valuation-one prime row
+that is private among the selected columns.
+
+**Exact consequence.** Seed status and canonical inversion impose no
+universal identity or reuse law on a fixed handful of carries. A positive
+F26-Q theorem must use a source whose size grows with \(n\), interactions
+between multiplicative words, or later canonical refinement. P113 does not
+control the growing word source, and its private rows can be reused by other
+columns.
+
+### C119 — multiplicative rectangles give a new carry-rank decoder
+
+**Status:** promoted as P114 after a hostile audit and independent proof-blind
+reconstruction. Proof-only; no finite sweep is used as evidence. No
+cross-family or human audit ran.
+
+For a multiplicative rectangle
+
+\[
+x_{ij}=[u\alpha^i\beta^j]_N,
+\qquad i,j\in\{0,1\},
+\]
+
+let \(y_{ij}\) be the canonical inverse and \(\kappa_{ij}\) its carry. Define
+
+\[
+\Omega_{\square}
+=(\beta-\alpha)(\kappa_{11}-\kappa_{00})
++(\alpha\beta-1)(\kappa_{10}-\kappa_{01}).
+\]
+
+Under the explicit unit conditions, the determinant of the four rows
+\((1,x_{ij},y_{ij},\kappa_{ij})\) is a unit multiple of
+\(\Omega_{\square}\) modulo \(N\). Their gcds with \(N\) are equal. F123 is
+the slice \(u=\alpha=t,\ \beta=[t^2]_N\).
+
+If F26-Q has \(Q\) canonical word residues, all ordered triples and their
+four corners cost \(Q^3\), still quasipolynomial. This adds a real cross-word
+decoder to the candidate algorithm. It must run before exact-value
+deduplication.
+
+**Exact remaining gap.** No theorem gives one asymmetric local-rank rectangle
+on every input, or with inverse-quasipolynomial probability. The determinant
+bypasses the P66 rank and root gates only when its gcd succeeds. A
+feedback-specific result still needs a rectangle that essentially uses a
+feedback-created block after the full static rectangle source is null.
+
+### C120 — small unreduced rectangles and fixed banks are exact traps
+
+**Status:** promoted as P115 after a corrected hostile audit and a fresh
+proof-blind reconstruction. The false V1 endpoint extension and the first
+under-specified V2 reconstruction are preserved. No cross-family or human
+audit ran.
+
+For an unreduced rectangle \((u,ua,ub,uab)\), divisibility compatibility of
+the canonical carries reduces all four carries to three nested digits
+\(A,B,T\). The P114 residual becomes
+
+\[
+\Omega_{\square}
+=u[(b-a)T+(ab-1)(A-B)],
+\]
+
+and
+
+\[
+|\Omega_{\square}|<2uab\max(a,b).
+\]
+
+Thus a residual built from numerically quasipolynomial-size unreduced
+operands is eventually too small to contain either hidden factor of a
+balanced semiprime. The endpoint signs need the separate bound
+\(h>R^6+1\). Under it, all endpoint, prefactor, and residual gcds are null or
+global. The original use of \(2R^4<h\) for endpoints was false; the exact
+counterexample has \(N=577\cdot587\), corner \(24\), and
+\(24^2+1=577\).
+
+For a \(Q\)-entry menu, if \(T_R\) entries exceed \(R\), the raw fraction of
+ordered triples that can escape the small residual/prefactor obstruction is
+at most \(3T_R/Q\). A stronger threshold gives the same full-channel bound.
+Two infinite balanced semiprime families realize \(\Omega=1\) and
+\(\Omega=0\). Every fixed literal bank of unreduced rectangles therefore
+fails on all sufficiently large balanced inputs.
+
+**Exact consequence.** P114 cannot get an all-input law from small integer
+rectangles, a fixed bank, or visible unreduced carry algebra. A surviving
+selector must use numerically large or wrapped representatives, or it must
+gain from retained multi-relation decoding. The theorem does not bound that
+large tail and does not address an adaptive selector or P66.
+
+### C121 — wrapped rectangles contain only floor-curvature information
+
+**Status:** promoted as P116 after hostile audit and fresh proof-blind
+reconstruction of a self-contained statement. No cross-family or human audit
+ran.
+
+Every wrapped P114 rectangle is the reduction of four raw endpoint products
+that are exactly equal. Writing the six direct and inverse floor quotients
+explicitly gives
+
+\[
+\Omega_{\square}
+=N(ab-1)(AR_a-BR_b)+u\Phi_y+z\Phi_x.
+\]
+
+The first term is irrelevant modulo \(N\). Thus a local rank mismatch is
+exactly an asymmetric vanishing of
+
+\[
+u\Phi_y+z\Phi_x.
+\]
+
+For fixed small \(a,b\) and uniform \(u\), the floor pattern has at most
+\(a^4b^4\) cases. Each non-global case reduces to a quadratic with at most
+two roots modulo each hidden prime. Its proper-hit probability is
+
+\[
+O(a^4b^4/p)
+\]
+
+on \(N=pq\), \(p<q\). Quasipolynomially many uniform samples remain
+insufficient when the multipliers have quasipolynomial numerical magnitude.
+This does not cover an adaptive selector.
+
+Large canonical representatives near \(N\) can still be signed-small. After
+multiplication by \(L=sa_0b_0\), their residual becomes one explicit integer
+of magnitude polynomial in \(s,a_0,b_0\). The same bound kills the endpoint
+and prefactor screens. There is also an infinite fully wrapped family with
+\(u=N-s\), \(N\equiv-1\pmod{sab}\), and \(\Omega=0\) exactly.
+
+**Exact consequence.** Visible wrap and canonical magnitude are not source
+progress. The surviving determinant route needs genuinely large least-signed
+multipliers, plus a law that makes their two floor curvatures vanish on only
+one hidden CRT axis. No such law is known. This strengthens the decision to
+keep retained cross-relation decoding as the main route and P114 as a side
+channel.
+
+### C122 — support-layer progress has two separate gates
+
+**Status:** promoted as P117 after a corrected hostile audit and a fresh
+proof-blind reconstruction. No cross-family or human audit ran.
+
+Intrinsic support must be assigned to an exact value by minimizing over all
+declared presentations of both endpoints before exact-value deletion. With
+that definition, the dependencies that first require layer (s) form
+
+\[
+C_s\simeq
+\operatorname{im}U_{s-1}\cap\operatorname{im}A_s.
+\]
+
+Their root information is not an absolute map in general. It is the exact
+relative quotient
+
+\[
+\operatorname{im}\bar\rho_s
+=H_{\le s}/(H_{\le s-1}+H_s).
+\]
+
+Therefore permanent retention and a positive cross-quotient dimension are
+not enough. A successful support layer must pass two independent tests:
+
+1. old and new columns must reuse parity rows and create a dependency; and
+2. the new pure or relative root image must be non-global.
+
+A shared row forces a carry collision modulo that row prime, but the
+collision is only necessary. An explicit noncanonical construction has
+arbitrarily large cross quotient while every root remains global. This makes
+the live F26-Q target precise: canonical carry arithmetic must force both
+reuse and sign asymmetry. The theorem localizes that task; it does not solve
+it.
+
+### C123 — the adaptive qpoly closure is now one exact finite algorithm
+
+**Status:** promoted as P118 after a hostile audit and a proof-blind
+reconstruction. No cross-family or human audit ran.
+
+The static sparse-word proposal has been replaced by a precise adaptive
+closure. It keeps two bases separate. The named basis contains only
+descendants of the fixed initial endpoint product. The final decoder basis
+can contain every novel factor-free block found in the retained exact
+relations.
+
+Each stage freezes the named basis, exhausts all support-(L^2) words with
+exponents at most (2^{L^2}), inserts all canonical endpoint pairs, retains
+all distinct exact values, and only then refines the named basis. A strict
+refinement increases the number of descendants of the fixed initial product.
+This gives a finite fixed point and the exact bit bound
+
+\[
+2^{O((\log n)^4)}.
+\]
+
+This is a framework-level algorithm change. Feedback can alter the future
+integer grammar, while old relations remain available to later support
+layers. It is not only a larger static list or one scalar followed by one
+gcd.
+
+**Exact remaining gap.** No theorem forces a split, a parity dependency, or
+a non-global root at the terminal state. P117 shows why relation count is not
+enough: the terminal source must pass both the row-reuse gate and the
+normalized-root gate. A complete terminal null would refute this exact
+candidate. An all-input direct-or-root law would complete its splitter proof.
+
+### C124 — a two-relation dependency has only one small-kernel root trap
+
+**Status:** promoted as P119 after a corrected hostile audit and a fresh
+proof-blind reconstruction. F131-D01 checks the displayed finite arithmetic.
+No cross-family or human audit ran.
+
+For two distinct exact values with square product, write
+
+\[
+P_1=sa^2,qquad P_2=sb^2
+\]
+
+with common squarefree kernel (s). Their joint root is global exactly when
+(a+b=N). This forces (s\in\{1,2,3\}). Therefore a weight-two parity
+closure with (s\ge5) always gives a factor.
+
+The endpoint screens do not exclude the trap. The exact input
+(N=9407=23\cdot409) has two nonsquare values with common kernel (2), all
+four endpoint gcds equal to one, and joint root (-1\). An unconditional
+nonsquarefree arithmetic-progression family has the same behavior.
+
+**Exact consequence.** At weight two, the P117 root gate is almost solved:
+only three public squarefree kernels can synchronize globally. The main hard
+gate remains creation of a duplicate parity column. If closure lands in one
+of the three small kernels, the algorithm needs another feedback step or a
+larger dependency.
+
+### C125 — all-block unary feedback is affordable, but reuse is not closure
+
+**Status:** promoted as P120 after a preserved failed hostile audit, a fresh
+hostile re-audit, and an independent proof-blind reconstruction. No
+cross-family or human audit ran.
+
+After the complete P118 transcript, permanently name every factor-free block
+from every endpoint. For \(L^2\) rounds, feed every current block power through
+canonical inversion, keep every endpoint presentation and first exact value,
+then refine in one batch. The accumulated state and the final P66 decode cost
+
+\[
+2^{O((\log n)^4)}.
+\]
+
+This is a real algorithm change. A probe-only cofactor that was not a P118
+generator can become a generator in a later round.
+
+The exact exponent-one accounting is less positive. If a block \(q\) divides
+an old value \(1+kN\) and \(q>k\), feeding \(q\) reproduces that old exact
+value. A duplicate can still factor through its new endpoint signs, so signs
+must run before deduplication. A genuinely new value can cancel the fed row.
+Even when it reuses that row, fresh private rows can peel both columns.
+
+The exact splice law says that reuse of a private row only replaces the old
+and new parity columns by their symmetric difference. That difference must
+still lie in the span of the other columns. Also, a prime row larger than
+\((N-1)/2\) is private in the complete canonical universe and cannot be
+rescued by any unary schedule.
+
+**Exact consequence.** P120 validates bounded recursive feedback as a
+quasipolynomial source operation. It does not validate feedback as progress.
+The next source theorem must force reuse at scale and then control the fresh
+rows well enough to produce a 2-core or a dependency. P119 handles most of
+the root gate only after a weight-two dependency exists.
+
+### C126 — public anchors force polynomial reuse of a covered large row
+
+**Status:** promoted as P121 after an independent hostile audit and an
+independent proof-blind reconstruction. No cross-family or human audit ran.
+
+Let \(q<N/n^3\) be a current unit block. If a prime \(r>n^3\) occurs oddly
+in \(q\), scan the public prime anchors \(\ell\le n^3\). Their canonical
+relations have the exact form
+
+\[
+P_N(\ell q)=q(w+NA_\ell),
+\qquad w=\iota_N(q).
+\]
+
+A primorial and carry-bucket argument proves that either a declared gcd screen
+already factors \(N\), or more than
+
+\[
+{n^2\over4}
+\]
+
+distinct retained exact values have odd valuation in row \(r\). Global
+exact-value deduplication cannot remove them. The full anchored all-block
+source, including the final P66 decode, still costs
+
+\[
+2^{O((\log n)^4)}.
+\]
+
+This is the first general positive source-side theorem for the feedback route.
+It proves that canonical integer carries from bare \(N\) can force actual
+prime-row reuse. It is stronger than a finite witness, abstract subgroup
+growth, or a count of generated relations.
+
+**Exact remaining gap.** The new columns can form a star: they share row
+\(r\), but each can have a different fresh private row. Such a matrix still
+has zero kernel after peeling. The next theorem must force overlap among the
+fresh arm rows, release small factors that can become new anchors, or prove a
+direct cross-layer closure. P119 controls most of the root gate only after
+such closure exists.
+
+### C127 — one star reuses the old row but separates its fresh large rows
+
+**Status:** promoted as P122 after an independent hostile audit and an
+independent proof-blind reconstruction. No cross-family or human audit ran.
+
+For one fixed anchor \(q\), write its fresh cofactors as
+
+\[
+H_A=w+NA.
+\]
+
+Two distinct carry digits satisfy
+
+\[
+\gcd(H_A,H_{A'})\le |A-A'|\le B.
+\]
+
+Thus primes larger than the anchor range cannot occur in two different fresh
+cofactors. In an even star-only dependency, every selected fresh cofactor must
+have a \(B\)-smooth squarefree kernel. The full star kernel has at most one
+extra odd coset, where the large parity can cancel against the common anchor
+\(q\).
+
+This result explains why P121 does not yet give a dependency. P121 forces
+many columns to share an old row inside \(q\). P122 proves that the unrelated
+fresh large rows on those columns do not share each other inside the same
+star. A wide star can therefore peel completely.
+
+The theorem does not kill feedback. An old retained column can close a fresh
+row; a private cofactor can become a later generator; and two different stars
+do not satisfy the same gcd bound. Exact certificates at \(N=143\) and
+\(N=49\) show both escapes.
+
+**Exact consequence.** The next proof must be cross-layer or multi-round.
+Within-star amortization is closed. The live target is a forced old/new match,
+a same-digit refinement that releases a smaller block, or a cross-star cycle.
+
+### C128 — full-endpoint feedback cuts off; release or width remains
+
+**Status:** promoted as P123 after a passing hostile re-audit and a fresh
+statement-only blind reconstruction. Three earlier failed reviews are
+preserved. No cross-family or human audit ran.
+
+For a small block \(q<N/B\), an anchored nonzero-digit relation has a new
+reciprocal endpoint \(z>N/B\). Feeding the complete \(z\) back through
+canonical inversion returns the same exact value. Thus direct endpoint
+reversal does not start another small-block generation.
+
+The endpoint presentations still give one real alternative. A heavy
+same-digit anchor bucket either releases a proper reciprocal-side block below
+\(N/B\), or exhausts that residual into anchor-prime powers. If no bucket is
+heavy and \(B=n^3\), one covered old large-prime row occurs in
+\(\Omega(n^3/\log n)\) distinct retained values.
+
+This does not prove closure. An explicit quasipolynomial rooted-tree matrix
+has the same local width, full column rank, and a complete peeling order. A
+selected canonical CRT family realizes two such generations. It does not
+control the complete source.
+
+**Exact consequence.** The next theorem must use a proper released block,
+retained old/new overlap, different-star overlap, a wrapped or multi-block
+operation, or another invariant that forces a rank defect. It must then prove
+that the resulting square root is non-global.
+
+### C129 — a released block recenters the parent or becomes smaller
+
+**Status:** promoted as P124 after a passing hostile re-audit and a fresh
+statement-only blind reconstruction. The first failed hostile audit is
+preserved. No cross-family or human audit ran.
+
+Suppose one feedback relation releases a proper block \(r<N/C\). In the next
+anchored star at \(r\), the old parent relation is exactly one virtual digit
+\(j\).
+
+- If \(j<C\), every different observed child digit shares no prime larger
+  than \(C\) with the old complement.
+- If \(j\ge C\), then \(r<q\).
+- Two consecutive large-\(j\) transitions contract the active block by
+  \(C/(C+1)\).
+
+This is a genuine cross-star theorem. It controls one adaptive generation and
+an uninterrupted descent path. It does not bound small-\(j\) interruptions,
+branching, non-parent old columns, final rank, or the root image.
+
+**Exact consequence.** Parent-to-child reuse alone is now accounted for. A
+positive proof must use non-parent cross-layer overlap, collisions between
+different stars, a global potential that limits recentering, or a controlled
+multi-block operation.
+
+### C130 — row reuse has an exact carry gate and is weaker than rank closure
+
+**Status:** promoted as P125 after a full artifact hostile audit and an
+independent result-only blind reconstruction. The registered Sage verifiers
+were reproduced. No cross-family or human audit ran.
+
+Two exact values can share a prime row \(r\) only when their public carries
+are equal modulo \(r\). For two stars, this becomes an affine congruence
+between their base carries and digits. The present adaptive source has no
+theorem that forces these hidden carry-class hits.
+
+The universal version is false. F138 gives 400-bit balanced-semiprime
+certificates with a row above \((N-1)/2\) that is private in the complete
+canonical-inverse universe. The strongest certificate is already an earlier
+F130 word, so it does not refute a globally-new-F133 claim or the complete
+source.
+
+Even complete displayed row reuse is not enough. A four-column canonical
+matrix at \(N=161\) has no degree-one row but has full column rank.
+
+**Exact consequence.** The target is no longer “reuse all pivots.” It is:
+force the required carry collisions, prove a final rank defect after fresh
+rows are added, and prove that its normalized root is non-global.
+
+### C131 — linear anchors already force covered-row reuse
+
+**Status:** promoted as P126 after a final hostile re-audit and a fresh blind
+reconstruction. This is an exact source-side improvement, not a factoring
+algorithm.
+
+The anchor cutoff can be reduced from \(n^3\) to
+
+\[
+B=\lceil12n\rceil.
+\]
+
+For every current unit block \(q<N/B\) and every odd prime row \(r>B\)
+inside \(q\), the complete public anchor scan either returns a factor or
+leaves at least two distinct retained values odd in row \(r\). Thus a linear
+anchor bank already removes privacy throughout the larger block region
+\(q<N/(12n)\).
+
+The endpoint data also gives a sharp three-way outcome. A heavy carry bucket
+releases a reciprocal-side block below \(N/B\), exhausts that residual, or
+the scan creates more than
+
+\[
+\frac{37n}{50\log(13n)}
+\]
+
+nonzero carry classes. All but at most one reuse each fixed covered row.
+This complete subbank fits inside the existing deterministic
+\(2^{O((\log n)^4)}\) source.
+
+The remaining problem did not change: the new columns can still end in fresh
+private rows and peel completely. The next result must concern final rank,
+not row count.
+
+### C132 — one packed relation can preserve several old rows
+
+**Status:** promoted as P127/X78 after a final hostile re-audit, a fresh
+blind reconstruction, and an exact registered certificate.
+
+Value-dependent packing is a real source change. If a public product
+\(q<N/B\) contains several large odd rows, all but at most
+
+\[
+|\mathcal R_B(q)|<\frac{\log q}{\log B}
+\]
+
+occupied carry digits preserve all those rows at once. With two rows globally
+private to different old owners, the resulting exact values also survive
+global deduplication.
+
+The exact rank test is now known. Cancelling all packed owner pivots reduces
+closure to one shifted residual-span condition. Packing does not force it.
+At \(N=989\), three nonzero arms preserve both selected rows \(11,17\), but
+the full six-column matrix has rank six and peels completely.
+
+Two gaps remain. A suitable multi-owner product below \(N/B\) need not exist.
+Even when it exists, fresh inverse-side rows can keep the matrix independent.
+The next source change must remove the size gate or force arithmetic overlap
+among those fresh residuals.
+
+### C133 — the frozen long small-quotient path fails at the block boundary
+
+**Status:** rejected after hostile audit and recorded as X79. This is a
+construction failure, not a theorem that small-quotient paths are short.
+
+F140 programmed exact aggregate gcds and quotient-one transitions. The
+integer identities survived. The operational claim did not. At target depth
+100, an earlier retained reciprocal endpoint satisfies
+
+\[
+\gcd(q_{23},z_{16})=107.
+\]
+
+Complete gcd-free refinement therefore splits the proposed future aggregate
+`q_23` before it can become one current anchored block. The current source
+can feed the terminal factors, but it cannot silently feed their product as
+one generator. The audit also found that the label exclusions omitted prime
+divisors of the programmed carries.
+
+**Exact consequence.** P124's small-quotient interruption problem remains
+open. A materially new retry needs a declared aggregate-feedback operation
+with a proved quasipolynomial transcript bound and an invariant that survives
+all earlier endpoint refinements. The frozen F140 proof supplies neither.
+
+### C134 — unreduced presentations add a real quasipolynomial relation source
+
+**Status:** promoted as P128 after hostile audit, blind reconstruction, and a
+registered replay.
+
+F130 kept only the canonical residue of a sparse word. P128 also keeps the
+word's exact factored presentation. For `U=c mod N` and
+`w=iota_N(c)`, it retains both `cw` and `Uw`. This does not change the direct
+screen, but it can change the exact square-class ledger.
+
+The complete decoder remains deterministic
+
+\[
+2^{O((\log n)^4)}.
+\]
+
+Algebraically, the new source is exactly the old canonical source plus the
+factored square congruences `Uc=c^2 mod N`. This is a strict source expansion
+and a standard square-relation decoder.
+
+The large-block theorem is uniform. For every named unit block
+`q>=N/(12n)`, squared prime anchors through `n^3` leave more than `n^2/5`
+distinct good lifted values that preserve every odd row of `q`, unless an
+earlier declared gcd already factors `N` or splits `q`. Together with P126,
+the old row-reuse objection is now covered on both sides of the size cutoff.
+
+**Exact remaining gap.** The fresh inverse or residue endpoint rows can keep
+the matrix full rank. P128 proves no dependency and no all-input non-global
+root.
+
+### C135 — the lifted source has an exact bridge-cycle interpretation
+
+**Status:** promoted as P129 after hostile audit and blind reconstruction.
+
+After the matched canonical column is retained, one squared-anchor lift adds
+exactly the bridge square class
+
+\[
+[q]+[c_\ell].
+\]
+
+The relative closure test is
+
+\[
+\Gamma x+(\mathbf1^{\mathsf T}x)[q]
+\in\operatorname{colspan}(M_0).
+\]
+
+Thus many reused `q` rows can still form a full-rank star or forest. If an
+exact endpoint cycle does occur, its normalized root is the product of its
+public anchors. A squareclass cycle has the corresponding explicit ratio
+correction.
+
+**Exact consequence.** The next theorem must force a cycle or hypercycle in
+quasipolynomial work and must make its root non-global. Relation count and
+row multiplicity no longer describe the missing step accurately.
+
+### C136 — ordinary bridge cycles reduce to public half-order search
+
+**Status:** promoted as P130 after hostile audit and blind reconstruction.
+
+For a formal squared-action cycle, the signed generator displacement
+`delta` satisfies `2 delta in Lambda`, and its normalized root is exactly
+`Phi(delta)`. The cycle itself exposes the same public collision. Therefore
+formal cycle search does not add a new factor signal. The automatic
+commutation cycles have root `+1`, and a useful cycle is the bounded
+half-order target already isolated by P71.
+
+Inside one fixed squared-anchor star, carry elimination gives a second exact
+boundary. After removing primes through the fourth power of the anchor cap,
+the wrapped residue endpoints are pairwise coprime. A bridge-only dependency
+can use one only when its remaining cofactor is a square. This condition is
+publicly testable in quasipolynomial time.
+
+**Exact remaining gap.** The only unreduced bridge mechanism is now an
+arithmetic hypercycle: different endpoint integers, usually from different
+stars or older retained columns, must cancel through their actual prime
+factors without being a formal modular cycle. A positive theorem must force
+such a short hypercycle and a non-global root. P130 proves neither.
+
+### C137 — a wrapped positive cycle must reach the square-root scale
+
+**Status:** the F144 short-cycle surplus claim failed hostile audit and is
+recorded as X80. Its general residual-cycle identity survived and is being
+re-stated separately.
+
+For every directed containment cycle,
+
+\[
+N\mid\left(\prod a_e\right)^2-\prod T_e.
+\]
+
+If any edge wraps, the left square is strictly larger than the residual
+product. Therefore the anchor product is larger than \(\sqrt N\). This
+directly contradicts the frozen F144 short-cycle size bound. Its claimed
+cycle-surplus regime is empty.
+
+**Exact consequence.** Positive-direction cycles are not a small local
+closure mechanism. A useful retry must construct or select a path long
+enough for its anchor product to cross the square-root scale, while avoiding
+exhaustive branching. Polynomial path length is still compatible with the
+quasipolynomial time target, so X80 does not close a deterministic path
+selector or a different arithmetic hypercycle.
+
+### C138 — positive containment cycles are characteristic-scale objects
+
+**Status:** promoted as P131 after F144 V3 passed a fresh hostile audit and
+an independent statement-only blind reconstruction. The failed V1 surplus
+claim and the corrected V2 strictness error remain preserved.
+
+For each directed containment cycle, the product of the public anchors and
+the product of the residual cofactors satisfy
+
+\[
+N\mid A_{\mathcal C}^2-T_{\mathcal C}.
+\]
+
+One wrapped edge forces \(A_{\mathcal C}>\sqrt N\), even before asking that
+the residual be a square. Therefore no cycle with total numerical anchor
+product \(2^{\operatorname{polylog}n}=2^{o(n)}\) can be the asymptotic
+solution.
+
+If several cycles have combined residual \(S^2\), their exact normalized
+root is \(A/S\). In the useful metric window
+\(\sqrt{N+S^2}\le A<N/2\), both signs expose proper factors. Unwrapped cycles
+have root \(+1\), and two wrapped cycles already overshoot the window.
+
+**Exact remaining gap.** Quasipolynomial time still permits one selected
+polynomial-length path or one compact large anchor. It does not permit an
+exponential branch search. The live theorem must select such a path and
+force its residual product to be a square, or force a different arithmetic
+hypercycle through actual cross-star or old-column prime overlap.
+
+### C139 — quasipolynomial finite-algebra probes remain below the local scale
+
+**Status:** promoted as P132 after F145 V2 passed a fresh hostile audit and
+an independent statement-only blind reconstruction.
+
+Uniform nonunit tests and generic Krylov-rank tests in explicit
+quasipolynomial-rank finite algebras still hit with exponentially small
+probability on balanced semiprimes, even after quasipolynomially many fresh
+probes. Nilpotents do not improve the nonunit rate for a fixed semisimple
+quotient.
+
+A genuine CRT-glued local Frobenius would expose different factor-degree
+partitions, but constructing it already contains factor information on that
+promise. Public monomial substitutes reduce to hidden order congruences.
+Low Hasse-jet orders stay synchronized until the unknown least factor.
+
+**Exact consequence.** The QP allowance does not revive generic finite-
+algebra sampling. A useful retry needs a factor-correlated source, a joint
+decoder for typical nonzero values, a succinct nonmonomial map, or a
+compressed characteristic-scale computation.
+
+### C140 — local AKS exchange scans have an exact quasipolynomial boundary
+
+**Status:** promoted as P133 after F146 V2 passed a fresh hostile re-audit
+and an independent statement-only blind reconstruction.
+
+Scanning all base exchanges of polylogarithmic support has exact
+quasipolynomial cost. It is complete when the matrix tail is
+polylogarithmic. On squarefree inputs, the first proper-gcd exchange equals
+the first local column-matroid disagreement; prime-power valuations can add
+earlier successes on general composites.
+
+An explicit balanced CRT/Vandermonde family delays the first local matroid
+disagreement beyond every fixed polylogarithmic exchange radius, even after
+padding to near-square AKS-scale dimensions. This is a generic matrix
+boundary, not an AKS counterexample.
+
+**Exact consequence.** P11's two-tail hit does not justify a universal
+small-exchange law. A positive F04 result must use the arithmetic form of the
+AKS coefficient matrix, force a polylogarithmic tail through a suitable
+modulus, or replace local exchange enumeration with another selector.
+
+### C141 — two feedback cycles can close through a residual cross ratio
+
+**Status:** promoted as P134 after F148 passed hostile audit and independent
+statement-only reconstruction.
+
+Two directed feedback cycles need not close separately. If their residual
+products have one rational square class,
+(T_i=d s_i^2) and (T_j=d s_j^2), their union is an exact square relation.
+Its factor test reduces to the two small public integers
+
+\[
+\alpha_i s_j-\alpha_j s_i,
+\qquad
+\alpha_i s_j+\alpha_j s_i.
+\]
+
+If the slopes differ and their positive sum is below (N), both gcds are
+proper. This survives the point where P131's product-of-anchor-products test
+has become too large.
+
+**Exact remaining gap.** The decoder is no longer the main issue. The source
+must force enough column-disjoint cycles with small residual products and
+different slopes. More than (R) such cycles with residuals at most (R)
+would suffice in quasipolynomial time, but no current theorem supplies them.
+The (N=745) certificate checks the mechanism but is not isolated from a
+simpler cross-centre congruence of squares.
+
+### C142 — compact raw-anchor magnitude is not a new singleton signal
+
+**Status:** promoted as P135 after F149 V2 passed fresh hostile audit and
+independent statement-only reconstruction.
+
+For a squared anchor with any compact integer presentation, the canonical
+endpoint and every containment residual depend only on its residue modulo
+\(N\). Its exact squared mass also vanishes from the lifted parity class.
+The canonical-plus-lifted singleton closes exactly when
+
+\[
+q[q\alpha^2]_N=s^2,
+\]
+
+and its factor test is the ordinary congruence of squares between
+\(s\) and \(q\alpha\).
+
+For a fixed centre on an odd semiprime, only \(O(\sqrt N)\) of the
+\(\Theta(N)\) anchor residues are useful. Quasipolynomially many uniform
+trials therefore remain exponentially unlikely to hit.
+
+**Exact consequence.** Compact representation lets the source reach
+numerically large residues cheaply, but raw anchor magnitude itself adds no
+factor signal. The remaining live possibilities are a factor-correlated
+nonuniform residue source or a multi-relation arithmetic closure.
+
+### C143 — bounded-anchor wrapped cycles do not require path guessing
+
+**Status:** promoted as P136 after F147 V2 passed fresh hostile re-audit and
+independent statement-only reconstruction.
+
+For one frozen squared-anchor source with \(H^4\le N\), every wrapped
+containment cycle lies entirely among named blocks above \(N/H^2\). Its
+carries and residuals are below \(H^2\), and one word position has at most
+one large target.
+
+The complete large core can therefore be scanned and decoded in
+quasipolynomial time when the source and \(H\) are quasipolynomial. This
+removes exponential path branching as the gate inside one frozen source.
+
+**Exact remaining gap.** The theorem does not force one core edge, a cycle,
+a surviving parity dependency, or a non-global root. The source must still
+create enough arithmetic overlap. The strict lower bound
+\(L>\log N/(2\log H)\) is necessary only; it is not a path selector.
+
+### C144 — the natural reciprocal metric cycle is a root-\(+1\) decoy
+
+**Status:** promoted as P137 after F150 V2 passed fresh hostile re-audit and
+independent statement-only reconstruction.
+
+If the edge \(x\to y\) uses anchor \(y\), and the reverse edge uses anchor
+\(x\), both residuals must equal the same public residue
+\(h=[xy]_N\). Their bridge product is an exact square, but its positive and
+supplied roots agree modulo \(N\). The normalized root is always \(+1\).
+
+The ceiling selector \(q=\lceil N/a\rceil\) constructs this pattern cheaply,
+but therefore supplies no factor signal.
+
+**Exact consequence.** Metric near-reciprocity alone is not the needed
+feedback law. A useful source must use nonreciprocal cycles, longer cycles,
+old-column overlap, or another arithmetic hypercycle.
+
+### C145 — the many-relation decoder is exactly a consistency test
+
+**Status:** promoted as P138 after F152 V2 passed fresh hostile re-audit and
+independent statement-only reconstruction.
+
+Each retained square relation carries two linked data items: its integer
+square class and its supplied modular root. Put these together in one
+public group. Then the complete decoder has only two outcomes:
+
+- a relation circuit breaks consistency and gives a factor; or
+- every observed relation follows one consistent public rule over the
+  parity space, up to the two global signs.
+
+This rule can be maintained online in time polynomial in the retained
+transcript. Thus decoder cost is not the QP barrier.
+
+For two source layers that fail alone, their union succeeds exactly when
+their rules disagree on a shared parity class. The (N=3{,}241{,}632{,}473)
+cross-layer witness is the finite model of this event. One source can also
+break its own rule through an internal circuit.
+
+**Exact remaining gap.** The extension always permits an abstract consistent
+rule. Therefore many parity relations, high row reuse, or small doubling do
+not force a factor. The source must force a lift disagreement, or show that
+persistent agreement creates another public restriction that cannot hold for
+all inputs.
+
+### C146 — high order cleans the source but does not correlate it with the factors
+
+**Status:** promoted as P139 after fresh hostile audit and independent
+statement-only reconstruction.
+
+A deterministic quasipolynomial preprocessing step can now return a factor
+or certify one public element whose order exceeds a quasipolynomial bound in
+every hidden prime component. This removes all short collisions, inverse
+collisions, and endpoint sign hits in its displayed power window.
+
+The certificate does not control the canonical integer representatives.
+Their exact products can still repeat or form a useful square relation. The
+\(N=391\) certificate gives such a useful closure even though both local
+orders exceed the certified bound.
+
+Pilatte's short relation basis does not enter the QP catalogue by direct
+enumeration: its dimension is about \(\sqrt n\), its theorem gives no sparse
+support, and the full bounded-norm ball is exponential. The direct fixed
+Jacobi-torus coordinate also loses the promised local orientation.
+
+**Exact remaining gap.** High order is useful preprocessing, not a source
+theorem. A positive route must exploit canonical carries, find a structured
+classical sampler for the relation lattice, use a different torus
+coordinate, or prove that persistent source agreement creates a monotone
+public restriction.
+
+### C147 — Jacobi gives a real hidden asymmetry, but the direct torus maps do not extract it
+
+**Status:** promoted as P140 after fresh hostile audit and independent
+statement-only reconstruction.
+
+A Jacobi-minus-one discriminant guarantees opposite quadratic behavior at
+the two hidden primes. This is genuine factor-correlated information from
+bare \(N\).
+
+The obvious extraction steps do not use it. Multiplicative discriminant
+words carry only one hidden quadratic character. Global Cayley square-root
+branches differ by a global sign. Cross-discriminant isomorphisms require
+the missing square root. Direct biquadratic norms return squares or one.
+Ordinary high order cannot pass homomorphically into the nonsplit torus with
+order above two. The fixed Kummer trace removes the discriminant label.
+
+The product of two discriminants does give one exact sum-type torus
+identity, but its hidden sign and exponent are not public.
+
+**Exact remaining gap.** Forced local asymmetry is not enough. The source
+must create two incompatible coordinate lifts, or use a non-norm invariant,
+a nonhomomorphic map with a proved order law, or a torus-native feedback
+rule that breaks the common decorated section.
+
+### C148 — feedback subgroup expansion is real, but named-state growth can be bookkeeping only
+
+**Status:** promoted as P141 after hostile audit and independent
+statement-only reconstruction.
+
+An unconditional infinite balanced-semiprime family now shows the exact
+feedback phenomenon. A canonical inverse endpoint stays inside the old
+modular subgroup, but its integer overlap splits the old named block. The
+refined blocks generate a strictly larger subgroup than the frozen
+one-block state.
+
+This validates the framework-level distinction between modular information
+and integer presentation. It also exposes the trap: in this family the new
+block is the public constant \(5\). A complete initial source can name it
+without feedback.
+
+**Exact remaining gap.** We need an operational expansion relative to the
+complete declared source, followed by a forced section disagreement or
+another verified factor test. Expansion relative to an artificially coarse
+ledger is not enough.
+
+### C149 — full section completion is algebraically inert but can unlock a later grammar
+
+**Status:** promoted as P142 after F154 V3 passed fresh hostile re-audit and
+independent statement-only reconstruction.
+
+When the retained many-relation decoder fails in polylogarithmic parity
+dimension, its complete public section can be generated in quasipolynomial
+time. Every manufactured square dependency has normalized root \(+1\), and
+mixing it with old relations cannot add a useful root. Thus completion does
+not improve the current decoder.
+
+Its canonical integer endpoints can still split old named blocks. On the
+\(N=77\) witness, the split \(4706=26\cdot181\) enlarges the subgroup that a
+restricted named-block grammar may use. A later power test, or even the
+simpler screen \(\gcd(181+1,77)\), then factors the input.
+
+This is a real algorithm-state change, but not new information: \(26\) was
+already the public inverse of the supplied root \(3\). The example proves
+finite capability only.
+
+**Exact remaining gap.** Force an operational new block relative to the
+complete declared source, and then force a later section disagreement or a
+separate factor test. Merely completing a consistent section cannot do it.
+
+### C150 — sparse relation products give a complete QP feedback grammar
+
+**Status:** promoted as P143 after F156 V2 passed fresh hostile re-audit and
+independent statement-only reconstruction.
+
+The new source uses sparse products of retained relation-basis lifts, not
+sparse products of named integer blocks. One basis relation can be dense in
+the old block coordinates. This gives a genuine grammar-level enlargement.
+
+The schedule is exact: complete the ordinary frozen scan, build one actual
+section basis, enumerate support at most \((\log n)^2\), expose canonical
+inverse endpoints, jointly refine once, and let only descendants of the
+fixed initial product become future named blocks. Feedback relations never
+become later section generators. The total deterministic cost is
+
+\[
+2^{O((\log n)^6)}.
+\]
+
+If the basis dimension is at most the support cap, this scans the entire
+nonidentity section and contains every P142 refinement opportunity.
+
+**Exact remaining gap.** The source can still stop with no factor and a
+globally consistent final section. The missing theorem must force a direct
+screen, a useful refinement chain, or a non-global root. Cost and source
+coverage are no longer the immediate obstacle.
+
+### C151 — a supplied quadratic lift has a strict monotone outcome
+
+**Status:** promoted as P144 after hostile audit and independent
+statement-only reconstruction.
+
+For an explicitly listed public subgroup, any supplied element whose square
+is old gives one of three exact outcomes: a factor, confirmed membership, or
+an index-two expansion in both hidden components. With a certified
+common-order generator, the same test is compact. A genuine expansion
+doubles the exact common local order.
+
+This is the first clean monotone capacity law on the feedback route. A chain
+of valid external lifts cannot continue beyond the smaller hidden group
+order. The decoder and the number of levels are polynomial.
+
+The source problem remains the hard part. The universal certificate
+\((-1,2)\) does not give a square root of \(-1\). Such a root can fail to
+exist at the first level, and later roots can fail far below the
+\(\sqrt N\) outer bound.
+
+**Exact remaining gap.** Construct, in polynomial or quasipolynomial time, a
+factor or one external coprime quadratic lift over each surviving certified
+state. Merely listing many relations or proving subgroup growth without a
+known common order does not meet this condition.
+
+### C152 — a primitive lift always gives factor-or-double after a public sign choice
+
+**Status:** promoted as P145 after hostile audit and independent
+statement-only reconstruction.
+
+For a certified common-order state, any supplied square root of a primitive
+power now has only two outcomes: a factor or exact doubling of the common
+local order. If the order is odd, compare with the public internal root and
+choose the opposite global sign. If the order is even, every root already
+has twice the order. The former inert branch is gone.
+
+This also sharpens the many-relation target. A decorated section hit gives
+the needed root directly, so it is sufficient. But the hit condition is
+root-equivalent to the original scalar problem; it is not a source theorem.
+
+Jacobi information gives a precise boundary at even order. A negative
+Jacobi symbol proves that only one hidden field admits the next root. A
+positive symbol merges the both-admit and neither-admits cases. Pairing two
+negative-Jacobi discriminants only re-encodes the same missing root.
+
+**Exact remaining gap.** At every surviving even common-order state, force a
+factor or one primitive section square-class hit in quasipolynomial work.
+Externality is no longer part of this gate; root production is the whole
+gate.
+
+### C153 — integer refinement can escape a saturated modular root layer
+
+**Status:** promoted as P146 after fresh hostile re-audit and independent
+statement-only reconstruction.
+
+One fixed layer of square roots can add at most one modular coset. At odd
+common order, even that coset is generated by the public element \(-1\).
+This closes the idea that many roots alone can keep expanding the modular
+state.
+
+Canonical integer encoding behaves differently. A root that is already an
+old modular power can split an old integer block. The released factors need
+not belong to the old subgroup. The \(N=341\) certificate proves this
+strictly: a modularly inert root splits \(70\) into \(14\) and \(5\), grows
+the named subgroup from size \(5\) to \(75\), and then
+\(\gcd(14^5-1,341)=11\).
+
+The screen \(\gcd(d^M-1,N)\) now classifies every released block: factor,
+membership in both old local groups, or strict growth in both. This is a
+real algorithm-state change, not only a new scalar identity.
+
+**Exact remaining gap.** Force useful refinement on every stalled source,
+then turn the released blocks into a compact certified common-order
+extension or another monotone restriction. One finite refinement does not
+give recursion.
+
+### C154 — sparse section feedback has one public QP success beyond a frozen null layer
+
+**Status:** promoted as P147 after the registered computation, corrected
+fresh hostile re-audit, and independent blind reconstruction.
+
+The F111 frozen layer for \(N=3{,}241{,}632{,}473\) has null direct screens
+and only global normalized roots. Support-one F156 feedback also misses. A
+support-two decorated product gives the public inverse pair
+
+\[
+(z,w)=(3{,}183{,}314{,}832, 205{,}056)
+\]
+
+and \(\gcd(z-w,N)=41{,}011\).
+
+This is not only a factor-assisted discovery. F156 already declares every
+support-two pair, and its basis has quasipolynomial size. A factor-free
+lexicographic pair scan therefore locates the certificate in
+quasipolynomial time on this fixed input. The disclosed factors only made the
+complete five-input experiment fit its 900-second limit.
+
+Four frozen 58-bit controls have no support-at-most-two hit. They do not
+close larger support or later feedback. The positive witness proves real
+source capability, but no density or all-input progress law.
+
+**Exact remaining gap.** Prove that some bounded support layer succeeds or
+causes monotone progress on every input. A single public QP locator on one
+fixed input does not provide this theorem.
+
+### C155 — a released block now has a compact factor-or-grow updater
+
+**Status:** promoted as P148 after hostile audit and independent
+statement-only reconstruction.
+
+Start from a certified common-order state \((g,M)\). For one released unit
+block \(d\), scan \(\gcd(d^{eM}-1,N)\) through the QP cap. A proper value
+factors \(N\). A first global return proves that every hidden relative order
+is the same \(e\). All-one output proves that every hidden relative order is
+above the cap.
+
+The equal-order branch needs one further check. Hidden discrete logarithms
+can disagree even when the relative indices agree. A factor-first
+Pohlig--Hellman calculation either finds this disagreement as a factor or
+aligns one relation \(d^e=g^a\). After alignment, a two-dimensional Smith
+calculation gives an explicit public generator of exact common order \(Me\).
+Thus every successful update strictly multiplies a certified common order,
+and fewer than \(n\) such updates can occur.
+
+This closes the decoder problem left by C153. It does not close the source
+problem. Feedback can still return old-subgroup blocks or blocks with
+relative order above every QP cap.
+
+**Exact remaining gap.** Prove that the public feedback source cannot remain
+in the inert and above-cap branches. A useful theorem must either force a
+bounded relative-order hit or make repeated above-cap certificates
+accumulate into a contradiction.
+
+### C156 — pure PFR on the decorated decoder adds no information
+
+**Status:** promoted as P149 after hostile audit and independent
+statement-only reconstruction.
+
+After the P138 consistency test fails to factor \(N\), the decorated subgroup
+generated by the retained relations is exactly the graph of the public parity
+section. Projection to parity is an isomorphism. It preserves every iterated
+sumset, additive relation, affine subspace, and intrinsic coset cover.
+
+This closes the direct Babai/PFR splice. Large doubling can occur while the
+generated subgroup is already fixed and root-global. Doubling one can occur
+inside a root-global subspace or affine coset. Neither PFR branch forces a
+new root direction.
+
+The obstruction is narrow. Integer representatives, canonical carries,
+block incidences, sizes, and provenance are not preserved by this
+isomorphism. Those are still live inputs to a richer split-or-structure
+argument.
+
+**Exact remaining gap.** Force two public source mechanisms to choose
+incompatible lifts on one shared parity vector, or prove that a
+section-consistent additive cell must cause a bounded integer refinement or
+relative-order update. Pure decorated additive structure cannot do this.
+
+### C157 — common-order growth and relation recovery are separate tasks
+
+**Status:** promoted as P150 after a clean proof-only hostile audit and an
+independent statement-only reconstruction.
+
+After an F161 common return, exact order reduction on the released block
+either factors \(N\) or certifies one common local order \(m\). Local
+cyclicity then gives
+
+\[
+\operatorname{lcm}(M,m)=Me.
+\]
+
+A public product of the required prime-primary parts of \(g\) and \(d\)
+has exact common order \(Me\). Hidden-log alignment is not needed for this
+state update.
+
+Alignment still has real value. It can expose a factor when hidden phases
+differ. It also gives the exact relation needed by the F164 lattice. The
+\(N=341\) certificate separates these outputs: the lcm word has common
+order ten, while the full named subgroup has order fifty and the alignment
+gcd gives the factor eleven.
+
+The clean design is now: use the lcm word as the next common-order state,
+retain all old generators and provenance, and run alignment only when an
+exact relation, global compression, or its factor channel is needed.
+
+**Exact remaining gap.** The source must still supply a released block with
+a bounded common relative order, or turn the inert and above-cap branches
+into quasipolynomial progress. This correction simplifies the decoder but
+does not solve the source problem.
+
+### C158 — beyond-cap blocks now have exact public rank–capacity accounting
+
+**Status:** promoted as P151 after a fresh hostile re-audit and an independent
+statement-only reconstruction.
+
+The \(M\)-th power of a public word is an exact fingerprint of its coset
+modulo the current common-order subgroup. A mismatch between hidden
+components factors \(N\). On the synchronized branch, \(\kappa\) distinct
+fingerprints certify local subgroup size at least \(M\kappa\).
+
+For one new block, a first collision gives one independent aligned relation.
+No collision through exponent \(B\) multiplies the certified capacity by
+\(B+1\). After \(t\) blocks and \(r\) retained collision rows,
+
+\[
+\kappa\ge(B+1)^{t-r}.
+\]
+
+If the complete relation lattice has full rank and index
+\(D=M\kappa\), Smith normal form produces the next exact common-order state.
+The equality is the gate. Rank alone is not enough.
+
+The \(N=341\) certificate shows the obstruction. Two blocks can each have
+relative order above the cap while remaining powers of one synchronized
+hidden quotient direction. The second block then adds a relation, not
+capacity or a factor.
+
+**Exact remaining gap.** Force disjoint quotient layers, exact index closure,
+or a bounded relative-order procedure against the full accumulated subgroup.
+Individual above-cap certificates and block count do not force any of them.
+
+### C159 — an existing signed pair collision no longer needs a quadratic scan
+
+**Status:** promoted as P152 after a fresh hostile re-audit and an independent
+statement-only reconstruction.
+
+For a public unit list, one product polynomial and one derivative evaluation
+batch detect every proper signed product \(ab\equiv\pm1\) on only part of the
+hidden CRT decomposition. Exact global partners are removed by the derivative.
+Equal-value positions use self screens. If an aggregate gcd is \(N\), a
+scalar subproduct tree localizes a proper factor.
+
+The method is near-linear in the encoded explicit list, up to polynomial
+coefficient arithmetic. It works over arbitrary composite moduli because all
+tree divisors are monic. A quasipolynomial list stays quasipolynomial.
+
+This replaces the support-two pair scan on the fixed F157 witness: one raw
+empty-intersection batch finds factor \(41{,}011\). It does not create the
+collision and does not imply a non-global root.
+
+**Exact remaining gap.** Prove that a public source supplies at least one
+proper signed collision, or combine this locator with a source-side
+rank/capacity law. Faster localization does not change a null source.
+
+### C160 — QP rescaling preserves the order decoders, not their promises
+
+**Status:** promoted as P153 after hostile audit and independent
+statement-only reconstruction.
+
+Every existing smooth-order, punctured-bank, bounded-image, and capped-
+subgroup decoder in P87 and P92--P99 remains QP when all numerical caps and
+the complete encoded state are QP. The large numerical lcm is not a cost
+problem because its bit length is only \(O(B\log B)\).
+
+This gives a real bare-\(N\) promise algorithm. If the smaller coprime local
+order \(\min(A,B)\) of the \((N-1)\)-power rectangle is QP, direct uniform
+sampling and verified repetition split the semiprime in expected QP time.
+
+The new stable family shows why this does not close the route. Infinitely
+many inputs have \(\gcd(p-1,q-1)=2\), exponentially large prime components
+in both local powered orders, and
+
+\[
+\gcd(AB,N-1)=1.
+\]
+
+Every \(N-1\)-supported power is then an automorphism of the same rectangle,
+and direct uniform success is \(2^{-\Omega(n)}\). QP repetition and a larger
+smooth-order bank remain insufficient.
+
+**Exact remaining gap.** Use value-dependent feedback or accumulated
+relations to escape the synchronized large cyclic core. The route needs a
+forced bounded quotient, an independent capacity increase, an aligned
+lattice closure, or a non-global root. QP rescaling alone supplies none of
+these events.
+
+### C161 — a frozen feedback block list now has a complete quotient updater
+
+**Status:** promoted as P154 after hostile audit and independent
+statement-only reconstruction.
+
+For each released unit, one lcm screen and one bounded relative-order scan
+give an exact factor-first classification: factor, common-order growth, or a
+certificate that both its absolute primary component and its relative order
+exceed the QP cap.
+
+The full frozen list can now be treated jointly. Enumerate the subgroup
+generated by the \(M\)-th-power fingerprints. A hidden equality mismatch
+factors \(N\). If the table closes at size \(\kappa\), it gives the exact
+common local quotient order and a new certified state of order
+
+\[
+M\kappa.
+\]
+
+If the table exceeds the cap \(C\), it certifies local subgroup capacity at
+least \(M(C+1)\). This is the Harvey--Hittmeir-style win--win that survives
+for the current feedback objects.
+
+The updater also fixes the bookkeeping. State growth resets fingerprints,
+but it does not delete exact relations or endpoint presentations. These need
+separate persistent ledgers.
+
+**Exact remaining gap.** The source can still land in one synchronized cyclic
+quotient whose order exceeds every tested QP cap. We must force small closure,
+force enough independent capacity increases, close the aligned relation
+lattice at its exact index, or obtain a non-global root. P154 proves the
+outcome logic after such an event. It does not force the event.
+
+### C162 — fixed-depth exact-value feedback is QP, but observed structure growth is not progress
+
+**Status:** promoted as P155 after exact finite reconstruction, hostile proof
+audit, and fresh statement-only reconstruction.
+
+For a QP base transcript, polylogarithmic source support, and any fixed number
+of layers, the complete workflow remains QP. This includes all attempted and
+duplicate values, exact-value retention, multiplicity-aware factor-free
+refinement, perfect-power extraction, dense parity elimination, a complete
+kernel basis, normalized exact roots, signed gcd screens, zero columns, and
+compact provenance.
+
+The verified depth-two corpus separates syntactic growth from semantic
+progress. Across the 63 base-null inputs, both feedback levels added hundreds
+of strict exact values, increased rank on almost every input, and split many
+old integer blocks. They produced no direct factor and no non-global kernel
+root. The single factor in the 64-input corpus was already the base square
+$N+1=10008^2$.
+
+**Exact remaining gap.** Fixed-depth cost is no longer an issue. A positive
+route must prove that some QP-bounded layer forces a factor-bearing mismatch,
+bounded quotient closure, exact lattice closure, or non-global normalized
+root. More records, more rank, and more factor-free refinement are not such a
+law. Growing recursion also needs a separate uniform QP bound.
+
+### C163 — ordinary and torus exact orders give a dual CRT progress potential
+
+**Status:** promoted as P156 after hostile audit and independent
+statement-only reconstruction.
+
+An ordinary common order divides $N-1$. A Jacobi-minus-one torus common order
+divides $N+1$. Starting both states at order two makes their gcd exactly two,
+so every strict exact update multiplies their lcm rather than merely enlarging
+one already-covered primary part.
+
+Once this lcm reaches $\sqrt N/Q(n)$, two CRT classes enumerate the smaller
+factor in QP time. On balanced semiprimes, one orientation-free sum class and
+the narrower $(3/\sqrt2-2)\sqrt N$ interval suffice. The torus also admits
+the complete P154 factor/closure/capacity updater through joint-coordinate
+gcd comparisons.
+
+**Exact remaining gap.** No source forces a strict ordinary or torus closure.
+Capacity is not an order modulus. The theorem is useful only if factor-first
+processing supplies repeated exact growth while the complete transcript stays
+QP.
+
+### C164 — carry difference covers solve location, not source closure
+
+**Status:** promoted as P157 after hostile audit and independent
+statement-only reconstruction.
+
+The carry row $r$ occupies the unique class $-N^{-1}\bmod r$, and useful
+parity reuse also requires odd valuation. Even satisfying both conditions for
+every prime through $R=\Theta(n/\log n)$ does not force a dependency: P157's
+polynomial canonical bank has two valuation-one hits in every such row and a
+private-prime identity submatrix on all columns.
+
+**Exact remaining gap.** A complete adaptive grammar must prove that it
+reuses every surviving private row and creates a final rank defect, then still
+prove a non-global root. Difference coverage and faster pair location supply
+none of these events.
+
+### C165 — exact common-order growth is not a universal terminal potential
+
+**Status:** promoted as P158 after hostile audit and fresh statement-only
+reconstruction.
+
+F172 constructs infinitely many trial-hard semiprimes with
+
+\[
+\gcd(p-1,q-1)=6
+\]
+
+and every other shifted gcd $\gcd(p\pm1,q\pm1)$ bounded by four. Therefore
+the maximal ordinary exact common order, every quadratic-torus exact common
+order, and their combined lcm are bounded by twelve, even with perfect source
+access. Since both factors are exponential in the actual input length, this
+constant never reaches the P156 terminal threshold $\sqrt N/Q(n)$.
+
+**Strategic update.** Common-order accumulation is no longer the primary
+source target. The positive route must exploit unequal local orders or
+fingerprints as a factor signal, or return to a non-order root/relation
+decoder. Large local capacity by itself is not progress.
+
+**Exact remaining gap.** Prove that a QP public source forces a detectable
+ordinary/torus mismatch on every constant-common-capacity input, or find a
+different pooled observable with a QP evaluator and an all-input reduction.
+
+### C166 — the unresolved ordinary source is one normalized base-two branch
+
+**Status:** promoted as P159 after fresh hostile re-audit and independent
+statement-only reconstruction.
+
+For arbitrary odd composites and arbitrary fixed QP caps \(B,C\), one
+absolute lcm screen and one relative sign-quotient scan now give a complete
+factor-first trichotomy. The output is a factor, a factored exact
+common-order state above the input length, or the single public hard block
+\(2\). In the hard branch every local order of \(2\) has a prime-power
+component above \(B\), and every local order modulo \(\langle-1\rangle\)
+exceeds \(C\). The Mersenne edge case is constructive: it either gives an
+explicit factor or the exact common state \((-2,2n)\).
+
+**Strategic update.** Repeated source generation is not needed to define the
+ordinary hard case. The next theorem should operate directly on base two.
+The live constructive refinement raises \(4\) to \(N^n\), which removes all
+order-primary factors supported on hidden primes. This appears to reduce the
+remaining obstruction to unequal coprime local orders.
+
+**Exact remaining gap.** Prove a QP factor-or-progress transition for that
+coprime-order branch. A common annihilator is useful only if its factorization
+or a hidden-component mismatch can be recovered in QP time; an unfactored
+cyclotomic block alone is not an exact common-order state.
+
+### C167 — hidden-prime order support is no longer part of the hard case
+
+**Status:** promoted as P160 after hostile audit and independent
+statement-only reconstruction.
+
+Raise the P159 base-two square to \(N^n\). This removes the complete primary
+part of every local order supported on any rational prime dividing \(N\).
+An identity branch factors through the least hidden prime. A second
+factor-first lcm screen then gives a factor, an exact common-order state above
+the input length, or one public unit whose local orders are all nontrivial,
+coprime to \(N\), and have a prime-power component above an arbitrary fixed
+QP cap. Their sign-quotient orders also stay above the chosen cap.
+
+**Strategic update.** Repeated prime factors no longer create a separate
+order-support escape. The remaining ordinary branch is a clean hidden-order
+problem in cyclic groups of order coprime to the input.
+
+**Exact remaining gap.** Local orders can still be unequal and exponentially
+large. QP scans can expose a short action-period mismatch, but an unfactored
+annihilator such as \(N^k-1\) is not yet an exact common-order certificate.
+
+### C168 — all small prime support can be removed from the local orders
+
+**Status:** promoted as P161 after hostile audit and independent
+statement-only reconstruction.
+
+Raise the P160 unit to
+\(\operatorname{lcm}(1,\ldots,T)^n\), where \(T\) is any fixed numerical
+QP cap. This deletes every local-order primary supported on a prime at most
+\(T\), with full multiplicity. A proper identity gcd factors. Global
+identity gives a fully factored annihilator and hence a factor or one exact
+common order above \(T\). The surviving unit has nontrivial local orders
+whose every prime divisor exceeds \(T\).
+
+**Strategic update.** Smooth and partly smooth local orders are no longer a
+separate hard case. F183 further gives a fully factored small-base action
+filter. The sharper live candidate F184 uses root counting instead of
+factoring the action annihilators, and therefore permits an arbitrary
+numerical-QP action-period cap.
+
+**Exact remaining gap.** Large rough local orders can remain unequal. Long
+actions of many public bases do not yet prove independent automorphism-group
+growth, an exact common order, or a factor.
+
+### C169 — cross-resultants close synchronized extinction, with recursion shape tracked correctly
+
+**Status:** promoted as P162 after hostile audit and independent
+statement-only reconstruction.
+
+Two separated shift menus turn global extinction into a QP list of smaller
+cross-resultants. Under a fixed bit-length contraction, recursively factoring
+all of them gives a fully factored common annihilator. Factor-first stripping
+then returns a factor or one exact common local order. This closes the
+synchronized-extinction branch of the P161 action filter.
+
+**Recursion correction.** A fixed contraction is sufficient for this
+many-child recursion. It is not necessary for a unique recursive chain. If
+one canonical child loses at least one bit, then
+
+\[
+T(n)\le T(n-1)+\operatorname{QP}(n)
+\]
+
+is still quasipolynomial. The correct cost invariant is the total recursion
+tree volume, not a fixed contraction at every edge.
+
+**Strategic update.** The base-two carry, centered-resultant, and
+nearest-remainder candidates now fail for a different reason. Their recursive
+factorizations do not lift to a factor of \(N\), an exact common order, or a
+non-global root. On the normalized base-two branch, the first carry is one,
+short normalized Hankel resultants are a known small word times an already
+named power of two, and factoring \((N-1)/2\) yields only the same global
+inverse relation.
+
+**Exact remaining gap.** Resolve the wide-shift-hard descendant, or construct
+one canonical smaller auxiliary whose complete factorization has a proved
+lift to a factor, a certified common-order state, or a non-global root. A
+one-bit decrease is enough if only one child survives.
+
+### C170 — sequential peeling converts the synchronized branch to one child
+
+**Status:** promoted as P163 after hostile audit and independent
+statement-only reconstruction.
+
+The corrected recursion observation is operational, not only editorial.
+Given a QP list whose prime support covers every current local order, process
+the entries as exponent filters. Earlier entries need no factorization. At
+the first global identity, the current element is annihilated by the final
+entry alone. Recursively factor only that one integer, then use factor-first
+stripping.
+
+For the P162 cross-resultant list, this removes the QP-many-child recursion.
+The child may have \(n-1\) bits:
+
+\[
+T(n)\le T(n-1)+\operatorname{QP}(n)
+\]
+
+still has QP total cost. The cross-resultant size condition is correspondingly
+relaxed from a fixed \(\rho n\) contraction to a one-bit contraction.
+
+**Strategic update.** A public support-covering list plus an identity test is
+enough to select one recursive child with a valid lift. This is the precise
+form in which integer recursion improves the ring-only route. It does not
+help when the source supplies only long actions and no support cover.
+
+**Exact remaining gap.** The only P162/P163 output not closed by this method
+is the wide-shift-hard rough descendant. We need to force an extinction cover,
+or obtain a factor, exact common order, or non-global root directly from the
+simultaneous long-action state.
+
+### C171 — root counting hardens every surviving order prime against a QP-wide action bank
+
+**Status:** promoted as P164 after a fresh hostile re-audit and an independent
+statement-only reconstruction.
+
+For arbitrary fixed numerical-QP caps (K) and (M), use (M) disjoint
+blocks of (D+1) consecutive bases, where
+
+\[
+D=1+K(K+1)/2.
+\]
+
+The bad-base condition for an order prime is the zero set of the monic
+degree-(D) polynomial
+
+\[
+X\prod_{k=1}^K(X^k-1).
+\]
+
+Therefore one base in every block survives or a gcd factors (N). After
+(M) stages, every surviving order prime sees all (M) selected public
+bases as units of multiplicative order above (K). The construction and
+all exponent bit lengths remain QP, and arbitrary hidden prime powers are
+handled exactly.
+
+**Strategic update.** A fixed polylogarithmic action cap is no longer the
+boundary. Any pre-registered QP number of adaptive public actions can be
+made simultaneously long on every surviving order prime. Hence a terminal
+argument must use a structural relation among those long actions, a support
+cover compatible with P163, or a genuinely integer-specific lift. It cannot
+rely only on testing more small action periods.
+
+**Exact remaining gap.** The selected actions can all lie in one large
+cyclic direction. QP-wide long action does not yet force an extinction
+cover, a factor, an exact common local order, or a non-global root.
+
+### C172 — complete \(N-1\) factorization removes decoding ambiguity, not rare return
+
+**Status:** promoted as P165 after hostile audit and independent
+statement-only reconstruction.
+
+Recursively factoring \((N-1)/2\) is a valid one-child QP step. Once the
+factorization of \(N-1\) is known, every full-return base can be stripped to
+a proper factor or one fully factored exact common local order, including for
+repeated prime powers. The exact random-base law is now known.
+
+On infinitely many bounded-gap balanced semiprimes, however, the local
+\((N-1)\)-root groups have constant size. An independent uniform base enters
+at least one return group with probability only \(2^{-n/2+O(1)}\), and all
+synchronized common orders remain bounded. A QP sample bank therefore has
+negligible success.
+
+**Strategic update.** The corrected one-child recurrence fully validates the
+preprocessing cost. It does not rescue the route because the obstruction is
+rare entry, not recursion or order stripping. Adaptive bases and other
+exponent families remain open.
+
+**Exact remaining gap.** Continue from P164's wide-action state. We need a
+source-correlated support cover, a direct separator, or a high-order
+decomposition. Independent sampling from a factored \(N-1\) exponent family
+does not supply it.
+
+### C173 — segment zero isolates the missing affine prefix-OR evaluator
+
+**Status:** promoted as P166 after hostile audit and independent
+statement-only reconstruction.
+
+A QP segment-Jacobi zero oracle would be enough on balanced semiprimes.
+The affine source \(U+tV\) supplies a useful local zero with constant
+probability at interval length \(\Theta(\sqrt N)\), and binary isolation
+retains only one child per level. The recursion cost is therefore QP.
+
+The exact totalized reciprocity identity shows that ordinary Jacobi
+compression removes the signs but leaves the gcd correction unchanged. The
+zero mask has exponential explicit Fourier support, linear-recurrence order,
+and deterministic residue-state complexity. Its factorial form is a carry
+in the hidden base. These are representation boundaries, not a general
+lower bound.
+
+**Strategic update.** The source probability is not the obstacle. The exact
+missing operation is a succinct prefix-OR over \(\Theta(\sqrt N)\) affine
+integer events. One-child isolation helps only after that OR can be evaluated.
+
+### C174 — long retained Paley words remain information-rich but modulus-blind
+
+**Status:** promoted as P167 after hostile audit and independent
+statement-only reconstruction.
+
+Dense spectral reconstruction, explicit low-order correlations, short
+row-only list recovery, and QP coordinate collisions all remain insufficient
+at QP scale. However, \(O(n)\) columns can give a local Paley code constant
+distance. The long-word channel is therefore not killed by entropy or code
+distance.
+
+**Strategic update.** The live P54 operation is high-order and source-aware:
+decompose the retained public Jacobi word as the Hadamard product of two
+unknown-modulus Paley words and return a zero divisor. Naming an oracle that
+already returns a hidden prime merely restates QP factoring. A useful next
+step must expose a smaller structural output or a succinct arithmetic
+cancellation invariant.
+
+**Exact remaining gap.** Reconcile P164's long-action state with P167's
+long-word information. Either construct a source-correlated support cover for
+P163, or turn a high-order retained-word statistic into a verifiable zero
+divisor without evaluating an exponential prefix product.
+
+### C175 — one-bit recursion still needs support-preserving size localization
+
+**Status:** promoted as P168 after F191 V2 passed a fresh hostile re-audit
+and a strict statement-only reconstruction. F191 V1's failed direct handoff
+is preserved as X81.
+
+For \(\ell\mid X\) and \(X=QD+R\), an \(\ell\)-free divisor \(D\) gives
+
+\[
+\ell\mid R\iff\ell\mid Q.
+\]
+
+Centering a huge supported integer therefore does not create a supported
+small child. A universal \(X=N+c\) example loses the support in both valid
+children. Even a QP bank of equidistributed exact multiples can lose the
+same prime in every centered quotient and remainder.
+
+**Strategic update.** The corrected one-child recurrence remains valid.
+The missing premise is stronger than “some recursively factorable integer
+is divisible by the target prime.” The selected integer must be nonzero,
+have fewer bits than \(N\), and retain the required support. Otherwise the
+recursion has no mathematical lift.
+
+**Exact remaining gap.** Prove an \(N,w\)-correlated quotient or carry
+concentration theorem, construct another support-preserving localization
+operation, or bypass P163 with a direct separator. Generic Euclidean
+normalization is now closed.
+
+### C176 — the standard P164 ACD row lattice selects coprime decoys
+
+**Status:** promoted as P169 after hostile audit and independent
+statement-only reconstruction.
+
+One retained P164 base gives a public power word that is pairwise distinct
+modulo every hidden prime. Circular pigeonholing therefore supplies a hidden
+cluster of approximate multiples for each factor. This is a genuine
+integer-specific source beyond arbitrary ring expressions.
+
+The natural standard row lattice nevertheless fails in its easiest promised
+form. Even after granting the correct larger-prime cluster and its error
+bound, simultaneous Dirichlet approximation gives a vector strictly shorter
+than every factor-bearing coefficient. Every exact shortest vector then has
+only unit coordinates modulo \(N\). Exact SVP plus coordinate gcd tests
+cannot extract the factor.
+
+**Recursion correction retained.** This result does not use fixed-ratio
+contraction. A single auxiliary chain with
+
+\[
+T(n)\le T(n-1)+\operatorname{QP}(n)
+\]
+
+is QP. The failure is the missing mathematical lift from the selected short
+vector, not its size. Complete factorization still needs separate accounting
+if the enclosing routine also recursively factors both children of later
+splits.
+
+**Strategic update.** A predeclared order-oblivious subset bank becomes
+exponential at the ACD-informative cluster dimension. This count does not
+cover a selector that exploits the recurrence \(x_{j+1}=x_j^a\). The live
+P164-to-P163 route is now narrower: use the recurrence or another
+factor-asymmetric invariant to locate a local cluster, then decode it with a
+method that proves support rather than merely shortness.
+
+**Exact remaining gap.** Construct that source-aware selector/decoder, or
+bypass support localization through a direct separator or the high-order
+Paley-word interface of P167.
+
+### C177 — explicit separating representations do not orient the hidden factors for free
+
+**Status:** promoted as P170 after the repaired F193 V3 passed hostile audit
+and statement-only reconstruction.
+
+Sparse modular-symbol endpoints either expose a factor through their
+denominator gcd or remain on the two global cusps. Good Hecke and Fricke do
+not create the missing local orientation. A uniform small-modulus bank for
+\(\sigma_1(N)\) is already enough to reconstruct that coefficient and factor;
+twists of one fixed coefficient add only public scalar multiples. A globally
+descended elliptic endomorphism likewise has compatible good-torsion action
+in both hidden fibers.
+
+**Strategic update.** These explicit representation routes do not replace
+the core beta-two task. Any useful representation-theoretic step must compute
+characteristic-dependent Frobenius data, work in a genuinely succinct
+boundary-zero object, or produce a new arithmetic cancellation invariant.
+
+**Exact remaining gap.** The active core remains the beta-two branch: turn
+its integer representatives, carries, or a non-polynomial threshold
+functional into a factor or a sufficiently large exact common order.
+
+### C178 — beta two is a hidden exact-division jump in a succinct binomial circuit
+
+**Status:** promoted as P171 after F194 V3 passed focused hostile review and
+strict statement-only reconstruction. The failed V1 mathematics and failed
+V2 metadata package remain preserved.
+
+For balanced \(N=pq\), \(B=\lfloor\sqrt N\rfloor\), the word
+
+\[
+A_k=(-1)^k\binom{N-1}{k}\pmod N
+\]
+
+is exactly \(1\) before \(k=p\) and exactly \(1-q\) from \(p\) through
+\(B\). Hence
+
+\[
+\gcd\!\left(N,(-1)^B\binom{N-1}{B}-1\right)=q.
+\]
+
+The discontinuity is caused by exact cancellation of the hidden nonunit
+index \(p\) in
+
+\[
+(k+1)(A_{k+1}-A_k)=-NA_k.
+\]
+
+This is the integer-specific structure that generic ring operations erase.
+Equivalently, the logarithmic-size circuit
+\((1+X)^N-1-X^N\) has hidden local \(X\)-adic orders \(p\) and \(q\).
+
+**Boundary update.** Polynomial index moments collapse to the ordinary
+Fermat scalar. Small cyclic sketches have full Boolean support in both
+components unless the prime gap is already QP-enumerable. Neither statement
+is a general circuit lower bound. Coefficient-sensitive cancellation remains
+open.
+
+**Recursion correction retained.** A one-child recurrence losing only one
+bit is still QP. The present obstruction is not insufficient contraction.
+It is that no QP procedure is known to compute the remote binomial residue,
+the corresponding signed base-\(N\) carry, or the local valuation of the
+succinct circuit.
+
+**Exact remaining gap.** Build one of those three evaluators, or prove an
+equivalent integer threshold/exact-division transition. This is now the
+central beta-two task.
+
+### C179 — the latest order algorithms sharpen the terminal but stop at beta two
+
+**Status:** promoted as P172 after F195 V2 passed a primary-source hostile
+re-audit and a strict statement-only reconstruction.
+
+A fully known exact common local order \(M\), coprime to \(N\), forces every
+hidden prime into the progression \(1\bmod M\). The 2025
+Gao--Feng--Hu--Pan terminal then costs \(N^{1/4}/M\), up to logarithmic
+factors. It is QP once that ratio is QP.
+
+This does not solve the P159 branch. The 2026 Harvey--Hittmeir routine exits
+at beta two before its smooth-number stage whenever the certified order of
+2 exceeds the chosen QP cap. Its bounded-order work is a same-node cost, so
+the valid recurrence \(T(n)\le T(n-1)+\operatorname{QP}(n)\) does not
+accelerate an exponential choice of the order cap. The direct 2025
+rank-three list also remains at least \(N^{1/8}\).
+
+**Strategic update.** The useful integer-specific fork is now exact. If all
+small rational primes have synchronized low order, their lcm is large by
+smooth-number counting and the progression terminal factors. Otherwise the
+branch contains small ordinary high-order bases, starting with 2. Generic
+group elements are no longer the right source model.
+
+**Exact remaining gap.** Resolve the mixed high-order small-integer branch.
+The active subproblem remains P171's hidden quotient/carry operation for the
+beta-two binomial or factorial, not another generic ring-order scan.
+
+### C180 — the beta-two pair collapses to one quotient digit
+
+**Status:** promoted as P173 after F196 passed a source-level hostile audit
+and a strict statement-only reconstruction.
+
+For \(B=\lfloor\sqrt N\rfloor\), the residue
+
+\[
+\binom{N-1}{B}\bmod2^n
+\]
+
+is deterministic polynomial-time computable through the corrected 2013
+power-of-two binomial algorithm. It is not the missing beta-two information.
+The signed base-\(N\) quotient carry \(h\bmod2^n\) alone recovers \(q\),
+and \(q\) conversely recovers that carry. A residue modulo \(N2^n\) exposes
+the same quotient digit and already exposes \(q\) through its remainder.
+
+**Strategic update.** The live primitive is not a generic ring operation and
+not a two-coordinate joint observable. It is one integer base-conversion
+operation on an exponentially large but succinct binomial. Exact-output
+materialization is exponential, while standard modular reduction loses the
+quotient. A one-child recurrence would be QP after such a digit or a
+supported smaller child exists; it does not compute either object.
+
+**Exact remaining gap.** Compute the low base-\(N\) quotient block of the
+remote binomial or an equivalent factorial quotient block in QP time, or
+find another integer-specific operation that releases the hidden exact
+division at \(p\).
+
+### C181 — factorial recursion is allowed; the quotient digit is still missing
+
+**Status:** promoted as P174 after F197 passed a primary-source hostile audit
+and a strict statement-only reconstruction.
+
+For \(B=\lfloor\sqrt N\rfloor\), the factorial \(B!\) contains \(p\)
+exactly once and no factor \(q\). Thus its residue modulo \(N\) is already a
+factor-bearing object. Explicit dense blocks and the published
+Bostan--Gaudry--Schost/Costa--Harvey methods reach it at the
+\(N^{1/4+o(1)}\) scale. Modular lifting to \(N^2\) retains a nontrivial
+division kernel, and its low base-\(N\) digit already factors.
+
+The low bits of \(Q=\lfloor B!/N\rfloor\) are a sufficient alternative:
+they recover the exact remainder \(B!\bmod N\) because
+\(B!\bmod2^n\) is easy. This is the factorial version of P173's binomial
+quotient carry.
+
+**Recursion correction.** A unique child with only one fewer input bit gives
+\(T(n)\le T(n-1)+\operatorname{QP}(n)\), which is QP. This is fully
+accepted. The present methods do not become QP because they spend
+\(N^{1/4+o(1)}\) work before producing any child. The defect is same-node
+evaluation, not contraction.
+
+**Exact remaining gap.** Compute a sufficient block of the factorial or
+binomial Euclidean quotient, produce an \(N^{1/4}\)-accurate approximation
+to a hidden factor, or construct another support-bearing smaller child in
+QP time. Standard product blocks and modular lifts do not do so.
+
+### C182 — the hard carry is a hidden reciprocal, and one quarter is enough
+
+**Status:** promoted as P175 after F198 passed a primary-source hostile audit
+and a strict statement-only reconstruction.
+
+Let \(A=(-1)^B\binom{N-1}{B}\), let
+\(h=(A-(1-q))/N\), and define the public polynomial-time residue
+
+\[
+z_t=N^{-1}(A-1)\pmod{2^t}.
+\]
+
+The exact missing coordinate is
+
+\[
+h-z_t\equiv p^{-1}\pmod{2^t}.
+\]
+
+Thus the beta-two quotient carry is not an opaque block of an exponentially
+large integer. After subtracting a public value, it is exactly the low
+2-adic block of the smaller prime, written reciprocally.
+
+Half precision recovers \(p\) outright. More importantly, precision
+
+\[
+t=\left\lfloor\frac14\log_2N\right\rfloor-(\log n)^{O(1)}
+\]
+
+already factors deterministically in numerical-QP time. One can invoke the
+2025 known-residue-class terminal directly with modulus \(2^t\), or extend
+the polylogarithmic deficit and invoke Coppersmith's low-bit theorem.
+
+**Strategic update.** The core target is now a quarter-length integer carry
+or a QP chain that selects its bits. Generic ring operations cannot expose
+this datum merely by rewriting the coefficient. The promising operations
+must use integer order, Euclidean quotient, carries, or exact nonunit
+division at the hidden index \(p\).
+
+**Exact remaining gap.** Compute
+\(p^{-1}\bmod2^{\lfloor(\log_2N)/4\rfloor-(\log n)^{O(1)}}\), or an
+equivalent carry prefix, from \(N\) in QP time. F198 is a terminal reduction,
+not an evaluator.
+
+### C183 — the reciprocal congruence space is smooth; the live selector is integer and adaptive
+
+**Status:** promoted as P176 after F199 passed a fresh hostile audit and a
+strict statement-only reconstruction.
+
+The direct multiplicity idea does not identify the P175 reciprocal. Every
+odd residue (u\bmod2^t) extends to a public solution
+
+\[
+P=u^{-1},\qquad Q=Nu,\qquad H=z+u,
+\]
+
+and the resulting solution scheme is the smooth unit torsor
+((\mathbb Z/2^t)[U,U^{-1}]). The true (p^{-1}) is one ordinary point
+among (2^{t-1}) candidates. The public coefficient offsets also satisfy an
+everywhere-smooth recurrence, including at the hidden transition (p-1).
+Only the unavailable integer quotient word contains the one-spike error.
+
+Low-degree Boolean holdout does not repair this. A nonzero degree-(d)
+multilinear function on the (m=t-1) candidate bits has support at least
+(2^{m-d}), while order-two Hasse vanishing at every candidate except one
+already forces vanishing at that candidate through a neighbor. Both binary
+lifts also satisfy every current congruence and the standalone balance
+inequalities.
+
+**Important surviving route.** This does not obstruct an adaptive chain.
+A polylogarithmic prefix cell has a QP-size feature representation, and a
+polynomial number of one-child stages remains QP. The missing object is now
+precise: a nonlocal integer syndrome that selects the correct prefix cell.
+It must use canonical representatives, exact divisibility, Euclidean
+quotients, carries, or another genuinely integer operation. Generic local
+ring jets cannot supply it.
+
+### C184 — the missing carry is a one-denominator delta; Haar finds a path but cannot orient it
+
+**Status:** promoted as P177 after F200 V2 passed a fresh hostile re-audit
+and a strict statement-only reconstruction. The failed V1 packet remains
+preserved.
+
+The exact rational word
+
+\[
+x_j=\frac{(-1)^{j-1}\binom{N-1}{j-1}}j
+\]
+
+is integral at every (1\le j\le B\) except (j=p), where its fractional
+part is (1/p). Therefore (x\bmod\mathbb Z) is exactly a point mass at
+(p). The P175 carry is the negative ordinary floor of the root sum.
+
+This makes the harmonic picture precise. Walsh and Fourier are dense. Haar
+is maximally sparse: one coefficient per scale, on the root-to-(p) path.
+But every proposed path admits the same finite (2)-adic additive correction.
+Only the actual Archimedean floors distinguish the true path.
+
+**Exact remaining gate.** For a proposed reciprocal-prefix cell, decide in
+QP time whether its arithmetic progression contains (p). Exact rational
+integrality, an endpoint gcd, an index-product gcd, and exact high-order phase
+support all implement this selector, but each is already factor-bearing.
+Literal endpoint materialization and uniform sampling cost
+(N^{1/4+o(1)}). A nonlinear statistic of the actual integer parts or an
+implicit exact phase evaluator remains open.
+
+### C185 — gamma duplication has the right one-child tree but its first remainder drops the factor
+
+**Status:** promoted as P178 after F201 passed a fresh hostile audit and a
+strict statement-only reconstruction.
+
+Split one dyadic arithmetic-progression cell containing \(p\) into its two
+interlaced children and remove at most one public extra endpoint by a gcd.
+If \(E\) and \(O\) are the equal-size sibling products, then exactly one is
+divisible by \(p\), but interlacing gives
+
+\[
+1<O/E<2.
+\]
+
+The exact Euclidean quotient is therefore one. Its first remainder
+\(D=O-E\) is not divisible by \(p\) in either orientation. Reversing the
+division returns the original exponential child. Rising-factorial and gamma
+duplication formulas represent the same pair and do not change this loss.
+At P175 precision, explicitly writing \(D\) already needs
+\(2^{\Theta(n)}\) bits.
+
+**Recursion correction retained.** The dyadic tree itself is valid: a QP
+selector would follow one child for only \(O(n)\) stages, and a unique
+\(n-1\)-bit child remains QP. The failure is not weak contraction. It is the
+loss of guaranteed factor support before a smaller child exists. The live
+route is an implicit modular AP-product evaluator, a nonlinear
+Archimedean/carry syndrome, or a different support-preserving child.
+
+### C186 — a twisted divisor coefficient is the exact beta-two orientation bit
+
+**Status:** promoted as P179 after F203 passed a fresh hostile audit and a
+strict statement-only reconstruction.
+
+Given a correct prefix \(p^{-1}\bmod m\), define the signed two-lift weight
+\(w_{m,r}\) on the two residue classes above \(r=p\bmod m\). The exact
+coefficient
+
+\[
+S_{m,r}(N)=\sum_{d\mid N}d\,w_{m,r}(d)
+=[X^N]\sum_{a\ge1}\frac{a w_{m,r}(a)X^a}{1-X^a}
+\]
+
+has only three possible corrected values: a signed \(p\), \(p+q\), or
+\(p-q\). It therefore selects the next reciprocal bit and factors. At the
+first stage it is the fixed \(\chi_4\)-twisted divisor sum. This is the first
+exact nonlocal integer coefficient known to retain the orientation that the
+ring congruences and AP sibling remainder lose.
+
+The natural smaller quotient \(K=(N-rc)/m\) is a unit and has fewer bits,
+but its two next states coalesce exactly when the factors occupy opposite
+sibling classes in the same parent. In particular, they coalesce at the
+first stage for every \(N\equiv3\pmod4\). Thus safe contraction does not
+imply a usable lift.
+
+**Recursion qualification.** A globally nested one-child construction would
+still be QP. The theorem does not construct it. One call per local selector
+stage is not enough unless the complete recursion tree is also shown to be a
+single nested chain or is otherwise amortized.
+
+**Exact remaining gap.** Evaluate the twisted divisor coefficient in QP,
+or extract only its sign through a nonlinear integer statistic. The active
+subroutes are the associated \(q\)-product coefficient, joint use of the
+factored children \((N-1)/2\) and
+\(N-\lfloor\sqrt N\rfloor^2\), and a direct adaptive reciprocal-prefix
+syndrome.
+
+### C187 — the factored square gap exposes a mixed class but not its orientation
+
+**Status:** promoted as P180 after F202 passed a fresh hostile audit and a
+strict statement-only reconstruction.
+
+The canonical child
+
+\[
+E=N-\lfloor\sqrt N\rfloor^2
+\]
+
+has roughly half the input bits and is safe to factor recursively inside an
+already correct all-input routine. Exact square-gap coordinates reduce the
+parent to an even offset \(d\), a mixed square root of \(-E\bmod N\), or a
+specific square \(C^2\) in the proper class group of discriminant \(-4E\).
+
+The literal information supplied by \(\operatorname{factor}(E)\) does not
+select that object. Every unit candidate factor residue passes product and
+discriminant-square consistency modulo every divisor of \(E\). The desired
+mixed class lies in the principal genus, so all genus characters are
+trivial on it. The exact instance \(N=2627,E=26\) has neither a second
+factor-bearing principal norm nor a mixed class in the subgroup generated by
+the ramified two-torsion classes.
+
+**Recursion qualification.** The child need not be a balanced semiprime.
+Thus the cost statement assumes an all-input factor routine on arbitrary
+smaller integers. The promise-specific postprocessor alone does not define
+the recursion.
+
+**Exact remaining gap.** Test whether joint access to the factorizations of
+\((N-1)/2\) and \(E\) supplies a new nonlocal orientation. The recurrence
+with one near-size spine and fixed-ratio side children can still be QP, so
+this combined route cannot be dismissed by contraction accounting.
+
+### C188 — the binary q-product norm modularizes only by deleting the selector
+
+**Status:** promoted as P181 after F204 passed a fresh hostile audit and a
+strict statement-only reconstruction.
+
+For the first P179 coefficient
+
+\[
+A(n)=\sum_{d\mid n}d\chi_4(d),
+\]
+
+the natural product \(P=(q;q^4)_\infty/(q^3;q^4)_\infty\) satisfies
+\(P(q)P(-q)=P(q^2)\). Its logarithmic derivative yields only
+\(A(2n)=A(n)\); every odd logarithmic coefficient is a free parameter of
+the norm equation.
+
+Inside the binary monomial orbit \(P(q)^aP(-q)^b\), the necessary scalar
+cusp powers force \(a=b\), while the odd target coefficient is
+\((a-b)A(N)\). Thus scalar modularization loses the selector exactly.
+The mod-two coefficient sequence has an infinite two-kernel, excluding a
+fixed linear binary Mahler equation, and fixed odd-prime root norms reproduce
+only the usual divisor-sum recurrence.
+
+**Exact remaining gap.** The source is still live outside these named
+models. Test a genuinely vector-valued or nonholomorphic transformation only
+if it returns a smaller arithmetic state, and prioritize the joint factored
+children and adaptive integer-prefix routes. A restatement that outputs the
+coefficient itself is factoring-equivalent and is not progress.
+
+### C189 — the natural vector completion moves the selector but does not contract it
+
+**Status:** promoted as P182 after F206 passed a fresh hostile audit and a
+strict statement-only reconstruction.
+
+The first twisted divisor coefficient has a natural two-kernel Mellin
+completion, but it does not yield a smaller coefficient. The product and
+Lambert series have incompatible polynomial powers at cusps \(0\) and
+\(1/2\), excluding fixed projections of ordinary finite-dimensional
+semisimple meromorphic vector modular forms. The pure two-kernel reflection
+contains unavoidable \(\tan(\pi s/2)\) and \(\cot(\pi s/2)\) factors; finite
+rational or Eichler repairs cannot cancel their infinite pole-zero pattern.
+
+A Whittaker correction can absorb the archimedean factor, but its companion
+coefficient is
+
+\[
+A^\vee(N)=\chi_4(N)A(N)
+\]
+
+for odd \(N\). Thus the hard amplitude remains at index \(N\), up to a
+public sign. The completion supplies no one-child arithmetic contraction.
+
+**Exact remaining gap.** Continue only with a completion carrying genuinely
+new arithmetic coefficients and an explicit smaller state, or with the
+integer-specific adaptive selector. Nonsemisimple/logarithmic data,
+new mock shadows, QP-growing state, nonlinear identities, and adaptive
+integer decoders remain open.
+
+### C190 — one-bit recursion is legal; joint child congruences remain inversion-blind
+
+**Status:** promoted as P183 after F207 passed a fresh hostile audit and a
+strict statement-only reconstruction.
+
+The corrected recurrence is now explicit. If \(Q\) is numerical QP and
+
+\[
+T(n)\le T(n-1)+Q(n)T(\rho n+O(1))+Q(n),\qquad 0<\rho<1,
+\]
+
+then \(T\) is numerical QP. The decrement spine costs one extra power of
+\(\log n\) in the exponent; fixed-ratio side calls occur at only
+\(O(\log n)\) scales. A weak one-bit contraction is therefore fully valid.
+
+Factoring both \(K=(N-1)/2\) and the half-size square gap
+\(E=N-\lfloor\sqrt N\rfloor^2\) is also complexity-safe on the balanced
+branch. Their joint congruence state constructs \(M=\operatorname{lcm}(K,E)\)
+and \(R^2=N\pmod M\), but every candidate pair is
+
+\[
+(Ru,Ru^{-1}),\qquad u\in U(M).
+\]
+
+The torsor has exponentially many points and factor swap is inversion.
+Symmetric, quadratic, Jacobi, and genus data cannot orient it.
+
+**Exact remaining gap.** Use the valid recursion with a genuinely
+nonsymmetric integer statistic: Archimedean size, exact division, a
+nonquadratic operation, or an adaptive reciprocal-prefix syndrome.
+
+### C191 — floor and representation transforms expose the divisor spike but do not compress it
+
+**Status:** promoted as P184 after F208 passed a fresh hostile audit and a
+strict statement-only reconstruction.
+
+For the twisted coefficient
+
+\[
+A(N)=\sum_{d\mid N}d\chi_4(d),
+\]
+
+the hidden orientation is exactly
+
+\[
+\chi_4(p)=\sum_{2\le d\le\lfloor\sqrt N\rfloor}
+\chi_4(d)\left(
+\left\lfloor\frac Nd\right\rfloor-
+\left\lfloor\frac{N-1}{d}\right\rfloor
+\right).
+\]
+
+Totalized floor reciprocity has correction
+\((\gcd(d,N)-1)/2\), so its promised contraction is the hidden gcd spike
+itself. Dedekind/cotangent reduction, HNF shells, diagonal forms,
+pair-symmetric representation totals, and exact magnitude all relocate or
+erase the same event; none evaluates it more cheaply.
+
+**Exact remaining gap.** The core is a nonlinear compressed signed divisor
+OR, or an equivalent adaptive integer-prefix selector. This is where new
+integer-specific structure must enter.
+
+### C192 — the joint-child CRT torsor becomes geometrically rigid before full disclosure
+
+**Status:** preregistered remote experiment F209-D01 completed with the
+predeclared `strong_finite_geometry_lead` verdict. This is finite evidence,
+not a promoted theorem.
+
+After factoring (K=(N-1)/2) and
+(E=N-\lfloor\sqrt N\rfloor^2), F209 revealed the prime-power components of
+(M=\operatorname{lcm}(K,E)) in a fixed public order. At each prefix modulus
+it constructed every product-consistent residue pair that still had
+representatives in the two balanced factor intervals. Hidden factors were
+used only for audit labels.
+
+Across 5,858 primary rows, the public frontier always oriented and decoded
+the true pair. Every holdout row decoded before the last CRT component. The
+largest frontier was 209,664 and the largest generator count was 1,642,142,
+both below the frozen (n^4) proxy on the tested range. The median decoding
+modulus had about (0.568\log_2N) bits, and the holdout retained one to four
+unrevealed components at decode.
+
+The experiment did **not** produce a QP algorithm. In 5,840 of the 5,858
+primary rows, construction still enumerated the full
+(\Theta(\sqrt N)) balanced interval. The geometry prunes and orients after
+the candidates exist; the current generator is exponential in the input bit
+length.
+
+**Exact remaining gap.** Given factored (m\mid\operatorname{lcm}(K,E)),
+find, count, or isolate without interval enumeration a solution of
+
+\[
+x\in(\sqrt{N/2},\sqrt N),\qquad
+Nx^{-1}\bmod m\in(\sqrt N,\sqrt{2N}),
+\]
+
+subject to the balanced product range. The useful structure is integer and
+Archimedean; a generic ring-torsor operation does not see it.
+
+### C193 — complete dyadic quotient-child factorizations do not orient in the frozen bank
+
+**Status:** preregistered remote experiment F210-D01 completed as a
+fixed-family null. This is finite evidence, not a theorem.
+
+At every granted P175 reciprocal-prefix stage, the experiment constructed
+the two compatible quotient children and the two crossed quotient children,
+factored all four completely, and ran a frozen branch-equivariant menu of
+integer statistics and modular actions. It separated early near-size rows
+from the P183-safe late cohort before fitting any rule.
+
+On the disjoint holdout, the late-safe selected rule had balanced accuracy
+(0.478791), with 2,112 errors among 4,036 surviving rows. Its direct public
+action bank factored only (79/4,115=1.9198\%\) of the late rows and has
+explicit failures. The early cohort was likewise null. Literal compatible-
+child coalescence occurred often, but the crossed children never coalesced;
+their additional factorizations still did not orient under the frozen menu.
+
+**Exact remaining gap.** This rejects only the tested child statistics and
+action schedule. A theorem can still use a new nonlinear relation among the
+four children, a different recursive invariant, or an implicit
+Archimedean selector. The valid one-bit recursion correction remains fully
+in force.
+
+### C194 — dyadic quotient siblings are locally identical; the balanced integer point is the distinction
+
+**Status:** promoted as P185 after F210 V2 passed a fresh hostile re-audit
+and a strict statement-only reconstruction.
+
+Given a correct reciprocal prefix modulo \(m=2^t\), the two legal quotient
+children have exact public formulas, coalesce exactly in the
+\(\delta=1,r=c\) case, and share prime support only through a small public
+difference. Their quotient curves are related over \(\mathbb Z[1/2]\) by
+the half-translation
+
+\[
+F_1(P-1/2,Q-(-1)^\delta/2)=F_0(P,Q).
+\]
+
+After physical-coordinate alignment both are simply \(XY=N\). Odd-local
+point counts, Frobenius data, genus data, aligned eliminants, and finite
+two-adic lift multiplicities therefore do not select the next bit. The true
+chart is distinguished by the nontrivial balanced integer point
+\(1<X<\sqrt N<Y<N\), not by local existence.
+
+Factoring both children can conditionally yield a factor or a fully known
+common local order through simultaneous exponent return. It is recursion-safe
+at the P175 late precision because both calls have fixed-ratio size. The
+theorem does not force return, order growth, or a child choice.
+
+**Exact remaining gap.** Construct an implicit Archimedean test for the
+balanced point, a guaranteed asymmetric support/action transition, or a
+globally nested one-spine selector. Early two-near-size branching remains
+outside P183; one-bit single-child descent remains valid.
+
+### C195 — the F209 frontier is either the full torsor or the divisor spike outside square-root scale
+
+**Status:** promoted as P186 after F212 V2 passed a fresh hostile audit and
+a strict statement-only reconstruction.
+
+The balanced interval frontier has an exact phase transition. If
+\(\operatorname{lcm}(2,m)\le\sqrt N/8\), every unit residue survives. If
+the progression step exceeds both interval widths, every progression is a
+singleton and survival is exact divisibility. In particular, at
+\(K=(N-1)/2\), the modular hyperbola-in-a-box is exactly the unique factor
+pair; its count is the hidden floor-difference divisor spike.
+
+A QP-size list containing a factor residue modulo some
+\(m\ge N^{1/4+\varepsilon}\) is sufficient for deterministic QP
+postprocessing by Coppersmith. The list itself must be generated in QP time;
+its output-size bound alone is not an algorithm.
+
+**Exact remaining gap.** Generate such a large-modulus residue list without
+enumerating the torsor, or solve the implicit modular box at
+\(m=\Theta(\sqrt N)\). Below that scale the declared geometry supplies no
+pruning; above it the predicate has already become exact divisibility.
+
+### C196 — higher scalar reciprocity preserves the inverse torsor; additive trace is the missing object
+
+**Status:** promoted as P187 after F215 passed a fresh hostile audit and a
+strict statement-only reconstruction.
+
+For every (d\mid K=(N-1)/2), the beta-two factors satisfy
+(q\equiv p^{-1}\pmod d). Their cyclotomic Frobenius elements are inverse,
+their decomposition subgroups agree, genus values coincide, and every
+declared scalar Artin, ray, residue-symbol, or Hilbert product is public.
+Adaptive use of such scalar products eliminates no candidate in the
+inverse torsor.
+
+A coherent ring-valued element with different full rational cyclotomic
+components would already factor (N) by coefficient-content gcd. Additive
+character traces separate inversion orbits, but their required values are
+exactly the unevaluated divisor coefficients
+
+\[
+\sum_{d\mid N}\chi(d)=2+\chi(p)+\chi(p)^{-1}.
+\]
+
+**Exact remaining gap.** Evaluate and decode a QP separating trace bank,
+construct a coherent non-diagonal carrier without already exposing a
+coefficient zero divisor, or use nonabelian/Archimedean structure. More
+scalar reciprocity identities only re-express the public product.
+
+### C197 — recursively factored near-square norm banks can still have only global roots
+
+**Status:** promoted as P188 after F213 passed a fresh hostile audit and a
+strict statement-only reconstruction.
+
+There is an explicit composite family (N=s^2+1) with a polynomial public
+bank for which
+
+\[
+r_a=as,\qquad E_a=a^2,
+\qquad F_a=2as+1-a^2.
+\]
+
+Every direct gcd is trivial. Each (F_a) has its own valuation-one private
+prime row, so every parity dependency excludes all adjacent norms and uses
+an even subset of the square (E_a) columns. Its normalized root is always
+(s^k=(-1)^{k/2}\), hence global. Odd sign-free subsets recover only the
+public root (\pm s) of (-1).
+
+The children have fixed-ratio bit length and the bank is polynomial, so
+complete recursive factorization fits P183. The obstruction is therefore
+the private-row/global-root image, not weak contraction.
+
+**Exact remaining gap.** A useful near-square route needs an arithmetic law
+that defeats private rows, or a nonlinear/Archimedean decoder. Cardinality,
+small children, complete child factorization, and parity nullity alone do
+not suffice.
+
+### C198 — the full inverse box is exact factor recovery, not a weaker intermediate
+
+**Status:** promoted as P189 after F214 V2 passed a fresh hostile re-audit
+and a strict statement-only reconstruction.
+
+For balanced \(N=pq\), the full modulus \(K=(N-1)/2\) rigidifies the
+modular hyperbola completely. Any
+
+\[
+\sqrt{N/2}<X<\sqrt N<Y<\sqrt{2N},\qquad XY\equiv N\pmod K
+\]
+
+has \(|XY-N|<K\), hence \(XY=N\) and \((X,Y)=(p,q)\). The product-range
+predicate is redundant at full disclosure.
+
+Literal interval and unit scans, explicit paired CRT, explicit CRT-MCSS
+half lists, direct determinant/continued-fraction completion, the published
+direct bivariate Coppersmith range, and termwise Fourier expansion all stay
+exponential for exact, separately proved reasons. These conclusions apply
+only to those named explicit representations.
+
+The recursion correction is preserved. The local child \(K\) loses one bit,
+but it need not inherit the balanced promise. QP accounting follows only
+inside an independently correct all-input dispatch satisfying P183; the
+balanced selector alone does not close recursion.
+
+**Exact remaining gap.** Find an implicit exact counter or locator for the
+unique modular-hyperbola point, a compressed CRT/MCSS decoder, a nontermwise
+harmonic evaluator, or another integer-specific Archimedean selector. The
+full-box equivalence itself gives no algorithm.
+
+### C199 — deep dyadic trace lifting keeps constant-density ambiguity
+
+**Status:** promoted as P190 after F216 passed a fresh hostile audit and a
+strict statement-only reconstruction. The remote finite check is only a
+cross-check because its preregistration timing lacks immutable provenance.
+
+For every odd \(N\), the trace image
+
+\[
+W_t(N)=\{u+Nu^{-1}\pmod{2^t}:u\in U(2^t)\}
+\]
+
+reduces by public square-class scaling to \(N\bmod8\). The normalized
+classes \(3\) and \(7\) are complete progressions modulo eight, class \(5\)
+is two progressions modulo 32, and class \(1\) has an exact valuation-stratum
+decomposition. Uniformly,
+
+\[
+|W_t(N)|\ge2^t/48.
+\]
+
+At quarter-bit precision, explicit trace materialization is still
+exponential. This is not a generic ring obstruction: it is the exact
+integer-specific behavior of the dyadic reciprocal trace.
+
+**Exact remaining gap.** Keep the oriented inverse parameter, combine odd
+moduli, or find an implicit Archimedean/interval statistic. A projected
+trace alone discards almost every reciprocal-prefix bit.
+
+### C200 — the trace bank compresses to one integer divisor coefficient
+
+**Status:** promoted as P191 after F217 passed a fresh hostile audit and a
+strict statement-only reconstruction.
+
+On the balanced \(N\equiv3\pmod4\) branch with
+\(K=(N-1)/2\), the full scalar-character bank is not the core output-size
+problem. Conditional on separately supplied cyclic coordinates and a trace
+evaluator, at most \(2r-1\) character traces recover \(p\) up to inversion.
+More directly, the tautological group-ring map gives
+
+\[
+\sigma_1(N)\equiv2+p+q\pmod K.
+\]
+
+Except for \(N=15\), this residue is the exact integer \(2+p+q\) and
+therefore factors \(N\). The same target is a binary-described high-weight
+level-one Eisenstein coefficient modulo \(K\), and for prime \(K\) it is the
+first \(K\)-adic coefficient of an explicit eta quotient.
+
+All standard implementations still materialize numeric weight, numeric
+level, \(N\) coefficient positions, or the Ramanujan term at \(m=p\). These
+are named-model boundaries, not a lower bound on compressed evaluation.
+
+**Exact remaining gap.** Evaluate \(\sigma_1(N)\bmod K\), exactly or through
+a verifiable Las Vegas observable with inverse-QP success; equivalently,
+construct a compressed Hecke/Eisenstein/eta coefficient evaluator. Randomness
+must enter the integer coefficient or its hidden carry. A generic random
+group element need not have inverse-QP return probability.
+
+### C201 — standard moving-weight fast-forward preserves the affine target
+
+**Status:** promoted as P192 after F218 passed a fresh hostile audit and a
+strict statement-only reconstruction. Its frozen remote run failed before
+Python started and is not evidence.
+
+Modulo each prime power of the factored \(K\), the binary high-weight
+coefficient from P191 is exactly the corresponding \(\ell\)-depleted
+weight-two Eisenstein coefficient. The prime-level eta quotient has the same
+first \(r\)-adic coefficient. Thus neither construction produces a second
+observable.
+
+The standard big-Witt \(K\)-supported operations preserve the rough part of
+the coefficient index and cannot turn \(N=2K+1\) into a smaller index.
+Frobenius compression of a theta power retains a nonzero cusp contaminant.
+The affine coefficient sequence \(\sigma_s(rj+1)\bmod r\) is not eventually
+periodic for any prime \(r\) and positive \(s\), excluding every fixed
+finite linear Cartier recurrence.
+
+**Exact remaining gap.** Use nonlinear or QP-growing state, an exact cusp
+projector, additive index mixing, or a randomized integer observable with a
+verifiable inverse-QP success event. Fixed linear state and multiplicative
+index motion do not reach the affine divisor coefficient.
+
+### C202 — uniform modified-AKS shifts do not supply Las Vegas progress
+
+**Status:** promoted as P193 after F222 V2 passed a fresh hostile audit and a
+strict statement-only reconstruction. Its preregistered remote run is finite
+guidance only.
+
+For
+
+\[
+E_a(X)=(X+a)^N-X^N-a^N\pmod{X^r-1,N},
+\qquad N=pq,\quad d=q-p,
+\]
+
+the hidden gap controls the exact polynomial degrees. In the regime
+(r<d<p-1), a complete raw coefficient scan and the full
+resultant/local-nullity channel for a fresh uniform unit shift have combined
+success probability at most
+
+\[
+{2rd\over p-1}+{rd(r+3)\over q-1}.
+\]
+
+Baker--Harman--Pintz supplies infinitely many balanced pairs with
+(d=\Theta(p^{3/5})). Even an adaptive numerical-QP bank, provided it fixes
+each (r) before drawing that fresh shift, therefore succeeds with total
+probability only (2^{-\Omega(n)}).
+
+This is integer-specific: it uses both local Frobenius collapses, the actual
+factor gap, and exact polynomial root counts. Randomness alone does not turn
+the modified AKS error into a dense source.
+
+**Exact remaining gap.** Bias the integer shift using carry or interval
+information, choose a verifiably useful distribution, process the typical
+nonzero coefficient vector jointly, or construct another integer observable
+with an inverse-QP certified-progress law. A modulus selected after seeing
+the same shift and multi-shift elimination also remain open.
+
+### C203 — the certified factor AP has a Fermat terminal, not a useful uniform AKS sampler
+
+**Status:** promoted as P194 after F224 passed a fresh hostile audit and a
+strict statement-only reconstruction. The approved D02 remote run is finite
+guidance only; the preserved D01 wrapper failure produced no mathematical
+work.
+
+If (p\equiv s\pmod L), then
+(q\equiv Ns^{-1}\pmod L). The Fermat midpoint ((p+q)/2) therefore lies
+in one public class modulo (L/\gcd(2,L)). Scanning this AP from
+(sqrt N) reaches the midpoint in fewer than
+
+\[
+1+{(q-p)^2\over4pL}
+\]
+
+square tests. Thus the certified residue is already a deterministic QP
+terminal whenever ((q-p)^2/(pL)=\operatorname{QP}(n)). This combines
+directly with (L=\operatorname{lcm}(2^t,M)); it needs no single element
+whose exact order is (M).
+
+On the other hand, let (H) be the size of the balanced factor cell. For
+(r<q-p<p-1), at most (r(q-p)(r+5)) off-target cell integers activate
+the complete P193 coefficient or resultant/nullity channels. A uniform
+shift succeeds with probability at most
+
+\[
+{1+r(q-p)(r+5)\over H}.
+\]
+
+For every fixed (epsilon>0) and gap
+(q-p\le p^{2/3-\epsilon}), the two scales meet exactly: either capped
+AP--Fermat factors, or every numerical-QP adaptive bank of fresh uniform AP
+shifts has total success (2^{-\Omega(n)}).
+
+**Exact remaining gap.** Obtain a nonuniform integer law with a proved
+useful heavy atom, process the full nonzero coefficient transcript, enlarge
+the accumulated common modulus (M), or reveal the next dyadic carry bit.
+The large-gap regime (q-p\ge p^{2/3-o(1)}) also remains outside this
+phase theorem.
+
+### C204 — a fixed AKS shift with a random point is sparse even for a linear-size gap
+
+**Status:** promoted as P195 after F225 passed a fresh hostile audit and a
+strict statement-only reconstruction. No computation was used.
+
+For
+
+\[
+H_N(x)=(x+1)^N-x^N-1,qquad c=2p-q\ge3,
+\]
+
+the exact local Frobenius reductions give at most (2c-2) roots modulo
+(p) and at most (2c+2) roots modulo (q). The latter count uses four
+quadratic-character cells; the former uses a degree (2(c-2)) reciprocal
+polynomial. Therefore a fresh uniform unit point yields a proper gcd with
+probability at most
+
+\[
+{4c-2\over p-1}.
+\]
+
+Baker--Harman--Pintz supplies infinitely many balanced pairs with
+
+\[
+q-p=\Theta(p),\qquad 2p-q=\Theta(p^{3/5}).
+\]
+
+On this family, even a numerical-QP adaptive bank of fresh uniform points
+has total success (2^{-\Omega(n)}). Large gap alone therefore does not
+repair the scalar random-evaluation channel left outside C203.
+
+**Exact remaining gap.** The point law must use factor-correlated integer
+bias, or the decoder must use joint nonzero data. Variable shifts,
+coefficient/rank observables, same-value adaptivity, and certified growth of
+the accumulated modulus (M) remain live.
+
+### C205 — APR/CL contributes only after its local exponents are globally compatible
+
+**Status:** promoted as P196 after F223 V2 passed a fresh hostile re-audit
+and a strict statement-only reconstruction.
+
+At one auxiliary prime (q), all character equations share an exponent if
+and only if the hidden factor lies in (\langle N\rangle\bmod q). Across
+several rows, these exponent classes must also satisfy generalized-CRT
+compatibility. Cohen--Lenstra condition (6.4), not independent local
+acceptance, supplies the shared primary exponents needed for this step.
+
+Once a compatible certificate gives
+
+\[
+r\equiv N^i\pmod S
+\]
+
+for each hidden prime and one of QP-many public exponents, it combines
+cleanly with the beta-two low bits and the aggregate divisibility
+certificate (M\mid r-1). The resulting modulus
+
+\[
+L=\operatorname{lcm}(2^\tau,M,S)
+\]
+
+feeds the known-residue terminal at
+(L\ge N^{1/4}/\operatorname{QP}(n)). No single common-order generator is
+needed.
+
+Fixed finite banks have infinite balanced counterfamilies, generic
+independent-residue tails are only a model, and the uniform primary-2 anchor
+is exponentially sparse on bounded-gap pairs. The exact witness
+(1088340091=32987\cdot32993) has a standard auxiliary product above
+(\sqrt N) but only the vacuous row 2 is locally accepted.
+
+**Exact remaining gap.** Produce an adaptive integer-derived compatible
+orbit certificate, or prove inverse-QP drift for accumulated primary support.
+Rejected APR/CL rows and typical nonzero transcripts remain possible joint
+sources; they cannot be replaced by unrelated local exponents.
+
+### C206 — the Las Vegas target is lcm-potential drift, not one common-order generator
+
+**Status:** promoted as P197 after F220 V2 passed a fresh hostile re-audit
+and a strict statement-only reconstruction.
+
+For a factored annihilator (A), each test
+
+\[
+\gcd(a^{A/\ell}-1,N)=1
+\]
+
+certifies the full primary power (\ell^{v_\ell(A)}) in every hidden
+(r-1). These blocks can come from unrelated witnesses and accumulate by
+lcm. Combining their modulus (M) with the beta-two residue gives
+
+\[
+L=\operatorname{lcm}(2^t,M),
+\]
+
+and the exact terminal target is
+(J_{\rm G}=\lceil N^{1/4}/\operatorname{QP}(n)\rceil).
+
+The potential
+
+\[
+\Phi(L)=\max\{0,\lceil\log_2(J_{\rm G}/L)\rceil\}
+\]
+
+has only (O(n)) levels. A uniform inverse-QP conditional probability of a
+factor or a block not already dividing (L) gives an expected-QP Las Vegas
+algorithm for this conditional terminal. F220 gives the exact primary-level
+probability law for a uniform unit and arbitrary odd prime powers.
+
+The hidden ceiling is
+(D_N=\gcd_{r\mid N}(r-1)). Bounded gaps can keep both the ceiling and the
+uniform useful probability tiny. A synchronized cyclic source can fill its
+available primary support quickly but cannot escape its direction.
+
+**Exact remaining gap.** Construct an integer-derived witness schedule with
+inverse-QP conditional new-support mass before the actual threshold. The
+condition must hold for every reached state and include the full per-stage
+bit cost. Randomness is useful after a dense source exists; uniformity alone
+does not create that source.
+
+### C207 — exact-uniform half-size integer children remove hidden subset selection, not harmonic-support scarcity
+
+**Status:** promoted as P198 after F226 passed a fresh hostile audit and a
+strict statement-only reconstruction.
+
+For \(m=\lfloor n/2\rfloor\), a uniform odd multiplier makes
+
+\[
+R_m=uN\bmod 2^m
+\]
+
+exactly uniform over the odd half-size integers. Its binary prefixes form a
+QP-size bank of half-size recursive children. QP many such banks have a QP
+recursion tree, conditional on a correct all-input dispatcher for the
+arbitrary children. The full child-value ensemble is independent of \(N\),
+and a fixed auxiliary prime \(\ell\) is sampled with probability essentially
+\(1/\ell\).
+
+For \(N=pq\), an auxiliary prime compatible with exponent \(i\) divides the
+hidden integer \(N^i-p\). A polylogarithmic block can factor its sampled
+children and enumerate every squarefree divisor below a public QP cap. This
+removes the oracle that would otherwise have to identify the compatible
+subset. If a sampled compatible subproduct closes the beta-two residue
+threshold, the verified known-residue terminal factors \(N\).
+
+In the strongest unconditional favorable state, if a hidden odd squarefree
+\(d\le Q(n)\) divides \(p-1\) or \(q-1\), already closes the terminal gap,
+and \(4d\le2^m\), a public cap gives success probability at least
+\(1/(4Q(n))\) without knowing \(d\).
+
+**Exact remaining gap.** Prove that every preterminal input has inverse-QP
+harmonic mass in some compatible support, or extract progress from the
+integer multiplier/quotient labels that the \(N\)-independent child-value
+ensemble discards. Uniform auxiliary values alone cannot prove this: support
+above a chosen QP cutoff has only QP-over-cutoff expected log weight, and a
+single terminal-size small-order prime is exponentially sparse.
+
+### C208 — Las Vegas small-integer sampling needs an intermediate nonuniform word law
+
+**Status:** promoted as P199 after F229 passed a fresh hostile audit and a
+strict statement-only reconstruction.
+
+On one infinite fixed-gap family \(q=p+d\), the \((N-1)\)-annihilator stage
+collapses exactly to the degree-\(d\) integer:
+
+\[
+\gcd(X^{N-1}-1,N)=\gcd(X^d-1,N).
+\]
+
+Every global-return local order and every certified common primary block
+divides the fixed \(d\), so lcm accumulation from this source never exceeds
+\(d\). Every fixed numerical-QP-value integer is too small even to wrap.
+A fresh uniform integer from an arbitrary history-selected initial interval
+has only exponentially small useful probability. At the other extreme,
+even a granted exact-uniform element of the full subgroup generated by all
+small rational primes has exponentially sparse \(d\)-torsion, because the
+projected subgroup contains \(p^{1-o(1)}\) distinct smooth residues.
+
+**Exact remaining gap.** Construct a long, nonuniform integer word whose
+quotient or carry in \(X^d-1\) is factor-correlated and has inverse-QP
+history-wise factor/new-block mass. The law must sit between the two failed
+extremes: before factor-scale wrap there is no event, while complete mixing
+dilutes the target torsion. This is the precise Las Vegas source problem;
+randomness alone is not the missing ingredient.
+
+### C209 — zero carry defect turns quotient sampling into an odd-order residual test
+
+**Status:** promoted as P200 after F230 passed a fresh hostile audit and a
+strict statement-only reconstruction.
+
+For the half-size radix \(B=2^{\lfloor n/2\rfloor}\), a quotient carry
+defect can vanish only when \(B\mid N-1\). Then every shifted quotient child
+in the zero branch is
+
+\[
+A_u=uH,
+\qquad H=(N-1)/B.
+\]
+
+Writing the odd local orders as \(P=Ds_p\), \(Q=Ds_q\), with coprime
+residuals, a uniform unit projected to odd order has exact return
+probabilities
+
+\[
+{\gcd(u,s_p)\over s_p},
+\qquad
+{\gcd(u,s_q)\over s_q}.
+\]
+
+If one residual is at most a public numerical-QP bound \(U\), scanning odd
+\(u\le U\) gives a factor or strict common-primary growth with conditional
+probability at least \(4/9\) at every preterminal history, provided the full
+odd common capacity \(D\), together with the beta-two bits, reaches the
+quarter-bit terminal. One random multiplier loses only a factor
+\(O(U)\). If both residuals are exponential, the same bounded uniform source
+has exponentially small mass.
+
+**Exact remaining gap.** Force one residual odd order to be QP-small, or
+replace the bounded multiplier by a QP-bit long integer word that absorbs
+the residual smooth support. The zero branch also still relies on a correct
+all-input dispatcher to factor the arbitrary half-size integer \(H\).
+
+### C210 — Las Vegas exponent sampling needs integer-biased bases, not diffuse candidates
+
+**Status:** promoted as P201 after F227 V5 passed a fresh hostile re-audit
+and a strict statement-only reconstruction.
+
+Inside the balanced beta-two factor cell, the average local return mass of
+the candidate exponents \(x-1\) is controlled by an exact arithmetic-
+progression gcd mean. Even after granting the complete factorization of
+every candidate exponent, a numerical-QP diffuse candidate law followed by
+a fresh independent uniform unit has exponentially small total factor or
+new-common-block probability throughout the preterminal range.
+
+For a fixed public base, the law changes completely. If
+
+\[
+u_p={\operatorname{ord}_p(a)\over
+\gcd(\operatorname{ord}_p(a),L)},
+\]
+
+then returning candidates form one exact progression of density \(1/u_p\).
+A nonstale base with \(u_p\le\operatorname{QP}(n)\) therefore gives
+inverse-QP verified progress. P161 roughness forces this favorable regime to
+be \(u_p=1\), so the base must have local order already dividing \(L\) on
+one side without being synchronized and stale on both.
+
+**Exact remaining gap.** Construct that nonstale integer-biased base with
+inverse-QP conditional probability at every state. The theorem's child
+factorization cost is only oracle-relative because \(x-1\) is an arbitrary
+even integer; a correct all-input dispatcher remains independently missing.
+
+### C211 — a smooth QP-bit word gives constant Las Vegas drift after one residual saturates
+
+**Status:** promoted as P202 after F231 passed a frozen hostile re-audit and
+a strict statement-only reconstruction.
+
+In the zero-defect branch \(B\mid N-1\), write the odd local orders as
+\(P=Ds_p\), \(Q=Ds_q\), with coprime residuals. For any public completely
+factored word \(W\), a fresh uniform unit projected to odd order and tested
+at exponent \(WH\) has exact local return probabilities
+
+\[
+1/r_p,
+\qquad 1/r_q,
+\qquad
+r_j=s_j/\gcd(s_j,W).
+\]
+
+Complete factor-first stripping gives the exact factor-or-new-block law
+
+\[
+{1\over r_p}+{1\over r_q}-{1\over r_pr_q}
+-{1\over PQ}\sum_{d\mid M}\varphi(d)^2.
+\]
+
+The last term is precisely the simultaneous stale atom. This is the quantity
+that a Las Vegas source must control; marginal return probability alone is
+not progress.
+
+The word \(U_Y=\operatorname{lcm}(1,\ldots,Y)^n\) has numerical-QP bit
+length for numerical-QP \(Y\) and absorbs every \(Y\)-smooth residual,
+regardless of its numerical value. The complete factorization of the
+half-size child \(H\) allows the word to absorb every residual prime also
+occurring in \(H\), at only \(O(n^2)\) extra bits. If one residual is fully
+absorbed, every history has factor-or-strict-lcm-growth probability at least
+\(2/3\); the equal-residual edge is impossible in this branch. The process
+therefore factors in at most \(3n/2\) expected stages, or reaches the
+beta-two/aggregate-order terminal sooner.
+
+**Exact remaining gap.** Produce such a QP-height residual-saturating word
+on every input. After enriching by the primes of \(H\), the unresolved
+support consists exactly of large primes \(\ell>Y\) with \(\ell\nmid H\).
+The theorem also remains conditional on a correct all-input dispatcher for
+the arbitrary half-size child \(H\).
+
+### C212 — shifted quotient support is a projective cover of the hidden gap
+
+**Status:** promoted as P203 after F233 passed a fresh hostile audit and a
+strict statement-only reconstruction.
+
+In the zero-defect branch, every shifted quotient child is
+
+\[
+A_{u,c}=uH+c.
+\]
+
+For an exclusive residual prime \(\ell\nmid H\), divisibility by one child
+is exactly membership of the hidden ratio
+
+\[
+\rho_\ell=(q-p)B^{-1}\pmod\ell
+\]
+
+in the finite projective cover
+
+\[
+\{cu^{-1}:1\le u\le U,\ 1\le|c|\le C\}.
+\]
+
+The cover has at most \(2CU\) residues. It covers every nonzero residue only
+at the small-prime scale, and a prime above \(2UC\) cannot occur at two
+distinct rational slopes. Hence every residue-independent coverage guarantee
+is already absorbed by a numerical-QP smooth word. This is an exact
+integer-gap theorem, not a generic ring argument.
+
+**Exact remaining gap.** Prove that the actual gap ratios hit enough large
+rough residual support on every input, or replace the rectangular bank by a
+different QP-bit integer word. Generic projective coverage and repeated lcm
+aggregation do not provide this input-dependent law.
+
+### C213 — Miller amplification removes word factorization and the half-child dispatcher
+
+**Status:** promoted as P204 after F235 passed a fresh hostile audit and a
+strict statement-only reconstruction.
+
+For any public QP-bit integer word \(W\), put
+
+\[
+E=(N-1)W,
+\qquad
+r_j={s_j\over\gcd(s_j,W)}.
+\]
+
+One uniform-unit return test followed by a Miller square chain on the
+verified global-return branch has exact factor probability
+
+\[
+{1\over r_p}+{1\over r_q}
+-\left(2-{2\over3}(1-4^{-e})\right){1\over r_pr_q},
+\]
+
+where zero defect forces
+\(e=v_2(p-1)=v_2(q-1)\ge1\). In particular,
+
+\[
+\Pr(\text{factor})\ge{1\over2\min(r_p,r_q)}.
+\]
+
+The word need not be factored. A global return does not become stale: its
+independent local two-Sylow coordinates split with probability at least
+one-half. Public child values can therefore be multiplied directly into
+\(W\), and neither their factorizations nor the factorization of \(H\) is
+needed for this direct-factor route.
+
+**Exact remaining gap.** Construct a public QP-bit \(W\) that makes
+\(\min(r_p,r_q)\) numerical QP for every zero-defect input. The meta-order
+word \(\prod_{k\le K}(N^k-1)\) works when one residual order of \(N\) is
+QP, but no all-input bound on that smaller meta-order is known.
+
+### C214 — the unfactored-word Miller law holds for every odd semiprime
+
+**Status:** promoted as P205 after F238 V2 passed a fresh hostile audit and
+a strict statement-only reconstruction.
+
+For arbitrary distinct odd primes (p,q), put
+
+\[
+d=\gcd(p-1,q-1),\qquad s_p=(p-1)/d,\qquad s_q=(q-1)/d.
+\]
+
+The public exponent (N-1) already contains exactly the full common factor
+(d) of both local group orders. For any public unfactored word (W), the
+exact local returns have probabilities
+
+\[
+1/r_p,\qquad1/r_q,qquad
+r_i=s_i/\gcd(s_i,W).
+\]
+
+On a verified global return, the possibly unequal local two-primary kernels
+remain independent. Their Miller mismatch probability is
+
+\[
+1-{4^a+2\over3\,2^{a+b}}\ge1/2.
+\]
+
+Therefore one trial factors with probability at least
+
+\[
+{1\over2\min(r_p,r_q)}.
+\]
+
+This removes balance and zero defect from P204. It also shows that a single
+common-order generator or factored accumulated modulus is unnecessary on
+the direct-factor branch: (N-1) exploits the complete hidden common
+capacity automatically.
+
+**Exact remaining gap.** Construct a public QP-bit integer word that reduces
+one of the coprime quotients ((p-1)/d,(q-1)/d) to numerical QP on every
+input. Randomness amplifies deterministic integer progress; it does not
+create that progress.
+
+### C215 — collision energy is the exact difference-word source
+
+**Status:** promoted as P206 after F241 passed a fresh hostile audit and a
+strict statement-only reconstruction.
+
+The deterministic word \((N-1)^n\) leaves exactly the parts
+\(s_p^\perp,s_q^\perp\) supported on primes outside \(N-1\). For iid
+public integer samples, put \(\Delta=|Z-Z'|\) when the integers differ and
+\(\Delta=1\) otherwise. If
+\(s=\prod_{\ell\in\mathcal P}\ell^{e_\ell}<N\), then
+
+\[
+\mathbb E{\gcd(s,\Delta^n)\over s}
+={1\over s}\left[1+
+\sum_{\varnothing\ne S\subseteq\mathcal P}
+\prod_{\ell\in S}(\ell^{e_\ell}-1)
+\Pr\left(Z\ne Z',\ Z\equiv Z'
+\pmod {\prod_{\ell\in S}\ell}\right)\right].
+\]
+
+P205 turns half the larger of the two expected reciprocal residuals into
+factor probability. Uniform divisors of a factored \(N-1\) give a
+constant-success QP word under a QP subgroup-image condition. The exact
+prime-power formula shows that this collision energy can also be zero.
+
+**Exact remaining gap.** Prove inverse-QP modular collisions between
+distinct public integers, with enough primary weight in one exterior
+residual, for every input. Support size and exact sampling do not suffice.
+
+### C216 — the divisor lattice is support-saturated before it is factored
+
+**Status:** promoted as P207 after F240 V2 passed a fresh hostile re-audit
+and a strict statement-only reconstruction.
+
+For every divisor \(B\mid N-1\), centered residues
+\(x=up-aB,y=uq-bB\) satisfy
+
+\[
+c={xy-u^2\over B}\in\mathbb Z,
+\qquad
+aq+bp={u^2(N-1)/B+abB-c\over u}.
+\]
+
+The associated quadratic recovers a factor from a correct nondegenerate
+tuple. At the guaranteed divisor \(B=d=\gcd(p-1,q-1)\), the carry is zero,
+but the hidden centers are the P205 residuals themselves (plus one only in
+the \(d=2\) tie case).
+
+Inside the grammar generated by divisors of \(N-1\) using multiplication,
+powers, gcd, lcm, and exact division, no word can absorb a residual prime
+outside \(N-1\). The word \((N-1)^n\) already saturates every primary
+inside that support. Complete factorization of the divisor lattice adds no
+P205 power there.
+
+**Exact remaining gap.** Use additive carry data to select a true signed
+residue or construct new exterior prime support. Factoring a carry product
+does not by itself select its hidden signed divisor.
+
+### C217 — quadratic tori turn all four shifted residuals into exact Las Vegas interfaces
+
+**Status:** promoted as P208 after F242 V2 passed a fresh hostile re-audit
+and a strict statement-only reconstruction.
+
+For a public unit discriminant \(D\), let
+
+\[
+\epsilon_i=\left({D\over i}\right),\qquad
+J=\epsilon_p\epsilon_q,qquad
+m_i=i-\epsilon_i.
+\]
+
+The public exponent \((N-J)W\) contains exactly the common shifted factor
+\(d=\gcd(m_p,m_q)\). For the coprime shifted residuals
+
+\[
+s_i=m_i/d,qquad r_i=s_i/\gcd(s_i,W),
+\]
+
+a factor-free Hilbert--90 sampler produces independent uniform points on
+the two full local norm-one tori. The local return probabilities are
+exactly \(1/r_p,1/r_q\). Joint-coordinate Miller screens turn a simultaneous
+return into a factor with probability at least one half. Hence one powered
+trial succeeds with probability at least
+
+\[
+{1\over2\min(r_p,r_q)}.
+\]
+
+Uniform unit discriminants expose the four sign orientations equally. If
+the same \(D\) is retained while nonclean coefficient pairs are resampled,
+the complete factor-first trial has probability at least
+
+\[
+{1\over8\min_\epsilon R_\epsilon}.
+\]
+
+This extends P205 from \((p-1,q-1)\) to all four pairs made from
+\(p\pm1,q\pm1\), at constant overhead. The word remains unfactored.
+
+**Exact remaining gap.** Construct a public QP-bit word that leaves one
+shifted residual QP-small on every input, or prove an inverse-QP expected
+law for a randomized integer word. Four exact interfaces do not by
+themselves make one interface small.
+
+### C218 — one square exponent unifies the four interfaces, but signed powers can miss all of them
+
+**Status:** promoted as P209 after F244 passed a fresh hostile audit and a
+strict statement-only reconstruction.
+
+For (A=p^2-1), (B=q^2-1), and (G=\gcd(A,B)), the four shifted common
+capacities have lcm (G/2). The four residuals left by the square exponent
+(N^2-1) are pairwise coprime and have product
+
+\[
+{AB\over2^\delta G^2},
+\qquad
+\delta=\mathbf 1_{v_2(A)\ne v_2(B)}.
+\]
+
+Choosing (W_J=N+J) in P208 makes every torus orientation use this one
+public exponent. The resulting clean factor probability is exactly
+controlled by the four reciprocal residuals, but the unconditional bound
+is only of square-root scale.
+
+An unconditional infinite family has shifted common-capacity table
+((2,12,2,2)) and one exponentially large marker prime in each of
+(p\pm1,q\pm1). Every numerical-QP-bit product of signed powers
+(N^k\pm1) misses all four markers, even under adaptive selection. The
+total common-order lcm is only (12), so accumulated order certificates
+enlarge the beta-two dyadic modulus by at most a constant factor there.
+
+**Exact remaining gap.** Find an all-input nonlinear integer source outside
+the signed-power grammar. Difference, carry, quotient, and
+discriminant-dependent words remain live.
+
+### C219 — the square baseline isolates exterior support, and collision energy is the exact next gate
+
+**Status:** promoted as P210 after F243 passed a fresh hostile audit and a
+strict statement-only reconstruction.
+
+The single word ((N^2-1)^n) strips every prime power that any shifted order
+shares with either opposite sign. What remains in each P208 orientation is
+exactly the exterior support absent from both opposite shifted orders.
+
+If an exact public integer law has inverse-QP distinct-integer collision
+probability modulo every prime in one exterior residual, QP many difference
+words absorb that residual. Uniform orientation sampling and P208 then give
+factor probability at least (1/16). Uniform divisors of a granted
+factorization of (N^2-1) realize this under a QP subgroup-image condition.
+
+The obvious factor-free replacements do not. Canonical torus coordinates,
+raw discriminants, quadratic norm/trace collisions, and
+(\gcd(X,N^2-1)) stay at (O(\operatorname{poly}(n)/\ell)) for a large
+exterior prime. Pell trace collisions occur exactly when a public torus
+element has small meta-order, which a deterministic word already detects.
+
+**Exact remaining gap.** Find nonlinear cross-coordinate or carry aliasing
+with inverse-QP mass on one exterior residual. Ordinary coordinate
+randomness is not enough.
+
+### C220 — random lift gauges are affine and generic; only the canonical section remains live
+
+**Status:** promoted as P211 after F247 passed a fresh hostile audit and a
+strict statement-only reconstruction.
+
+For an ordinary lift (a_t=a+Ntpmod {N^2}), with (a) and the exponent
+(E) units modulo (N), the high digit satisfies
+
+\[
+K_t=K_0+Ea^{E-1}t\pmod N.
+\]
+
+The exact norm-one torus fibre has the parallel form
+(U_t=U(1+Ntw)), and its normalized carry is
+(C_t=C_0+Etw). Thus a fresh uniform gauge parameter gives a uniform free
+carry coordinate, even after the complete modulo-(N) transcript is fixed.
+For a balanced semiprime, its direct-factor probability is only
+((p+q-2)/N), and every exterior-prime atom or distinct collision has
+probability at most (1/\ell).
+
+Carries from one power chain are affine functions of the first carry, not
+independent samples. An adaptive numerical-QP bank of fresh lift carries and
+pair differences hits an exponential P209 marker only with probability
+(2^{-\Omega(n)}).
+
+**Exact remaining gap.** The canonical integer section is not random in its
+lift fibre. Its high digit, nonlinear cross-base relations, exact squares,
+determinants, and quotient carries remain possible integer-specific Las
+Vegas sources.
+
+### C221 — the fresh inverse-quotient and feedback-free torus grammar is now closed
+
+**Status:** promoted as P212 after F245 V3 passed a fresh hostile audit and a
+strict statement-only reconstruction. V1 and V2 remain preserved with their
+failed statement-only reconstructions.
+
+For a fresh exact uniform unit (u), the canonical inverse quotient
+
+\[
+K(u)={u\langle u^{-1}\rangle_N-1\over N}
+\]
+
+has fibres contained in the divisors of (Nk+1). Consequently, one residue
+class modulo (ell) has mass (O(\Delta_N/\ell)), and the same
+history-wise bound holds for pair differences. Adaptive later products do
+not create new prime support.
+
+On a self-contained infinite four-marker family, every numerical-QP-bit
+signed-power word misses all four exponential markers and every accumulated
+common-order lcm divides (12). After defining every permitted random draw,
+gcd screen, torus endpoint, Miller-chain exit, and the chronology that fixes
+the exponent before a fresh Hilbert--90 point, the complete cutoff bound is
+
+\[
+48\left(B+{B\choose2}\right){\Delta_N\over L}
++4B\left({1\over p}+{1\over q}\right)
++{2B\over L}.
+\]
+
+It is exponentially small for every numerical-QP cutoff (B). Therefore
+no Las Vegas factorer confined to this grammar has expected numerical-QP
+time on the family.
+
+**Exact remaining gap.** The theorem does not touch the integer mechanisms
+that matter most now: canonical lift digits, nonlinear quotient or norm
+carries, biased sources, retained-point feedback, and complete square or
+relation decoders. Those mechanisms must be analyzed directly rather than
+treated as more fresh uniform atoms.
+
+### C222 — rigid exact-square events are sparse; retrospective multirow parity remains live
+
+**Status:** promoted as P213 after F248 V2 passed a fresh hostile re-audit
+and a strict statement-only reconstruction. F248 V1 remains preserved with
+its strict blind failure.
+
+Uniform full scalar lifts are square with probability at most (K/N), where
+(K=\gcd(E,p-1)\gcd(E,q-1)). A complete principal lift fibre contains
+exactly four square outputs and exactly two mixed roots. More strongly, for
+one past product fixed before a fresh principal coordinate, at most two of
+the (N) coordinates close it to a useful exact square.
+
+Canonical duplicates, reciprocal outputs, raw or powered torus singletons,
+torus duplicates, and inverse-point pairs all have exact or
+subexponential-over-exponential probability bounds in their displayed clean
+source sizes. Thus numerical-QP banks of these rigid events are negligible
+under the packet's explicit kernel and image-size hypotheses.
+
+**Exact remaining gap.** P66 may select a product retrospectively from an
+exponential family of past subsets. P213 does not control a general
+nonduplicate multirow dependency, a mixed scalar--torus relation, or the
+fixed canonical scalar section. Those are now the principal live
+exact-square channels.
+
+### C223 — fixed-past Pell closures have a uniform logarithmic count
+
+**Status:** promoted as P214 after F251 passed a fresh hostile audit and a
+strict statement-only reconstruction.
+
+For (A_y=1+Dy^2), and for every positive integer (P) fixed before the
+fresh coordinate (y), the number of coordinates below (Y) for which
+(P A_y) is an exact square is at most
+
+\[
+1+\left\lfloor
+{\log(1+2Y\sqrt D)\over\log(2+\sqrt2)}
+\right\rfloor.
+\]
+
+The count is uniform in the size and squarefree kernel of (P). It gives a
+history-wise fresh-row bound and a quadratic union bound for all pairs in an
+independent torus bank. Thus one-row, duplicate, inverse-pair, fixed-past,
+and now arbitrary independent pair closures are all sparse at an
+exponential-size clean source.
+
+**Exact remaining gap.** The complete P66 decoder may choose one of
+exponentially many past subset products after it sees a row. The fixed-past
+count does not union-bound that adaptive retrospective choice. A genuine
+multirow square-class theorem or source remains necessary.
+
+### C228 — signed Pell resultants isolate a one-sided Las Vegas ticket
+
+**Status:** promoted as P219 after F257 passed a fresh hostile audit and a
+strict statement-only reconstruction.
+
+For two same-discriminant Pell rows, every odd shared prime power has one
+public coordinate sign. The minus and plus parts divide the two explicit
+resultant norms
+
+\[
+Q_\pm=D\Delta^2+(k_i\pm k_j)^2.
+\]
+
+If \((-D/N)=-1\) and the corresponding nonzero carry combination is less
+than \(\sqrt{N/2}\), a gcd of \(Q_\pm\) with \(N\) is either one or the
+unique hidden prime where \(-D\) splits. It can never be \(N\). This is an
+exact Las Vegas ticket with no false factor output.
+
+**Exact remaining gap.** No all-input or inverse-QP law forces a ticket in
+a numerical-QP bank. The signed coordinate label also does not determine
+whether a resultant-supported P66 dependency has a global or non-global
+root. F258 is the preregistered large-scale search for the direct-ticket
+frequency; F255 and F259 test broader unfactored-word and symbolic sources.
+
+### C229 — the fixed Pell/resultant/carry word grammar is null on the safe-safe tail
+
+**Status:** hostile-audited finite evidence from F255. This is not an
+unbounded theorem or a factoring lower bound.
+
+F255 tested ten public unfactored words built from eight Pell orbits:
+specialized rows, same- and cross-discriminant resultants, hash-paired
+resultants, the two signed norm factors, odd-multiple carries, and their
+combined product. Each word was raised to the input bit length and scored by
+the exact P205 residual fraction.
+
+The preserved TSV contains 50,304 labelled balanced semiprimes and every
+gcd pair. On every safe-safe input at factor sizes 32, 40, 48, 56, and 60,
+all nine nonbaseline candidates are exactly equal to the \(N-1\) baseline,
+row by row. There are no improvements and no saturated residuals. The worst
+combined \(-\log_2 H\) grows linearly across those sizes. Random inputs show
+many improvements, but their worst tail also grows linearly, so they do not
+meet the frozen useful-lead criterion.
+
+The hostile audit independently verified all 50,304 rows, all 200 JSON
+summaries, the reaggregated global totals, and 400 reconstructed gcds. The
+scope qualifications are explicit: the two 12-bit cohorts overlap on 22
+moduli; the JSON omitted global per-word aggregates; self-test stdout, peak
+RSS, the Boost-install transcript, and launch ownership are unavailable.
+None affects the safe-safe 32--60 rowwise null.
+
+**Search consequence.** Do not enlarge this grammar only by multiplying
+more of the same support factors. A materially new search must use a new
+integer coordinate, such as the full Pell lift quotients, nonlinear
+principal digits, adaptive feedback, or a direct signed ticket, and must
+retain a hostile safe-safe tail.
+
+### C227 — fixed-past fibre bounds do not control the retrospective span; clean Pell multiples are decoys
+
+**Status:** promoted as P218 after F253 V2 passed a fresh hostile re-audit
+and a strict statement-only reconstruction. V1 remains preserved with its
+blind failure on the missing distinct-row condition.
+
+P214 bounds each rational square-class fibre in a finite Pell bank. It
+therefore gives a logarithmic lower bound on the bank rank and exact upper
+bounds on fixed-size and uniform-subset square probabilities. An abstract
+bank with repeated copies of all nonzero binary vectors attains the rank
+loss. No ordering, greedy pivot, or circuit pivot turns this information
+alone into an inverse-QP retrospective bound.
+
+The first systematic same-orbit dependencies are exact decoys. Every clean
+odd-multiple pair of distinct retained rows has the same exact square class,
+but its positive integer root matches the supplied root modulo (N). The
+whole span of these pair vectors has normalized root (+1). A frozen
+(N=4331) example at indices (17,51) certifies the phenomenon.
+
+**Exact remaining gap.** Canonical-wrap carries break the polynomial
+identity by an explicit multiple of (N). Carried and other
+resultant-supported arithmetic specializations are the live Pell/P66 core.
+
+**Finite follow-up.** F256 tested the exact carried two-row criterion on
+2,311,478 retained pairs from disjoint train and held-out cohorts. Although
+923,599 pairs shared a nontrivial gcd, neither required gcd quotient was ever
+a square, so the scan found zero two-row dependencies and zero non-global
+roots. The hostile audit authenticated this finite null with a protocol
+qualification: some preregistered cleanup/resource aggregates were omitted.
+No asymptotic conclusion follows.
+
+### C226 — generic Pell dependencies vanish after cleanup; only the resultant core remains
+
+**Status:** promoted as P217 after F252 passed a fresh hostile audit and a
+strict statement-only reconstruction.
+
+Every post-wrap Pell row is an irreducible quadratic over (mathbf Q).
+Two such polynomials share a generic factor exactly when their closed
+pairwise resultant vanishes, and that occurs exactly when the integer
+polynomials are equal. Therefore constant-square and duplicate cleanup makes
+the generic square-class kernel zero. All pre-cleanup generic relations have
+integral roots and global normalized signs.
+
+At the numerical specialization, powering the product of pairwise
+resultants and taking one gcd with each row separates a private cofactor.
+A nonsquare private cofactor is a parity pivot; a square private cofactor is
+discardable. The entire surviving P66 problem is supported on the explicit
+resultants in factor-free polynomial time.
+
+**Exact remaining gap.** Specialization can still create relations wholly
+inside this resultant-supported core. P217 gives no all-input private-pivot
+law, inverse-QP event bound, or non-global-root theorem for that core.
+
+### C225 — the tailored negative-Pell component source is not universal
+
+**Status:** promoted as P216 after F254 passed a fresh hostile audit and a
+strict statement-only reconstruction.
+
+Every tailored negative-Pell row splits publicly into two affine components,
+each twice a square modulo (N). This enlarges the original-row P66 bank:
+every even component subset has a known modular root. Shared specialized
+prime support is localized by explicit pairwise affine resultants.
+
+The complete source can nevertheless have zero kernel. For
+(N=143=11\cdot13), the only admissible nontrivial negative-Pell
+coordinates below (N) are (5) and (29). Their four component columns
+have private parity pivots (733,83,17,47), so the component matrix has
+full rank four. All direct gcd screens are inert.
+
+**Exact remaining gap.** This is one exact counterexample, not a density
+bound. Randomized discriminants and the general retrospective multirow P66
+source remain live. The audited F252 and F253 candidates further localize
+generic Pell relations and clean odd-multiple decoys, but they await strict
+statement-only reconstruction before promotion.
+
+### C224 — the shifted binomial threshold is the complementary central-coefficient gate
+
+**Status:** promoted as P215 after F249 passed a fresh hostile audit and a
+strict statement-only reconstruction.
+
+For (B=\lfloor\sqrt N\rfloor), (H=\lfloor B/2\rfloor), and
+(s=B-p), the complete shifted family satisfies
+
+\[
+\binom{rN+c-1}{B}
+\equiv rq\binom{c-1}{s}\pmod N.
+\]
+
+The coefficient gcd is (N) for (c\le s) and (q) for (c>s).
+Since (s<H), the single public endpoint (c=H) always factors if its
+residue modulo (N) is available. The adjacent recurrence has one hidden
+nonunit denominator at (c=s).
+
+This is not a new source. The ordinary central coefficient satisfies
+
+\[
+\gcd\!\left(N,\binom BH\right)=p,
+\]
+
+so the shifted endpoint only returns the complementary prime. The literal
+recurrence, factorial, interval product, Vandermonde, and standard
+holonomic routes all return to the same exponential product gate.
+
+**Exact remaining gap.** Evaluate one remote central or shifted binomial
+coefficient modulo the unfactored composite modulus in numerical-QP time by
+a representation that does not first form the factor-bearing interval.
+
+### C230 — every F263 shifted symbolic lead is a public query-boundary decoy
+
+**Status:** promoted as P220 after F267 passed a fresh hostile audit and a
+strict statement-only reconstruction. F263 is hostile-audited finite
+evidence; F267 is the proof-only explanation.
+
+The frozen F263 C++ search tested 148 hypergeometric block summaries on
+2,000 discovery and held-out rows. Its held-out nonconsecutive cohorts had
+zero nondirect hits. The complete nondirect union contained 67
+consecutive-prime rows and 136 incidences from only six shifted candidates.
+
+F267 gives closed integer formulas for those six candidates. At the public
+left and right query edges, rising-factorial reflection forces their zeros
+only at the displayed offsets
+
+\[
+s=B-p\in\{L-1,L,L+1,L+2\}.
+\]
+
+The boundary condition itself makes \(p=B-s\) directly testable. Under the
+sufficient condition \(s^2<p\), the floor-square inequalities further force
+
+\[
+q-p=2(s+1),\qquad B+1={p+q\over2},
+\]
+
+so the first Fermat trial factors \(N\). This explains every authenticated
+F263 nondirect incidence without creating a new source.
+
+**Exact remaining gap.** The theorem does not classify every zero of the six
+polynomials and does not bound other symbolic grammars. A materially new
+remote-coefficient search must avoid public block-edge reflection, enforce
+nonconsecutive held-out leads, and show a QP construction cost rather than
+only a factor-bearing value.
+
+### C231 — separate canonical scalar-section banks have row-private parity pivots
+
+**Status:** hostile-audited finite evidence from F268-D04. This is not an
+all-input rank theorem or a factoring lower bound.
+
+F268 placed the canonical integers
+
+\[
+U_E(a)=[a^E]_{N^2},
+\qquad
+E\in\{N-1,N+1,N^2-1,2(N-1),2(N+1)\},
+\]
+
+into complete factor-free P66 decoders. Twelve frozen source families covered
+independent bases, complements, products, power chains, inverses, affine
+tuples, mixed exponents, and two-seed orbits. Direct carry and gcd channels,
+singletons, and every support-two square-class relation were screened first.
+
+Every eligible bank had full column rank. The discovery stage had zero useful
+low or residual relation across 2,256 banks. The held-out stage had zero factor
+at every direct stage and zero relation across 1,184 banks. The strict finite
+lead was null.
+
+The independent result audit found a stronger finite explanation. Every row
+had at least one nonsquare opaque block whose parity support contained only
+that row: all 53,392 discovery rows, all 55,944 held-out rows, and all 2,292
+preflight rows were privately pivoted. Minimum and maximum per-bank coverage
+were both 100 percent. No tested row needed a non-private block combination to
+prove independence.
+
+**Search consequence.** Do not enlarge one scalar-section family in isolation.
+The only immediate P66 escape suggested by this experiment is to unite
+different families on the same modulus and recompute the entire gcd-free block
+system. A block private inside one bank can become shared after the union.
+Discovery ROW records permit an exact post-hoc all-twelve-family union, but
+that would be hypothesis generation only. Any evidentiary held-out test needs a
+new frozen C++ packet and disjoint cohorts. It must perform saturated
+private-primary peeling before the complete residual decoder.
+
+### C232 — explicit divisor covers cannot reach quasipolynomial scale by increasing rank
+
+**Status:** promoted as P221 after corrected F272 V2 passed a fresh hostile
+audit and strict statement-only reconstruction. No computation ran.
+
+Let \(D\) be the set of nonzero absolute differences from finite integer
+sets \(S,T\). If every \(m\le X\) divides one \(d\in D\), and every
+difference has at most \(L\) bits, then
+
+\[
+\vartheta_2(X)
+\le\sum_{d\in D}\log_2d
+<|D|L
+\le|S||T|L.
+\]
+
+The proof only assigns each prime \(p\le X\) to a difference divisible by
+it and charges the product of distinct assigned primes to that difference.
+It is independent of arithmetic-progression or generalized-progression rank,
+and duplicate pairs, signs, and multisets do not help. Complete explicit
+factor output has the same aggregate lower bound even when each huge
+difference has a short circuit description.
+
+For the scaling \(|S|,|T|\le X^{\beta+o(1)}\) and
+\(\log\max(S\cup T)\le X^{\alpha+o(1)}\), necessary conditions are
+
+\[
+\alpha+2\beta\ge1,
+\qquad
+\alpha+\beta\ge\tfrac12.
+\]
+
+Only the first is saturated at the one-third point. A successful higher-rank
+one-third cover would still give \(N^{1/6+o(1)}\), not quasipolynomial
+factoring. Therefore a large symbolic search over explicit rank-two through
+rank-six covers is not justified for this goal.
+
+**Search consequence.** The obstruction does not cover succinct modular
+evaluation. A uniform QP evaluator for an interval product
+
+\[
+\prod_{j=a}^{b}j\pmod d
+\]
+
+would factor by one-path binary gcd splitting, so it is a precise
+factoring-hard target. Future work should look for a genuinely compressed
+evaluator or a different adaptive product hierarchy, not another explicit
+cover or prefactored separator. P221 neither constructs this evaluator nor
+claims it is the unique possible escape.
+
+### C233 — batch gcd-free refinement removes the quadratic P66 decoder bottleneck
+
+**Status:** promoted as P222 after corrected F271 V2 passed a fresh hostile
+audit and strict reconstruction from its authenticated base and V2
+statements. This is a decoder theorem, not a source or factoring theorem.
+
+For positive rows with canonical unit modular roots, F271 constructs a
+pairwise-coprime opaque block basis without rational-prime factorization.
+Saturation isolates complete primary support. Equal-support refinement is a
+subtractive Euclidean recursion, and a balanced product tree inserts all
+rows while preserving exact exponent vectors.
+
+If \(T\) old blocks are touched, \(E\) recursion nodes occur, \(S\) blocks
+remain, and the tree has depth \(D\), refinement plus terminal coprimality
+verification needs at most
+
+\[
+(D+1)T+m+2E+S
+\]
+
+scalar gcd calls. One product/remainder tree verifies all final block pairs
+with exactly \(S\) gcds. The corrected V2 empty-tree rule makes every
+operation count zero when \(S=0\), and canonical supplied roots keep their
+encoding inside the polynomial bit bound.
+
+The parity decoder also avoids row-pair arithmetic. Singleton relations are
+the zero matrix columns; support-two relations are pairs of equal columns.
+Signature classes give a basis of their entire span. A canonical kernel
+complement and the normalized-root homomorphism then make at most \(m\)
+basis classifications complete.
+
+For an F265 residual bank with at most 64 rows of at most 361 bits, the exact
+cap is 91,111 refinement/terminal gcd calls per bank and 69,973,248 across
+768 maximum banks. This is about 103.02 times below the abandoned D08 call
+envelope. Operand widths still require a real target benchmark.
+
+**Search consequence.** An elliptic cubic-lift retry may now be resource
+credible, but only after a new source packet imports P222 exactly, removes
+the obsolete all-pair decoder, caps actual batch work, and passes a
+cap-complete target preflight. P222 does not predict that any residual core
+or non-global relation exists.
+
+### C234 — fixed child-state and literal resultant grammars do not compress the interval gate
+
+**Status:** promoted as P223 after corrected F273 V2 passed a fresh hostile
+audit and strict statement-only reconstruction. No computation ran.
+
+Four exact boundaries now separate useful symbolic exploration from literal
+repackaging of the remote interval product.
+
+1. In a polynomial ring with algebraically independent child coordinates,
+   a scalar that vanishes on one child-product axis contains that child
+   product. Vanishing on both axes forces the parent product
+   \(e_0o_0\). This is not a circuit lower bound after affine or
+   characteristic-specific specialization.
+2. With one local rank defect, all proper Smith determinantal divisors are
+   units modulo \(N\); only the terminal invariant is guaranteed to carry
+   the factor. For \(\operatorname{diag}(1,\ldots,B)\), the determinant is
+   \(B!\), while the last Smith invariant is
+   \(\operatorname{lcm}(1,\ldots,B)\). Both are factor-bearing gates, but
+   they are different evaluation problems.
+3. The full derivative resultant of a rising factorial is the square of a
+   superfactorial. Its gcd with \(N\) is the hidden prime on the unresolved
+   balanced branch, but its bit length is \(\Theta(B^2\log B)\).
+4. Literal dyadic cross-resultant recursion from length \(2^tq_0\) has
+   \(2^{t+1}-1\) base offsets and \(2^{t+2}-t-3\) keyed states. Telescoping
+   replaces them by the same factor-bearing weighted product rather than a
+   modular evaluator.
+
+**Search consequence.** Do not launch a larger C++ search over fixed-order
+jets, literal Smith summaries, full discriminants, or this named resultant
+recursion. A new interval-product experiment first needs a finite transition
+with independently quasipolynomially evaluable coefficients outside the
+P223 hypotheses. Affine-specific identities, nonlinear carries, adaptive
+algorithms, and the general succinct evaluator remain open.
+
+### C235 — the regular characteristic-shift separator cannot survive an explicit QP-dimensional shift quotient
+
+**Status:** promoted as P224 after F274 passed a fresh hostile audit and a
+strict statement-only reconstruction. No computation ran.
+
+On the full function space over \(\mathbb F_r\), cyclic translation has
+\((T-I)\)-nilpotency index exactly \(r\). Thus the balanced threshold
+\(p\le B<q\) gives \(\Delta_p^B=0\) but \(\Delta_q^B\ne0\). Every
+\(d\)-dimensional shift-stable subquotient instead has nilpotency index at
+most \(d\). When \(d\le B\), both local \(B\)-th differences vanish, so an
+explicit numerical-QP-dimensional regular-shift state loses this particular
+signal.
+
+Ordinary \(B\)-th differences of integer polynomials are all divisible by
+\(B!\), sharply so for \(X^B\). This repackages the factorial gate rather
+than normalizing it. Rational scalar shift gauges exist exactly when their
+irreducible valuations balance on every translation orbit and their value at
+infinity is one; when they exist, the product is an endpoint telescope. A
+rational matrix gauge inherits the same necessary determinant condition.
+
+**Search consequence.** Do not search the exact regular-shift nilpotency,
+integer-polynomial-difference, or rational-gauge grammars further. This is
+only a named-model decision. Other invariants of a small state, nonlinear or
+semilinear states, implicit representations, determinant-one cocycles,
+integer-valued-polynomial mechanisms, and adaptive algorithms remain open.
+Any future run must first state its asymmetric local law and independently
+QP-evaluable transition outside P224.
+
+### C236 — inherited monomial sharing cannot manufacture a new P66 root image
+
+**Status:** promoted as P225 after corrected F275 V2 passed a fresh hostile
+audit and strict reconstruction from its two authenticated statements. No
+computation ran.
+
+For exact monomial rows with multiplicatively inherited supplied roots, every
+new exact square relation pulls back through the parity-incidence matrix to
+an old relation, and its normalized root is the old normalized root up to a
+global sign. Structural incidence cycles therefore have only global roots;
+useful old arithmetic relations can be retained but not manufactured.
+
+For an inverse-square graph source, an even cycle's normalized root is the
+ratio of the alternating products of its public edge labels. Its two P66 gcds
+are exactly the two alternating-label gcds, so a useful cycle factors before
+the parity decoder. V2 repairs the sole V1 defect by requiring the explicit
+carrier in the sub-\(N^2\) construction to satisfy \(1\le d<N\).
+
+**Search consequence.** Do not build a large graph or product-circuit search
+whose only pivot-sharing mechanism is exact inherited multiplication. The
+F270 all-family union remains justified because it recomputes numerical
+cross-family block sharing. Canonically reduced complement products also lie
+outside P225, but reduction removes the promised support-sharing mechanism;
+they need a separate positive event law before a production search.
+
+### C237 — determinant one removes scalar product gates only by moving them into denominators, large states, constant powers, or an affine continuant
+
+**Status:** promoted as P226 after corrected F276 V2 passed fresh hostile and
+strict statement-only audits. No computation ran.
+
+A rational two-endpoint matrix law is exactly a gauge telescope. A separable
+finite-dimensional length state is a rational gauge times a constant matrix
+power. Polynomial unimodular direct-summand lines carry only unit
+multipliers, and integer unimodular transport preserves the coordinate ideal
+of a whole state.
+
+Every affine \(\operatorname{SL}_2\) step is a constant matrix times one
+nilpotent shear. After rational conjugacy its generic scalar coordinate is the
+continuant
+
+\[
+y_{k+2}=(ck+a+c+d)y_{k+1}-y_k.
+\]
+
+The \(c=0\) branch reduces to constant powering and weighted sums; it is not
+proved signal-free. The \(c\ne0\) branch has neither a proved remote endpoint
+evaluator nor a proved hidden-prime signal.
+
+**Search consequence.** A coefficient scan of the generic affine recurrence
+would measure sequential finite coincidences without testing the missing QP
+endpoint operation, so it is not yet resource-justified. A new determinant-one
+experiment must first supply either a separately audited constant-power signal
+or a genuine fast endpoint law for the continuant, and must pass denominator,
+state-size, and asymmetric-signal gates.
+
+### C238 — integer-valued high differences expose exact Stirling signals but not their remote evaluator
+
+**Status:** promoted as P227 after F277 passed fresh hostile and strict
+statement-only audits. No production computation ran.
+
+The Newton-binomial basis makes a high difference an exact coefficient shift.
+For the F249 shifted-binomial family, every difference order is now
+classified: the hidden spike moves from order zero to order \(s=B-p\), and
+the first order beyond \(s\) already has the same residue in both CRT
+components. A binomial with a QP-short complementary side has a unit
+denominator, so every Kummer carry is already a displayed numerator gcd;
+that screen can still saturate.
+
+The normalized monomial differences give the exact new laws
+
+\[
+ \left\{\begin{matrix}2B\\B\end{matrix}\right\}
+ \equiv2\left\{\begin{matrix}2s+1\\s\end{matrix}\right\}\pmod p,
+ \qquad
+ \left\{\begin{matrix}2B+1\\B\end{matrix}\right\}
+ \equiv2\left\{\begin{matrix}2s+2\\s\end{matrix}\right\}\pmod p,
+\]
+
+while both vanish modulo \(q\). Each scalar can saturate. Joint saturation
+is the explicit adjacent central-Stirling divisibility condition left open by
+P227.
+
+**Search consequence.** Do not spend a large C++ run on more finite
+differences of these same binomial or monomial families. The missing objects
+are a numerical-QP modular evaluator for the remote central-Stirling
+coefficient and an all-input dispatcher, not another hit-rate table. Other
+integer-valued circuits and succinct remote-coefficient algorithms remain
+open because P227 proves no general evaluator lower bound.
+
+### C239 — explicit constant powers make the endpoint cheap but leave power-coset cancellation open
+
+**Status:** promoted as P228 after F278 passed fresh hostile and strict
+statement-only audits. No computation ran.
+
+An explicit numerical-QP-dimensional matrix (C_N\) can be powered to
+(B=\lfloor\sqrt N\rfloor\) in numerical quasipolynomial time. A literal
+Jordan block adds no hidden compression: its (j)-th coefficient factors
+exactly when the direct interval (B-j+1,\ldots,B\) contains the smaller
+prime. Clean spectral collisions are exactly eigenvalue-ratio (B)-torsion,
+and a clean quadratic companion coordinate is exactly an ordinary-group or
+norm-one-torus residual with smaller-prime exponent (s+1\) or (s-1\).
+Constant-in-index recurrences are the same public state-space endpoint.
+
+**Search consequence.** Do not search Jordan coefficients, powered spectral
+collisions, or the companion (U_B\) coordinate again. A targeted matrix
+search is justified only in the unresolved additive lane, beginning already
+with two modes:
+
+\[
+ a\alpha^B+b\beta^B=0
+ \iff (\alpha/\beta)^B=-b/a.
+\]
+
+Before any large run, the grammar must remove public input gcds, near-square
+windows, eigenvalue collisions, ordinary/torus order tickets, and directly
+visible power-coset targets. A surviving experiment may discover a candidate
+law, but finite hits cannot prove an all-input signal. Higher-mode sums,
+semilinear actions, and arbitrary (N\)-dependent coefficient constructions
+also remain outside P228.
+
+### C240 — bounded global order can be upgraded to all-local order, but no useful word follows
+
+**Status:** promoted as P229 after F280 V2 passed an independent
+primary-source hostile audit and a strict statement-only reconstruction. No
+numerical search ran.
+
+Given a unit \(a\bmod N\) with global order greater than \(D\), the explicit
+scan
+
+\[
+ \gcd(a^e-1,N),\qquad 1\le e\le D,
+\]
+
+either factors \(N\) or certifies order greater than \(D\) at every rational
+prime divisor of \(N\). A saturated gcd cannot occur because it contradicts
+the source order. With Nir Proposition 1.2, this gives a bounded ordinary
+representative \(2\le a\le D^2+D\); with Harvey--Hittmeir, it gives the
+faster global source plus an explicit linear local scan. Numerical-QP \(D\)
+therefore stays numerical-QP.
+
+This closes the global-to-local source gap, not the factoring-transfer gap.
+A bare high global order can hide a small local order, and synchronized
+screened orders divide every \(p-1\), so their lcm contributes no new
+prime-power capacity beyond the registered \((N-1)^n\) baseline. The source
+does not produce a rough residual, P205 word, carry, quotient, determinant,
+or asymmetric CRT signal.
+
+**Search consequence.** Do not spend a large run on finding merely larger
+ordinary orders. A justified successor must state the exact transfer from an
+all-local-order element to a new factor-bearing integer word before it asks
+for numerical evidence.
+
+### C241 — a random shift solves normalized central saturation, leaving only the remote evaluator
+
+**Status:** promoted as P230 after F282 passed a fresh hostile proof audit and
+a strict statement-only reconstruction. The theorem is conditional; no
+evaluator or factoring run exists.
+
+For a balanced distinct odd semiprime, put \(B=\lfloor\sqrt N\rfloor\) and
+
+\[
+ F_B(a)=\frac{\Delta^B X^{2B}|_{X=a}}{B!}
+       =h_B(a,a+1,\ldots,a+B).
+\]
+
+After the direct \(\gcd(B,N)\) screen, write \(B=p+s\) and \(q=B+h\).
+Then \(h\ge s+2\) and \(p\ge2s+3\). The normalized scalar is zero modulo
+\(q\) for every shift, while modulo \(p\) it is the nonzero degree-\(s+1\)
+polynomial
+
+\[
+ 2h_{s+1}(a,a+1,\ldots,a+s).
+\]
+
+A uniform public shift therefore gives \(q\) by one gcd with probability
+strictly greater than one half. This replaces F281's proposed deterministic
+two-scalar saturation test by an exact constant-success dispatcher.
+
+**Search consequence.** Do not run the F281 saturation cohort. A useful next
+experiment must target the exact normalized evaluator. It must exhibit a
+QP-depth endpoint or divide-and-conquer law for \(F_B(a)\bmod N\), preserve
+the exact integer division, and reject any representation that merely
+computes the raw difference: the raw difference is identically zero modulo
+\(N\). Sequential Stirling tables, \(B+1\)-term sums, characteristic-size
+coefficient vectors, factorial inversion, and exact exponential-size
+materialization are controls, not candidates. Finite identity synthesis can
+guide this search, but only an exact uniform fast-forward with unit-safe
+operations can close the theorem.
+
+### C242 — the natural normalized-difference evaluator grammars collapse to width or factor gates
+
+**Status:** promoted as P231 after F283 passed a fresh hostile proof audit and
+a strict statement-only reconstruction. No computation ran.
+
+The P230 scalar is a generalized-Stirling endpoint. Its canonical linear
+coefficient sequence has exactly \(B+1\) uncancelled modes, including after
+fixed-radix decimation. Translation and interval/parity composition retain a
+full central convolution. A monotone normalized divided-power chain meets a
+binomial coefficient whose gcd with \(N\) is \(p\); the unnormalized chain
+ends at zero modulo \(N\).
+
+The guaranteed \(q\)-zero is also the universal content contributed by
+primes in \((B+1,2B)\). Explicit content, interval-primorial, or leading
+coefficient evaluation factors directly. Removing the content removes the
+guaranteed zero. Dividing the raw value by \(N\) after an \(N^2\) lift leaves
+a product with no promised factor.
+
+**Search consequence.** Do not synthesize another full Stirling vector,
+literal block convolution, monotone divided-power chain, canonical linear
+matrix, explicit content product, or immediate \(N^2\) quotient. Before any
+new run, exhibit a different numerical-QP transition for an arbitrary public
+shift. It must avoid nonunit normalization or return its gcd, and its endpoint
+must retain the P230 asymmetry. Tailored nonlinear, adaptive, branching,
+higher-lift, and other noncanonical evaluators remain open; P231 does not
+give a general evaluator or circuit lower bound.

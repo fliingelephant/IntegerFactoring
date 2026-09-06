@@ -1,0 +1,69 @@
+# Self-audit of F200 V2
+
+## Verdict
+
+PASS as a narrow proof-only V2 candidate.  It is not ready for promotion.
+It needs a fresh hostile audit and a V2 statement-only reconstruction.
+
+## Checks performed
+
+1. **Unique exceptional index.**  The inequalities \(p\leq B<q\) and
+   \(B<2p\) leave exactly one index in \([1,B]\) sharing a factor with
+   \(N\), namely \(p\).
+2. **Sign of the recurrence.**  Direct substitution into
+   \(A_j=(-1)^j\binom{N-1}{j}\) gives
+   \(j(A_j-A_{j-1})=-NA_{j-1}\), and therefore
+   \(A_{j-1}/j=(A_{j-1}-A_j)/N\).
+3. **Exceptional fractional part.**  P171 gives
+   \(A_{p-1}\equiv1\pmod N\), so division by \(p\) gives fractional part
+   \(+1/p\), not \(-1/p\).
+4. **Root floor sign.**  The root sum is
+   \((1-A_B)/N=1/p-h\).  Its floor is \(-h\).
+5. **Active gcd orientation.**  An active subset has
+   \(D_I\equiv q\pmod N\), so \(\gcd(D_I,N)=q\).  The corresponding index
+   product has gcd \(p\).
+6. **Transform scope.**  Full support is asserted for the delta in the
+   quotient coefficient group.  It is not asserted for a particular
+   efficiently evaluable numerical transform of the original integer
+   sequence.
+7. **Gauge scope.**  The symmetry concerns additive residues and existence
+   of integer representatives.  False paths need not satisfy the true
+   Archimedean sizes or floors.  Those are explicitly left open.
+8. **Run-count scope.**  The exponential count applies only to the literal
+   summation-by-parts endpoint evaluator for residue cells.  No general
+   circuit lower bound is claimed.
+9. **Mahler scope.**  The density argument excludes a value-local continuous
+   integrality indicator.  It does not exclude functions using \(N\), a
+   succinct rational presentation, discontinuous order operations, or
+   correlations special to the integer parts.
+10. **Cyclotomic scope.**  V2 fixes a public numerical-QP degree cap
+    \(D(n)\), chooses P161's roughness parameter \(T\geq D(n)\), and
+    explicitly conditions on P161's surviving
+    \(H=\gcd(w-1,N)=1\) branch at the same hidden prime \(p\).  The factor
+    and factored common-order outcomes remain separate exits.  Since \(w\)
+    is a power of two,
+    \(\operatorname{ord}_p(w)\mid\operatorname{ord}_p(2)\), so the strict
+    bound \(\operatorname{ord}_p(w)>T\) gives
+    \(\operatorname{ord}_p(2)>D(n)\).  The result does not cover complex
+    approximation or implicit symbolic phases.
+
+## Highest-risk claims for hostile review
+
+1. Confirm the repaired P159--P161 interface in the optional cyclotomic
+   corollary: fixed \(D(n)\), chosen \(T\geq D(n)\), the exact surviving
+   \(H=1\) outcome, and the same hidden rational prime \(p\).  None of
+   Theorems 1--5 depends on this corollary.
+2. Check the asymptotic wording for \(B/2^t\) at the P175 threshold when
+   the precision deficit is a general fixed numerical polylogarithm.
+3. Check the algebraic-integrality formulation of the Fourier coefficient
+   in \(K/\mathcal O_K\).  The Walsh and Haar claims do not depend on it.
+4. Keep the distinction between an exact support oracle and an approximate
+   phase estimator.  Only the exact equality reduction is used as a proof.
+
+## Computation and sources
+
+No computation and no new external source were used.  The imported premises
+are the promoted P171 recurrence/jump, the P173 power-of-two binomial
+interface, P175's reciprocal target, the explicitly conditioned P160--P161
+surviving-order interface, and the elementary local-field fact that
+prime-to-residue-characteristic roots of unity reduce injectively.

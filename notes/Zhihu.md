@@ -1,200 +1,533 @@
-为什么应该对整数分解问题存在高效经典算法抱有信心
-张凯羿
-退役算法竞赛选手
-收录于 · 计算机科学杂谈
-​
-目录
-
-整数分解问题被广泛地认为是一个困难问题。然而，笔者在最近数月的早期研究中发现了诸多疑点。就结论而言，笔者认为大整数分解是一个具有极高价值却未得到充分研究的重要科学问题。本文的主要目标是破除普遍存在的“整数分解问题不应尝试”的盲目信念，帮助所有有志研究该问题的数论与计算机科学爱好者树立信心。本文将以整数分解问题为核心，介绍其本身性质、与其他问题的关联、研究历史及相关人物等。所需预备知识包括初等计算数论、计算复杂性理论，以及科普级别的量子计算背景。
-
-序：相互矛盾的指标
-
-让我们从一组相互矛盾的指标开始：整数分解问题与图同构问题，哪一个更难？理论计算机科学（TCS）社群普遍认为图同构更容易，而整数分解更难。这是因为图同构目前已知最好的算法具有准多项式时间复杂度，也即 \exp(\log^{O(1)} n) 。而整数分解目前已知最好的一般数域筛法则有亚指数时间算法，约为 \exp(1.9\cdot n^{1/3}) [1][2]。
-
-然而，当我们把量子计算纳入考量时，事情开始变得微妙起来。整数分解问题在量子计算机上有多项式时间的Shor算法，而图同构问题在量子计算模型下是否有多项式时间算法尚属未知。
-
-从计算复杂性角度来看，整数分解属于 NP ∩ coNP，而图同构属于 NP ∩ coAM。首先，这两者几乎不可能是NP完全问题[3]，因此被归类为NP中间问题(NP-Intermediate)；其次，由于 NP ⊆ AM，且在强去随机化假设下该包含关系可成为等式，因此整数分解实际上处于稍低的复杂性层级，暗示其可能更为简单[4][5][6]。
-
-看待整数分解和图同构问题的视角	这一指标暗示哪个问题更难？
-已知最优的经典算法	整数分解更难
-已知最优的量子算法	图同构更难
-计算复杂性视角	图同构更难
-
-这些矛盾暗示了多种可能性，主要包括以下三种[7]：
-
-整数分解应该有更优的经典算法，若要让矛盾完全消失，整数分解问题应至少具有准多项式时间算法
-图同构问题应该具有量子计算机上的多项式时间算法[8]
-我们对整数分解和图同构的算法研究已经达到极限，量子计算机就是拥有改变部分问题难度顺序的神奇能力，但却对图同构问题无能为力
-
-以上三种可能都指向了非常有趣的结果。前两者至少意味着新算法的诞生[9]，而若能证明第三点，则意味着量子计算的能力其实十分有限。由于本文聚焦于整数分解，我们将主要讨论第一种可能性。
-
-整数分解问题简史
-
-数论与计算的历史源远流长，人类已知的第一个算法，欧几里得辗转相除法就是一种数论算法。在信息时代到来之前，素性判定与整数分解只是数论中两个还算有趣的问题。比较有名的研究包括特殊形式的数的素性问题，如梅森素数和费马素数；以及科尔花了"三年来所有的星期天"分解 2^{67}-1 的故事。在那个计算复杂性概念还没有诞生的时代，素数的定义就给出了素性判定的标准。而有关整数能够被唯一分解为素数的乘积这一结论在欧几里得时代就已被默认为事实，在高斯的《算术研究》中得到明确的提出和证明。同样是在《算术研究》中，高斯对这两个问题的评价为：“将质数同合数区分开来，并且将合数分解成它们的质因数，这是算术中最重要和最有用的问题之一。”
-
-数论长期被视为“无用”的数学。然而到了二十世纪七十年代，随着基于集成电路的个人电脑广泛普及，计算机科学进入黄金时代。1978年，基于整数分解困难性的RSA公钥加密算法登上历史舞台，而此前两年提出的Miller–Rabin、Solovay–Strassen等素性判定算法为其实际应用打下基础。八十年代诞生的二次筛法进一步引发了设计-破解之间的猫鼠游戏。九十年代互联网的普及对密码算法产生大量需求，有关整数分解的学术讨论也在2000年前后达到高峰，代表成果有1994年的一般数域筛法和Shor算法，以及2002年的AKS素性判定。此后工业界开始普及https，而学术界的讨论则逐渐陷入沉寂。2015年至2019年，互联网https流量占比从五成上升至九成。至此以RSA为代表的公钥密码算法完成了全球大范围普及，整数分解问题也从前计算机时代有趣的问题，前互联网时代重要的学术问题，上升至整个现代互联网安全的基石。
-
-RSA的普及程度
-
-当然，现行公钥密码学的另一半江山基于椭圆曲线上的离散对数问题，代表算法有ECDH和ECDSA。统计RSA在整个互联网中保护流量的百分比并不容易(更新：[10])，但我们可以从证书的角度窥见现代信息系统对RSA的依赖：读者可在浏览器中打开知乎，点击网址左侧的按钮，依次选择“连接安全”–“证书有效”–“详细信息”，查看“证书签名算法”或“证书持有者公钥算法”，可知知乎使用了RSA；若使用Windows系统，可通过Win+R输入“certlm.msc”并回车，打开“第三方根证书颁发机构”–“证书”，可以发现超过九成根证书使用RSA。
-
-整数分解与RSA
-关联
-
-若能高效分解整数，则能够破解RSA，但反过来却不一定[11][12]。此外，RSA本身的各类误用和部分数据泄露也可能导致安全隐患，因此对RSA的攻击可独立于整数分解成为一个专门的研究课题。有关RSA的攻击可以参考《Twenty Years of Attacks on the RSA Cryptosystem》，Dan Boneh于1999年发表，总结了上个世纪对于RSA的攻击。也可以从CTF的crypto题目中学习到。尽管两者高度相关，但本文重点在于整数分解而非RSA，在此不再赘述。
-
-研究现状
-
-如同上文所言，尽管RSA已经遍布全球，但相关的研究几乎已经静止。较为著名的仍在继续工作的组只剩下由Paul Zimmermann领导的法国小组。他们于2020年分解了RSA-829。笔者向许多人发送了邮件，其中Pierrick Gaudry非常高兴地回复了我，他告诉我世界上其他研究整数分解问题的人少之又少，据他所知只剩下UCSD的Nadia Heninger，马普所的Peter Schwabe和印度的Palash Sarkar。
-
-
-
-
-整数分解相关的其他问题
-离散对数
-
-提到整数分解，不可能不提到离散对数，事实上Shor算法可以同时在量子计算机上解决整数分解和离散对数。Peter Shor在回忆录《The Early Days of Quantum Computation》，中写道：
-
-There's a strange relation between discrete log and factoring. There's no formula for taking an algorithm for one of these problems and applying it to the other. However, any time somebody has found an improved algorithm for one of them, people have reasonably quickly come up with a similar solution for the other one.
-离散对数与整数分解之间存在一种奇特的关联。虽然无法直接将针对其中一个问题的算法套用于另一个问题，但每当有人发现针对其中之一的改进算法时，人们就会相当快速地提出针对另一个问题的类似解决方案。
-
-一个明显区别在于，通过改变所使用的有限群，离散对数问题可有许多变体，而整数分解只有一种表达方式。一般而言，函数域筛法是离散对数的最佳算法，与一般数域筛法有许多相似之处；但对于特征较小的有限域，存在准多项式时间算法。
-
-Shor算法与隐子群问题
-
-隐子群问题包含了整数分解、离散对数、图同构和格上最短向量问题，这也是另一个把整数分解和图同构问题放在一起讨论的原因。而Shor算法可以解决其中的阿贝尔群隐子群问题，也即整数分解和离散对数，而对图同构和格上最短向量问题束手无策。
-
-
-
-
-为什么应该对大整数分解问题存在高效经典算法抱有信心
-
-信心不足严重抑制了整数分解问题的研究。“整数分解是困难的”犹如思想钢印打在所有理解该问题的人脑中，导致这一领域走向衰落。本节的唯一目标是树立信心，将从多角度为整数分解问题“祛魅”。技术上的可能研究方向将在下一节介绍。
-
-整数分解不是NP完备问题，而研究NP完备问题的人并不少，因此完全可加以研究。如上文所言，整数分解不被认为是NP完备问题，更不是NP Hard问题。从计算复杂性上就弱化了整数分解问题的难度。然而现在几乎没有人在研究它，与之相对的，研究那些不同条件下真正困难的NP完备问题的研究者却并不少见，如[13][14][15]。整数分解问题完全可以研究，且完全可以像研究NP完备问题那样得到中间结果并发表，以满足学术界普遍的考核要求。
-
-2. 图灵奖得主Ron Rivest不是一个好的密码算法设计者。Ron Rivest固然是现代密码学的先驱，他设计了MD系列哈希函数，RC系列对称加密，以及他是RSA的第一作者"R"，这也为他赢得了2002年的图灵奖。然而MD系列的故事我们都知道，王小云院士破解了MD5。RC4被破解也是写进教科书的，它导致了wifi加密标准WEP被废弃，向WPA迁移。后续他所设计的MD6和RC6也没有被广泛采用。RSA是他仅存的使用中的密码算法。
-
-3. RSA是喝酒后拍脑袋想出来的，且早期密码算法大都如此。《The RSA Cryptosystem: History, Algorithm, Primes》，记载了RSA算法的诞生。其描写是
-
-In April 1977, they spent Passover at the house of a student and drank a good deal of wine before returning to their homes at around midnight. Rivest, unable to sleep, lay on the couch with a math textbook and started thinking about their one-way function. He spent the rest of the night formalizing his idea, and he had much of the paper ready by daybreak. The algorithm is now known as RSA – the initials of their surnames in same order as their paper.
-1977年4月，他们在一位学生家过逾越节，喝了不少酒，大约午夜才回家。里维斯特睡不着，躺在沙发上，手里拿着一本数学课本，开始思考他们的单向函数。他用了整晚的时间将自己的想法正式化，并在黎明前完成了论文的大部分内容。这个算法现在被称为RSA——RSA是他们姓氏首字母的缩写，与论文的顺序相同。
-
-尽管公钥密码学是重大突破，但早期密码算法大多承袭了“拍脑袋想算法，破不掉就算胜利”的传统。基于背包问题的密码被破解是著名例子，其他如McEliece密码算法，我们至今不清楚其安全性原理，但破解进展缓慢；然而若将其中的Goppa码替换为其他编码，则很快被破解。
-
-4. RSA是少数允许密钥长度随时间变长的例外。如今密码学家对绝大多数算法要求严苛，新算法在评选中稍有瑕疵即被抛弃。然而，在椭圆曲线密码中256位密钥长度保持不变的同时，由于存在亚指数攻击，同等安全下RSA需要远远更长的密钥长度[16]，且密钥长度还需要逐年变长。出于惯性，人们依然在使用RSA这个相较于隔壁椭圆曲线不那么安全又缓慢的算法。
-
-5. 有人有相似的想法。MIT兼职教授Henry Cohn有着相似的想法，他公开发表了《Factoring may be easier than you think》，不过他主要批判的点在于"100个聪明的家伙尝试这一问题并失败了，因此这不可能"这样一种非理性的信念本身。
-
-6. 没有多少人研究过它。那么究竟有多少人研究过整数分解问题呢？这个网站记载了2600多名数论研究者。笔者编写爬虫抓取这些学者的主页，并通过“factorization”等关键词进行机器与人工筛选，发现研究过该问题的人不足30人。诚然，这仅反映部分曾研究该问题的学者数量，但这一数字仍少得惊人。笔者主观认为，有记录研究过整数分解的专家不超过100人。从引用数也可看出端倪：RSA算法被引用近三万次，Shor算法约一万四千次，而经典最好的一般数域筛法仅一千余次。研究破解它的论文数占相关论文总数不到十分之一！
-
-7. 许多密码学家不愿意破解它。只要进入该领域便不难理解这一现象：大多数密码学家设计密码算法，他们需相信所基于的问题是困难的；只有少数人专攻密码破解。那些基于数论困难问题设计密码的人自然不愿让自己辛苦写出的论文变成废纸，因此不会主动破解相关困难问题。
-
-8. 量子计算的抑制与量子泡沫、寒冬。一般数域筛法与Shor算法均于1994年发表。毫无疑问，这会将许多对整数分解感兴趣者的注意力从复杂繁琐的经典算法转向小巧优美又充满希望的量子计算，从而减少经典方法的研究。量子计算由当时在加州理工的费曼提出，最初动机是模拟量子系统，Shor当时恰在该校就读。Shor算法是当前量子计算发展的主要推动力，远比高斯玻色采样更具说服力。量子计算热潮集中于2019年前后，当年Google宣布实现“量子优越性”。笔者也是那时被Shor算法吸引，自学量子计算并进入量子信息与后量子密码领域。然而随时间流逝，量子计算逐渐从“改变世界的新型计算机”变成类似可控核聚变“永远还有五十年”的天坑领域，且至今未找到商业化模式。2022年末，阿里和百度相继关闭量子实验室，“量子寒冬”言论甚嚣尘上。毋庸置疑，量子计算早已不是硅谷与华尔街的宠儿，人工智能才是。
-
-9. 高价值并不意味着高难度。对整数分解的研究可能导致整个互联网陷入危机，这反映其极高研究价值，但不代表它本身难度极高。如上节所述，整数分解并非一开始就吸引大量研究，而是随计算机与互联网发展逐渐受到重视。在其变得重要的过程中，问题本身未发生变化，难度当然也不会改变。其他例子如Rainbow和SIDH的破解，在圈内是重要新闻，但因未广泛部署，影响有限。
-
-10. 我们必须知道，我们必将知道。由Ladner定理可知，突破整数分解与图同构问题是对P vs NP问题给出P=NP答案的必经之路。另一方面，笔者认为若有人证明P≠NP，该结果也是无聊的，世界不会因此改变。
-
-
-
-
-早期结果和可能的研究方向
-
-本节将介绍早期研究中发现的一些结果和可能的研究方向。
-
-
-二次筛法和一般数域筛法
-
-二次筛法发明者Carl Pomerance于1996年发表了《A Tale of Two Sieves》，回忆了二次筛和一般数域筛法发明过程。一般数域筛法可以看作二次筛法的推广，两者均由相似的两步构成，第一步为以一种分布sample许多 x_i^2=a_i \pmod n ，第二步使用线性代数在 a_i 中寻找一个子集，满足其乘积为完全平方数，最终可以得到 X^2=Y^2 \pmod n ，然后计算 \gcd(X-Y,n) 以较高概率得到一个非平凡因子。目前文献中普遍记载需要把产生的 a_i 分级为较小的素数的乘积，也即光滑数(smooth number)。但对于算法竞赛选手而言，不难给出利用勒让德符号在多项式时间内找到这一完全平方子集乘积的算法，而能够避开对 a_i 分解。然而，该集合中是否存在平方子集仍与光滑数分布概率有关，即整个算法的瓶颈在于光滑数的分布。
-
-初步了解当前最佳整数分解算法后，笔者意识到几点：首先，二次筛法与一般数域筛法并不特别困难，受过良好教育的数学或计算机本科生甚至优秀高中生完全可以掌握；其次，在交流中发现许多算法竞赛选手能给出比历史文献中第二步更好的算法，这给了笔者“该问题可研究”的早期信心；最后，笔者认为光滑数的低概率分布限制了该技术路线的进一步发展，直觉上这不会是最终解决方法。与法国学者的邮件交流也印证了这一观点，即二次筛法与一般数域筛法已走到尽头，我们需要全新的idea。
-
-简单优美的公式
-
-记RSA模数为 n=pq,p<q<2p ，通过欧拉定理可以推出一个简单而优美的性质 a^{n+1}=a^{p+q} \pmod n ，当然这个性质在文献中早有记载。只是较少人直接提及可以直接在上面应用BSGS得到一个 O(n^{1/4}) 的算法。
-
-AKS素性测试带来的思考
-
-AKS素性测试利用了 (x+a)^n=x^n+a^n \pmod n 对于素数 n 成立的事实。一种分析的方法是阐明组合数 \binom{n}{k} ，当 n 为素数且 0<k<n 时， \binom{n}{k}=0 ，而只有在 k=0,n 时 \binom{n}{k}=1 。在这种思想的引导下，对于RSA合数 n=pq,p<q<2p 的组合数研究可能是必要的。
-
-通过卢卡斯定理我们不难推出一个看起来有趣但不知道有什么用的性质：
-
-\binom{n}{kq} \bmod q=\binom{0}{0}\cdot\binom{p}{k}\cdot \binom{0}{0}\bmod q=\binom{p}{k}\bmod q
-
-而 0\leq k<p 时， \binom{n}{kp} \bmod p = \binom{0}{0}\cdot\binom{q-p}{k}\cdot \binom{1}{0}\bmod p = \binom{q-p}{k}\bmod p
-
-当 p\leq k < q 时， \binom{n}{kp} \bmod p = \binom{0}{0}\cdot\binom{q-p}{k-p}\cdot \binom{1}{1}\bmod p = \binom{q-p}{k-p}\bmod p
-
-也即二项式展开由三组非零部分组成。
-
-来自素性判定和ECM方法的启发
-
-素性判定是一个已解决的问题，令人困惑的是其带来的信息与方法似乎不能直接用于分解，但两者显然密切相关。例如，费马小定理的逆定理在某些情况下不成立，能通过费马检验的合数称为卡迈克尔数，而Miller-Rabin算法像为费马检验打上补丁，能够分解卡迈克尔数[17]。该例子强化了素性判定与整数分解高度相关的直觉，提示我们可以从素性判定角度研究整数分解，至少能研究一类特定合数的高效分解算法[18]。
-
-ECM是一种利用椭圆曲线做整数分解的方法。其中留下的最有趣的直觉在于：我们发现环 \mathbb{Z}_n 它能加能乘，可惜非零元不一定有逆因此不是一个有限域，但又一想，如果发现了一个非零元 x 没有逆元那么 \gcd(x,n) 一定能给出非平凡因子，就达到了我们的目的。 我暂时给这种环起了一个名字叫做伪域(pseudo-field)，就当它能加能乘能除。
-
-多项式求根
-
-有限域上的多项式求根和分解都是是非常容易的事情[19]。简单而言，对于有限域 \mathbb{F}_p ，和待求根的多项式 f(x) ，随机一个整数 z 求 \gcd(f(x-z),x^{(p-1)/2}-1) 可以随机得到 f(x) 的一些线性因子。反复使用即可得到线性项。原因是 x^{(p-1)/2}-1=\Pi_{i\in \mathrm{QR}(\mathbb{F}_p)} (x-i) 。这个简单的多项式实际上蕴含着"随机的" (p-1)/2 个线性项，求gcd就可以挖出来。
-
-如果我们能够求得 x^2=1 \pmod n 的非平凡解，那么就能分解 n 。也就是求 f(x)=x^2-1 的根。那么模仿相似的套路，我们需要构造一个"简单的" g(x) 使得其有较多的线性项然后求gcd就好了[20]
-
-结束语
-
-整数分解问题无疑是一个极具价值的问题。然而，密码设计者宣传其困难性，Shor算法引导研究者离开经典算法研究，这两大思想禁锢而非技术本身困难是该问题无人问津的重要原因。让我们再次重申本文核心观点：整数分解是一个具有极高价值却未得到充分研究的重要科学问题。它是密码学与计算数论领域中显而易见的富矿，完全值得投入精力深入研究。
-
-作者自我介绍
-
-作者2020年本科毕业于上海交通大学ACM班，本科期间获得多次国际大学生程序设计竞赛金牌，2025年博士毕业于上海交通大学计算机学院，研究方向为密码学[21]。现为清华大学高等研究院博士后，合作导师为王小云院士。博士期间深入研究了后量子密码与量子信息，在CRYPTO、PNAS等顶级会议与期刊发表论文。这些领域都以未来存在大规模量子计算机为前提，然而近年来量子计算机进展不顺，使包括笔者在内的一些研究者逐渐对量子计算产生怀疑[22]。Shor算法在理论上是正确的，质疑点主要集中在大规模量子计算机何时建成，以及量子计算机的计算能力是否真的强于经典计算。对后者的研究促成了本文。
-
-其他
-
-若读者爱惜声誉，不希望像近几年的大新闻最终落空，如2016年Shor宣称破解LWE，2021年Schnorr宣称破解了RSA，2024年陈一镭宣称破解LWE，请在宣称前自行编写代码并尝试分解一些公开的RSA模数，这将是非常直接且有力的证据[23]。
-
-RSA Challange: https://en.wikipedia.org/wiki/RSA_Factoring_Challenge
-
-工具介绍：https://www.youtube.com/watch?v=OJJK3-R465c
-
-参考
-^此处n代表输入整数的比特长度，而不是输入整数N，
-^这个复杂度经过简化
-^也因此更不可能是NP Hard的，称整数分解和图同构是NP Hard是一种普遍且典型的错误
-^https://complexityzoo.net/Complexity_Zoo:N#npi
-^https://complexityzoo.net/Complexity_Zoo:A#am
-^https://www.quora.com/Do-we-know-whether-factorization-is-harder-than-graph-isomorphism
-^第四种可能是László Babai的准多项式时间图同构算法错了
-^考虑到量子计算是经典计算的超集，这里也可以是经典的多项式时间算法，不过令人费解的是，即使有，为什么经典更容易的它，量子版本发现的远比整数分解晚？以及若图同构同时有着经典和量子的多项式时间算法，那便不能据此说明量子计算更优越
-^且他们可以同时实现而不相互矛盾
-^更正，RSA约占71%，可见 https://radar.cloudflare.com/certificate-transparency
-^认为破解RSA和整数分解完全等价也是一种常见的误区
-^延伸阅读建议：《Another Look at “Provable Security”》 ,Neal Koblitz
-^PPSZ is better than you think, FOCS 2021, Dominik Scheder,  https://ieeexplore.ieee.org/document/9719845
-^Almost Optimal Time Lower Bound for Approximating Parameterized Clique, CSP, and More, under ETH, STOC 2025, Venkatesan Guruswami, Bingkai Lin, Xuandi Ren, Yican Sun, Kewen Wu, https://dl.acm.org/doi/10.1145/3717823.3718130
-^A (slightly) improved approximation algorithm for metric TSP, Anna R. Karlin, Nathan Klein, Shayan Oveis Gharan, https://dl.acm.org/doi/10.1145/3406325.3451009
-^https://crypto.stackexchange.com/questions/8687/security-strength-of-rsa-in-relation-with-the-modulus-size
-^https://crypto.stackexchange.com/questions/5279/carmichael-number-factoring
-^可以用于发论文灌水维持科研工作者的生计
-^https://en.wikipedia.org/wiki/Berlekamp%E2%80%93Rabin_algorithm
-^这里有若干问题，它其实不是欧几里得整环，但直觉上如上文伪域所言，无法取余的情况碰到了就做完了
-^据csrankings，上海交大的密码学专业亚洲排名第一，世界排名第九 https://csrankings.org/#/index?crypt&asia
-^推荐傅育熙老师的《计算复杂性理论》
-^RSA-2048 = 2519590847565789349402718324004839857142928212620403202777713783604366202070 7595556264018525880784406918290641249515082189298559149176184502808489120072 8449926873928072877767359714183472702618963750149718246911650776133798590957 0009733045974880842840179742910064245869181719511874612151517265463228221686 9987549182422433637259085141865462043576798423387184774447920739934236584823 8242811981638150106748104516603773060562016196762561338441436038339044149526 3443219011465754445417842402092461651572335077870774981712577246796292638635 6373289912154831438167899885040445364023527381951378636564391212010397122822 120720357
-编辑于 2026-02-09 01:38・北京
-数论
-理论计算机科学
-密码学
-​
-赞同 378​
-​
-36 条评论
-​
-428
-​
-24
-​
-分享
-​
-申请转载
-​
-​
+# Why We Should Be Confident That Efficient Classical Integer-Factoring Algorithms May Exist
+
+**Author:** Kaiyi Zhang
+
+**Source description:** Retired competitive programmer; published in *Computer Science Miscellany*
+**Source edit time:** 2026-02-09 01:38, Beijing time
+
+> **Translation note.** This is an English translation of the Chinese source
+> preserved in Git history. It records the source author's motivation,
+> arguments, factual assertions, and mathematical seeds. The repository has not
+> audited or endorsed those assertions. A claim in this document is therefore a
+> source claim, not research evidence. The translation preserves questionable
+> claims rather than silently repairing them. For clarity, it uses \(N\) for the
+> integer being factored and \(n\) for its bit length where the source used the
+> same lowercase letter in both roles. Non-substantive page controls, reaction
+> counts, tags, and sharing controls are omitted. The original Chinese text
+> remains available in Git history.
+
+Integer factorization is widely considered difficult. During several months of
+early research, however, I found many reasons for doubt. My conclusion is that
+large-integer factorization is an important scientific problem of extremely
+high value that has not been studied sufficiently. This article aims to break
+the widespread belief that integer factorization should not even be attempted.
+It aims to give confidence to people in number theory and computer science who
+want to study it.
+
+The article focuses on integer factorization. It discusses the nature of the
+problem, its connections to other problems, its history, and some of the people
+involved. The expected background is elementary computational number theory,
+computational complexity theory, and a popular-level understanding of quantum
+computing.
+
+## A preface: contradictory indicators
+
+Which problem is harder, integer factorization or graph isomorphism? The
+theoretical computer science community generally treats graph isomorphism as
+easier and integer factorization as harder. The best known graph-isomorphism
+algorithm has quasipolynomial complexity,
+
+\[
+\exp(\log^{O(1)} n),
+\]
+
+whereas the best known general number field sieve for integer factorization has
+subexponential complexity, approximately
+
+\[
+\exp(1.9 n^{1/3}).
+\]
+
+Here \(n\) is the bit length of the input integer, and the displayed complexity
+has been simplified.[1][2]
+
+The comparison changes when quantum computing is included. Shor's algorithm
+factors integers in polynomial time on a quantum computer. It is not known
+whether graph isomorphism has a polynomial-time quantum algorithm.
+
+From a complexity-theoretic viewpoint, integer factorization belongs to
+\(NP\cap coNP\), while graph isomorphism belongs to \(NP\cap coAM\). Neither is
+thought likely to be NP-complete.[3] They are therefore described here as
+NP-intermediate problems. Because \(NP\subseteq AM\), and because a strong
+derandomization assumption can turn this inclusion into equality, the article
+argues that integer factorization sits at a slightly lower complexity level and
+may be simpler.[4][5][6]
+
+| Perspective | Problem indicated as harder |
+| --- | --- |
+| Best known classical algorithm | Integer factorization |
+| Best known quantum algorithm | Graph isomorphism |
+| Computational-complexity perspective | Graph isomorphism |
+
+The article presents three main possibilities:[7]
+
+1. Integer factorization has a better classical algorithm. To remove the
+   apparent contradiction completely, it should have at least a
+   quasipolynomial-time algorithm.
+2. Graph isomorphism has a polynomial-time quantum algorithm.[8]
+3. Algorithmic research on both problems has reached its limit, and quantum
+   computers can change the relative difficulty of some problems while still
+   being unable to help with graph isomorphism.
+
+All three possibilities would be interesting. The first two would produce new
+algorithms.[9] A proof of the third would show that quantum computation has
+severe limits. This article focuses on the first possibility.
+
+## A short history of integer factorization
+
+Number theory and computation have a long history. Euclid's algorithm is often
+described as the first algorithm known to humanity. Before the information age,
+primality testing and integer factorization were interesting number-theory
+problems. Famous examples include primality questions for Mersenne and Fermat
+numbers, and Cole's factorization of \(2^{67}-1\) after spending “three years of
+Sundays” on it.
+
+Before computational complexity existed as a concept, the definition of a
+prime already supplied a criterion for primality. Unique prime factorization
+was treated as fact in Euclid's time and was stated and proved explicitly in
+Gauss's *Disquisitiones Arithmeticae*. Gauss described distinguishing primes
+from composites and resolving composites into prime factors as one of the most
+important and useful problems in arithmetic.
+
+Number theory was long regarded as useless mathematics. In the 1970s, personal
+computers based on integrated circuits spread widely, and computer science
+entered a golden age. RSA appeared in 1978 and based its security on the
+difficulty of integer factorization. Miller–Rabin and Solovay–Strassen primality
+tests, introduced two years earlier, supported practical use. The quadratic
+sieve appeared in the 1980s and intensified the contest between cryptographic
+design and cryptanalysis.
+
+The Internet created strong demand for cryptography in the 1990s. Academic
+discussion of integer factorization peaked around 2000. Representative results
+included the general number field sieve and Shor's algorithm in 1994, and AKS
+primality testing in 2002. Industry then deployed HTTPS broadly while academic
+discussion became quieter. The article states that HTTPS traffic rose from
+about 50 percent to about 90 percent between 2015 and 2019. It presents integer
+factorization as having moved from an interesting pre-computer problem, to an
+important pre-Internet academic problem, to a foundation of modern Internet
+security.
+
+## The prevalence of RSA
+
+The other major branch of current public-key cryptography is based on the
+elliptic-curve discrete-logarithm problem. ECDH and ECDSA are representative
+examples. It is hard to measure what fraction of all Internet traffic RSA
+protects.[10] The article suggests inspecting certificate signature algorithms
+and subject public-key algorithms as one way to see modern dependence on RSA.
+It also states that more than 90 percent of the root certificates in the
+described Windows certificate store use RSA.
+
+## Integer factorization and RSA
+
+Efficient integer factorization breaks RSA, but breaking RSA does not
+necessarily give an integer-factorization algorithm.[11][12] Misuse of RSA and
+partial data leakage can also cause vulnerabilities. Attacks on RSA can
+therefore be studied separately from integer factorization.
+
+For RSA attacks, the article recommends Dan Boneh's 1999 survey *Twenty Years
+of Attacks on the RSA Cryptosystem* and cryptography problems from
+capture-the-flag competitions. This article remains focused on integer
+factorization.
+
+## The stated research situation
+
+The article argues that research on integer factorization has almost stopped
+despite the widespread use of RSA. It identifies the French group led by Paul
+Zimmermann, which factored RSA-829 in 2020. It also reports an email response
+from Pierrick Gaudry saying that very few other people still work on integer
+factorization, and naming Nadia Heninger at UCSD, Peter Schwabe at the Max
+Planck Institute, and Palash Sarkar in India.
+
+## Related problems
+
+### Discrete logarithms
+
+Shor's algorithm solves both integer factorization and discrete logarithms on
+a quantum computer. In *The Early Days of Quantum Computation*, Peter Shor
+wrote:
+
+> There's a strange relation between discrete log and factoring. There's no
+> formula for taking an algorithm for one of these problems and applying it to
+> the other. However, any time somebody has found an improved algorithm for one
+> of them, people have reasonably quickly come up with a similar solution for
+> the other one.
+
+Changing the finite group creates many variants of the discrete-logarithm
+problem, while integer factorization has only one formulation. In general, the
+function field sieve is the best algorithm for discrete logarithms and shares
+many ideas with the general number field sieve. Finite fields of small
+characteristic have quasipolynomial-time algorithms.
+
+### Shor's algorithm and the hidden subgroup problem
+
+The hidden subgroup problem includes integer factorization, discrete
+logarithms, graph isomorphism, and the shortest-vector problem on lattices.
+This is another reason to discuss integer factorization and graph isomorphism
+together. Shor's algorithm solves the Abelian hidden subgroup problem,
+including integer factorization and discrete logarithms, but it does not solve
+graph isomorphism or the shortest-vector problem on lattices.
+
+## Why the article is confident about efficient classical factorization
+
+The article argues that lack of confidence has suppressed research on integer
+factorization. This section aims only to build confidence. Technical directions
+appear later.
+
+1. **Integer factorization is not considered NP-complete.** The article argues
+   that this weakens the case for intrinsic difficulty. Many researchers study
+   NP-complete problems, so integer factorization can also be studied. It says
+   that intermediate results can be published in the same way as intermediate
+   results about NP-complete problems.[13][14][15]
+
+2. **The article criticizes Ron Rivest's record as a cryptographic designer.**
+   Rivest helped create modern cryptography. He designed the MD hash family and
+   the RC symmetric-cipher family, and he is the “R” in RSA. The article points
+   to the breaks of MD5 and RC4, the replacement of WEP by WPA, and the lack of
+   broad adoption of MD6 and RC6. It calls RSA the remaining Rivest algorithm
+   still in use.
+
+3. **The article emphasizes the informal origin of RSA and other early
+   cryptosystems.** It quotes *The RSA Cryptosystem: History, Algorithm,
+   Primes*:
+
+   > In April 1977, they spent Passover at the house of a student and drank a
+   > good deal of wine before returning to their homes at around midnight.
+   > Rivest, unable to sleep, lay on the couch with a math textbook and started
+   > thinking about their one-way function. He spent the rest of the night
+   > formalizing his idea, and he had much of the paper ready by daybreak. The
+   > algorithm is now known as RSA – the initials of their surnames in same
+   > order as their paper.
+
+   The article argues that many early cryptosystems followed a tradition of
+   proposing an algorithm and treating the absence of a known break as success.
+   It mentions the break of knapsack cryptography and the fact that replacing
+   the Goppa code in McEliece with other codes often led to quick breaks.
+
+4. **RSA permits key lengths to grow over time.** Modern cryptographic
+   competitions reject algorithms for relatively small flaws. In contrast,
+   elliptic-curve systems retain 256-bit keys while RSA needs much larger keys
+   for comparable security because it has subexponential attacks.[16] Its keys
+   must continue to grow. The article says that RSA remains in use through
+   inertia even though it is slower and less secure than the elliptic-curve
+   alternative.
+
+5. **Others have expressed a similar attitude.** Henry Cohn published
+   *Factoring May Be Easier Than You Think*. His main criticism was of the
+   belief that a problem is impossible because “one hundred smart people have
+   tried it and failed.”
+
+6. **The article says that few people have studied the problem.** The author
+   reports crawling a website that listed more than 2,600 number theorists and
+   finding fewer than 30 whose pages indicated work on factorization. The
+   author's subjective estimate is that no more than 100 recorded experts have
+   studied it. The article compares roughly 30,000 citations for RSA, 14,000 for
+   Shor's algorithm, and slightly more than 1,000 for the general number field
+   sieve. It says that papers about breaking the assumption form less than one
+   tenth of the related literature.
+
+7. **The article says that many cryptographers do not want to break it.** Most
+   cryptographers design systems and need confidence in the underlying hard
+   problems. Only a minority specialize in cryptanalysis. The article argues
+   that researchers who build systems on number-theoretic assumptions have
+   little incentive to invalidate their own work.
+
+8. **Quantum computing redirected attention.** The general number field sieve
+   and Shor's algorithm both appeared in 1994. The article argues that Shor's
+   compact and elegant algorithm drew attention away from complicated classical
+   methods. It describes Feynman's proposal of quantum computation at Caltech,
+   originally motivated by quantum simulation, and notes that Shor studied
+   there. It calls Shor's algorithm the main driver of quantum computing and
+   more persuasive than Gaussian boson sampling.
+
+   The article describes the boom around Google's 2019 announcement of quantum
+   supremacy. The author was drawn to Shor's algorithm at that time, studied
+   quantum computing, and entered quantum information and post-quantum
+   cryptography. It then describes slow progress, the lack of a business model,
+   the closing of Alibaba's and Baidu's quantum laboratories in late 2022,
+   discussion of a “quantum winter,” and artificial intelligence replacing
+   quantum computing as the favorite of Silicon Valley and Wall Street.
+
+9. **High value does not imply high difficulty.** A successful factoring
+   algorithm could endanger Internet security. That shows the problem's value,
+   not its intrinsic difficulty. The problem itself did not change as its
+   applications became more important. The article gives the breaks of Rainbow
+   and SIDH as examples that mattered within the field but had limited wider
+   impact because the systems had not been broadly deployed.
+
+10. **“We must know; we will know.”** The article invokes Ladner's theorem and
+    says that breakthroughs on integer factorization and graph isomorphism are
+    necessary on the path to an answer of \(P=NP\). It also gives the author's
+    view that a proof of \(P\ne NP\) would be uninteresting because it would not
+    change the world.
+
+## Early results and possible research directions
+
+### The quadratic sieve and the general number field sieve
+
+Carl Pomerance published *A Tale of Two Sieves* in 1996. It recounts the
+invention of the quadratic sieve and the general number field sieve. The
+general number field sieve can be viewed as a generalization of the quadratic
+sieve. Both have two similar steps.
+
+First, sample many relations from some distribution:
+
+\[
+x_i^2=a_i\pmod N.
+\]
+
+Second, use linear algebra to find a subset of the \(a_i\) whose product is a
+perfect square. This gives
+
+\[
+X^2=Y^2\pmod N.
+\]
+
+Computing \(\gcd(X-Y,N)\) then gives a nontrivial factor with high probability.
+
+The literature generally requires each generated \(a_i\) to factor into small
+primes. Such integers are smooth. The article says that Legendre symbols can be
+used to find a square-product subset in polynomial time without factoring the
+\(a_i\). It also says that the existence of such a subset still depends on the
+distribution of smooth numbers. Smoothness probability therefore remains the
+bottleneck.
+
+The author draws three conclusions. First, the quadratic sieve and general
+number field sieve are not especially difficult to learn. A well-educated
+undergraduate, or an excellent high-school student, can understand them.
+Second, algorithm-contest participants can improve on how the second step is
+presented in historical literature. This gave the author early confidence that
+the problem is approachable. Third, the low probability of smooth numbers
+limits further progress along this route. The article reports that email
+discussion with French researchers supported the view that the sieving route
+has reached its end and that a completely new idea is needed.
+
+### A simple and elegant formula
+
+Let the RSA modulus be \(N=pq\), with \(p<q<2p\). Euler's theorem gives
+
+\[
+a^{N+1}=a^{p+q}\pmod N.
+\]
+
+The identity was already known. The article notes that baby-step giant-step can
+be applied directly to obtain an \(O(N^{1/4})\) algorithm.
+
+### Thoughts inspired by AKS primality testing
+
+AKS primality testing uses the fact that
+
+\[
+(x+a)^N=x^N+a^N\pmod N
+\]
+
+when \(N\) is prime. One way to analyze this identity is through binomial
+coefficients. For a prime \(N\) and \(0<k<N\),
+
+\[
+\binom Nk=0\pmod N,
+\]
+
+while the coefficients at \(k=0,N\) equal one. This suggests studying the
+binomial coefficients of an RSA composite \(N=pq\), where \(p<q<2p\).
+
+Lucas's theorem gives
+
+\[
+\binom{N}{kq}\bmod q
+=\binom00\binom pk\binom00\bmod q
+=\binom pk\bmod q.
+\]
+
+For \(0\le k<p\),
+
+\[
+\binom{N}{kp}\bmod p
+=\binom00\binom{q-p}{k}\binom10\bmod p
+=\binom{q-p}{k}\bmod p.
+\]
+
+For \(p\le k<q\),
+
+\[
+\binom{N}{kp}\bmod p
+=\binom00\binom{q-p}{k-p}\binom11\bmod p
+=\binom{q-p}{k-p}\bmod p.
+\]
+
+The article therefore describes the binomial expansion as consisting of three
+groups of nonzero terms. It calls this property interesting but says that its
+use is unknown.
+
+### Inspiration from primality testing and ECM
+
+Primality testing is solved, but its information and methods do not appear to
+transfer directly to factorization even though the problems are closely
+related. The converse of Fermat's little theorem fails for some composites.
+Composite numbers that pass the Fermat test are Carmichael numbers. The article
+says that Miller–Rabin can factor Carmichael numbers.[17]
+
+This example strengthens the author's intuition that primality testing and
+integer factorization are closely related. It suggests studying factorization
+through primality testing, including efficient algorithms for special classes
+of composites.[18]
+
+ECM uses elliptic curves for integer factorization. The ring \(\mathbb Z_N\)
+supports addition and multiplication, but its nonzero elements need not be
+invertible, so it is not a finite field. If a nonzero nonunit \(x\) is found,
+then
+
+\[
+\gcd(x,N)
+\]
+
+gives a nontrivial factor. The article informally calls this ring a
+“pseudo-field.” It proposes acting as though addition, multiplication, and
+division were available, because a failed division finishes the factorization
+task.[20]
+
+### Polynomial root-finding
+
+Polynomial root-finding and factorization over finite fields are easy.[19]
+Given a finite field \(\mathbb F_p\) and a polynomial \(f(x)\), choose a random
+integer \(z\) and compute
+
+\[
+\gcd\left(f(x-z),x^{(p-1)/2}-1\right).
+\]
+
+This randomly returns some linear factors of \(f(x)\). Repetition yields linear
+factors. The reason is
+
+\[
+x^{(p-1)/2}-1
+=\prod_{i\in\mathrm{QR}(\mathbb F_p)}(x-i).
+\]
+
+This simple polynomial contains a “random” set of \((p-1)/2\) linear factors,
+which a gcd can extract.
+
+If a nontrivial solution of
+
+\[
+x^2=1\pmod N
+\]
+
+can be found, then \(N\) can be factored. This is root-finding for
+\(f(x)=x^2-1\). The proposed direction is therefore to construct a “simple”
+polynomial \(g(x)\) with many linear factors and then compute a gcd.
+
+## Closing remarks
+
+Integer factorization is unquestionably valuable. The article argues that two
+beliefs have constrained the field: cryptographic designers promote the
+difficulty of factorization, and Shor's algorithm drew researchers away from
+classical algorithms. It treats these beliefs, rather than technical difficulty
+itself, as important reasons why the problem receives little attention.
+
+The article repeats its main claim: integer factorization is an important
+scientific problem of extremely high value that has not been studied
+sufficiently. It calls the problem an obvious rich area in cryptography and
+computational number theory that deserves serious effort.
+
+## About the author
+
+The author graduated from the ACM class at Shanghai Jiao Tong University in
+2020 and won several gold medals in international collegiate programming
+contests. The author completed a doctorate in cryptography at Shanghai Jiao
+Tong University's School of Computer Science in 2025.[21] At the time of the
+article, the author was a postdoctoral researcher at Tsinghua University's
+Institute for Advanced Study, working with Xiaoyun Wang.
+
+During the doctorate, the author studied post-quantum cryptography and quantum
+information and published in venues including CRYPTO and PNAS. Those fields
+assume the future existence of large-scale quantum computers. Slow recent
+progress caused the author and others to become more skeptical of quantum
+computing.[22] The article accepts the theoretical correctness of Shor's
+algorithm. Its questions concern when large-scale quantum computers will be
+built and whether quantum computers truly have more computational power than
+classical computers. The latter question motivated this article.
+
+## Before making a public claim
+
+The article warns against repeating prominent claims that later failed, citing
+Shor's 2016 claim about LWE, Schnorr's 2021 claim about RSA, and Yilei Chen's
+2024 claim about LWE. It asks researchers to implement an algorithm and try to
+factor public RSA moduli before announcing a result. It presents this as direct
+and strong evidence.[23]
+
+- RSA Factoring Challenge: https://en.wikipedia.org/wiki/RSA_Factoring_Challenge
+- Tool introduction: https://www.youtube.com/watch?v=OJJK3-R465c
+
+## Source notes and references
+
+1. In the complexity expressions, \(n\) is the bit length of the input, not the
+   integer \(N\).
+2. The displayed complexity has been simplified.
+3. The source says this makes NP-hardness still less likely, and calls it a
+   common error to say that integer factorization or graph isomorphism is
+   NP-hard.
+4. Complexity Zoo, NPI: https://complexityzoo.net/Complexity_Zoo:N#npi
+5. Complexity Zoo, AM: https://complexityzoo.net/Complexity_Zoo:A#am
+6. Discussion of factorization and graph isomorphism:
+   https://www.quora.com/Do-we-know-whether-factorization-is-harder-than-graph-isomorphism
+7. The source lists a fourth possibility: László Babai's quasipolynomial
+   graph-isomorphism algorithm is wrong.
+8. Because quantum computation includes classical computation, this could also
+   be a classical polynomial-time algorithm. The source asks why, if graph
+   isomorphism is classically easier, its quantum algorithm was found much later
+   than the factoring algorithm. It also notes that a problem with both
+   classical and quantum polynomial-time algorithms would not demonstrate a
+   quantum advantage.
+9. The first two possibilities can hold simultaneously.
+10. The source later corrects the RSA figure to about 71 percent and cites:
+    https://radar.cloudflare.com/certificate-transparency
+11. The source calls complete equivalence between breaking RSA and factoring a
+    common misconception.
+12. Further reading: Neal Koblitz, *Another Look at “Provable Security”*.
+13. Dominik Scheder, *PPSZ Is Better Than You Think*, FOCS 2021:
+    https://ieeexplore.ieee.org/document/9719845
+14. Venkatesan Guruswami, Bingkai Lin, Xuandi Ren, Yican Sun, and Kewen Wu,
+    *Almost Optimal Time Lower Bound for Approximating Parameterized Clique,
+    CSP, and More, under ETH*, STOC 2025:
+    https://dl.acm.org/doi/10.1145/3717823.3718130
+15. Anna R. Karlin, Nathan Klein, and Shayan Oveis Gharan, *A (Slightly)
+    Improved Approximation Algorithm for Metric TSP*:
+    https://dl.acm.org/doi/10.1145/3406325.3451009
+16. RSA security strength and modulus size:
+    https://crypto.stackexchange.com/questions/8687/security-strength-of-rsa-in-relation-with-the-modulus-size
+17. Discussion of factoring Carmichael numbers:
+    https://crypto.stackexchange.com/questions/5279/carmichael-number-factoring
+18. The source adds that results for special classes can support publications
+    and researchers' livelihoods.
+19. Berlekamp–Rabin algorithm:
+    https://en.wikipedia.org/wiki/Berlekamp%E2%80%93Rabin_algorithm
+20. The source notes that \(\mathbb Z_N\) is not a Euclidean domain. It retains
+    the pseudo-field intuition that a failed remainder or division operation
+    completes the task.
+21. The source cites CSRankings and says that Shanghai Jiao Tong University's
+    cryptography program ranks first in Asia and ninth worldwide:
+    https://csrankings.org/#/index?crypt&asia
+22. The source recommends Yuxi Fu's *Computational Complexity Theory*.
+23. The source supplies RSA-2048 as a test input:
+
+    ```text
+    2519590847565789349402718324004839857142928212620403202777713783604366202070
+    7595556264018525880784406918290641249515082189298559149176184502808489120072
+    8449926873928072877767359714183472702618963750149718246911650776133798590957
+    0009733045974880842840179742910064245869181719511874612151517265463228221686
+    9987549182422433637259085141865462043576798423387184774447920739934236584823
+    8242811981638150106748104516603773060562016196762561338441436038339044149526
+    3443219011465754445417842402092461651572335077870774981712577246796292638635
+    6373289912154831438167899885040445364023527381951378636564391212010397122822
+    120720357
+    ```

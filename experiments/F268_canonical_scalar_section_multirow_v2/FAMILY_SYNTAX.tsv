@@ -1,0 +1,25 @@
+kind	id	name	base_grammar	exponent_grammar	max_rows
+family	0	hash_nm1	24 discovery or 48 heldout independent bounded hash units	N-1	48
+family	1	hash_np1	24 discovery or 48 heldout independent bounded hash units	N+1	48
+family	2	hash_n2m1	24 discovery or 48 heldout independent bounded hash units	N^2-1	48
+family	3	hash_2nm1	24 discovery or 48 heldout independent bounded hash units	2(N-1)	48
+family	4	hash_2np1	24 discovery or 48 heldout independent bounded hash units	2(N+1)	48
+family	5	complement_nm1	12 discovery or 24 heldout hash units paired with N-a	N-1	48
+family	6	multiply_np1	8 discovery or 16 heldout public triples a,b,[ab]_N	N+1	48
+family	7	power_n2m1	6 discovery or 12 heldout public chains a,[a^2]_N,[a^3]_N,[a^5]_N	N^2-1	48
+family	8	inverse_2nm1	12 discovery or 24 heldout hash units paired with [a^-1]_N	2(N-1)	48
+family	9	affine_2np1	6 discovery or 12 heldout public quadruples a,N-a,[a+1]_N,[2a+1]_N	2(N+1)	48
+family	10	multi_exponent	4 discovery or 9 heldout hash units crossed with all five schedules	all five schedules	45
+family	11	two_seed_orbit	first 24 discovery or 48 heldout canonical a^i b^j residues in syntax order	five schedules rotated by syntax	48
+template	0	support_three	support equals 3	frozen predicate	0
+template	1	support_four	support equals 4	frozen predicate	0
+template	2	same_exponent	all selected rows have one exponent tag	frozen predicate	0
+template	3	mixed_exponent	selected rows use at least two exponent tags	frozen predicate	0
+template	4	multiplication_triple	contains a complete registered a,b,[ab]_N triple	frozen predicate	0
+template	5	power_chain	contains at least three rows from one registered power chain	frozen predicate	0
+template	6	complement_pair	contains a complete registered a,N-a pair	frozen predicate	0
+template	7	inverse_pair	contains a complete registered a,[a^-1]_N pair	frozen predicate	0
+template	8	affine_tuple	contains at least three rows from one registered affine quadruple	frozen predicate	0
+template	9	orbit_adjacent	contains a registered parent-child orbit edge	frozen predicate	0
+template	10	same_low_residue	all selected U rows have the same residue modulo N	frozen predicate	0
+template	11	generic_cross_circuit	none of templates 4 through 10 applies	frozen predicate	0

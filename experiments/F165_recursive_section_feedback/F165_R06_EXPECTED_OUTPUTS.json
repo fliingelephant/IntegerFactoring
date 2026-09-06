@@ -1,0 +1,83 @@
+{
+  "experiment_id": "F165-R06",
+  "status": "FROZEN_BEFORE_RUN",
+  "reconstruction": {
+    "schema": "F165-R06-V2-reconstruction-1",
+    "replay_status": "STATED_FINITE_CLAIMS_MATCH",
+    "final_verdict": "PENDING_REGISTERED_SEQUENCE_HASH_COMPARISON_AND_PROOF_AUDIT",
+    "corpus_sha256": "bd1d2987d2eaa6d3cfda3fceea72fbd471592a659137df26ae05a3d86cec7fb3",
+    "aggregate_sequence_hashes": {
+      "candidate": "96972dcb941ca98ed1fd45bda9e75cb5b5b79e27317d6b2f3767d60ba7b60f88",
+      "exact_value": "b17a5884e2017f2f47d2e3b268a1220d0aab6c6be2f69df7a2160373cefbd08c",
+      "block": "bda32c2be9c39b5616c168c250ca6a3596f4be6ecda20cee2015c785a17ea1df",
+      "selected_column": "23eaa0350432570c030c5648e6bc85401d3402a054482450686df61cf0d632df"
+    },
+    "aggregate_value_only_hashes": {
+      "candidate": "de09e266f8e84359dc607078fb14fb1cd1834fcc053ef520517d30aea017709c",
+      "exact_value": "ef8f327ac85850234089c153c8362dfdb482d2737f78845239540ff3ee18f063",
+      "block": "0f1d97498b64c6f16ec6ad587e26c42961e004b2c0dec5e8f2b268da59134652",
+      "selected_column": "da4d73fa3244fdb36ae3b120e951c46ca09d9f499db8e16812ef6252eaf108ef"
+    },
+    "aggregates": {
+      "1": {
+        "attempted_subsets": 5020,
+        "strict_new_exact_values": 315,
+        "duplicate_exact_values": 4705,
+        "inputs_with_positive_rank_gain": 63,
+        "total_rank_gain": 251,
+        "inputs_with_strict_old_block_splits": 42,
+        "total_strictly_split_old_blocks": 67,
+        "proper_direct_candidates": 0,
+        "duplicate_root_splits": 0
+      },
+      "2": {
+        "attempted_subsets": 8896,
+        "strict_new_exact_values": 310,
+        "duplicate_exact_values": 8586,
+        "inputs_with_positive_rank_gain": 57,
+        "total_rank_gain": 310,
+        "inputs_with_strict_old_block_splits": 38,
+        "total_strictly_split_old_blocks": 69,
+        "proper_direct_candidates": 0,
+        "duplicate_root_splits": 0
+      }
+    },
+    "decoder_correction": {
+      "base_snapshots_unchanged": 64,
+      "feedback_snapshots_with_retained_A_equal_1_zero_column": 128,
+      "columns_delta_from_R04_per_feedback_snapshot": 1,
+      "nullity_delta_from_R04_per_feedback_snapshot": 1,
+      "global_plus_delta_from_R04_per_feedback_snapshot": 1,
+      "rows_rank_global_minus_non_global_unchanged": true,
+      "all_four_sequence_families_unchanged": true
+    }
+  },
+  "comparison": {
+    "status": "PASS",
+    "mismatch_total": 0,
+    "instances_compared": 64,
+    "stages_compared": 192,
+    "comparison_counts": {
+      "D01_block_hashes": 192,
+      "D01_candidate_hashes": 128,
+      "D01_exact_value_hashes": 192,
+      "D01_selected_column_hashes": 192,
+      "block_entries": 4323,
+      "candidate_entries": 15644,
+      "exact_value_entries": 3220,
+      "selected_column_entries": 3089
+    },
+    "normalized_sequence_sha256": {
+      "candidate": "96972dcb941ca98ed1fd45bda9e75cb5b5b79e27317d6b2f3767d60ba7b60f88",
+      "exact_value": "b17a5884e2017f2f47d2e3b268a1220d0aab6c6be2f69df7a2160373cefbd08c",
+      "block": "bda32c2be9c39b5616c168c250ca6a3596f4be6ecda20cee2015c785a17ea1df",
+      "selected_column": "23eaa0350432570c030c5648e6bc85401d3402a054482450686df61cf0d632df"
+    }
+  },
+  "output_paths": {
+    "reconstruction": "experiments/F165_recursive_section_feedback/f165_r06_v2_reconstruct_output.json",
+    "comparison": "experiments/F165_recursive_section_feedback/f165_r06_sequence_compare_output.json",
+    "log": "experiments/F165_recursive_section_feedback/f165_r06_run.log"
+  },
+  "scope": "Finite exact reconstruction only. No density, growing-depth, all-input success, or factoring conclusion."
+}

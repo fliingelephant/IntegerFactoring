@@ -1,0 +1,820 @@
+{
+  "claim_scope": "semantic equality of the complete ordered D01/R04 candidate, exact-value, block, and selected-column sequences, plus adjacent decoder-summary consistency; finite artifacts only",
+  "comparison_counts": {
+    "D01_block_hashes": 192,
+    "D01_candidate_hashes": 128,
+    "D01_exact_value_hashes": 192,
+    "D01_selected_column_hashes": 192,
+    "block_entries": 4323,
+    "candidate_entries": 15644,
+    "exact_value_entries": 3220,
+    "selected_column_entries": 3089
+  },
+  "experiment_id": "F165-R05",
+  "first_mismatch": {
+    "actual": 14,
+    "category": "decoder_summary",
+    "expected": 15,
+    "path": "instances[0].N=100160063.level_1.columns"
+  },
+  "frozen_input_sha256": {
+    "F165_R04_BLIND_RECONSTRUCTION.md": "dfcf023c8d9a011e758bdb36183b3351083ffc78bb98197f08b196ef18a5c321",
+    "F165_R04_V2_FIXED_DEPTH_PROOF_DRAFT.md": "39a36e862162d405d15943f59995010c1471e6af8baef6e2b7b9d7f984a9b380",
+    "MANIFEST.md": "df609f058087c0632e48f2d88192c8abca9d59032d8ad008ca1d74e9dbf8c50c",
+    "OUTPUT.json": "94ca36ee995819d384e260d50213105b58c3b91377b3a8e51ba155fa7b218dcc",
+    "RESULT.md": "04ff14f6f0664073565c36370308c610569518f84fbd005b8ad3f835edd717d3",
+    "V2_BLIND_STATEMENT.md": "1681967c7ac14b44361d58284716250e73a7f8bda15203f3bc2d6a4971139cdd",
+    "f165_r04_v2_blind_output.json": "f29dddd1893c81cde798425cacc40da0c619b1260a9763793973bb016881a56d",
+    "f165_r04_v2_blind_reconstruct.py": "a3b1a94440d3e6e580bccc6efe189a73a86adc366c4e617acc06a5a56377b42f",
+    "f165_r04_v2_blind_run.log": "da45648fe4dc2aaa8299564d2c85b47be3369e79d6c9d74e40aebed2944f8a9c",
+    "search.py": "2a7852f8438003f0db1dd49b7721d02ae2c1cfcea8b114f1e58cc69b74f04427"
+  },
+  "instances_compared": 64,
+  "limitations": [
+    "Cryptographic equality checks the frozen finite transcripts only.",
+    "This run proves no unbounded success or complexity theorem.",
+    "The fixed-depth proof is audited separately from this computation."
+  ],
+  "mismatch_counts": {
+    "decoder_summary": 384
+  },
+  "mismatch_examples": [
+    {
+      "actual": 14,
+      "category": "decoder_summary",
+      "expected": 15,
+      "path": "instances[0].N=100160063.level_1.columns"
+    },
+    {
+      "actual": 1,
+      "category": "decoder_summary",
+      "expected": 2,
+      "path": "instances[0].N=100160063.level_1.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[0].N=100160063.level_1.global_plus"
+    },
+    {
+      "actual": 14,
+      "category": "decoder_summary",
+      "expected": 15,
+      "path": "instances[0].N=100160063.level_2.columns"
+    },
+    {
+      "actual": 1,
+      "category": "decoder_summary",
+      "expected": 2,
+      "path": "instances[0].N=100160063.level_2.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[0].N=100160063.level_2.global_plus"
+    },
+    {
+      "actual": 13,
+      "category": "decoder_summary",
+      "expected": 14,
+      "path": "instances[1].N=100440259.level_1.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[1].N=100440259.level_1.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[1].N=100440259.level_1.global_plus"
+    },
+    {
+      "actual": 15,
+      "category": "decoder_summary",
+      "expected": 16,
+      "path": "instances[1].N=100440259.level_2.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[1].N=100440259.level_2.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[1].N=100440259.level_2.global_plus"
+    },
+    {
+      "actual": 14,
+      "category": "decoder_summary",
+      "expected": 15,
+      "path": "instances[2].N=100460273.level_1.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[2].N=100460273.level_1.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[2].N=100460273.level_1.global_plus"
+    },
+    {
+      "actual": 18,
+      "category": "decoder_summary",
+      "expected": 19,
+      "path": "instances[2].N=100460273.level_2.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[2].N=100460273.level_2.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[2].N=100460273.level_2.global_plus"
+    },
+    {
+      "actual": 16,
+      "category": "decoder_summary",
+      "expected": 17,
+      "path": "instances[3].N=100680427.level_1.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[3].N=100680427.level_1.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[3].N=100680427.level_1.global_plus"
+    },
+    {
+      "actual": 17,
+      "category": "decoder_summary",
+      "expected": 18,
+      "path": "instances[3].N=100680427.level_2.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[3].N=100680427.level_2.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[3].N=100680427.level_2.global_plus"
+    },
+    {
+      "actual": 11,
+      "category": "decoder_summary",
+      "expected": 12,
+      "path": "instances[4].N=100740469.level_1.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[4].N=100740469.level_1.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[4].N=100740469.level_1.global_plus"
+    },
+    {
+      "actual": 14,
+      "category": "decoder_summary",
+      "expected": 15,
+      "path": "instances[4].N=100740469.level_2.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[4].N=100740469.level_2.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[4].N=100740469.level_2.global_plus"
+    },
+    {
+      "actual": 9,
+      "category": "decoder_summary",
+      "expected": 10,
+      "path": "instances[5].N=100760483.level_1.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[5].N=100760483.level_1.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[5].N=100760483.level_1.global_plus"
+    },
+    {
+      "actual": 10,
+      "category": "decoder_summary",
+      "expected": 11,
+      "path": "instances[5].N=100760483.level_2.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[5].N=100760483.level_2.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[5].N=100760483.level_2.global_plus"
+    },
+    {
+      "actual": 16,
+      "category": "decoder_summary",
+      "expected": 17,
+      "path": "instances[6].N=100860553.level_1.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[6].N=100860553.level_1.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[6].N=100860553.level_1.global_plus"
+    },
+    {
+      "actual": 17,
+      "category": "decoder_summary",
+      "expected": 18,
+      "path": "instances[6].N=100860553.level_2.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[6].N=100860553.level_2.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[6].N=100860553.level_2.global_plus"
+    },
+    {
+      "actual": 11,
+      "category": "decoder_summary",
+      "expected": 12,
+      "path": "instances[7].N=100980637.level_1.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[7].N=100980637.level_1.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[7].N=100980637.level_1.global_plus"
+    },
+    {
+      "actual": 18,
+      "category": "decoder_summary",
+      "expected": 19,
+      "path": "instances[7].N=100980637.level_2.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[7].N=100980637.level_2.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[7].N=100980637.level_2.global_plus"
+    },
+    {
+      "actual": 19,
+      "category": "decoder_summary",
+      "expected": 20,
+      "path": "instances[8].N=101000651.level_1.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[8].N=101000651.level_1.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[8].N=101000651.level_1.global_plus"
+    },
+    {
+      "actual": 28,
+      "category": "decoder_summary",
+      "expected": 29,
+      "path": "instances[8].N=101000651.level_2.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[8].N=101000651.level_2.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[8].N=101000651.level_2.global_plus"
+    },
+    {
+      "actual": 14,
+      "category": "decoder_summary",
+      "expected": 15,
+      "path": "instances[9].N=101060693.level_1.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[9].N=101060693.level_1.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[9].N=101060693.level_1.global_plus"
+    },
+    {
+      "actual": 20,
+      "category": "decoder_summary",
+      "expected": 21,
+      "path": "instances[9].N=101060693.level_2.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[9].N=101060693.level_2.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[9].N=101060693.level_2.global_plus"
+    },
+    {
+      "actual": 23,
+      "category": "decoder_summary",
+      "expected": 24,
+      "path": "instances[10].N=101100721.level_1.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[10].N=101100721.level_1.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[10].N=101100721.level_1.global_plus"
+    },
+    {
+      "actual": 27,
+      "category": "decoder_summary",
+      "expected": 28,
+      "path": "instances[10].N=101100721.level_2.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[10].N=101100721.level_2.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[10].N=101100721.level_2.global_plus"
+    },
+    {
+      "actual": 20,
+      "category": "decoder_summary",
+      "expected": 21,
+      "path": "instances[11].N=101180777.level_1.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[11].N=101180777.level_1.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[11].N=101180777.level_1.global_plus"
+    },
+    {
+      "actual": 25,
+      "category": "decoder_summary",
+      "expected": 26,
+      "path": "instances[11].N=101180777.level_2.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[11].N=101180777.level_2.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[11].N=101180777.level_2.global_plus"
+    },
+    {
+      "actual": 17,
+      "category": "decoder_summary",
+      "expected": 18,
+      "path": "instances[12].N=101400931.level_1.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[12].N=101400931.level_1.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[12].N=101400931.level_1.global_plus"
+    },
+    {
+      "actual": 21,
+      "category": "decoder_summary",
+      "expected": 22,
+      "path": "instances[12].N=101400931.level_2.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[12].N=101400931.level_2.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[12].N=101400931.level_2.global_plus"
+    },
+    {
+      "actual": 13,
+      "category": "decoder_summary",
+      "expected": 14,
+      "path": "instances[13].N=101460973.level_1.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[13].N=101460973.level_1.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[13].N=101460973.level_1.global_plus"
+    },
+    {
+      "actual": 13,
+      "category": "decoder_summary",
+      "expected": 14,
+      "path": "instances[13].N=101460973.level_2.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[13].N=101460973.level_2.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[13].N=101460973.level_2.global_plus"
+    },
+    {
+      "actual": 11,
+      "category": "decoder_summary",
+      "expected": 12,
+      "path": "instances[14].N=101480987.level_1.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[14].N=101480987.level_1.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[14].N=101480987.level_1.global_plus"
+    },
+    {
+      "actual": 12,
+      "category": "decoder_summary",
+      "expected": 13,
+      "path": "instances[14].N=101480987.level_2.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[14].N=101480987.level_2.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[14].N=101480987.level_2.global_plus"
+    },
+    {
+      "actual": 16,
+      "category": "decoder_summary",
+      "expected": 17,
+      "path": "instances[15].N=101581057.level_1.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[15].N=101581057.level_1.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[15].N=101581057.level_1.global_plus"
+    },
+    {
+      "actual": 19,
+      "category": "decoder_summary",
+      "expected": 20,
+      "path": "instances[15].N=101581057.level_2.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[15].N=101581057.level_2.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[15].N=101581057.level_2.global_plus"
+    },
+    {
+      "actual": 25,
+      "category": "decoder_summary",
+      "expected": 26,
+      "path": "instances[16].N=101661113.level_1.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[16].N=101661113.level_1.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[16].N=101661113.level_1.global_plus"
+    },
+    {
+      "actual": 47,
+      "category": "decoder_summary",
+      "expected": 48,
+      "path": "instances[16].N=101661113.level_2.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[16].N=101661113.level_2.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[16].N=101661113.level_2.global_plus"
+    },
+    {
+      "actual": 19,
+      "category": "decoder_summary",
+      "expected": 20,
+      "path": "instances[17].N=101701141.level_1.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[17].N=101701141.level_1.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[17].N=101701141.level_1.global_plus"
+    },
+    {
+      "actual": 29,
+      "category": "decoder_summary",
+      "expected": 30,
+      "path": "instances[17].N=101701141.level_2.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[17].N=101701141.level_2.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[17].N=101701141.level_2.global_plus"
+    },
+    {
+      "actual": 13,
+      "category": "decoder_summary",
+      "expected": 14,
+      "path": "instances[18].N=101761183.level_1.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[18].N=101761183.level_1.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[18].N=101761183.level_1.global_plus"
+    },
+    {
+      "actual": 16,
+      "category": "decoder_summary",
+      "expected": 17,
+      "path": "instances[18].N=101761183.level_2.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[18].N=101761183.level_2.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[18].N=101761183.level_2.global_plus"
+    },
+    {
+      "actual": 11,
+      "category": "decoder_summary",
+      "expected": 12,
+      "path": "instances[19].N=101841239.level_1.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[19].N=101841239.level_1.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[19].N=101841239.level_1.global_plus"
+    },
+    {
+      "actual": 14,
+      "category": "decoder_summary",
+      "expected": 15,
+      "path": "instances[19].N=101841239.level_2.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[19].N=101841239.level_2.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[19].N=101841239.level_2.global_plus"
+    },
+    {
+      "actual": 15,
+      "category": "decoder_summary",
+      "expected": 16,
+      "path": "instances[20].N=101881267.level_1.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[20].N=101881267.level_1.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[20].N=101881267.level_1.global_plus"
+    },
+    {
+      "actual": 16,
+      "category": "decoder_summary",
+      "expected": 17,
+      "path": "instances[20].N=101881267.level_2.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[20].N=101881267.level_2.nullity"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[20].N=101881267.level_2.global_plus"
+    },
+    {
+      "actual": 15,
+      "category": "decoder_summary",
+      "expected": 16,
+      "path": "instances[21].N=102001351.level_1.columns"
+    },
+    {
+      "actual": 0,
+      "category": "decoder_summary",
+      "expected": 1,
+      "path": "instances[21].N=102001351.level_1.nullity"
+    }
+  ],
+  "mismatch_total": 384,
+  "normalized_sequence_sha256": {
+    "block": "bda32c2be9c39b5616c168c250ca6a3596f4be6ecda20cee2015c785a17ea1df",
+    "candidate": "96972dcb941ca98ed1fd45bda9e75cb5b5b79e27317d6b2f3767d60ba7b60f88",
+    "exact_value": "b17a5884e2017f2f47d2e3b268a1220d0aab6c6be2f69df7a2160373cefbd08c",
+    "selected_column": "23eaa0350432570c030c5648e6bc85401d3402a054482450686df61cf0d632df"
+  },
+  "stages_compared": 192,
+  "status": "FAIL"
+}

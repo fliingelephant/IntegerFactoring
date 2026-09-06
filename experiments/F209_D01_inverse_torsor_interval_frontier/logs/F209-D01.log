@@ -1,0 +1,76 @@
+preflight cpu_count=32 load_one=56.15 memory_available_kib=385835884 disk_available_kib=22588272
+   PID   PPID %CPU %MEM   RSS     ELAPSED COMMAND
+  2303    975  2.0  0.0 10636       00:01 sshd
+   960      1  1.9  0.0 17644    05:03:31 supervisord
+     1      0  0.0  0.0  3332    05:03:33 bash
+   975    960  0.0  0.0  9464    05:03:30 sshd
+   978    960  0.0  0.0 99580    05:03:30 jupyter-lab
+   979    960  0.0  0.0 17552    05:03:30 proxy
+   980    960  0.0  0.0 85116    05:03:30 autopanel
+   981    960  0.0  0.0 79792    05:03:30 tensorboard
+   984    960  0.0  0.0 17564    05:03:30 proxy
+  1066    981  0.0  0.0  8408    05:03:29 server
+  2314   2303  0.0  0.0  3404       00:00 bash
+  2316   2314  0.0  0.0  1896       00:00 bash
+  2318   2316  0.0  0.0  1036       00:00 tee
+  2327   2314  0.0  0.0  1560       00:00 ps
+{"event": "start", "run_id": "F209-D01", "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]", "sympy": "1.14.0", "arguments": {"output": "/root/IntegerFactoring_F209/F209-D01/output/F209-D01.json", "rows": "/root/IntegerFactoring_F209/F209-D01/output/F209-D01.rows.jsonl.gz", "train_count": 256, "holdout_count": 64, "small_p_limit": 1000, "max_p_representatives": 2000000}}
+{"event": "datasets", "identity": {"paired_train": {"count": 256, "attempts": 503, "seed": 20501, "bits": [12, 17], "pair_sha256": "be10d5184ea0024f3f05ea435da50a4c6f7464ed447a9da534f32ee3bd7edfdf"}, "paired_holdout": {"count": 64, "attempts": 119, "seed": 20502, "bits": [18, 23], "pair_sha256": "781d8bfba98edf7c95e7c51f6370bc439144846acf4d07fcb3d387e7af1c25aa"}, "small_exhaustive": {"count": 5570, "p_limit": 1000, "pair_sha256": "0068c5479b7ca7b1054142d682376c6f001f6fb2fcdc9d582025cdceea2317c3"}, "frozen_witnesses": {"count": 4, "pair_sha256": "61b12793dae6e52ab8b78a252941e6c2857f0cb7079453985b9259c6affc5741"}}}
+{"event": "progress", "cohort": "paired_train", "completed": 100, "total": 256, "elapsed_seconds": 5.286}
+{"event": "progress", "cohort": "paired_train", "completed": 200, "total": 256, "elapsed_seconds": 10.848}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 100, "total": 5570, "elapsed_seconds": 0.049}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 200, "total": 5570, "elapsed_seconds": 0.236}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 300, "total": 5570, "elapsed_seconds": 0.308}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 400, "total": 5570, "elapsed_seconds": 0.382}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 500, "total": 5570, "elapsed_seconds": 0.459}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 600, "total": 5570, "elapsed_seconds": 0.546}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 700, "total": 5570, "elapsed_seconds": 0.635}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 800, "total": 5570, "elapsed_seconds": 0.724}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 900, "total": 5570, "elapsed_seconds": 0.813}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 1000, "total": 5570, "elapsed_seconds": 0.908}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 1100, "total": 5570, "elapsed_seconds": 1.002}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 1200, "total": 5570, "elapsed_seconds": 1.101}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 1300, "total": 5570, "elapsed_seconds": 1.191}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 1400, "total": 5570, "elapsed_seconds": 1.288}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 1500, "total": 5570, "elapsed_seconds": 1.606}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 1600, "total": 5570, "elapsed_seconds": 1.715}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 1700, "total": 5570, "elapsed_seconds": 1.83}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 1800, "total": 5570, "elapsed_seconds": 1.946}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 1900, "total": 5570, "elapsed_seconds": 2.058}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 2000, "total": 5570, "elapsed_seconds": 2.173}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 2100, "total": 5570, "elapsed_seconds": 2.29}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 2200, "total": 5570, "elapsed_seconds": 2.408}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 2300, "total": 5570, "elapsed_seconds": 2.526}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 2400, "total": 5570, "elapsed_seconds": 2.644}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 2500, "total": 5570, "elapsed_seconds": 2.76}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 2600, "total": 5570, "elapsed_seconds": 3.207}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 2700, "total": 5570, "elapsed_seconds": 3.334}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 2800, "total": 5570, "elapsed_seconds": 3.461}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 2900, "total": 5570, "elapsed_seconds": 3.59}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 3000, "total": 5570, "elapsed_seconds": 3.719}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 3100, "total": 5570, "elapsed_seconds": 3.847}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 3200, "total": 5570, "elapsed_seconds": 3.973}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 3300, "total": 5570, "elapsed_seconds": 4.104}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 3400, "total": 5570, "elapsed_seconds": 4.231}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 3500, "total": 5570, "elapsed_seconds": 4.365}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 3600, "total": 5570, "elapsed_seconds": 4.504}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 3700, "total": 5570, "elapsed_seconds": 5.113}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 3800, "total": 5570, "elapsed_seconds": 5.247}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 3900, "total": 5570, "elapsed_seconds": 5.38}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 4000, "total": 5570, "elapsed_seconds": 5.511}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 4100, "total": 5570, "elapsed_seconds": 5.647}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 4200, "total": 5570, "elapsed_seconds": 5.778}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 4300, "total": 5570, "elapsed_seconds": 5.917}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 4400, "total": 5570, "elapsed_seconds": 6.065}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 4500, "total": 5570, "elapsed_seconds": 6.211}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 4600, "total": 5570, "elapsed_seconds": 6.368}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 4700, "total": 5570, "elapsed_seconds": 6.518}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 4800, "total": 5570, "elapsed_seconds": 6.664}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 4900, "total": 5570, "elapsed_seconds": 7.292}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 5000, "total": 5570, "elapsed_seconds": 7.44}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 5100, "total": 5570, "elapsed_seconds": 7.598}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 5200, "total": 5570, "elapsed_seconds": 7.76}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 5300, "total": 5570, "elapsed_seconds": 7.909}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 5400, "total": 5570, "elapsed_seconds": 8.056}
+{"event": "progress", "cohort": "small_exhaustive", "completed": 5500, "total": 5570, "elapsed_seconds": 8.207}
+{"event": "complete", "output": "/root/IntegerFactoring_F209/F209-D01/output/F209-D01.json", "rows": "/root/IntegerFactoring_F209/F209-D01/output/F209-D01.rows.jsonl.gz", "elapsed_seconds": 243.796, "classification": "strong_finite_geometry_lead", "integrity_failures": 0}

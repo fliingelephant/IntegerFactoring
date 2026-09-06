@@ -1,0 +1,18 @@
+START_UTC 2026-08-13T17:57:05Z
+HOST Linux autodl-container-d9694eab60-f7a6b268 5.4.0-153-generic #170-Ubuntu SMP Fri Jun 16 13:43:31 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+CPUS 128
+LOAD 76.51 79.66 76.58 89/3598 10621
+               total        used        free      shared  buff/cache   available
+Mem:           503Gi       127Gi       111Gi       4.1Gi       264Gi       367Gi
+Swap:             0B          0B          0B
+Filesystem      Size  Used Avail Use% Mounted on
+overlay          30G  9.0G   22G  30% /
+GXX 11.4.0
+WORKERS 2
+F261_V2_SELF_TEST_PASS N=11009 tie=1 negative=1 r1=1 median=1 product=1 workers=1 oracle=1
+PREFLIGHT_INNER iterations=20000000 seconds=4.11119 sink=76861433642113842 requested_workers=2 parallel_efficiency=0.75 projected_scan_seconds=292.716
+PREFLIGHT_GENERATION cohort=random attempts=2000000 hits=1589 seconds=0.883956
+PREFLIGHT_GENERATION cohort=close attempts=5000000 hits=338 seconds=2.20982
+PREFLIGHT_GENERATION cohort=edge attempts=2000000 hits=58 seconds=0.908403
+PREFLIGHT_GENERATION cohort=safe attempts=20000000 hits=3 seconds=8.58624
+PREFLIGHT_PROJECTED_SECONDS conservative=594.76 limit=14400

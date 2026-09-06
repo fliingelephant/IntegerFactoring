@@ -1,0 +1,23 @@
+2026-08-13T19:11:20Z
+32
+60.08 61.35 63.39 57/3528 11432
+               total        used        free      shared  buff/cache   available
+Mem:           503Gi       127Gi       112Gi       4.1Gi       264Gi       367Gi
+Swap:             0B          0B          0B
+Filesystem      Size  Used Avail Use% Mounted on
+overlay          30G  9.0G   22G  30% /
+   PID  NI PSR %CPU %MEM   RSS     ELAPSED COMMAND
+   960   0 121  1.9  0.0 17644  1-05:55:19 /bin/supervisord -c /init/supervisor/supervisor.ini
+   980   0 107  0.1  0.0 86620  1-05:55:18 autopanel serve --work-dir=/root/autodl-tmp --cache-dir=/root/autodl-tmp
+     1   0 107  0.0  0.0  3332  1-05:55:21 bash /init/boot/boot.sh
+   975   0 111  0.0  0.0  9464  1-05:55:18 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+   978   0  99  0.0  0.0 99580  1-05:55:18 /root/miniconda3/bin/python /root/miniconda3/bin/jupyter-lab --allow-root --config=/init/jupyter/jupyter_config.py
+   979   0 107  0.0  0.0 17580  1-05:55:18 proxy -c /init/proxy/proxy.ini
+   981   0 102  0.0  0.0 79792  1-05:55:18 /root/miniconda3/bin/python /root/miniconda3/bin/tensorboard --host 0.0.0.0 --port 6007 --logdir /root/tf-logs
+   984   0 104  0.0  0.0 17312  1-05:55:18 proxy -c /init/proxy/proxy-hot-backup.ini
+  1066   0 110  0.0  0.0  8408  1-05:55:17 /root/miniconda3/lib/python3.12/site-packages/tensorboard_data_server/bin/server --logdir=/root/tf-logs --reload=5 --samples-per-plugin= --port=0 --port-file=/tmp/tensorboard_data_server_ex19oq5u/port --die-after-stdin --error-file=/tmp/tensorboard_data_server_ex19oq5u/startup_error
+ 10860   0 108  0.0  0.0 10588       55:50 sshd: root@notty
+ 10872   0 100  0.0  0.0   252       55:50 bash -c cd /root/IntegerFactoring_F265/F265-D02 && nohup bash remote_run.sh >/tmp/F265-D02.launch.log 2>&1 & echo $!
+ 10873   0 125  0.0  0.0  3428       55:50 bash remote_run.sh
+ 11435   0 102  0.0  0.0  1540       00:00 ps -eo pid,ni,psr,pcpu,pmem,rss,etime,args --sort=-pcpu
+ 11436   0 107  0.0  0.0  1048       00:00 head -n 32

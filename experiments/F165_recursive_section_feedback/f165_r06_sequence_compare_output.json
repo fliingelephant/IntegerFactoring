@@ -1,0 +1,51 @@
+{
+  "claim_scope": "semantic equality of the complete ordered D01/R06 candidate, exact-value, block, and selected-column sequences, plus adjacent decoder-summary consistency; finite artifacts only",
+  "comparison_counts": {
+    "D01_block_hashes": 192,
+    "D01_candidate_hashes": 128,
+    "D01_exact_value_hashes": 192,
+    "D01_selected_column_hashes": 192,
+    "block_entries": 4323,
+    "candidate_entries": 15644,
+    "exact_value_entries": 3220,
+    "selected_column_entries": 3089
+  },
+  "decoder_correction_counts": {
+    "base_snapshots_unchanged": 64,
+    "feedback_snapshots_with_retained_A_equal_1_zero_column": 128
+  },
+  "experiment_id": "F165-R06",
+  "first_mismatch": null,
+  "frozen_input_sha256": {
+    "F165_R04_V2_FIXED_DEPTH_PROOF_DRAFT.md": "39a36e862162d405d15943f59995010c1471e6af8baef6e2b7b9d7f984a9b380",
+    "F165_R05_SEQUENCE_COMPARISON_FAILURE.md": "ef36a2c90a556d6d917ac9087c066487ca51fd3161a7b6b1bdf67d4431d0cc97",
+    "F165_R06_EXPECTED_OUTPUTS.json": "f4b066fbb1580a67846538c2381e9b7a377ad00225b9116fa3aaffa709eb1c68",
+    "MANIFEST.md": "df609f058087c0632e48f2d88192c8abca9d59032d8ad008ca1d74e9dbf8c50c",
+    "OUTPUT.json": "94ca36ee995819d384e260d50213105b58c3b91377b3a8e51ba155fa7b218dcc",
+    "RESULT.md": "04ff14f6f0664073565c36370308c610569518f84fbd005b8ad3f835edd717d3",
+    "V2_BLIND_STATEMENT.md": "1681967c7ac14b44361d58284716250e73a7f8bda15203f3bc2d6a4971139cdd",
+    "f165_r04_v2_blind_output.json": "f29dddd1893c81cde798425cacc40da0c619b1260a9763793973bb016881a56d",
+    "f165_r04_v2_blind_reconstruct.py": "a3b1a94440d3e6e580bccc6efe189a73a86adc366c4e617acc06a5a56377b42f",
+    "f165_r05_sequence_compare.py": "2dcb4e871b890c16c575f2c0168295c757e40187b514a0d1c223a7034f85e397",
+    "f165_r05_sequence_compare_output.json": "9b61f73aa8b860ae6741b868edc1acaf309ce57f75e895c8a71dc3b637fba080",
+    "f165_r06_v2_reconstruct.py": "252123931d35856febfd93c07c8e22072564bf6310d75093d5eb169a07f09838",
+    "search.py": "2a7852f8438003f0db1dd49b7721d02ae2c1cfcea8b114f1e58cc69b74f04427"
+  },
+  "instances_compared": 64,
+  "limitations": [
+    "Cryptographic equality checks the frozen finite transcripts only.",
+    "This run proves no unbounded success or complexity theorem.",
+    "The fixed-depth proof is audited separately from this computation."
+  ],
+  "mismatch_counts": {},
+  "mismatch_examples": [],
+  "mismatch_total": 0,
+  "normalized_sequence_sha256": {
+    "block": "bda32c2be9c39b5616c168c250ca6a3596f4be6ecda20cee2015c785a17ea1df",
+    "candidate": "96972dcb941ca98ed1fd45bda9e75cb5b5b79e27317d6b2f3767d60ba7b60f88",
+    "exact_value": "b17a5884e2017f2f47d2e3b268a1220d0aab6c6be2f69df7a2160373cefbd08c",
+    "selected_column": "23eaa0350432570c030c5648e6bc85401d3402a054482450686df61cf0d632df"
+  },
+  "stages_compared": 192,
+  "status": "PASS"
+}

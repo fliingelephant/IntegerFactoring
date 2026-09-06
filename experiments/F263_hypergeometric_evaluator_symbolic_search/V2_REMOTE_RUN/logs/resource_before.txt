@@ -1,0 +1,23 @@
+2026-08-13T17:29:49Z
+32
+55.62 56.82 57.63 57/3524 10218
+               total        used        free      shared  buff/cache   available
+Mem:           503Gi       127Gi       112Gi       4.1Gi       264Gi       367Gi
+Swap:             0B          0B          0B
+Filesystem      Size  Used Avail Use% Mounted on
+overlay          30G  9.0G   22G  30% /
+   PID  NI PSR %CPU %MEM   RSS     ELAPSED COMMAND
+   960   0 121  1.9  0.0 17644  1-04:13:47 /bin/supervisord -c /init/supervisor/supervisor.ini
+   980   0 107  0.1  0.0 86360  1-04:13:46 autopanel serve --work-dir=/root/autodl-tmp --cache-dir=/root/autodl-tmp
+     1   0 107  0.0  0.0  3332  1-04:13:49 bash /init/boot/boot.sh
+   975   0 111  0.0  0.0  9464  1-04:13:46 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+   978   0  99  0.0  0.0 99580  1-04:13:46 /root/miniconda3/bin/python /root/miniconda3/bin/jupyter-lab --allow-root --config=/init/jupyter/jupyter_config.py
+   979   0 111  0.0  0.0 17600  1-04:13:46 proxy -c /init/proxy/proxy.ini
+   981   0 123  0.0  0.0 79792  1-04:13:46 /root/miniconda3/bin/python /root/miniconda3/bin/tensorboard --host 0.0.0.0 --port 6007 --logdir /root/tf-logs
+   984   0 107  0.0  0.0 17368  1-04:13:46 proxy -c /init/proxy/proxy-hot-backup.ini
+  1066   0 110  0.0  0.0  8408  1-04:13:45 /root/miniconda3/lib/python3.12/site-packages/tensorboard_data_server/bin/server --logdir=/root/tf-logs --reload=5 --samples-per-plugin= --port=0 --port-file=/tmp/tensorboard_data_server_ex19oq5u/port --die-after-stdin --error-file=/tmp/tensorboard_data_server_ex19oq5u/startup_error
+ 10197   0 126  0.0  0.0 10736       00:00 sshd: root@notty
+ 10209   0 103  0.0  0.0   252       00:00 bash -c cd /root/IntegerFactoring_F263_V2/F263-D02 && nohup bash V2_remote_run.sh >/tmp/F263-D02.launch.log 2>&1 & echo $!
+ 10210   0 104  0.0  0.0  3360       00:00 bash V2_remote_run.sh
+ 10221   0 121  0.0  0.0  1592       00:00 ps -eo pid,ni,psr,pcpu,pmem,rss,etime,args --sort=-pcpu
+ 10222   0 127  0.0  0.0  1044       00:00 head -n 32

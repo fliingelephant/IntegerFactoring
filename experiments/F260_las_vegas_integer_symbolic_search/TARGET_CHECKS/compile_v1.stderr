@@ -1,0 +1,7 @@
+search.cpp: In function ‘std::vector<boost::multiprecision::number<boost::multiprecision::backends::cpp_int_backend<> > > transform_sequence(const std::vector<boost::multiprecision::number<boost::multiprecision::backends::cpp_int_backend<> > >&, Transform)’:
+search.cpp:456:28: error: operands to ‘?:’ have different types ‘int’ and ‘boost::multiprecision::detail::expression<boost::multiprecision::detail::divide_immediates, boost::multiprecision::number<boost::multiprecision::backends::cpp_int_backend<> >, boost::multiprecision::number<boost::multiprecision::backends::cpp_int_backend<> >, void, void>’
+  456 |       out.push_back(b == 0 ? 0 : a / b);
+      |                     ~~~~~~~^~~~~~~~~~~
+search.cpp:460:28: error: operands to ‘?:’ have different types ‘int’ and ‘boost::enable_if_c<true, boost::multiprecision::detail::expression<boost::multiprecision::detail::modulus_immediates, boost::multiprecision::number<boost::multiprecision::backends::cpp_int_backend<> >, boost::multiprecision::number<boost::multiprecision::backends::cpp_int_backend<> >, void, void> >::type’ {aka ‘boost::multiprecision::detail::expression<boost::multiprecision::detail::modulus_immediates, boost::multiprecision::number<boost::multiprecision::backends::cpp_int_backend<> >, boost::multiprecision::number<boost::multiprecision::backends::cpp_int_backend<> >, void, void>’}
+  460 |       out.push_back(b == 0 ? 0 : a % b);
+      |                     ~~~~~~~^~~~~~~~~~~

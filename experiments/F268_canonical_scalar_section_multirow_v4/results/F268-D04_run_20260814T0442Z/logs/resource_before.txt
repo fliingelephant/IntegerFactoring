@@ -1,0 +1,21 @@
+2026-08-13T20:49:36Z
+32
+57.79 58.29 57.67 57/3524 12522
+MemTotal:       528066044 kB
+MemAvailable:   385805592 kB
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/md0         50G  2.7M   50G   1% /root/autodl-tmp
+   PID  NI PSR %CPU %MEM   RSS     ELAPSED COMMAND
+   960   0 121  1.9  0.0 17644  1-07:33:34 /bin/supervisord -c /init/supervisor/supervisor.ini
+   980   0 107  0.1  0.0 86880  1-07:33:33 autopanel serve --work-dir=/root/autodl-tmp --cache-dir=/root/autodl-tmp
+     1   0 107  0.0  0.0  3332  1-07:33:36 bash /init/boot/boot.sh
+   975   0 104  0.0  0.0  9464  1-07:33:33 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+   978   0  99  0.0  0.0 99580  1-07:33:33 /root/miniconda3/bin/python /root/miniconda3/bin/jupyter-lab --allow-root --config=/init/jupyter/jupyter_config.py
+   979   0 126  0.0  0.0 17136  1-07:33:33 proxy -c /init/proxy/proxy.ini
+   981   0 126  0.0  0.0 79792  1-07:33:33 /root/miniconda3/bin/python /root/miniconda3/bin/tensorboard --host 0.0.0.0 --port 6007 --logdir /root/tf-logs
+   984   0 107  0.0  0.0 17312  1-07:33:33 proxy -c /init/proxy/proxy-hot-backup.ini
+  1066   0 110  0.0  0.0  8408  1-07:33:32 /root/miniconda3/lib/python3.12/site-packages/tensorboard_data_server/bin/server --logdir=/root/tf-logs --reload=5 --samples-per-plugin= --port=0 --port-file=/tmp/tensorboard_data_server_ex19oq5u/port --die-after-stdin --error-file=/tmp/tensorboard_data_server_ex19oq5u/startup_error
+ 12488   0 110  0.0  0.0 10440       00:00 sshd: root@notty
+ 12499   0 120  0.0  0.0  3408       00:00 bash ./remote_run.sh /root/autodl-tmp/F268-D04_run_20260814T0442Z
+ 12526   0 121  0.0  0.0  1592       00:00 ps -eo pid,ni,psr,pcpu,pmem,rss,etime,args --sort=-pcpu
+ 12527   0 122  0.0  0.0  1124       00:00 sed -n 1,32p

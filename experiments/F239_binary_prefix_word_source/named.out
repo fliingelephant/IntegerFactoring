@@ -1,0 +1,55 @@
+PREREG_SHA256 0ae27d2388282828ca10150d13abe5213a81d718f1a7d28d9eb899579dd5f412
+
+PREREG_CORRIGENDUM_SHA256 ddea9130f780d44acf7234628fbb6cd646227359c6a3b6eafa92420ae608b2cd
+
+ROW F236_combined_word_worst
+p=4190987 q=4243619 N=17784952061953 n=45 d=2
+literal_K_n=0 literal_word=0 valid_F238_word=no
+sp=2095493 (2095493)
+sq=2121809 (2121809)
+comparison=published F236 combined-word minimum residual 2095493
+  side=p ell=2095493 K=[] R=[] C=[]
+  side=q ell=2121809 K=[] R=[] C=[]
+  menu=K rp=2095493 rq=2121809 min=2095493 bitlen_bounds=[42571,44550]
+  menu=R rp=2095493 rq=2121809 min=2095493 bitlen_bounds=[32581,34605]
+  menu=C rp=2095493 rq=2121809 min=2095493 bitlen_bounds=[31816,33840]
+  menu=KR rp=2095493 rq=2121809 min=2095493 bitlen_bounds=[75151,79155]
+  menu=KC rp=2095493 rq=2121809 min=2095493 bitlen_bounds=[74386,78390]
+  menu=RC rp=2095493 rq=2121809 min=2095493 bitlen_bounds=[64396,68445]
+  menu=KRC rp=2095493 rq=2121809 min=2095493 bitlen_bounds=[106966,112995]
+
+ROW F236_cubic_carry_worst
+p=3565721 q=6646697 N=23700267073537 n=45 d=8
+literal_K_n=0 literal_word=0 valid_F238_word=no
+sp=445715 (5*97*919)
+sq=830837 (7*118691)
+comparison=published F236 best cubic-cap carry magnitude 14
+  side=p ell=5 K=[27, 28, 29, 41, 42] R=[35] C=[30, 40, 41, 45]
+  side=p ell=97 K=[] R=[] C=[]
+  side=p ell=919 K=[] R=[] C=[]
+  side=q ell=7 K=[34, 40] R=[27, 28, 29, 35, 41, 42] C=[28, 29, 42]
+  side=q ell=118691 K=[] R=[] C=[]
+  menu=K rp=89143 rq=118691 min=89143 bitlen_bounds=[42571,44550]
+  menu=R rp=89143 rq=118691 min=89143 bitlen_bounds=[30286,32310]
+  menu=C rp=89143 rq=118691 min=89143 bitlen_bounds=[29611,31635]
+  menu=KR rp=89143 rq=118691 min=89143 bitlen_bounds=[72856,76860]
+  menu=KC rp=89143 rq=118691 min=89143 bitlen_bounds=[72181,76185]
+  menu=RC rp=89143 rq=118691 min=89143 bitlen_bounds=[59896,63945]
+  menu=KRC rp=89143 rq=118691 min=89143 bitlen_bounds=[102466,108495]
+
+ROW F237_power_word_obstruction
+p=15187245471009208343 q=26569391171797958567 N=403515865741360589240927487586184724481 n=129 d=2
+literal_K_n=0 literal_word=0 valid_F238_word=no
+sp=7593622735504604171 (7593622735504604171)
+sq=13284695585898979283 (37*359045826645918359)
+comparison=published F237 power-word minimum residual >2^58
+  side=p ell=7593622735504604171 K=[] R=[] C=[]
+  side=q ell=37 K=[123] R=[66, 67, 102, 103, 104, 105, 106] C=[67, 103, 104, 105, 106]
+  side=q ell=359045826645918359 K=[] R=[] C=[]
+  menu=K rp=7593622735504604171 rq=359045826645918359 min=359045826645918359 bitlen_bounds=[1048513,1065024]
+  menu=R rp=7593622735504604171 rq=359045826645918359 min=359045826645918359 bitlen_bounds=[798898,815538]
+  menu=C rp=7593622735504604171 rq=359045826645918359 min=359045826645918359 bitlen_bounds=[790771,807411]
+  menu=KR rp=7593622735504604171 rq=359045826645918359 min=359045826645918359 bitlen_bounds=[1847410,1880562]
+  menu=KC rp=7593622735504604171 rq=359045826645918359 min=359045826645918359 bitlen_bounds=[1839283,1872435]
+  menu=RC rp=7593622735504604171 rq=359045826645918359 min=359045826645918359 bitlen_bounds=[1589668,1622949]
+  menu=KRC rp=7593622735504604171 rq=359045826645918359 min=359045826645918359 bitlen_bounds=[2638180,2687973]

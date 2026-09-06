@@ -1,0 +1,20 @@
+V2_search.cpp: In function ‘void write_inverse_studies(const std::vector<InputResult>&, const string&)’:
+V2_search.cpp:816:65: warning: conversion from ‘u128’ {aka ‘__int128 unsigned’} to ‘u64’ {aka ‘long unsigned int’} may change value [-Wconversion]
+  816 |         const u64 index = (start + static_cast<u128>(j) * step) & (map_size - 1);
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+V2_search.cpp: In function ‘void preflight(int)’:
+V2_search.cpp:1205:78: warning: conversion from ‘long unsigned int’ to ‘double’ may change value [-Wconversion]
+ 1205 |         const double rate = static_cast<double>(hits) / bench_attempts[cohort];
+      |                                                         ~~~~~~~~~~~~~~~~~~~~~^
+V2_search.cpp:1206:71: warning: conversion from ‘long unsigned int’ to ‘double’ may change value [-Wconversion]
+ 1206 |         generation_projection += 4.0 * elapsed / bench_attempts[cohort]
+      |                                                  ~~~~~~~~~~~~~~~~~~~~~^
+V2_search.cpp: In lambda function:
+V2_search.cpp:1260:35: warning: conversion from ‘long unsigned int’ to ‘double’ may change value [-Wconversion]
+ 1260 |                   << "s rate=" << completed / elapsed << "/s\n";
+      |                                   ^~~~~~~~~
+V2_search.cpp: At global scope:
+V2_search.cpp:89:20: warning: ‘std::string string_s128(s128)’ defined but not used [-Wunused-function]
+   89 | static std::string string_s128(s128 x) {
+      |                    ^~~~~~~~~~~
+F261_D02_FAIL cohort attempt cap exhausted: close f=16

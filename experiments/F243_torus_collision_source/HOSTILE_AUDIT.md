@@ -1,0 +1,488 @@
+# F243 hostile audit
+
+## Verdict
+
+**PASS for the mathematical claims, with explicit interface and workflow
+qualifications.**
+
+I found no counterexample to the theorem-level claims.  The support identity,
+collision bridge, local counts, canonical-coordinate bounds, harmonic bound,
+and Pell endpoint all reconstruct.  The result remains conditional on the
+imported clean F242 powered-factor interface and, in its positive divisor
+branch, on a granted complete factorization of (N^2-1).
+
+The numerical artifacts are internally consistent and all listed hashes
+authenticate.  They are still finite guidance.  The frozen files do not by
+themselves certify that execution occurred remotely or that the resource
+pilot preceded the full run.  The raw report also omitted the Wilson
+intervals requested by the runtime preregistration; the later analysis gives
+only one representative interval.  These are workflow-evidence limitations,
+not defects in the mathematical proof.
+
+## Authentication
+
+I authenticated every item listed in `MANIFEST.md` before opening its
+mathematical content:
+
+| Artifact | SHA-256 | Result |
+|---|---|---|
+| `STATEMENT.md` | `569b32183ae53bb687dc2cd5453e6d4e769bcf2ae7bd16e957e2d5da52db6488` | match |
+| `PROOF.md` | `8bf76e78037bd3631016be24db7d45d6abc5603d8b86b20185bec6b0ac3d7a97` | match |
+| `SELF_AUDIT.md` | `375a153715d5f42817d56486a6e8e19f447fa5417427d0933356f637903d492f` | match |
+| `PROVENANCE.md` | `7d961e6031d7313f547ef590cc28110560886718dc547578dde51c6bd3cc1c4c` | match |
+| `PREREGISTRATION.md` | `0b2eab3ad6780974ed3182d5de84e915074b6ddf0574b146016c4c6238d36593` | match |
+| `PREREGISTRATION_R1.md` | `22e223393ca7b69eb592a9a954fda637ab93259f64668b6a14a39177d1bda794` | match |
+| `R1_STATUS.md` | `6dbd683ce2947db6f8517b3197cfae0bef796cf47962465bee9d504a94cfd6d3` | match |
+| `PREREGISTRATION_R2.md` | `542ba7bc1ccc7ed22519b1a3b815df7a2e85c220749dfc9a0a738e5a0955698a` | match |
+| `verify.cpp` | `139351e7432afc885e8b1a114fdba97d7cc992cc16d80528e1a45db41760cb63` | match |
+| `R2_REPORT.md` | `59ef5d79b7cc743f32e944d1674a65d5b90c729bb7eb7c6b0ba38f7d6b6e73ae` | match |
+| `NUMERICAL_ANALYSIS.md` | `8e9dbea585382a1e04119acb593ef814168a24849ef336d43f6f2214b15102cf` | match |
+| `R2.tsv.gz` | `cfccda1386e7f98277c0860f9616b51c265b4c72f11b397588427129b7139b1e` | match |
+| decompressed `R2.tsv` byte stream | `5ec0d488a50952af7e2a59f59ef08aacc29bf4c952f5f779ca04a37d8b20a4e4` | match |
+
+The standalone uncompressed TSV is not present.  Its manifest digest matches
+the decompressed byte stream of the authenticated gzip file.
+
+## 1. Universal baseline: reconstructed
+
+Fix an orientation and write
+
+\[
+m_p=p-\epsilon_p,qquad m_q=q-\epsilon_q,qquad
+d=\gcd(m_p,m_q),qquad s_i=m_i/d.
+\]
+
+Modulo (m_p),
+
+\[
+N-\epsilon_p\epsilon_q
+\equiv \epsilon_p(q-\epsilon_q),
+\]
+
+so
+
+\[
+\gcd(N-\epsilon_p\epsilon_q,m_p)
+=\gcd(q-\epsilon_q,p-\epsilon_p)=d.
+\]
+
+The (q)-side identity is symmetric.  Prime by prime, this exact base gcd
+implies that appending a public word (W) leaves
+
+\[
+r_i=\frac{s_i}{\gcd(s_i,W)}.
+\]
+
+If (ell^e\parallel s_i), then (s_i<N<2^n), hence (e<n).  Therefore
+((N^2-1)^n) removes the entire (ell)-primary part exactly when
+(ell\mid N^2-1), and removes none of it otherwise.  This proves
+
+\[
+r_{i,\epsilon}=s_{i,\epsilon}^{\rm ext}.
+\]
+
+The word has bit length
+
+\[
+n\log_2(N^2-1)<2n^2.
+\]
+
+For odd (ell\mid p-\epsilon_p), one has (p^2\equiv1\pmod\ell), so
+
+\[
+N^2-1\equiv q^2-1\pmod\ell.
+\]
+
+Over the odd prime field, (q^2=1) is equivalent to (q=\pm1).  Thus
+
+\[
+\ell\mid N^2-1
+\quad\Longleftrightarrow\quad
+\ell\mid q-1\text{ or }q+1.
+\]
+
+The prime (2) always divides (N^2-1), so it cannot survive in an
+exterior part.  The advertised simultaneous cross-sign stripping is exact;
+it supplies no size bound on the exterior part.
+
+## 2. Collision bank and the (1/16) bridge: reconstructed
+
+Let (ell^e\parallel s), where (s<N).  If a retained difference
+(Delta) is divisible by (ell), then (e<n) implies
+(ell^e\mid\Delta^n).  Replacing an exact zero difference by (1) is
+essential: it prevents the discarded equality atom from being counted as a
+support hit.
+
+If each prime in one fixed exterior residual has
+(kappa_\ell\ge1/Q(n)), then (R) independent differences miss a fixed
+prime with probability at most
+
+\[
+(1-1/Q)^R\le e^{-R/Q}.
+\]
+
+There are fewer than (n) distinct prime divisors of a positive integer
+below (N<2^n).  With
+
+\[
+R=\lceil Q(n)\log(2n)\rceil,
+\]
+
+the union bound makes the chance of missing any prime less than (1/2).
+On the complementary event, the baseline and collision bank absorb the
+whole selected shifted order.
+
+For the granted factored law, write
+
+\[
+N^2-1=\prod_j b_j^{a_j},\qquad T=\prod_j(a_j+1).
+\]
+
+A uniform divisor is obtained by choosing the exponents independently and
+uniformly.  Modulo an exterior prime (ell), its reduction is supported in
+the subgroup generated by the (b_j), of size (h_\ell).  If (mu) is
+the reduction law, Cauchy--Schwarz gives
+
+\[
+\sum_x\mu(x)^2\ge1/h_\ell.
+\]
+
+All (T) divisors are distinct integers, so the exact-equality mass is
+(1/T).  Hence
+
+\[
+\kappa_\ell=\sum_x\mu(x)^2-1/T
+\ge1/h_\ell-1/T.
+\]
+
+In particular, (h_\ell\le Q/2) and (T\ge Q) give
+(kappa_\ell\ge1/Q).
+
+The three losses in the final bridge are separate:
+
+1. the bank saturates the selected residual with probability at least
+   (1/2);
+2. a fresh exact uniform unit discriminant has the selected Legendre-sign
+   pair with probability (1/4);
+3. once one local residual is (1), the imported clean F242
+   powered-factor routine succeeds with probability at least (1/2).
+
+The bank is sampled before, and independently of, the discriminant.  Their
+product is (1/16).
+
+The third item is an interface dependency, not a theorem reproved in this
+packet.  It is consistent with the standard local argument: one side is
+always annihilated; if the other is not, the final gcd splits, while if both
+are annihilated, the two-adic ladder supplies the usual conditional split
+probability.  Without the clean F242 uniformity and powering guarantee, the
+first two facts alone would not prove (1/16).
+
+Every retained difference is strictly below (N^2-1), and the baseline is
+((N^2-1)^n).  The total word length is
+(O((R+1)n^2)), which is numerical quasipolynomial when (Q) is.  One
+literal sentence in `PROOF.md` says every divisor is “below” (A); the
+divisor (A) itself is equal to (A).  Replacing “below” by “at most” fixes
+that harmless strict-inequality typo and does not affect the bit bound.
+
+## 3. Split, nonsplit, Hilbert--90, and resultant laws: reconstructed
+
+For (Q_D(a,b)=a^2-Db^2), the fibre sizes over
+(mathbb F_\ell) are:
+
+| case | zero fibre | each nonzero fibre |
+|---|---:|---:|
+| (D) nonsquare | (1) | (ell+1) |
+| (D) square | (2\ell-1) | (ell-1) |
+
+In either case the sum of squared fibre sizes is
+
+\[
+\ell^3+\ell^2-\ell.
+\]
+
+After division by (ell^4), this gives
+
+\[
+\Pr(Q_D(V)=Q_D(V'))=\frac{\ell^2+\ell-1}{\ell^3}.
+\]
+
+Subtracting the same-vector atom (1/\ell^2) gives the distinct-vector
+rate ((\ell^2-1)/\ell^3).  Since (V-V') is uniform, the norm-of-difference
+zero rates are the zero-fibre sizes divided by (ell^2):
+
+\[
+\frac{2\ell-1}{\ell^2}\quad\text{and}\quad\frac1{\ell^2}.
+\]
+
+Thus the nonsplit case has no distinct zero; the split case remains only
+(\Theta(1/\ell)).
+
+For (K_D=\mathbb F_\ell[w]/(w^2-D)), the map
+(z\mapsto z/\bar z) has scalar kernel of size (ell-1) and image the
+norm-one torus of size (m=\ell-(D/\ell)).  It therefore sends a uniform
+algebra unit to a uniform torus point.  Trace identifies (U) and
+(U^{-1}); there are two fixed points, (1) and (-1).  Summing squared
+inversion-orbit sizes gives
+
+\[
+\Pr(\operatorname{tr}U=\operatorname{tr}U')
+=\frac{2m-2}{m^2}.
+\]
+
+Subtracting (Pr(U=U')=1/m) gives the distinct-point value
+((m-2)/m^2).
+
+Direct cross multiplication gives
+
+\[
+U=U'\iff bc-ae=0
+\]
+
+and
+
+\[
+\operatorname{tr}(U)=\operatorname{tr}(U')
+\iff (bc-ae)(bc+ae)=0.
+\]
+
+All cancelled factors are units under the stated hypotheses.  The two-
+discriminant numerator is
+
+\[
+Db^2c^2-Ea^2e^2.
+\]
+
+For fixed nonzero (a,b,c,e) and independent uniform (D,E\in
+\mathbb F_\ell^*), each (E) determines exactly one (D), so its zero
+probability is (1/(\ell-1)).  For a nonuniform law it becomes the stated
+multiplicative correlation.
+
+This last probability is exactly a resultant-zero statement for fixed
+coefficients.  If coefficients are themselves selected conditionally on
+the discriminants, or if nonunit algebra elements are rejected, the induced
+law must be analyzed again; the formula must not be read as an exact
+accepted-Hilbert collision probability in that broader experiment.
+
+In the split algebra, factorization of an algebra expression into two
+factors does not alone permit a zero-product inference.  The packet avoids
+this trap where it matters: a norm-one split point has form
+((u,u^{-1})), and equality of (u+u^{-1}) and (v+v^{-1}) over the field
+still forces (v=u) or (u^{-1}).
+
+## 4. Canonical-coordinate and discriminant bounds: reconstructed
+
+For fixed unit (D), conditional on an orientation, the accepted clean
+point is uniform on the product of local tori of size
+
+\[
+M=(p-\epsilon_p)(q-\epsilon_q).
+\]
+
+Fixing the first canonical coordinate (x) leaves
+
+\[
+Dy^2=x^2-1.
+\]
+
+There are at most two roots modulo each hidden prime and therefore at most
+four modulo (N).  Fixing (y) gives the same bound from
+(x^2=1+Dy^2).  Hence every canonical coordinate atom is at most (4/M).
+
+A residue class modulo an exterior (ell) contains at most
+(lceil N/\ell\rceil) canonical integers.  Therefore the mass of every
+such residue is at most
+
+\[
+\frac{4\lceil N/\ell\rceil}{M}.
+\]
+
+For distinct odd primes,
+
+\[
+M\ge(p-1)(q-1)
+=N(1-1/p)(1-1/q)\ge\frac{8N}{15}.
+\]
+
+Since a distribution's collision probability is no larger than its largest
+atom, this proves
+
+\[
+\Pr(X\equiv X'\pmod\ell)
+\le\frac{15}{2\ell}+\frac{15}{2N}<\frac{15}{\ell}.
+\]
+
+Deleting exact integer equality only lowers the useful probability.  A
+union bound gives (30/\ell) for the two coordinate words.  The argument is
+an atom bound, not an equidistribution assumption, and mixtures over public
+discriminants preserve it.
+
+A Jacobi-sign class contains exactly (arphi(N)/2) units.  Its canonical
+integer law therefore has atom (2/\varphi(N)).  The same residue-counting
+argument, using (arphi(N)\ge8N/15) and (ell<N), gives the strict bound
+
+\[
+\Pr(D\ne D',\ D\equiv D'\pmod\ell)<\frac{15}{2\ell}.
+\]
+
+These proofs do not control cross-coordinate determinants or general
+nonlinear/adaptive functions of canonical representatives.  The statement
+preserves that boundary.
+
+## 5. Gcd-divisor harmonic bound: reconstructed
+
+For uniform (X\bmod A), including (X=0), the number of residues with
+(gcd(X,A)=d) is (arphi(A/d)).  Thus
+
+\[
+\mu(d)=\frac{\varphi(A/d)}A\le\frac1d.
+\]
+
+For (ell\nmid A), order each distinct congruent divisor pair as (e>d)
+and write (e=d+k\ell).  Extending the nonnegative sum from divisors to all
+positive integers gives
+
+\[
+\begin{aligned}
+\kappa_\ell
+&\le2\sum_{1\le k\le A/\ell}\sum_{d\ge1}
+\frac1{d(d+k\ell)}\\
+&=\frac2\ell\sum_{1\le k\le A/\ell}\frac{H_{k\ell}}k\\
+&\le\frac{2(1+\log A)^2}{\ell}.
+\end{aligned}
+\]
+
+The middle identity is the exact telescoping sum
+
+\[
+\sum_{d\ge1}\frac1{d(d+a)}=\frac{H_a}{a}.
+\]
+
+The bound is therefore valid without factoring (A).  Exact sampling also
+needs no factorization: draw (X) and apply Euclid's algorithm.  The
+factorization is used only by the verifier to evaluate the law.
+
+Zero useful energy is possible whenever all divisors of (A) have distinct
+residues modulo (ell).  The authenticated exact data contains explicit
+zero rows; for example the row
+
+```text
+N=109726061, p=8537, q=12853, ell=1423, gcd-divisor numerator=0
+```
+
+is one finite certificate produced by the exact enumerator.  The universal
+harmonic theorem does not rely on this finite witness.
+
+## 6. Pell trace endpoint: reconstructed
+
+Let (Delta=N^2-1) and (eta=N+w) in
+(mathbb Z[w]/(w^2-\Delta)).  Its norm is (1).  At an exterior odd prime
+(ell), (Delta) is a unit and the reduced norm-one torus is cyclic of
+order
+
+\[
+\ell-(\Delta/\ell).
+\]
+
+Let (h) be the exact order of (eta).  If (T=qh+r), the residue-class
+sizes of (0,\ldots,T-1\pmod h) are (q+1) in (r) classes and (q) in
+the others.  The number of ordered unequal pairs with equal powers is
+
+\[
+r(q+1)q+(h-r)q(q-1)
+=h q(q-1)+2rq.
+\]
+
+Division by (T^2) proves the coefficient-pair formula.
+
+Writing (eta^k=X_k+Y_kw), norm one gives
+
+\[
+2X_k=\eta^k+\eta^{-k}.
+\]
+
+Within the norm-one torus, equality of traces is equivalent to
+
+\[
+i\equiv j\pmod h\quad\text{or}\quad i\equiv-j\pmod h.
+\]
+
+For (0\le i,j<T), a nonzero difference has magnitude at most (T-1),
+and a sum is at most (2T-2).  If (h>2T-2), neither can be a nonzero
+multiple of (h).  At the exact endpoint (h=2T-2), the only pair with
+(i+j=h) is (i=j=T-1), which is excluded.  Thus distinct trace collision
+is exactly zero for
+
+\[
+h\ge2T-2.
+\]
+
+Over the integers,
+
+\[
+X_0=1,qquad X_1=N,qquad X_{k+1}=2NX_k-X_{k-1},
+\]
+
+and (N>1) makes (X_k) strictly increasing.  Hence distinct exponents
+do not create an exact-integer equality atom.  If (h) is small, then
+(eta^h=1\pmod\ell) implies (ell\mid X_h-1).  The product over positive
+indices (1\le k\le H), for numerical-QP (H), has bit length
+
+\[
+\sum_{k\le H}O(kn)=O(nH^2),
+\]
+
+which is numerical quasipolynomial.  “All QP-small indices” must be read as
+positive indices; including (k=0) would insert the zero factor
+(X_0-1).  Under that natural convention, a bounded Pell collision is
+exactly a small-meta-order branch.
+
+## 7. Numerical workflow audit
+
+The implementation matches the frozen R2 input rules:
+
+- the large inputs use SHA-256 ranks (20{,}000) through (39{,}999);
+- the small inputs use the disjoint interval ([512,4096)) and the R2 seed;
+- the transcript contains (20{,}000+5{,}000=25{,}000) inputs;
+- only one C++ process is represented;
+- exact sources use integer arithmetic, and floating point is confined to
+  printed ratios and quantiles;
+- trial division through (16384) completely factors (N-1) and (N+1),
+  which are below (2^{28});
+- exact threshold classification tests
+  (ell\,\mathrm{num}^2\ge\mathrm{den}^2) with four 64-bit limbs;
+- the exact-source row total is
+  (22\cdot137233=3{,}019{,}126), and the 624 Monte Carlo rows give the
+  reported (3{,}019{,}750) data rows.
+
+R1 is properly quarantined: its local five-input smoke is disclosed and no
+R1 numerical value is used as evidence.  R2 uses disjoint inputs.
+
+Three limitations remain:
+
+1. Artifact hashes and source inspection cannot prove the historical claims
+   “ran on `seetacloud`,” “one process,” or “the 100-input resource pilot ran
+   before the full scan.”  A signed command log or external job record would
+   be needed for independent provenance.
+2. `PREREGISTRATION_R1.md` says to report Wilson intervals as descriptive
+   diagnostics.  `R2_REPORT.md` reports counts and ratios but no intervals;
+   `NUMERICAL_ANALYSIS.md` later supplies one representative interval.  The
+   exact counts remain sufficient to define the data, but strict output
+   compliance is incomplete.
+3. The exact same-discriminant box statistic divides out the public factor
+   (2D).  This normalization is disclosed in `SELF_AUDIT.md` and is
+   consistent with the R1 cache instruction that the identities remove
+   (D).  It intentionally omits trivial hits at a small target dividing a
+   fixed public (D); it must not be described as the unnormalized
+   resultant statistic.
+
+No finite row establishes an asymptotic lower or upper bound.  The theorem's
+local counts and atom/harmonic bounds are proved independently of the scan.
+
+## Final scope judgment
+
+The packet establishes a conditional positive bridge and several named
+source boundaries for distinct odd semiprimes.  It does not factor
+(N^2-1), prove the inverse-QP collision hypothesis, handle prime powers or
+arbitrary composites, classify nonlinear/cross-coordinate carry words, or
+give a factoring lower bound.  Subject to those explicit boundaries and the
+imported clean F242 interface, the mathematical packet passes hostile audit.

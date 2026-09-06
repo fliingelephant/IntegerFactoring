@@ -1,0 +1,285 @@
+{
+  "B": 5,
+  "N": 667,
+  "anchor_records": [
+    {
+      "anchor": 2,
+      "c": 266,
+      "carry": 199,
+      "digit": 1,
+      "digit_congruence": true,
+      "endpoint_division": true,
+      "factorization": {
+        "19": 1,
+        "2": 1,
+        "499": 1,
+        "7": 1
+      },
+      "in_range": true,
+      "inverse": true,
+      "left_endpoint": true,
+      "minus_gcd": 1,
+      "parity_support": [
+        2,
+        7,
+        19,
+        499
+      ],
+      "plus_gcd": 1,
+      "unit_endpoints": true,
+      "value": 132734,
+      "w": 499
+    },
+    {
+      "anchor": 3,
+      "c": 399,
+      "carry": 332,
+      "digit": 2,
+      "digit_congruence": true,
+      "endpoint_division": true,
+      "factorization": {
+        "19": 1,
+        "3": 2,
+        "37": 1,
+        "5": 1,
+        "7": 1
+      },
+      "in_range": true,
+      "inverse": true,
+      "left_endpoint": true,
+      "minus_gcd": 1,
+      "parity_support": [
+        5,
+        7,
+        19,
+        37
+      ],
+      "plus_gcd": 1,
+      "unit_endpoints": true,
+      "value": 221445,
+      "w": 555
+    },
+    {
+      "anchor": 5,
+      "c": 665,
+      "carry": 332,
+      "digit": 2,
+      "digit_congruence": true,
+      "endpoint_division": true,
+      "factorization": {
+        "19": 1,
+        "3": 2,
+        "37": 1,
+        "5": 1,
+        "7": 1
+      },
+      "in_range": true,
+      "inverse": true,
+      "left_endpoint": true,
+      "minus_gcd": 1,
+      "parity_support": [
+        5,
+        7,
+        19,
+        37
+      ],
+      "plus_gcd": 1,
+      "unit_endpoints": true,
+      "value": 221445,
+      "w": 333
+    }
+  ],
+  "checks": {
+    "all_pairs_canonical": true,
+    "all_sign_screens_null": true,
+    "anchor_carries": true,
+    "anchor_construction": true,
+    "anchor_digits": true,
+    "digit_two_duplicate": true,
+    "distinct_new_values": true,
+    "exact_factorizations": true,
+    "expected_rows": true,
+    "nullity_zero": true,
+    "old_carries": true,
+    "old_global_private_rows": true,
+    "packed_inverse": true,
+    "packed_size": true,
+    "peels_completely": true,
+    "prime_factorization_of_N": true,
+    "rank_four": true,
+    "simultaneous_preservation": true
+  },
+  "degrees": {
+    "11": 1,
+    "13": 1,
+    "19": 3,
+    "2": 2,
+    "37": 1,
+    "499": 1,
+    "5": 1,
+    "7": 3,
+    "79": 1
+  },
+  "factorization_N": [
+    23,
+    29
+  ],
+  "matrix_rows": [
+    [
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0
+    ]
+  ],
+  "nullity": 0,
+  "old_records": [
+    {
+      "c": 7,
+      "carry": 3,
+      "factorization": {
+        "11": 1,
+        "13": 1,
+        "2": 1,
+        "7": 1
+      },
+      "in_range": true,
+      "inverse": true,
+      "minus_gcd": 1,
+      "parity_support": [
+        2,
+        7,
+        11,
+        13
+      ],
+      "plus_gcd": 1,
+      "unit_endpoints": true,
+      "value": 2002,
+      "w": 286
+    },
+    {
+      "c": 19,
+      "carry": 9,
+      "factorization": {
+        "19": 1,
+        "2": 2,
+        "79": 1
+      },
+      "in_range": true,
+      "inverse": true,
+      "minus_gcd": 1,
+      "parity_support": [
+        19,
+        79
+      ],
+      "plus_gcd": 1,
+      "unit_endpoints": true,
+      "value": 6004,
+      "w": 316
+    }
+  ],
+  "packed_carry": 66,
+  "packed_q": 133,
+  "packed_w": 331,
+  "peeling_witness": [
+    {
+      "active_incident_columns": [
+        "old_7"
+      ],
+      "column": "old_7",
+      "row": 11,
+      "valid": true
+    },
+    {
+      "active_incident_columns": [
+        "old_19"
+      ],
+      "column": "old_19",
+      "row": 79,
+      "valid": true
+    },
+    {
+      "active_incident_columns": [
+        "digit_1"
+      ],
+      "column": "digit_1",
+      "row": 499,
+      "valid": true
+    },
+    {
+      "active_incident_columns": [
+        "digit_2"
+      ],
+      "column": "digit_2",
+      "row": 5,
+      "valid": true
+    }
+  ],
+  "rank": 4,
+  "retained_values": [
+    2002,
+    6004,
+    132734,
+    221445
+  ],
+  "rows": [
+    2,
+    5,
+    7,
+    11,
+    13,
+    19,
+    37,
+    79,
+    499
+  ],
+  "status": "PASS"
+}
