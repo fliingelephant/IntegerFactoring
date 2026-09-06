@@ -1,0 +1,23 @@
+F289 exact affine-node branch-and-bound support pilot
+source_alarm_seconds=30
+processes=1
+estimated_peak_memory_mb<128
+branch_runs_before_baseline=true
+factor_labels_used_for=case_construction_and_post_hoc_audit_only
+node_order=(objective,product,x,y)
+phase=small_pilot B=2^8 maximum_k=12 batches=9 queries=63 elapsed_seconds=0.009792
+small_pilot_elapsed_seconds=0.009797
+phase=initial B=2^10 maximum_k=14 batches=11 queries=77 elapsed_seconds=0.042691
+phase=initial B=2^12 maximum_k=16 batches=13 queries=91 elapsed_seconds=0.160477
+initial_elapsed_seconds=0.212974
+phase=extended B=2^14 maximum_k=18 batches=15 queries=105 elapsed_seconds=0.709402
+phase=extended B=2^16 maximum_k=20 batches=17 queries=119 elapsed_seconds=3.955997
+total_elapsed_seconds=4.880783
+max_rss_bytes=23658496
+scales=5
+batches=65
+queries=455
+queried_nodes=12107
+branch_scanned_x_values=5449154
+baseline_logical_scanned_x_values=13890506
+status=success

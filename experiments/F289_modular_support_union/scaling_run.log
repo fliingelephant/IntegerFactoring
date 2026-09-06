@@ -1,0 +1,25 @@
+F289 M=Theta(N) affine-node scaling pilot
+source_alarm_seconds=30
+global_soft_seconds=26
+query_soft_seconds=2.5
+max_node_queries=100000
+processes=1
+estimated_peak_memory_mb<128
+factor_labels_used_for=case_construction_and_post_hoc_audit_only
+patch_oracle=F288/PATCH_SUPPORT.py
+factor_scale=2^8 N_bits=18 k=14 queries=6 exact=6 budget_exhausted=0 nodes=36 elapsed_seconds=0.048044
+factor_scale=2^12 N_bits=25 k=21 queries=6 exact=6 budget_exhausted=0 nodes=364 elapsed_seconds=0.985430
+factor_scale=2^16 N_bits=33 k=29 queries=6 exact=4 budget_exhausted=2 nodes=1834 elapsed_seconds=11.887485
+factor_scale=2^20 N_bits=41 k=37 queries=6 exact=0 budget_exhausted=6 nodes=778 elapsed_seconds=13.110999
+total_elapsed_seconds=26.032031
+max_rss_bytes=21790720
+stop_reason=global_time_budget
+inputs=4
+queries=24
+exact_queries=16
+budget_exhausted_queries=8
+queried_nodes=3012
+status=success
+metadata_correction=global_lower_is_min_of_incumbent_and_live_frontier
+frontier_coverage=budget_gates_precede_parent_pop_and_started_expansions_query_both_children
+prior_live_run=15_exact_9_budget_exhausted_full_json_unavailable_not_reconstructed

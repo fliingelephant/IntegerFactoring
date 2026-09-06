@@ -25131,3 +25131,118 @@ Author derivation, sources, and Sage evidence:
 Independent proof: `experiments/F284_cyclotomic_binomial_search/RECONSTRUCTION.md`.
 Statement-only input SHA-256:
 `3744a4d9d3e7561fed0bf51917fb02ab70bed64d24d2ed93ae7e90d6103e7d21`.
+
+## P235 -- Dyadic inverse graphs admit affine and higher-difference covers, and constant-accuracy support would split odd composites
+
+**Status:** promoted after independent statement-only reconstruction and root
+verification. This is a conditional reduction, not a support optimizer or a
+factoring algorithm.
+
+**Scope:** inverse graphs modulo powers of two, their exact finite-difference
+representations, and the succinct-instance support reduction below.
+
+**Statement.**
+
+Let \(N\) be odd, \(M=2^k\), \(k\geq1\),
+\(h=\max(1,\lfloor k/2\rfloor)\), and \(s=2^h\). Define
+
+\[
+ S=\{(x,y)\in\mathbb Z_{>0}^2:xy\geq N,\ xy\equiv N\pmod M\}.
+\]
+
+For each odd \(u\in[1,s)\), put
+
+\[
+ v\equiv Nu^{-1}\pmod M,\qquad
+ \delta\equiv N((u+s)^{-1}-u^{-1})\pmod M.
+\]
+
+Then \(S\) is the disjoint union of
+
+\[
+ \bigl((u,v)+\mathbb Z(s,\delta)+\mathbb Z(0,M)\bigr)
+ \cap\{x>0,y>0,xy\geq N\}.
+\]
+
+There are exactly \(2^{h-1}\) translates, each with difference-lattice
+determinant \(sM\).
+
+More generally, for \(r,d\geq1\), \(s=2^r\), and odd \(u\),
+
+\[
+ \Delta_s^d\!\left(\frac Nu\right)
+ \equiv
+ \frac{(-1)^d d!Ns^d}{\prod_{i=0}^d(u+is)}
+ \pmod M.
+\]
+
+If \(rd+v_2(d!)\geq k\), the sequence
+\(j\mapsto N(u+sj)^{-1}\pmod M\), for all \(j\in\mathbb Z\), is represented
+by a degree-at-most-\(d-1\) polynomial in the binomial basis.
+
+For the conditional reduction, let \(N\geq9\) be any odd composite,
+\(n=\lceil\log_2(N+1)\rceil\), and let \(M\) be the largest power of two at
+most \(N/8\). For \(-n\leq j\leq n\), use
+
+\[
+ a_j=2^{\max(j,0)},\qquad b_j=2^{\max(-j,0)}.
+\]
+
+Suppose an optimizer receives the succinct \(O(n)\)-bit instance
+\((N,M,a_j,b_j)\), or an equivalent succinct description of \(S\), and
+returns a feasible \(Q_j=(x_j,y_j)\) satisfying
+
+\[
+ a_jx_j+b_jy_j
+ \leq\frac{101}{100}
+ \min_{(x,y)\in S}(a_jx+b_jy)
+\]
+
+in bit cost \(T(n)\). At least one of the \(2n+1\) returned points has
+\(x_jy_j=N\) and \(x_j,y_j>1\). The returned coordinates have \(O(n)\)
+bits, and the literal splitter cost is
+
+\[
+ O\bigl(nT(n)+\operatorname{poly}(n)\bigr).
+\]
+
+Explicitly listing the \(2^{h-1}\) affine translates is not a succinct input
+and is outside this cost statement.
+
+**Proof.** The affine inverse error is
+
+\[
+ u^{-1}+a((u+s)^{-1}-u^{-1})-(u+as)^{-1}
+ =\frac{-a(a-1)s^2}{u(u+s)(u+as)}.
+\]
+
+Its numerator is divisible by \(2^{2h+1}\), which proves the cover,
+disjointness, and count. The displayed higher-difference formula follows by
+induction; its valuation makes the \(d\)-th difference vanish, and Newton's
+binomial expansion extends in both integer directions without dividing by
+\(d!\).
+
+For the reduction, write \(N=pq\), \(3\leq p\leq q\), and choose the dyadic
+normal nearest to \(q/p\). Then \(t=a_jp/(b_jq)\) lies between
+\(2^{-1/2}\) and \(2^{1/2}\). Weighted AM--GM and the relative guarantee give
+
+\[
+ x_jy_j
+ \leq \left(\frac{101}{100}\right)^2
+ N\frac{(1+t)^2}{4t}
+ <\frac{17N}{16}<N+M.
+\]
+
+The product congruence forces \(x_jy_j=N\), and its objective is below \(N\),
+excluding \((1,N)\) and \((N,1)\). The small \(M=1\) cases obey the same
+integer-product conclusion.
+
+Full proof:
+experiments/F289_modular_support_union/PATCH_RECONSTRUCTION.md.
+Statement-only input:
+experiments/F289_modular_support_union/PATCH_STATEMENT_ONLY.md.
+Input SHA-256:
+`89487b6b7d852efa9c43b7f6dfd3ae6915e37a24683d0e5583edc9875cd395e3`.
+
+The implemented one-patch support oracle, affine-tree pruning, grouped
+cap-line bound, F287 dynamics, and F290 transforms are not promoted here.

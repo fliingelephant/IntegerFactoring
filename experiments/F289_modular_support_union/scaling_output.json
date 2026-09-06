@@ -1,0 +1,4399 @@
+{
+  "experiment": "F289_affine_patch_scaling",
+  "status": "finite_scaling_pilot",
+  "decision_inputs": [
+    "N",
+    "M",
+    "a",
+    "b"
+  ],
+  "factor_label_scope": "case construction and post-hoc audit only",
+  "modulus_rule": "largest power of two at most N/8",
+  "normals": [
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      5,
+      4
+    ],
+    [
+      4,
+      3
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      7,
+      4
+    ]
+  ],
+  "relative_accuracy_test": "100*incumbent <= 101*min(incumbent,minimum_live_node_objective)",
+  "resource_plan": {
+    "processes": 1,
+    "source_alarm_seconds": 30,
+    "global_soft_seconds": 26,
+    "query_soft_seconds": 2.5,
+    "max_node_queries": 100000,
+    "memory_cap_bytes": 134217728,
+    "factor_exponents": [
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48,
+      52,
+      56,
+      60
+    ]
+  },
+  "runtime": {
+    "elapsed_seconds": 26.032030999995186,
+    "max_rss_bytes": 21790720,
+    "stop_reason": "global_time_budget"
+  },
+  "aggregate": {
+    "inputs": 4,
+    "queries": 24,
+    "exact_queries": 16,
+    "budget_exhausted_queries": 8,
+    "budget_reasons": {
+      "query_time": 8,
+      "node_limit": 0
+    },
+    "exact_outcomes": {
+      "proper_factor": 16,
+      "trivial_factor": 0,
+      "nonfactor": 0
+    },
+    "queries_with_early_factor_detection": 17,
+    "early_factor_detected_before_final_node_count": 17,
+    "budget_exhausted_with_early_factor": 1,
+    "queries_with_relative_1_01_certificate": 16,
+    "relative_1_01_certified_before_final_node_count": 4,
+    "relative_1_01_proper_factor_certificates": 16,
+    "inputs_with_early_factor_detection": 3,
+    "inputs_with_relative_1_01_factor": 3,
+    "inputs_with_exact_factor_result": 3,
+    "queried_nodes": 3012,
+    "expanded_nodes": 1494,
+    "pruned_nodes": 666,
+    "accepted_nodes": 11,
+    "maximum_queried_nodes": 501,
+    "maximum_peak_queue": 251,
+    "primitive_calls": {
+      "raycasts": 26752556,
+      "next_calls": 3858704,
+      "seek_calls": 92877,
+      "support_calls": 3012
+    },
+    "runtime_seconds": 26.025758375020814
+  },
+  "representative_certificates": [
+    {
+      "kind": "small_exact_baseline",
+      "label": "factor_scale=2^8",
+      "N": 147053,
+      "M": 16384,
+      "comparisons": 6,
+      "P0": [
+        385,
+        6893
+      ],
+      "K": 6893,
+      "scanned_x_values": 3447,
+      "runtime_seconds": 0.005931958003202453
+    },
+    {
+      "kind": "largest_input_early_factor",
+      "label": "factor_scale=2^16",
+      "N": 8464705853,
+      "N_bits": 33,
+      "M": 536870912,
+      "normal": [
+        2,
+        1
+      ],
+      "event": {
+        "source": "node_oracle",
+        "depth": 7,
+        "value": {
+          "objective": 262285,
+          "product": 8464705853,
+          "point": [
+            73771,
+            114743
+          ]
+        },
+        "outcome": "proper_factor",
+        "queried_nodes": 164,
+        "expanded_nodes": 82,
+        "elapsed_seconds": 1.315910833000089,
+        "primitive_calls": {
+          "raycasts": 1443388,
+          "next_calls": 215342,
+          "seek_calls": 4970,
+          "support_calls": 164
+        }
+      },
+      "exact_status": "budget_exhausted",
+      "exact_queried_nodes": 397
+    },
+    {
+      "kind": "largest_exact_query",
+      "label": "factor_scale=2^16",
+      "N": 8464705853,
+      "N_bits": 33,
+      "M": 536870912,
+      "normal": [
+        5,
+        4
+      ],
+      "result": {
+        "objective": 827827,
+        "product": 8464705853,
+        "point": [
+          73771,
+          114743
+        ]
+      },
+      "outcome": "proper_factor",
+      "queried_nodes": 369,
+      "peak_queue": 185,
+      "runtime_seconds": 2.4461333329963963
+    },
+    {
+      "kind": "first_budget_exhausted_query",
+      "label": "factor_scale=2^16",
+      "N": 8464705853,
+      "N_bits": 33,
+      "M": 536870912,
+      "normal": [
+        1,
+        1
+      ],
+      "budget_reason": "query_time",
+      "current_incumbent": {
+        "objective": 3276414,
+        "product": 293006289213,
+        "point": [
+          92013,
+          3184401
+        ]
+      },
+      "relative_1_01_certificate": null,
+      "queried_nodes": 501,
+      "live_nodes": 251,
+      "peak_queue": 251,
+      "runtime_seconds": 2.504366041001049,
+      "minimum_live_node_objective": 185470,
+      "global_lower_objective": 185470
+    }
+  ],
+  "scales": [
+    {
+      "label": "factor_scale=2^8",
+      "B": 256,
+      "N": 147053,
+      "N_bits": 18,
+      "p_label": 307,
+      "q_label": 479,
+      "factor_ratio": [
+        479,
+        307
+      ],
+      "M": 16384,
+      "k": 14,
+      "M_over_N_bounds": [
+        "1/16",
+        "1/8"
+      ],
+      "h": 7,
+      "leaf_nodes": 64,
+      "summary": {
+        "queries_run": 6,
+        "exact_queries": 6,
+        "budget_exhausted_queries": 0,
+        "any_early_factor_detection": true,
+        "any_relative_1_01_factor": true,
+        "any_exact_factor_result": true,
+        "queried_nodes": 36,
+        "maximum_queried_nodes": 13,
+        "maximum_peak_queue": 5
+      },
+      "small_exact_baseline": {
+        "P0": [
+          385,
+          6893
+        ],
+        "K": 6893,
+        "scanned_x_values": 3447,
+        "runtime_seconds": 0.005931958003202453
+      },
+      "queries": [
+        {
+          "status": "exact",
+          "budget_reason": null,
+          "initial": {
+            "objective": 818,
+            "product": 163437,
+            "point": [
+              347,
+              471
+            ]
+          },
+          "current_incumbent": {
+            "objective": 786,
+            "product": 147053,
+            "point": [
+              307,
+              479
+            ]
+          },
+          "exact_result": {
+            "objective": 786,
+            "product": 147053,
+            "point": [
+              307,
+              479
+            ]
+          },
+          "current_outcome": "proper_factor",
+          "incumbent_x_trials": 64,
+          "continuous_center_floor": 383,
+          "h": 7,
+          "leaf_nodes": 64,
+          "queried_nodes": 13,
+          "expanded_nodes": 6,
+          "pruned_nodes": 6,
+          "accepted_nodes": 1,
+          "live_nodes": 0,
+          "peak_queue": 5,
+          "primitive_calls": {
+            "raycasts": 9686,
+            "next_calls": 2134,
+            "seek_calls": 161,
+            "support_calls": 13
+          },
+          "early_factor_detection": {
+            "source": "node_oracle",
+            "depth": 2,
+            "value": {
+              "objective": 786,
+              "product": 147053,
+              "point": [
+                307,
+                479
+              ]
+            },
+            "outcome": "proper_factor",
+            "queried_nodes": 3,
+            "expanded_nodes": 1,
+            "elapsed_seconds": 0.003277791998698376,
+            "primitive_calls": {
+              "raycasts": 3874,
+              "next_calls": 795,
+              "seek_calls": 31,
+              "support_calls": 3
+            }
+          },
+          "relative_1_01_certificate": {
+            "value": {
+              "objective": 786,
+              "product": 147053,
+              "point": [
+                307,
+                479
+              ]
+            },
+            "outcome": "proper_factor",
+            "inequality": [
+              78600,
+              79386
+            ],
+            "queried_nodes": 13,
+            "expanded_nodes": 6,
+            "elapsed_seconds": 0.008153167000273243,
+            "primitive_calls": {
+              "raycasts": 9686,
+              "next_calls": 2134,
+              "seek_calls": 161,
+              "support_calls": 13
+            },
+            "recorded_comparison_objective": 814,
+            "global_lower_objective": 786
+          },
+          "counts_by_depth": [
+            {
+              "depth": 1,
+              "queried": 1,
+              "expanded": 1,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 1,
+              "seek_calls": 13,
+              "next_calls": 400,
+              "raycasts": 2080
+            },
+            {
+              "depth": 2,
+              "queried": 2,
+              "expanded": 1,
+              "pruned": 0,
+              "accepted": 1,
+              "support_calls": 2,
+              "seek_calls": 18,
+              "next_calls": 395,
+              "raycasts": 1794
+            },
+            {
+              "depth": 3,
+              "queried": 2,
+              "expanded": 2,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 18,
+              "next_calls": 265,
+              "raycasts": 1169
+            },
+            {
+              "depth": 4,
+              "queried": 4,
+              "expanded": 2,
+              "pruned": 2,
+              "accepted": 0,
+              "support_calls": 4,
+              "seek_calls": 48,
+              "next_calls": 518,
+              "raycasts": 2255
+            },
+            {
+              "depth": 5,
+              "queried": 4,
+              "expanded": 0,
+              "pruned": 4,
+              "accepted": 0,
+              "support_calls": 4,
+              "seek_calls": 64,
+              "next_calls": 556,
+              "raycasts": 2388
+            }
+          ],
+          "runtime_seconds": 0.008160291996318847,
+          "normal": [
+            1,
+            1
+          ],
+          "minimum_live_node_objective": null,
+          "global_lower_objective": 786,
+          "unresolved_subtree_frontier_complete": true
+        },
+        {
+          "status": "exact",
+          "budget_reason": null,
+          "initial": {
+            "objective": 1093,
+            "product": 147053,
+            "point": [
+              307,
+              479
+            ]
+          },
+          "current_incumbent": {
+            "objective": 1093,
+            "product": 147053,
+            "point": [
+              307,
+              479
+            ]
+          },
+          "exact_result": {
+            "objective": 1093,
+            "product": 147053,
+            "point": [
+              307,
+              479
+            ]
+          },
+          "current_outcome": "proper_factor",
+          "incumbent_x_trials": 64,
+          "continuous_center_floor": 271,
+          "h": 7,
+          "leaf_nodes": 64,
+          "queried_nodes": 9,
+          "expanded_nodes": 4,
+          "pruned_nodes": 5,
+          "accepted_nodes": 0,
+          "live_nodes": 0,
+          "peak_queue": 2,
+          "primitive_calls": {
+            "raycasts": 14341,
+            "next_calls": 2984,
+            "seek_calls": 133,
+            "support_calls": 9
+          },
+          "early_factor_detection": {
+            "source": "initial_incumbent",
+            "depth": 0,
+            "value": {
+              "objective": 1093,
+              "product": 147053,
+              "point": [
+                307,
+                479
+              ]
+            },
+            "outcome": "proper_factor",
+            "queried_nodes": 0,
+            "expanded_nodes": 0,
+            "elapsed_seconds": 2.883299021050334e-05,
+            "primitive_calls": {
+              "raycasts": 0,
+              "next_calls": 0,
+              "seek_calls": 0,
+              "support_calls": 0
+            }
+          },
+          "relative_1_01_certificate": {
+            "value": {
+              "objective": 1093,
+              "product": 147053,
+              "point": [
+                307,
+                479
+              ]
+            },
+            "outcome": "proper_factor",
+            "inequality": [
+              109300,
+              109585
+            ],
+            "queried_nodes": 1,
+            "expanded_nodes": 0,
+            "elapsed_seconds": 0.001456624988350086,
+            "primitive_calls": {
+              "raycasts": 1881,
+              "next_calls": 363,
+              "seek_calls": 12,
+              "support_calls": 1
+            },
+            "recorded_comparison_objective": 1085,
+            "global_lower_objective": 1085
+          },
+          "counts_by_depth": [
+            {
+              "depth": 1,
+              "queried": 1,
+              "expanded": 1,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 1,
+              "seek_calls": 12,
+              "next_calls": 363,
+              "raycasts": 1881
+            },
+            {
+              "depth": 2,
+              "queried": 2,
+              "expanded": 2,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 32,
+              "next_calls": 969,
+              "raycasts": 4648
+            },
+            {
+              "depth": 3,
+              "queried": 4,
+              "expanded": 1,
+              "pruned": 3,
+              "accepted": 0,
+              "support_calls": 4,
+              "seek_calls": 59,
+              "next_calls": 1274,
+              "raycasts": 6099
+            },
+            {
+              "depth": 4,
+              "queried": 2,
+              "expanded": 0,
+              "pruned": 2,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 30,
+              "next_calls": 378,
+              "raycasts": 1713
+            }
+          ],
+          "runtime_seconds": 0.01137291599297896,
+          "normal": [
+            2,
+            1
+          ],
+          "minimum_live_node_objective": null,
+          "global_lower_objective": 1093,
+          "unresolved_subtree_frontier_complete": true
+        },
+        {
+          "status": "exact",
+          "budget_reason": null,
+          "initial": {
+            "objective": 3451,
+            "product": 147053,
+            "point": [
+              307,
+              479
+            ]
+          },
+          "current_incumbent": {
+            "objective": 3451,
+            "product": 147053,
+            "point": [
+              307,
+              479
+            ]
+          },
+          "exact_result": {
+            "objective": 3451,
+            "product": 147053,
+            "point": [
+              307,
+              479
+            ]
+          },
+          "current_outcome": "proper_factor",
+          "incumbent_x_trials": 64,
+          "continuous_center_floor": 342,
+          "h": 7,
+          "leaf_nodes": 64,
+          "queried_nodes": 5,
+          "expanded_nodes": 2,
+          "pruned_nodes": 3,
+          "accepted_nodes": 0,
+          "live_nodes": 0,
+          "peak_queue": 1,
+          "primitive_calls": {
+            "raycasts": 9749,
+            "next_calls": 1992,
+            "seek_calls": 73,
+            "support_calls": 5
+          },
+          "early_factor_detection": {
+            "source": "initial_incumbent",
+            "depth": 0,
+            "value": {
+              "objective": 3451,
+              "product": 147053,
+              "point": [
+                307,
+                479
+              ]
+            },
+            "outcome": "proper_factor",
+            "queried_nodes": 0,
+            "expanded_nodes": 0,
+            "elapsed_seconds": 2.7582995244301856e-05,
+            "primitive_calls": {
+              "raycasts": 0,
+              "next_calls": 0,
+              "seek_calls": 0,
+              "support_calls": 0
+            }
+          },
+          "relative_1_01_certificate": {
+            "value": {
+              "objective": 3451,
+              "product": 147053,
+              "point": [
+                307,
+                479
+              ]
+            },
+            "outcome": "proper_factor",
+            "inequality": [
+              345100,
+              346531
+            ],
+            "queried_nodes": 1,
+            "expanded_nodes": 0,
+            "elapsed_seconds": 0.0020806249958695844,
+            "primitive_calls": {
+              "raycasts": 2738,
+              "next_calls": 520,
+              "seek_calls": 16,
+              "support_calls": 1
+            },
+            "recorded_comparison_objective": 3431,
+            "global_lower_objective": 3431
+          },
+          "counts_by_depth": [
+            {
+              "depth": 1,
+              "queried": 1,
+              "expanded": 1,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 1,
+              "seek_calls": 16,
+              "next_calls": 520,
+              "raycasts": 2738
+            },
+            {
+              "depth": 2,
+              "queried": 2,
+              "expanded": 1,
+              "pruned": 1,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 31,
+              "next_calls": 928,
+              "raycasts": 4429
+            },
+            {
+              "depth": 3,
+              "queried": 2,
+              "expanded": 0,
+              "pruned": 2,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 26,
+              "next_calls": 544,
+              "raycasts": 2582
+            }
+          ],
+          "runtime_seconds": 0.007404125004541129,
+          "normal": [
+            5,
+            4
+          ],
+          "minimum_live_node_objective": null,
+          "global_lower_objective": 3451,
+          "unresolved_subtree_frontier_complete": true
+        },
+        {
+          "status": "exact",
+          "budget_reason": null,
+          "initial": {
+            "objective": 2665,
+            "product": 147053,
+            "point": [
+              307,
+              479
+            ]
+          },
+          "current_incumbent": {
+            "objective": 2665,
+            "product": 147053,
+            "point": [
+              307,
+              479
+            ]
+          },
+          "exact_result": {
+            "objective": 2665,
+            "product": 147053,
+            "point": [
+              307,
+              479
+            ]
+          },
+          "current_outcome": "proper_factor",
+          "incumbent_x_trials": 64,
+          "continuous_center_floor": 332,
+          "h": 7,
+          "leaf_nodes": 64,
+          "queried_nodes": 5,
+          "expanded_nodes": 2,
+          "pruned_nodes": 3,
+          "accepted_nodes": 0,
+          "live_nodes": 0,
+          "peak_queue": 1,
+          "primitive_calls": {
+            "raycasts": 9982,
+            "next_calls": 2031,
+            "seek_calls": 74,
+            "support_calls": 5
+          },
+          "early_factor_detection": {
+            "source": "initial_incumbent",
+            "depth": 0,
+            "value": {
+              "objective": 2665,
+              "product": 147053,
+              "point": [
+                307,
+                479
+              ]
+            },
+            "outcome": "proper_factor",
+            "queried_nodes": 0,
+            "expanded_nodes": 0,
+            "elapsed_seconds": 2.5291999918408692e-05,
+            "primitive_calls": {
+              "raycasts": 0,
+              "next_calls": 0,
+              "seek_calls": 0,
+              "support_calls": 0
+            }
+          },
+          "relative_1_01_certificate": {
+            "value": {
+              "objective": 2665,
+              "product": 147053,
+              "point": [
+                307,
+                479
+              ]
+            },
+            "outcome": "proper_factor",
+            "inequality": [
+              266500,
+              268559
+            ],
+            "queried_nodes": 1,
+            "expanded_nodes": 0,
+            "elapsed_seconds": 0.0022271250054473057,
+            "primitive_calls": {
+              "raycasts": 2971,
+              "next_calls": 559,
+              "seek_calls": 17,
+              "support_calls": 1
+            },
+            "recorded_comparison_objective": 2659,
+            "global_lower_objective": 2659
+          },
+          "counts_by_depth": [
+            {
+              "depth": 1,
+              "queried": 1,
+              "expanded": 1,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 1,
+              "seek_calls": 17,
+              "next_calls": 559,
+              "raycasts": 2971
+            },
+            {
+              "depth": 2,
+              "queried": 2,
+              "expanded": 1,
+              "pruned": 1,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 31,
+              "next_calls": 928,
+              "raycasts": 4429
+            },
+            {
+              "depth": 3,
+              "queried": 2,
+              "expanded": 0,
+              "pruned": 2,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 26,
+              "next_calls": 544,
+              "raycasts": 2582
+            }
+          ],
+          "runtime_seconds": 0.007531167007982731,
+          "normal": [
+            4,
+            3
+          ],
+          "minimum_live_node_objective": null,
+          "global_lower_objective": 2665,
+          "unresolved_subtree_frontier_complete": true
+        },
+        {
+          "status": "exact",
+          "budget_reason": null,
+          "initial": {
+            "objective": 1879,
+            "product": 147053,
+            "point": [
+              307,
+              479
+            ]
+          },
+          "current_incumbent": {
+            "objective": 1879,
+            "product": 147053,
+            "point": [
+              307,
+              479
+            ]
+          },
+          "exact_result": {
+            "objective": 1879,
+            "product": 147053,
+            "point": [
+              307,
+              479
+            ]
+          },
+          "current_outcome": "proper_factor",
+          "incumbent_x_trials": 64,
+          "continuous_center_floor": 313,
+          "h": 7,
+          "leaf_nodes": 64,
+          "queried_nodes": 1,
+          "expanded_nodes": 0,
+          "pruned_nodes": 1,
+          "accepted_nodes": 0,
+          "live_nodes": 0,
+          "peak_queue": 0,
+          "primitive_calls": {
+            "raycasts": 2971,
+            "next_calls": 561,
+            "seek_calls": 17,
+            "support_calls": 1
+          },
+          "early_factor_detection": {
+            "source": "initial_incumbent",
+            "depth": 0,
+            "value": {
+              "objective": 1879,
+              "product": 147053,
+              "point": [
+                307,
+                479
+              ]
+            },
+            "outcome": "proper_factor",
+            "queried_nodes": 0,
+            "expanded_nodes": 0,
+            "elapsed_seconds": 2.5250003091059625e-05,
+            "primitive_calls": {
+              "raycasts": 0,
+              "next_calls": 0,
+              "seek_calls": 0,
+              "support_calls": 0
+            }
+          },
+          "relative_1_01_certificate": {
+            "value": {
+              "objective": 1879,
+              "product": 147053,
+              "point": [
+                307,
+                479
+              ]
+            },
+            "outcome": "proper_factor",
+            "inequality": [
+              187900,
+              189779
+            ],
+            "queried_nodes": 1,
+            "expanded_nodes": 0,
+            "elapsed_seconds": 0.00222320799366571,
+            "primitive_calls": {
+              "raycasts": 2971,
+              "next_calls": 561,
+              "seek_calls": 17,
+              "support_calls": 1
+            },
+            "recorded_comparison_objective": 1879,
+            "global_lower_objective": 1879
+          },
+          "counts_by_depth": [
+            {
+              "depth": 1,
+              "queried": 1,
+              "expanded": 0,
+              "pruned": 1,
+              "accepted": 0,
+              "support_calls": 1,
+              "seek_calls": 17,
+              "next_calls": 561,
+              "raycasts": 2971
+            }
+          ],
+          "runtime_seconds": 0.002225874995929189,
+          "normal": [
+            3,
+            2
+          ],
+          "minimum_live_node_objective": null,
+          "global_lower_objective": 1879,
+          "unresolved_subtree_frontier_complete": true
+        },
+        {
+          "status": "exact",
+          "budget_reason": null,
+          "initial": {
+            "objective": 4065,
+            "product": 147053,
+            "point": [
+              307,
+              479
+            ]
+          },
+          "current_incumbent": {
+            "objective": 4065,
+            "product": 147053,
+            "point": [
+              307,
+              479
+            ]
+          },
+          "exact_result": {
+            "objective": 4065,
+            "product": 147053,
+            "point": [
+              307,
+              479
+            ]
+          },
+          "current_outcome": "proper_factor",
+          "incumbent_x_trials": 64,
+          "continuous_center_floor": 289,
+          "h": 7,
+          "leaf_nodes": 64,
+          "queried_nodes": 3,
+          "expanded_nodes": 1,
+          "pruned_nodes": 2,
+          "accepted_nodes": 0,
+          "live_nodes": 0,
+          "peak_queue": 1,
+          "primitive_calls": {
+            "raycasts": 7186,
+            "next_calls": 1453,
+            "seek_calls": 47,
+            "support_calls": 3
+          },
+          "early_factor_detection": {
+            "source": "initial_incumbent",
+            "depth": 0,
+            "value": {
+              "objective": 4065,
+              "product": 147053,
+              "point": [
+                307,
+                479
+              ]
+            },
+            "outcome": "proper_factor",
+            "queried_nodes": 0,
+            "expanded_nodes": 0,
+            "elapsed_seconds": 2.4833003408275545e-05,
+            "primitive_calls": {
+              "raycasts": 0,
+              "next_calls": 0,
+              "seek_calls": 0,
+              "support_calls": 0
+            }
+          },
+          "relative_1_01_certificate": {
+            "value": {
+              "objective": 4065,
+              "product": 147053,
+              "point": [
+                307,
+                479
+              ]
+            },
+            "outcome": "proper_factor",
+            "inequality": [
+              406500,
+              409959
+            ],
+            "queried_nodes": 1,
+            "expanded_nodes": 0,
+            "elapsed_seconds": 0.0019143329991493374,
+            "primitive_calls": {
+              "raycasts": 2546,
+              "next_calls": 484,
+              "seek_calls": 15,
+              "support_calls": 1
+            },
+            "recorded_comparison_objective": 4059,
+            "global_lower_objective": 4059
+          },
+          "counts_by_depth": [
+            {
+              "depth": 1,
+              "queried": 1,
+              "expanded": 1,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 1,
+              "seek_calls": 15,
+              "next_calls": 484,
+              "raycasts": 2546
+            },
+            {
+              "depth": 2,
+              "queried": 2,
+              "expanded": 0,
+              "pruned": 2,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 32,
+              "next_calls": 969,
+              "raycasts": 4640
+            }
+          ],
+          "runtime_seconds": 0.005371207997086458,
+          "normal": [
+            7,
+            4
+          ],
+          "minimum_live_node_objective": null,
+          "global_lower_objective": 4065,
+          "unresolved_subtree_frontier_complete": true
+        }
+      ]
+    },
+    {
+      "label": "factor_scale=2^12",
+      "B": 4096,
+      "N": 33418859,
+      "N_bits": 25,
+      "p_label": 4637,
+      "q_label": 7207,
+      "factor_ratio": [
+        7207,
+        4637
+      ],
+      "M": 2097152,
+      "k": 21,
+      "M_over_N_bounds": [
+        "1/16",
+        "1/8"
+      ],
+      "h": 10,
+      "leaf_nodes": 512,
+      "summary": {
+        "queries_run": 6,
+        "exact_queries": 6,
+        "budget_exhausted_queries": 0,
+        "any_early_factor_detection": true,
+        "any_relative_1_01_factor": true,
+        "any_exact_factor_result": true,
+        "queried_nodes": 364,
+        "maximum_queried_nodes": 123,
+        "maximum_peak_queue": 48
+      },
+      "small_exact_baseline": null,
+      "queries": [
+        {
+          "status": "exact",
+          "budget_reason": null,
+          "initial": {
+            "objective": 14084,
+            "product": 48098923,
+            "point": [
+              5821,
+              8263
+            ]
+          },
+          "current_incumbent": {
+            "objective": 11844,
+            "product": 33418859,
+            "point": [
+              4637,
+              7207
+            ]
+          },
+          "exact_result": {
+            "objective": 11844,
+            "product": 33418859,
+            "point": [
+              4637,
+              7207
+            ]
+          },
+          "current_outcome": "proper_factor",
+          "incumbent_x_trials": 64,
+          "continuous_center_floor": 5780,
+          "h": 10,
+          "leaf_nodes": 512,
+          "queried_nodes": 123,
+          "expanded_nodes": 61,
+          "pruned_nodes": 61,
+          "accepted_nodes": 1,
+          "live_nodes": 0,
+          "peak_queue": 48,
+          "primitive_calls": {
+            "raycasts": 279409,
+            "next_calls": 51132,
+            "seek_calls": 2743,
+            "support_calls": 123
+          },
+          "early_factor_detection": {
+            "source": "node_oracle",
+            "depth": 7,
+            "value": {
+              "objective": 11844,
+              "product": 33418859,
+              "point": [
+                7207,
+                4637
+              ]
+            },
+            "outcome": "proper_factor",
+            "queried_nodes": 84,
+            "expanded_nodes": 42,
+            "elapsed_seconds": 0.19072162499651313,
+            "primitive_calls": {
+              "raycasts": 234590,
+              "next_calls": 41702,
+              "seek_calls": 1840,
+              "support_calls": 84
+            }
+          },
+          "relative_1_01_certificate": {
+            "value": {
+              "objective": 11844,
+              "product": 33418859,
+              "point": [
+                4637,
+                7207
+              ]
+            },
+            "outcome": "proper_factor",
+            "inequality": [
+              1184400,
+              1196244
+            ],
+            "queried_nodes": 123,
+            "expanded_nodes": 61,
+            "elapsed_seconds": 0.2281961249973392,
+            "primitive_calls": {
+              "raycasts": 279409,
+              "next_calls": 51132,
+              "seek_calls": 2743,
+              "support_calls": 123
+            },
+            "recorded_comparison_objective": 11844,
+            "global_lower_objective": 11844
+          },
+          "counts_by_depth": [
+            {
+              "depth": 1,
+              "queried": 1,
+              "expanded": 1,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 1,
+              "seek_calls": 16,
+              "next_calls": 671,
+              "raycasts": 3581
+            },
+            {
+              "depth": 2,
+              "queried": 2,
+              "expanded": 2,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 32,
+              "next_calls": 1236,
+              "raycasts": 6855
+            },
+            {
+              "depth": 3,
+              "queried": 4,
+              "expanded": 4,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 4,
+              "seek_calls": 70,
+              "next_calls": 2592,
+              "raycasts": 15107
+            },
+            {
+              "depth": 4,
+              "queried": 8,
+              "expanded": 8,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 8,
+              "seek_calls": 126,
+              "next_calls": 4043,
+              "raycasts": 23750
+            },
+            {
+              "depth": 5,
+              "queried": 16,
+              "expanded": 16,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 16,
+              "seek_calls": 355,
+              "next_calls": 12185,
+              "raycasts": 72554
+            },
+            {
+              "depth": 6,
+              "queried": 32,
+              "expanded": 24,
+              "pruned": 8,
+              "accepted": 0,
+              "support_calls": 32,
+              "seek_calls": 755,
+              "next_calls": 15235,
+              "raycasts": 84362
+            },
+            {
+              "depth": 7,
+              "queried": 48,
+              "expanded": 6,
+              "pruned": 41,
+              "accepted": 1,
+              "support_calls": 48,
+              "seek_calls": 1117,
+              "next_calls": 13059,
+              "raycasts": 63649
+            },
+            {
+              "depth": 8,
+              "queried": 12,
+              "expanded": 0,
+              "pruned": 12,
+              "accepted": 0,
+              "support_calls": 12,
+              "seek_calls": 272,
+              "next_calls": 2111,
+              "raycasts": 9551
+            }
+          ],
+          "runtime_seconds": 0.22821195899450686,
+          "normal": [
+            1,
+            1
+          ],
+          "minimum_live_node_objective": null,
+          "global_lower_objective": 11844,
+          "unresolved_subtree_frontier_complete": true
+        },
+        {
+          "status": "exact",
+          "budget_reason": null,
+          "initial": {
+            "objective": 24573,
+            "product": 66973291,
+            "point": [
+              4081,
+              16411
+            ]
+          },
+          "current_incumbent": {
+            "objective": 16481,
+            "product": 33418859,
+            "point": [
+              4637,
+              7207
+            ]
+          },
+          "exact_result": {
+            "objective": 16481,
+            "product": 33418859,
+            "point": [
+              4637,
+              7207
+            ]
+          },
+          "current_outcome": "proper_factor",
+          "incumbent_x_trials": 64,
+          "continuous_center_floor": 4087,
+          "h": 10,
+          "leaf_nodes": 512,
+          "queried_nodes": 93,
+          "expanded_nodes": 46,
+          "pruned_nodes": 46,
+          "accepted_nodes": 1,
+          "live_nodes": 0,
+          "peak_queue": 46,
+          "primitive_calls": {
+            "raycasts": 275828,
+            "next_calls": 48580,
+            "seek_calls": 2134,
+            "support_calls": 93
+          },
+          "early_factor_detection": {
+            "source": "node_oracle",
+            "depth": 6,
+            "value": {
+              "objective": 16481,
+              "product": 33418859,
+              "point": [
+                4637,
+                7207
+              ]
+            },
+            "outcome": "proper_factor",
+            "queried_nodes": 48,
+            "expanded_nodes": 24,
+            "elapsed_seconds": 0.16032866699970327,
+            "primitive_calls": {
+              "raycasts": 197200,
+              "next_calls": 33764,
+              "seek_calls": 1095,
+              "support_calls": 48
+            }
+          },
+          "relative_1_01_certificate": {
+            "value": {
+              "objective": 16481,
+              "product": 33418859,
+              "point": [
+                4637,
+                7207
+              ]
+            },
+            "outcome": "proper_factor",
+            "inequality": [
+              1648100,
+              1664581
+            ],
+            "queried_nodes": 93,
+            "expanded_nodes": 46,
+            "elapsed_seconds": 0.2252610419964185,
+            "primitive_calls": {
+              "raycasts": 275828,
+              "next_calls": 48580,
+              "seek_calls": 2134,
+              "support_calls": 93
+            },
+            "recorded_comparison_objective": 16493,
+            "global_lower_objective": 16481
+          },
+          "counts_by_depth": [
+            {
+              "depth": 1,
+              "queried": 1,
+              "expanded": 1,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 1,
+              "seek_calls": 19,
+              "next_calls": 833,
+              "raycasts": 4743
+            },
+            {
+              "depth": 2,
+              "queried": 2,
+              "expanded": 2,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 39,
+              "next_calls": 1611,
+              "raycasts": 9134
+            },
+            {
+              "depth": 3,
+              "queried": 4,
+              "expanded": 4,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 4,
+              "seek_calls": 78,
+              "next_calls": 3044,
+              "raycasts": 17861
+            },
+            {
+              "depth": 4,
+              "queried": 8,
+              "expanded": 8,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 8,
+              "seek_calls": 182,
+              "next_calls": 7096,
+              "raycasts": 42093
+            },
+            {
+              "depth": 5,
+              "queried": 16,
+              "expanded": 14,
+              "pruned": 2,
+              "accepted": 0,
+              "support_calls": 16,
+              "seek_calls": 376,
+              "next_calls": 13441,
+              "raycasts": 80177
+            },
+            {
+              "depth": 6,
+              "queried": 28,
+              "expanded": 12,
+              "pruned": 15,
+              "accepted": 1,
+              "support_calls": 28,
+              "seek_calls": 653,
+              "next_calls": 13773,
+              "raycasts": 77072
+            },
+            {
+              "depth": 7,
+              "queried": 24,
+              "expanded": 5,
+              "pruned": 19,
+              "accepted": 0,
+              "support_calls": 24,
+              "seek_calls": 563,
+              "next_calls": 7031,
+              "raycasts": 35920
+            },
+            {
+              "depth": 8,
+              "queried": 10,
+              "expanded": 0,
+              "pruned": 10,
+              "accepted": 0,
+              "support_calls": 10,
+              "seek_calls": 224,
+              "next_calls": 1751,
+              "raycasts": 8828
+            }
+          ],
+          "runtime_seconds": 0.22527566700591706,
+          "normal": [
+            2,
+            1
+          ],
+          "minimum_live_node_objective": null,
+          "global_lower_objective": 16481,
+          "unresolved_subtree_frontier_complete": true
+        },
+        {
+          "status": "exact",
+          "budget_reason": null,
+          "initial": {
+            "objective": 447807,
+            "product": 551415403,
+            "point": [
+              5231,
+              105413
+            ]
+          },
+          "current_incumbent": {
+            "objective": 52013,
+            "product": 33418859,
+            "point": [
+              4637,
+              7207
+            ]
+          },
+          "exact_result": {
+            "objective": 52013,
+            "product": 33418859,
+            "point": [
+              4637,
+              7207
+            ]
+          },
+          "current_outcome": "proper_factor",
+          "incumbent_x_trials": 64,
+          "continuous_center_floor": 5170,
+          "h": 10,
+          "leaf_nodes": 512,
+          "queried_nodes": 59,
+          "expanded_nodes": 29,
+          "pruned_nodes": 29,
+          "accepted_nodes": 1,
+          "live_nodes": 0,
+          "peak_queue": 30,
+          "primitive_calls": {
+            "raycasts": 224995,
+            "next_calls": 38927,
+            "seek_calls": 1370,
+            "support_calls": 59
+          },
+          "early_factor_detection": {
+            "source": "node_oracle",
+            "depth": 5,
+            "value": {
+              "objective": 52013,
+              "product": 33418859,
+              "point": [
+                4637,
+                7207
+              ]
+            },
+            "outcome": "proper_factor",
+            "queried_nodes": 23,
+            "expanded_nodes": 11,
+            "elapsed_seconds": 0.09751291600696277,
+            "primitive_calls": {
+              "raycasts": 119973,
+              "next_calls": 20120,
+              "seek_calls": 536,
+              "support_calls": 23
+            }
+          },
+          "relative_1_01_certificate": {
+            "value": {
+              "objective": 52013,
+              "product": 33418859,
+              "point": [
+                4637,
+                7207
+              ]
+            },
+            "outcome": "proper_factor",
+            "inequality": [
+              5201300,
+              5253313
+            ],
+            "queried_nodes": 59,
+            "expanded_nodes": 29,
+            "elapsed_seconds": 0.18421516599482857,
+            "primitive_calls": {
+              "raycasts": 224995,
+              "next_calls": 38927,
+              "seek_calls": 1370,
+              "support_calls": 59
+            },
+            "recorded_comparison_objective": 52091,
+            "global_lower_objective": 52013
+          },
+          "counts_by_depth": [
+            {
+              "depth": 1,
+              "queried": 1,
+              "expanded": 1,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 1,
+              "seek_calls": 15,
+              "next_calls": 616,
+              "raycasts": 3294
+            },
+            {
+              "depth": 2,
+              "queried": 2,
+              "expanded": 2,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 47,
+              "next_calls": 2039,
+              "raycasts": 11726
+            },
+            {
+              "depth": 3,
+              "queried": 4,
+              "expanded": 4,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 4,
+              "seek_calls": 95,
+              "next_calls": 3951,
+              "raycasts": 23526
+            },
+            {
+              "depth": 4,
+              "queried": 8,
+              "expanded": 8,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 8,
+              "seek_calls": 189,
+              "next_calls": 7450,
+              "raycasts": 44413
+            },
+            {
+              "depth": 5,
+              "queried": 16,
+              "expanded": 11,
+              "pruned": 4,
+              "accepted": 1,
+              "support_calls": 16,
+              "seek_calls": 371,
+              "next_calls": 13098,
+              "raycasts": 77771
+            },
+            {
+              "depth": 6,
+              "queried": 22,
+              "expanded": 2,
+              "pruned": 20,
+              "accepted": 0,
+              "support_calls": 22,
+              "seek_calls": 511,
+              "next_calls": 10173,
+              "raycasts": 56342
+            },
+            {
+              "depth": 7,
+              "queried": 4,
+              "expanded": 1,
+              "pruned": 3,
+              "accepted": 0,
+              "support_calls": 4,
+              "seek_calls": 95,
+              "next_calls": 1231,
+              "raycasts": 6221
+            },
+            {
+              "depth": 8,
+              "queried": 2,
+              "expanded": 0,
+              "pruned": 2,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 47,
+              "next_calls": 369,
+              "raycasts": 1702
+            }
+          ],
+          "runtime_seconds": 0.1842281660065055,
+          "normal": [
+            5,
+            4
+          ],
+          "minimum_live_node_objective": null,
+          "global_lower_objective": 52013,
+          "unresolved_subtree_frontier_complete": true
+        },
+        {
+          "status": "exact",
+          "budget_reason": null,
+          "initial": {
+            "objective": 143355,
+            "product": 207482475,
+            "point": [
+              5055,
+              41045
+            ]
+          },
+          "current_incumbent": {
+            "objective": 40169,
+            "product": 33418859,
+            "point": [
+              4637,
+              7207
+            ]
+          },
+          "exact_result": {
+            "objective": 40169,
+            "product": 33418859,
+            "point": [
+              4637,
+              7207
+            ]
+          },
+          "current_outcome": "proper_factor",
+          "incumbent_x_trials": 64,
+          "continuous_center_floor": 5006,
+          "h": 10,
+          "leaf_nodes": 512,
+          "queried_nodes": 41,
+          "expanded_nodes": 20,
+          "pruned_nodes": 20,
+          "accepted_nodes": 1,
+          "live_nodes": 0,
+          "peak_queue": 21,
+          "primitive_calls": {
+            "raycasts": 188632,
+            "next_calls": 32045,
+            "seek_calls": 952,
+            "support_calls": 41
+          },
+          "early_factor_detection": {
+            "source": "node_oracle",
+            "depth": 5,
+            "value": {
+              "objective": 40169,
+              "product": 33418859,
+              "point": [
+                4637,
+                7207
+              ]
+            },
+            "outcome": "proper_factor",
+            "queried_nodes": 25,
+            "expanded_nodes": 12,
+            "elapsed_seconds": 0.10757100000046194,
+            "primitive_calls": {
+              "raycasts": 129801,
+              "next_calls": 21916,
+              "seek_calls": 585,
+              "support_calls": 25
+            }
+          },
+          "relative_1_01_certificate": {
+            "value": {
+              "objective": 40169,
+              "product": 33418859,
+              "point": [
+                4637,
+                7207
+              ]
+            },
+            "outcome": "proper_factor",
+            "inequality": [
+              4016900,
+              4057069
+            ],
+            "queried_nodes": 41,
+            "expanded_nodes": 20,
+            "elapsed_seconds": 0.1570616249955492,
+            "primitive_calls": {
+              "raycasts": 188632,
+              "next_calls": 32045,
+              "seek_calls": 952,
+              "support_calls": 41
+            },
+            "recorded_comparison_objective": 40173,
+            "global_lower_objective": 40169
+          },
+          "counts_by_depth": [
+            {
+              "depth": 1,
+              "queried": 1,
+              "expanded": 1,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 1,
+              "seek_calls": 19,
+              "next_calls": 833,
+              "raycasts": 4367
+            },
+            {
+              "depth": 2,
+              "queried": 2,
+              "expanded": 2,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 45,
+              "next_calls": 1932,
+              "raycasts": 11075
+            },
+            {
+              "depth": 3,
+              "queried": 4,
+              "expanded": 4,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 4,
+              "seek_calls": 96,
+              "next_calls": 4003,
+              "raycasts": 23836
+            },
+            {
+              "depth": 4,
+              "queried": 8,
+              "expanded": 8,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 8,
+              "seek_calls": 189,
+              "next_calls": 7450,
+              "raycasts": 44395
+            },
+            {
+              "depth": 5,
+              "queried": 16,
+              "expanded": 5,
+              "pruned": 10,
+              "accepted": 1,
+              "support_calls": 16,
+              "seek_calls": 369,
+              "next_calls": 12990,
+              "raycasts": 77214
+            },
+            {
+              "depth": 6,
+              "queried": 10,
+              "expanded": 0,
+              "pruned": 10,
+              "accepted": 0,
+              "support_calls": 10,
+              "seek_calls": 234,
+              "next_calls": 4837,
+              "raycasts": 27745
+            }
+          ],
+          "runtime_seconds": 0.15707116699195467,
+          "normal": [
+            4,
+            3
+          ],
+          "minimum_live_node_objective": null,
+          "global_lower_objective": 40169,
+          "unresolved_subtree_frontier_complete": true
+        },
+        {
+          "status": "exact",
+          "budget_reason": null,
+          "initial": {
+            "objective": 47711,
+            "product": 79556203,
+            "point": [
+              4759,
+              16717
+            ]
+          },
+          "current_incumbent": {
+            "objective": 28325,
+            "product": 33418859,
+            "point": [
+              4637,
+              7207
+            ]
+          },
+          "exact_result": {
+            "objective": 28325,
+            "product": 33418859,
+            "point": [
+              4637,
+              7207
+            ]
+          },
+          "current_outcome": "proper_factor",
+          "incumbent_x_trials": 64,
+          "continuous_center_floor": 4720,
+          "h": 10,
+          "leaf_nodes": 512,
+          "queried_nodes": 13,
+          "expanded_nodes": 6,
+          "pruned_nodes": 6,
+          "accepted_nodes": 1,
+          "live_nodes": 0,
+          "peak_queue": 7,
+          "primitive_calls": {
+            "raycasts": 68496,
+            "next_calls": 11626,
+            "seek_calls": 291,
+            "support_calls": 13
+          },
+          "early_factor_detection": {
+            "source": "node_oracle",
+            "depth": 3,
+            "value": {
+              "objective": 28325,
+              "product": 33418859,
+              "point": [
+                4637,
+                7207
+              ]
+            },
+            "outcome": "proper_factor",
+            "queried_nodes": 5,
+            "expanded_nodes": 2,
+            "elapsed_seconds": 0.020714792000944726,
+            "primitive_calls": {
+              "raycasts": 25192,
+              "next_calls": 4400,
+              "seek_calls": 105,
+              "support_calls": 5
+            }
+          },
+          "relative_1_01_certificate": {
+            "value": {
+              "objective": 28325,
+              "product": 33418859,
+              "point": [
+                4637,
+                7207
+              ]
+            },
+            "outcome": "proper_factor",
+            "inequality": [
+              2832500,
+              2860825
+            ],
+            "queried_nodes": 13,
+            "expanded_nodes": 6,
+            "elapsed_seconds": 0.05674808299227152,
+            "primitive_calls": {
+              "raycasts": 68496,
+              "next_calls": 11626,
+              "seek_calls": 291,
+              "support_calls": 13
+            },
+            "recorded_comparison_objective": 28327,
+            "global_lower_objective": 28325
+          },
+          "counts_by_depth": [
+            {
+              "depth": 1,
+              "queried": 1,
+              "expanded": 1,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 1,
+              "seek_calls": 19,
+              "next_calls": 834,
+              "raycasts": 4382
+            },
+            {
+              "depth": 2,
+              "queried": 2,
+              "expanded": 2,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 40,
+              "next_calls": 1671,
+              "raycasts": 9512
+            },
+            {
+              "depth": 3,
+              "queried": 4,
+              "expanded": 2,
+              "pruned": 1,
+              "accepted": 1,
+              "support_calls": 4,
+              "seek_calls": 92,
+              "next_calls": 3788,
+              "raycasts": 22559
+            },
+            {
+              "depth": 4,
+              "queried": 4,
+              "expanded": 1,
+              "pruned": 3,
+              "accepted": 0,
+              "support_calls": 4,
+              "seek_calls": 93,
+              "next_calls": 3653,
+              "raycasts": 21683
+            },
+            {
+              "depth": 5,
+              "queried": 2,
+              "expanded": 0,
+              "pruned": 2,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 47,
+              "next_calls": 1680,
+              "raycasts": 10360
+            }
+          ],
+          "runtime_seconds": 0.05675433299620636,
+          "normal": [
+            3,
+            2
+          ],
+          "minimum_live_node_objective": null,
+          "global_lower_objective": 28325,
+          "unresolved_subtree_frontier_complete": true
+        },
+        {
+          "status": "exact",
+          "budget_reason": null,
+          "initial": {
+            "objective": 163741,
+            "product": 144567915,
+            "point": [
+              4335,
+              33349
+            ]
+          },
+          "current_incumbent": {
+            "objective": 61287,
+            "product": 33418859,
+            "point": [
+              4637,
+              7207
+            ]
+          },
+          "exact_result": {
+            "objective": 61287,
+            "product": 33418859,
+            "point": [
+              4637,
+              7207
+            ]
+          },
+          "current_outcome": "proper_factor",
+          "incumbent_x_trials": 64,
+          "continuous_center_floor": 4369,
+          "h": 10,
+          "leaf_nodes": 512,
+          "queried_nodes": 35,
+          "expanded_nodes": 17,
+          "pruned_nodes": 17,
+          "accepted_nodes": 1,
+          "live_nodes": 0,
+          "peak_queue": 18,
+          "primitive_calls": {
+            "raycasts": 166284,
+            "next_calls": 28335,
+            "seek_calls": 809,
+            "support_calls": 35
+          },
+          "early_factor_detection": {
+            "source": "node_oracle",
+            "depth": 5,
+            "value": {
+              "objective": 61287,
+              "product": 33418859,
+              "point": [
+                4637,
+                7207
+              ]
+            },
+            "outcome": "proper_factor",
+            "queried_nodes": 27,
+            "expanded_nodes": 13,
+            "elapsed_seconds": 0.1126653749961406,
+            "primitive_calls": {
+              "raycasts": 140165,
+              "next_calls": 23781,
+              "seek_calls": 622,
+              "support_calls": 27
+            }
+          },
+          "relative_1_01_certificate": {
+            "value": {
+              "objective": 61287,
+              "product": 33418859,
+              "point": [
+                4637,
+                7207
+              ]
+            },
+            "outcome": "proper_factor",
+            "inequality": [
+              6128700,
+              6189987
+            ],
+            "queried_nodes": 35,
+            "expanded_nodes": 17,
+            "elapsed_seconds": 0.13382408299366944,
+            "primitive_calls": {
+              "raycasts": 166284,
+              "next_calls": 28335,
+              "seek_calls": 809,
+              "support_calls": 35
+            },
+            "recorded_comparison_objective": 61295,
+            "global_lower_objective": 61287
+          },
+          "counts_by_depth": [
+            {
+              "depth": 1,
+              "queried": 1,
+              "expanded": 1,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 1,
+              "seek_calls": 17,
+              "next_calls": 724,
+              "raycasts": 3854
+            },
+            {
+              "depth": 2,
+              "queried": 2,
+              "expanded": 2,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 48,
+              "next_calls": 2101,
+              "raycasts": 12012
+            },
+            {
+              "depth": 3,
+              "queried": 4,
+              "expanded": 4,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 4,
+              "seek_calls": 93,
+              "next_calls": 3841,
+              "raycasts": 22792
+            },
+            {
+              "depth": 4,
+              "queried": 8,
+              "expanded": 7,
+              "pruned": 1,
+              "accepted": 0,
+              "support_calls": 8,
+              "seek_calls": 184,
+              "next_calls": 7188,
+              "raycasts": 42781
+            },
+            {
+              "depth": 5,
+              "queried": 14,
+              "expanded": 3,
+              "pruned": 10,
+              "accepted": 1,
+              "support_calls": 14,
+              "seek_calls": 327,
+              "next_calls": 11613,
+              "raycasts": 68370
+            },
+            {
+              "depth": 6,
+              "queried": 6,
+              "expanded": 0,
+              "pruned": 6,
+              "accepted": 0,
+              "support_calls": 6,
+              "seek_calls": 140,
+              "next_calls": 2868,
+              "raycasts": 16475
+            }
+          ],
+          "runtime_seconds": 0.1338345410040347,
+          "normal": [
+            7,
+            4
+          ],
+          "minimum_live_node_objective": null,
+          "global_lower_objective": 61287,
+          "unresolved_subtree_frontier_complete": true
+        }
+      ]
+    },
+    {
+      "label": "factor_scale=2^16",
+      "B": 65536,
+      "N": 8464705853,
+      "N_bits": 33,
+      "p_label": 73771,
+      "q_label": 114743,
+      "factor_ratio": [
+        114743,
+        73771
+      ],
+      "M": 536870912,
+      "k": 29,
+      "M_over_N_bounds": [
+        "1/16",
+        "1/8"
+      ],
+      "h": 14,
+      "leaf_nodes": 8192,
+      "summary": {
+        "queries_run": 6,
+        "exact_queries": 4,
+        "budget_exhausted_queries": 2,
+        "any_early_factor_detection": true,
+        "any_relative_1_01_factor": true,
+        "any_exact_factor_result": true,
+        "queried_nodes": 1834,
+        "maximum_queried_nodes": 501,
+        "maximum_peak_queue": 251
+      },
+      "small_exact_baseline": null,
+      "queries": [
+        {
+          "status": "budget_exhausted",
+          "budget_reason": "query_time",
+          "initial": {
+            "objective": 3276414,
+            "product": 293006289213,
+            "point": [
+              92013,
+              3184401
+            ]
+          },
+          "current_incumbent": {
+            "objective": 3276414,
+            "product": 293006289213,
+            "point": [
+              92013,
+              3184401
+            ]
+          },
+          "exact_result": null,
+          "current_outcome": "nonfactor",
+          "incumbent_x_trials": 64,
+          "continuous_center_floor": 92003,
+          "h": 14,
+          "leaf_nodes": 8192,
+          "queried_nodes": 501,
+          "expanded_nodes": 250,
+          "pruned_nodes": 0,
+          "accepted_nodes": 0,
+          "live_nodes": 251,
+          "peak_queue": 251,
+          "primitive_calls": {
+            "raycasts": 2583544,
+            "next_calls": 402153,
+            "seek_calls": 14831,
+            "support_calls": 501
+          },
+          "early_factor_detection": null,
+          "relative_1_01_certificate": null,
+          "counts_by_depth": [
+            {
+              "depth": 1,
+              "queried": 1,
+              "expanded": 1,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 1,
+              "seek_calls": 24,
+              "next_calls": 1405,
+              "raycasts": 8597
+            },
+            {
+              "depth": 2,
+              "queried": 2,
+              "expanded": 2,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 46,
+              "next_calls": 2535,
+              "raycasts": 13544
+            },
+            {
+              "depth": 3,
+              "queried": 4,
+              "expanded": 4,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 4,
+              "seek_calls": 92,
+              "next_calls": 4775,
+              "raycasts": 31334
+            },
+            {
+              "depth": 4,
+              "queried": 8,
+              "expanded": 8,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 8,
+              "seek_calls": 160,
+              "next_calls": 7326,
+              "raycasts": 49328
+            },
+            {
+              "depth": 5,
+              "queried": 16,
+              "expanded": 16,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 16,
+              "seek_calls": 337,
+              "next_calls": 14766,
+              "raycasts": 97954
+            },
+            {
+              "depth": 6,
+              "queried": 32,
+              "expanded": 32,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 32,
+              "seek_calls": 687,
+              "next_calls": 28254,
+              "raycasts": 192962
+            },
+            {
+              "depth": 7,
+              "queried": 64,
+              "expanded": 64,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 64,
+              "seek_calls": 1777,
+              "next_calls": 78767,
+              "raycasts": 529878
+            },
+            {
+              "depth": 8,
+              "queried": 128,
+              "expanded": 82,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 128,
+              "seek_calls": 4004,
+              "next_calls": 138633,
+              "raycasts": 902552
+            },
+            {
+              "depth": 9,
+              "queried": 164,
+              "expanded": 36,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 164,
+              "seek_calls": 5133,
+              "next_calls": 96948,
+              "raycasts": 594118
+            },
+            {
+              "depth": 10,
+              "queried": 72,
+              "expanded": 5,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 72,
+              "seek_calls": 2258,
+              "next_calls": 26221,
+              "raycasts": 148742
+            },
+            {
+              "depth": 11,
+              "queried": 10,
+              "expanded": 0,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 10,
+              "seek_calls": 313,
+              "next_calls": 2523,
+              "raycasts": 14535
+            }
+          ],
+          "runtime_seconds": 2.504366041001049,
+          "normal": [
+            1,
+            1
+          ],
+          "minimum_live_node_objective": 185470,
+          "global_lower_objective": 185470,
+          "unresolved_subtree_frontier_complete": true
+        },
+        {
+          "status": "budget_exhausted",
+          "budget_reason": "query_time",
+          "initial": {
+            "objective": 1959733,
+            "product": 119060113725,
+            "point": [
+              65075,
+              1829583
+            ]
+          },
+          "current_incumbent": {
+            "objective": 1959733,
+            "product": 119060113725,
+            "point": [
+              65075,
+              1829583
+            ]
+          },
+          "exact_result": null,
+          "current_outcome": "nonfactor",
+          "incumbent_x_trials": 64,
+          "continuous_center_floor": 65056,
+          "h": 14,
+          "leaf_nodes": 8192,
+          "queried_nodes": 397,
+          "expanded_nodes": 198,
+          "pruned_nodes": 1,
+          "accepted_nodes": 0,
+          "live_nodes": 198,
+          "peak_queue": 198,
+          "primitive_calls": {
+            "raycasts": 2637601,
+            "next_calls": 403797,
+            "seek_calls": 12283,
+            "support_calls": 397
+          },
+          "early_factor_detection": {
+            "source": "node_oracle",
+            "depth": 7,
+            "value": {
+              "objective": 262285,
+              "product": 8464705853,
+              "point": [
+                73771,
+                114743
+              ]
+            },
+            "outcome": "proper_factor",
+            "queried_nodes": 164,
+            "expanded_nodes": 82,
+            "elapsed_seconds": 1.315910833000089,
+            "primitive_calls": {
+              "raycasts": 1443388,
+              "next_calls": 215342,
+              "seek_calls": 4970,
+              "support_calls": 164
+            }
+          },
+          "relative_1_01_certificate": null,
+          "counts_by_depth": [
+            {
+              "depth": 1,
+              "queried": 1,
+              "expanded": 1,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 1,
+              "seek_calls": 25,
+              "next_calls": 1472,
+              "raycasts": 9868
+            },
+            {
+              "depth": 2,
+              "queried": 2,
+              "expanded": 2,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 52,
+              "next_calls": 2954,
+              "raycasts": 16729
+            },
+            {
+              "depth": 3,
+              "queried": 4,
+              "expanded": 4,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 4,
+              "seek_calls": 68,
+              "next_calls": 3088,
+              "raycasts": 19211
+            },
+            {
+              "depth": 4,
+              "queried": 8,
+              "expanded": 8,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 8,
+              "seek_calls": 183,
+              "next_calls": 8944,
+              "raycasts": 61308
+            },
+            {
+              "depth": 5,
+              "queried": 16,
+              "expanded": 16,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 16,
+              "seek_calls": 493,
+              "next_calls": 25697,
+              "raycasts": 172469
+            },
+            {
+              "depth": 6,
+              "queried": 32,
+              "expanded": 32,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 32,
+              "seek_calls": 999,
+              "next_calls": 50041,
+              "raycasts": 344165
+            },
+            {
+              "depth": 7,
+              "queried": 64,
+              "expanded": 62,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 64,
+              "seek_calls": 1981,
+              "next_calls": 93047,
+              "raycasts": 629098
+            },
+            {
+              "depth": 8,
+              "queried": 124,
+              "expanded": 50,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 124,
+              "seek_calls": 3892,
+              "next_calls": 141388,
+              "raycasts": 923780
+            },
+            {
+              "depth": 9,
+              "queried": 100,
+              "expanded": 16,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 100,
+              "seek_calls": 3162,
+              "next_calls": 62947,
+              "raycasts": 387685
+            },
+            {
+              "depth": 10,
+              "queried": 32,
+              "expanded": 5,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 32,
+              "seek_calls": 995,
+              "next_calls": 11083,
+              "raycasts": 58416
+            },
+            {
+              "depth": 11,
+              "queried": 10,
+              "expanded": 2,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 10,
+              "seek_calls": 307,
+              "next_calls": 2280,
+              "raycasts": 11078
+            },
+            {
+              "depth": 12,
+              "queried": 4,
+              "expanded": 0,
+              "pruned": 1,
+              "accepted": 0,
+              "support_calls": 4,
+              "seek_calls": 126,
+              "next_calls": 856,
+              "raycasts": 3794
+            }
+          ],
+          "runtime_seconds": 2.5023725000064587,
+          "normal": [
+            2,
+            1
+          ],
+          "minimum_live_node_objective": 261527,
+          "global_lower_objective": 261527,
+          "unresolved_subtree_frontier_complete": true
+        },
+        {
+          "status": "exact",
+          "budget_reason": null,
+          "initial": {
+            "objective": 42736485,
+            "product": 870679390525,
+            "point": [
+              82285,
+              10581265
+            ]
+          },
+          "current_incumbent": {
+            "objective": 827827,
+            "product": 8464705853,
+            "point": [
+              73771,
+              114743
+            ]
+          },
+          "exact_result": {
+            "objective": 827827,
+            "product": 8464705853,
+            "point": [
+              73771,
+              114743
+            ]
+          },
+          "current_outcome": "proper_factor",
+          "incumbent_x_trials": 64,
+          "continuous_center_floor": 82290,
+          "h": 14,
+          "leaf_nodes": 8192,
+          "queried_nodes": 369,
+          "expanded_nodes": 184,
+          "pruned_nodes": 184,
+          "accepted_nodes": 1,
+          "live_nodes": 0,
+          "peak_queue": 185,
+          "primitive_calls": {
+            "raycasts": 2573750,
+            "next_calls": 392354,
+            "seek_calls": 11558,
+            "support_calls": 369
+          },
+          "early_factor_detection": {
+            "source": "node_oracle",
+            "depth": 8,
+            "value": {
+              "objective": 827827,
+              "product": 8464705853,
+              "point": [
+                73771,
+                114743
+              ]
+            },
+            "outcome": "proper_factor",
+            "queried_nodes": 204,
+            "expanded_nodes": 102,
+            "elapsed_seconds": 1.6799605419946602,
+            "primitive_calls": {
+              "raycasts": 1818373,
+              "next_calls": 271372,
+              "seek_calls": 6373,
+              "support_calls": 204
+            }
+          },
+          "relative_1_01_certificate": {
+            "value": {
+              "objective": 827827,
+              "product": 8464705853,
+              "point": [
+                73771,
+                114743
+              ]
+            },
+            "outcome": "proper_factor",
+            "inequality": [
+              82782700,
+              83610527
+            ],
+            "queried_nodes": 369,
+            "expanded_nodes": 184,
+            "elapsed_seconds": 2.44606441698852,
+            "primitive_calls": {
+              "raycasts": 2573750,
+              "next_calls": 392354,
+              "seek_calls": 11558,
+              "support_calls": 369
+            },
+            "recorded_comparison_objective": 828007,
+            "global_lower_objective": 827827
+          },
+          "counts_by_depth": [
+            {
+              "depth": 1,
+              "queried": 1,
+              "expanded": 1,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 1,
+              "seek_calls": 25,
+              "next_calls": 1469,
+              "raycasts": 9317
+            },
+            {
+              "depth": 2,
+              "queried": 2,
+              "expanded": 2,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 50,
+              "next_calls": 2817,
+              "raycasts": 14924
+            },
+            {
+              "depth": 3,
+              "queried": 4,
+              "expanded": 4,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 4,
+              "seek_calls": 128,
+              "next_calls": 7262,
+              "raycasts": 47771
+            },
+            {
+              "depth": 4,
+              "queried": 8,
+              "expanded": 8,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 8,
+              "seek_calls": 252,
+              "next_calls": 13708,
+              "raycasts": 97816
+            },
+            {
+              "depth": 5,
+              "queried": 16,
+              "expanded": 16,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 16,
+              "seek_calls": 498,
+              "next_calls": 25984,
+              "raycasts": 175120
+            },
+            {
+              "depth": 6,
+              "queried": 32,
+              "expanded": 32,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 32,
+              "seek_calls": 1002,
+              "next_calls": 50207,
+              "raycasts": 345971
+            },
+            {
+              "depth": 7,
+              "queried": 64,
+              "expanded": 60,
+              "pruned": 4,
+              "accepted": 0,
+              "support_calls": 64,
+              "seek_calls": 2003,
+              "next_calls": 94526,
+              "raycasts": 638817
+            },
+            {
+              "depth": 8,
+              "queried": 120,
+              "expanded": 42,
+              "pruned": 77,
+              "accepted": 1,
+              "support_calls": 120,
+              "seek_calls": 3791,
+              "next_calls": 133405,
+              "raycasts": 867091
+            },
+            {
+              "depth": 9,
+              "queried": 84,
+              "expanded": 16,
+              "pruned": 68,
+              "accepted": 0,
+              "support_calls": 84,
+              "seek_calls": 2625,
+              "next_calls": 49990,
+              "raycasts": 303400
+            },
+            {
+              "depth": 10,
+              "queried": 32,
+              "expanded": 3,
+              "pruned": 29,
+              "accepted": 0,
+              "support_calls": 32,
+              "seek_calls": 995,
+              "next_calls": 11502,
+              "raycasts": 64672
+            },
+            {
+              "depth": 11,
+              "queried": 6,
+              "expanded": 0,
+              "pruned": 6,
+              "accepted": 0,
+              "support_calls": 6,
+              "seek_calls": 189,
+              "next_calls": 1484,
+              "raycasts": 8851
+            }
+          ],
+          "runtime_seconds": 2.4461333329963963,
+          "normal": [
+            5,
+            4
+          ],
+          "minimum_live_node_objective": null,
+          "global_lower_objective": 827827,
+          "unresolved_subtree_frontier_complete": true
+        },
+        {
+          "status": "exact",
+          "budget_reason": null,
+          "initial": {
+            "objective": 49363029,
+            "product": 1302860474685,
+            "point": [
+              79695,
+              16348083
+            ]
+          },
+          "current_incumbent": {
+            "objective": 639313,
+            "product": 8464705853,
+            "point": [
+              73771,
+              114743
+            ]
+          },
+          "exact_result": {
+            "objective": 639313,
+            "product": 8464705853,
+            "point": [
+              73771,
+              114743
+            ]
+          },
+          "current_outcome": "proper_factor",
+          "incumbent_x_trials": 64,
+          "continuous_center_floor": 79677,
+          "h": 14,
+          "leaf_nodes": 8192,
+          "queried_nodes": 273,
+          "expanded_nodes": 136,
+          "pruned_nodes": 136,
+          "accepted_nodes": 1,
+          "live_nodes": 0,
+          "peak_queue": 137,
+          "primitive_calls": {
+            "raycasts": 2166452,
+            "next_calls": 326733,
+            "seek_calls": 8501,
+            "support_calls": 273
+          },
+          "early_factor_detection": {
+            "source": "node_oracle",
+            "depth": 8,
+            "value": {
+              "objective": 639313,
+              "product": 8464705853,
+              "point": [
+                73771,
+                114743
+              ]
+            },
+            "outcome": "proper_factor",
+            "queried_nodes": 124,
+            "expanded_nodes": 62,
+            "elapsed_seconds": 1.1221793750009965,
+            "primitive_calls": {
+              "raycasts": 1228399,
+              "next_calls": 181276,
+              "seek_calls": 3841,
+              "support_calls": 124
+            }
+          },
+          "relative_1_01_certificate": {
+            "value": {
+              "objective": 639313,
+              "product": 8464705853,
+              "point": [
+                73771,
+                114743
+              ]
+            },
+            "outcome": "proper_factor",
+            "inequality": [
+              63931300,
+              64570613
+            ],
+            "queried_nodes": 273,
+            "expanded_nodes": 136,
+            "elapsed_seconds": 2.0389518750016578,
+            "primitive_calls": {
+              "raycasts": 2166452,
+              "next_calls": 326733,
+              "seek_calls": 8501,
+              "support_calls": 273
+            },
+            "recorded_comparison_objective": 639343,
+            "global_lower_objective": 639313
+          },
+          "counts_by_depth": [
+            {
+              "depth": 1,
+              "queried": 1,
+              "expanded": 1,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 1,
+              "seek_calls": 27,
+              "next_calls": 1611,
+              "raycasts": 10735
+            },
+            {
+              "depth": 2,
+              "queried": 2,
+              "expanded": 2,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 48,
+              "next_calls": 2670,
+              "raycasts": 14405
+            },
+            {
+              "depth": 3,
+              "queried": 4,
+              "expanded": 4,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 4,
+              "seek_calls": 101,
+              "next_calls": 5393,
+              "raycasts": 35220
+            },
+            {
+              "depth": 4,
+              "queried": 8,
+              "expanded": 8,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 8,
+              "seek_calls": 247,
+              "next_calls": 13370,
+              "raycasts": 96036
+            },
+            {
+              "depth": 5,
+              "queried": 16,
+              "expanded": 16,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 16,
+              "seek_calls": 491,
+              "next_calls": 25491,
+              "raycasts": 171037
+            },
+            {
+              "depth": 6,
+              "queried": 32,
+              "expanded": 32,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 32,
+              "seek_calls": 1001,
+              "next_calls": 50145,
+              "raycasts": 344891
+            },
+            {
+              "depth": 7,
+              "queried": 64,
+              "expanded": 48,
+              "pruned": 16,
+              "accepted": 0,
+              "support_calls": 64,
+              "seek_calls": 2022,
+              "next_calls": 95812,
+              "raycasts": 647399
+            },
+            {
+              "depth": 8,
+              "queried": 96,
+              "expanded": 18,
+              "pruned": 77,
+              "accepted": 1,
+              "support_calls": 96,
+              "seek_calls": 3018,
+              "next_calls": 106218,
+              "raycasts": 690458
+            },
+            {
+              "depth": 9,
+              "queried": 36,
+              "expanded": 5,
+              "pruned": 31,
+              "accepted": 0,
+              "support_calls": 36,
+              "seek_calls": 1111,
+              "next_calls": 21215,
+              "raycasts": 128269
+            },
+            {
+              "depth": 10,
+              "queried": 10,
+              "expanded": 2,
+              "pruned": 8,
+              "accepted": 0,
+              "support_calls": 10,
+              "seek_calls": 311,
+              "next_calls": 3685,
+              "raycasts": 21240
+            },
+            {
+              "depth": 11,
+              "queried": 4,
+              "expanded": 0,
+              "pruned": 4,
+              "accepted": 0,
+              "support_calls": 4,
+              "seek_calls": 124,
+              "next_calls": 1123,
+              "raycasts": 6762
+            }
+          ],
+          "runtime_seconds": 2.0389969169918913,
+          "normal": [
+            4,
+            3
+          ],
+          "minimum_live_node_objective": null,
+          "global_lower_objective": 639313,
+          "unresolved_subtree_frontier_complete": true
+        },
+        {
+          "status": "exact",
+          "budget_reason": null,
+          "initial": {
+            "objective": 1322489,
+            "product": 41213831485,
+            "point": [
+              75133,
+              548545
+            ]
+          },
+          "current_incumbent": {
+            "objective": 450799,
+            "product": 8464705853,
+            "point": [
+              73771,
+              114743
+            ]
+          },
+          "exact_result": {
+            "objective": 450799,
+            "product": 8464705853,
+            "point": [
+              73771,
+              114743
+            ]
+          },
+          "current_outcome": "proper_factor",
+          "incumbent_x_trials": 64,
+          "continuous_center_floor": 75120,
+          "h": 14,
+          "leaf_nodes": 8192,
+          "queried_nodes": 65,
+          "expanded_nodes": 32,
+          "pruned_nodes": 32,
+          "accepted_nodes": 1,
+          "live_nodes": 0,
+          "peak_queue": 33,
+          "primitive_calls": {
+            "raycasts": 688144,
+            "next_calls": 101037,
+            "seek_calls": 1976,
+            "support_calls": 65
+          },
+          "early_factor_detection": {
+            "source": "node_oracle",
+            "depth": 6,
+            "value": {
+              "objective": 450799,
+              "product": 8464705853,
+              "point": [
+                73771,
+                114743
+              ]
+            },
+            "outcome": "proper_factor",
+            "queried_nodes": 49,
+            "expanded_nodes": 24,
+            "elapsed_seconds": 0.4591388749977341,
+            "primitive_calls": {
+              "raycasts": 516470,
+              "next_calls": 75999,
+              "seek_calls": 1469,
+              "support_calls": 49
+            }
+          },
+          "relative_1_01_certificate": {
+            "value": {
+              "objective": 450799,
+              "product": 8464705853,
+              "point": [
+                73771,
+                114743
+              ]
+            },
+            "outcome": "proper_factor",
+            "inequality": [
+              45079900,
+              45530699
+            ],
+            "queried_nodes": 65,
+            "expanded_nodes": 32,
+            "elapsed_seconds": 0.6126836250041379,
+            "primitive_calls": {
+              "raycasts": 688144,
+              "next_calls": 101037,
+              "seek_calls": 1976,
+              "support_calls": 65
+            },
+            "recorded_comparison_objective": 450811,
+            "global_lower_objective": 450799
+          },
+          "counts_by_depth": [
+            {
+              "depth": 1,
+              "queried": 1,
+              "expanded": 1,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 1,
+              "seek_calls": 25,
+              "next_calls": 1469,
+              "raycasts": 9825
+            },
+            {
+              "depth": 2,
+              "queried": 2,
+              "expanded": 2,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 54,
+              "next_calls": 3090,
+              "raycasts": 16741
+            },
+            {
+              "depth": 3,
+              "queried": 4,
+              "expanded": 4,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 4,
+              "seek_calls": 97,
+              "next_calls": 5112,
+              "raycasts": 33451
+            },
+            {
+              "depth": 4,
+              "queried": 8,
+              "expanded": 8,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 8,
+              "seek_calls": 246,
+              "next_calls": 13312,
+              "raycasts": 95480
+            },
+            {
+              "depth": 5,
+              "queried": 16,
+              "expanded": 13,
+              "pruned": 3,
+              "accepted": 0,
+              "support_calls": 16,
+              "seek_calls": 491,
+              "next_calls": 25515,
+              "raycasts": 171501
+            },
+            {
+              "depth": 6,
+              "queried": 26,
+              "expanded": 4,
+              "pruned": 21,
+              "accepted": 1,
+              "support_calls": 26,
+              "seek_calls": 811,
+              "next_calls": 40596,
+              "raycasts": 281603
+            },
+            {
+              "depth": 7,
+              "queried": 8,
+              "expanded": 0,
+              "pruned": 8,
+              "accepted": 0,
+              "support_calls": 8,
+              "seek_calls": 252,
+              "next_calls": 11943,
+              "raycasts": 79543
+            }
+          ],
+          "runtime_seconds": 0.6126952089980477,
+          "normal": [
+            3,
+            2
+          ],
+          "minimum_live_node_objective": null,
+          "global_lower_objective": 450799,
+          "unresolved_subtree_frontier_complete": true
+        },
+        {
+          "status": "exact",
+          "budget_reason": null,
+          "initial": {
+            "objective": 1776417,
+            "product": 22423349565,
+            "point": [
+              69555,
+              322383
+            ]
+          },
+          "current_incumbent": {
+            "objective": 975369,
+            "product": 8464705853,
+            "point": [
+              73771,
+              114743
+            ]
+          },
+          "exact_result": {
+            "objective": 975369,
+            "product": 8464705853,
+            "point": [
+              73771,
+              114743
+            ]
+          },
+          "current_outcome": "proper_factor",
+          "incumbent_x_trials": 64,
+          "continuous_center_floor": 69548,
+          "h": 14,
+          "leaf_nodes": 8192,
+          "queried_nodes": 229,
+          "expanded_nodes": 114,
+          "pruned_nodes": 114,
+          "accepted_nodes": 1,
+          "live_nodes": 0,
+          "peak_queue": 112,
+          "primitive_calls": {
+            "raycasts": 1901884,
+            "next_calls": 284712,
+            "seek_calls": 7118,
+            "support_calls": 229
+          },
+          "early_factor_detection": {
+            "source": "node_oracle",
+            "depth": 7,
+            "value": {
+              "objective": 975369,
+              "product": 8464705853,
+              "point": [
+                73771,
+                114743
+              ]
+            },
+            "outcome": "proper_factor",
+            "queried_nodes": 46,
+            "expanded_nodes": 23,
+            "elapsed_seconds": 0.4507048750092508,
+            "primitive_calls": {
+              "raycasts": 503890,
+              "next_calls": 73276,
+              "seek_calls": 1407,
+              "support_calls": 46
+            }
+          },
+          "relative_1_01_certificate": {
+            "value": {
+              "objective": 975369,
+              "product": 8464705853,
+              "point": [
+                73771,
+                114743
+              ]
+            },
+            "outcome": "proper_factor",
+            "inequality": [
+              97536900,
+              98512269
+            ],
+            "queried_nodes": 229,
+            "expanded_nodes": 114,
+            "elapsed_seconds": 1.7828054999990854,
+            "primitive_calls": {
+              "raycasts": 1901884,
+              "next_calls": 284712,
+              "seek_calls": 7118,
+              "support_calls": 229
+            },
+            "recorded_comparison_objective": 975401,
+            "global_lower_objective": 975369
+          },
+          "counts_by_depth": [
+            {
+              "depth": 1,
+              "queried": 1,
+              "expanded": 1,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 1,
+              "seek_calls": 26,
+              "next_calls": 1539,
+              "raycasts": 10043
+            },
+            {
+              "depth": 2,
+              "queried": 2,
+              "expanded": 2,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 48,
+              "next_calls": 2669,
+              "raycasts": 14876
+            },
+            {
+              "depth": 3,
+              "queried": 4,
+              "expanded": 4,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 4,
+              "seek_calls": 123,
+              "next_calls": 6933,
+              "raycasts": 48104
+            },
+            {
+              "depth": 4,
+              "queried": 8,
+              "expanded": 8,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 8,
+              "seek_calls": 244,
+              "next_calls": 13185,
+              "raycasts": 94317
+            },
+            {
+              "depth": 5,
+              "queried": 16,
+              "expanded": 16,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 16,
+              "seek_calls": 494,
+              "next_calls": 25703,
+              "raycasts": 172467
+            },
+            {
+              "depth": 6,
+              "queried": 32,
+              "expanded": 31,
+              "pruned": 1,
+              "accepted": 0,
+              "support_calls": 32,
+              "seek_calls": 1009,
+              "next_calls": 50701,
+              "raycasts": 348723
+            },
+            {
+              "depth": 7,
+              "queried": 62,
+              "expanded": 33,
+              "pruned": 28,
+              "accepted": 1,
+              "support_calls": 62,
+              "seek_calls": 1913,
+              "next_calls": 89743,
+              "raycasts": 607843
+            },
+            {
+              "depth": 8,
+              "queried": 66,
+              "expanded": 13,
+              "pruned": 53,
+              "accepted": 0,
+              "support_calls": 66,
+              "seek_calls": 2061,
+              "next_calls": 74268,
+              "raycasts": 486764
+            },
+            {
+              "depth": 9,
+              "queried": 26,
+              "expanded": 3,
+              "pruned": 23,
+              "accepted": 0,
+              "support_calls": 26,
+              "seek_calls": 824,
+              "next_calls": 16616,
+              "raycasts": 101891
+            },
+            {
+              "depth": 10,
+              "queried": 6,
+              "expanded": 2,
+              "pruned": 4,
+              "accepted": 0,
+              "support_calls": 6,
+              "seek_calls": 190,
+              "next_calls": 2068,
+              "raycasts": 10502
+            },
+            {
+              "depth": 11,
+              "queried": 4,
+              "expanded": 1,
+              "pruned": 3,
+              "accepted": 0,
+              "support_calls": 4,
+              "seek_calls": 123,
+              "next_calls": 889,
+              "raycasts": 4659
+            },
+            {
+              "depth": 12,
+              "queried": 2,
+              "expanded": 0,
+              "pruned": 2,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 63,
+              "next_calls": 398,
+              "raycasts": 1695
+            }
+          ],
+          "runtime_seconds": 1.7828442080062814,
+          "normal": [
+            7,
+            4
+          ],
+          "minimum_live_node_objective": null,
+          "global_lower_objective": 975369,
+          "unresolved_subtree_frontier_complete": true
+        }
+      ]
+    },
+    {
+      "label": "factor_scale=2^20",
+      "B": 1048576,
+      "N": 2164905613373,
+      "N_bits": 41,
+      "p_label": 1179733,
+      "q_label": 1835081,
+      "factor_ratio": [
+        1835081,
+        1179733
+      ],
+      "M": 137438953472,
+      "k": 37,
+      "M_over_N_bounds": [
+        "1/16",
+        "1/8"
+      ],
+      "h": 18,
+      "leaf_nodes": 131072,
+      "summary": {
+        "queries_run": 6,
+        "exact_queries": 0,
+        "budget_exhausted_queries": 6,
+        "any_early_factor_detection": false,
+        "any_relative_1_01_factor": false,
+        "any_exact_factor_result": false,
+        "queried_nodes": 778,
+        "maximum_queried_nodes": 187,
+        "maximum_peak_queue": 94
+      },
+      "small_exact_baseline": null,
+      "queries": [
+        {
+          "status": "budget_exhausted",
+          "budget_reason": "query_time",
+          "initial": {
+            "objective": 1333622338,
+            "product": 1960120236775485,
+            "point": [
+              1471395,
+              1332150943
+            ]
+          },
+          "current_incumbent": {
+            "objective": 1333622338,
+            "product": 1960120236775485,
+            "point": [
+              1471395,
+              1332150943
+            ]
+          },
+          "exact_result": null,
+          "current_outcome": "nonfactor",
+          "incumbent_x_trials": 64,
+          "continuous_center_floor": 1471361,
+          "h": 18,
+          "leaf_nodes": 131072,
+          "queried_nodes": 187,
+          "expanded_nodes": 93,
+          "pruned_nodes": 0,
+          "accepted_nodes": 0,
+          "live_nodes": 94,
+          "peak_queue": 94,
+          "primitive_calls": {
+            "raycasts": 2413732,
+            "next_calls": 324137,
+            "seek_calls": 5724,
+            "support_calls": 187
+          },
+          "early_factor_detection": null,
+          "relative_1_01_certificate": null,
+          "counts_by_depth": [
+            {
+              "depth": 1,
+              "queried": 1,
+              "expanded": 1,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 1,
+              "seek_calls": 27,
+              "next_calls": 1939,
+              "raycasts": 11879
+            },
+            {
+              "depth": 2,
+              "queried": 2,
+              "expanded": 2,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 60,
+              "next_calls": 4255,
+              "raycasts": 23672
+            },
+            {
+              "depth": 3,
+              "queried": 4,
+              "expanded": 4,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 4,
+              "seek_calls": 118,
+              "next_calls": 7959,
+              "raycasts": 53660
+            },
+            {
+              "depth": 4,
+              "queried": 8,
+              "expanded": 8,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 8,
+              "seek_calls": 228,
+              "next_calls": 14529,
+              "raycasts": 107396
+            },
+            {
+              "depth": 5,
+              "queried": 16,
+              "expanded": 16,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 16,
+              "seek_calls": 431,
+              "next_calls": 25533,
+              "raycasts": 183938
+            },
+            {
+              "depth": 6,
+              "queried": 32,
+              "expanded": 21,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 32,
+              "seek_calls": 861,
+              "next_calls": 48305,
+              "raycasts": 358804
+            },
+            {
+              "depth": 7,
+              "queried": 42,
+              "expanded": 21,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 42,
+              "seek_calls": 1111,
+              "next_calls": 58250,
+              "raycasts": 431311
+            },
+            {
+              "depth": 8,
+              "queried": 42,
+              "expanded": 17,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 42,
+              "seek_calls": 1316,
+              "next_calls": 72226,
+              "raycasts": 544127
+            },
+            {
+              "depth": 9,
+              "queried": 34,
+              "expanded": 3,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 34,
+              "seek_calls": 1335,
+              "next_calls": 78248,
+              "raycasts": 604185
+            },
+            {
+              "depth": 10,
+              "queried": 6,
+              "expanded": 0,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 6,
+              "seek_calls": 237,
+              "next_calls": 12893,
+              "raycasts": 94760
+            }
+          ],
+          "runtime_seconds": 2.5123350830108393,
+          "normal": [
+            1,
+            1
+          ],
+          "minimum_live_node_objective": 2942910,
+          "global_lower_objective": 2942910,
+          "unresolved_subtree_frontier_complete": true
+        },
+        {
+          "status": "budget_exhausted",
+          "budget_reason": "query_time",
+          "initial": {
+            "objective": 994046879,
+            "product": 1031994983979069,
+            "point": [
+              1040353,
+              991966173
+            ]
+          },
+          "current_incumbent": {
+            "objective": 994046879,
+            "product": 1031994983979069,
+            "point": [
+              1040353,
+              991966173
+            ]
+          },
+          "exact_result": null,
+          "current_outcome": "nonfactor",
+          "incumbent_x_trials": 64,
+          "continuous_center_floor": 1040409,
+          "h": 18,
+          "leaf_nodes": 131072,
+          "queried_nodes": 153,
+          "expanded_nodes": 76,
+          "pruned_nodes": 0,
+          "accepted_nodes": 0,
+          "live_nodes": 77,
+          "peak_queue": 77,
+          "primitive_calls": {
+            "raycasts": 2485418,
+            "next_calls": 332604,
+            "seek_calls": 5440,
+            "support_calls": 153
+          },
+          "early_factor_detection": null,
+          "relative_1_01_certificate": null,
+          "counts_by_depth": [
+            {
+              "depth": 1,
+              "queried": 1,
+              "expanded": 1,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 1,
+              "seek_calls": 32,
+              "next_calls": 2377,
+              "raycasts": 16543
+            },
+            {
+              "depth": 2,
+              "queried": 2,
+              "expanded": 2,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 62,
+              "next_calls": 4413,
+              "raycasts": 27274
+            },
+            {
+              "depth": 3,
+              "queried": 4,
+              "expanded": 4,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 4,
+              "seek_calls": 122,
+              "next_calls": 8283,
+              "raycasts": 59836
+            },
+            {
+              "depth": 4,
+              "queried": 8,
+              "expanded": 8,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 8,
+              "seek_calls": 237,
+              "next_calls": 15285,
+              "raycasts": 113064
+            },
+            {
+              "depth": 5,
+              "queried": 16,
+              "expanded": 16,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 16,
+              "seek_calls": 438,
+              "next_calls": 26132,
+              "raycasts": 187531
+            },
+            {
+              "depth": 6,
+              "queried": 32,
+              "expanded": 30,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 32,
+              "seek_calls": 1062,
+              "next_calls": 65529,
+              "raycasts": 491680
+            },
+            {
+              "depth": 7,
+              "queried": 60,
+              "expanded": 10,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 60,
+              "seek_calls": 2310,
+              "next_calls": 145027,
+              "raycasts": 1092608
+            },
+            {
+              "depth": 8,
+              "queried": 20,
+              "expanded": 2,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 20,
+              "seek_calls": 784,
+              "next_calls": 47871,
+              "raycasts": 358029
+            },
+            {
+              "depth": 9,
+              "queried": 4,
+              "expanded": 1,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 4,
+              "seek_calls": 157,
+              "next_calls": 9204,
+              "raycasts": 74755
+            },
+            {
+              "depth": 10,
+              "queried": 2,
+              "expanded": 1,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 79,
+              "next_calls": 4324,
+              "raycasts": 32155
+            },
+            {
+              "depth": 11,
+              "queried": 2,
+              "expanded": 1,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 78,
+              "next_calls": 2509,
+              "raycasts": 18934
+            },
+            {
+              "depth": 12,
+              "queried": 2,
+              "expanded": 0,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 79,
+              "next_calls": 1650,
+              "raycasts": 13009
+            }
+          ],
+          "runtime_seconds": 2.522523750012624,
+          "normal": [
+            2,
+            1
+          ],
+          "minimum_live_node_objective": 4161725,
+          "global_lower_objective": 4161725,
+          "unresolved_subtree_frontier_complete": true
+        },
+        {
+          "status": "budget_exhausted",
+          "budget_reason": "query_time",
+          "initial": {
+            "objective": 8293467155,
+            "product": 2726342402381885,
+            "point": [
+              1315979,
+              2071721815
+            ]
+          },
+          "current_incumbent": {
+            "objective": 8293467155,
+            "product": 2726342402381885,
+            "point": [
+              1315979,
+              2071721815
+            ]
+          },
+          "exact_result": null,
+          "current_outcome": "nonfactor",
+          "incumbent_x_trials": 64,
+          "continuous_center_floor": 1316026,
+          "h": 18,
+          "leaf_nodes": 131072,
+          "queried_nodes": 135,
+          "expanded_nodes": 67,
+          "pruned_nodes": 0,
+          "accepted_nodes": 0,
+          "live_nodes": 68,
+          "peak_queue": 68,
+          "primitive_calls": {
+            "raycasts": 2500432,
+            "next_calls": 331425,
+            "seek_calls": 5185,
+            "support_calls": 135
+          },
+          "early_factor_detection": null,
+          "relative_1_01_certificate": null,
+          "counts_by_depth": [
+            {
+              "depth": 1,
+              "queried": 1,
+              "expanded": 1,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 1,
+              "seek_calls": 33,
+              "next_calls": 2455,
+              "raycasts": 16749
+            },
+            {
+              "depth": 2,
+              "queried": 2,
+              "expanded": 2,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 59,
+              "next_calls": 4158,
+              "raycasts": 24131
+            },
+            {
+              "depth": 3,
+              "queried": 4,
+              "expanded": 4,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 4,
+              "seek_calls": 123,
+              "next_calls": 8370,
+              "raycasts": 59223
+            },
+            {
+              "depth": 4,
+              "queried": 8,
+              "expanded": 8,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 8,
+              "seek_calls": 266,
+              "next_calls": 17700,
+              "raycasts": 136285
+            },
+            {
+              "depth": 5,
+              "queried": 16,
+              "expanded": 16,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 16,
+              "seek_calls": 632,
+              "next_calls": 42665,
+              "raycasts": 321240
+            },
+            {
+              "depth": 6,
+              "queried": 32,
+              "expanded": 23,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 32,
+              "seek_calls": 1266,
+              "next_calls": 82836,
+              "raycasts": 633989
+            },
+            {
+              "depth": 7,
+              "queried": 46,
+              "expanded": 7,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 46,
+              "seek_calls": 1788,
+              "next_calls": 112515,
+              "raycasts": 851096
+            },
+            {
+              "depth": 8,
+              "queried": 14,
+              "expanded": 5,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 14,
+              "seek_calls": 550,
+              "next_calls": 33628,
+              "raycasts": 253878
+            },
+            {
+              "depth": 9,
+              "queried": 10,
+              "expanded": 1,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 10,
+              "seek_calls": 388,
+              "next_calls": 22719,
+              "raycasts": 165587
+            },
+            {
+              "depth": 10,
+              "queried": 2,
+              "expanded": 0,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 80,
+              "next_calls": 4379,
+              "raycasts": 38254
+            }
+          ],
+          "runtime_seconds": 2.5226362090033945,
+          "normal": [
+            5,
+            4
+          ],
+          "minimum_live_node_objective": 13160463,
+          "global_lower_objective": 13160463,
+          "unresolved_subtree_frontier_complete": true
+        },
+        {
+          "status": "budget_exhausted",
+          "budget_reason": "query_time",
+          "initial": {
+            "objective": 3150909901,
+            "product": 1336147388012605,
+            "point": [
+              1274215,
+              1048604347
+            ]
+          },
+          "current_incumbent": {
+            "objective": 3150909901,
+            "product": 1336147388012605,
+            "point": [
+              1274215,
+              1048604347
+            ]
+          },
+          "exact_result": null,
+          "current_outcome": "nonfactor",
+          "incumbent_x_trials": 64,
+          "continuous_center_floor": 1274236,
+          "h": 18,
+          "leaf_nodes": 131072,
+          "queried_nodes": 135,
+          "expanded_nodes": 67,
+          "pruned_nodes": 0,
+          "accepted_nodes": 0,
+          "live_nodes": 68,
+          "peak_queue": 68,
+          "primitive_calls": {
+            "raycasts": 2500871,
+            "next_calls": 332044,
+            "seek_calls": 5172,
+            "support_calls": 135
+          },
+          "early_factor_detection": null,
+          "relative_1_01_certificate": null,
+          "counts_by_depth": [
+            {
+              "depth": 1,
+              "queried": 1,
+              "expanded": 1,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 1,
+              "seek_calls": 33,
+              "next_calls": 2450,
+              "raycasts": 17528
+            },
+            {
+              "depth": 2,
+              "queried": 2,
+              "expanded": 2,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 60,
+              "next_calls": 4242,
+              "raycasts": 25431
+            },
+            {
+              "depth": 3,
+              "queried": 4,
+              "expanded": 4,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 4,
+              "seek_calls": 119,
+              "next_calls": 8018,
+              "raycasts": 57843
+            },
+            {
+              "depth": 4,
+              "queried": 8,
+              "expanded": 8,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 8,
+              "seek_calls": 256,
+              "next_calls": 16892,
+              "raycasts": 132489
+            },
+            {
+              "depth": 5,
+              "queried": 16,
+              "expanded": 16,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 16,
+              "seek_calls": 625,
+              "next_calls": 42052,
+              "raycasts": 312827
+            },
+            {
+              "depth": 6,
+              "queried": 32,
+              "expanded": 27,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 32,
+              "seek_calls": 1260,
+              "next_calls": 82340,
+              "raycasts": 630277
+            },
+            {
+              "depth": 7,
+              "queried": 54,
+              "expanded": 7,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 54,
+              "seek_calls": 2115,
+              "next_calls": 133520,
+              "raycasts": 1002891
+            },
+            {
+              "depth": 8,
+              "queried": 14,
+              "expanded": 2,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 14,
+              "seek_calls": 544,
+              "next_calls": 33062,
+              "raycasts": 253408
+            },
+            {
+              "depth": 9,
+              "queried": 4,
+              "expanded": 0,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 4,
+              "seek_calls": 160,
+              "next_calls": 9468,
+              "raycasts": 68177
+            }
+          ],
+          "runtime_seconds": 2.5187434590043267,
+          "normal": [
+            4,
+            3
+          ],
+          "minimum_live_node_objective": 10194061,
+          "global_lower_objective": 10194061,
+          "unresolved_subtree_frontier_complete": true
+        },
+        {
+          "status": "budget_exhausted",
+          "budget_reason": "query_time",
+          "initial": {
+            "objective": 871656631,
+            "product": 521409271830589,
+            "point": [
+              1201331,
+              434026319
+            ]
+          },
+          "current_incumbent": {
+            "objective": 871656631,
+            "product": 521409271830589,
+            "point": [
+              1201331,
+              434026319
+            ]
+          },
+          "exact_result": null,
+          "current_outcome": "nonfactor",
+          "incumbent_x_trials": 64,
+          "continuous_center_floor": 1201361,
+          "h": 18,
+          "leaf_nodes": 131072,
+          "queried_nodes": 137,
+          "expanded_nodes": 68,
+          "pruned_nodes": 0,
+          "accepted_nodes": 0,
+          "live_nodes": 69,
+          "peak_queue": 69,
+          "primitive_calls": {
+            "raycasts": 2493432,
+            "next_calls": 330619,
+            "seek_calls": 5166,
+            "support_calls": 137
+          },
+          "early_factor_detection": null,
+          "relative_1_01_certificate": null,
+          "counts_by_depth": [
+            {
+              "depth": 1,
+              "queried": 1,
+              "expanded": 1,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 1,
+              "seek_calls": 30,
+              "next_calls": 2196,
+              "raycasts": 15318
+            },
+            {
+              "depth": 2,
+              "queried": 2,
+              "expanded": 2,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 64,
+              "next_calls": 4584,
+              "raycasts": 27917
+            },
+            {
+              "depth": 3,
+              "queried": 4,
+              "expanded": 4,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 4,
+              "seek_calls": 122,
+              "next_calls": 8274,
+              "raycasts": 60751
+            },
+            {
+              "depth": 4,
+              "queried": 8,
+              "expanded": 8,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 8,
+              "seek_calls": 238,
+              "next_calls": 15363,
+              "raycasts": 116528
+            },
+            {
+              "depth": 5,
+              "queried": 16,
+              "expanded": 16,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 16,
+              "seek_calls": 550,
+              "next_calls": 35708,
+              "raycasts": 263153
+            },
+            {
+              "depth": 6,
+              "queried": 32,
+              "expanded": 30,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 32,
+              "seek_calls": 1245,
+              "next_calls": 81056,
+              "raycasts": 620459
+            },
+            {
+              "depth": 7,
+              "queried": 60,
+              "expanded": 7,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 60,
+              "seek_calls": 2365,
+              "next_calls": 149641,
+              "raycasts": 1129198
+            },
+            {
+              "depth": 8,
+              "queried": 14,
+              "expanded": 0,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 14,
+              "seek_calls": 552,
+              "next_calls": 33797,
+              "raycasts": 260108
+            }
+          ],
+          "runtime_seconds": 2.5063368749979418,
+          "normal": [
+            3,
+            2
+          ],
+          "minimum_live_node_objective": 7208309,
+          "global_lower_objective": 7208309,
+          "unresolved_subtree_frontier_complete": true
+        },
+        {
+          "status": "budget_exhausted",
+          "budget_reason": "query_time",
+          "initial": {
+            "objective": 1555748745,
+            "product": 430424684632125,
+            "point": [
+              1112235,
+              386990775
+            ]
+          },
+          "current_incumbent": {
+            "objective": 1555748745,
+            "product": 430424684632125,
+            "point": [
+              1112235,
+              386990775
+            ]
+          },
+          "exact_result": null,
+          "current_outcome": "nonfactor",
+          "incumbent_x_trials": 64,
+          "continuous_center_floor": 1112244,
+          "h": 18,
+          "leaf_nodes": 131072,
+          "queried_nodes": 31,
+          "expanded_nodes": 15,
+          "pruned_nodes": 0,
+          "accepted_nodes": 0,
+          "live_nodes": 16,
+          "peak_queue": 16,
+          "primitive_calls": {
+            "raycasts": 549737,
+            "next_calls": 75289,
+            "seek_calls": 1119,
+            "support_calls": 31
+          },
+          "early_factor_detection": null,
+          "relative_1_01_certificate": null,
+          "counts_by_depth": [
+            {
+              "depth": 1,
+              "queried": 1,
+              "expanded": 1,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 1,
+              "seek_calls": 32,
+              "next_calls": 2366,
+              "raycasts": 16078
+            },
+            {
+              "depth": 2,
+              "queried": 2,
+              "expanded": 2,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 61,
+              "next_calls": 4325,
+              "raycasts": 26644
+            },
+            {
+              "depth": 3,
+              "queried": 4,
+              "expanded": 4,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 4,
+              "seek_calls": 124,
+              "next_calls": 8454,
+              "raycasts": 61785
+            },
+            {
+              "depth": 4,
+              "queried": 8,
+              "expanded": 5,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 8,
+              "seek_calls": 278,
+              "next_calls": 18787,
+              "raycasts": 142394
+            },
+            {
+              "depth": 5,
+              "queried": 10,
+              "expanded": 2,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 10,
+              "seek_calls": 392,
+              "next_calls": 26463,
+              "raycasts": 193663
+            },
+            {
+              "depth": 6,
+              "queried": 4,
+              "expanded": 1,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 4,
+              "seek_calls": 152,
+              "next_calls": 9822,
+              "raycasts": 74795
+            },
+            {
+              "depth": 7,
+              "queried": 2,
+              "expanded": 0,
+              "pruned": 0,
+              "accepted": 0,
+              "support_calls": 2,
+              "seek_calls": 80,
+              "next_calls": 5072,
+              "raycasts": 34378
+            }
+          ],
+          "runtime_seconds": 0.5283333749976009,
+          "normal": [
+            7,
+            4
+          ],
+          "minimum_live_node_objective": 15571443,
+          "global_lower_objective": 15571443,
+          "unresolved_subtree_frontier_complete": true
+        }
+      ]
+    }
+  ],
+  "bound_label_correction": {
+    "rule": "global_lower_objective=min(incumbent_objective,minimum_live_node_objective), or incumbent_objective when the live frontier is empty",
+    "transformation": "metadata-only; no experiment rerun",
+    "legacy_relative_event_field": "lower_objective stored the live-frontier objective when present and the exact incumbent when the frontier was empty; retained as recorded_comparison_objective because equality alone does not distinguish those states"
+  },
+  "run_provenance": {
+    "retained_run": "16 exact, 8 budget-exhausted queries",
+    "earlier_live_run": "15 exact, 9 budget-exhausted queries; full JSON unavailable after overwrite and not reconstructed"
+  }
+}

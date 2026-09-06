@@ -7198,3 +7198,129 @@ Evidence: `experiments/F289_modular_support_union/RESULT.md`,
 `experiments/F289_modular_support_union/output.json`,
 `experiments/F289_modular_support_union/run.log`, and
 `experiments/F289_modular_support_union/RESOURCE_ESTIMATE.md`.
+
+### C249 -- Compressed rational degree resolves into collision gates without a uniform basin law
+
+**Status:** author-derived identities and exact finite observations. These
+dynamics are not independently reconstructed or promoted.
+
+**Scope:** the fixed \(R_h\) families, listed finite fields, two iterated
+equalities, pole events, and the three-base batch in F287. No arbitrary-map
+or all-input density claim.
+
+**Discussion.**
+
+F287 found local root counts \(0,2,\ldots,10\) across 24,790 finite-field
+instances, refuting the earlier finite count-four pattern. For \(h=2\), the
+map \(R_h(v)=v(h-v)/(hv-1)\) is Möbius-conjugate to inverse squaring, but the
+public \(N\)-th power remains in the original coordinate. Its large iterated
+collision sets are exactly controlled by the 2-primary part of a split or
+norm-one torus and are not uniform across prime factors.
+
+For arbitrary \(h\), the exact identity
+
+\[
+ R_h(x)-R_h(y)
+ =\frac{(x-y)(x+y-hxy-h)}{(hx-1)(hy-1)}
+\]
+
+shows that an iterated equality is a union of same-time collision gates,
+rather than \(2^j\) independent tests. The \(h=3\) pilots exhibited some
+collision and pole-tree growth, but a quadratic-character obstruction can
+also stop the pole tree immediately. The three-base \(h=2\) orbit gives an
+exact finite batching gain from two modular powers, not a density theorem.
+
+The missing result is a public non-group family with a provably large
+asymmetric collision or pole basin after quasipolynomially many cheap steps.
+Evidence:
+experiments/F287_joint_power_operators/DYNAMICS_FOLLOWUP.md,
+ITERATION_REPORT.md, extended_counts.json, and iteration_counts.json.
+
+### C250 -- Modular hyperbola support has exact finite shortcuts but retains a numerical-power class count
+
+**Status:** synthesis of P235 with author-derived algorithms and exact finite
+audits. Only P235's cover, higher differences, and conditional reduction are
+promoted.
+
+**Scope:** the F288 one-patch and cap-line prototypes, F289 hierarchy and
+scaling runs, and their stated finite input families. No QP node bound.
+
+**Discussion.**
+
+The one-patch F288 support adapter passed bounded exhaustive checks, and the
+F289 affine hierarchy matched 455 full-enumeration support queries. At
+\(M=\Theta(N)\), the retained final scaling run completed 16 of 24 queries;
+8 exhausted their soft time budgets. One incomplete query had already
+returned a verified factor point, which separates early factor detection from
+exact support termination. An earlier 15/9 run summary survives, but its full
+JSON was overwritten and was not reconstructed.
+
+The grouped cap-line operation replaces many patch optimizations by exact
+quadratic line equations. Its seeded random and high-residue audit completed
+30 queries through 57--58 input bits. An explicit last-subtree family forced
+first discovery to the final visited node, correcting the original low-bit
+input bias. Complete trees still used about 45,000 nodes and 90,000 line
+equations at the largest scale. The candidate analysis gives an
+\(O(N^{1/3}\operatorname{polylog}N)\) upper mechanism for a fixed line cap,
+not quasipolynomial cost in \(\log N\).
+
+The actual gap is to group or eliminate enough coarse residue classes to
+obtain a succinct 1.01-feasible support procedure with uniform QP bit cost.
+First-factor timings and one-patch polynomial cost do not resolve that gap.
+Evidence: experiments/F288_integer_hyperbola_support/PATCH_SUPPORT.md and
+CAP_LINES.md; experiments/F289_modular_support_union/BRANCH_SUPPORT_RESULT.md,
+SCALING_RESULT.md, and scaling_output.json.
+
+### C251 -- Dyadic objective histograms compress, while joint placement remains a signed carry
+
+**Status:** author-derived identities and exact finite certificates.
+Independent reconstruction is pending.
+
+**Scope:** complete dyadic objective histograms, fixed-degree prefix weights,
+the four-child carry, stated counterexamples, and the public normal menus in
+F290. No localized support algorithm.
+
+**Discussion.**
+
+F290 gives an \(O(k)\)-residue-class signed description of the complete
+histogram
+
+\[
+ Q_M(s)=\#\{u\ {\rm odd}\bmod M:au+bN/u\equiv s\pmod M\}.
+\]
+
+The source checked 1,008 exact interval and weighted-prefix identities.
+Modular interval counts and fixed-degree weighted prefixes are therefore
+compact in this candidate derivation. A zero count certifies an empty
+geometric cap, but a positive count does not place representatives.
+
+The obstruction is exact for the fixed normal \(a=b=1\): at \(M=1024\), two
+inputs with the same complete objective histogram and cap bounds have
+respectively two and zero cap points. The four-child lift recurrence isolates
+the missing information as a signed carry
+
+\[
+ \chi(u)=(-1)^{(N-u(N/u\bmod L))/L},
+\]
+
+which also has a multiplicative-character representation. A direct shifted
+stationary-root treatment already has \(\sqrt M/4\) distinct roots on one
+ray. This rules out histogram-only localization and direct common-root reuse,
+not other joint geometric algorithms.
+
+The public odd-weight menu
+
+\[
+ a_j=2^{j+3}+(N\bmod8),\qquad b_j=65
+\]
+
+retains stationary roots at every dyadic depth and preserves the sufficient
+factor-ratio cover. Mixed-parity dyadic normals instead have uniform complete
+histograms. These unpromoted corollaries passed 288 exact histogram checks and
+8,128 labelled factor-margin checks; neither supplies unwrapped localization.
+
+The next operation is a polynomial or quasipolynomial evaluation or sharp
+bound for the geometrically truncated signed carry. Evidence:
+experiments/F290_dyadic_fourier_support/REPORT.md, NORMALS.md,
+weighted_prefix.py/json, carry_rectangle.py/json, and
+normal_grid_check.py/json/log.

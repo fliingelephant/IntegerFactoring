@@ -1,0 +1,2083 @@
+{
+  "seed": 202609070213,
+  "elapsed_seconds": 3.0989947079942795,
+  "resource": {
+    "hard_seconds": 28,
+    "soft_query_seconds": 1.5,
+    "node_cap": 300000
+  },
+  "inputs": [
+    {
+      "e": 12,
+      "family": "random_1",
+      "N": 33210217,
+      "p": 5347,
+      "q": 6211,
+      "residue_bits": 5,
+      "p_residue": 3,
+      "q_residue": 3
+    },
+    {
+      "e": 12,
+      "family": "random_2",
+      "N": 37549033,
+      "p": 5273,
+      "q": 7121,
+      "residue_bits": 5,
+      "p_residue": 25,
+      "q_residue": 17
+    },
+    {
+      "e": 12,
+      "family": "high_residue",
+      "N": 34555247,
+      "p": 4957,
+      "q": 6971,
+      "residue_bits": 5,
+      "p_residue": 29,
+      "q_residue": 27
+    },
+    {
+      "e": 16,
+      "family": "random_1",
+      "N": 9659303527,
+      "p": 80671,
+      "q": 119737,
+      "residue_bits": 7,
+      "p_residue": 31,
+      "q_residue": 57
+    },
+    {
+      "e": 16,
+      "family": "random_2",
+      "N": 8583634963,
+      "p": 79801,
+      "q": 107563,
+      "residue_bits": 7,
+      "p_residue": 57,
+      "q_residue": 43
+    },
+    {
+      "e": 16,
+      "family": "high_residue",
+      "N": 9176016529,
+      "p": 80107,
+      "q": 114547,
+      "residue_bits": 7,
+      "p_residue": 107,
+      "q_residue": 115
+    },
+    {
+      "e": 20,
+      "family": "random_1",
+      "N": 2060348500853,
+      "p": 1242029,
+      "q": 1658857,
+      "residue_bits": 10,
+      "p_residue": 941,
+      "q_residue": 1001
+    },
+    {
+      "e": 20,
+      "family": "random_2",
+      "N": 2646130252751,
+      "p": 1358713,
+      "q": 1947527,
+      "residue_bits": 10,
+      "p_residue": 889,
+      "q_residue": 903
+    },
+    {
+      "e": 20,
+      "family": "high_residue",
+      "N": 2382982265753,
+      "p": 1290109,
+      "q": 1847117,
+      "residue_bits": 10,
+      "p_residue": 893,
+      "q_residue": 845
+    },
+    {
+      "e": 24,
+      "family": "random_1",
+      "N": 669155593206703,
+      "p": 21880009,
+      "q": 30582967,
+      "residue_bits": 13,
+      "p_residue": 7369,
+      "q_residue": 2231
+    },
+    {
+      "e": 24,
+      "family": "random_2",
+      "N": 614744414368429,
+      "p": 22450777,
+      "q": 27381877,
+      "residue_bits": 13,
+      "p_residue": 4697,
+      "q_residue": 4213
+    },
+    {
+      "e": 24,
+      "family": "high_residue",
+      "N": 557746449210059,
+      "p": 20348351,
+      "q": 27409909,
+      "residue_bits": 13,
+      "p_residue": 7615,
+      "q_residue": 7669
+    },
+    {
+      "e": 28,
+      "family": "random_1",
+      "N": 148391365153130251,
+      "p": 367923499,
+      "q": 403321249,
+      "residue_bits": 15,
+      "p_residue": 4395,
+      "q_residue": 12705
+    },
+    {
+      "e": 28,
+      "family": "random_2",
+      "N": 144537453224287063,
+      "p": 317848901,
+      "q": 454736363,
+      "residue_bits": 15,
+      "p_residue": 32069,
+      "q_residue": 14827
+    },
+    {
+      "e": 28,
+      "family": "high_residue",
+      "N": 132313437113839043,
+      "p": 305789123,
+      "q": 432695041,
+      "residue_bits": 15,
+      "p_residue": 30915,
+      "q_residue": 26369
+    }
+  ],
+  "rows": [
+    {
+      "e": 12,
+      "family": "random_1",
+      "N": 33210217,
+      "k": 21,
+      "normal": [
+        1,
+        1
+      ],
+      "U": 11880,
+      "method": "lines",
+      "status": "complete",
+      "nodes": 7,
+      "lines": 17,
+      "terminal": 4,
+      "max_integer_line_cover": 89,
+      "max_terminal_lines": 6,
+      "first_detection": {
+        "nodes": 6,
+        "lines": 14,
+        "seconds": 4.112499300390482e-05,
+        "point": [
+          5347,
+          6211
+        ]
+      },
+      "factors": [
+        [
+          5347,
+          6211
+        ],
+        [
+          6211,
+          5347
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4
+      },
+      "seconds": 4.6999994083307683e-05,
+      "oracle_counts": {
+        "raycasts": 0,
+        "next_calls": 0,
+        "seek_calls": 0,
+        "support_calls": 0
+      }
+    },
+    {
+      "e": 12,
+      "family": "random_1",
+      "N": 33210217,
+      "k": 21,
+      "normal": [
+        1,
+        1
+      ],
+      "U": 11880,
+      "method": "oracle",
+      "status": "complete",
+      "nodes": 99,
+      "lines": 0,
+      "terminal": 50,
+      "max_integer_line_cover": 0,
+      "max_terminal_lines": 0,
+      "first_detection": {
+        "nodes": 48,
+        "lines": 0,
+        "seconds": 0.07624408398987725,
+        "point": [
+          5347,
+          6211
+        ]
+      },
+      "factors": [
+        [
+          5347,
+          6211
+        ],
+        [
+          6211,
+          5347
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 14,
+        "6": 26,
+        "7": 24,
+        "8": 12,
+        "9": 4,
+        "10": 4
+      },
+      "seconds": 0.12846333399647847,
+      "oracle_counts": {
+        "raycasts": 148194,
+        "next_calls": 26949,
+        "seek_calls": 1745,
+        "support_calls": 99
+      }
+    },
+    {
+      "e": 12,
+      "family": "random_1",
+      "N": 33210217,
+      "k": 21,
+      "normal": [
+        2,
+        1
+      ],
+      "U": 16801,
+      "method": "lines",
+      "status": "complete",
+      "nodes": 27,
+      "lines": 48,
+      "terminal": 14,
+      "max_integer_line_cover": 251,
+      "max_terminal_lines": 6,
+      "first_detection": null,
+      "factors": [],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 12
+      },
+      "seconds": 8.575001265853643e-05,
+      "oracle_counts": {
+        "raycasts": 0,
+        "next_calls": 0,
+        "seek_calls": 0,
+        "support_calls": 0
+      }
+    },
+    {
+      "e": 12,
+      "family": "random_1",
+      "N": 33210217,
+      "k": 21,
+      "normal": [
+        2,
+        1
+      ],
+      "U": 16801,
+      "method": "oracle",
+      "status": "complete",
+      "nodes": 131,
+      "lines": 0,
+      "terminal": 66,
+      "max_integer_line_cover": 0,
+      "max_terminal_lines": 0,
+      "first_detection": null,
+      "factors": [],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 16,
+        "6": 30,
+        "7": 48,
+        "8": 16,
+        "9": 4,
+        "10": 2
+      },
+      "seconds": 0.28929020899522584,
+      "oracle_counts": {
+        "raycasts": 320889,
+        "next_calls": 57863,
+        "seek_calls": 3025,
+        "support_calls": 131
+      }
+    },
+    {
+      "e": 12,
+      "family": "random_2",
+      "N": 37549033,
+      "k": 22,
+      "normal": [
+        1,
+        1
+      ],
+      "U": 12632,
+      "method": "lines",
+      "status": "complete",
+      "nodes": 7,
+      "lines": 17,
+      "terminal": 4,
+      "max_integer_line_cover": 94,
+      "max_terminal_lines": 6,
+      "first_detection": {
+        "nodes": 3,
+        "lines": 3,
+        "seconds": 2.0167004549875855e-05,
+        "point": [
+          5273,
+          7121
+        ]
+      },
+      "factors": [
+        [
+          5273,
+          7121
+        ],
+        [
+          7121,
+          5273
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4
+      },
+      "seconds": 3.5792007111012936e-05,
+      "oracle_counts": {
+        "raycasts": 0,
+        "next_calls": 0,
+        "seek_calls": 0,
+        "support_calls": 0
+      }
+    },
+    {
+      "e": 12,
+      "family": "random_2",
+      "N": 37549033,
+      "k": 22,
+      "normal": [
+        1,
+        1
+      ],
+      "U": 12632,
+      "method": "oracle",
+      "status": "complete",
+      "nodes": 133,
+      "lines": 0,
+      "terminal": 67,
+      "max_integer_line_cover": 0,
+      "max_terminal_lines": 0,
+      "first_detection": {
+        "nodes": 12,
+        "lines": 0,
+        "seconds": 0.024905500002205372,
+        "point": [
+          7121,
+          5273
+        ]
+      },
+      "factors": [
+        [
+          5273,
+          7121
+        ],
+        [
+          7121,
+          5273
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 14,
+        "6": 22,
+        "7": 26,
+        "8": 24,
+        "9": 16,
+        "10": 12,
+        "11": 4
+      },
+      "seconds": 0.17383016699750442,
+      "oracle_counts": {
+        "raycasts": 168275,
+        "next_calls": 32128,
+        "seek_calls": 2555,
+        "support_calls": 133
+      }
+    },
+    {
+      "e": 12,
+      "family": "random_2",
+      "N": 37549033,
+      "k": 22,
+      "normal": [
+        2,
+        1
+      ],
+      "U": 17865,
+      "method": "lines",
+      "status": "complete",
+      "nodes": 27,
+      "lines": 52,
+      "terminal": 14,
+      "max_integer_line_cover": 267,
+      "max_terminal_lines": 6,
+      "first_detection": {
+        "nodes": 9,
+        "lines": 16,
+        "seconds": 3.4249998861923814e-05,
+        "point": [
+          5273,
+          7121
+        ]
+      },
+      "factors": [
+        [
+          5273,
+          7121
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 12
+      },
+      "seconds": 8.325000817421824e-05,
+      "oracle_counts": {
+        "raycasts": 0,
+        "next_calls": 0,
+        "seek_calls": 0,
+        "support_calls": 0
+      }
+    },
+    {
+      "e": 12,
+      "family": "random_2",
+      "N": 37549033,
+      "k": 22,
+      "normal": [
+        2,
+        1
+      ],
+      "U": 17865,
+      "method": "oracle",
+      "status": "complete",
+      "nodes": 161,
+      "lines": 0,
+      "terminal": 81,
+      "max_integer_line_cover": 0,
+      "max_terminal_lines": 0,
+      "first_detection": {
+        "nodes": 26,
+        "lines": 0,
+        "seconds": 0.082439208010328,
+        "point": [
+          5273,
+          7121
+        ]
+      },
+      "factors": [
+        [
+          5273,
+          7121
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 16,
+        "6": 32,
+        "7": 56,
+        "8": 22,
+        "9": 12,
+        "10": 6,
+        "11": 2
+      },
+      "seconds": 0.3703598749998491,
+      "oracle_counts": {
+        "raycasts": 371252,
+        "next_calls": 67291,
+        "seek_calls": 3741,
+        "support_calls": 161
+      }
+    },
+    {
+      "e": 12,
+      "family": "high_residue",
+      "N": 34555247,
+      "k": 22,
+      "normal": [
+        1,
+        1
+      ],
+      "U": 12118,
+      "method": "lines",
+      "status": "complete",
+      "nodes": 31,
+      "lines": 68,
+      "terminal": 16,
+      "max_integer_line_cover": 45,
+      "max_terminal_lines": 6,
+      "first_detection": {
+        "nodes": 16,
+        "lines": 34,
+        "seconds": 6.229098653420806e-05,
+        "point": [
+          4957,
+          6971
+        ]
+      },
+      "factors": [
+        [
+          4957,
+          6971
+        ],
+        [
+          6971,
+          4957
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 16
+      },
+      "seconds": 0.00011020799865946174,
+      "oracle_counts": {
+        "raycasts": 0,
+        "next_calls": 0,
+        "seek_calls": 0,
+        "support_calls": 0
+      }
+    },
+    {
+      "e": 12,
+      "family": "high_residue",
+      "N": 34555247,
+      "k": 22,
+      "normal": [
+        1,
+        1
+      ],
+      "U": 12118,
+      "method": "oracle",
+      "status": "complete",
+      "nodes": 159,
+      "lines": 0,
+      "terminal": 80,
+      "max_integer_line_cover": 0,
+      "max_terminal_lines": 0,
+      "first_detection": {
+        "nodes": 69,
+        "lines": 0,
+        "seconds": 0.15111962500668596,
+        "point": [
+          4957,
+          6971
+        ]
+      },
+      "factors": [
+        [
+          4957,
+          6971
+        ],
+        [
+          6971,
+          4957
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 16,
+        "6": 32,
+        "7": 56,
+        "8": 24,
+        "9": 8,
+        "10": 4,
+        "11": 4
+      },
+      "seconds": 0.3285998329956783,
+      "oracle_counts": {
+        "raycasts": 332932,
+        "next_calls": 61077,
+        "seek_calls": 3606,
+        "support_calls": 159
+      }
+    },
+    {
+      "e": 12,
+      "family": "high_residue",
+      "N": 34555247,
+      "k": 22,
+      "normal": [
+        2,
+        1
+      ],
+      "U": 17138,
+      "method": "lines",
+      "status": "complete",
+      "nodes": 27,
+      "lines": 48,
+      "terminal": 14,
+      "max_integer_line_cover": 256,
+      "max_terminal_lines": 7,
+      "first_detection": {
+        "nodes": 14,
+        "lines": 25,
+        "seconds": 5.1790993893519044e-05,
+        "point": [
+          4957,
+          6971
+        ]
+      },
+      "factors": [
+        [
+          4957,
+          6971
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 12
+      },
+      "seconds": 9.049999061971903e-05,
+      "oracle_counts": {
+        "raycasts": 0,
+        "next_calls": 0,
+        "seek_calls": 0,
+        "support_calls": 0
+      }
+    },
+    {
+      "e": 12,
+      "family": "high_residue",
+      "N": 34555247,
+      "k": 22,
+      "normal": [
+        2,
+        1
+      ],
+      "U": 17138,
+      "method": "oracle",
+      "status": "complete",
+      "nodes": 149,
+      "lines": 0,
+      "terminal": 75,
+      "max_integer_line_cover": 0,
+      "max_terminal_lines": 0,
+      "first_detection": {
+        "nodes": 63,
+        "lines": 0,
+        "seconds": 0.15447616699384525,
+        "point": [
+          4957,
+          6971
+        ]
+      },
+      "factors": [
+        [
+          4957,
+          6971
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 16,
+        "6": 32,
+        "7": 56,
+        "8": 20,
+        "9": 6,
+        "10": 2,
+        "11": 2
+      },
+      "seconds": 0.3107571669970639,
+      "oracle_counts": {
+        "raycasts": 356427,
+        "next_calls": 64184,
+        "seek_calls": 3447,
+        "support_calls": 149
+      }
+    },
+    {
+      "e": 16,
+      "family": "random_1",
+      "N": 9659303527,
+      "k": 30,
+      "normal": [
+        1,
+        1
+      ],
+      "U": 202613,
+      "method": "lines",
+      "status": "complete",
+      "nodes": 187,
+      "lines": 346,
+      "terminal": 94,
+      "max_integer_line_cover": 756,
+      "max_terminal_lines": 8,
+      "first_detection": {
+        "nodes": 46,
+        "lines": 83,
+        "seconds": 0.00016445800429210067,
+        "point": [
+          119737,
+          80671
+        ]
+      },
+      "factors": [
+        [
+          80671,
+          119737
+        ],
+        [
+          119737,
+          80671
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 16,
+        "6": 32,
+        "7": 64,
+        "8": 60
+      },
+      "seconds": 0.0006302920082816854,
+      "oracle_counts": {
+        "raycasts": 0,
+        "next_calls": 0,
+        "seek_calls": 0,
+        "support_calls": 0
+      }
+    },
+    {
+      "e": 16,
+      "family": "random_1",
+      "N": 9659303527,
+      "k": 30,
+      "normal": [
+        2,
+        1
+      ],
+      "U": 286538,
+      "method": "lines",
+      "status": "complete",
+      "nodes": 175,
+      "lines": 332,
+      "terminal": 88,
+      "max_integer_line_cover": 4278,
+      "max_terminal_lines": 8,
+      "first_detection": {
+        "nodes": 168,
+        "lines": 314,
+        "seconds": 0.0005166249902686104,
+        "point": [
+          80671,
+          119737
+        ]
+      },
+      "factors": [
+        [
+          80671,
+          119737
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 16,
+        "6": 32,
+        "7": 60,
+        "8": 52
+      },
+      "seconds": 0.0005404999974416569,
+      "oracle_counts": {
+        "raycasts": 0,
+        "next_calls": 0,
+        "seek_calls": 0,
+        "support_calls": 0
+      }
+    },
+    {
+      "e": 16,
+      "family": "random_2",
+      "N": 8583634963,
+      "k": 29,
+      "normal": [
+        1,
+        1
+      ],
+      "U": 190998,
+      "method": "lines",
+      "status": "complete",
+      "nodes": 175,
+      "lines": 352,
+      "terminal": 88,
+      "max_integer_line_cover": 713,
+      "max_terminal_lines": 8,
+      "first_detection": {
+        "nodes": 44,
+        "lines": 83,
+        "seconds": 0.00013558300270233303,
+        "point": [
+          79801,
+          107563
+        ]
+      },
+      "factors": [
+        [
+          79801,
+          107563
+        ],
+        [
+          107563,
+          79801
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 16,
+        "6": 32,
+        "7": 64,
+        "8": 48
+      },
+      "seconds": 0.0005335830064723268,
+      "oracle_counts": {
+        "raycasts": 0,
+        "next_calls": 0,
+        "seek_calls": 0,
+        "support_calls": 0
+      }
+    },
+    {
+      "e": 16,
+      "family": "random_2",
+      "N": 8583634963,
+      "k": 29,
+      "normal": [
+        2,
+        1
+      ],
+      "U": 270112,
+      "method": "lines",
+      "status": "complete",
+      "nodes": 165,
+      "lines": 335,
+      "terminal": 83,
+      "max_integer_line_cover": 4032,
+      "max_terminal_lines": 8,
+      "first_detection": {
+        "nodes": 42,
+        "lines": 79,
+        "seconds": 0.00012274998880457133,
+        "point": [
+          79801,
+          107563
+        ]
+      },
+      "factors": [
+        [
+          79801,
+          107563
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 16,
+        "6": 32,
+        "7": 60,
+        "8": 42
+      },
+      "seconds": 0.0005008749867556617,
+      "oracle_counts": {
+        "raycasts": 0,
+        "next_calls": 0,
+        "seek_calls": 0,
+        "support_calls": 0
+      }
+    },
+    {
+      "e": 16,
+      "family": "high_residue",
+      "N": 9176016529,
+      "k": 30,
+      "normal": [
+        1,
+        1
+      ],
+      "U": 197479,
+      "method": "lines",
+      "status": "complete",
+      "nodes": 87,
+      "lines": 246,
+      "terminal": 44,
+      "max_integer_line_cover": 1474,
+      "max_terminal_lines": 6,
+      "first_detection": {
+        "nodes": 61,
+        "lines": 170,
+        "seconds": 0.00018070799706038088,
+        "point": [
+          114547,
+          80107
+        ]
+      },
+      "factors": [
+        [
+          80107,
+          114547
+        ],
+        [
+          114547,
+          80107
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 16,
+        "6": 24,
+        "7": 32
+      },
+      "seconds": 0.00025629199808463454,
+      "oracle_counts": {
+        "raycasts": 0,
+        "next_calls": 0,
+        "seek_calls": 0,
+        "support_calls": 0
+      }
+    },
+    {
+      "e": 16,
+      "family": "high_residue",
+      "N": 9176016529,
+      "k": 30,
+      "normal": [
+        2,
+        1
+      ],
+      "U": 279277,
+      "method": "lines",
+      "status": "complete",
+      "nodes": 171,
+      "lines": 343,
+      "terminal": 86,
+      "max_integer_line_cover": 4169,
+      "max_terminal_lines": 8,
+      "first_detection": {
+        "nodes": 117,
+        "lines": 245,
+        "seconds": 0.0003477499994914979,
+        "point": [
+          80107,
+          114547
+        ]
+      },
+      "factors": [
+        [
+          80107,
+          114547
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 16,
+        "6": 32,
+        "7": 60,
+        "8": 48
+      },
+      "seconds": 0.0005089159967610613,
+      "oracle_counts": {
+        "raycasts": 0,
+        "next_calls": 0,
+        "seek_calls": 0,
+        "support_calls": 0
+      }
+    },
+    {
+      "e": 20,
+      "family": "random_1",
+      "N": 2060348500853,
+      "k": 37,
+      "normal": [
+        1,
+        1
+      ],
+      "U": 2959135,
+      "method": "lines",
+      "status": "complete",
+      "nodes": 951,
+      "lines": 2262,
+      "terminal": 476,
+      "max_integer_line_cover": 22088,
+      "max_terminal_lines": 8,
+      "first_detection": {
+        "nodes": 180,
+        "lines": 418,
+        "seconds": 0.0007645830046385527,
+        "point": [
+          1658857,
+          1242029
+        ]
+      },
+      "factors": [
+        [
+          1242029,
+          1658857
+        ],
+        [
+          1658857,
+          1242029
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 16,
+        "6": 32,
+        "7": 64,
+        "8": 128,
+        "9": 256,
+        "10": 440
+      },
+      "seconds": 0.004012125005829148,
+      "oracle_counts": {
+        "raycasts": 0,
+        "next_calls": 0,
+        "seek_calls": 0,
+        "support_calls": 0
+      }
+    },
+    {
+      "e": 20,
+      "family": "random_1",
+      "N": 2060348500853,
+      "k": 37,
+      "normal": [
+        2,
+        1
+      ],
+      "U": 4184849,
+      "method": "lines",
+      "status": "complete",
+      "nodes": 919,
+      "lines": 2291,
+      "terminal": 460,
+      "max_integer_line_cover": 62475,
+      "max_terminal_lines": 8,
+      "first_detection": {
+        "nodes": 384,
+        "lines": 940,
+        "seconds": 0.0015953330002957955,
+        "point": [
+          1242029,
+          1658857
+        ]
+      },
+      "factors": [
+        [
+          1242029,
+          1658857
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 16,
+        "6": 32,
+        "7": 64,
+        "8": 128,
+        "9": 250,
+        "10": 414
+      },
+      "seconds": 0.003800708000198938,
+      "oracle_counts": {
+        "raycasts": 0,
+        "next_calls": 0,
+        "seek_calls": 0,
+        "support_calls": 0
+      }
+    },
+    {
+      "e": 20,
+      "family": "random_2",
+      "N": 2646130252751,
+      "k": 38,
+      "normal": [
+        1,
+        1
+      ],
+      "U": 3353513,
+      "method": "lines",
+      "status": "complete",
+      "nodes": 991,
+      "lines": 2568,
+      "terminal": 496,
+      "max_integer_line_cover": 12516,
+      "max_terminal_lines": 8,
+      "first_detection": {
+        "nodes": 248,
+        "lines": 620,
+        "seconds": 0.001065000004018657,
+        "point": [
+          1358713,
+          1947527
+        ]
+      },
+      "factors": [
+        [
+          1358713,
+          1947527
+        ],
+        [
+          1947527,
+          1358713
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 16,
+        "6": 32,
+        "7": 64,
+        "8": 128,
+        "9": 256,
+        "10": 448,
+        "11": 32
+      },
+      "seconds": 0.004248208002536558,
+      "oracle_counts": {
+        "raycasts": 0,
+        "next_calls": 0,
+        "seek_calls": 0,
+        "support_calls": 0
+      }
+    },
+    {
+      "e": 20,
+      "family": "random_2",
+      "N": 2646130252751,
+      "k": 38,
+      "normal": [
+        2,
+        1
+      ],
+      "U": 4742584,
+      "method": "lines",
+      "status": "complete",
+      "nodes": 965,
+      "lines": 2565,
+      "terminal": 483,
+      "max_integer_line_cover": 70801,
+      "max_terminal_lines": 8,
+      "first_detection": {
+        "nodes": 236,
+        "lines": 642,
+        "seconds": 0.0009977910085581243,
+        "point": [
+          1358713,
+          1947527
+        ]
+      },
+      "factors": [
+        [
+          1358713,
+          1947527
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 16,
+        "6": 32,
+        "7": 64,
+        "8": 128,
+        "9": 252,
+        "10": 438,
+        "11": 20
+      },
+      "seconds": 0.004066499997861683,
+      "oracle_counts": {
+        "raycasts": 0,
+        "next_calls": 0,
+        "seek_calls": 0,
+        "support_calls": 0
+      }
+    },
+    {
+      "e": 20,
+      "family": "high_residue",
+      "N": 2382982265753,
+      "k": 38,
+      "normal": [
+        1,
+        1
+      ],
+      "U": 3182400,
+      "method": "lines",
+      "status": "complete",
+      "nodes": 859,
+      "lines": 2419,
+      "terminal": 430,
+      "max_integer_line_cover": 23754,
+      "max_terminal_lines": 8,
+      "first_detection": {
+        "nodes": 331,
+        "lines": 906,
+        "seconds": 0.00138975000299979,
+        "point": [
+          1847117,
+          1290109
+        ]
+      },
+      "factors": [
+        [
+          1290109,
+          1847117
+        ],
+        [
+          1847117,
+          1290109
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 16,
+        "6": 32,
+        "7": 64,
+        "8": 120,
+        "9": 224,
+        "10": 384,
+        "11": 4
+      },
+      "seconds": 0.003649292004411109,
+      "oracle_counts": {
+        "raycasts": 0,
+        "next_calls": 0,
+        "seek_calls": 0,
+        "support_calls": 0
+      }
+    },
+    {
+      "e": 20,
+      "family": "high_residue",
+      "N": 2382982265753,
+      "k": 38,
+      "normal": [
+        2,
+        1
+      ],
+      "U": 4500594,
+      "method": "lines",
+      "status": "complete",
+      "nodes": 943,
+      "lines": 2430,
+      "terminal": 472,
+      "max_integer_line_cover": 67188,
+      "max_terminal_lines": 8,
+      "first_detection": {
+        "nodes": 465,
+        "lines": 1209,
+        "seconds": 0.0019359590078238398,
+        "point": [
+          1290109,
+          1847117
+        ]
+      },
+      "factors": [
+        [
+          1290109,
+          1847117
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 16,
+        "6": 32,
+        "7": 64,
+        "8": 128,
+        "9": 252,
+        "10": 432,
+        "11": 4
+      },
+      "seconds": 0.0039174169942270964,
+      "oracle_counts": {
+        "raycasts": 0,
+        "next_calls": 0,
+        "seek_calls": 0,
+        "support_calls": 0
+      }
+    },
+    {
+      "e": 24,
+      "family": "random_1",
+      "N": 669155593206703,
+      "k": 46,
+      "normal": [
+        1,
+        1
+      ],
+      "U": 53328334,
+      "method": "lines",
+      "status": "complete",
+      "nodes": 6951,
+      "lines": 14398,
+      "terminal": 3476,
+      "max_integer_line_cover": 199031,
+      "max_terminal_lines": 8,
+      "first_detection": {
+        "nodes": 1051,
+        "lines": 2181,
+        "seconds": 0.004806166994967498,
+        "point": [
+          21880009,
+          30582967
+        ]
+      },
+      "factors": [
+        [
+          21880009,
+          30582967
+        ],
+        [
+          30582967,
+          21880009
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 16,
+        "6": 32,
+        "7": 64,
+        "8": 128,
+        "9": 256,
+        "10": 512,
+        "11": 1024,
+        "12": 1980,
+        "13": 2924
+      },
+      "seconds": 0.031882374998531304,
+      "oracle_counts": {
+        "raycasts": 0,
+        "next_calls": 0,
+        "seek_calls": 0,
+        "support_calls": 0
+      }
+    },
+    {
+      "e": 24,
+      "family": "random_1",
+      "N": 669155593206703,
+      "k": 46,
+      "normal": [
+        2,
+        1
+      ],
+      "U": 75417654,
+      "method": "lines",
+      "status": "complete",
+      "nodes": 6931,
+      "lines": 14413,
+      "terminal": 3466,
+      "max_integer_line_cover": 1125891,
+      "max_terminal_lines": 8,
+      "first_detection": {
+        "nodes": 1035,
+        "lines": 2171,
+        "seconds": 0.004632916010450572,
+        "point": [
+          21880009,
+          30582967
+        ]
+      },
+      "factors": [
+        [
+          21880009,
+          30582967
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 16,
+        "6": 32,
+        "7": 64,
+        "8": 128,
+        "9": 256,
+        "10": 512,
+        "11": 1020,
+        "12": 1972,
+        "13": 2916
+      },
+      "seconds": 0.031292458006646484,
+      "oracle_counts": {
+        "raycasts": 0,
+        "next_calls": 0,
+        "seek_calls": 0,
+        "support_calls": 0
+      }
+    },
+    {
+      "e": 24,
+      "family": "random_2",
+      "N": 614744414368429,
+      "k": 46,
+      "normal": [
+        1,
+        1
+      ],
+      "U": 51114222,
+      "method": "lines",
+      "status": "complete",
+      "nodes": 6851,
+      "lines": 13778,
+      "terminal": 3426,
+      "max_integer_line_cover": 381536,
+      "max_terminal_lines": 8,
+      "first_detection": {
+        "nodes": 1414,
+        "lines": 2839,
+        "seconds": 0.006357749996823259,
+        "point": [
+          22450777,
+          27381877
+        ]
+      },
+      "factors": [
+        [
+          22450777,
+          27381877
+        ],
+        [
+          27381877,
+          22450777
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 16,
+        "6": 32,
+        "7": 64,
+        "8": 128,
+        "9": 256,
+        "10": 512,
+        "11": 1024,
+        "12": 1992,
+        "13": 2812
+      },
+      "seconds": 0.03082295900094323,
+      "oracle_counts": {
+        "raycasts": 0,
+        "next_calls": 0,
+        "seek_calls": 0,
+        "support_calls": 0
+      }
+    },
+    {
+      "e": 24,
+      "family": "random_2",
+      "N": 614744414368429,
+      "k": 46,
+      "normal": [
+        2,
+        1
+      ],
+      "U": 72286426,
+      "method": "lines",
+      "status": "complete",
+      "nodes": 6777,
+      "lines": 13824,
+      "terminal": 3389,
+      "max_integer_line_cover": 1079146,
+      "max_terminal_lines": 8,
+      "first_detection": {
+        "nodes": 1408,
+        "lines": 2837,
+        "seconds": 0.006157583004096523,
+        "point": [
+          22450777,
+          27381877
+        ]
+      },
+      "factors": [
+        [
+          22450777,
+          27381877
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 16,
+        "6": 32,
+        "7": 64,
+        "8": 128,
+        "9": 256,
+        "10": 512,
+        "11": 1020,
+        "12": 1964,
+        "13": 2770
+      },
+      "seconds": 0.029974000004585832,
+      "oracle_counts": {
+        "raycasts": 0,
+        "next_calls": 0,
+        "seek_calls": 0,
+        "support_calls": 0
+      }
+    },
+    {
+      "e": 24,
+      "family": "high_residue",
+      "N": 557746449210059,
+      "k": 45,
+      "normal": [
+        1,
+        1
+      ],
+      "U": 48686983,
+      "method": "lines",
+      "status": "complete",
+      "nodes": 6663,
+      "lines": 13222,
+      "terminal": 3332,
+      "max_integer_line_cover": 181709,
+      "max_terminal_lines": 8,
+      "first_detection": {
+        "nodes": 2492,
+        "lines": 4937,
+        "seconds": 0.011222999994060956,
+        "point": [
+          27409909,
+          20348351
+        ]
+      },
+      "factors": [
+        [
+          20348351,
+          27409909
+        ],
+        [
+          27409909,
+          20348351
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 16,
+        "6": 32,
+        "7": 64,
+        "8": 128,
+        "9": 256,
+        "10": 512,
+        "11": 1024,
+        "12": 1960,
+        "13": 2656
+      },
+      "seconds": 0.030042166996281594,
+      "oracle_counts": {
+        "raycasts": 0,
+        "next_calls": 0,
+        "seek_calls": 0,
+        "support_calls": 0
+      }
+    },
+    {
+      "e": 24,
+      "family": "high_residue",
+      "N": 557746449210059,
+      "k": 45,
+      "normal": [
+        2,
+        1
+      ],
+      "U": 68853793,
+      "method": "lines",
+      "status": "complete",
+      "nodes": 6675,
+      "lines": 13258,
+      "terminal": 3338,
+      "max_integer_line_cover": 1027902,
+      "max_terminal_lines": 8,
+      "first_detection": {
+        "nodes": 6559,
+        "lines": 13038,
+        "seconds": 0.029027916010818444,
+        "point": [
+          20348351,
+          27409909
+        ]
+      },
+      "factors": [
+        [
+          20348351,
+          27409909
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 16,
+        "6": 32,
+        "7": 64,
+        "8": 128,
+        "9": 256,
+        "10": 512,
+        "11": 1020,
+        "12": 1964,
+        "13": 2668
+      },
+      "seconds": 0.029539958006353118,
+      "oracle_counts": {
+        "raycasts": 0,
+        "next_calls": 0,
+        "seek_calls": 0,
+        "support_calls": 0
+      }
+    },
+    {
+      "e": 28,
+      "family": "random_1",
+      "N": 148391365153130251,
+      "k": 54,
+      "normal": [
+        1,
+        1
+      ],
+      "U": 794143124,
+      "method": "lines",
+      "status": "complete",
+      "nodes": 41983,
+      "lines": 86530,
+      "terminal": 20992,
+      "max_integer_line_cover": 2963891,
+      "max_terminal_lines": 8,
+      "first_detection": {
+        "nodes": 1844,
+        "lines": 3727,
+        "seconds": 0.009584749990608543,
+        "point": [
+          403321249,
+          367923499
+        ]
+      },
+      "factors": [
+        [
+          367923499,
+          403321249
+        ],
+        [
+          403321249,
+          367923499
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 16,
+        "6": 32,
+        "7": 64,
+        "8": 128,
+        "9": 256,
+        "10": 512,
+        "11": 1024,
+        "12": 2048,
+        "13": 4096,
+        "14": 8108,
+        "15": 14988,
+        "16": 10696
+      },
+      "seconds": 0.21853987500071526,
+      "oracle_counts": {
+        "raycasts": 0,
+        "next_calls": 0,
+        "seek_calls": 0,
+        "support_calls": 0
+      }
+    },
+    {
+      "e": 28,
+      "family": "random_1",
+      "N": 148391365153130251,
+      "k": 54,
+      "normal": [
+        2,
+        1
+      ],
+      "U": 1123087976,
+      "method": "lines",
+      "status": "complete",
+      "nodes": 42015,
+      "lines": 86655,
+      "terminal": 21008,
+      "max_integer_line_cover": 16766299,
+      "max_terminal_lines": 8,
+      "first_detection": null,
+      "factors": [],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 16,
+        "6": 32,
+        "7": 64,
+        "8": 128,
+        "9": 256,
+        "10": 512,
+        "11": 1024,
+        "12": 2048,
+        "13": 4092,
+        "14": 8110,
+        "15": 15008,
+        "16": 10710
+      },
+      "seconds": 0.21830345899797976,
+      "oracle_counts": {
+        "raycasts": 0,
+        "next_calls": 0,
+        "seek_calls": 0,
+        "support_calls": 0
+      }
+    },
+    {
+      "e": 28,
+      "family": "random_2",
+      "N": 144537453224287063,
+      "k": 54,
+      "normal": [
+        1,
+        1
+      ],
+      "U": 783762831,
+      "method": "lines",
+      "status": "complete",
+      "nodes": 41307,
+      "lines": 86362,
+      "terminal": 20654,
+      "max_integer_line_cover": 2925149,
+      "max_terminal_lines": 8,
+      "first_detection": {
+        "nodes": 11189,
+        "lines": 23485,
+        "seconds": 0.05986329099687282,
+        "point": [
+          317848901,
+          454736363
+        ]
+      },
+      "factors": [
+        [
+          317848901,
+          454736363
+        ],
+        [
+          454736363,
+          317848901
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 16,
+        "6": 32,
+        "7": 64,
+        "8": 128,
+        "9": 256,
+        "10": 512,
+        "11": 1024,
+        "12": 2048,
+        "13": 4096,
+        "14": 8108,
+        "15": 14944,
+        "16": 10064
+      },
+      "seconds": 0.2213962910027476,
+      "oracle_counts": {
+        "raycasts": 0,
+        "next_calls": 0,
+        "seek_calls": 0,
+        "support_calls": 0
+      }
+    },
+    {
+      "e": 28,
+      "family": "random_2",
+      "N": 144537453224287063,
+      "k": 54,
+      "normal": [
+        2,
+        1
+      ],
+      "U": 1108408026,
+      "method": "lines",
+      "status": "complete",
+      "nodes": 41383,
+      "lines": 86295,
+      "terminal": 20692,
+      "max_integer_line_cover": 16547146,
+      "max_terminal_lines": 8,
+      "first_detection": {
+        "nodes": 11227,
+        "lines": 23429,
+        "seconds": 0.05850262500462122,
+        "point": [
+          317848901,
+          454736363
+        ]
+      },
+      "factors": [
+        [
+          317848901,
+          454736363
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 16,
+        "6": 32,
+        "7": 64,
+        "8": 128,
+        "9": 256,
+        "10": 512,
+        "11": 1024,
+        "12": 2048,
+        "13": 4092,
+        "14": 8098,
+        "15": 14966,
+        "16": 10132
+      },
+      "seconds": 0.21537720800552052,
+      "oracle_counts": {
+        "raycasts": 0,
+        "next_calls": 0,
+        "seek_calls": 0,
+        "support_calls": 0
+      }
+    },
+    {
+      "e": 28,
+      "family": "high_residue",
+      "N": 132313437113839043,
+      "k": 53,
+      "normal": [
+        1,
+        1
+      ],
+      "U": 749888063,
+      "method": "lines",
+      "status": "complete",
+      "nodes": 39403,
+      "lines": 85394,
+      "terminal": 19702,
+      "max_integer_line_cover": 2798723,
+      "max_terminal_lines": 8,
+      "first_detection": {
+        "nodes": 276,
+        "lines": 605,
+        "seconds": 0.0016425830108346418,
+        "point": [
+          432695041,
+          305789123
+        ]
+      },
+      "factors": [
+        [
+          305789123,
+          432695041
+        ],
+        [
+          432695041,
+          305789123
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 16,
+        "6": 32,
+        "7": 64,
+        "8": 128,
+        "9": 256,
+        "10": 512,
+        "11": 1024,
+        "12": 2048,
+        "13": 4096,
+        "14": 8100,
+        "15": 14832,
+        "16": 8280
+      },
+      "seconds": 0.20677737500227522,
+      "oracle_counts": {
+        "raycasts": 0,
+        "next_calls": 0,
+        "seek_calls": 0,
+        "support_calls": 0
+      }
+    },
+    {
+      "e": 28,
+      "family": "high_residue",
+      "N": 132313437113839043,
+      "k": 53,
+      "normal": [
+        2,
+        1
+      ],
+      "U": 1060501869,
+      "method": "lines",
+      "status": "complete",
+      "nodes": 39543,
+      "lines": 85414,
+      "terminal": 19772,
+      "max_integer_line_cover": 15831967,
+      "max_terminal_lines": 8,
+      "first_detection": {
+        "nodes": 20798,
+        "lines": 44833,
+        "seconds": 0.10676787499687634,
+        "point": [
+          305789123,
+          432695041
+        ]
+      },
+      "factors": [
+        [
+          305789123,
+          432695041
+        ]
+      ],
+      "depths": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 8,
+        "5": 16,
+        "6": 32,
+        "7": 64,
+        "8": 128,
+        "9": 256,
+        "10": 512,
+        "11": 1024,
+        "12": 2048,
+        "13": 4092,
+        "14": 8100,
+        "15": 14864,
+        "16": 8392
+      },
+      "seconds": 0.20210583400330506,
+      "oracle_counts": {
+        "raycasts": 0,
+        "next_calls": 0,
+        "seek_calls": 0,
+        "support_calls": 0
+      }
+    }
+  ]
+}
