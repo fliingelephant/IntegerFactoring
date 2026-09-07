@@ -1,0 +1,178 @@
+{
+  "checks": {
+    "carry4": 6048,
+    "product4": 144,
+    "fold4": 124,
+    "high_digit_replacement": 252,
+    "guarded_recursion": 124,
+    "transport4": 144
+  },
+  "failures": [
+    {
+      "M": 16,
+      "a": 1,
+      "b": 1,
+      "actual": 0,
+      "drop_linear": 2,
+      "linear_mod2": 1
+    },
+    {
+      "M": 16,
+      "a": 1,
+      "b": 2,
+      "actual": 1,
+      "drop_linear": 3,
+      "linear_mod2": 1
+    },
+    {
+      "M": 16,
+      "a": 3,
+      "b": 2,
+      "actual": 3,
+      "drop_linear": 1,
+      "linear_mod2": 1
+    },
+    {
+      "M": 16,
+      "a": 2,
+      "b": 1,
+      "actual": 1,
+      "drop_linear": 3,
+      "linear_mod2": 1
+    },
+    {
+      "M": 16,
+      "a": 2,
+      "b": 3,
+      "actual": 3,
+      "drop_linear": 1,
+      "linear_mod2": 1
+    },
+    {
+      "M": 16,
+      "a": 2,
+      "b": 3,
+      "actual": 3,
+      "drop_linear": 1,
+      "linear_mod2": 1
+    }
+  ],
+  "projection_failures": [
+    {
+      "M": 32,
+      "r": 0,
+      "plus_mod4": 1,
+      "minus_mod4": 1,
+      "actual_mod4": 3,
+      "unguarded_half": 1
+    },
+    {
+      "M": 32,
+      "r": 2,
+      "plus_mod4": 1,
+      "minus_mod4": 1,
+      "actual_mod4": 3,
+      "unguarded_half": 1
+    },
+    {
+      "M": 32,
+      "r": 3,
+      "plus_mod4": 0,
+      "minus_mod4": 0,
+      "actual_mod4": 2,
+      "unguarded_half": 0
+    },
+    {
+      "M": 64,
+      "r": 1,
+      "plus_mod4": 2,
+      "minus_mod4": 2,
+      "actual_mod4": 0,
+      "unguarded_half": 2
+    },
+    {
+      "M": 64,
+      "r": 2,
+      "plus_mod4": 3,
+      "minus_mod4": 3,
+      "actual_mod4": 1,
+      "unguarded_half": 3
+    },
+    {
+      "M": 64,
+      "r": 3,
+      "plus_mod4": 2,
+      "minus_mod4": 2,
+      "actual_mod4": 0,
+      "unguarded_half": 2
+    },
+    {
+      "M": 128,
+      "r": 2,
+      "plus_mod4": 1,
+      "minus_mod4": 1,
+      "actual_mod4": 3,
+      "unguarded_half": 1
+    },
+    {
+      "M": 128,
+      "r": 3,
+      "plus_mod4": 0,
+      "minus_mod4": 0,
+      "actual_mod4": 2,
+      "unguarded_half": 0
+    }
+  ],
+  "mixed_examples": [
+    {
+      "M": 32,
+      "r": 0,
+      "prefix_mod4": 1,
+      "point_bit": 0,
+      "mixed_bit": 1,
+      "result_mod4": 3
+    },
+    {
+      "M": 32,
+      "r": 3,
+      "prefix_mod4": 0,
+      "point_bit": 0,
+      "mixed_bit": 1,
+      "result_mod4": 2
+    },
+    {
+      "M": 64,
+      "r": 1,
+      "prefix_mod4": 2,
+      "point_bit": 0,
+      "mixed_bit": 1,
+      "result_mod4": 0
+    },
+    {
+      "M": 64,
+      "r": 2,
+      "prefix_mod4": 3,
+      "point_bit": 0,
+      "mixed_bit": 1,
+      "result_mod4": 1
+    },
+    {
+      "M": 64,
+      "r": 3,
+      "prefix_mod4": 2,
+      "point_bit": 0,
+      "mixed_bit": 1,
+      "result_mod4": 0
+    },
+    {
+      "M": 64,
+      "r": 6,
+      "prefix_mod4": 2,
+      "point_bit": 1,
+      "mixed_bit": 1,
+      "result_mod4": 2
+    }
+  ],
+  "seconds": 0.009229374991264194,
+  "peak_rss_bytes": 17612800
+}

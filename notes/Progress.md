@@ -8550,3 +8550,264 @@ experiments/F312_orbit_precision/REPORT.md,
 experiments/F312_orbit_precision/pilot.py,
 experiments/F312_orbit_precision/pilot.json, and
 experiments/F312_orbit_precision/pilot.log.
+
+### C273 -- Integral symmetric powers give mod-four cut traces but leave restricted Hadamard sums
+
+**Status:** F314 author-derived identities and bounded exact certificates.
+No independent reconstruction or promoted algorithm is claimed.
+
+Let \(L=2^s\), \(d=L-1\), and let \(V\) be the degree-at-most-\(d\)
+polynomials over \(\mathbb Q_2\) that map \(\mathbb Z_2\) into itself.
+The binomial polynomials \(\binom{X}{j}\), \(0\leq j<L\), form an integral
+basis. For the P240 Möbius matrix \(g\), weighted substitution
+\[
+ \rho(g)f(X)=(B+CX)^d f\!\left(\frac{n-AX}{B+CX}\right)
+\]
+and its inverse preserve this lattice. Evaluation on \(0,\ldots,L-1\)
+therefore gives an invertible integral matrix \(R\) whose reduction modulo
+two is the canonical permutation matrix \(U\).
+
+For arbitrary node subsets \(I,J\),
+\[
+ H(I,J)=\operatorname{tr}(D_I R D_J R^{-1})
+\]
+equals the canonical rectangle count modulo four. Off-permutation products
+are divisible by four, while \(RR^{-1}=1\) makes each on-permutation
+product one modulo four. This statement holds for every invertible integral
+lift of a permutation. It fails modulo eight for the displayed weighted
+lift: at \(L=8,A=3,B=5,C=2,n=7\), \(I=[0,2)\), \(J=[0,1)\), the count is
+zero but \(H=4\bmod8\); the exact odd-denominator rational value is retained.
+
+For requested precision \(p\), put \(m=\lceil p/2\rceil\) and
+\[
+ F_m(z)=\sum_{t=m}^{2m-1}\binom{2m-1}{t}z^t(1-z)^{2m-1-t}.
+\]
+This degree-\(O(p)\) integer polynomial sends each entry product
+\(z_{ij}=R_{ij}R^{-1}_{ji}\) to its permutation bit modulo \(2^p\).
+It is an exact idempotent lift with no nonunit divisions or extra precision.
+Summing it still requires \(O(p)\) cut-restricted Hadamard moments, however;
+ordinary tensor characters do not supply the equal-index projector, and
+literal evaluation retains \(L^2\) pairs.
+
+Pascal tensor structure makes each prefix cut compact and gives its
+coefficient-basis projector an explicit diagonally scaled Cauchy block, but
+no polylogarithmic trace contraction follows. Two narrower substitutions
+are excluded exactly. Reducing the ordinary symmetric power modulo two sees
+only \(g\bmod2\) and a monomial-to-binomial conversion incurs the factorial
+guard \(v_2((L-1)!)=L-1-s\). Also, the integral group algebra of the
+lattice-preserving Möbius operators sends the all-ones node vector only to
+constant vectors, so it cannot contain a proper nonempty cut projector.
+These exclusions do not cover rational even-denominator combinations,
+mixed identities, or nonlinear direct scalar methods.
+
+The pilot checked 21,447 exact assertions for 12 maps through \(L=16\),
+including every prefix pair, both inverses, the projector formula, the
+modulo-eight witness, and precision lifts through \(p=12\). It took 0.074
+seconds at 17,481,728 bytes peak RSS. The unresolved operation is a uniform
+evaluator for the restricted Hadamard moments or an equivalent rational
+cut-character identity with explicit denominator control.
+
+Evidence:
+experiments/F314_integer_valued_representation/RESULT.md,
+experiments/F314_integer_valued_representation/pilot.py,
+experiments/F314_integer_valued_representation/pilot.json, and
+experiments/F314_integer_valued_representation/pilot.log.
+
+### C274 -- Exact bulk transport spectra are dense finite data, including a fast control bit
+
+**Status:** F315 exact enumerative discovery with bounded resource controls.
+No asymptotic degree statement, complexity lower bound, or promoted
+algorithm is claimed.
+
+For \(M=2^k\), \(R=M/4\), and the unit coordinates
+\(w=(-1)^\epsilon5^j\), F315 forms
+\[
+ b(w)=w,\qquad a(w)=\mu(w^{-1})\bmod16.
+\]
+Four exact Sage/FLINT integer-polynomial cyclic convolutions on
+\(C_2\times C_R\) compute
+\(C_r=\sum_w(\mu(w)\bmod16)(rw\bmod M)\) for every odd \(r\). With
+\(A_\mu=\sum_w(\mu(w)\bmod16)w\), exact integer division gives
+\[
+ T(8M+r)=\frac{(8M+r)A_\mu-C_r}{M}\pmod {16}. \tag{1}
+\]
+The full input keeps \(M\) as the public power selected from \(N/8\).
+Every divisibility guard and the raw/canonical correction were checked.
+
+The three Boolean bits of \(T(8M+r)/2\bmod8\) were transformed exactly to
+algebraic normal form in ordinary \(r=1+2x\) and sign/log
+\(r=(-1)^\epsilon5^j\) coordinates for \(k=8,10,12,14,16,18\). At
+\(k=18\), the ordinary degrees and monomial counts were
+\((15,65081),(15,65838),(16,65462)\); sign/log gave
+\((15,32685),(15,32696),(16,65620)\). The degree-one variation at
+\(k=12,18\), all counts by degree, and the square/nonsquare restrictions
+are retained as finite data only.
+
+The first displayed bit is a positive control: P242 already computes that
+scalar total in polynomial bit cost, although its tested ANF is dense and
+has high degree. Therefore ANF density or degree is not evidence that the
+next scalar bits are hard, and no lower bound is inferred.
+
+All odd residues through \(M=128\) and eight residues at each larger scale
+were checked by direct summation. The identity
+\(t_0(-r)=t_0(-1)+t_0(r)\) held on every complete table. Truth tables and
+dense ANFs are packed with SHA-256 hashes; sparse ANFs retain exact masks.
+The pilot took 0.618 seconds at 257,392,640 bytes peak RSS, and the scale run
+took 1.637 seconds at 309,329,920 bytes. The four convolutions enumerate the
+finite group and are a discovery method, not a quasipolynomial constructor.
+
+Evidence:
+experiments/F315_bulk_carry_spectrum/REPORT.md,
+experiments/F315_bulk_carry_spectrum/bulk_carry_spectrum.py,
+experiments/F315_bulk_carry_spectrum/pilot_output.json,
+experiments/F315_bulk_carry_spectrum/pilot_run.log,
+experiments/F315_bulk_carry_spectrum/pilot_status.json,
+experiments/F315_bulk_carry_spectrum/scale_output.json,
+experiments/F315_bulk_carry_spectrum/scale_run.log,
+experiments/F315_bulk_carry_spectrum/scale_status.json,
+experiments/F315_bulk_carry_spectrum/RESOURCE.md, and
+experiments/F315_bulk_carry_spectrum/SHA256SUMS.txt.
+
+### C275 -- A guarded half-modulus section transform leaves one mixed correlation
+
+**Status:** F316 author-derived identities and bounded exact checks. No
+constructor for \(K\bmod8\), \(T\bmod8\), or a shifted cut is promoted.
+
+Let \(M=2^k\), \(T=M/4\), and
+\[
+ e_j=\left\lfloor\frac{5^j\bmod4M}{M}\right\rfloor\in\{0,1,2,3\},
+ \qquad S_M(r)=[z^r]\left(\sum_{j<T}e_jz^j\right)^2\pmod4.
+\]
+For \(k\geq4\), the unsigned canonical carry for \(A=5^a\bmod M\) is
+\[
+ C_a(j)=3\left\lfloor\frac{a+j}{T}\right\rfloor
+        -e_a-e_j+e_{a+j\bmod T}\pmod4. \tag{1}
+\]
+Its complete inverse-paired product reduces to four \(S_M\) values, an
+ordinary overlap, a linear prefix correction, and point terms. Writing
+\(e=\eta+2\xi\) gives \(e^2=\eta^2\pmod4\), but the off-diagonal products
+and the linear correction remain. Dropping the latter already fails at
+\(M=16,a=b=1\).
+
+For the genuine half-modulus step, assume \(k\geq5\), put \(H=T/2\), and
+for \(0\leq j<H\) define
+\[
+ s_j=\left\lfloor\frac{5^j\bmod M}{M/2}\right\rfloor,
+ \quad B_j=1-s_j,\quad P_j=e_j\bmod2.
+\]
+The lift satisfies
+\(e_{j+H}=e_j-B_j-2(j\bmod2)\pmod4\). The cyclic and negacyclic
+projections determine only the sum and difference of
+\(S_M(r),S_M(r+H)\bmod4\); dividing those residues loses one bit. Retaining
+the projections modulo eight and dividing in the integers gives exactly
+\[
+ S_M(r)=\sum_{j=0}^{r}B_jB_{r-j}
+       +2\bigl([z^r]P^2-[z^r]PB\bigr)\pmod4,
+ \qquad 0\leq r<H. \tag{2}
+\]
+The first term is a truncated ordinary convolution. The point-value term
+\([z^r]P^2\bmod2\) is easy, while the remaining correction is
+\[
+ [z^r]PB=\sum_{j<H}
+ \operatorname{highbit}_M(5^j\bmod2M)
+ \left[1-\operatorname{highbit}_{M/2}
+   (5^{r-j\bmod H}\bmod M)\right]\pmod2. \tag{3}
+\]
+It is a mixed high/low-section correlation, not the complete square that
+collapses in P242. At \(M=32,r=0\), omitting (3) returns 1 instead of the
+correct \(S_M(0)=3\bmod4\).
+
+F316 also derives the exact unsigned diagnostic
+\[
+ \frac{T(A,0)}{2}=2a+L_a+S_M(0)-S_M(a)+R_0-R_a-\frac{A-1}{2}\pmod4,
+\]
+but does not aggregate its surviving correlations. Repeating (2) has no
+proved polynomial-size closed bank because (3) keeps a digit from the
+larger lift and the first term keeps an endpoint. Arbitrary cuts add further
+nonconstant masks.
+
+The pilot checked 6,048 carry digits, 144 paired products, 144 transport
+identities, 252 square replacements, and 124 guarded half-modulus cases.
+Both omitted-linear and unguarded-division failures are retained. Runtime
+was 0.010 seconds at 17,612,800 bytes peak RSS.
+
+Evidence:
+experiments/F316_cocycle_precision/REPORT.md,
+experiments/F316_cocycle_precision/pilot.py,
+experiments/F316_cocycle_precision/pilot.json, and
+experiments/F316_cocycle_precision/pilot.log.
+
+### C276 -- Normalized Cauchy entries are efficient but their moving quotient is not aggregated
+
+**Status:** F317 author-derived identities, exact bounded checks, and two
+large entry pilots. No restricted-moment or factoring algorithm is promoted.
+
+Let \(L=2^s\), \(d=L-1\), and let \(R\) be F314's interpolation matrix
+for \(g=\left[\begin{smallmatrix}\alpha&\beta\\\gamma&\delta\end{smallmatrix}\right]\),
+where \(\alpha,\delta\) and
+\(\Delta=\alpha\delta-\beta\gamma\) are odd and \(\gamma\) is even. Put
+\[
+ B(i,j)=\alpha i+\beta-(\gamma i+\delta)j,
+ \qquad p_i=(-1)^{d-i}i!(d-i)!.
+\]
+Exact Lagrange cancellation gives
+\[
+ R_{ij}R^{-1}_{ji}=(-\Delta)^{-d}
+ \frac{\prod_{r\ne j}B(i,r)\prod_{r\ne i}B(r,j)}{p_ip_j}. \tag{1}
+\]
+If \(B(i,j)=0\), the apparent pole is a graph match and the value is exactly
+one; every other entry in that row and column is zero. Other zero factors
+also give zero, so (1) requires no undefined division.
+
+For a nonmatching pair,
+\[
+ v_2(R_{ij}R^{-1}_{ji})\geq2\bigl(s-v_2(B(i,j))\bigr). \tag{2}
+\]
+Thus at Hadamard power \(h\) and precision \(2^p\), only one residue class
+of at most \(2^t\) columns can survive in each row, where
+\(t=\min(s,\lfloor(p-1)/(2h)\rfloor)\). This is still a literal
+\(|I|2^t\) entry bound.
+
+Each individual value in (1) is nevertheless computable in polynomial bit
+cost. Odd-step progressions are split by parity; even factors are divided by
+two recursively, while valuations and odd parts are tracked separately.
+Even-step odd progressions use truncated elementary symmetric functions,
+with exact Newton divisions. This avoids an \(O(L)\)-bit factorial guard and
+gives the conservative per-entry bound \(O(H^8)\) bit operations and
+\(O(H^3)\) live space for \(H=s+p+\tau+1\).
+
+The unresolved block aggregation is explicit. With \(M=2^m\),
+\(L=M2^t\), and a base residue \(i_0<M\), define
+\[
+ D_0=\gamma i_0+\delta,\quad y_0=T(i_0)\bmod M,
+ \quad E_0=\alpha-\gamma y_0,
+ \quad q_0=\frac{\alpha i_0+\beta-D_0y_0}{M}.
+\]
+Then
+\[
+ T(i_0+Mu)=y_0+M\frac{q_0+E_0u}{D_0+\gamma Mu}, \tag{3}
+\]
+and, when \(m\geq t\), the high coordinate is the affine permutation
+\[
+ v=D_0^{-1}(q_0+E_0u)\pmod {2^t}. \tag{4}
+\]
+Its intercept \(D_0^{-1}q_0\), slope, and both inherited prefix endpoints
+move with \(i_0\). Their histogram is not constructed. Already at \(t=1\),
+the half-box count is exactly \(\#\{i_0<M:q_0(i_0)\text{ is even}\}\).
+
+The exact next-bit transition loses one precision bit. A retained pair of
+states for \(g=[[-3,7],[2,5]]\), \(M=8\), agrees modulo two but produces
+different next \(q\) bits. This excludes only that one-bit state truncation;
+it is not a lower bound for another aggregation.
+
+The pilot passed 4,028 kernel checks and 5,208 block checks in 0.115 seconds
+at 17,383,424 bytes peak RSS. Nonenumerative single-entry pilots completed
+at \(L=2^{40},p=12\) and \(L=2^{80},p=20\). The remaining operation is a
+uniform aggregate of \(q_0(i_0)\) with both endpoints, or an equivalent
+direct contraction of (1).
+
+Evidence:
+experiments/F317_cut_cauchy/RESULT.md,
+experiments/F317_cut_cauchy/pilot.py,
+experiments/F317_cut_cauchy/pilot.json, and
+experiments/F317_cut_cauchy/pilot.log.

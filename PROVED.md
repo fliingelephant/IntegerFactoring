@@ -26079,3 +26079,228 @@ Input SHA-256:
 5214d1c68cd48eeeff1e746974d2c9600535c43ea512bf9da5b35d14f5303878.
 Reconstruction SHA-256:
 44b3c0853041be1c75cb82a8c35de08f7872d61f15b7bc7a06a2d8c1e08d83b6.
+
+## P242 -- Canonical unshifted cross and transport sums modulo four have polynomial-bit constructors
+
+**Status:** promoted after fresh statement-only reconstruction and root
+comparison with the author derivation. The formulas, parity guards, raw
+corrections, and stated cost matched without a gap.
+
+**Scope:** canonical \(K(A,B)\bmod4\), canonical \(T(N)\bmod4\), and the
+stated raw-input corrections. No shifted sum, sharp cut, higher-precision
+carry, rectangle count, or factoring algorithm is supplied.
+
+Let \(M=2^k\), \(k\geq3\), and \(L=M/4\). For odd canonical \(w\), let
+\(u(w)=w^{-1}\bmod M\),
+\(q(w)=(u(w)w-1)/M\), and \(\mu(w)=u(w)q(w)\). Define
+\[
+ K(A,B)=\sum_w\left\lfloor\frac{Aw}{M}\right\rfloor
+                 \left\lfloor\frac{Bu(w)}M\right\rfloor,
+ \qquad
+ T(N)=\sum_w\mu(w)\left\lfloor\frac{Nw}{M}\right\rfloor.
+\]
+
+Write every canonical odd \(A\) uniquely as
+\(A=(-1)^{\sigma_A}5^a\bmod M\), with \(0\leq a<L\). Put
+\[
+ \eta_j=\left\lfloor\frac{5^j\bmod2M}{M}\right\rfloor,
+ \qquad
+ \gamma_r=\begin{cases}
+ 0,&r\text{ odd},\\
+ \eta_{r/2}+\eta_{r/2+L/2},&r\text{ even},
+ \end{cases}
+ \pmod2,
+\]
+where indices are reduced modulo \(L\). For canonical \(A,B\), with
+exponents \(a,b\), \(K(A,B)\) is even and
+\[
+\begin{aligned}
+ \frac{K(A,B)}2={}&\max(0,a+b-L+1)+b\eta_a+a\eta_b\\
+ &+\gamma_0+\gamma_a+\gamma_b+\gamma_{a+b}
+   +\sigma_Ba+\sigma_Ab \pmod2. \tag{1}
+\end{aligned}
+\]
+For positive raw \(A=A_0+M\alpha\) and \(B=B_0+M\beta\), add
+\(\alpha b+\beta a\pmod2\) to (1). There is no
+\(\alpha\beta\) term.
+
+For canonical odd \(N=(-1)^\sigma5^a\bmod M\), let
+\(C=5^a\bmod2M\) in \([1,2M)\), and define the ordinary integer
+\[
+ D=\sum_{j=0}^{L-1}\left\lfloor\frac{C(1+4j)}M\right\rfloor
+ -2\sum_{j=0}^{L-1}\left\lfloor\frac{C(1+4j)}{2M}\right\rfloor.
+\]
+Then \(T(N)\) and \(D-a\) are even, and
+\[
+ \frac{T(N)}{2}=\sigma+\gamma_0+\gamma_a+\eta_a+\frac{D-a}{2}\pmod2. \tag{2}
+\]
+
+For the optional positive raw correction \(N=N_0+M\ell\), P238 supplies
+\(Q_0=\sum_wq(w)\bmod4\), and
+\[
+ T(N)=T(N_0)+\ell Q_0\pmod4. \tag{3}
+\]
+Sign pairing proves that \(Q_0\) is even, so division of the correction by
+two uses its residue modulo four and is an exact integer operation.
+
+The proof extracts the canonical multiplication carry from the high bit of
+\(5^j\bmod2M\). Sign pairing reduces \(K/2\) to one cyclic binary
+correlation; the involution \(j\mapsto r-j\) leaves exactly the displayed
+\(\gamma_r\) terms. For \(T/2\), the same pairing gives an explicit
+\(q_j\) word. Its section correlation and prefix term combine into the
+ordinary carry count \(D\), with the parity identity \(D\equiv a\pmod2\).
+
+Coordinates are recovered one bit at a time with \(O(k)\) modular
+multiplications. A constant number of \(\eta\) and \(\gamma\) values use
+binary modular exponentiation, and the two sums defining \(D\) use the
+Euclidean floor-sum recurrence. No unit group is enumerated. With
+schoolbook arithmetic, the conservative bit cost is \(O(k^3)\), enlarged
+by the raw input bit lengths when present, with polynomial space.
+
+Complete independent proof:
+experiments/F313_group_log_cocycle/RECONSTRUCTION.md.
+Statement-only input:
+experiments/F313_group_log_cocycle/STATEMENT_ONLY.md.
+Input SHA-256:
+48af5e43fad1e06e651bc627d3e20ddfe10ca633c92c0b49d233bea4c63eaa1b.
+Reconstruction SHA-256:
+71fe7dda465f38215d6ebe1756fd46df7d374948d26c2e72d774540906f42e15.
+
+Author derivation and finite evidence:
+experiments/F313_group_log_cocycle/REPORT.md,
+experiments/F313_group_log_cocycle/pilot.py,
+experiments/F313_group_log_cocycle/pilot.json,
+experiments/F313_group_log_cocycle/pilot.log,
+experiments/F313_group_log_cocycle/transport_bit.py,
+experiments/F313_group_log_cocycle/transport_bit.json, and
+experiments/F313_group_log_cocycle/transport_bit.log.
+The focused nondependency comparison is retained in
+experiments/F313_group_log_cocycle/SOURCE_LEADS.md.
+
+## P243 -- The fixed inverse half-box count modulo eight has a polynomial-bit constructor
+
+**Status:** promoted after fresh statement-only reconstruction and root
+review of the full-input correction, negative carries, parity constants,
+division guards, finite controls, and uniform cost.
+
+**Scope:** one fixed half/half box on the inverse graph modulo \(2R\), returned
+modulo eight for every positive odd full input. No arbitrary endpoint,
+exact count, emptiness oracle, or factoring algorithm is supplied.
+
+Let \(R=2^k\), \(k\geq3\), and \(\phi=R/2\). For positive odd \(N\), define
+\[
+ C(N,2R)=\#\{\,u\text{ odd}:1\leq u<R,\quad
+       N/u\bmod2R\in[1,R)\,\}.
+\]
+Write \(N=\nu+R\ell\), where \(1\leq\nu<R\) is odd. For odd \(u<R\), put
+\[
+ v_u=\nu/u\bmod R,\qquad q_N(u)=\frac{uv_u-N}{R},
+\]
+and define the exact integer sums
+\[
+ H_N=\sum_uq_N(u),\quad
+ B_N=\sum_u\binom{q_N(u)}2,\quad
+ A_N=\sum_u\binom{q_N(u)}3.
+\]
+The binomial polynomials use their all-integer values, including at negative
+\(q_N(u)\).
+
+The lift of \(v_u\) to the inverse graph modulo \(2R\) lies below \(R\)
+exactly when \(q_N(u)\) is even. The all-integer congruence
+\[
+ \mathbf1_{q\ {\rm even}}
+ =1-q+2\binom q2-4\binom q3\pmod8
+\]
+therefore gives
+\[
+ C(N,2R)=\phi-H_N+2B_N-4A_N\pmod8. \tag{1}
+\]
+Sign/inversion orbits give the universal constants
+\[
+ H_1=2\pmod4,\qquad B_1=2\pmod4,
+\]
+and fixed points of \(u\mapsto\nu/u\) give
+\[
+ A_N=\mathbf1_{N\equiv1\ ({\rm mod}\ 8)}\pmod2. \tag{2}
+\]
+The fixed-point proof includes the \(k=3\) boundary and negative carries.
+
+Let \(f(w)=\lfloor\nu w/R\rfloor\) and
+\[
+ J_\nu=\sum_{w\ {\rm odd}<R}\bigl(f(w)^2+w f(w)\bigr)\pmod8.
+\]
+Every summand is even. Divide the even canonical residue by two in the
+integers, call P242 for \(T_R(\nu)\bmod4\), and set
+\[
+ b_\nu=2+\nu(\nu-1)+J_\nu/2-\nu T_R(\nu)\pmod4. \tag{3}
+\]
+Then \(b_\nu=B_\nu\bmod4\), and exact binomial translation gives
+\[
+ B_N=b_\nu-\ell H_N\pmod4. \tag{4}
+\]
+The moments in \(J_\nu\) are ordinary degree-two floor sums. An explicit
+Euclidean recurrence computes \(\sum f\), \(\sum xf\), and \(\sum f^2\)
+as exact integers in \(O(k)\) reciprocal steps, including its exact
+division by two.
+
+Let \(P_R\) be the product of the positive odd integers below \(R\). P238
+computes it modulo \(8R\). Since \(u\mapsto v_u\) permutes the odd residues,
+\[
+ P_R^2=N^\phi+R N^{\phi-1}H_N\pmod {8R}.
+\]
+Consequently
+\[
+ H_N=
+ \left(\frac{P_R^2-N^\phi\bmod8R}{R}\right)N^{1-\phi}
+ \pmod8. \tag{5}
+\]
+The numerator is its canonical residue modulo \(8R\) and is divisible by
+\(R\) before division. The negative exponent means inversion of the odd
+unit \(N^{\phi-1}\bmod8\).
+
+Equations (1)--(5) form the constructor:
+\[
+ C(N,2R)=\phi-H_N+2(b_\nu-\ell H_N)
+          -4\mathbf1_{N\equiv1\ ({\rm mod}\ 8)}\pmod8. \tag{6}
+\]
+It calls P238 at exactly \(k+3\) bits of precision and P242 once on the
+canonical input \(\nu\). Modular exponentiation, input reduction, and the
+Euclidean moments have polynomial bit cost in \(k\) and \(\log N\). No
+graph point is enumerated.
+
+The exact polarization identity in
+experiments/F318_half_box_precision/ENDPOINTS.md reduces an arbitrary
+rectangle to four variable diagonal-interval counts with one guard bit.
+P243 computes only the single interval \([0,R)\) inside modulus \(2R\);
+it does not construct those variable endpoint values. A zero residue
+modulo eight also does not certify emptiness.
+
+Complete independent proof:
+experiments/F318_half_box_precision/RECONSTRUCTION.md.
+Statement-only input:
+experiments/F318_half_box_precision/STATEMENT_ONLY.md.
+Input SHA-256:
+c9c611f8148a365866a08212270731465d2d4244985b8610ffbcfee3be4f2fbe.
+Reconstruction SHA-256:
+24b44c98684c5915b7bbc353c26b453bc9c64de06c56eb1ee8559720ecb12791.
+
+Author derivation and finite evidence:
+experiments/F318_half_box_precision/REPORT.md,
+experiments/F318_half_box_precision/ENDPOINTS.md,
+experiments/F318_half_box_precision/pilot.py,
+experiments/F318_half_box_precision/pilot.json,
+experiments/F318_half_box_precision/pilot.log,
+experiments/F318_half_box_precision/pilot.status.json, and
+experiments/F318_half_box_precision/RESOURCE.md.
+The pilot passed 1,173 direct count comparisons through \(R=4096\).
+Nonenumerative cases completed through \(R=2^{256}\); that largest case
+took 0.585 seconds. Large cases use the proof-based constructor and were
+not independently graph-enumerated.
+
+An independent finite verifier retained in
+experiments/F318_half_box_precision/blind_check.py and blind_check.log
+passed 5,080 full-input cases for \(k=3,\ldots,9\), including large positive
+quotients and negative \(q_N\) values. Its source SHA-256 is
+b762b56831dbfa7233ccdc67a0e243d24d4451bf47e466818d1d2bb64a167768;
+the log SHA-256 is
+c545e97b9911d5a97311e009ae62ffa84b140537e95e3b722a90d3166a3d0cd7.

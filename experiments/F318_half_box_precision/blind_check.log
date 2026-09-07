@@ -1,0 +1,55 @@
+F318 independent blind check
+Date: 2026-09-07 (Asia/Hong_Kong)
+
+Scope
+-----
+The check source was derived only from STATEMENT_ONLY.md and the independent
+reconstruction. It was not used as proof. It did not read any candidate proof,
+implementation, ledger, parent result, or F305/F313 derivation.
+
+Resource estimate and guard
+---------------------------
+Estimated runtime: less than 5 seconds.
+Estimated peak memory: less than 32 MiB.
+Execution timeout: 30,000 ms.
+Required ceilings: at most 30 seconds and at most 256 MiB.
+
+Preflight
+---------
+uptime:
+  12:04  1 user, load averages: 2.12 2.26 2.23
+
+vm_stat relevant fields (16,384-byte pages):
+  Pages free: 10747
+  Pages throttled: 0
+  Swapins: 0
+  Swapouts: 0
+
+The process-list probe was unavailable in the sandbox (`ps: operation not
+permitted`). The check was a bounded, non-intensive single-process run; the
+load and virtual-memory preflight met its estimate.
+
+Executed command
+----------------
+/usr/bin/time -l python3 /private/tmp/f318_blind_check.py
+
+Original output
+---------------
+PASS: k=3..9, 5080 full-input cases; moment recursion and all congruences agree
+        0.22 real         0.21 user         0.00 sys
+time: sysctl kern.clockrate: Operation not permitted
+
+Coverage
+--------
+- Every odd canonical nu for k=3,...,9.
+- ell=0,...,7, ell=2^20+3, and ell=10^30+5.
+- H_1 and B_1 constants.
+- Exact Euclidean moment recurrence versus direct moments.
+- J_nu parity and direct value modulo eight.
+- b_nu versus direct B_nu modulo four.
+- H_N product quotient and its divisibility guard.
+- Full-input B_N correction and cubic parity, including negative q_N.
+- Final HALF-BOX COUNT residue versus direct parity counting.
+
+The promoted `blind_check.py` is byte-for-byte identical to the executed
+temporary source; this is checked by SHA-256 in the final verification record.

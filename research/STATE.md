@@ -1,86 +1,95 @@
 # Research State
 
-Updated 2026-09-07 after the ninth authorized Astra research cycle. All
-current mathematical jobs are terminal. The goal remains active, and no
-complete factoring algorithm is established.
+Updated 2026-09-07 after the tenth authorized Astra research cycle. All
+mathematical jobs are terminal. The goal remains active, and no complete
+factoring algorithm is established.
 
-## Goal interfaces and current tools
+## Goal interfaces and current constructors
 
-| Record | Exact role | Missing operation |
+| Record | Exact role | Remaining limit |
 | --- | --- | --- |
-| P237 | Reduces every integer factorization input to \(O(n^2)\) public dyadic inverse-graph rectangle-emptiness calls, with polynomial additional work. | A uniform efficient implementation of those rectangle calls. |
-| P239 | Recovers one exact rectangle count from four shifted binomial-carry values \(B(c,d)\bmod M\), with full-input and division precision retained. | A uniform efficient evaluator for shifted \(B(c,d)\bmod M\). |
-| P240 | Computes bounded numerical-degree mixed and linear-carry moments for one canonical Möbius map in polynomial bit cost. | It does not aggregate the shifted map or window family. |
-| P238 | Computes the global unshifted inverse-graph low-digit bank and odd-unit product in polynomial bit cost. | It does not evaluate shifted binomial carries or a sharp selector trace. |
-| P241 | Replaces sign-antisymmetric values by their residues modulo \(2^{p-2}\) inside \(Q_\epsilon\bmod2^p\). | It does not evaluate the residual overlap or reduce the graph modulus or output precision. |
+| P237 | Reduces every integer factorization input to \(O(n^2)\) public short dyadic inverse-graph rectangle-emptiness calls. | Needs a uniform efficient implementation of arbitrary public rectangles. |
+| P239 | Recovers one exact rectangle count from four shifted binomial-carry values \(B(c,d)\bmod M\). | Needs a uniform evaluator for shifted \(B(c,d)\) with both cuts. |
+| P243 | Computes the fixed half/half inverse-graph count modulo eight for every positive odd full input. | Fixed endpoints and three residue bits do not decide arbitrary emptiness. |
+| P242 | Computes canonical unshifted \(K(A,B)\) and \(T(N)\) modulo four, with stated raw corrections. | Supplies no shifted or higher-precision sum. |
+| P240 | Computes bounded-degree moments for one canonical Möbius map. | Does not aggregate shifted maps or windows. |
+| P238 | Computes global unshifted low-digit and odd-product banks. | Does not insert a sharp selector. |
 
-P237 and P239 remain the goal interfaces. P240, P238, and P241 are reusable
-tools with the displayed limits.
+P237 and P239 remain the goal interfaces. P242 and P243 are actual new
+polynomial-bit constructors, with the displayed cut and precision limits.
 
-## Ninth-cycle findings
+## Tenth-cycle findings
 
-F311 studies the complete half-period ring-inverse phase over
-\(\mathbb F_q\). The input \(N=527\), \(q=16\) has an exact genus-two
-Artin--Schreier model in sign/log coordinates and signed total 12, although
-the first genus-one model is excluded by Hasse. A fixed-pole order-31 family
-has a retained dual nonmembership certificate at \(q=256\). Four \(q=16\)
-phases become quadratic after tested nonlinear coordinate pullbacks and then
-have exact polynomial-time quadratic totals; no tested larger case does.
+P242 uses canonical coordinates \(A=(-1)^\sigma5^a\bmod M\). A fixed number
+of lifted section bits and four characteristic-two square coefficients give
+every canonical \(K(A,B)\bmod4\). Two ordinary Euclidean floor sums give
+canonical \(T(N)\bmod4\). Raw \(K\) has an explicit bilinear correction;
+raw \(T\) uses P238's even \(Q_0\bmod4\). The independently reconstructed
+cost is \(O(k^3)\) with schoolbook arithmetic. The focused source comparison
+in F313 found no theorem dependency or new known interface; it makes no
+novelty claim.
 
-The moving-two-finite-pole family, with a possible simple pole at infinity
-and two freely filled pole bits, was searched completely at \(q=32,64,128\)
-over original residues up to complement in both coordinates. It fits 18 of
-64 targets at \(q=32\), but none of the 128 and 256 targets at \(q=64,128\).
-At \(q=256\), only 16 seeded residues in both coordinates, 32 targets in
-total, were tested, and none fit. These are exact bounded constructions and exclusions. A scalar
-complete-phase model does not implement P239's arbitrary interval cuts.
-
-P241 is the independently reconstructed positive result from F312. For
-sign-antisymmetric integer functions \(r,g\), pointwise congruence modulo
-\(2^{p-2}\) implies
+P243 turns that transport bit into actual inverse-graph count precision.
+For \(R=2^k\), \(\phi=R/2\), and positive odd \(N\), put
 \[
- Q_\epsilon(r)=Q_\epsilon(g)\pmod {2^p}
+ C(N,2R)=\#\{u\text{ odd}<R:N/u\bmod2R<R\}.
 \]
-for every \(p\geq3\) and every odd \(\epsilon\). The proof includes
-inversion-fixed pairs, sign-inversion pairs, four-point orbits, negative
-values, and the \(p=3\) boundary. Applied to centered floors, it reduces the
-remaining value alphabet to \(\{-1,0,1\}\) at modulus eight. It does not
-reduce the inverse graph, summand count, or requested output precision.
+An all-integer binomial parity identity reduces this count modulo eight to
+\(H_N\bmod8\), \(B_N\bmod4\), and one cubic fixed-point bit. P238 computes
+\(H_N\) from the odd product modulo \(8R\); P242 and ordinary degree-two
+floor moments compute \(B_N\). All divisions have explicit guard bits and
+the full quotient \(N=\nu+R\ell\) is retained. The constructor is polynomial
+in \(k\) and \(\log N\) and does not enumerate graph points.
 
-F312 also gives the exact unsigned modulo-eight form. Its ordinary floor
-terms and at most four exceptional roots are computable, but the binary
-overlap \(\sum_w a(w)a(\epsilon w^{-1})\bmod8\) remains unknown. Exact
-half-translation keeps both the top-bit and canonical-wrap cuts. Generic
-eight-point orbits contribute 4 and 6 modulo eight in retained examples.
-The two-lift quotient halves the graph modulus only by introducing an exact
-carry-signed product with both source and image masks still present.
+This is a real three-bit count gain, but it is one fixed half-box. A zero
+residue modulo eight does not imply emptiness. The modular half-box may also
+contain wrapped products, while P237's short rectangles require the exact
+unwrapped condition.
 
-The current Harvey--Hittmeir paper arXiv:2601.11131 is cached under the
-generated key `harvey_2026_deterministic`. Its Theorem 1.1 and Algorithm 3.1
-use the same interface as the v2 PDF already used in F195/F280; the
-current version supplies no new order interface.
+F314 gives an integral symmetric-power lift whose arbitrary cut trace equals
+the rectangle count modulo four. A degree-\(O(p)\) integer idempotent raises
+the entry precision to \(2^p\), but summation still needs cut-restricted
+Hadamard moments. Pascal tensor cuts are compact; their normalized Cauchy
+block has no constructed fast aggregate.
 
-## Evidence and scope controls
+F317 computes each normalized Cauchy entry in polynomial bit cost and gives
+an exact local affine chart. Its intercept is the moving quotient \(q_0\);
+its slope and both inherited endpoints also vary with the base residue.
+Even the first half-box block asks for the parity histogram of \(q_0\).
+The per-entry locality therefore does not evaluate the cut trace.
 
-P241 retains the unchanged statement and reconstruction hashes. C271 records
-the F311 models, scoped Hasse/Walsh bounds, dual certificate, nonlinear
-pullbacks, and full-versus-seeded moving-pole coverage. C272 records the
-exceptional-root correction, faithful half-lift, generic counterexamples,
-and remaining binary operations. F311's searches enumerate finite truth
-tables; F312's finite controls verify identities but supply no global trace.
+F316 gives a guarded half-modulus recurrence for the next canonical section
+precision. It leaves one mixed high/low-section correlation and one
+truncated convolution endpoint. Neither repeated state closure nor an
+arbitrary-cut version is proved.
 
-The catalog has 603 records, 34 routes, and 527 experiment packets. There
-are 221 supported packet-to-route assignments and 306 explicit unknowns.
+F315's exact spectra are a useful control: the first bit has dense,
+high-degree algebraic normal forms in the tested orders even though P242
+computes its scalar total in polynomial bit cost. The density of the next
+two finite tables is therefore no evidence of hardness.
+
+## Evidence and counts
+
+P242 and P243 retain fresh statement-only reconstructions and exact hashes.
+C273–C276 retain the integral-lattice, bulk-spectrum, guarded-section, and
+Cauchy scopes with all failures and resource logs. P243 passed 1,173 direct
+counts through \(R=4096\); proof-based nonenumerative cases reached
+\(R=2^{256}\). F318's ENDPOINTS.md proves the exact polarization
+\[
+ 2\,\#([a,b)\times[c,d))
+ =D(a,d)+D(b,c)-D(a,c)-D(b,d),
+\]
+requiring one extra precision bit, but supplies no variable-\(D\) evaluator.
+
+The catalog has 609 records, 34 routes, and 533 experiment packets. There
+are 227 supported packet-to-route assignments and 306 explicit unknowns.
 Missing mappings remain unknown.
 
 ## Restart point
 
-F308 remains the main constructive advance: three polynomial-bit marginal
-calls evaluate its complete ordinary remainder \(R_d(A,B)\). The concrete
-missing operation is the inverse-floor term \(K_d(A,B)\) together with its
-affine input-cut pullback, or a direct uniform evaluator for shifted
-\(B(c,d)\bmod M\). F311's scalar field models do not carry arbitrary cuts,
-and P241's two-bit value compression leaves the same graph and output
-precision. A successful next construction must aggregate the remaining
-binary or carry-signed correlation without enumerating graph points,
-patches, windows, or orbit classes.
+The next concrete target is a uniform evaluator for the variable diagonal
+interval count \(D(x,y)\) with its guard bit, or directly for P239's shifted
+\(B(c,d)\bmod M\). Equivalently, one may aggregate F317's moving \(q_0\)
+histogram with both endpoints or close F316's mixed cross-layer recurrence.
+Any successful route must retain P237's arbitrary short public endpoints;
+the fixed P243 half-box cannot replace them.
