@@ -26304,3 +26304,170 @@ quotients and negative \(q_N\) values. Its source SHA-256 is
 b762b56831dbfa7233ccdc67a0e243d24d4451bf47e466818d1d2bb64a167768;
 the log SHA-256 is
 c545e97b9911d5a97311e009ae62ffa84b140537e95e3b722a90d3166a3d0cd7.
+
+## P244 -- Every divisor vertex has a discrete random-normal cone of inverse-cubic-root mass
+
+**Status:** promoted after fresh statement-only reconstruction and root
+review. The reconstruction explicitly qualifies the probability statement
+to composite \(N\), as required by its requested nontrivial-factor output.
+
+**Scope:** the exact normal cone of a divisor point and a probability lower
+bound conditional on an exact integer SUPPORT oracle. No SUPPORT
+implementation, quasipolynomial bound, or adaptive proposal theorem is
+promoted.
+
+**Statement.**
+
+Let \(N\geq4\), and let
+\[
+ S_N=\{(x,y)\in\mathbb Z^2:x,y>0,\ xy\geq N\}.
+\]
+For integers \(p,q\geq2\) with \(pq=N\), put \(P=(p,q)\). Write its adjacent
+lower-hull vertices as
+\[
+ L=(p-h,q+k),\qquad R=(p+H,q-K),
+\]
+where \(h,H,k,K>0\), and define
+\[
+ \lambda_-=\frac KH,\qquad \lambda_+=\frac kh.
+\]
+Then every normal \((\lambda,1)\) with
+\(\lambda_-<\lambda<\lambda_+\) uniquely exposes \(P\), and
+\[
+ N\left(\frac{\lambda_+}{\lambda_-}-1\right)^3\geq4. \tag{1}
+\]
+
+For the randomized consequence, assume \(N\) is composite, set
+\(n=\operatorname{bitlength}(N)\) and \(G=2^{4n}\), and sample independently
+\[
+ e\ \text{uniformly from }\{-n,\ldots,n-1\},\qquad
+ U\ \text{uniformly from }\{0,\ldots,G-1\}.
+\]
+Query an exact integer SUPPORT oracle for \(S_N\) at
+\[
+ \lambda=2^e(1+U/G).
+\]
+The returned point is a nontrivial factor point with probability at least
+\[
+ \frac{1}{8nN^{1/3}}. \tag{2}
+\]
+Only normals strictly inside a cone are counted, so no oracle tie convention
+is needed. The claim covers squares, prime powers, unbalanced factors, and
+the factor two.
+
+For (1), neighbor feasibility places \(q/p\) strictly between the two edge
+slopes. Writing \(r=\lambda_+/\lambda_->1\), the positive integer
+\(kH-hK\), the two neighbor inequalities, and AM--GM give
+\(N(r-1)^3\geq4\). Hence the logarithmic cone width is at least
+\(\log(1+(4/N)^{1/3})\).
+
+For (2), this cone meets at most two dyadic octaves. One has normalized
+intersection length at least one quarter of
+\(\min(r-1,1)\). The grid in that octave has mesh \(1/G\); the choice
+\(G=2^{4n}\) absorbs the one-point open-endpoint loss. Dividing by the
+\(2n\) octave choices gives (2). Every successful grid point lies strictly
+inside the normal cone and therefore returns \(P\).
+
+Independent retries conditional on exact SUPPORT need
+\(O(nN^{1/3})\) expected calls. This is a numerical-power bound, not the
+target quasipolynomial complexity. P244 makes no claim about the bit cost or
+correctness of F319's concrete SUPPORT implementation.
+
+Complete independent proof:
+experiments/F319_random_support_hull/RECONSTRUCTION.md.
+Statement-only input:
+experiments/F319_random_support_hull/RECONSTRUCTION_STATEMENT.md.
+Input SHA-256:
+fab176d71fdcfa9983a8e6710242d404491b78b5a12c2decfbfda32a9c585954.
+Reconstruction SHA-256:
+f377f4acf2a7b1e7babcc2a16fb121d7982146f3ce79dca851388f11dbbc9358.
+
+## P245 -- The adaptive unit-root protocol pathwise dominates its squarefree radical shadow
+
+**Status:** promoted after fresh statement-only reconstruction and root
+review of the coupling, fixed guard, cap padding, cost, and complete
+conditional recursion.
+
+**Scope:** F321's public unit-update/full-zero-rejection protocol and its
+fixed-length fiber guard. This is not a theorem about arbitrary dynamical
+algorithms, and it proves no quasipolynomial success bound for the squarefree
+process.
+
+**Statement.**
+
+Let odd \(N\) have at least two distinct prime divisors, let
+\(R=\operatorname{rad}(N)\), and fix a public total evaluation cap \(B\).
+The algorithm does not know or compute \(R\). An attempt modulo \(m\) starts
+with \(H(X)=X\). Each exact uniform probe evaluates \(Y=H(X)\bmod m\):
+
+1. return a verified divisor if \(1<\gcd(Y,m)<m\);
+2. if \(\gcd(Y,m)=1\), append \(A=Y\) and update
+   \(H\leftarrow H(H-A)\);
+3. if \(\gcd(Y,m)=m\), make no update.
+
+Couple a uniform seed modulo \(N\) with its reduction modulo \(R\). Until
+the \(N\)-attempt has already succeeded, their parameter lists and
+polynomials agree modulo \(R\). For every coupled output, the gcd
+classifications satisfy
+\[
+\begin{array}{c|c}
+\text{modulo }R&\text{modulo }N\\ \hline
+\text{unit}&\text{unit}\\
+\text{proper gcd}&\text{proper gcd}\\
+\text{full gcd}&\text{proper gcd or full gcd}.
+\end{array}
+\]
+Reduction commutes with the update. Hence success of the radical shadow by
+any evaluation implies success modulo \(N\) by that evaluation, and
+\[
+ \Pr_N(\text{success by }B)\geq
+ \Pr_R(\text{success by }B). \tag{1}
+\]
+This covers unequal repeated prime exponents.
+
+The same pathwise comparison holds for any fixed guard length \(K\). Each
+guard evaluates \(H(X)-A\), returns a proper gcd, rejects \(A\) without an
+update on a full gcd, and appends \(A\) only after \(K\) unit outcomes.
+Main and guard evaluations use the same total cap in both coupled attempts;
+reaching the cap mid-guard is failure.
+
+For the conditional consequence, suppose nondecreasing public functions
+\(B(n),Q(n)\), bounded by fixed quasipolynomials, satisfy
+\[
+ \Pr_R(\text{unguarded success with cap }B(n))\geq1/Q(n) \tag{2}
+\]
+for every odd squarefree composite \(R\) of binary length \(n\). Then there
+is an all-input classical Las Vegas factoring algorithm with expected
+quasipolynomial bit complexity.
+
+Strip powers of two, use deterministic primality testing, and detect exact
+perfect powers first. If \(m=a^e\), recursively factor \(a\) and multiply
+the returned exponents by \(e\). Every remaining odd composite has at least
+two distinct prime factors. Its analytic radical has length \(r\leq n\).
+Monotonicity, (1), and (2) give success at least \(1/Q(n)\) for the public
+cap \(B(n)\), without computing \(r\) or the radical.
+
+A capped attempt stores at most \(B(n)\) roots and uses at most
+\(B(n)(B(n)-1)/2\) modular multiplications, \(B(n)\) gcds, and expected
+\(O(nB(n))\) fair bits for exact uniform sampling. Independent retries,
+exact divisor verification, and polynomially many recursion nodes give the
+expected bound
+\[
+ n^{O(1)}Q(n)B(n)^2.
+\]
+This proves only the reduction from a supplied squarefree success contract;
+F321 has not established that contract.
+
+Complete independent proof:
+experiments/F321_adaptive_root_basins/SHADOW_RECONSTRUCTION.md.
+Statement-only input:
+experiments/F321_adaptive_root_basins/SHADOW_STATEMENT_ONLY.md.
+Input SHA-256:
+b816f21218b5dab5c1fb6200eacba7864b36077b3de71a9ea568293958c46cc7.
+Reconstruction SHA-256:
+733839ca690e5fae9a8fe41c8f1383210b197e2c1d9690cff40a0a201b4007bf.
+
+The matching root proof with explicit quasipolynomial envelopes and renewal
+accounting is experiments/F321_adaptive_root_basins/RADICAL_SHADOW.md.
+Focused dependency and context checks are retained in
+experiments/F321_adaptive_root_basins/SOURCE_LEADS.md.

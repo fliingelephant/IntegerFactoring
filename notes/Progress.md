@@ -8811,3 +8811,211 @@ experiments/F317_cut_cauchy/RESULT.md,
 experiments/F317_cut_cauchy/pilot.py,
 experiments/F317_cut_cauchy/pilot.json, and
 experiments/F317_cut_cauchy/pilot.log.
+
+### C277 -- Exact support is implemented locally, while proposal reweighting does not change first discovery
+
+**Status:** F319 author-derived implementation, source comparison, and
+censored finite trials. P244 separately promotes only the normal-cone theorem
+and its probability conditional on exact SUPPORT.
+
+F319 implements integer SUPPORT for
+\(S_N=\{(x,y)>0:xy\geq N\}\) using the exact RAYCAST and NEXTPT operations of
+Alcántara--Blanco--Criado--Santos. SEEK reaches a certified hull vertex near
+an integer coordinate cutoff, and a binary search over \([1,N]\) uses
+monotone adjacent-edge objective signs. The claimed bounds are
+\(O(\log^3N)\) arithmetic operations and a conservative \(O(n^6)\)
+schoolbook bit cost for \(O(n)\)-bit normals. This implementation and
+source-based cost proof were not independently reconstructed or promoted.
+
+The implementation passed 126 exact checks. Two nonenumerating calls at
+\(N=10^{24}+39\) and \(10^{48}+151\) took 0.077 and 0.460 seconds. Combined
+with P244 it gives an elementary \(O(n^7N^{1/3})\)-expected-bit Las Vegas
+route, still exponential in the input length.
+
+Every returned coordinate is gcd-screened before any state update. This can
+accept a proper divisor even when \(xy\ne N\): for
+\(N=101000303\), exact product-only factor-vertex mass is 0.00106, while
+coordinate gcd acceptance is 0.00989. Restricting acceptance to exact
+products would discard this verified one-sided gain.
+
+For independent proposals from one fixed normal law, residual Metropolis or
+rejection reweighting cannot change the first generated successful
+candidate. Counting every rejected proposal leaves the same discovery time.
+This identity does not cover state-dependent proposal distributions.
+
+Three public adaptive normal rules retained a one-quarter global proposal
+component and used residual-dependent local perturbations. No tested rule
+improved the independent source on the small uncensored cases; larger trials
+were often censored at 3,000 queries. Those capped means are not estimates of
+uncapped expectations. The remaining operation is a different public normal
+source with a proved all-input candidate-cost/success ratio.
+
+Evidence:
+experiments/F319_random_support_hull/RESULT.md,
+experiments/F319_random_support_hull/support.py,
+experiments/F319_random_support_hull/pilot.py,
+experiments/F319_random_support_hull/pilot.json,
+experiments/F319_random_support_hull/pilot.log, and
+experiments/F319_random_support_hull/pilot.status.json.
+
+### C278 -- Energy controls and a pair bank retain square-root least-factor work
+
+**Status:** F320 author-derived exact identities and finite checks. The
+decoder is existing P34/F162 arithmetic; no novelty, quasipolynomial bound,
+or result promotion is claimed.
+
+For odd \(N\), define the public nonnegative residual
+\[
+ h(k)=\gcd(k,N)-1-(N-1)\mathbf1_{k=0}.
+\]
+It vanishes on units and zero, and every positive observation is already a
+verified factor. For uniform \(K\bmod N\),
+\[
+\begin{aligned}
+ \mu&=\mathbb Eh(K)=\frac{S(N)-2N+1}{N},\\
+ \mathbb Eh(K)^2&=\frac1N
+ \sum_{\substack{1<d<N\\d\mid N}}(d-1)^2\varphi(N/d).
+\end{aligned}
+\]
+For \(N=pq\), the exact relative variance is
+\[
+ \frac{\operatorname{Var}(h)}{\mu^2}
+ =\frac{N(p+q-2)}{4(p-1)(q-1)}-1.
+\]
+Thus this exact control still needs \(\Theta(p+q)\) iid gcd probes for
+constant relative RMS on large semiprimes. A cyclic block of \(B\) explicitly
+probed residues has useful-hit probability at most
+\(B(N-\varphi(N)-1)/N\). These are restrictions on the named estimators,
+not on implicit or correlated sources.
+
+For a genuinely joint source, draw independent banks
+\(A_1,\ldots,A_m,B_1,\ldots,B_m\) and test all differences \(A_i-B_j\).
+Distinct differences are pairwise independent, even when one endpoint is
+shared. If \(\alpha\) is the useful-gcd density and
+\(Z\) counts useful differences, then
+\[
+ \mathbb EZ=m^2\alpha,\quad
+ \operatorname{Var}(Z)=m^2\alpha(1-\alpha),\quad
+ \Pr(Z>0)\geq\frac{m^2\alpha}{m^2\alpha+1-\alpha}. \tag{1}
+\]
+For least prime divisor \(p_{\min}\),
+\(\alpha\geq1/(2p_{\min})\), so \(m\geq\sqrt{2p_{\min}}\) gives probability
+at least one half.
+
+P34's monic product/remainder tree evaluates one bank against the other.
+F162's derivative substitution deletes exact equalities, and one scalar
+product-tree descent localizes any full gcd. The work is soft-linear in
+\(m\) times polynomial factors in \(n\). Doubling \(m\) and retrying gives
+an actual verified Las Vegas algorithm with expected
+\(\sqrt{p_{\min}}\,\operatorname{poly}(n)\) cost, which is \(N^{1/4}\)
+scale on balanced inputs and not quasipolynomial.
+
+The checker verified the energy, cyclic variance, and pair-bank second
+moment on 11 inputs and exhausted all \(m=2\) banks for \(N=9,15\). It took
+0.049 seconds. The remaining question is a compact correlated source with
+more useful relations per stored value, together with a cheap decoder.
+
+Evidence:
+experiments/F320_approximate_energy_sampler/REPORT.md,
+experiments/F320_approximate_energy_sampler/STATUS.md,
+experiments/F320_approximate_energy_sampler/check.py,
+experiments/F320_approximate_energy_sampler/output.json, and
+experiments/F320_approximate_energy_sampler/run.log.
+
+### C279 -- Output-selected roots show finite cubic-stage behavior but lack a uniform hazard bound
+
+**Status:** F321 exact public experiments, conditional field diagnostics,
+and root-derived identities. P245 separately promotes the radical-shadow
+reduction; no squarefree quasipolynomial success bound is established.
+
+The public attempt starts with \(H_0(x)=x\). On each uniform probe it
+evaluates the current straight-line program, gcd-screens
+\(y=H(x)\), and, only when the gcd is one, appends the public output
+\(a=y\) and updates
+\[
+ H_{\rm next}(x)=H(x)(H(x)-a)\pmod N.
+\]
+A proper gcd is verified and returned; a full gcd makes no update. With
+public cap \(B\), one attempt uses at most \(B(B-1)/2\) modular
+multiplications and \(B\) gcds.
+
+For a field image law \(\mu\), zero mass \(\alpha\), nonzero energy
+\(\beta=\sum_{x\ne0}\mu(x)^2\), and
+\(C(a)=\sum_x\mu(x)\mu(a-x)\), the exact collision identity is
+\[
+ Q_{\rm next}=Q+C(a)-\mu(a/2)^2.
+\]
+The corresponding \(\beta\)-increment retains an additive-triple term,
+the midpoint correction, and the removed cubic mass \(\mu(a)^3\). Formal
+degree growth alone supplies no positive drift theorem.
+
+For semiprime zero masses \(a,b\), a raw probe has
+\[
+ u=(1-a)(1-b),\quad z=ab,\quad f=a+b-2ab.
+\]
+After full-zero retries the factor hazard is
+\(h=f/(1-z)\geq\max(a,b)\), but surviving histories are reweighted by the
+product of prior no-factor probabilities. With \(K\) raw probes at one
+stage, the exact advance, factor, and reset probabilities are respectively
+\[
+ \frac{u(1-z^K)}{1-z},\qquad
+ \frac{f(1-z^K)}{1-z},\qquad z^K.
+\]
+
+A sufficient unproved cumulative-hazard contract is: on a forced-chain
+event of probability \(\delta\), if
+\(\sum_{j<T}h_j\geq\lambda\) and \(z_j\leq1-\epsilon\), then the capped
+public success probability is at least
+\[
+ \delta(1-e^{-\lambda})-T(1-\epsilon)^K. \tag{1}
+\]
+The attempt cost is \(O(KT^2\operatorname{poly}(n))\). No such uniform
+squarefree contract is proved. The field collision identity remains invalid
+as stated over prime-power rings, but P245 shows that this protocol needs no
+separate prime-power valuation analysis once a squarefree contract is known:
+its full-input process pathwise dominates the radical shadow, and exact
+perfect-power preprocessing handles the one-prime case.
+
+The selected-fiber guard tests \(K\) fresh differences before accepting a
+root. At a fixed field state its accepted local law is proportional to
+\(\mu(a)(1-\mu(a))^K\). It suppresses heavy fibers conditionally, but can
+make acceptance rare. Multiplying \(H\) and every selected root by public
+units preserves all gcd classifications, including guard decisions; unit
+normalization is therefore the same process, not a new sampler.
+
+The first raw probe alone gives a weak Las Vegas wrapper on promised
+composite \(N\): if \(p\) is the least prime divisor, success is at least
+\(1/(2p)\). Independent capped retries have finite expected cost
+\(O(pB^2\operatorname{poly}(n))\). The unresolved requirement is a much
+stronger cost/success ratio, not almost-sure termination.
+
+Public finite data gave 128/128 initial and 256/256 larger adaptive
+successes. On six preselected balanced scale inputs, descriptive log slopes
+were 0.325342 for gcd stages and 0.654607 for modular multiplications;
+work-matched rho gave 0.502728. These are finite fits only. Work-matched rho
+also succeeded 256/256 and used fewer multiplications but more gcds in every
+row. Guard \(K=2\) succeeded 64/64; guard \(K=8\) succeeded 52/64 with 12
+censors. No global-equality rejection occurred, so the guard did not
+validate beneficial overshoot.
+
+The conditional field process reached whole-field zero by 29--139 updates
+for \(p\leq4099\), but it samples by current image multiplicity conditioned
+on nonzero output. It is not the law of surviving public runs without the
+missing survival weighting. The original scaling-summary run failed its
+six-case label assertion and is retained; the corrected run and its source
+completed separately.
+
+Evidence:
+experiments/F321_adaptive_root_basins/REPORT.md,
+experiments/F321_adaptive_root_basins/ANALYSIS.md,
+experiments/F321_adaptive_root_basins/ROOT_NOTES.md,
+experiments/F321_adaptive_root_basins/RADICAL_SHADOW.md,
+experiments/F321_adaptive_root_basins/SHADOW_STATEMENT_ONLY.md,
+experiments/F321_adaptive_root_basins/SHADOW_RECONSTRUCTION.md,
+experiments/F321_adaptive_root_basins/SOURCE_LEADS.md,
+experiments/F321_adaptive_root_basins/SCALE_REPORT.md,
+experiments/F321_adaptive_root_basins/FIBER_GUARD_REPORT.md,
+experiments/F321_adaptive_root_basins/RHO_WORK_REPORT.md,
+experiments/F321_adaptive_root_basins/SHA256SUMS.txt,
+experiments/F321_adaptive_root_basins/SCALE_SHA256SUMS.txt, and
+experiments/F321_adaptive_root_basins/SUPPLEMENTAL_MANIFEST.md.

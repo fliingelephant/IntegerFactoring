@@ -1736,6 +1736,22 @@ recorded_status = "promoted after fresh statement-only reconstruction and root\n
 scope = "one fixed half/half box on the inverse graph modulo \\(2R\\), returned\nmodulo eight for every positive odd full input. No arbitrary endpoint,\nexact count, emptiness oracle, or factoring algorithm is supplied.\n\nLet \\(R=2^k\\), \\(k\\geq3\\), and \\(\\phi=R/2\\). For positive odd \\(N\\), define\n\\[\n C(N,2R)=\\#\\{\\,u\\text{ odd}:1\\leq u<R,\\quad\n       N/u\\bmod2R\\in[1,R)\\,\\}.\n\\]\nWrite \\(N=\\nu+R\\ell\\), where \\(1\\leq\\nu<R\\) is odd. For odd \\(u<R\\), put\n\\[\n v_u=\\nu/u\\bmod R,\\qquad q_N(u)=\\frac{uv_u-N}{R},\n\\]\nand define the exact integer sums\n\\[\n H_N=\\sum_uq_N(u),\\quad\n B_N=\\sum_u\\binom{q_N(u)}2,\\quad\n A_N=\\sum_u\\binom{q_N(u)}3.\n\\]\nThe binomial polynomials use their all-integer values, including at negative\n\\(q_N(u)\\).\n\nThe lift of \\(v_u\\) to the inverse graph modulo \\(2R\\) lies below \\(R\\)\nexactly when \\(q_N(u)\\) is even. The all-integer congruence\n\\[\n \\mathbf1_{q\\ {\\rm even}}\n =1-q+2\\binom q2-4\\binom q3\\pmod8\n\\]\ntherefore gives\n\\[\n C(N,2R)=\\phi-H_N+2B_N-4A_N\\pmod8. \\tag{1}\n\\]\nSign/inversion orbits give the universal constants\n\\[\n H_1=2\\pmod4,\\qquad B_1=2\\pmod4,\n\\]\nand fixed points of \\(u\\mapsto\\nu/u\\) give\n\\[\n A_N=\\mathbf1_{N\\equiv1\\ ({\\rm mod}\\ 8)}\\pmod2. \\tag{2}\n\\]\nThe fixed-point proof includes the \\(k=3\\) boundary and negative carries.\n\nLet \\(f(w)=\\lfloor\\nu w/R\\rfloor\\) and\n\\[\n J_\\nu=\\sum_{w\\ {\\rm odd}<R}\\bigl(f(w)^2+w f(w)\\bigr)\\pmod8.\n\\]\nEvery summand is even. Divide the even canonical residue by two in the\nintegers, call P242 for \\(T_R(\\nu)\\bmod4\\), and set\n\\[\n b_\\nu=2+\\nu(\\nu-1)+J_\\nu/2-\\nu T_R(\\nu)\\pmod4. \\tag{3}\n\\]\nThen \\(b_\\nu=B_\\nu\\bmod4\\), and exact binomial translation gives\n\\[\n B_N=b_\\nu-\\ell H_N\\pmod4. \\tag{4}\n\\]\nThe moments in \\(J_\\nu\\) are ordinary degree-two floor sums. An explicit\nEuclidean recurrence computes \\(\\sum f\\), \\(\\sum xf\\), and \\(\\sum f^2\\)\nas exact integers in \\(O(k)\\) reciprocal steps, including its exact\ndivision by two.\n\nLet \\(P_R\\) be the product of the positive odd integers below \\(R\\). P238\ncomputes it modulo \\(8R\\). Since \\(u\\mapsto v_u\\) permutes the odd residues,\n\\[\n P_R^2=N^\\phi+R N^{\\phi-1}H_N\\pmod {8R}.\n\\]\nConsequently\n\\[\n H_N=\n \\left(\\frac{P_R^2-N^\\phi\\bmod8R}{R}\\right)N^{1-\\phi}\n \\pmod8. \\tag{5}\n\\]\nThe numerator is its canonical residue modulo \\(8R\\) and is divisible by\n\\(R\\) before division. The negative exponent means inversion of the odd\nunit \\(N^{\\phi-1}\\bmod8\\).\n\nEquations (1)--(5) form the constructor:\n\\[\n C(N,2R)=\\phi-H_N+2(b_\\nu-\\ell H_N)\n          -4\\mathbf1_{N\\equiv1\\ ({\\rm mod}\\ 8)}\\pmod8. \\tag{6}\n\\]\nIt calls P238 at exactly \\(k+3\\) bits of precision and P242 once on the\ncanonical input \\(\\nu\\). Modular exponentiation, input reduction, and the\nEuclidean moments have polynomial bit cost in \\(k\\) and \\(\\log N\\). No\ngraph point is enumerated.\n\nThe exact polarization identity in\nexperiments/F318_half_box_precision/ENDPOINTS.md reduces an arbitrary\nrectangle to four variable diagonal-interval counts with one guard bit.\nP243 computes only the single interval \\([0,R)\\) inside modulus \\(2R\\);\nit does not construct those variable endpoint values. A zero residue\nmodulo eight also does not certify emptiness.\n\nComplete independent proof:\nexperiments/F318_half_box_precision/RECONSTRUCTION.md.\nStatement-only input:\nexperiments/F318_half_box_precision/STATEMENT_ONLY.md.\nInput SHA-256:\nc9c611f8148a365866a08212270731465d2d4244985b8610ffbcfee3be4f2fbe.\nReconstruction SHA-256:\n24b44c98684c5915b7bbc353c26b453bc9c64de06c56eb1ee8559720ecb12791.\n\nAuthor derivation and finite evidence:\nexperiments/F318_half_box_precision/REPORT.md,\nexperiments/F318_half_box_precision/ENDPOINTS.md,\nexperiments/F318_half_box_precision/pilot.py,\nexperiments/F318_half_box_precision/pilot.json,\nexperiments/F318_half_box_precision/pilot.log,\nexperiments/F318_half_box_precision/pilot.status.json, and\nexperiments/F318_half_box_precision/RESOURCE.md.\nThe pilot passed 1,173 direct count comparisons through \\(R=4096\\).\nNonenumerative cases completed through \\(R=2^{256}\\); that largest case\ntook 0.585 seconds. Large cases use the proof-based constructor and were\nnot independently graph-enumerated.\n\nAn independent finite verifier retained in\nexperiments/F318_half_box_precision/blind_check.py and blind_check.log\npassed 5,080 full-input cases for \\(k=3,\\ldots,9\\), including large positive\nquotients and negative \\(q_N\\) values. Its source SHA-256 is\nb762b56831dbfa7233ccdc67a0e243d24d4451bf47e466818d1d2bb64a167768;\nthe log SHA-256 is\nc545e97b9911d5a97311e009ae62ffa84b140537e95e3b722a90d3166a3d0cd7."
 
 [[records]]
+id = "P244"
+kind = "result"
+title = "Every divisor vertex has a discrete random-normal cone of inverse-cubic-root mass"
+source = { kind = "record", path = "PROVED.md", id = "P244" }
+recorded_status = "promoted after fresh statement-only reconstruction and root\nreview. The reconstruction explicitly qualifies the probability statement\nto composite \\(N\\), as required by its requested nontrivial-factor output."
+scope = "the exact normal cone of a divisor point and a probability lower\nbound conditional on an exact integer SUPPORT oracle. No SUPPORT\nimplementation, quasipolynomial bound, or adaptive proposal theorem is\npromoted."
+
+[[records]]
+id = "P245"
+kind = "result"
+title = "The adaptive unit-root protocol pathwise dominates its squarefree radical shadow"
+source = { kind = "record", path = "PROVED.md", id = "P245" }
+recorded_status = "promoted after fresh statement-only reconstruction and root\nreview of the coupling, fixed guard, cap padding, cost, and complete\nconditional recursion."
+scope = "F321's public unit-update/full-zero-rejection protocol and its\nfixed-length fiber guard. This is not a theorem about arbitrary dynamical\nalgorithms, and it proves no quasipolynomial success bound for the squarefree\nprocess."
+
+[[records]]
 id = "X01"
 kind = "closure"
 title = "generic exact linear compression of arbitrary square classes"
@@ -4323,3 +4339,24 @@ kind = "note"
 title = "Normalized Cauchy entries are efficient but their moving quotient is not aggregated"
 source = { kind = "record", path = "notes/Progress.md", id = "C276" }
 recorded_status = "F317 author-derived identities, exact bounded checks, and two\nlarge entry pilots. No restricted-moment or factoring algorithm is promoted."
+
+[[records]]
+id = "C277"
+kind = "note"
+title = "Exact support is implemented locally, while proposal reweighting does not change first discovery"
+source = { kind = "record", path = "notes/Progress.md", id = "C277" }
+recorded_status = "F319 author-derived implementation, source comparison, and\ncensored finite trials. P244 separately promotes only the normal-cone theorem\nand its probability conditional on exact SUPPORT."
+
+[[records]]
+id = "C278"
+kind = "note"
+title = "Energy controls and a pair bank retain square-root least-factor work"
+source = { kind = "record", path = "notes/Progress.md", id = "C278" }
+recorded_status = "F320 author-derived exact identities and finite checks. The\ndecoder is existing P34/F162 arithmetic; no novelty, quasipolynomial bound,\nor result promotion is claimed."
+
+[[records]]
+id = "C279"
+kind = "note"
+title = "Output-selected roots show finite cubic-stage behavior but lack a uniform hazard bound"
+source = { kind = "record", path = "notes/Progress.md", id = "C279" }
+recorded_status = "F321 exact public experiments, conditional field diagnostics,\nand root-derived identities. P245 separately promotes the radical-shadow\nreduction; no squarefree quasipolynomial success bound is established."

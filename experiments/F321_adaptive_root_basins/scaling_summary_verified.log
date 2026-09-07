@@ -1,0 +1,30 @@
+{"DOT_SAGE": "/private/tmp/f284_cyclotomic_binomial_search_sage", "command": ["/opt/homebrew/bin/python3", "experiments/F321_adaptive_root_basins/scaling_summary.py"], "event": "run_start", "run_id": "f321-scaling-summary-verified", "started_utc": "2026-09-07T04:58:31.107213+00:00", "timeout_seconds": 10}
+{
+  "status": "finite descriptive fits, not an asymptotic or probability theorem",
+  "selection": "all six balanced scale cases; 32 trials each; no censors in either selected method",
+  "inputs": {
+    "scale_output.json": "902138933f996417ee073ac6d605dc5998c482a95f9b1dab5ff739acf3feb480",
+    "rho_work_output.json": "599c91bbb29239cb9d952a44f9305f721d89cb0369b6e66c89674017877ed2e3"
+  },
+  "source_sha256": "2d10992003fc9c32071905accd5907eb79b408ffb38922598e1ddc6f51d62a0a",
+  "fits": {
+    "adaptive_gcd": {
+      "log2_slope": 0.3253423135380835,
+      "log2_intercept": 0.6287222028372055,
+      "descriptive_r_squared": 0.9952633442393595
+    },
+    "adaptive_multiplications": {
+      "log2_slope": 0.6546072851048282,
+      "log2_intercept": 0.3187800583586746,
+      "descriptive_r_squared": 0.9976674908935408
+    },
+    "rho_multiplications": {
+      "log2_slope": 0.5027276300782398,
+      "log2_intercept": 1.081864721261022,
+      "descriptive_r_squared": 0.9966715489711319
+    }
+  },
+  "seconds": 0.0014726250083185732,
+  "peak_rss_bytes": 21135360
+}
+{"disposition": "completed", "duration_seconds": 0.02372458399622701, "event": "run_end", "exit_code": 0, "finished_utc": "2026-09-07T04:58:31.130976+00:00", "run_id": "f321-scaling-summary-verified", "timed_out": false}

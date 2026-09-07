@@ -1,0 +1,84 @@
+{
+  "status": "finite descriptive fits, not an asymptotic or probability theorem",
+  "selection": "all six balanced scale cases; 32 trials each; no censors in either selected method",
+  "inputs": {
+    "scale_output.json": "902138933f996417ee073ac6d605dc5998c482a95f9b1dab5ff739acf3feb480",
+    "rho_work_output.json": "599c91bbb29239cb9d952a44f9305f721d89cb0369b6e66c89674017877ed2e3"
+  },
+  "source_sha256": "2d10992003fc9c32071905accd5907eb79b408ffb38922598e1ddc6f51d62a0a",
+  "rows": [
+    {
+      "p": 262147,
+      "q": 419443,
+      "N": 109955724121,
+      "trials": 32,
+      "adaptive_gcd": 89.9375,
+      "adaptive_multiplications": 4374.34375,
+      "rho_multiplications": 1074.46875
+    },
+    {
+      "p": 1048583,
+      "q": 1677733,
+      "N": 1759242302339,
+      "trials": 32,
+      "adaptive_gcd": 141.21875,
+      "adaptive_multiplications": 10946.75,
+      "rho_multiplications": 2413.5
+    },
+    {
+      "p": 4194319,
+      "q": 6710927,
+      "N": 28147768623713,
+      "trials": 32,
+      "adaptive_gcd": 230.6875,
+      "adaptive_multiplications": 29030.1875,
+      "rho_multiplications": 4826.4375
+    },
+    {
+      "p": 16777259,
+      "q": 26843623,
+      "N": 450362415569357,
+      "trials": 32,
+      "adaptive_gcd": 310.21875,
+      "adaptive_multiplications": 57697.84375,
+      "rho_multiplications": 8115.09375
+    },
+    {
+      "p": 67108879,
+      "q": 107374217,
+      "N": 7205763336372743,
+      "trials": 32,
+      "adaptive_gcd": 572.8125,
+      "adaptive_multiplications": 179631.5,
+      "rho_multiplications": 17510.25
+    },
+    {
+      "p": 268435459,
+      "q": 429496751,
+      "N": 115292157493693709,
+      "trials": 32,
+      "adaptive_gcd": 859.9375,
+      "adaptive_multiplications": 408298.875,
+      "rho_multiplications": 38759.25
+    }
+  ],
+  "fits": {
+    "adaptive_gcd": {
+      "log2_slope": 0.3253423135380835,
+      "log2_intercept": 0.6287222028372055,
+      "descriptive_r_squared": 0.9952633442393595
+    },
+    "adaptive_multiplications": {
+      "log2_slope": 0.6546072851048282,
+      "log2_intercept": 0.3187800583586746,
+      "descriptive_r_squared": 0.9976674908935408
+    },
+    "rho_multiplications": {
+      "log2_slope": 0.5027276300782398,
+      "log2_intercept": 1.081864721261022,
+      "descriptive_r_squared": 0.9966715489711319
+    }
+  },
+  "seconds": 0.0014726250083185732,
+  "peak_rss_bytes": 21135360
+}
