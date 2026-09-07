@@ -1,0 +1,5554 @@
+{
+  "dependency_sha256": {
+    "ALGEBRA": "f16d505b234b039a85016f0c84fdb53deb02098d42692f38dbe7cd12b0d26abd",
+    "ALGEBRA_STATEMENT_ONLY": "afc08f373adabe1f79314fa1d15666ac0d553e4226748d8b2ca6cf67d9ac4df6",
+    "CONTINUED_FRACTIONS": "5e427539c31eb7924fed1448714d51e247d75b16f623f2ba7ccfc5c0f4522e77",
+    "F337_source": "187e35a09f704ce29bdce7c42820a23551801cb835a80fc32575f4732e4e08e1",
+    "coupling_search_source": "c7cedb00a566b850a265dfd7312810166b2c54ee21bc7c027d38bc26a5d51c6c"
+  },
+  "experiment": "F339_coupled_rank_sources",
+  "first_anomaly": null,
+  "generic": {
+    "by_modulus": {
+      "11": {
+        "phase_prefix_checks": 6086,
+        "states": 100,
+        "units": 10
+      },
+      "13": {
+        "phase_prefix_checks": 12022,
+        "states": 144,
+        "units": 12
+      },
+      "15": {
+        "phase_prefix_checks": 11860,
+        "states": 112,
+        "units": 8
+      },
+      "17": {
+        "phase_prefix_checks": 35696,
+        "states": 256,
+        "units": 16
+      },
+      "19": {
+        "phase_prefix_checks": 55978,
+        "states": 324,
+        "units": 18
+      },
+      "21": {
+        "phase_prefix_checks": 49084,
+        "states": 240,
+        "units": 12
+      },
+      "23": {
+        "phase_prefix_checks": 121104,
+        "states": 484,
+        "units": 22
+      },
+      "25": {
+        "phase_prefix_checks": 140218,
+        "states": 480,
+        "units": 20
+      },
+      "27": {
+        "phase_prefix_checks": 158650,
+        "states": 468,
+        "units": 18
+      },
+      "29": {
+        "phase_prefix_checks": 308326,
+        "states": 784,
+        "units": 28
+      },
+      "3": {
+        "phase_prefix_checks": 26,
+        "states": 4,
+        "units": 2
+      },
+      "31": {
+        "phase_prefix_checks": 403324,
+        "states": 900,
+        "units": 30
+      },
+      "5": {
+        "phase_prefix_checks": 234,
+        "states": 16,
+        "units": 4
+      },
+      "7": {
+        "phase_prefix_checks": 952,
+        "states": 36,
+        "units": 6
+      },
+      "9": {
+        "phase_prefix_checks": 1970,
+        "states": 48,
+        "units": 6
+      }
+    },
+    "limit": 31,
+    "scope": "Every odd N, every unit a, every 1<=t<N, and every phase k,q.",
+    "totals": {
+      "cf_conservation_checks": 4396,
+      "cf_rotation_sum_total": 34918,
+      "cf_source_sum_total": 49468,
+      "fifth_accepted_pairs": 30216,
+      "fifth_nonzero_states": 3120,
+      "fifth_q_zero_states": 1276,
+      "fifth_rejected_pairs": 2924,
+      "maximum_discrepancy_numerator": 128,
+      "maximum_fifth_H": 2,
+      "maximum_fifth_menu_size": 6,
+      "moduli": 15,
+      "phase_prefix_checks": 1305530,
+      "states": 4396,
+      "unit_parameters": 212
+    }
+  },
+  "half_orbit": {
+    "bounded_rational_height": {
+      "classes": {
+        "distinct_semiprime": {
+          "accepted_unit_pairs": 136,
+          "candidate_pairs": 136,
+          "height": 82,
+          "moduli": 96,
+          "nonsquarefree": 0,
+          "r_one_pairs": 82
+        },
+        "nonsquarefree_multiple_primes": {
+          "accepted_unit_pairs": 6,
+          "candidate_pairs": 6,
+          "height": 6,
+          "moduli": 35,
+          "nonsquarefree": 35,
+          "r_one_pairs": 6
+        },
+        "prime_power": {
+          "accepted_unit_pairs": 30,
+          "candidate_pairs": 30,
+          "height": 14,
+          "moduli": 12,
+          "nonsquarefree": 12,
+          "r_one_pairs": 14
+        },
+        "squarefree_multiple_primes": {
+          "accepted_unit_pairs": 2,
+          "candidate_pairs": 2,
+          "height": 2,
+          "moduli": 16,
+          "nonsquarefree": 0,
+          "r_one_pairs": 2
+        }
+      },
+      "examples": {
+        "distinct_semiprime": [
+          {
+            "H": 1,
+            "N": 35,
+            "P": 5,
+            "a": 1,
+            "factorization": {
+              "5": 1,
+              "7": 1
+            },
+            "r": 1,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "H": 1,
+            "N": 55,
+            "P": 5,
+            "a": 1,
+            "factorization": {
+              "5": 1,
+              "11": 1
+            },
+            "r": 1,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "H": 1,
+            "N": 65,
+            "P": 5,
+            "a": 1,
+            "factorization": {
+              "5": 1,
+              "13": 1
+            },
+            "r": 1,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "H": 1,
+            "N": 77,
+            "P": 7,
+            "a": 1,
+            "factorization": {
+              "7": 1,
+              "11": 1
+            },
+            "r": 1,
+            "x": 1,
+            "y": 1
+          }
+        ],
+        "nonsquarefree_multiple_primes": [
+          {
+            "H": 1,
+            "N": 175,
+            "P": 5,
+            "a": 1,
+            "factorization": {
+              "5": 2,
+              "7": 1
+            },
+            "r": 1,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "H": 1,
+            "N": 245,
+            "P": 5,
+            "a": 1,
+            "factorization": {
+              "5": 1,
+              "7": 2
+            },
+            "r": 1,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "H": 1,
+            "N": 275,
+            "P": 5,
+            "a": 1,
+            "factorization": {
+              "5": 2,
+              "11": 1
+            },
+            "r": 1,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "H": 1,
+            "N": 325,
+            "P": 5,
+            "a": 1,
+            "factorization": {
+              "5": 2,
+              "13": 1
+            },
+            "r": 1,
+            "x": 1,
+            "y": 1
+          }
+        ],
+        "prime_power": [
+          {
+            "H": 1,
+            "N": 25,
+            "P": 5,
+            "a": 1,
+            "factorization": {
+              "5": 2
+            },
+            "r": 1,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "H": 1,
+            "N": 49,
+            "P": 7,
+            "a": 1,
+            "factorization": {
+              "7": 2
+            },
+            "r": 1,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "H": 2,
+            "N": 121,
+            "P": 11,
+            "a": 1,
+            "factorization": {
+              "11": 2
+            },
+            "r": 1,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "H": 2,
+            "N": 121,
+            "P": 11,
+            "a": 61,
+            "factorization": {
+              "11": 2
+            },
+            "r": 2,
+            "x": 1,
+            "y": 2
+          }
+        ],
+        "squarefree_multiple_primes": [
+          {
+            "H": 1,
+            "N": 385,
+            "P": 5,
+            "a": 1,
+            "factorization": {
+              "5": 1,
+              "7": 1,
+              "11": 1
+            },
+            "r": 1,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "H": 1,
+            "N": 455,
+            "P": 5,
+            "a": 1,
+            "factorization": {
+              "5": 1,
+              "7": 1,
+              "13": 1
+            },
+            "r": 1,
+            "x": 1,
+            "y": 1
+          }
+        ]
+      }
+    },
+    "by_modulus": {
+      "101": {
+        "factorization_validation_label": {
+          "101": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 100
+      },
+      "103": {
+        "factorization_validation_label": {
+          "103": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 102
+      },
+      "105": {
+        "factorization_validation_label": {
+          "3": 1,
+          "5": 1,
+          "7": 1
+        },
+        "menu_success_units": 22,
+        "r_one_units": 2,
+        "units": 48
+      },
+      "107": {
+        "factorization_validation_label": {
+          "107": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 106
+      },
+      "109": {
+        "factorization_validation_label": {
+          "109": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 108
+      },
+      "11": {
+        "factorization_validation_label": {
+          "11": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 10
+      },
+      "111": {
+        "factorization_validation_label": {
+          "3": 1,
+          "37": 1
+        },
+        "menu_success_units": 34,
+        "r_one_units": 2,
+        "units": 72
+      },
+      "113": {
+        "factorization_validation_label": {
+          "113": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 112
+      },
+      "115": {
+        "factorization_validation_label": {
+          "5": 1,
+          "23": 1
+        },
+        "menu_success_units": 28,
+        "r_one_units": 2,
+        "units": 88
+      },
+      "117": {
+        "factorization_validation_label": {
+          "3": 2,
+          "13": 1
+        },
+        "menu_success_units": 34,
+        "r_one_units": 2,
+        "units": 72
+      },
+      "119": {
+        "factorization_validation_label": {
+          "7": 1,
+          "17": 1
+        },
+        "menu_success_units": 20,
+        "r_one_units": 2,
+        "units": 96
+      },
+      "121": {
+        "factorization_validation_label": {
+          "11": 2
+        },
+        "menu_success_units": 8,
+        "r_one_units": 2,
+        "units": 110
+      },
+      "123": {
+        "factorization_validation_label": {
+          "3": 1,
+          "41": 1
+        },
+        "menu_success_units": 38,
+        "r_one_units": 2,
+        "units": 80
+      },
+      "125": {
+        "factorization_validation_label": {
+          "5": 3
+        },
+        "menu_success_units": 28,
+        "r_one_units": 2,
+        "units": 100
+      },
+      "127": {
+        "factorization_validation_label": {
+          "127": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 126
+      },
+      "129": {
+        "factorization_validation_label": {
+          "3": 1,
+          "43": 1
+        },
+        "menu_success_units": 42,
+        "r_one_units": 2,
+        "units": 84
+      },
+      "13": {
+        "factorization_validation_label": {
+          "13": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 12
+      },
+      "131": {
+        "factorization_validation_label": {
+          "131": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 130
+      },
+      "133": {
+        "factorization_validation_label": {
+          "7": 1,
+          "19": 1
+        },
+        "menu_success_units": 18,
+        "r_one_units": 2,
+        "units": 108
+      },
+      "135": {
+        "factorization_validation_label": {
+          "3": 3,
+          "5": 1
+        },
+        "menu_success_units": 34,
+        "r_one_units": 2,
+        "units": 72
+      },
+      "137": {
+        "factorization_validation_label": {
+          "137": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 136
+      },
+      "139": {
+        "factorization_validation_label": {
+          "139": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 138
+      },
+      "141": {
+        "factorization_validation_label": {
+          "3": 1,
+          "47": 1
+        },
+        "menu_success_units": 46,
+        "r_one_units": 2,
+        "units": 92
+      },
+      "143": {
+        "factorization_validation_label": {
+          "11": 1,
+          "13": 1
+        },
+        "menu_success_units": 14,
+        "r_one_units": 2,
+        "units": 120
+      },
+      "145": {
+        "factorization_validation_label": {
+          "5": 1,
+          "29": 1
+        },
+        "menu_success_units": 36,
+        "r_one_units": 2,
+        "units": 112
+      },
+      "147": {
+        "factorization_validation_label": {
+          "3": 1,
+          "7": 2
+        },
+        "menu_success_units": 38,
+        "r_one_units": 2,
+        "units": 84
+      },
+      "149": {
+        "factorization_validation_label": {
+          "149": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 148
+      },
+      "15": {
+        "factorization_validation_label": {
+          "3": 1,
+          "5": 1
+        },
+        "menu_success_units": 2,
+        "r_one_units": 2,
+        "units": 8
+      },
+      "151": {
+        "factorization_validation_label": {
+          "151": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 150
+      },
+      "153": {
+        "factorization_validation_label": {
+          "3": 2,
+          "17": 1
+        },
+        "menu_success_units": 46,
+        "r_one_units": 2,
+        "units": 96
+      },
+      "155": {
+        "factorization_validation_label": {
+          "5": 1,
+          "31": 1
+        },
+        "menu_success_units": 34,
+        "r_one_units": 2,
+        "units": 120
+      },
+      "157": {
+        "factorization_validation_label": {
+          "157": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 156
+      },
+      "159": {
+        "factorization_validation_label": {
+          "3": 1,
+          "53": 1
+        },
+        "menu_success_units": 50,
+        "r_one_units": 2,
+        "units": 104
+      },
+      "161": {
+        "factorization_validation_label": {
+          "7": 1,
+          "23": 1
+        },
+        "menu_success_units": 24,
+        "r_one_units": 2,
+        "units": 132
+      },
+      "163": {
+        "factorization_validation_label": {
+          "163": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 162
+      },
+      "165": {
+        "factorization_validation_label": {
+          "3": 1,
+          "5": 1,
+          "11": 1
+        },
+        "menu_success_units": 38,
+        "r_one_units": 2,
+        "units": 80
+      },
+      "167": {
+        "factorization_validation_label": {
+          "167": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 166
+      },
+      "169": {
+        "factorization_validation_label": {
+          "13": 2
+        },
+        "menu_success_units": 10,
+        "r_one_units": 2,
+        "units": 156
+      },
+      "17": {
+        "factorization_validation_label": {
+          "17": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 16
+      },
+      "171": {
+        "factorization_validation_label": {
+          "3": 2,
+          "19": 1
+        },
+        "menu_success_units": 50,
+        "r_one_units": 2,
+        "units": 108
+      },
+      "173": {
+        "factorization_validation_label": {
+          "173": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 172
+      },
+      "175": {
+        "factorization_validation_label": {
+          "5": 2,
+          "7": 1
+        },
+        "menu_success_units": 38,
+        "r_one_units": 2,
+        "units": 120
+      },
+      "177": {
+        "factorization_validation_label": {
+          "3": 1,
+          "59": 1
+        },
+        "menu_success_units": 58,
+        "r_one_units": 2,
+        "units": 116
+      },
+      "179": {
+        "factorization_validation_label": {
+          "179": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 178
+      },
+      "181": {
+        "factorization_validation_label": {
+          "181": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 180
+      },
+      "183": {
+        "factorization_validation_label": {
+          "3": 1,
+          "61": 1
+        },
+        "menu_success_units": 58,
+        "r_one_units": 2,
+        "units": 120
+      },
+      "185": {
+        "factorization_validation_label": {
+          "5": 1,
+          "37": 1
+        },
+        "menu_success_units": 42,
+        "r_one_units": 2,
+        "units": 144
+      },
+      "187": {
+        "factorization_validation_label": {
+          "11": 1,
+          "17": 1
+        },
+        "menu_success_units": 18,
+        "r_one_units": 2,
+        "units": 160
+      },
+      "189": {
+        "factorization_validation_label": {
+          "3": 3,
+          "7": 1
+        },
+        "menu_success_units": 54,
+        "r_one_units": 2,
+        "units": 108
+      },
+      "19": {
+        "factorization_validation_label": {
+          "19": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 18
+      },
+      "191": {
+        "factorization_validation_label": {
+          "191": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 190
+      },
+      "193": {
+        "factorization_validation_label": {
+          "193": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 192
+      },
+      "195": {
+        "factorization_validation_label": {
+          "3": 1,
+          "5": 1,
+          "13": 1
+        },
+        "menu_success_units": 46,
+        "r_one_units": 2,
+        "units": 96
+      },
+      "197": {
+        "factorization_validation_label": {
+          "197": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 196
+      },
+      "199": {
+        "factorization_validation_label": {
+          "199": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 198
+      },
+      "201": {
+        "factorization_validation_label": {
+          "3": 1,
+          "67": 1
+        },
+        "menu_success_units": 66,
+        "r_one_units": 2,
+        "units": 132
+      },
+      "203": {
+        "factorization_validation_label": {
+          "7": 1,
+          "29": 1
+        },
+        "menu_success_units": 32,
+        "r_one_units": 2,
+        "units": 168
+      },
+      "205": {
+        "factorization_validation_label": {
+          "5": 1,
+          "41": 1
+        },
+        "menu_success_units": 46,
+        "r_one_units": 2,
+        "units": 160
+      },
+      "207": {
+        "factorization_validation_label": {
+          "3": 2,
+          "23": 1
+        },
+        "menu_success_units": 62,
+        "r_one_units": 2,
+        "units": 132
+      },
+      "209": {
+        "factorization_validation_label": {
+          "11": 1,
+          "19": 1
+        },
+        "menu_success_units": 18,
+        "r_one_units": 2,
+        "units": 180
+      },
+      "21": {
+        "factorization_validation_label": {
+          "3": 1,
+          "7": 1
+        },
+        "menu_success_units": 6,
+        "r_one_units": 2,
+        "units": 12
+      },
+      "211": {
+        "factorization_validation_label": {
+          "211": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 210
+      },
+      "213": {
+        "factorization_validation_label": {
+          "3": 1,
+          "71": 1
+        },
+        "menu_success_units": 70,
+        "r_one_units": 2,
+        "units": 140
+      },
+      "215": {
+        "factorization_validation_label": {
+          "5": 1,
+          "43": 1
+        },
+        "menu_success_units": 50,
+        "r_one_units": 2,
+        "units": 168
+      },
+      "217": {
+        "factorization_validation_label": {
+          "7": 1,
+          "31": 1
+        },
+        "menu_success_units": 30,
+        "r_one_units": 2,
+        "units": 180
+      },
+      "219": {
+        "factorization_validation_label": {
+          "3": 1,
+          "73": 1
+        },
+        "menu_success_units": 70,
+        "r_one_units": 2,
+        "units": 144
+      },
+      "221": {
+        "factorization_validation_label": {
+          "13": 1,
+          "17": 1
+        },
+        "menu_success_units": 14,
+        "r_one_units": 2,
+        "units": 192
+      },
+      "223": {
+        "factorization_validation_label": {
+          "223": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 222
+      },
+      "225": {
+        "factorization_validation_label": {
+          "3": 2,
+          "5": 2
+        },
+        "menu_success_units": 58,
+        "r_one_units": 2,
+        "units": 120
+      },
+      "227": {
+        "factorization_validation_label": {
+          "227": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 226
+      },
+      "229": {
+        "factorization_validation_label": {
+          "229": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 228
+      },
+      "23": {
+        "factorization_validation_label": {
+          "23": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 22
+      },
+      "231": {
+        "factorization_validation_label": {
+          "3": 1,
+          "7": 1,
+          "11": 1
+        },
+        "menu_success_units": 54,
+        "r_one_units": 2,
+        "units": 120
+      },
+      "233": {
+        "factorization_validation_label": {
+          "233": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 232
+      },
+      "235": {
+        "factorization_validation_label": {
+          "5": 1,
+          "47": 1
+        },
+        "menu_success_units": 60,
+        "r_one_units": 2,
+        "units": 184
+      },
+      "237": {
+        "factorization_validation_label": {
+          "3": 1,
+          "79": 1
+        },
+        "menu_success_units": 78,
+        "r_one_units": 2,
+        "units": 156
+      },
+      "239": {
+        "factorization_validation_label": {
+          "239": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 238
+      },
+      "241": {
+        "factorization_validation_label": {
+          "241": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 240
+      },
+      "243": {
+        "factorization_validation_label": {
+          "3": 5
+        },
+        "menu_success_units": 78,
+        "r_one_units": 2,
+        "units": 162
+      },
+      "245": {
+        "factorization_validation_label": {
+          "5": 1,
+          "7": 2
+        },
+        "menu_success_units": 54,
+        "r_one_units": 2,
+        "units": 168
+      },
+      "247": {
+        "factorization_validation_label": {
+          "13": 1,
+          "19": 1
+        },
+        "menu_success_units": 18,
+        "r_one_units": 2,
+        "units": 216
+      },
+      "249": {
+        "factorization_validation_label": {
+          "3": 1,
+          "83": 1
+        },
+        "menu_success_units": 82,
+        "r_one_units": 2,
+        "units": 164
+      },
+      "25": {
+        "factorization_validation_label": {
+          "5": 2
+        },
+        "menu_success_units": 6,
+        "r_one_units": 2,
+        "units": 20
+      },
+      "251": {
+        "factorization_validation_label": {
+          "251": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 250
+      },
+      "253": {
+        "factorization_validation_label": {
+          "11": 1,
+          "23": 1
+        },
+        "menu_success_units": 16,
+        "r_one_units": 2,
+        "units": 220
+      },
+      "255": {
+        "factorization_validation_label": {
+          "3": 1,
+          "5": 1,
+          "17": 1
+        },
+        "menu_success_units": 62,
+        "r_one_units": 2,
+        "units": 128
+      },
+      "257": {
+        "factorization_validation_label": {
+          "257": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 256
+      },
+      "259": {
+        "factorization_validation_label": {
+          "7": 1,
+          "37": 1
+        },
+        "menu_success_units": 44,
+        "r_one_units": 2,
+        "units": 216
+      },
+      "261": {
+        "factorization_validation_label": {
+          "3": 2,
+          "29": 1
+        },
+        "menu_success_units": 82,
+        "r_one_units": 2,
+        "units": 168
+      },
+      "263": {
+        "factorization_validation_label": {
+          "263": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 262
+      },
+      "265": {
+        "factorization_validation_label": {
+          "5": 1,
+          "53": 1
+        },
+        "menu_success_units": 62,
+        "r_one_units": 2,
+        "units": 208
+      },
+      "267": {
+        "factorization_validation_label": {
+          "3": 1,
+          "89": 1
+        },
+        "menu_success_units": 86,
+        "r_one_units": 2,
+        "units": 176
+      },
+      "269": {
+        "factorization_validation_label": {
+          "269": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 268
+      },
+      "27": {
+        "factorization_validation_label": {
+          "3": 3
+        },
+        "menu_success_units": 6,
+        "r_one_units": 2,
+        "units": 18
+      },
+      "271": {
+        "factorization_validation_label": {
+          "271": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 270
+      },
+      "273": {
+        "factorization_validation_label": {
+          "3": 1,
+          "7": 1,
+          "13": 1
+        },
+        "menu_success_units": 70,
+        "r_one_units": 2,
+        "units": 144
+      },
+      "275": {
+        "factorization_validation_label": {
+          "5": 2,
+          "11": 1
+        },
+        "menu_success_units": 62,
+        "r_one_units": 2,
+        "units": 200
+      },
+      "277": {
+        "factorization_validation_label": {
+          "277": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 276
+      },
+      "279": {
+        "factorization_validation_label": {
+          "3": 2,
+          "31": 1
+        },
+        "menu_success_units": 86,
+        "r_one_units": 2,
+        "units": 180
+      },
+      "281": {
+        "factorization_validation_label": {
+          "281": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 280
+      },
+      "283": {
+        "factorization_validation_label": {
+          "283": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 282
+      },
+      "285": {
+        "factorization_validation_label": {
+          "3": 1,
+          "5": 1,
+          "19": 1
+        },
+        "menu_success_units": 70,
+        "r_one_units": 2,
+        "units": 144
+      },
+      "287": {
+        "factorization_validation_label": {
+          "7": 1,
+          "41": 1
+        },
+        "menu_success_units": 46,
+        "r_one_units": 2,
+        "units": 240
+      },
+      "289": {
+        "factorization_validation_label": {
+          "17": 2
+        },
+        "menu_success_units": 8,
+        "r_one_units": 2,
+        "units": 272
+      },
+      "29": {
+        "factorization_validation_label": {
+          "29": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 28
+      },
+      "291": {
+        "factorization_validation_label": {
+          "3": 1,
+          "97": 1
+        },
+        "menu_success_units": 94,
+        "r_one_units": 2,
+        "units": 192
+      },
+      "293": {
+        "factorization_validation_label": {
+          "293": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 292
+      },
+      "295": {
+        "factorization_validation_label": {
+          "5": 1,
+          "59": 1
+        },
+        "menu_success_units": 72,
+        "r_one_units": 2,
+        "units": 232
+      },
+      "297": {
+        "factorization_validation_label": {
+          "3": 3,
+          "11": 1
+        },
+        "menu_success_units": 90,
+        "r_one_units": 2,
+        "units": 180
+      },
+      "299": {
+        "factorization_validation_label": {
+          "13": 1,
+          "23": 1
+        },
+        "menu_success_units": 20,
+        "r_one_units": 2,
+        "units": 264
+      },
+      "3": {
+        "factorization_validation_label": {
+          "3": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 2
+      },
+      "301": {
+        "factorization_validation_label": {
+          "7": 1,
+          "43": 1
+        },
+        "menu_success_units": 42,
+        "r_one_units": 2,
+        "units": 252
+      },
+      "303": {
+        "factorization_validation_label": {
+          "3": 1,
+          "101": 1
+        },
+        "menu_success_units": 98,
+        "r_one_units": 2,
+        "units": 200
+      },
+      "305": {
+        "factorization_validation_label": {
+          "5": 1,
+          "61": 1
+        },
+        "menu_success_units": 74,
+        "r_one_units": 2,
+        "units": 240
+      },
+      "307": {
+        "factorization_validation_label": {
+          "307": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 306
+      },
+      "309": {
+        "factorization_validation_label": {
+          "3": 1,
+          "103": 1
+        },
+        "menu_success_units": 102,
+        "r_one_units": 2,
+        "units": 204
+      },
+      "31": {
+        "factorization_validation_label": {
+          "31": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 30
+      },
+      "311": {
+        "factorization_validation_label": {
+          "311": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 310
+      },
+      "313": {
+        "factorization_validation_label": {
+          "313": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 312
+      },
+      "315": {
+        "factorization_validation_label": {
+          "3": 2,
+          "5": 1,
+          "7": 1
+        },
+        "menu_success_units": 70,
+        "r_one_units": 2,
+        "units": 144
+      },
+      "317": {
+        "factorization_validation_label": {
+          "317": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 316
+      },
+      "319": {
+        "factorization_validation_label": {
+          "11": 1,
+          "29": 1
+        },
+        "menu_success_units": 24,
+        "r_one_units": 2,
+        "units": 280
+      },
+      "321": {
+        "factorization_validation_label": {
+          "3": 1,
+          "107": 1
+        },
+        "menu_success_units": 106,
+        "r_one_units": 2,
+        "units": 212
+      },
+      "323": {
+        "factorization_validation_label": {
+          "17": 1,
+          "19": 1
+        },
+        "menu_success_units": 12,
+        "r_one_units": 2,
+        "units": 288
+      },
+      "325": {
+        "factorization_validation_label": {
+          "5": 2,
+          "13": 1
+        },
+        "menu_success_units": 78,
+        "r_one_units": 2,
+        "units": 240
+      },
+      "327": {
+        "factorization_validation_label": {
+          "3": 1,
+          "109": 1
+        },
+        "menu_success_units": 106,
+        "r_one_units": 2,
+        "units": 216
+      },
+      "329": {
+        "factorization_validation_label": {
+          "7": 1,
+          "47": 1
+        },
+        "menu_success_units": 44,
+        "r_one_units": 2,
+        "units": 276
+      },
+      "33": {
+        "factorization_validation_label": {
+          "3": 1,
+          "11": 1
+        },
+        "menu_success_units": 10,
+        "r_one_units": 2,
+        "units": 20
+      },
+      "331": {
+        "factorization_validation_label": {
+          "331": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 330
+      },
+      "333": {
+        "factorization_validation_label": {
+          "3": 2,
+          "37": 1
+        },
+        "menu_success_units": 106,
+        "r_one_units": 2,
+        "units": 216
+      },
+      "335": {
+        "factorization_validation_label": {
+          "5": 1,
+          "67": 1
+        },
+        "menu_success_units": 76,
+        "r_one_units": 2,
+        "units": 264
+      },
+      "337": {
+        "factorization_validation_label": {
+          "337": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 336
+      },
+      "339": {
+        "factorization_validation_label": {
+          "3": 1,
+          "113": 1
+        },
+        "menu_success_units": 110,
+        "r_one_units": 2,
+        "units": 224
+      },
+      "341": {
+        "factorization_validation_label": {
+          "11": 1,
+          "31": 1
+        },
+        "menu_success_units": 26,
+        "r_one_units": 2,
+        "units": 300
+      },
+      "343": {
+        "factorization_validation_label": {
+          "7": 3
+        },
+        "menu_success_units": 50,
+        "r_one_units": 2,
+        "units": 294
+      },
+      "345": {
+        "factorization_validation_label": {
+          "3": 1,
+          "5": 1,
+          "23": 1
+        },
+        "menu_success_units": 86,
+        "r_one_units": 2,
+        "units": 176
+      },
+      "347": {
+        "factorization_validation_label": {
+          "347": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 346
+      },
+      "349": {
+        "factorization_validation_label": {
+          "349": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 348
+      },
+      "35": {
+        "factorization_validation_label": {
+          "5": 1,
+          "7": 1
+        },
+        "menu_success_units": 6,
+        "r_one_units": 2,
+        "units": 24
+      },
+      "351": {
+        "factorization_validation_label": {
+          "3": 3,
+          "13": 1
+        },
+        "menu_success_units": 106,
+        "r_one_units": 2,
+        "units": 216
+      },
+      "353": {
+        "factorization_validation_label": {
+          "353": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 352
+      },
+      "355": {
+        "factorization_validation_label": {
+          "5": 1,
+          "71": 1
+        },
+        "menu_success_units": 86,
+        "r_one_units": 2,
+        "units": 280
+      },
+      "357": {
+        "factorization_validation_label": {
+          "3": 1,
+          "7": 1,
+          "17": 1
+        },
+        "menu_success_units": 94,
+        "r_one_units": 2,
+        "units": 192
+      },
+      "359": {
+        "factorization_validation_label": {
+          "359": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 358
+      },
+      "361": {
+        "factorization_validation_label": {
+          "19": 2
+        },
+        "menu_success_units": 10,
+        "r_one_units": 2,
+        "units": 342
+      },
+      "363": {
+        "factorization_validation_label": {
+          "3": 1,
+          "11": 2
+        },
+        "menu_success_units": 106,
+        "r_one_units": 2,
+        "units": 220
+      },
+      "365": {
+        "factorization_validation_label": {
+          "5": 1,
+          "73": 1
+        },
+        "menu_success_units": 86,
+        "r_one_units": 2,
+        "units": 288
+      },
+      "367": {
+        "factorization_validation_label": {
+          "367": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 366
+      },
+      "369": {
+        "factorization_validation_label": {
+          "3": 2,
+          "41": 1
+        },
+        "menu_success_units": 118,
+        "r_one_units": 2,
+        "units": 240
+      },
+      "37": {
+        "factorization_validation_label": {
+          "37": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 36
+      },
+      "371": {
+        "factorization_validation_label": {
+          "7": 1,
+          "53": 1
+        },
+        "menu_success_units": 54,
+        "r_one_units": 2,
+        "units": 312
+      },
+      "373": {
+        "factorization_validation_label": {
+          "373": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 372
+      },
+      "375": {
+        "factorization_validation_label": {
+          "3": 1,
+          "5": 3
+        },
+        "menu_success_units": 98,
+        "r_one_units": 2,
+        "units": 200
+      },
+      "377": {
+        "factorization_validation_label": {
+          "13": 1,
+          "29": 1
+        },
+        "menu_success_units": 20,
+        "r_one_units": 2,
+        "units": 336
+      },
+      "379": {
+        "factorization_validation_label": {
+          "379": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 378
+      },
+      "381": {
+        "factorization_validation_label": {
+          "3": 1,
+          "127": 1
+        },
+        "menu_success_units": 126,
+        "r_one_units": 2,
+        "units": 252
+      },
+      "383": {
+        "factorization_validation_label": {
+          "383": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 382
+      },
+      "385": {
+        "factorization_validation_label": {
+          "5": 1,
+          "7": 1,
+          "11": 1
+        },
+        "menu_success_units": 78,
+        "r_one_units": 2,
+        "units": 240
+      },
+      "387": {
+        "factorization_validation_label": {
+          "3": 2,
+          "43": 1
+        },
+        "menu_success_units": 122,
+        "r_one_units": 2,
+        "units": 252
+      },
+      "389": {
+        "factorization_validation_label": {
+          "389": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 388
+      },
+      "39": {
+        "factorization_validation_label": {
+          "3": 1,
+          "13": 1
+        },
+        "menu_success_units": 10,
+        "r_one_units": 2,
+        "units": 24
+      },
+      "391": {
+        "factorization_validation_label": {
+          "17": 1,
+          "23": 1
+        },
+        "menu_success_units": 20,
+        "r_one_units": 2,
+        "units": 352
+      },
+      "393": {
+        "factorization_validation_label": {
+          "3": 1,
+          "131": 1
+        },
+        "menu_success_units": 130,
+        "r_one_units": 2,
+        "units": 260
+      },
+      "395": {
+        "factorization_validation_label": {
+          "5": 1,
+          "79": 1
+        },
+        "menu_success_units": 90,
+        "r_one_units": 2,
+        "units": 312
+      },
+      "397": {
+        "factorization_validation_label": {
+          "397": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 396
+      },
+      "399": {
+        "factorization_validation_label": {
+          "3": 1,
+          "7": 1,
+          "19": 1
+        },
+        "menu_success_units": 102,
+        "r_one_units": 2,
+        "units": 216
+      },
+      "401": {
+        "factorization_validation_label": {
+          "401": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 400
+      },
+      "403": {
+        "factorization_validation_label": {
+          "13": 1,
+          "31": 1
+        },
+        "menu_success_units": 22,
+        "r_one_units": 2,
+        "units": 360
+      },
+      "405": {
+        "factorization_validation_label": {
+          "3": 4,
+          "5": 1
+        },
+        "menu_success_units": 106,
+        "r_one_units": 2,
+        "units": 216
+      },
+      "407": {
+        "factorization_validation_label": {
+          "11": 1,
+          "37": 1
+        },
+        "menu_success_units": 34,
+        "r_one_units": 2,
+        "units": 360
+      },
+      "409": {
+        "factorization_validation_label": {
+          "409": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 408
+      },
+      "41": {
+        "factorization_validation_label": {
+          "41": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 40
+      },
+      "411": {
+        "factorization_validation_label": {
+          "3": 1,
+          "137": 1
+        },
+        "menu_success_units": 134,
+        "r_one_units": 2,
+        "units": 272
+      },
+      "413": {
+        "factorization_validation_label": {
+          "7": 1,
+          "59": 1
+        },
+        "menu_success_units": 58,
+        "r_one_units": 2,
+        "units": 348
+      },
+      "415": {
+        "factorization_validation_label": {
+          "5": 1,
+          "83": 1
+        },
+        "menu_success_units": 96,
+        "r_one_units": 2,
+        "units": 328
+      },
+      "417": {
+        "factorization_validation_label": {
+          "3": 1,
+          "139": 1
+        },
+        "menu_success_units": 138,
+        "r_one_units": 2,
+        "units": 276
+      },
+      "419": {
+        "factorization_validation_label": {
+          "419": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 418
+      },
+      "421": {
+        "factorization_validation_label": {
+          "421": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 420
+      },
+      "423": {
+        "factorization_validation_label": {
+          "3": 2,
+          "47": 1
+        },
+        "menu_success_units": 134,
+        "r_one_units": 2,
+        "units": 276
+      },
+      "425": {
+        "factorization_validation_label": {
+          "5": 2,
+          "17": 1
+        },
+        "menu_success_units": 96,
+        "r_one_units": 2,
+        "units": 320
+      },
+      "427": {
+        "factorization_validation_label": {
+          "7": 1,
+          "61": 1
+        },
+        "menu_success_units": 68,
+        "r_one_units": 2,
+        "units": 360
+      },
+      "429": {
+        "factorization_validation_label": {
+          "3": 1,
+          "11": 1,
+          "13": 1
+        },
+        "menu_success_units": 118,
+        "r_one_units": 2,
+        "units": 240
+      },
+      "43": {
+        "factorization_validation_label": {
+          "43": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 42
+      },
+      "431": {
+        "factorization_validation_label": {
+          "431": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 430
+      },
+      "433": {
+        "factorization_validation_label": {
+          "433": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 432
+      },
+      "435": {
+        "factorization_validation_label": {
+          "3": 1,
+          "5": 1,
+          "29": 1
+        },
+        "menu_success_units": 110,
+        "r_one_units": 2,
+        "units": 224
+      },
+      "437": {
+        "factorization_validation_label": {
+          "19": 1,
+          "23": 1
+        },
+        "menu_success_units": 16,
+        "r_one_units": 2,
+        "units": 396
+      },
+      "439": {
+        "factorization_validation_label": {
+          "439": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 438
+      },
+      "441": {
+        "factorization_validation_label": {
+          "3": 2,
+          "7": 2
+        },
+        "menu_success_units": 126,
+        "r_one_units": 2,
+        "units": 252
+      },
+      "443": {
+        "factorization_validation_label": {
+          "443": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 442
+      },
+      "445": {
+        "factorization_validation_label": {
+          "5": 1,
+          "89": 1
+        },
+        "menu_success_units": 104,
+        "r_one_units": 2,
+        "units": 352
+      },
+      "447": {
+        "factorization_validation_label": {
+          "3": 1,
+          "149": 1
+        },
+        "menu_success_units": 146,
+        "r_one_units": 2,
+        "units": 296
+      },
+      "449": {
+        "factorization_validation_label": {
+          "449": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 448
+      },
+      "45": {
+        "factorization_validation_label": {
+          "3": 2,
+          "5": 1
+        },
+        "menu_success_units": 10,
+        "r_one_units": 2,
+        "units": 24
+      },
+      "451": {
+        "factorization_validation_label": {
+          "11": 1,
+          "41": 1
+        },
+        "menu_success_units": 34,
+        "r_one_units": 2,
+        "units": 400
+      },
+      "453": {
+        "factorization_validation_label": {
+          "3": 1,
+          "151": 1
+        },
+        "menu_success_units": 150,
+        "r_one_units": 2,
+        "units": 300
+      },
+      "455": {
+        "factorization_validation_label": {
+          "5": 1,
+          "7": 1,
+          "13": 1
+        },
+        "menu_success_units": 92,
+        "r_one_units": 2,
+        "units": 288
+      },
+      "457": {
+        "factorization_validation_label": {
+          "457": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 456
+      },
+      "459": {
+        "factorization_validation_label": {
+          "3": 3,
+          "17": 1
+        },
+        "menu_success_units": 142,
+        "r_one_units": 2,
+        "units": 288
+      },
+      "461": {
+        "factorization_validation_label": {
+          "461": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 460
+      },
+      "463": {
+        "factorization_validation_label": {
+          "463": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 462
+      },
+      "465": {
+        "factorization_validation_label": {
+          "3": 1,
+          "5": 1,
+          "31": 1
+        },
+        "menu_success_units": 118,
+        "r_one_units": 2,
+        "units": 240
+      },
+      "467": {
+        "factorization_validation_label": {
+          "467": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 466
+      },
+      "469": {
+        "factorization_validation_label": {
+          "7": 1,
+          "67": 1
+        },
+        "menu_success_units": 70,
+        "r_one_units": 2,
+        "units": 396
+      },
+      "47": {
+        "factorization_validation_label": {
+          "47": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 46
+      },
+      "471": {
+        "factorization_validation_label": {
+          "3": 1,
+          "157": 1
+        },
+        "menu_success_units": 154,
+        "r_one_units": 2,
+        "units": 312
+      },
+      "473": {
+        "factorization_validation_label": {
+          "11": 1,
+          "43": 1
+        },
+        "menu_success_units": 36,
+        "r_one_units": 2,
+        "units": 420
+      },
+      "475": {
+        "factorization_validation_label": {
+          "5": 2,
+          "19": 1
+        },
+        "menu_success_units": 112,
+        "r_one_units": 2,
+        "units": 360
+      },
+      "477": {
+        "factorization_validation_label": {
+          "3": 2,
+          "53": 1
+        },
+        "menu_success_units": 154,
+        "r_one_units": 2,
+        "units": 312
+      },
+      "479": {
+        "factorization_validation_label": {
+          "479": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 478
+      },
+      "481": {
+        "factorization_validation_label": {
+          "13": 1,
+          "37": 1
+        },
+        "menu_success_units": 32,
+        "r_one_units": 2,
+        "units": 432
+      },
+      "483": {
+        "factorization_validation_label": {
+          "3": 1,
+          "7": 1,
+          "23": 1
+        },
+        "menu_success_units": 126,
+        "r_one_units": 2,
+        "units": 264
+      },
+      "485": {
+        "factorization_validation_label": {
+          "5": 1,
+          "97": 1
+        },
+        "menu_success_units": 112,
+        "r_one_units": 2,
+        "units": 384
+      },
+      "487": {
+        "factorization_validation_label": {
+          "487": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 486
+      },
+      "489": {
+        "factorization_validation_label": {
+          "3": 1,
+          "163": 1
+        },
+        "menu_success_units": 162,
+        "r_one_units": 2,
+        "units": 324
+      },
+      "49": {
+        "factorization_validation_label": {
+          "7": 2
+        },
+        "menu_success_units": 8,
+        "r_one_units": 2,
+        "units": 42
+      },
+      "491": {
+        "factorization_validation_label": {
+          "491": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 490
+      },
+      "493": {
+        "factorization_validation_label": {
+          "17": 1,
+          "29": 1
+        },
+        "menu_success_units": 26,
+        "r_one_units": 2,
+        "units": 448
+      },
+      "495": {
+        "factorization_validation_label": {
+          "3": 2,
+          "5": 1,
+          "11": 1
+        },
+        "menu_success_units": 118,
+        "r_one_units": 2,
+        "units": 240
+      },
+      "497": {
+        "factorization_validation_label": {
+          "7": 1,
+          "71": 1
+        },
+        "menu_success_units": 66,
+        "r_one_units": 2,
+        "units": 420
+      },
+      "499": {
+        "factorization_validation_label": {
+          "499": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 498
+      },
+      "5": {
+        "factorization_validation_label": {
+          "5": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 4
+      },
+      "501": {
+        "factorization_validation_label": {
+          "3": 1,
+          "167": 1
+        },
+        "menu_success_units": 166,
+        "r_one_units": 2,
+        "units": 332
+      },
+      "503": {
+        "factorization_validation_label": {
+          "503": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 502
+      },
+      "505": {
+        "factorization_validation_label": {
+          "5": 1,
+          "101": 1
+        },
+        "menu_success_units": 120,
+        "r_one_units": 2,
+        "units": 400
+      },
+      "507": {
+        "factorization_validation_label": {
+          "3": 1,
+          "13": 2
+        },
+        "menu_success_units": 154,
+        "r_one_units": 2,
+        "units": 312
+      },
+      "509": {
+        "factorization_validation_label": {
+          "509": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 508
+      },
+      "51": {
+        "factorization_validation_label": {
+          "3": 1,
+          "17": 1
+        },
+        "menu_success_units": 14,
+        "r_one_units": 2,
+        "units": 32
+      },
+      "511": {
+        "factorization_validation_label": {
+          "7": 1,
+          "73": 1
+        },
+        "menu_success_units": 78,
+        "r_one_units": 2,
+        "units": 432
+      },
+      "53": {
+        "factorization_validation_label": {
+          "53": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 52
+      },
+      "55": {
+        "factorization_validation_label": {
+          "5": 1,
+          "11": 1
+        },
+        "menu_success_units": 14,
+        "r_one_units": 2,
+        "units": 40
+      },
+      "57": {
+        "factorization_validation_label": {
+          "3": 1,
+          "19": 1
+        },
+        "menu_success_units": 18,
+        "r_one_units": 2,
+        "units": 36
+      },
+      "59": {
+        "factorization_validation_label": {
+          "59": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 58
+      },
+      "61": {
+        "factorization_validation_label": {
+          "61": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 60
+      },
+      "63": {
+        "factorization_validation_label": {
+          "3": 2,
+          "7": 1
+        },
+        "menu_success_units": 14,
+        "r_one_units": 2,
+        "units": 36
+      },
+      "65": {
+        "factorization_validation_label": {
+          "5": 1,
+          "13": 1
+        },
+        "menu_success_units": 14,
+        "r_one_units": 2,
+        "units": 48
+      },
+      "67": {
+        "factorization_validation_label": {
+          "67": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 66
+      },
+      "69": {
+        "factorization_validation_label": {
+          "3": 1,
+          "23": 1
+        },
+        "menu_success_units": 22,
+        "r_one_units": 2,
+        "units": 44
+      },
+      "7": {
+        "factorization_validation_label": {
+          "7": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 6
+      },
+      "71": {
+        "factorization_validation_label": {
+          "71": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 70
+      },
+      "73": {
+        "factorization_validation_label": {
+          "73": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 72
+      },
+      "75": {
+        "factorization_validation_label": {
+          "3": 1,
+          "5": 2
+        },
+        "menu_success_units": 18,
+        "r_one_units": 2,
+        "units": 40
+      },
+      "77": {
+        "factorization_validation_label": {
+          "7": 1,
+          "11": 1
+        },
+        "menu_success_units": 12,
+        "r_one_units": 2,
+        "units": 60
+      },
+      "79": {
+        "factorization_validation_label": {
+          "79": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 78
+      },
+      "81": {
+        "factorization_validation_label": {
+          "3": 4
+        },
+        "menu_success_units": 26,
+        "r_one_units": 2,
+        "units": 54
+      },
+      "83": {
+        "factorization_validation_label": {
+          "83": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 82
+      },
+      "85": {
+        "factorization_validation_label": {
+          "5": 1,
+          "17": 1
+        },
+        "menu_success_units": 20,
+        "r_one_units": 2,
+        "units": 64
+      },
+      "87": {
+        "factorization_validation_label": {
+          "3": 1,
+          "29": 1
+        },
+        "menu_success_units": 26,
+        "r_one_units": 2,
+        "units": 56
+      },
+      "89": {
+        "factorization_validation_label": {
+          "89": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 88
+      },
+      "9": {
+        "factorization_validation_label": {
+          "3": 2
+        },
+        "menu_success_units": 2,
+        "r_one_units": 2,
+        "units": 6
+      },
+      "91": {
+        "factorization_validation_label": {
+          "7": 1,
+          "13": 1
+        },
+        "menu_success_units": 16,
+        "r_one_units": 2,
+        "units": 72
+      },
+      "93": {
+        "factorization_validation_label": {
+          "3": 1,
+          "31": 1
+        },
+        "menu_success_units": 30,
+        "r_one_units": 2,
+        "units": 60
+      },
+      "95": {
+        "factorization_validation_label": {
+          "5": 1,
+          "19": 1
+        },
+        "menu_success_units": 20,
+        "r_one_units": 2,
+        "units": 72
+      },
+      "97": {
+        "factorization_validation_label": {
+          "97": 1
+        },
+        "menu_success_units": 0,
+        "r_one_units": 2,
+        "units": 96
+      },
+      "99": {
+        "factorization_validation_label": {
+          "3": 2,
+          "11": 1
+        },
+        "menu_success_units": 26,
+        "r_one_units": 2,
+        "units": 60
+      }
+    },
+    "limit": 511,
+    "r_one_raw_quotient_different_source": {
+      "examples": [
+        {
+          "N": 9,
+          "a": 1,
+          "actual_source_factors": [],
+          "actual_source_s": 1,
+          "raw_arguments": [
+            4,
+            3,
+            7,
+            5
+          ],
+          "raw_factors": [
+            3
+          ],
+          "raw_s": 4
+        },
+        {
+          "N": 9,
+          "a": 8,
+          "actual_source_factors": [],
+          "actual_source_s": 1,
+          "raw_arguments": [
+            4,
+            3,
+            7,
+            5
+          ],
+          "raw_factors": [
+            3
+          ],
+          "raw_s": 4
+        },
+        {
+          "N": 15,
+          "a": 1,
+          "actual_source_factors": [],
+          "actual_source_s": 1,
+          "raw_arguments": [
+            7,
+            6,
+            13,
+            11
+          ],
+          "raw_factors": [
+            3
+          ],
+          "raw_s": 7
+        },
+        {
+          "N": 15,
+          "a": 14,
+          "actual_source_factors": [],
+          "actual_source_s": 1,
+          "raw_arguments": [
+            7,
+            6,
+            13,
+            11
+          ],
+          "raw_factors": [
+            3
+          ],
+          "raw_s": 7
+        },
+        {
+          "N": 21,
+          "a": 1,
+          "actual_source_factors": [],
+          "actual_source_s": 1,
+          "raw_arguments": [
+            10,
+            9,
+            19,
+            17
+          ],
+          "raw_factors": [
+            3
+          ],
+          "raw_s": 10
+        },
+        {
+          "N": 21,
+          "a": 20,
+          "actual_source_factors": [],
+          "actual_source_s": 1,
+          "raw_arguments": [
+            10,
+            9,
+            19,
+            17
+          ],
+          "raw_factors": [
+            3
+          ],
+          "raw_s": 10
+        },
+        {
+          "N": 27,
+          "a": 1,
+          "actual_source_factors": [],
+          "actual_source_s": 1,
+          "raw_arguments": [
+            13,
+            12,
+            25,
+            23
+          ],
+          "raw_factors": [
+            3
+          ],
+          "raw_s": 13
+        },
+        {
+          "N": 27,
+          "a": 26,
+          "actual_source_factors": [],
+          "actual_source_s": 1,
+          "raw_arguments": [
+            13,
+            12,
+            25,
+            23
+          ],
+          "raw_factors": [
+            3
+          ],
+          "raw_s": 13
+        },
+        {
+          "N": 33,
+          "a": 1,
+          "actual_source_factors": [],
+          "actual_source_s": 1,
+          "raw_arguments": [
+            16,
+            15,
+            31,
+            29
+          ],
+          "raw_factors": [
+            3
+          ],
+          "raw_s": 16
+        },
+        {
+          "N": 33,
+          "a": 32,
+          "actual_source_factors": [],
+          "actual_source_s": 1,
+          "raw_arguments": [
+            16,
+            15,
+            31,
+            29
+          ],
+          "raw_factors": [
+            3
+          ],
+          "raw_s": 16
+        },
+        {
+          "N": 39,
+          "a": 1,
+          "actual_source_factors": [],
+          "actual_source_s": 1,
+          "raw_arguments": [
+            19,
+            18,
+            37,
+            35
+          ],
+          "raw_factors": [
+            3
+          ],
+          "raw_s": 19
+        },
+        {
+          "N": 39,
+          "a": 38,
+          "actual_source_factors": [],
+          "actual_source_s": 1,
+          "raw_arguments": [
+            19,
+            18,
+            37,
+            35
+          ],
+          "raw_factors": [
+            3
+          ],
+          "raw_s": 19
+        }
+      ],
+      "scope": "Diagnostic only. These raw-s0 tests are never credited to the actual centered s=1 source."
+    },
+    "scope": "Every unit a on every odd N in range. Factorization is used only for semiprime and bounded-height validation labels.",
+    "semiprime_bounds": [
+      {
+        "B_by_prime": {
+          "3": 80,
+          "5": 16
+        },
+        "N": 15,
+        "actual_by_prime": {
+          "3": 1,
+          "5": 1
+        },
+        "actual_probability": {
+          "decimal": 0.25,
+          "denominator": 4,
+          "exact": "1/4",
+          "numerator": 1
+        },
+        "actual_successful_r": 1,
+        "centered_unit_denominator": 4,
+        "primes": [
+          3,
+          5
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "3": 120,
+          "7": 8
+        },
+        "N": 21,
+        "actual_by_prime": {
+          "3": 3,
+          "7": 1
+        },
+        "actual_probability": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "exact": "1/2",
+          "numerator": 1
+        },
+        "actual_successful_r": 3,
+        "centered_unit_denominator": 6,
+        "primes": [
+          3,
+          7
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "11": 4,
+          "3": 320
+        },
+        "N": 33,
+        "actual_by_prime": {
+          "11": 0,
+          "3": 5
+        },
+        "actual_probability": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "exact": "1/2",
+          "numerator": 1
+        },
+        "actual_successful_r": 5,
+        "centered_unit_denominator": 10,
+        "primes": [
+          3,
+          11
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "5": 48,
+          "7": 16
+        },
+        "N": 35,
+        "actual_by_prime": {
+          "5": 3,
+          "7": 3
+        },
+        "actual_probability": {
+          "decimal": 0.25,
+          "denominator": 4,
+          "exact": "1/4",
+          "numerator": 1
+        },
+        "actual_successful_r": 3,
+        "centered_unit_denominator": 12,
+        "primes": [
+          5,
+          7
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "13": 4,
+          "3": 396
+        },
+        "N": 39,
+        "actual_by_prime": {
+          "13": 0,
+          "3": 5
+        },
+        "actual_probability": {
+          "decimal": 0.4166666666666667,
+          "denominator": 12,
+          "exact": "5/12",
+          "numerator": 5
+        },
+        "actual_successful_r": 5,
+        "centered_unit_denominator": 12,
+        "primes": [
+          3,
+          13
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "17": 4,
+          "3": 720
+        },
+        "N": 51,
+        "actual_by_prime": {
+          "17": 0,
+          "3": 7
+        },
+        "actual_probability": {
+          "decimal": 0.4375,
+          "denominator": 16,
+          "exact": "7/16",
+          "numerator": 7
+        },
+        "actual_successful_r": 7,
+        "centered_unit_denominator": 16,
+        "primes": [
+          3,
+          17
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "11": 8,
+          "5": 120
+        },
+        "N": 55,
+        "actual_by_prime": {
+          "11": 1,
+          "5": 7
+        },
+        "actual_probability": {
+          "decimal": 0.35,
+          "denominator": 20,
+          "exact": "7/20",
+          "numerator": 7
+        },
+        "actual_successful_r": 7,
+        "centered_unit_denominator": 20,
+        "primes": [
+          5,
+          11
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "19": 4,
+          "3": 832
+        },
+        "N": 57,
+        "actual_by_prime": {
+          "19": 0,
+          "3": 9
+        },
+        "actual_probability": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "exact": "1/2",
+          "numerator": 1
+        },
+        "actual_successful_r": 9,
+        "centered_unit_denominator": 18,
+        "primes": [
+          3,
+          19
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "13": 4,
+          "5": 168
+        },
+        "N": 65,
+        "actual_by_prime": {
+          "13": 1,
+          "5": 7
+        },
+        "actual_probability": {
+          "decimal": 0.2916666666666667,
+          "denominator": 24,
+          "exact": "7/24",
+          "numerator": 7
+        },
+        "actual_successful_r": 7,
+        "centered_unit_denominator": 24,
+        "primes": [
+          5,
+          13
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "23": 4,
+          "3": 1280
+        },
+        "N": 69,
+        "actual_by_prime": {
+          "23": 0,
+          "3": 11
+        },
+        "actual_probability": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "exact": "1/2",
+          "numerator": 1
+        },
+        "actual_successful_r": 11,
+        "centered_unit_denominator": 22,
+        "primes": [
+          3,
+          23
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "11": 16,
+          "7": 64
+        },
+        "N": 77,
+        "actual_by_prime": {
+          "11": 3,
+          "7": 5
+        },
+        "actual_probability": {
+          "decimal": 0.2,
+          "denominator": 5,
+          "exact": "1/5",
+          "numerator": 1
+        },
+        "actual_successful_r": 6,
+        "centered_unit_denominator": 30,
+        "primes": [
+          7,
+          11
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "17": 4,
+          "5": 252
+        },
+        "N": 85,
+        "actual_by_prime": {
+          "17": 1,
+          "5": 10
+        },
+        "actual_probability": {
+          "decimal": 0.3125,
+          "denominator": 16,
+          "exact": "5/16",
+          "numerator": 5
+        },
+        "actual_successful_r": 10,
+        "centered_unit_denominator": 32,
+        "primes": [
+          5,
+          17
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "29": 4,
+          "3": 2000
+        },
+        "N": 87,
+        "actual_by_prime": {
+          "29": 0,
+          "3": 13
+        },
+        "actual_probability": {
+          "decimal": 0.4642857142857143,
+          "denominator": 28,
+          "exact": "13/28",
+          "numerator": 13
+        },
+        "actual_successful_r": 13,
+        "centered_unit_denominator": 28,
+        "primes": [
+          3,
+          29
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "13": 16,
+          "7": 80
+        },
+        "N": 91,
+        "actual_by_prime": {
+          "13": 1,
+          "7": 8
+        },
+        "actual_probability": {
+          "decimal": 0.2222222222222222,
+          "denominator": 9,
+          "exact": "2/9",
+          "numerator": 2
+        },
+        "actual_successful_r": 8,
+        "centered_unit_denominator": 36,
+        "primes": [
+          7,
+          13
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "3": 2184,
+          "31": 4
+        },
+        "N": 93,
+        "actual_by_prime": {
+          "3": 15,
+          "31": 0
+        },
+        "actual_probability": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "exact": "1/2",
+          "numerator": 1
+        },
+        "actual_successful_r": 15,
+        "centered_unit_denominator": 30,
+        "primes": [
+          3,
+          31
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "19": 4,
+          "5": 320
+        },
+        "N": 95,
+        "actual_by_prime": {
+          "19": 1,
+          "5": 10
+        },
+        "actual_probability": {
+          "decimal": 0.2777777777777778,
+          "denominator": 18,
+          "exact": "5/18",
+          "numerator": 5
+        },
+        "actual_successful_r": 10,
+        "centered_unit_denominator": 36,
+        "primes": [
+          5,
+          19
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "3": 3100,
+          "37": 4
+        },
+        "N": 111,
+        "actual_by_prime": {
+          "3": 17,
+          "37": 0
+        },
+        "actual_probability": {
+          "decimal": 0.4722222222222222,
+          "denominator": 36,
+          "exact": "17/36",
+          "numerator": 17
+        },
+        "actual_successful_r": 17,
+        "centered_unit_denominator": 36,
+        "primes": [
+          3,
+          37
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "23": 4,
+          "5": 480
+        },
+        "N": 115,
+        "actual_by_prime": {
+          "23": 0,
+          "5": 14
+        },
+        "actual_probability": {
+          "decimal": 0.3181818181818182,
+          "denominator": 22,
+          "exact": "7/22",
+          "numerator": 7
+        },
+        "actual_successful_r": 14,
+        "centered_unit_denominator": 44,
+        "primes": [
+          5,
+          23
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "17": 8,
+          "7": 140
+        },
+        "N": 119,
+        "actual_by_prime": {
+          "17": 1,
+          "7": 9
+        },
+        "actual_probability": {
+          "decimal": 0.20833333333333334,
+          "denominator": 24,
+          "exact": "5/24",
+          "numerator": 5
+        },
+        "actual_successful_r": 10,
+        "centered_unit_denominator": 48,
+        "primes": [
+          7,
+          17
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "3": 3920,
+          "41": 4
+        },
+        "N": 123,
+        "actual_by_prime": {
+          "3": 19,
+          "41": 0
+        },
+        "actual_probability": {
+          "decimal": 0.475,
+          "denominator": 40,
+          "exact": "19/40",
+          "numerator": 19
+        },
+        "actual_successful_r": 19,
+        "centered_unit_denominator": 40,
+        "primes": [
+          3,
+          41
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "3": 4176,
+          "43": 4
+        },
+        "N": 129,
+        "actual_by_prime": {
+          "3": 21,
+          "43": 0
+        },
+        "actual_probability": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "exact": "1/2",
+          "numerator": 1
+        },
+        "actual_successful_r": 21,
+        "centered_unit_denominator": 42,
+        "primes": [
+          3,
+          43
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "19": 4,
+          "7": 168
+        },
+        "N": 133,
+        "actual_by_prime": {
+          "19": 1,
+          "7": 9
+        },
+        "actual_probability": {
+          "decimal": 0.16666666666666666,
+          "denominator": 6,
+          "exact": "1/6",
+          "numerator": 1
+        },
+        "actual_successful_r": 9,
+        "centered_unit_denominator": 54,
+        "primes": [
+          7,
+          19
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "3": 5120,
+          "47": 4
+        },
+        "N": 141,
+        "actual_by_prime": {
+          "3": 23,
+          "47": 0
+        },
+        "actual_probability": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "exact": "1/2",
+          "numerator": 1
+        },
+        "actual_successful_r": 23,
+        "centered_unit_denominator": 46,
+        "primes": [
+          3,
+          47
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "11": 36,
+          "13": 24
+        },
+        "N": 143,
+        "actual_by_prime": {
+          "11": 5,
+          "13": 4
+        },
+        "actual_probability": {
+          "decimal": 0.11666666666666667,
+          "denominator": 60,
+          "exact": "7/60",
+          "numerator": 7
+        },
+        "actual_successful_r": 7,
+        "centered_unit_denominator": 60,
+        "primes": [
+          11,
+          13
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "29": 4,
+          "5": 720
+        },
+        "N": 145,
+        "actual_by_prime": {
+          "29": 0,
+          "5": 18
+        },
+        "actual_probability": {
+          "decimal": 0.32142857142857145,
+          "denominator": 28,
+          "exact": "9/28",
+          "numerator": 9
+        },
+        "actual_successful_r": 18,
+        "centered_unit_denominator": 56,
+        "primes": [
+          5,
+          29
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "31": 4,
+          "5": 832
+        },
+        "N": 155,
+        "actual_by_prime": {
+          "31": 0,
+          "5": 17
+        },
+        "actual_probability": {
+          "decimal": 0.2833333333333333,
+          "denominator": 60,
+          "exact": "17/60",
+          "numerator": 17
+        },
+        "actual_successful_r": 17,
+        "centered_unit_denominator": 60,
+        "primes": [
+          5,
+          31
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "3": 6480,
+          "53": 4
+        },
+        "N": 159,
+        "actual_by_prime": {
+          "3": 25,
+          "53": 0
+        },
+        "actual_probability": {
+          "decimal": 0.4807692307692308,
+          "denominator": 52,
+          "exact": "25/52",
+          "numerator": 25
+        },
+        "actual_successful_r": 25,
+        "centered_unit_denominator": 52,
+        "primes": [
+          3,
+          53
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "23": 4,
+          "7": 252
+        },
+        "N": 161,
+        "actual_by_prime": {
+          "23": 1,
+          "7": 11
+        },
+        "actual_probability": {
+          "decimal": 0.18181818181818182,
+          "denominator": 11,
+          "exact": "2/11",
+          "numerator": 2
+        },
+        "actual_successful_r": 12,
+        "centered_unit_denominator": 66,
+        "primes": [
+          7,
+          23
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "3": 8000,
+          "59": 4
+        },
+        "N": 177,
+        "actual_by_prime": {
+          "3": 29,
+          "59": 0
+        },
+        "actual_probability": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "exact": "1/2",
+          "numerator": 1
+        },
+        "actual_successful_r": 29,
+        "centered_unit_denominator": 58,
+        "primes": [
+          3,
+          59
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "3": 8364,
+          "61": 4
+        },
+        "N": 183,
+        "actual_by_prime": {
+          "3": 29,
+          "61": 0
+        },
+        "actual_probability": {
+          "decimal": 0.48333333333333334,
+          "denominator": 60,
+          "exact": "29/60",
+          "numerator": 29
+        },
+        "actual_successful_r": 29,
+        "centered_unit_denominator": 60,
+        "primes": [
+          3,
+          61
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "37": 4,
+          "5": 1140
+        },
+        "N": 185,
+        "actual_by_prime": {
+          "37": 0,
+          "5": 21
+        },
+        "actual_probability": {
+          "decimal": 0.2916666666666667,
+          "denominator": 24,
+          "exact": "7/24",
+          "numerator": 7
+        },
+        "actual_successful_r": 21,
+        "centered_unit_denominator": 72,
+        "primes": [
+          5,
+          37
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "11": 64,
+          "17": 16
+        },
+        "N": 187,
+        "actual_by_prime": {
+          "11": 7,
+          "17": 3
+        },
+        "actual_probability": {
+          "decimal": 0.1125,
+          "denominator": 80,
+          "exact": "9/80",
+          "numerator": 9
+        },
+        "actual_successful_r": 9,
+        "centered_unit_denominator": 80,
+        "primes": [
+          11,
+          17
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "3": 10080,
+          "67": 4
+        },
+        "N": 201,
+        "actual_by_prime": {
+          "3": 33,
+          "67": 0
+        },
+        "actual_probability": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "exact": "1/2",
+          "numerator": 1
+        },
+        "actual_successful_r": 33,
+        "centered_unit_denominator": 66,
+        "primes": [
+          3,
+          67
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "29": 4,
+          "7": 396
+        },
+        "N": 203,
+        "actual_by_prime": {
+          "29": 1,
+          "7": 15
+        },
+        "actual_probability": {
+          "decimal": 0.19047619047619047,
+          "denominator": 21,
+          "exact": "4/21",
+          "numerator": 4
+        },
+        "actual_successful_r": 16,
+        "centered_unit_denominator": 84,
+        "primes": [
+          7,
+          29
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "41": 4,
+          "5": 1428
+        },
+        "N": 205,
+        "actual_by_prime": {
+          "41": 0,
+          "5": 23
+        },
+        "actual_probability": {
+          "decimal": 0.2875,
+          "denominator": 80,
+          "exact": "23/80",
+          "numerator": 23
+        },
+        "actual_successful_r": 23,
+        "centered_unit_denominator": 80,
+        "primes": [
+          5,
+          41
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "11": 80,
+          "19": 16
+        },
+        "N": 209,
+        "actual_by_prime": {
+          "11": 7,
+          "19": 3
+        },
+        "actual_probability": {
+          "decimal": 0.1,
+          "denominator": 10,
+          "exact": "1/10",
+          "numerator": 1
+        },
+        "actual_successful_r": 9,
+        "centered_unit_denominator": 90,
+        "primes": [
+          11,
+          19
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "3": 11520,
+          "71": 4
+        },
+        "N": 213,
+        "actual_by_prime": {
+          "3": 35,
+          "71": 0
+        },
+        "actual_probability": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "exact": "1/2",
+          "numerator": 1
+        },
+        "actual_successful_r": 35,
+        "centered_unit_denominator": 70,
+        "primes": [
+          3,
+          71
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "43": 4,
+          "5": 1584
+        },
+        "N": 215,
+        "actual_by_prime": {
+          "43": 0,
+          "5": 25
+        },
+        "actual_probability": {
+          "decimal": 0.2976190476190476,
+          "denominator": 84,
+          "exact": "25/84",
+          "numerator": 25
+        },
+        "actual_successful_r": 25,
+        "centered_unit_denominator": 84,
+        "primes": [
+          5,
+          43
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "31": 4,
+          "7": 432
+        },
+        "N": 217,
+        "actual_by_prime": {
+          "31": 0,
+          "7": 15
+        },
+        "actual_probability": {
+          "decimal": 0.16666666666666666,
+          "denominator": 6,
+          "exact": "1/6",
+          "numerator": 1
+        },
+        "actual_successful_r": 15,
+        "centered_unit_denominator": 90,
+        "primes": [
+          7,
+          31
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "3": 11956,
+          "73": 4
+        },
+        "N": 219,
+        "actual_by_prime": {
+          "3": 35,
+          "73": 0
+        },
+        "actual_probability": {
+          "decimal": 0.4861111111111111,
+          "denominator": 72,
+          "exact": "35/72",
+          "numerator": 35
+        },
+        "actual_successful_r": 35,
+        "centered_unit_denominator": 72,
+        "primes": [
+          3,
+          73
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "13": 48,
+          "17": 16
+        },
+        "N": 221,
+        "actual_by_prime": {
+          "13": 4,
+          "17": 4
+        },
+        "actual_probability": {
+          "decimal": 0.07291666666666667,
+          "denominator": 96,
+          "exact": "7/96",
+          "numerator": 7
+        },
+        "actual_successful_r": 7,
+        "centered_unit_denominator": 96,
+        "primes": [
+          13,
+          17
+        ],
+        "probability_bound": {
+          "decimal": 0.6666666666666666,
+          "denominator": 3,
+          "exact": "2/3",
+          "numerator": 2
+        }
+      },
+      {
+        "B_by_prime": {
+          "47": 4,
+          "5": 1824
+        },
+        "N": 235,
+        "actual_by_prime": {
+          "47": 0,
+          "5": 30
+        },
+        "actual_probability": {
+          "decimal": 0.32608695652173914,
+          "denominator": 46,
+          "exact": "15/46",
+          "numerator": 15
+        },
+        "actual_successful_r": 30,
+        "centered_unit_denominator": 92,
+        "primes": [
+          5,
+          47
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "3": 13992,
+          "79": 4
+        },
+        "N": 237,
+        "actual_by_prime": {
+          "3": 39,
+          "79": 0
+        },
+        "actual_probability": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "exact": "1/2",
+          "numerator": 1
+        },
+        "actual_successful_r": 39,
+        "centered_unit_denominator": 78,
+        "primes": [
+          3,
+          79
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "13": 48,
+          "19": 16
+        },
+        "N": 247,
+        "actual_by_prime": {
+          "13": 6,
+          "19": 4
+        },
+        "actual_probability": {
+          "decimal": 0.08333333333333333,
+          "denominator": 12,
+          "exact": "1/12",
+          "numerator": 1
+        },
+        "actual_successful_r": 9,
+        "centered_unit_denominator": 108,
+        "primes": [
+          13,
+          19
+        ],
+        "probability_bound": {
+          "decimal": 0.5925925925925926,
+          "denominator": 27,
+          "exact": "16/27",
+          "numerator": 16
+        }
+      },
+      {
+        "B_by_prime": {
+          "3": 15680,
+          "83": 4
+        },
+        "N": 249,
+        "actual_by_prime": {
+          "3": 41,
+          "83": 0
+        },
+        "actual_probability": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "exact": "1/2",
+          "numerator": 1
+        },
+        "actual_successful_r": 41,
+        "centered_unit_denominator": 82,
+        "primes": [
+          3,
+          83
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "11": 120,
+          "23": 8
+        },
+        "N": 253,
+        "actual_by_prime": {
+          "11": 8,
+          "23": 1
+        },
+        "actual_probability": {
+          "decimal": 0.07272727272727272,
+          "denominator": 55,
+          "exact": "4/55",
+          "numerator": 4
+        },
+        "actual_successful_r": 8,
+        "centered_unit_denominator": 110,
+        "primes": [
+          11,
+          23
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "37": 4,
+          "7": 616
+        },
+        "N": 259,
+        "actual_by_prime": {
+          "37": 0,
+          "7": 22
+        },
+        "actual_probability": {
+          "decimal": 0.2037037037037037,
+          "denominator": 54,
+          "exact": "11/54",
+          "numerator": 11
+        },
+        "actual_successful_r": 22,
+        "centered_unit_denominator": 108,
+        "primes": [
+          7,
+          37
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "5": 2376,
+          "53": 4
+        },
+        "N": 265,
+        "actual_by_prime": {
+          "5": 31,
+          "53": 0
+        },
+        "actual_probability": {
+          "decimal": 0.2980769230769231,
+          "denominator": 104,
+          "exact": "31/104",
+          "numerator": 31
+        },
+        "actual_successful_r": 31,
+        "centered_unit_denominator": 104,
+        "primes": [
+          5,
+          53
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "3": 18000,
+          "89": 4
+        },
+        "N": 267,
+        "actual_by_prime": {
+          "3": 43,
+          "89": 0
+        },
+        "actual_probability": {
+          "decimal": 0.48863636363636365,
+          "denominator": 88,
+          "exact": "43/88",
+          "numerator": 43
+        },
+        "actual_successful_r": 43,
+        "centered_unit_denominator": 88,
+        "primes": [
+          3,
+          89
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "41": 4,
+          "7": 720
+        },
+        "N": 287,
+        "actual_by_prime": {
+          "41": 0,
+          "7": 23
+        },
+        "actual_probability": {
+          "decimal": 0.19166666666666668,
+          "denominator": 120,
+          "exact": "23/120",
+          "numerator": 23
+        },
+        "actual_successful_r": 23,
+        "centered_unit_denominator": 120,
+        "primes": [
+          7,
+          41
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "3": 21060,
+          "97": 4
+        },
+        "N": 291,
+        "actual_by_prime": {
+          "3": 47,
+          "97": 0
+        },
+        "actual_probability": {
+          "decimal": 0.4895833333333333,
+          "denominator": 96,
+          "exact": "47/96",
+          "numerator": 47
+        },
+        "actual_successful_r": 47,
+        "centered_unit_denominator": 96,
+        "primes": [
+          3,
+          97
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "5": 2880,
+          "59": 4
+        },
+        "N": 295,
+        "actual_by_prime": {
+          "5": 36,
+          "59": 0
+        },
+        "actual_probability": {
+          "decimal": 0.3103448275862069,
+          "denominator": 29,
+          "exact": "9/29",
+          "numerator": 9
+        },
+        "actual_successful_r": 36,
+        "centered_unit_denominator": 116,
+        "primes": [
+          5,
+          59
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "13": 80,
+          "23": 16
+        },
+        "N": 299,
+        "actual_by_prime": {
+          "13": 8,
+          "23": 3
+        },
+        "actual_probability": {
+          "decimal": 0.07575757575757576,
+          "denominator": 66,
+          "exact": "5/66",
+          "numerator": 5
+        },
+        "actual_successful_r": 10,
+        "centered_unit_denominator": 132,
+        "primes": [
+          13,
+          23
+        ],
+        "probability_bound": {
+          "decimal": 0.7272727272727273,
+          "denominator": 11,
+          "exact": "8/11",
+          "numerator": 8
+        }
+      },
+      {
+        "B_by_prime": {
+          "43": 4,
+          "7": 832
+        },
+        "N": 301,
+        "actual_by_prime": {
+          "43": 0,
+          "7": 21
+        },
+        "actual_probability": {
+          "decimal": 0.16666666666666666,
+          "denominator": 6,
+          "exact": "1/6",
+          "numerator": 1
+        },
+        "actual_successful_r": 21,
+        "centered_unit_denominator": 126,
+        "primes": [
+          7,
+          43
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "101": 4,
+          "3": 23120
+        },
+        "N": 303,
+        "actual_by_prime": {
+          "101": 0,
+          "3": 49
+        },
+        "actual_probability": {
+          "decimal": 0.49,
+          "denominator": 100,
+          "exact": "49/100",
+          "numerator": 49
+        },
+        "actual_successful_r": 49,
+        "centered_unit_denominator": 100,
+        "primes": [
+          3,
+          101
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "5": 3100,
+          "61": 4
+        },
+        "N": 305,
+        "actual_by_prime": {
+          "5": 37,
+          "61": 0
+        },
+        "actual_probability": {
+          "decimal": 0.30833333333333335,
+          "denominator": 120,
+          "exact": "37/120",
+          "numerator": 37
+        },
+        "actual_successful_r": 37,
+        "centered_unit_denominator": 120,
+        "primes": [
+          5,
+          61
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "103": 4,
+          "3": 23736
+        },
+        "N": 309,
+        "actual_by_prime": {
+          "103": 0,
+          "3": 51
+        },
+        "actual_probability": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "exact": "1/2",
+          "numerator": 1
+        },
+        "actual_successful_r": 51,
+        "centered_unit_denominator": 102,
+        "primes": [
+          3,
+          103
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "11": 168,
+          "29": 4
+        },
+        "N": 319,
+        "actual_by_prime": {
+          "11": 11,
+          "29": 1
+        },
+        "actual_probability": {
+          "decimal": 0.08571428571428572,
+          "denominator": 35,
+          "exact": "3/35",
+          "numerator": 3
+        },
+        "actual_successful_r": 12,
+        "centered_unit_denominator": 140,
+        "primes": [
+          11,
+          29
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "107": 4,
+          "3": 25920
+        },
+        "N": 321,
+        "actual_by_prime": {
+          "107": 0,
+          "3": 53
+        },
+        "actual_probability": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "exact": "1/2",
+          "numerator": 1
+        },
+        "actual_successful_r": 53,
+        "centered_unit_denominator": 106,
+        "primes": [
+          3,
+          107
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "17": 36,
+          "19": 24
+        },
+        "N": 323,
+        "actual_by_prime": {
+          "17": 4,
+          "19": 4
+        },
+        "actual_probability": {
+          "decimal": 0.041666666666666664,
+          "denominator": 24,
+          "exact": "1/24",
+          "numerator": 1
+        },
+        "actual_successful_r": 6,
+        "centered_unit_denominator": 144,
+        "primes": [
+          17,
+          19
+        ],
+        "probability_bound": {
+          "decimal": 0.4166666666666667,
+          "denominator": 12,
+          "exact": "5/12",
+          "numerator": 5
+        }
+      },
+      {
+        "B_by_prime": {
+          "109": 4,
+          "3": 26572
+        },
+        "N": 327,
+        "actual_by_prime": {
+          "109": 0,
+          "3": 53
+        },
+        "actual_probability": {
+          "decimal": 0.49074074074074076,
+          "denominator": 108,
+          "exact": "53/108",
+          "numerator": 53
+        },
+        "actual_successful_r": 53,
+        "centered_unit_denominator": 108,
+        "primes": [
+          3,
+          109
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "47": 4,
+          "7": 952
+        },
+        "N": 329,
+        "actual_by_prime": {
+          "47": 0,
+          "7": 22
+        },
+        "actual_probability": {
+          "decimal": 0.15942028985507245,
+          "denominator": 69,
+          "exact": "11/69",
+          "numerator": 11
+        },
+        "actual_successful_r": 22,
+        "centered_unit_denominator": 138,
+        "primes": [
+          7,
+          47
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "5": 3672,
+          "67": 4
+        },
+        "N": 335,
+        "actual_by_prime": {
+          "5": 38,
+          "67": 0
+        },
+        "actual_probability": {
+          "decimal": 0.2878787878787879,
+          "denominator": 66,
+          "exact": "19/66",
+          "numerator": 19
+        },
+        "actual_successful_r": 38,
+        "centered_unit_denominator": 132,
+        "primes": [
+          5,
+          67
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "113": 4,
+          "3": 28880
+        },
+        "N": 339,
+        "actual_by_prime": {
+          "113": 0,
+          "3": 55
+        },
+        "actual_probability": {
+          "decimal": 0.49107142857142855,
+          "denominator": 112,
+          "exact": "55/112",
+          "numerator": 55
+        },
+        "actual_successful_r": 55,
+        "centered_unit_denominator": 112,
+        "primes": [
+          3,
+          113
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "11": 192,
+          "31": 4
+        },
+        "N": 341,
+        "actual_by_prime": {
+          "11": 13,
+          "31": 1
+        },
+        "actual_probability": {
+          "decimal": 0.08666666666666667,
+          "denominator": 150,
+          "exact": "13/150",
+          "numerator": 13
+        },
+        "actual_successful_r": 13,
+        "centered_unit_denominator": 150,
+        "primes": [
+          11,
+          31
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "5": 4176,
+          "71": 4
+        },
+        "N": 355,
+        "actual_by_prime": {
+          "5": 43,
+          "71": 0
+        },
+        "actual_probability": {
+          "decimal": 0.30714285714285716,
+          "denominator": 140,
+          "exact": "43/140",
+          "numerator": 43
+        },
+        "actual_successful_r": 43,
+        "centered_unit_denominator": 140,
+        "primes": [
+          5,
+          71
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "5": 4440,
+          "73": 4
+        },
+        "N": 365,
+        "actual_by_prime": {
+          "5": 43,
+          "73": 0
+        },
+        "actual_probability": {
+          "decimal": 0.2986111111111111,
+          "denominator": 144,
+          "exact": "43/144",
+          "numerator": 43
+        },
+        "actual_successful_r": 43,
+        "centered_unit_denominator": 144,
+        "primes": [
+          5,
+          73
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "53": 4,
+          "7": 1216
+        },
+        "N": 371,
+        "actual_by_prime": {
+          "53": 0,
+          "7": 27
+        },
+        "actual_probability": {
+          "decimal": 0.17307692307692307,
+          "denominator": 52,
+          "exact": "9/52",
+          "numerator": 9
+        },
+        "actual_successful_r": 27,
+        "centered_unit_denominator": 156,
+        "primes": [
+          7,
+          53
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "13": 120,
+          "29": 8
+        },
+        "N": 377,
+        "actual_by_prime": {
+          "13": 9,
+          "29": 1
+        },
+        "actual_probability": {
+          "decimal": 0.05952380952380952,
+          "denominator": 84,
+          "exact": "5/84",
+          "numerator": 5
+        },
+        "actual_successful_r": 10,
+        "centered_unit_denominator": 168,
+        "primes": [
+          13,
+          29
+        ],
+        "probability_bound": {
+          "decimal": 0.7619047619047619,
+          "denominator": 21,
+          "exact": "16/21",
+          "numerator": 16
+        }
+      },
+      {
+        "B_by_prime": {
+          "127": 4,
+          "3": 36040
+        },
+        "N": 381,
+        "actual_by_prime": {
+          "127": 0,
+          "3": 63
+        },
+        "actual_probability": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "exact": "1/2",
+          "numerator": 1
+        },
+        "actual_successful_r": 63,
+        "centered_unit_denominator": 126,
+        "primes": [
+          3,
+          127
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "17": 48,
+          "23": 16
+        },
+        "N": 391,
+        "actual_by_prime": {
+          "17": 6,
+          "23": 4
+        },
+        "actual_probability": {
+          "decimal": 0.056818181818181816,
+          "denominator": 88,
+          "exact": "5/88",
+          "numerator": 5
+        },
+        "actual_successful_r": 10,
+        "centered_unit_denominator": 176,
+        "primes": [
+          17,
+          23
+        ],
+        "probability_bound": {
+          "decimal": 0.36363636363636365,
+          "denominator": 11,
+          "exact": "4/11",
+          "numerator": 4
+        }
+      },
+      {
+        "B_by_prime": {
+          "131": 4,
+          "3": 38720
+        },
+        "N": 393,
+        "actual_by_prime": {
+          "131": 0,
+          "3": 65
+        },
+        "actual_probability": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "exact": "1/2",
+          "numerator": 1
+        },
+        "actual_successful_r": 65,
+        "centered_unit_denominator": 130,
+        "primes": [
+          3,
+          131
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "5": 5120,
+          "79": 4
+        },
+        "N": 395,
+        "actual_by_prime": {
+          "5": 45,
+          "79": 0
+        },
+        "actual_probability": {
+          "decimal": 0.28846153846153844,
+          "denominator": 52,
+          "exact": "15/52",
+          "numerator": 15
+        },
+        "actual_successful_r": 45,
+        "centered_unit_denominator": 156,
+        "primes": [
+          5,
+          79
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "13": 120,
+          "31": 8
+        },
+        "N": 403,
+        "actual_by_prime": {
+          "13": 10,
+          "31": 1
+        },
+        "actual_probability": {
+          "decimal": 0.06111111111111111,
+          "denominator": 180,
+          "exact": "11/180",
+          "numerator": 11
+        },
+        "actual_successful_r": 11,
+        "centered_unit_denominator": 180,
+        "primes": [
+          13,
+          31
+        ],
+        "probability_bound": {
+          "decimal": 0.7111111111111111,
+          "denominator": 45,
+          "exact": "32/45",
+          "numerator": 32
+        }
+      },
+      {
+        "B_by_prime": {
+          "11": 252,
+          "37": 4
+        },
+        "N": 407,
+        "actual_by_prime": {
+          "11": 16,
+          "37": 1
+        },
+        "actual_probability": {
+          "decimal": 0.09444444444444444,
+          "denominator": 180,
+          "exact": "17/180",
+          "numerator": 17
+        },
+        "actual_successful_r": 17,
+        "centered_unit_denominator": 180,
+        "primes": [
+          11,
+          37
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "137": 4,
+          "3": 42320
+        },
+        "N": 411,
+        "actual_by_prime": {
+          "137": 0,
+          "3": 67
+        },
+        "actual_probability": {
+          "decimal": 0.49264705882352944,
+          "denominator": 136,
+          "exact": "67/136",
+          "numerator": 67
+        },
+        "actual_successful_r": 67,
+        "centered_unit_denominator": 136,
+        "primes": [
+          3,
+          137
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "59": 4,
+          "7": 1496
+        },
+        "N": 413,
+        "actual_by_prime": {
+          "59": 0,
+          "7": 29
+        },
+        "actual_probability": {
+          "decimal": 0.16666666666666666,
+          "denominator": 6,
+          "exact": "1/6",
+          "numerator": 1
+        },
+        "actual_successful_r": 29,
+        "centered_unit_denominator": 174,
+        "primes": [
+          7,
+          59
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "5": 5712,
+          "83": 4
+        },
+        "N": 415,
+        "actual_by_prime": {
+          "5": 48,
+          "83": 0
+        },
+        "actual_probability": {
+          "decimal": 0.2926829268292683,
+          "denominator": 41,
+          "exact": "12/41",
+          "numerator": 12
+        },
+        "actual_successful_r": 48,
+        "centered_unit_denominator": 164,
+        "primes": [
+          5,
+          83
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "139": 4,
+          "3": 43152
+        },
+        "N": 417,
+        "actual_by_prime": {
+          "139": 0,
+          "3": 69
+        },
+        "actual_probability": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "exact": "1/2",
+          "numerator": 1
+        },
+        "actual_successful_r": 69,
+        "centered_unit_denominator": 138,
+        "primes": [
+          3,
+          139
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "61": 4,
+          "7": 1584
+        },
+        "N": 427,
+        "actual_by_prime": {
+          "61": 0,
+          "7": 34
+        },
+        "actual_probability": {
+          "decimal": 0.18888888888888888,
+          "denominator": 90,
+          "exact": "17/90",
+          "numerator": 17
+        },
+        "actual_successful_r": 34,
+        "centered_unit_denominator": 180,
+        "primes": [
+          7,
+          61
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "19": 48,
+          "23": 24
+        },
+        "N": 437,
+        "actual_by_prime": {
+          "19": 3,
+          "23": 5
+        },
+        "actual_probability": {
+          "decimal": 0.04040404040404041,
+          "denominator": 99,
+          "exact": "4/99",
+          "numerator": 4
+        },
+        "actual_successful_r": 8,
+        "centered_unit_denominator": 198,
+        "primes": [
+          19,
+          23
+        ],
+        "probability_bound": {
+          "decimal": 0.36363636363636365,
+          "denominator": 11,
+          "exact": "4/11",
+          "numerator": 4
+        }
+      },
+      {
+        "B_by_prime": {
+          "5": 6480,
+          "89": 4
+        },
+        "N": 445,
+        "actual_by_prime": {
+          "5": 52,
+          "89": 0
+        },
+        "actual_probability": {
+          "decimal": 0.29545454545454547,
+          "denominator": 44,
+          "exact": "13/44",
+          "numerator": 13
+        },
+        "actual_successful_r": 52,
+        "centered_unit_denominator": 176,
+        "primes": [
+          5,
+          89
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "149": 4,
+          "3": 50000
+        },
+        "N": 447,
+        "actual_by_prime": {
+          "149": 0,
+          "3": 73
+        },
+        "actual_probability": {
+          "decimal": 0.49324324324324326,
+          "denominator": 148,
+          "exact": "73/148",
+          "numerator": 73
+        },
+        "actual_successful_r": 73,
+        "centered_unit_denominator": 148,
+        "primes": [
+          3,
+          149
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "11": 320,
+          "41": 4
+        },
+        "N": 451,
+        "actual_by_prime": {
+          "11": 17,
+          "41": 1
+        },
+        "actual_probability": {
+          "decimal": 0.085,
+          "denominator": 200,
+          "exact": "17/200",
+          "numerator": 17
+        },
+        "actual_successful_r": 17,
+        "centered_unit_denominator": 200,
+        "primes": [
+          11,
+          41
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "151": 4,
+          "3": 50904
+        },
+        "N": 453,
+        "actual_by_prime": {
+          "151": 0,
+          "3": 75
+        },
+        "actual_probability": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "exact": "1/2",
+          "numerator": 1
+        },
+        "actual_successful_r": 75,
+        "centered_unit_denominator": 150,
+        "primes": [
+          3,
+          151
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "67": 4,
+          "7": 1920
+        },
+        "N": 469,
+        "actual_by_prime": {
+          "67": 0,
+          "7": 35
+        },
+        "actual_probability": {
+          "decimal": 0.17676767676767677,
+          "denominator": 198,
+          "exact": "35/198",
+          "numerator": 35
+        },
+        "actual_successful_r": 35,
+        "centered_unit_denominator": 198,
+        "primes": [
+          7,
+          67
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "157": 4,
+          "3": 55020
+        },
+        "N": 471,
+        "actual_by_prime": {
+          "157": 0,
+          "3": 77
+        },
+        "actual_probability": {
+          "decimal": 0.4935897435897436,
+          "denominator": 156,
+          "exact": "77/156",
+          "numerator": 77
+        },
+        "actual_successful_r": 77,
+        "centered_unit_denominator": 156,
+        "primes": [
+          3,
+          157
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "11": 320,
+          "43": 4
+        },
+        "N": 473,
+        "actual_by_prime": {
+          "11": 18,
+          "43": 1
+        },
+        "actual_probability": {
+          "decimal": 0.08571428571428572,
+          "denominator": 35,
+          "exact": "3/35",
+          "numerator": 3
+        },
+        "actual_successful_r": 18,
+        "centered_unit_denominator": 210,
+        "primes": [
+          11,
+          43
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "13": 192,
+          "37": 4
+        },
+        "N": 481,
+        "actual_by_prime": {
+          "13": 16,
+          "37": 1
+        },
+        "actual_probability": {
+          "decimal": 0.07407407407407407,
+          "denominator": 27,
+          "exact": "2/27",
+          "numerator": 2
+        },
+        "actual_successful_r": 16,
+        "centered_unit_denominator": 216,
+        "primes": [
+          13,
+          37
+        ],
+        "probability_bound": {
+          "decimal": 0.9074074074074074,
+          "denominator": 54,
+          "exact": "49/54",
+          "numerator": 49
+        }
+      },
+      {
+        "B_by_prime": {
+          "5": 7644,
+          "97": 4
+        },
+        "N": 485,
+        "actual_by_prime": {
+          "5": 56,
+          "97": 0
+        },
+        "actual_probability": {
+          "decimal": 0.2916666666666667,
+          "denominator": 24,
+          "exact": "7/24",
+          "numerator": 7
+        },
+        "actual_successful_r": 56,
+        "centered_unit_denominator": 192,
+        "primes": [
+          5,
+          97
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "163": 4,
+          "3": 59296
+        },
+        "N": 489,
+        "actual_by_prime": {
+          "163": 0,
+          "3": 81
+        },
+        "actual_probability": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "exact": "1/2",
+          "numerator": 1
+        },
+        "actual_successful_r": 81,
+        "centered_unit_denominator": 162,
+        "primes": [
+          3,
+          163
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "17": 80,
+          "29": 16
+        },
+        "N": 493,
+        "actual_by_prime": {
+          "17": 10,
+          "29": 3
+        },
+        "actual_probability": {
+          "decimal": 0.05803571428571429,
+          "denominator": 224,
+          "exact": "13/224",
+          "numerator": 13
+        },
+        "actual_successful_r": 13,
+        "centered_unit_denominator": 224,
+        "primes": [
+          17,
+          29
+        ],
+        "probability_bound": {
+          "decimal": 0.42857142857142855,
+          "denominator": 7,
+          "exact": "3/7",
+          "numerator": 3
+        }
+      },
+      {
+        "B_by_prime": {
+          "7": 2184,
+          "71": 4
+        },
+        "N": 497,
+        "actual_by_prime": {
+          "7": 33,
+          "71": 0
+        },
+        "actual_probability": {
+          "decimal": 0.15714285714285714,
+          "denominator": 70,
+          "exact": "11/70",
+          "numerator": 11
+        },
+        "actual_successful_r": 33,
+        "centered_unit_denominator": 210,
+        "primes": [
+          7,
+          71
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "167": 4,
+          "3": 62720
+        },
+        "N": 501,
+        "actual_by_prime": {
+          "167": 0,
+          "3": 83
+        },
+        "actual_probability": {
+          "decimal": 0.5,
+          "denominator": 2,
+          "exact": "1/2",
+          "numerator": 1
+        },
+        "actual_successful_r": 83,
+        "centered_unit_denominator": 166,
+        "primes": [
+          3,
+          167
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "101": 4,
+          "5": 8364
+        },
+        "N": 505,
+        "actual_by_prime": {
+          "101": 0,
+          "5": 60
+        },
+        "actual_probability": {
+          "decimal": 0.3,
+          "denominator": 10,
+          "exact": "3/10",
+          "numerator": 3
+        },
+        "actual_successful_r": 60,
+        "centered_unit_denominator": 200,
+        "primes": [
+          5,
+          101
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      },
+      {
+        "B_by_prime": {
+          "7": 2268,
+          "73": 4
+        },
+        "N": 511,
+        "actual_by_prime": {
+          "7": 39,
+          "73": 0
+        },
+        "actual_probability": {
+          "decimal": 0.18055555555555555,
+          "denominator": 72,
+          "exact": "13/72",
+          "numerator": 13
+        },
+        "actual_successful_r": 39,
+        "centered_unit_denominator": 216,
+        "primes": [
+          7,
+          73
+        ],
+        "probability_bound": {
+          "decimal": 1.0,
+          "denominator": 1,
+          "exact": "1",
+          "numerator": 1
+        }
+      }
+    ],
+    "totals": {
+      "distinct_semiprimes": 96,
+      "four_menu_gcd_checks": 212744,
+      "guard_accepted_unit_pairs": 174,
+      "guard_candidate_pairs": 174,
+      "guard_denominator_generation_exits": 0,
+      "guard_numerator_generation_exits": 0,
+      "menu_success_unit_parameters": 9656,
+      "moduli": 255,
+      "odd_composites": 159,
+      "r_one_raw_quotient_different_source_checks": 510,
+      "r_one_raw_quotient_different_source_factor_parameters": 168,
+      "r_one_unit_parameters": 510,
+      "semiprime_prime_bounds": 192,
+      "unit_formula_checks": 53186,
+      "unit_parameters": 53186
+    }
+  },
+  "hard_timeout_seconds": 30,
+  "internal_timeout_seconds": 28,
+  "memory_limit_bytes": 268435456,
+  "mode": "identities",
+  "peak_rss_bytes": 41828352,
+  "route": "route:F31",
+  "source_sha256": "7e29fe1ca365b14102e5ffecf0d15739752b356483a8d65619634e8b9a442e71",
+  "status": "passed",
+  "walltime_seconds": 2.296179791999748
+}

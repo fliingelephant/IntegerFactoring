@@ -26925,6 +26925,8 @@ probability, and literal small-multiplier statements below. This supplies no
 factoring algorithm meeting P249, no novelty claim, and no conclusion about
 the separate rational, random-branch, shifted-window, or rank-gap mechanisms.
 
+**Statement:**
+
 Let \(N>1\) be odd, \(h=(N-1)/2\), and let \(U_N\) be the units represented
 in \(1,\ldots,N-1\). Put
 \[
@@ -27071,3 +27073,158 @@ Author proof SHA-256:
 5a698ed631ff8fcd8ed55fc195af008284c7f42d60b83c3de405f2e671b326cc.
 Reconstruction SHA-256:
 33125e52d1c184fda0f9a8f3bb952d081daac794ce43762eb349607a6c48d6c1.
+
+
+## P251 -- The N-linked half-orbit jump has a four-gcd dominating menu
+
+**Status:** promoted after complete fresh statement-only reconstruction and
+root comparison. No correction, added assumption, or unresolved proof gap was
+found.
+
+**Scope:** Claims A--D below, relative to the explicitly declared real-orbit
+and three-gap facts. This does not separately promote every earlier return-map
+statement, the continued-fraction menu argument, a source-mass lower bound, or
+a factoring algorithm.
+
+**Statement:**
+
+Let \(N\geq3\) be odd, let \(a\) be a unit modulo \(N\), and let
+\(1\leq t<N\). Put \(m=t+1\), \(z(k)=ak\bmod N\), and let
+\(\operatorname{rnk}(k)\) be its zero-based rank among
+\(z(0),\ldots,z(t)\). Define
+\[
+ \alpha=\min_{1\leq k\leq t}z(k),\quad
+ u=\operatorname*{argmin}_{1\leq k\leq t}z(k),\qquad
+ \beta=N-\max_{1\leq k\leq t}z(k),\quad
+ v=\operatorname*{argmax}_{1\leq k\leq t}z(k),
+\]
+and \(L=u+v\), \(d=L-m\), \(A=\{0,\ldots,m-1\}\).
+
+The declared dependencies are
+\[
+ \max(u,v)<m\leq L\leq N,\quad \gcd(u,v)=1,\quad
+ \alpha v+\beta u=N,
+\]
+the three stated successor intervals for the sorted orbit, and their
+first-return/rank representation under \(k\mapsto k+u\bmod L\). These
+dependencies specify the real-orbit structure and are not separately promoted
+by this record.
+
+**Claim A.** Put
+\[
+ b=\beta-\alpha,\qquad
+ q=b\bmod L=Nu^{-1}\bmod L,\qquad Q=\lfloor N/L\rfloor.
+\]
+This is the selected jump \(q=(\beta-\alpha)\bmod L\); it is generally
+different from the separate rule \(q=N\bmod L\). If \(q=0\), the attempt
+fails.
+
+For \(q\ne0\), draw \(k\) uniformly from \(A\), put
+\(k'=(k+qu)\bmod L\), and fail when \(k'\notin A\). Otherwise test the
+ordinary rank difference by verified gcd. Let \(s=\min(q,L-q)\), reversing
+the ordered endpoints when \(q>L/2\). If \(H\) is the number of deleted
+indices \(m,\ldots,L-1\) on that \(s\)-step arc, and \(D\) is its forward
+retained-rank displacement, then
+\[
+ D=s-H,\qquad 0\leq H\leq\min(d,Q),\qquad 1\leq D<m.
+\]
+Therefore
+\[
+ {\cal M}=\{s-h,\ m-s+h:0\leq h\leq\min(d,Q)\}
+\]
+contains, up to sign, a gcd argument for every endpoint-valid coupled output.
+Duplicates and entries incompatible with \(1\leq s-h<m\) may be removed.
+Zero, gcd one, and gcd \(N\) are failures. The menu has at most
+\(2(\min(d,Q)+1)\) entries and dominates the coupling pointwise in \(a,t\);
+menu success for a source parameter is distinct from the coupling's
+probability over \(k\), which retains endpoint failures.
+
+For \(t=(N-1)/2\), \(Q=1\) and at most four entries suffice. For
+\(t=\lfloor(N-1)/8\rfloor\), \(Q\leq7\) and at most sixteen suffice.
+All values are public through the declared rank/extremum floor sums and
+modular inversions, with generation, setup, randomness, rejected endpoints,
+arithmetic, and verification charged. No uniformly small menu is asserted for
+arbitrary \(t\).
+
+**Claim B.** Now let \(t=(N-1)/2\), \(m=(N+1)/2\), and
+\[
+ r=\min(a^{-1}\bmod N,\ N-(a^{-1}\bmod N)),\qquad
+ s_0=\lfloor t/r\rfloor.
+\]
+If \(ar=1\bmod N\), then
+\[
+ \alpha=1,\quad u=r,\quad \beta=s_0+1,\quad
+ v=N-(s_0+1)r.
+\]
+If \(ar=-1\bmod N\), the two sides exchange:
+\[
+ \beta=1,\quad v=r,\quad \alpha=s_0+1,\quad
+ u=N-(s_0+1)r.
+\]
+In both cases \(|\beta-\alpha|=s_0\) and \(L=N-s_0r\).
+
+For \(r\geq2\), the actual centered jump length is \(s=s_0\), and the
+dominating menu can be evaluated without the extremum search from
+\[
+ s,\quad s-1,\quad 2s-1,\quad 2s-3.
+\]
+Writing \(N=2rs+R\) gives odd \(1\leq R<2r\), and the four gcds equal, in
+order, the gcds of
+\[
+ R,\quad R+2r,\quad R+r,\quad R+3r
+\]
+with \(N\). Thus one inverse, one quotient, and four verified gcds suffice.
+
+For \(r=1\), \(a=1\) or \(-1\), the actual centered jump is \(s=1\) and
+its menu has no proper gcd. Substituting the raw quotient \(s_0=t\) instead
+would define a different source and can expose factor three; it is not
+credited to this claim.
+
+**Claim C.** Let \(N=pq\) for distinct odd primes \(p\leq q\). For
+\(\ell\in\{p,q\}\), define
+\[
+ B_\ell=
+ 4\left(\left\lfloor\frac{5N}{2\ell^2}\right\rfloor+1\right)
+  \left(\left\lfloor\frac{2N}{\ell^2}\right\rfloor+1\right).
+\]
+At most \(B_\ell\) centered unit indices
+\(r\in\{1,\ldots,(N-1)/2\}\) have a Claim-B menu accepting a proper divisor
+divisible by \(\ell\). Counting extra nonunits only enlarges this bound, and
+the actual \(r=1\) branch never succeeds.
+
+For uniform \(a\) in the unit group, the probability that the complete menu
+has a proper factor is at most
+\[
+ \min\left(1,\frac{2(B_p+B_q)}{\varphi(N)}\right).
+\]
+For bounded \(q/p\), this is \(O(1/N)\), with a constant depending only on
+that balance bound. This is a menu-source probability bound, not the
+per-\(k\) coupling probability. It excludes proper factors found while
+generating a unit parameter and makes no claim for an arbitrary biased law.
+
+**Claim D.** Let \(N\) be any odd composite, including prime powers and
+repeated-factor inputs, and let \(P\) be its least prime divisor. If
+\(H\geq1\), \(5H\leq P\), and
+\[
+ a=xy^{-1}\bmod N,\qquad 1\leq x,y\leq H,
+\]
+with \(x,y\) units, then the actual Claim-B half-orbit menu has no proper
+factor. The Claim-A half-orbit coupling therefore has none. The actual
+\(r=1\) branch is included. Generation-screen factors remain legitimate
+separate outputs; \(P\) is used only in the analysis. No conclusion applies
+to larger heights, other windows, other jumps, or other rational observables.
+
+Statement-only input:
+experiments/F339_coupled_rank_sources/ALGEBRA_STATEMENT_ONLY.md.
+Author proof:
+experiments/F339_coupled_rank_sources/ALGEBRA.md.
+Complete independent proof:
+experiments/F339_coupled_rank_sources/ALGEBRA_RECONSTRUCTION.md.
+Root comparison:
+experiments/F339_coupled_rank_sources/ROOT_COMPARISON.md.
+Input SHA-256:
+afc08f373adabe1f79314fa1d15666ac0d553e4226748d8b2ca6cf67d9ac4df6.
+Author proof SHA-256:
+f16d505b234b039a85016f0c84fdb53deb02098d42692f38dbe7cd12b0d26abd.
+Reconstruction SHA-256:
+e9eed017b847a722c615f00b7aa5035e7bd6bc20035a24ea8b85d83afdad13b9.

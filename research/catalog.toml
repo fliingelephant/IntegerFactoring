@@ -1789,7 +1789,15 @@ kind = "result"
 title = "Uniform-source count descent has explicit rare-event bounds"
 source = { kind = "record", path = "PROVED.md", id = "P250" }
 recorded_status = "promoted after fresh statement-only reconstruction, correction of\ntwo endpoint inequalities inside that reconstruction, and root comparison\nwith the unchanged author proof."
-scope = "the exact continued-fraction, fixed-window, source-specific\nprobability, and literal small-multiplier statements below. This supplies no\nfactoring algorithm meeting P249, no novelty claim, and no conclusion about\nthe separate rational, random-branch, shifted-window, or rank-gap mechanisms.\n\nLet \\(N>1\\) be odd, \\(h=(N-1)/2\\), and let \\(U_N\\) be the units represented\nin \\(1,\\ldots,N-1\\). Put\n\\[\n J_N=\\{a\\in U_N:\\operatorname{Jacobi}(a,N)=1\\}.\n\\]\nFor the canonical expansion \\(a/N=[0;b_1,\\ldots,b_m]\\), \\(b_m\\geq2\\), write\n\\[\n S(a,N)=\\sum_i b_i,\\qquad\n M_N=\\frac{4NH_N^2}{\\varphi(N)},\\qquad\n H_r=\\sum_{j=1}^r\\frac1j.\n\\]\nFor \\(0\\leq t<N\\), define\n\\[\n Q_a(t)=\\#\\{1\\leq y\\leq t:1\\leq ay\\bmod N\\leq h\\},\\qquad\n E_a(t)=2Q_a(t)-t.\n\\]\nThen\n\\[\n S(a,N)=S(N-a,N)=S(a^{-1}\\bmod N,N),\\qquad\n |E_a(t)|\\leq10S(a,N).\n\\]\nFor every integer \\(B\\geq1\\), with \\(H_0=0\\),\n\\[\n \\sum_{a\\in U_N}\\#\\{i:b_i\\geq B\\}\n \\leq\\frac{2N}{B}H_{\\lfloor N/B\\rfloor},\n \\qquad\n \\sum_{a\\in U_N}S(a,N)\\leq2NH_N^2.\n\\]\nConsequently,\n\\[\n \\mathbb E_{a\\ {\\rm uniform}\\ J_N}S(a,N)\\leq M_N\n \\leq4(1+\\log_2N)(1+\\ln N)^2,\n\\]\nand the public cutoff\n\\(S\\leq8(1+\\log_2N)(1+\\ln N)^2\\) retains at least half of \\(J_N\\).\nAll these bounds are pointwise in the denominator \\(N\\).\n\nThe count-descent attempt gcd-screens \\(t\\), then both nonzero children\n\\(Q_a(t)\\) and \\(t-Q_a(t)\\). It returns a verified proper divisor, fails on a\nzero child or \\(t\\leq1\\), and otherwise continues from the smaller child.\nStarting from \\(h\\), it makes at most\n\\(L_N=1+\\lceil\\log_2N\\rceil\\) queries. For an integer \\(D\\geq1\\), set\n\\[\n W(N,D)=\\left\\{w\\in\\mathbb Z_{>0}:\n \\left|w-\\frac{N-1}{2^k}\\right|\\leq D\n \\text{ for some }k\\geq2\\right\\}.\n\\]\nIf every reached discrepancy has absolute value at most \\(D\\), every\nscreened child lies in \\(W(N,D)\\), even if the multiplier changes between\nqueries; the initial \\(h\\) is always coprime to \\(N\\).\n\nLet \\(H\\geq4\\), \\(1\\leq D\\leq H/4\\), and fix an odd integer\n\\(p\\in[H,2H]\\). Among odd integers \\(q\\in[H,2H]\\), at most\n\\[\n 32D K(D),\\qquad K(D)=1+\\lfloor\\log_2(8D)\\rfloor,\n\\]\nhave a positive \\(p\\)-multiple in \\(W(pq,D)\\). Every such multiple uses a\nscale with\n\\[\n \\frac{H-1}{D}\\leq2^k<4H.\n\\]\nIf \\(R_H\\) is the number of primes in \\([H,2H]\\), at most\n\\(64R_HD K(D)\\) ordered pairs of distinct primes in that interval have any\nproper nonunit in the menu.\n\nThere is also an exact asymmetric criterion. For odd \\(p,q\\), \\(M=2^k\\),\n\\(k\\geq2\\), \\(r=q\\bmod M\\), and \\(D>0\\), the interval\n\\[\n \\left[\\frac{pq-1}{M}-D,\\frac{pq-1}{M}+\\frac D2\\right]\n\\]\ncontains a positive \\(p\\)-multiple exactly when at least one of\n\\[\n q\\geq M\\ \\text{ and }\\ pr-1\\leq MD,\n \\qquad\n 2p(M-r)+2\\leq MD\n\\]\nholds.\n\nNow suppose \\(N=pq\\) for distinct primes \\(p,q\\in[H,2H]\\), and\n\\(W(N,D)\\) has no proper nonunit. A fixed-\\(h\\) attempt retaining one uniform\n\\(a\\in J_N\\) has factor probability at most\n\\[\n \\frac{10M_N}{D}.\n\\]\nIf every query instead draws a fresh multiplier conditionally uniform in\n\\(J_N\\) given the past, the bound is \\(10L_NM_N/D\\). These statements retain\nall rare large-defect attempts rather than conditioning them away.\n\nFor variable starts assume \\(1\\leq D<\\min(p,q)/2\\), and put\n\\[\n \\ell_v=\\max\\left(0,\\left\\lfloor\n \\log_2\\frac{h}{v-D}\\right\\rfloor\\right),\\qquad\n V(N,D)=\\sum_{v\\in\\{p,q\\}}\\frac{D(4\\ell_v+9)}{v}.\n\\]\nIf \\(T\\) is marginally uniform in \\(1,\\ldots,h\\) and \\(a\\) is marginally\nuniform in \\(J_N\\), the factor probability is at most\n\\[\n \\frac{10M_N}{D}+V(N,D),\n\\]\nwithout requiring independence of \\(a\\) and \\(T\\). For\n\\(T=\\min(a^{-1}\\bmod N,N-a^{-1}\\bmod N)\\), with uniform \\(a\\in J_N\\), the\nbound is\n\\[\n \\frac{10M_N}{D}+\\frac{4h}{\\varphi(N)}V(N,D).\n\\]\nWith fresh conditionally uniform multipliers, replace the first term by\n\\(10L_NM_N/D\\) when the start has the stated marginal law.\n\nExact uniform-\\(J_N\\) rejection sampling may return a proper generation gcd\nand otherwise reject Jacobi-negative units. Its contribution is at most\n\\(4L_N/(H-1)\\) for the fresh policy and at most \\(4/(H-1)\\) for one generated\nmultiplier. Thus no generation success or discarded draw is hidden.\n\nTaking \\(D=\\lfloor\\sqrt H\\rfloor\\) gives\n\\(O((\\log N)^3/\\sqrt H)\\) variable-start bounds on every sufficiently large\nbalanced semiprime. Using the Rosser--Schoenfeld bound\n\\[\n \\pi(2H)-\\pi(H)>\\frac{3H}{5\\ln H}\\qquad(H\\geq21)\n\\]\nalso gives infinitely many balanced distinct-prime inputs with the same\nupper bound for the fixed-\\(h\\) policy. Independent repetition of exactly\nthese source-specific attempts therefore has expected work at least\n\\(\\sqrt H/\\operatorname{poly}(\\log N)\\) on that infinite family, or never\nsucceeds.\n\nFinally, for an arbitrary unit \\(a\\), put \\(A=\\min(a,N-a)\\). The literal\nfixed-\\(h\\), fixed-\\(a\\), smaller-child descent makes the same unordered child\nqueries as multiplier \\(A\\). If the least prime divisor of \\(N\\) exceeds\n\\(5A^2\\), that attempt returns no factor. This statement has no uniform-source\nassumption, and it does not cover small modular inverses, changing\nmultipliers, other starts, branches, or additional screens.\n\nStatement-only input:\nexperiments/F335_descent_parameter_mass/STATEMENT_ONLY.md.\nAuthor proof:\nexperiments/F335_descent_parameter_mass/PROOF.md.\nComplete independent proof:\nexperiments/F335_descent_parameter_mass/RECONSTRUCTION.md.\nRoot comparison:\nexperiments/F335_descent_parameter_mass/ROOT_COMPARISON.md.\nInput SHA-256:\n75c092beacf63c7dda9681be4fd54ae208d2fc0188586a80e6b2ab3b69d9e6c9.\nAuthor proof SHA-256:\n5a698ed631ff8fcd8ed55fc195af008284c7f42d60b83c3de405f2e671b326cc.\nReconstruction SHA-256:\n33125e52d1c184fda0f9a8f3bb952d081daac794ce43762eb349607a6c48d6c1."
+scope = "the exact continued-fraction, fixed-window, source-specific\nprobability, and literal small-multiplier statements below. This supplies no\nfactoring algorithm meeting P249, no novelty claim, and no conclusion about\nthe separate rational, random-branch, shifted-window, or rank-gap mechanisms."
+
+[[records]]
+id = "P251"
+kind = "result"
+title = "The N-linked half-orbit jump has a four-gcd dominating menu"
+source = { kind = "record", path = "PROVED.md", id = "P251" }
+recorded_status = "promoted after complete fresh statement-only reconstruction and\nroot comparison. No correction, added assumption, or unresolved proof gap was\nfound."
+scope = "Claims A--D below, relative to the explicitly declared real-orbit\nand three-gap facts. This does not separately promote every earlier return-map\nstatement, the continued-fraction menu argument, a source-mass lower bound, or\na factoring algorithm."
 
 [[records]]
 id = "X01"
@@ -4526,3 +4534,31 @@ kind = "note"
 title = "Coupled rank jumps reduce to deleted visits and explicit controls"
 source = { kind = "record", path = "notes/Progress.md", id = "C297" }
 recorded_status = "F339 author and root derivations. The proposed finite identity\nchecks and nonuniform-jump search have not run. No proof promotion, numerical\nclaim, or QP success law."
+
+[[records]]
+id = "C298"
+kind = "note"
+title = "Coupled rank jumps had high small-input cells but complete direct menus"
+source = { kind = "record", path = "notes/Progress.md", id = "C298" }
+recorded_status = "F339 independent finite identity check and complete six-rule search.\nNo asymptotic success law, source advantage, or QP factoring claim."
+
+[[records]]
+id = "C299"
+kind = "note"
+title = "The selected N-linked jump was reconstructed and exhaustively checked at finite scale"
+source = { kind = "record", path = "notes/Progress.md", id = "C299" }
+recorded_status = "F339 author proof, fresh independent reconstruction, root\ncomparison, and exact finite checks. P251 promotes Claims A--D only. No source\nsuccess lower bound or complete factoring result."
+
+[[records]]
+id = "C300"
+kind = "note"
+title = "Gap induction conserves continued-fraction mass and yields an expected-cost menu"
+source = { kind = "record", path = "notes/Progress.md", id = "C300" }
+recorded_status = "unpromoted root derivation, exact finite checks, and focused\nprimary-source context. No source-success theorem, factoring obstruction, or\nnovelty claim. P251 does not promote this statement."
+
+[[records]]
+id = "C301"
+kind = "note"
+title = "Critical-fiber character selection is a specified unrun root-basin experiment"
+source = { kind = "record", path = "notes/Progress.md", id = "C301" }
+recorded_status = "F340 root-derived design only. No numerical execution,\nindependent reconstruction, higher-depth fiber theorem, success law, or QP\nclaim."

@@ -9935,3 +9935,206 @@ Evidence:
 experiments/F339_coupled_rank_sources/RETURN_MAP_JUMPS.md,
 experiments/F339_coupled_rank_sources/COUPLING_SEARCH.md, and
 experiments/F339_coupled_rank_sources/SHA256SUMS.txt.
+
+### C298 -- Coupled rank jumps had high small-input cells but complete direct menus
+
+**Family:** route:F31
+
+**Status:** F339 independent finite identity check and complete six-rule search.
+No asymptotic success law, source advantage, or QP factoring claim.
+
+The return-map checker covered every odd `N<=31`, unit `a`, and `1<=t<N`:
+4,396 orbit states, 964,448 accepted `(q,k)` pairs, 122,972 rejected
+endpoints, and 2,045,068 floor-sum calls. It checked the first-return rank
+formula, deleted visits, fixed-`q` menu containment, exact endpoint counts,
+and the uniform-distinct-rank collapse. A separate engineered large-deletion
+check through `N<=511` retained both generation gcd exits and verified 51,898
+accepted pairs against at most six direct controls. No anomaly occurred.
+
+The search retained all 168 F337 source attempts, including 15 standalone
+generation-factor rows, and evaluated six public `q` rules on all 459 unit
+cells. Its 2,754 rule views preserve zero proposals, endpoint failures,
+duplicate rules, source/setup/rank/gcd costs, uniform-`q` and direct-rank
+controls, and every verified output. All observed `d<=2316`, so every fixed-`q`
+menu was enumerated. The menus charged 509,249 gcds; the eleven-value controls
+charged 21,128. Every coupled factor was contained in its charged menu.
+
+The strongest cell without an eleven-value control factor was
+`N=1333,a=160,t=166,q=47`: factor probability `115/167`, but its 34-value menu
+directly exposes both 31 and 43. At `N=209,a=70,t=104`, the selected
+gap-difference jump has probability `22/35`; a six-value menu exposes 11. At
+`N=10807,a=105,t=5403`, the separate `q=N mod L` rule has probability
+`175/386`; a 104-value menu exposes 101 and 107. These are distinct jump
+rules and post hoc cells. Across the three inputs, gap-difference, beta, and
+`N mod L` respectively had the largest rule mean; no rule was consistently
+best, and `q=1` had no coupled hit.
+
+The complete menu can cost more than one sampled pair, so pathwise dominance
+alone is not a cost/success obstruction. These three diagnostic inputs also
+factor at the first Fermat square test using only `N`: `15^2-209=4^2`,
+`37^2-1333=6^2`, and `104^2-10807=3^2`. Their high coupling probabilities do
+not establish an improvement over that control.
+
+Evidence:
+experiments/F339_coupled_rank_sources/CHECKS_REPORT.md,
+experiments/F339_coupled_rank_sources/check_output.json,
+experiments/F339_coupled_rank_sources/SEARCH_REPORT.md,
+experiments/F339_coupled_rank_sources/search_aggregate_output.json,
+experiments/F339_coupled_rank_sources/BENCHMARK_CONTEXT.md,
+experiments/F339_coupled_rank_sources/check_SHA256SUMS.txt, and
+experiments/F339_coupled_rank_sources/search_SHA256SUMS.txt.
+
+### C299 -- The selected N-linked jump was reconstructed and exhaustively checked at finite scale
+
+**Family:** route:F31
+
+**Status:** F339 author proof, fresh independent reconstruction, root
+comparison, and exact finite checks. P251 promotes Claims A--D only. No source
+success lower bound or complete factoring result.
+
+The reconstruction recovered the deleted-visit bound
+`H<=min(d,floor(N/L))`, the selected jump and short menu, the half-orbit
+inverse quotient, its four residual gcds, the uniform-unit semiprime count,
+and the rational-height exclusion for every odd composite class. It preserves
+the distinctions `q=(beta-alpha) mod L` versus `q=N mod L`, a menu's
+parameter-level success versus per-`k` coupling probability, and unit-source
+conditioning versus separate generation factors. No correction or added
+assumption was needed.
+
+The final checker passed 4,396 generic orbit states and 1,305,530
+arbitrary-phase discrepancy checks through odd `N<=31`. It checked every unit
+on every odd `N<=511`: 53,186 half-orbit parameters, 212,744 four-menu gcd
+identities, and 9,656 parameters whose actual menu has a proper factor. All
+510 actual `r=1` parameters used centered jump `s=1` and returned no factor.
+The separately labeled raw-quotient counterfactual produced 168 factor cases,
+often factor 3, but it was never credited to the actual source or its costs.
+
+On 96 distinct semiprimes, all 192 prime-specific counts satisfied Claim C.
+For every odd composite through 511, all 174 pairs with
+`1<=x,y<=floor(P/5)` covered by Claim D were units and had no menu factor;
+the classes include prime powers, repeated-factor composites, and squarefree
+inputs with at least three primes.
+
+The frozen F337 half/eighth check retained all 168 source attempts and 306
+unit cells. The new short menu covered all 35 positive fifth-jump cells and
+also found six direct factors where the sampled coupling had no factor start.
+It succeeded on 41 unit cells; standalone generation-inclusive counts are
+retained separately. Finite validation supports the formulas but does not
+supply their unbounded proof or source mass.
+
+The statement, author proof, and reconstruction SHA-256 values are
+`afc08f37...c4df6`, `f16d505b...d26abd`, and `e9eed017...dad13b9`.
+The final checker source and aggregate hashes are `7e29fe1c...42e71` and
+`25190a9b...a6298f`.
+
+Evidence:
+experiments/F339_coupled_rank_sources/ALGEBRA_STATEMENT_ONLY.md,
+experiments/F339_coupled_rank_sources/ALGEBRA.md,
+experiments/F339_coupled_rank_sources/ALGEBRA_RECONSTRUCTION.md,
+experiments/F339_coupled_rank_sources/ROOT_COMPARISON.md,
+experiments/F339_coupled_rank_sources/ALGEBRA_CHECKS_REPORT.md,
+experiments/F339_coupled_rank_sources/algebra_output.json, and
+experiments/F339_coupled_rank_sources/algebra_submanifest.json.
+
+### C300 -- Gap induction conserves continued-fraction mass and yields an expected-cost menu
+
+**Family:** route:F31
+
+**Status:** unpromoted root derivation, exact finite checks, and focused
+primary-source context. No source-success theorem, factoring obstruction, or
+novelty claim. P251 does not promote this statement.
+
+For one unit orbit prefix, with extremal gaps `alpha,beta`, indices `u,v`, and
+`L=u+v`, the root derives
+
+    S(u,L)+S(alpha,alpha+beta)=S(a,N)+2,
+    S(u,L)<=S(a,N).
+
+The gap update adds one subtractive-Euclidean step to `(u,v)` while removing
+one from `(alpha,beta)`. For every phase and public `0<=q<L`, if `h` counts
+visits to the deleted interval of size `d=L-(t+1)`, the arbitrary-interval
+continued-fraction block argument gives
+
+    |h-q*d/L| <= 5*S(u,L) <= 5*S(a,N).
+
+Hence each coupled rank difference lies in two integer windows of radius
+`5*S(a,N)` around the public centers `q*(t+1)/L` and that center minus
+`t+1`. Streaming the complete menu costs
+`O((1+S(a,N))*poly(bitlength(N)))` and polynomial space.
+
+If each independent attempt has a marginally uniform Jacobi-positive unit,
+P250 gives a polynomial expected menu size without a deterministic cutoff,
+discarded large-`S` samples, or cost-success independence. The public `t,q`
+may depend on the sampled unit and other coins. This is only a conditional
+simplification: a retained parameter used for many triples needs additional
+accounting, biased sources may have another mean, and no inverse-QP menu
+success probability is proved.
+
+Finite checks passed the conservation law on all 4,396 generic states through
+odd `N<=31`, 1,305,530 arbitrary-phase deleted-count inequalities, and all
+306 frozen F337 half/eighth cells. They do not prove the unbounded result.
+
+The focused source check identifies van Ravenstein's 1988 Sections 2--4 as a
+close precedent for neighbor-index addition, gap splitting, and convergent
+geometry; Yao--Knuth 1975 Section 1 for subtractive steps as a partial-quotient
+sum; and Aistleitner--Borda--Hauke arXiv:2210.14095, Introduction equation
+(1), for the classical fixed-denominator mean asymptotic. No checked source
+states the displayed two-channel conservation or its expected-menu
+combination. The original Panov and Liehl proofs and a full historical citation
+closure were not checked, so this absence is not novelty evidence.
+
+Evidence:
+experiments/F339_coupled_rank_sources/CONTINUED_FRACTIONS.md,
+experiments/F339_coupled_rank_sources/SOURCE_CONTEXT.md,
+experiments/F339_coupled_rank_sources/ALGEBRA_CHECKS_REPORT.md,
+experiments/F339_coupled_rank_sources/algebra_identities_output.json,
+experiments/F339_coupled_rank_sources/algebra_frozen_output.json, and
+experiments/F339_coupled_rank_sources/algebra_submanifest.json.
+
+### C301 -- Critical-fiber character selection is a specified unrun root-basin experiment
+
+**Family:** route:F29
+
+**Status:** F340 root-derived design only. No numerical execution,
+independent reconstruction, higher-depth fiber theorem, success law, or QP
+claim.
+
+Starting with `H_1(X)=X(X-1)`, the design chooses public `U`, screens the
+critical guards, and sets `c_2=H_1(U)`. For a fresh public `X`, write
+`y=H_1(X)`, `Y=H_2(X)`,
+
+    D=1+4(c_2-y),   J=(2X-1)(2y-c_2).
+
+When `Y,D,J` are units modulo a prime divisor, the two quadratic branches of
+`H_2(Z)=Y` are disjoint and simple, and the local fiber has size
+`3+Legendre(D,p)`. On a distinct-prime input, negative Jacobi symbol forces
+fiber sizes four and two in opposite fields. This is a degree-four identity,
+not a higher-depth growth result.
+
+For general retained coefficients, the exact divided critical-value factor is
+
+    W_t(X)=-product_(j=2)^t (H_(j-1)(X)+H_(j-1)(1/2)-c_j),
+
+with exact identity
+`H_t(1/2)-H_t(X)=(X-1/2)^2 W_t(X)`. After the derivative guard makes
+`X-1/2` a unit, `W_t` has the same gcd and Jacobi symbol as the directly
+computed difference `Delta_t=H_t(1/2)-H_t(X)`. The public runtime therefore
+uses `Delta_t`; both `H_t(X)` and the derivative product are evaluable in
+`O(t)` modular operations without expanding degree `2^t`. At higher depth,
+this character is only a proposed selector.
+
+The unrun experiment compares baseline, common-screen, negative-character,
+positive-character, and fair-coin thinning policies on F321's wider-gap
+balanced and unbalanced inputs. It keeps all probe, guard, Jacobi, update,
+factor, and failure costs, plus separate offline field-population diagnostics.
+P245's radical-shadow transfer does not automatically apply because Jacobi
+rejection depends on prime exponents.
+
+The next action is to verify the degree-four and divided-difference identities,
+then run the five public policies with the declared caps and determine whether
+character information changes higher-depth local growth after all costs.
+
+Evidence:
+experiments/F340_critical_fiber_selection/DESIGN.md, SHA-256
+`ad2f0d784a16736a4019912ba4f53876a656b7232cfd7f30aec46d832277914e`,
+and experiments/F340_critical_fiber_selection/SHA256SUMS.txt.

@@ -1,99 +1,99 @@
 # Research State
 
-Updated 2026-09-07 after the fourteenth authorized Astra cycle. All jobs are terminal; no expected-quasipolynomial factoring algorithm is established.
+Updated 2026-09-07 after cycle 15. All jobs are terminal. No expected-quasipolynomial factoring algorithm is established.
 
 ## Target and sufficient interface
 
-The target remains complete factorization of every integer by one classical
-Las Vegas algorithm with a uniform expected quasipolynomial bit bound. Failures
-and restarts are allowed. Deterministic completion, exact counting, uniformly
-short paths, and fast performance for every auxiliary parameter are optional.
+The target is one classical Las Vegas algorithm that factors every integer in
+uniform expected quasipolynomial bit complexity. Failures, restarts, partial
+verified outputs, public input shaping, approximate verified subroutines, and
+variable attempt durations are allowed.
 
-P249 is the broadest current sufficient contract. For each fixed odd composite
-with at least two distinct prime divisors, a public FacRoot procedure on a
+P249 remains a broad sufficient interface. A public FacRoot procedure on a
 uniform Jacobi-positive unit may have arbitrary cost-success correlation. A
 uniform quasipolynomial bound on mean verified cost divided by valid-output
-probability gives all-input Las Vegas factoring by uncapped two-engine
-dovetailing. This is sufficient, not restrictive: other sources,
-transformations, partial solvers, and input shaping remain allowed.
+probability gives all-input factoring by uncapped dovetailing.
 
 ## Promoted cycle result
 
-P250 proves source-specific structure for count descent. Canonical
-continued-fraction digit sums are invariant under negation and inversion,
-their fixed-denominator Jacobi-positive mean is polylogarithmic, and
+P251 promotes the selected N-linked jump relative to its declared real-orbit
+and three-gap dependencies. For an orbit prefix put
+\(m=t+1,L=u+v,d=L-m\) and
 \[
- |2Q_a(t)-t|\leq10S(a,N).
+ q=(\beta-\alpha)\bmod L=Nu^{-1}\bmod L.
 \]
-It gives complete fixed-start dyadic eligibility and balanced-cofactor bounds,
-including all large-defect and generation events. Its named uniform, fresh,
-uniform-start, and inverse-start policies have
-\(O((\log N)^3/\sqrt H)\) factor probability on the covered balanced inputs.
-Literal fixed-\(h\), fixed-\(a\), smaller-child descent returns no factor when
-the least prime exceeds \(5\min(a,N-a)^2\).
+This is generally different from \(N\bmod L\); \(q=0\) is failure. With
+\(s=\min(q,L-q)\), every accepted rank difference is covered by
+\[
+ \{s-h,m-s+h:0\leq h\leq\min(d,\lfloor N/L\rfloor)\}.
+\]
+The menu dominates each endpoint-valid output. Sampled-endpoint rejections
+remain failed attempts.
 
-They do not rule out biased rational sources, random branches, shifted thresholds,
-rank collisions, added screens, roots, or other procedures in general. The
-small-$A$ clause applies only under its exact hypothesis.
-## Fourteenth-cycle evidence
+For \(t=(N-1)/2\), let
+\(r=\min(a^{-1}\bmod N,N-a^{-1}\bmod N)\) and
+\(s_0=\lfloor t/r\rfloor\). If \(r\geq2\), the actual centered jump is
+\(s=s_0\), and one inverse, one quotient, and four gcds on
+\(s,s-1,2s-1,2s-3\) dominate it. Equivalently, when \(N=2rs+R\), use
+\(R,R+2r,R+r,R+3r\). If \(r=1\), the actual jump is \(s=1\) and has no
+proper gcd; the raw value \(s_0=t\) belongs to a different source.
 
-F334 tested fixed, fresh, and inverse-start min descent on twelve scale inputs.
-Fixed returned 0/3,072; fresh returned 52/3,072 only through added generation
-gcds; inverse-start returned thirteen later count factors. None returned a
-count factor at 44, 60, or 92 bits. Direct dyadic menus became expensive and
-supplied no scale success law.
+P251 gives an explicit uniform-unit upper bound for this menu on distinct
+semiprimes, which is \(O(1/N)\) at fixed factor balance. On every odd
+composite, including prime powers, a rational input \(a=xy^{-1}\) with unit
+\(1\leq x,y\leq H\) has no selected half-menu factor when \(5H\) is at most
+the least prime. Generation factors remain separate valid outputs. No source
+lower bound or factoring algorithm follows.
 
-F336 tested 21,504 fixed-h attempts from fourteen biased and uniform profiles.
-Minimum branching had four generation and 48 count factors. Uniform had
-0/1,536; every profile had zero factors on both 44-, 60-, and 92-bit inputs.
-Repeated small parameters explain much of the 20-bit concentration.
+## Fifteenth-cycle evidence
 
-Fair branching has an author-derived, unpromoted work primitive: screen both
-children, then take a fair branch. Expected reached queries are at most
-\(\lceil\log_2h\rceil+1\), although realized paths need not shrink. Exact
-small-state DP rescued 818 parameters from min-branch failure, but complete
-unit-set success was higher on 28 inputs, lower on 22, and equal on 39. F338
-replayed all F336 rows: fair branching had four generation and 47 count
-factors, rescuing 21 rows and losing 22. It used higher pooled charged work
-and again had no hit above 28 bits. This does not bound another fair source.
+The return-map check passed 4,396 orbit states and 964,448 accepted pairs
+through odd \(N\leq31\). The six-rule F339 search retained all 168 F337
+source attempts and evaluated 2,754 rule views on 459 cells. Some post hoc
+cells had factor probability above 0.4 or 0.6, but every coupled hit lay in
+its fully charged fixed-jump menu. The strongest menus used 6, 34, or 104
+gcds. No rule was best on all three inputs, and the adjacent rule had no hit.
 
-F337 finitely validated author-derived polynomial-bit random-threshold and
-three-gap-class rank samplers. On 459 cells, both gap laws had lower mean useful
-off-diagonal energy and higher duplicate energy than uniform ranks. Some
-post hoc cells reversed pair energy, but a heavy shared endpoint erased the
-batch gain or admitted a direct no-floor-sum sampler. The inverse-boundary
-transfer passed its guarded finite checks. No larger-input inference follows.
+All three search inputs factor at the first Fermat square test using only
+\(N\). They do not establish a performance advantage over that Fermat control
+or on broader inputs. General other jumps, larger-height sources, nonlinear
+transcript uses, and wider-gap inputs remain open.
 
-F339 adds an unpromoted return-map representation. Deleting an interval from a
-full rotation expresses a coupled rank jump as the public jump minus deleted
-visits. Fixed jumps have a \(2(d+1)\)-entry direct menu for deletion size
-\(d\). Uniform jumps collapse to uniform distinct ranks for every \(d\), and
-one manufactured large-\(d\) source is covered by six direct gcds. General
-large-\(d\), nonuniform jump sources remain open.
+Fresh reconstruction matched all four P251 claims. Finite algebra checks
+covered 53,186 half-orbit unit parameters through odd \(N\leq511\), all
+semiprime source counts, and every guarded rational-height class. The actual
+\(r=1\) branch never factors. A separately labeled raw-\(s_0\) diagnostic
+factored 168 times and was never credited to the actual source or cost.
 
-## Current gap and evidence
+An unpromoted conservation law gives
+\[
+ S(u,L)+S(\alpha,\alpha+\beta)=S(a,N)+2,\qquad S(u,L)\leq S(a,N).
+\]
+It bounds deleted-interval count discrepancy by \(5S(a,N)\). With P250, a
+marginally uniform Jacobi-positive source has polynomial expected direct-menu
+cost without rejecting rare large-digit parameters. Useful source success and
+one-triple accounting remain assumptions; biased sources need their own mean.
+
+F340 is an unrun route:F29 design. Under its unit and derivative guards, its
+degree-four seed uses a critical-value discriminant whose negative Jacobi
+character forces local fiber sizes four and two in opposite prime fields. At
+higher depth, the public runtime screens \(\Delta_t=H_t(1/2)-H_t(X)\); an
+exact divided-difference identity relates it to the proposed character
+selector. No higher-depth fiber or growth law is proved. P245 does not
+automatically transfer across Jacobi-based rejections.
+
+## Current gap, counts, and restart
 
 No public procedure is proved to meet P249's per-input expected cost/success
-contract. P250 rules out only its named uniform min-descent policies on covered
-balanced families. F334--F338 are finite evidence; they do not close
-randomized, biased, shifted, partial, approximate-with-verification, or
-variable-duration procedures.
+contract. P250 and P251 give only their stated source-specific upper bounds
+and zero regimes. F339's finite nulls and direct-menu controls do not close
+general coupled or randomized procedures.
 
-P250 preserves statement, author-proof, and reconstruction hashes
-75c092be..., 5a698ed6..., and 33125e52.... C292--C297 retain the cycle's
-proof comparison, rows, repairs, censors, costs, provenance, designs, and
-manifests. The Aistleitner--Borda--Hauke paper is cached in full; the
-Rosser--Schoenfeld DOI remains metadata only.
+The catalog has 642 records, 34 routes, 555 experiments, 249 supported assignments, and 306 explicit unknowns.
 
-The catalog has 637 records, 34 routes, and 554 experiments, with 248
-supported experiment-route assignments and 306 explicit unknowns.
-
-## Restart point
-
-Execute F339's bounded identity checks, then run the six public nonuniform
-jump rules in COUPLING_SEARCH.md on every retained F337 cell. Keep endpoint
-failures, duplicate rules, generation/setup work, direct gcd controls, the
-uniform-distinct-rank control, and feasible small-\(d\) menus. Test whether a
-repeatable coupled displacement survives those controls with useful source
-mass. A post hoc best cell is only a candidate for a later public source and
-charged cost/success proof.
+Next, verify F340's degree-four fiber and divided-difference identities. Then
+run its five public policies on F321's wider-gap balanced and unbalanced
+inputs, charging every probe, guard, character, update, factor, and failure.
+Keep exact root and prime-field source distinctions in offline diagnostics.
+Test whether character bias changes higher-depth root growth after all costs;
+a fitted finite trend is not a success theorem.
