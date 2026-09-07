@@ -1,0 +1,71 @@
+{
+  "experiment": "F334_count_descent",
+  "route": "route:F31",
+  "status": "passed",
+  "seed": 33420260907,
+  "source_sha256": "cb93f160d57b2a3285551cbd268e732917e3062a90eb8ca62df843f581be1e24",
+  "cutoffs": [8, 32, 128],
+  "limits": {
+    "hard_timeout_seconds": 30,
+    "internal_timeout_seconds": 28,
+    "memory_limit_bytes": 536870912
+  },
+  "scope": {
+    "small_odd_composite_limit": 101,
+    "small_composite_moduli": 25,
+    "small_jacobi_positive_units": 547,
+    "scale_moduli": 12,
+    "accepted_parameters_per_scale_modulus": 256,
+    "scale_conditional_denominator": 3072,
+    "scale_generation_inclusive_denominator": 3073,
+    "time_censors": 0
+  },
+  "sources": [
+    "count_descent.py",
+    "run_scale.sh"
+  ],
+  "documents": [
+    "REPORT.md",
+    "RESOURCE.md",
+    "SOURCES.md"
+  ],
+  "pilot_artifacts": [
+    "pilot_output.json",
+    "pilot_status.json",
+    "pilot_run.log",
+    "pilot_traces.jsonl.gz"
+  ],
+  "small_artifacts": [
+    "small_output.json",
+    "small_status.json",
+    "small_run.log",
+    "small_traces.jsonl.gz"
+  ],
+  "aggregate_artifacts": [
+    "aggregate_output.json",
+    "aggregate_status.json",
+    "aggregate_run.log"
+  ],
+  "scale_modulus_ids": [
+    "b20_i0",
+    "b20_i1",
+    "b28_i0",
+    "b28_i1",
+    "b36_i0",
+    "b36_i1",
+    "b44_i0",
+    "b44_i1",
+    "b60_i0",
+    "b60_i1",
+    "b92_i0",
+    "b92_i1"
+  ],
+  "scale_artifact_suffixes": [
+    "_output.json",
+    "_status.json",
+    "_run.log",
+    "_traces.jsonl.gz"
+  ],
+  "trace_format": "deterministic gzip JSON Lines with mtime zero and one full accepted-parameter record per line after a header",
+  "hash_manifest": "SHA256SUMS.txt"
+}

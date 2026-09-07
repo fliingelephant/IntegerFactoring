@@ -1,0 +1,3336 @@
+{
+  "case": {
+    "generation_factor_rows": 2,
+    "modulus": {
+      "actual_bits": 28,
+      "balance_ratio": 1.1144427382203184,
+      "generation": {
+        "p": {
+          "candidate_stream_attempts": 1,
+          "seed": 191513160268028434093355519626466625632
+        },
+        "q": {
+          "candidate_stream_attempts": 1,
+          "seed": 60301821806340188133369980855622182390
+        }
+      },
+      "modulus_id": "b28_i1",
+      "n": 170611297,
+      "p_offline": 12373,
+      "prime_bits": [
+        14,
+        14
+      ],
+      "q_offline": 13789,
+      "target_bits": 28
+    },
+    "policy_rows": 896,
+    "policy_summaries": {
+      "direct_1_2": {
+        "attempts": 64,
+        "charged_cost_comparison": {
+          "Q_calls": {
+            "fair_cost_per_success": {
+              "decimal": 933.0,
+              "denominator": 1,
+              "numerator": 933
+            },
+            "fair_to_minimum_ratio": {
+              "decimal": 1.045964125560538,
+              "denominator": 892,
+              "numerator": 933
+            },
+            "minimum_cost_per_success": {
+              "decimal": 892.0,
+              "denominator": 1,
+              "numerator": 892
+            }
+          },
+          "branch_fair_bits": {
+            "fair_cost_per_success": {
+              "decimal": 882.0,
+              "denominator": 1,
+              "numerator": 882
+            },
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0
+            }
+          },
+          "floor_sum_calls": {
+            "fair_cost_per_success": {
+              "decimal": 1866.0,
+              "denominator": 1,
+              "numerator": 1866
+            },
+            "fair_to_minimum_ratio": {
+              "decimal": 1.045964125560538,
+              "denominator": 892,
+              "numerator": 933
+            },
+            "minimum_cost_per_success": {
+              "decimal": 1784.0,
+              "denominator": 1,
+              "numerator": 1784
+            }
+          },
+          "floor_sum_euclidean_iterations": {
+            "fair_cost_per_success": {
+              "decimal": 11361.0,
+              "denominator": 1,
+              "numerator": 11361
+            },
+            "fair_to_minimum_ratio": {
+              "decimal": 1.0225002250022501,
+              "denominator": 11111,
+              "numerator": 11361
+            },
+            "minimum_cost_per_success": {
+              "decimal": 11111.0,
+              "denominator": 1,
+              "numerator": 11111
+            }
+          },
+          "gcd_calls": {
+            "fair_cost_per_success": {
+              "decimal": 2812.0,
+              "denominator": 1,
+              "numerator": 2812
+            },
+            "fair_to_minimum_ratio": {
+              "decimal": 1.0426399703374118,
+              "denominator": 2697,
+              "numerator": 2812
+            },
+            "minimum_cost_per_success": {
+              "decimal": 2697.0,
+              "denominator": 1,
+              "numerator": 2697
+            }
+          },
+          "gcd_euclidean_divisions": {
+            "fair_cost_per_success": {
+              "decimal": 33597.0,
+              "denominator": 1,
+              "numerator": 33597
+            },
+            "fair_to_minimum_ratio": {
+              "decimal": 1.0464073255053414,
+              "denominator": 32107,
+              "numerator": 33597
+            },
+            "minimum_cost_per_success": {
+              "decimal": 32107.0,
+              "denominator": 1,
+              "numerator": 32107
+            }
+          },
+          "modular_inverse_euclidean_divisions": {
+            "fair_cost_per_success": {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0
+            },
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0
+            }
+          },
+          "modular_inversion_calls": {
+            "fair_cost_per_success": {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0
+            },
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0
+            }
+          },
+          "random_fair_bits": {
+            "fair_cost_per_success": {
+              "decimal": 1650.0,
+              "denominator": 1,
+              "numerator": 1650
+            },
+            "fair_to_minimum_ratio": {
+              "decimal": 2.1484375,
+              "denominator": 128,
+              "numerator": 275
+            },
+            "minimum_cost_per_success": {
+              "decimal": 768.0,
+              "denominator": 1,
+              "numerator": 768
+            }
+          }
+        },
+        "fair": {
+          "algorithm_operation_totals": {
+            "K_calls": 933,
+            "Q_calls": 933,
+            "bounded_draw_calls": 64,
+            "branch_bit_draws": 882,
+            "branch_fair_bits": 882,
+            "factor_verification_divisions": 1,
+            "floor_sum_calls": 1866,
+            "floor_sum_euclidean_iterations": 11361,
+            "gcd_calls": 2812,
+            "gcd_euclidean_divisions": 33597,
+            "maximum_gcd_operand_bits": 28,
+            "random_bit_trials": 946,
+            "random_fair_bits": 1650,
+            "screen_complement_gcd_calls": 882,
+            "screen_complement_gcd_euclidean_divisions": 10566,
+            "screen_q_gcd_calls": 933,
+            "screen_q_gcd_euclidean_divisions": 11423,
+            "screen_t_gcd_calls": 933,
+            "screen_t_gcd_euclidean_divisions": 10934,
+            "source_generation_gcd_calls": 64,
+            "source_generation_gcd_euclidean_divisions": 674
+          },
+          "branch_bit_draws": 882,
+          "cost_per_observed_success": {
+            "K_calls": {
+              "decimal": 933.0,
+              "denominator": 1,
+              "numerator": 933
+            },
+            "Q_calls": {
+              "decimal": 933.0,
+              "denominator": 1,
+              "numerator": 933
+            },
+            "bounded_draw_calls": {
+              "decimal": 64.0,
+              "denominator": 1,
+              "numerator": 64
+            },
+            "branch_bit_draws": {
+              "decimal": 882.0,
+              "denominator": 1,
+              "numerator": 882
+            },
+            "branch_fair_bits": {
+              "decimal": 882.0,
+              "denominator": 1,
+              "numerator": 882
+            },
+            "factor_verification_divisions": {
+              "decimal": 1.0,
+              "denominator": 1,
+              "numerator": 1
+            },
+            "floor_sum_calls": {
+              "decimal": 1866.0,
+              "denominator": 1,
+              "numerator": 1866
+            },
+            "floor_sum_euclidean_iterations": {
+              "decimal": 11361.0,
+              "denominator": 1,
+              "numerator": 11361
+            },
+            "gcd_calls": {
+              "decimal": 2812.0,
+              "denominator": 1,
+              "numerator": 2812
+            },
+            "gcd_euclidean_divisions": {
+              "decimal": 33597.0,
+              "denominator": 1,
+              "numerator": 33597
+            },
+            "random_bit_trials": {
+              "decimal": 946.0,
+              "denominator": 1,
+              "numerator": 946
+            },
+            "random_fair_bits": {
+              "decimal": 1650.0,
+              "denominator": 1,
+              "numerator": 1650
+            },
+            "screen_complement_gcd_calls": {
+              "decimal": 882.0,
+              "denominator": 1,
+              "numerator": 882
+            },
+            "screen_complement_gcd_euclidean_divisions": {
+              "decimal": 10566.0,
+              "denominator": 1,
+              "numerator": 10566
+            },
+            "screen_q_gcd_calls": {
+              "decimal": 933.0,
+              "denominator": 1,
+              "numerator": 933
+            },
+            "screen_q_gcd_euclidean_divisions": {
+              "decimal": 11423.0,
+              "denominator": 1,
+              "numerator": 11423
+            },
+            "screen_t_gcd_calls": {
+              "decimal": 933.0,
+              "denominator": 1,
+              "numerator": 933
+            },
+            "screen_t_gcd_euclidean_divisions": {
+              "decimal": 10934.0,
+              "denominator": 1,
+              "numerator": 10934
+            },
+            "source_generation_gcd_calls": {
+              "decimal": 64.0,
+              "denominator": 1,
+              "numerator": 64
+            },
+            "source_generation_gcd_euclidean_divisions": {
+              "decimal": 674.0,
+              "denominator": 1,
+              "numerator": 674
+            }
+          },
+          "count_factor_successes": 0,
+          "first_hit_stage_maximum": null,
+          "first_hit_stage_mean": null,
+          "first_hit_stage_minimum": null,
+          "generation_factor_successes": 1,
+          "output_type_counts": {
+            "generation_factor": 1,
+            "stopping_failure": 63
+          },
+          "stopping_reason_counts": {
+            "empty_side": 51,
+            "paired_denominator_generation_factor": 1,
+            "t_at_most_one": 12
+          },
+          "total_successes": 1
+        },
+        "fair_descent_operation_totals": {
+          "K_calls": 933,
+          "Q_calls": 933,
+          "branch_bit_draws": 882,
+          "branch_fair_bits": 882,
+          "floor_sum_calls": 1866,
+          "floor_sum_euclidean_iterations": 11361,
+          "gcd_calls": 2748,
+          "gcd_euclidean_divisions": 32923,
+          "maximum_gcd_operand_bits": 28,
+          "random_bit_trials": 882,
+          "random_fair_bits": 882,
+          "screen_complement_gcd_calls": 882,
+          "screen_complement_gcd_euclidean_divisions": 10566,
+          "screen_q_gcd_calls": 933,
+          "screen_q_gcd_euclidean_divisions": 11423,
+          "screen_t_gcd_calls": 933,
+          "screen_t_gcd_euclidean_divisions": 10934
+        },
+        "minimum": {
+          "algorithm_operation_totals": {
+            "K_calls": 892,
+            "Q_calls": 892,
+            "bounded_draw_calls": 64,
+            "factor_verification_divisions": 1,
+            "floor_sum_calls": 1784,
+            "floor_sum_euclidean_iterations": 11111,
+            "gcd_calls": 2697,
+            "gcd_euclidean_divisions": 32107,
+            "maximum_gcd_operand_bits": 28,
+            "random_bit_trials": 64,
+            "random_fair_bits": 768,
+            "screen_complement_gcd_calls": 849,
+            "screen_complement_gcd_euclidean_divisions": 10230,
+            "screen_q_gcd_calls": 892,
+            "screen_q_gcd_euclidean_divisions": 10838,
+            "screen_t_gcd_calls": 892,
+            "screen_t_gcd_euclidean_divisions": 10365,
+            "source_generation_gcd_calls": 64,
+            "source_generation_gcd_euclidean_divisions": 674
+          },
+          "cost_per_observed_success": {
+            "K_calls": {
+              "decimal": 892.0,
+              "denominator": 1,
+              "numerator": 892
+            },
+            "Q_calls": {
+              "decimal": 892.0,
+              "denominator": 1,
+              "numerator": 892
+            },
+            "bounded_draw_calls": {
+              "decimal": 64.0,
+              "denominator": 1,
+              "numerator": 64
+            },
+            "factor_verification_divisions": {
+              "decimal": 1.0,
+              "denominator": 1,
+              "numerator": 1
+            },
+            "floor_sum_calls": {
+              "decimal": 1784.0,
+              "denominator": 1,
+              "numerator": 1784
+            },
+            "floor_sum_euclidean_iterations": {
+              "decimal": 11111.0,
+              "denominator": 1,
+              "numerator": 11111
+            },
+            "gcd_calls": {
+              "decimal": 2697.0,
+              "denominator": 1,
+              "numerator": 2697
+            },
+            "gcd_euclidean_divisions": {
+              "decimal": 32107.0,
+              "denominator": 1,
+              "numerator": 32107
+            },
+            "random_bit_trials": {
+              "decimal": 64.0,
+              "denominator": 1,
+              "numerator": 64
+            },
+            "random_fair_bits": {
+              "decimal": 768.0,
+              "denominator": 1,
+              "numerator": 768
+            },
+            "screen_complement_gcd_calls": {
+              "decimal": 849.0,
+              "denominator": 1,
+              "numerator": 849
+            },
+            "screen_complement_gcd_euclidean_divisions": {
+              "decimal": 10230.0,
+              "denominator": 1,
+              "numerator": 10230
+            },
+            "screen_q_gcd_calls": {
+              "decimal": 892.0,
+              "denominator": 1,
+              "numerator": 892
+            },
+            "screen_q_gcd_euclidean_divisions": {
+              "decimal": 10838.0,
+              "denominator": 1,
+              "numerator": 10838
+            },
+            "screen_t_gcd_calls": {
+              "decimal": 892.0,
+              "denominator": 1,
+              "numerator": 892
+            },
+            "screen_t_gcd_euclidean_divisions": {
+              "decimal": 10365.0,
+              "denominator": 1,
+              "numerator": 10365
+            },
+            "source_generation_gcd_calls": {
+              "decimal": 64.0,
+              "denominator": 1,
+              "numerator": 64
+            },
+            "source_generation_gcd_euclidean_divisions": {
+              "decimal": 674.0,
+              "denominator": 1,
+              "numerator": 674
+            }
+          },
+          "count_factor_successes": 0,
+          "generation_factor_successes": 1,
+          "output_type_counts": {
+            "generation_factor": 1,
+            "stopping_failure": 63
+          },
+          "total_successes": 1
+        },
+        "minimum_descent_operation_totals": {
+          "K_calls": 892,
+          "Q_calls": 892,
+          "floor_sum_calls": 1784,
+          "floor_sum_euclidean_iterations": 11111,
+          "gcd_calls": 2633,
+          "gcd_euclidean_divisions": 31433,
+          "maximum_gcd_operand_bits": 28,
+          "screen_complement_gcd_calls": 849,
+          "screen_complement_gcd_euclidean_divisions": 10230,
+          "screen_q_gcd_calls": 892,
+          "screen_q_gcd_euclidean_divisions": 10838,
+          "screen_t_gcd_calls": 892,
+          "screen_t_gcd_euclidean_divisions": 10365
+        },
+        "policy": "direct_1_2",
+        "rows_with_anomalies": 0,
+        "source_transform_operation_totals": {
+          "bounded_draw_calls": 64,
+          "factor_verification_divisions": 1,
+          "gcd_calls": 64,
+          "gcd_euclidean_divisions": 674,
+          "random_bit_trials": 64,
+          "random_fair_bits": 768,
+          "source_generation_gcd_calls": 64,
+          "source_generation_gcd_euclidean_divisions": 674
+        }
+      },
+      "direct_1_4": {
+        "attempts": 64,
+        "charged_cost_comparison": {
+          "Q_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "branch_fair_bits": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "floor_sum_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "floor_sum_euclidean_iterations": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "gcd_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "gcd_euclidean_divisions": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "modular_inverse_euclidean_divisions": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "modular_inversion_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "random_fair_bits": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          }
+        },
+        "fair": {
+          "algorithm_operation_totals": {
+            "K_calls": 500,
+            "Q_calls": 500,
+            "bounded_draw_calls": 64,
+            "branch_bit_draws": 445,
+            "branch_fair_bits": 445,
+            "floor_sum_calls": 1000,
+            "floor_sum_euclidean_iterations": 3942,
+            "gcd_calls": 1509,
+            "gcd_euclidean_divisions": 12090,
+            "maximum_gcd_operand_bits": 28,
+            "random_bit_trials": 509,
+            "random_fair_bits": 765,
+            "screen_complement_gcd_calls": 445,
+            "screen_complement_gcd_euclidean_divisions": 3593,
+            "screen_q_gcd_calls": 500,
+            "screen_q_gcd_euclidean_divisions": 4191,
+            "screen_t_gcd_calls": 500,
+            "screen_t_gcd_euclidean_divisions": 3903,
+            "source_generation_gcd_calls": 64,
+            "source_generation_gcd_euclidean_divisions": 403
+          },
+          "branch_bit_draws": 445,
+          "cost_per_observed_success": null,
+          "count_factor_successes": 0,
+          "first_hit_stage_maximum": null,
+          "first_hit_stage_mean": null,
+          "first_hit_stage_minimum": null,
+          "generation_factor_successes": 0,
+          "output_type_counts": {
+            "stopping_failure": 64
+          },
+          "stopping_reason_counts": {
+            "empty_side": 55,
+            "t_at_most_one": 9
+          },
+          "total_successes": 0
+        },
+        "fair_descent_operation_totals": {
+          "K_calls": 500,
+          "Q_calls": 500,
+          "branch_bit_draws": 445,
+          "branch_fair_bits": 445,
+          "floor_sum_calls": 1000,
+          "floor_sum_euclidean_iterations": 3942,
+          "gcd_calls": 1445,
+          "gcd_euclidean_divisions": 11687,
+          "maximum_gcd_operand_bits": 28,
+          "random_bit_trials": 445,
+          "random_fair_bits": 445,
+          "screen_complement_gcd_calls": 445,
+          "screen_complement_gcd_euclidean_divisions": 3593,
+          "screen_q_gcd_calls": 500,
+          "screen_q_gcd_euclidean_divisions": 4191,
+          "screen_t_gcd_calls": 500,
+          "screen_t_gcd_euclidean_divisions": 3903
+        },
+        "minimum": {
+          "algorithm_operation_totals": {
+            "K_calls": 451,
+            "Q_calls": 451,
+            "bounded_draw_calls": 64,
+            "floor_sum_calls": 902,
+            "floor_sum_euclidean_iterations": 3660,
+            "gcd_calls": 1373,
+            "gcd_euclidean_divisions": 11134,
+            "maximum_gcd_operand_bits": 28,
+            "random_bit_trials": 64,
+            "random_fair_bits": 320,
+            "screen_complement_gcd_calls": 407,
+            "screen_complement_gcd_euclidean_divisions": 3387,
+            "screen_q_gcd_calls": 451,
+            "screen_q_gcd_euclidean_divisions": 3823,
+            "screen_t_gcd_calls": 451,
+            "screen_t_gcd_euclidean_divisions": 3521,
+            "source_generation_gcd_calls": 64,
+            "source_generation_gcd_euclidean_divisions": 403
+          },
+          "cost_per_observed_success": null,
+          "count_factor_successes": 0,
+          "generation_factor_successes": 0,
+          "output_type_counts": {
+            "stopping_failure": 64
+          },
+          "total_successes": 0
+        },
+        "minimum_descent_operation_totals": {
+          "K_calls": 451,
+          "Q_calls": 451,
+          "floor_sum_calls": 902,
+          "floor_sum_euclidean_iterations": 3660,
+          "gcd_calls": 1309,
+          "gcd_euclidean_divisions": 10731,
+          "maximum_gcd_operand_bits": 28,
+          "screen_complement_gcd_calls": 407,
+          "screen_complement_gcd_euclidean_divisions": 3387,
+          "screen_q_gcd_calls": 451,
+          "screen_q_gcd_euclidean_divisions": 3823,
+          "screen_t_gcd_calls": 451,
+          "screen_t_gcd_euclidean_divisions": 3521
+        },
+        "policy": "direct_1_4",
+        "rows_with_anomalies": 0,
+        "source_transform_operation_totals": {
+          "bounded_draw_calls": 64,
+          "gcd_calls": 64,
+          "gcd_euclidean_divisions": 403,
+          "random_bit_trials": 64,
+          "random_fair_bits": 320,
+          "source_generation_gcd_calls": 64,
+          "source_generation_gcd_euclidean_divisions": 403
+        }
+      },
+      "direct_1_8": {
+        "attempts": 64,
+        "charged_cost_comparison": {
+          "Q_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "branch_fair_bits": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "floor_sum_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "floor_sum_euclidean_iterations": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "gcd_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "gcd_euclidean_divisions": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "modular_inverse_euclidean_divisions": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "modular_inversion_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "random_fair_bits": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          }
+        },
+        "fair": {
+          "algorithm_operation_totals": {
+            "K_calls": 241,
+            "Q_calls": 241,
+            "bounded_draw_calls": 64,
+            "branch_bit_draws": 187,
+            "branch_fair_bits": 187,
+            "floor_sum_calls": 482,
+            "floor_sum_euclidean_iterations": 1275,
+            "gcd_calls": 733,
+            "gcd_euclidean_divisions": 3293,
+            "maximum_gcd_operand_bits": 28,
+            "random_bit_trials": 251,
+            "random_fair_bits": 251,
+            "screen_complement_gcd_calls": 187,
+            "screen_complement_gcd_euclidean_divisions": 863,
+            "screen_q_gcd_calls": 241,
+            "screen_q_gcd_euclidean_divisions": 1116,
+            "screen_t_gcd_calls": 241,
+            "screen_t_gcd_euclidean_divisions": 1058,
+            "source_generation_gcd_calls": 64,
+            "source_generation_gcd_euclidean_divisions": 256
+          },
+          "branch_bit_draws": 187,
+          "cost_per_observed_success": null,
+          "count_factor_successes": 0,
+          "first_hit_stage_maximum": null,
+          "first_hit_stage_mean": null,
+          "first_hit_stage_minimum": null,
+          "generation_factor_successes": 0,
+          "output_type_counts": {
+            "stopping_failure": 64
+          },
+          "stopping_reason_counts": {
+            "empty_side": 54,
+            "t_at_most_one": 10
+          },
+          "total_successes": 0
+        },
+        "fair_descent_operation_totals": {
+          "K_calls": 241,
+          "Q_calls": 241,
+          "branch_bit_draws": 187,
+          "branch_fair_bits": 187,
+          "floor_sum_calls": 482,
+          "floor_sum_euclidean_iterations": 1275,
+          "gcd_calls": 669,
+          "gcd_euclidean_divisions": 3037,
+          "maximum_gcd_operand_bits": 28,
+          "random_bit_trials": 187,
+          "random_fair_bits": 187,
+          "screen_complement_gcd_calls": 187,
+          "screen_complement_gcd_euclidean_divisions": 863,
+          "screen_q_gcd_calls": 241,
+          "screen_q_gcd_euclidean_divisions": 1116,
+          "screen_t_gcd_calls": 241,
+          "screen_t_gcd_euclidean_divisions": 1058
+        },
+        "minimum": {
+          "algorithm_operation_totals": {
+            "K_calls": 192,
+            "Q_calls": 192,
+            "bounded_draw_calls": 64,
+            "floor_sum_calls": 384,
+            "floor_sum_euclidean_iterations": 1010,
+            "gcd_calls": 576,
+            "gcd_euclidean_divisions": 2593,
+            "maximum_gcd_operand_bits": 28,
+            "random_bit_trials": 64,
+            "random_fair_bits": 64,
+            "screen_complement_gcd_calls": 128,
+            "screen_complement_gcd_euclidean_divisions": 676,
+            "screen_q_gcd_calls": 192,
+            "screen_q_gcd_euclidean_divisions": 832,
+            "screen_t_gcd_calls": 192,
+            "screen_t_gcd_euclidean_divisions": 829,
+            "source_generation_gcd_calls": 64,
+            "source_generation_gcd_euclidean_divisions": 256
+          },
+          "cost_per_observed_success": null,
+          "count_factor_successes": 0,
+          "generation_factor_successes": 0,
+          "output_type_counts": {
+            "stopping_failure": 64
+          },
+          "total_successes": 0
+        },
+        "minimum_descent_operation_totals": {
+          "K_calls": 192,
+          "Q_calls": 192,
+          "floor_sum_calls": 384,
+          "floor_sum_euclidean_iterations": 1010,
+          "gcd_calls": 512,
+          "gcd_euclidean_divisions": 2337,
+          "maximum_gcd_operand_bits": 28,
+          "screen_complement_gcd_calls": 128,
+          "screen_complement_gcd_euclidean_divisions": 676,
+          "screen_q_gcd_calls": 192,
+          "screen_q_gcd_euclidean_divisions": 832,
+          "screen_t_gcd_calls": 192,
+          "screen_t_gcd_euclidean_divisions": 829
+        },
+        "policy": "direct_1_8",
+        "rows_with_anomalies": 0,
+        "source_transform_operation_totals": {
+          "bounded_draw_calls": 64,
+          "gcd_calls": 64,
+          "gcd_euclidean_divisions": 256,
+          "random_bit_trials": 64,
+          "random_fair_bits": 64,
+          "source_generation_gcd_calls": 64,
+          "source_generation_gcd_euclidean_divisions": 256
+        }
+      },
+      "direct_3_4": {
+        "attempts": 64,
+        "charged_cost_comparison": {
+          "Q_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "branch_fair_bits": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "floor_sum_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "floor_sum_euclidean_iterations": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "gcd_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "gcd_euclidean_divisions": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "modular_inverse_euclidean_divisions": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "modular_inversion_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "random_fair_bits": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          }
+        },
+        "fair": {
+          "algorithm_operation_totals": {
+            "K_calls": 1394,
+            "Q_calls": 1394,
+            "bounded_draw_calls": 64,
+            "branch_bit_draws": 1340,
+            "branch_fair_bits": 1340,
+            "floor_sum_calls": 2788,
+            "floor_sum_euclidean_iterations": 21986,
+            "gcd_calls": 4192,
+            "gcd_euclidean_divisions": 38205,
+            "maximum_gcd_operand_bits": 28,
+            "random_bit_trials": 1404,
+            "random_fair_bits": 2556,
+            "screen_complement_gcd_calls": 1340,
+            "screen_complement_gcd_euclidean_divisions": 12040,
+            "screen_q_gcd_calls": 1394,
+            "screen_q_gcd_euclidean_divisions": 12800,
+            "screen_t_gcd_calls": 1394,
+            "screen_t_gcd_euclidean_divisions": 12446,
+            "source_generation_gcd_calls": 64,
+            "source_generation_gcd_euclidean_divisions": 919
+          },
+          "branch_bit_draws": 1340,
+          "cost_per_observed_success": null,
+          "count_factor_successes": 0,
+          "first_hit_stage_maximum": null,
+          "first_hit_stage_mean": null,
+          "first_hit_stage_minimum": null,
+          "generation_factor_successes": 0,
+          "output_type_counts": {
+            "stopping_failure": 64
+          },
+          "stopping_reason_counts": {
+            "empty_side": 54,
+            "t_at_most_one": 10
+          },
+          "total_successes": 0
+        },
+        "fair_descent_operation_totals": {
+          "K_calls": 1394,
+          "Q_calls": 1394,
+          "branch_bit_draws": 1340,
+          "branch_fair_bits": 1340,
+          "floor_sum_calls": 2788,
+          "floor_sum_euclidean_iterations": 21986,
+          "gcd_calls": 4128,
+          "gcd_euclidean_divisions": 37286,
+          "maximum_gcd_operand_bits": 28,
+          "random_bit_trials": 1340,
+          "random_fair_bits": 1340,
+          "screen_complement_gcd_calls": 1340,
+          "screen_complement_gcd_euclidean_divisions": 12040,
+          "screen_q_gcd_calls": 1394,
+          "screen_q_gcd_euclidean_divisions": 12800,
+          "screen_t_gcd_calls": 1394,
+          "screen_t_gcd_euclidean_divisions": 12446
+        },
+        "minimum": {
+          "algorithm_operation_totals": {
+            "K_calls": 1352,
+            "Q_calls": 1352,
+            "bounded_draw_calls": 64,
+            "floor_sum_calls": 2704,
+            "floor_sum_euclidean_iterations": 21749,
+            "gcd_calls": 4080,
+            "gcd_euclidean_divisions": 37096,
+            "maximum_gcd_operand_bits": 28,
+            "random_bit_trials": 64,
+            "random_fair_bits": 1216,
+            "screen_complement_gcd_calls": 1312,
+            "screen_complement_gcd_euclidean_divisions": 11944,
+            "screen_q_gcd_calls": 1352,
+            "screen_q_gcd_euclidean_divisions": 12207,
+            "screen_t_gcd_calls": 1352,
+            "screen_t_gcd_euclidean_divisions": 12026,
+            "source_generation_gcd_calls": 64,
+            "source_generation_gcd_euclidean_divisions": 919
+          },
+          "cost_per_observed_success": null,
+          "count_factor_successes": 0,
+          "generation_factor_successes": 0,
+          "output_type_counts": {
+            "stopping_failure": 64
+          },
+          "total_successes": 0
+        },
+        "minimum_descent_operation_totals": {
+          "K_calls": 1352,
+          "Q_calls": 1352,
+          "floor_sum_calls": 2704,
+          "floor_sum_euclidean_iterations": 21749,
+          "gcd_calls": 4016,
+          "gcd_euclidean_divisions": 36177,
+          "maximum_gcd_operand_bits": 28,
+          "screen_complement_gcd_calls": 1312,
+          "screen_complement_gcd_euclidean_divisions": 11944,
+          "screen_q_gcd_calls": 1352,
+          "screen_q_gcd_euclidean_divisions": 12207,
+          "screen_t_gcd_calls": 1352,
+          "screen_t_gcd_euclidean_divisions": 12026
+        },
+        "policy": "direct_3_4",
+        "rows_with_anomalies": 0,
+        "source_transform_operation_totals": {
+          "bounded_draw_calls": 64,
+          "gcd_calls": 64,
+          "gcd_euclidean_divisions": 919,
+          "random_bit_trials": 64,
+          "random_fair_bits": 1216,
+          "source_generation_gcd_calls": 64,
+          "source_generation_gcd_euclidean_divisions": 919
+        }
+      },
+      "direct_3_8": {
+        "attempts": 64,
+        "charged_cost_comparison": {
+          "Q_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "branch_fair_bits": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "floor_sum_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "floor_sum_euclidean_iterations": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "gcd_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "gcd_euclidean_divisions": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "modular_inverse_euclidean_divisions": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "modular_inversion_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "random_fair_bits": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          }
+        },
+        "fair": {
+          "algorithm_operation_totals": {
+            "K_calls": 687,
+            "Q_calls": 687,
+            "bounded_draw_calls": 64,
+            "branch_bit_draws": 641,
+            "branch_fair_bits": 641,
+            "floor_sum_calls": 1374,
+            "floor_sum_euclidean_iterations": 6460,
+            "gcd_calls": 2079,
+            "gcd_euclidean_divisions": 22035,
+            "maximum_gcd_operand_bits": 28,
+            "random_bit_trials": 705,
+            "random_fair_bits": 1153,
+            "screen_complement_gcd_calls": 641,
+            "screen_complement_gcd_euclidean_divisions": 6741,
+            "screen_q_gcd_calls": 687,
+            "screen_q_gcd_euclidean_divisions": 7663,
+            "screen_t_gcd_calls": 687,
+            "screen_t_gcd_euclidean_divisions": 7122,
+            "source_generation_gcd_calls": 64,
+            "source_generation_gcd_euclidean_divisions": 509
+          },
+          "branch_bit_draws": 641,
+          "cost_per_observed_success": null,
+          "count_factor_successes": 0,
+          "first_hit_stage_maximum": null,
+          "first_hit_stage_mean": null,
+          "first_hit_stage_minimum": null,
+          "generation_factor_successes": 0,
+          "output_type_counts": {
+            "stopping_failure": 64
+          },
+          "stopping_reason_counts": {
+            "empty_side": 46,
+            "t_at_most_one": 18
+          },
+          "total_successes": 0
+        },
+        "fair_descent_operation_totals": {
+          "K_calls": 687,
+          "Q_calls": 687,
+          "branch_bit_draws": 641,
+          "branch_fair_bits": 641,
+          "floor_sum_calls": 1374,
+          "floor_sum_euclidean_iterations": 6460,
+          "gcd_calls": 2015,
+          "gcd_euclidean_divisions": 21526,
+          "maximum_gcd_operand_bits": 28,
+          "random_bit_trials": 641,
+          "random_fair_bits": 641,
+          "screen_complement_gcd_calls": 641,
+          "screen_complement_gcd_euclidean_divisions": 6741,
+          "screen_q_gcd_calls": 687,
+          "screen_q_gcd_euclidean_divisions": 7663,
+          "screen_t_gcd_calls": 687,
+          "screen_t_gcd_euclidean_divisions": 7122
+        },
+        "minimum": {
+          "algorithm_operation_totals": {
+            "K_calls": 655,
+            "Q_calls": 655,
+            "bounded_draw_calls": 64,
+            "floor_sum_calls": 1310,
+            "floor_sum_euclidean_iterations": 6255,
+            "gcd_calls": 1978,
+            "gcd_euclidean_divisions": 20791,
+            "maximum_gcd_operand_bits": 28,
+            "random_bit_trials": 64,
+            "random_fair_bits": 512,
+            "screen_complement_gcd_calls": 604,
+            "screen_complement_gcd_euclidean_divisions": 6456,
+            "screen_q_gcd_calls": 655,
+            "screen_q_gcd_euclidean_divisions": 7184,
+            "screen_t_gcd_calls": 655,
+            "screen_t_gcd_euclidean_divisions": 6642,
+            "source_generation_gcd_calls": 64,
+            "source_generation_gcd_euclidean_divisions": 509
+          },
+          "cost_per_observed_success": null,
+          "count_factor_successes": 0,
+          "generation_factor_successes": 0,
+          "output_type_counts": {
+            "stopping_failure": 64
+          },
+          "total_successes": 0
+        },
+        "minimum_descent_operation_totals": {
+          "K_calls": 655,
+          "Q_calls": 655,
+          "floor_sum_calls": 1310,
+          "floor_sum_euclidean_iterations": 6255,
+          "gcd_calls": 1914,
+          "gcd_euclidean_divisions": 20282,
+          "maximum_gcd_operand_bits": 28,
+          "screen_complement_gcd_calls": 604,
+          "screen_complement_gcd_euclidean_divisions": 6456,
+          "screen_q_gcd_calls": 655,
+          "screen_q_gcd_euclidean_divisions": 7184,
+          "screen_t_gcd_calls": 655,
+          "screen_t_gcd_euclidean_divisions": 6642
+        },
+        "policy": "direct_3_8",
+        "rows_with_anomalies": 0,
+        "source_transform_operation_totals": {
+          "bounded_draw_calls": 64,
+          "gcd_calls": 64,
+          "gcd_euclidean_divisions": 509,
+          "random_bit_trials": 64,
+          "random_fair_bits": 512,
+          "source_generation_gcd_calls": 64,
+          "source_generation_gcd_euclidean_divisions": 509
+        }
+      },
+      "inverse_1_2": {
+        "attempts": 64,
+        "charged_cost_comparison": {
+          "Q_calls": {
+            "fair_cost_per_success": {
+              "decimal": 1615.0,
+              "denominator": 1,
+              "numerator": 1615
+            },
+            "fair_to_minimum_ratio": {
+              "decimal": 1.0253968253968253,
+              "denominator": 315,
+              "numerator": 323
+            },
+            "minimum_cost_per_success": {
+              "decimal": 1575.0,
+              "denominator": 1,
+              "numerator": 1575
+            }
+          },
+          "branch_fair_bits": {
+            "fair_cost_per_success": {
+              "decimal": 1587.0,
+              "denominator": 1,
+              "numerator": 1587
+            },
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0
+            }
+          },
+          "floor_sum_calls": {
+            "fair_cost_per_success": {
+              "decimal": 3230.0,
+              "denominator": 1,
+              "numerator": 3230
+            },
+            "fair_to_minimum_ratio": {
+              "decimal": 1.0253968253968253,
+              "denominator": 315,
+              "numerator": 323
+            },
+            "minimum_cost_per_success": {
+              "decimal": 3150.0,
+              "denominator": 1,
+              "numerator": 3150
+            }
+          },
+          "floor_sum_euclidean_iterations": {
+            "fair_cost_per_success": {
+              "decimal": 26564.0,
+              "denominator": 1,
+              "numerator": 26564
+            },
+            "fair_to_minimum_ratio": {
+              "decimal": 1.0106528686653478,
+              "denominator": 6571,
+              "numerator": 6641
+            },
+            "minimum_cost_per_success": {
+              "decimal": 26284.0,
+              "denominator": 1,
+              "numerator": 26284
+            }
+          },
+          "gcd_calls": {
+            "fair_cost_per_success": {
+              "decimal": 4881.0,
+              "denominator": 1,
+              "numerator": 4881
+            },
+            "fair_to_minimum_ratio": {
+              "decimal": 1.0239144115796097,
+              "denominator": 1589,
+              "numerator": 1627
+            },
+            "minimum_cost_per_success": {
+              "decimal": 4767.0,
+              "denominator": 1,
+              "numerator": 4767
+            }
+          },
+          "gcd_euclidean_divisions": {
+            "fair_cost_per_success": {
+              "decimal": 43785.0,
+              "denominator": 1,
+              "numerator": 43785
+            },
+            "fair_to_minimum_ratio": {
+              "decimal": 1.0027481964960494,
+              "denominator": 2911,
+              "numerator": 2919
+            },
+            "minimum_cost_per_success": {
+              "decimal": 43665.0,
+              "denominator": 1,
+              "numerator": 43665
+            }
+          },
+          "modular_inverse_euclidean_divisions": {
+            "fair_cost_per_success": {
+              "decimal": 609.0,
+              "denominator": 1,
+              "numerator": 609
+            },
+            "fair_to_minimum_ratio": {
+              "decimal": 1.0,
+              "denominator": 1,
+              "numerator": 1
+            },
+            "minimum_cost_per_success": {
+              "decimal": 609.0,
+              "denominator": 1,
+              "numerator": 609
+            }
+          },
+          "modular_inversion_calls": {
+            "fair_cost_per_success": {
+              "decimal": 63.0,
+              "denominator": 1,
+              "numerator": 63
+            },
+            "fair_to_minimum_ratio": {
+              "decimal": 1.0,
+              "denominator": 1,
+              "numerator": 1
+            },
+            "minimum_cost_per_success": {
+              "decimal": 63.0,
+              "denominator": 1,
+              "numerator": 63
+            }
+          },
+          "random_fair_bits": {
+            "fair_cost_per_success": {
+              "decimal": 2355.0,
+              "denominator": 1,
+              "numerator": 2355
+            },
+            "fair_to_minimum_ratio": {
+              "decimal": 3.06640625,
+              "denominator": 256,
+              "numerator": 785
+            },
+            "minimum_cost_per_success": {
+              "decimal": 768.0,
+              "denominator": 1,
+              "numerator": 768
+            }
+          }
+        },
+        "fair": {
+          "algorithm_operation_totals": {
+            "K_calls": 1615,
+            "Q_calls": 1615,
+            "bounded_draw_calls": 64,
+            "branch_bit_draws": 1587,
+            "branch_fair_bits": 1587,
+            "factor_verification_divisions": 1,
+            "floor_sum_calls": 3230,
+            "floor_sum_euclidean_iterations": 26564,
+            "gcd_calls": 4881,
+            "gcd_euclidean_divisions": 43785,
+            "maximum_gcd_operand_bits": 28,
+            "modular_inverse_euclidean_divisions": 609,
+            "modular_inversion_calls": 63,
+            "random_bit_trials": 1651,
+            "random_fair_bits": 2355,
+            "screen_complement_gcd_calls": 1599,
+            "screen_complement_gcd_euclidean_divisions": 14315,
+            "screen_q_gcd_calls": 1603,
+            "screen_q_gcd_euclidean_divisions": 14415,
+            "screen_t_gcd_calls": 1615,
+            "screen_t_gcd_euclidean_divisions": 14381,
+            "source_generation_gcd_calls": 64,
+            "source_generation_gcd_euclidean_divisions": 674,
+            "source_transform_modular_inverse_euclidean_divisions": 609,
+            "source_transform_modular_inversion_calls": 63
+          },
+          "branch_bit_draws": 1587,
+          "cost_per_observed_success": {
+            "K_calls": {
+              "decimal": 1615.0,
+              "denominator": 1,
+              "numerator": 1615
+            },
+            "Q_calls": {
+              "decimal": 1615.0,
+              "denominator": 1,
+              "numerator": 1615
+            },
+            "bounded_draw_calls": {
+              "decimal": 64.0,
+              "denominator": 1,
+              "numerator": 64
+            },
+            "branch_bit_draws": {
+              "decimal": 1587.0,
+              "denominator": 1,
+              "numerator": 1587
+            },
+            "branch_fair_bits": {
+              "decimal": 1587.0,
+              "denominator": 1,
+              "numerator": 1587
+            },
+            "factor_verification_divisions": {
+              "decimal": 1.0,
+              "denominator": 1,
+              "numerator": 1
+            },
+            "floor_sum_calls": {
+              "decimal": 3230.0,
+              "denominator": 1,
+              "numerator": 3230
+            },
+            "floor_sum_euclidean_iterations": {
+              "decimal": 26564.0,
+              "denominator": 1,
+              "numerator": 26564
+            },
+            "gcd_calls": {
+              "decimal": 4881.0,
+              "denominator": 1,
+              "numerator": 4881
+            },
+            "gcd_euclidean_divisions": {
+              "decimal": 43785.0,
+              "denominator": 1,
+              "numerator": 43785
+            },
+            "modular_inverse_euclidean_divisions": {
+              "decimal": 609.0,
+              "denominator": 1,
+              "numerator": 609
+            },
+            "modular_inversion_calls": {
+              "decimal": 63.0,
+              "denominator": 1,
+              "numerator": 63
+            },
+            "random_bit_trials": {
+              "decimal": 1651.0,
+              "denominator": 1,
+              "numerator": 1651
+            },
+            "random_fair_bits": {
+              "decimal": 2355.0,
+              "denominator": 1,
+              "numerator": 2355
+            },
+            "screen_complement_gcd_calls": {
+              "decimal": 1599.0,
+              "denominator": 1,
+              "numerator": 1599
+            },
+            "screen_complement_gcd_euclidean_divisions": {
+              "decimal": 14315.0,
+              "denominator": 1,
+              "numerator": 14315
+            },
+            "screen_q_gcd_calls": {
+              "decimal": 1603.0,
+              "denominator": 1,
+              "numerator": 1603
+            },
+            "screen_q_gcd_euclidean_divisions": {
+              "decimal": 14415.0,
+              "denominator": 1,
+              "numerator": 14415
+            },
+            "screen_t_gcd_calls": {
+              "decimal": 1615.0,
+              "denominator": 1,
+              "numerator": 1615
+            },
+            "screen_t_gcd_euclidean_divisions": {
+              "decimal": 14381.0,
+              "denominator": 1,
+              "numerator": 14381
+            },
+            "source_generation_gcd_calls": {
+              "decimal": 64.0,
+              "denominator": 1,
+              "numerator": 64
+            },
+            "source_generation_gcd_euclidean_divisions": {
+              "decimal": 674.0,
+              "denominator": 1,
+              "numerator": 674
+            },
+            "source_transform_modular_inverse_euclidean_divisions": {
+              "decimal": 609.0,
+              "denominator": 1,
+              "numerator": 609
+            },
+            "source_transform_modular_inversion_calls": {
+              "decimal": 63.0,
+              "denominator": 1,
+              "numerator": 63
+            }
+          },
+          "count_factor_successes": 0,
+          "first_hit_stage_maximum": null,
+          "first_hit_stage_mean": null,
+          "first_hit_stage_minimum": null,
+          "generation_factor_successes": 1,
+          "output_type_counts": {
+            "generation_factor": 1,
+            "stopping_failure": 63
+          },
+          "stopping_reason_counts": {
+            "empty_side": 28,
+            "paired_denominator_generation_factor": 1,
+            "t_at_most_one": 35
+          },
+          "total_successes": 1
+        },
+        "fair_descent_operation_totals": {
+          "K_calls": 1615,
+          "Q_calls": 1615,
+          "branch_bit_draws": 1587,
+          "branch_fair_bits": 1587,
+          "floor_sum_calls": 3230,
+          "floor_sum_euclidean_iterations": 26564,
+          "gcd_calls": 4817,
+          "gcd_euclidean_divisions": 43111,
+          "maximum_gcd_operand_bits": 28,
+          "random_bit_trials": 1587,
+          "random_fair_bits": 1587,
+          "screen_complement_gcd_calls": 1599,
+          "screen_complement_gcd_euclidean_divisions": 14315,
+          "screen_q_gcd_calls": 1603,
+          "screen_q_gcd_euclidean_divisions": 14415,
+          "screen_t_gcd_calls": 1615,
+          "screen_t_gcd_euclidean_divisions": 14381
+        },
+        "minimum": {
+          "algorithm_operation_totals": {
+            "K_calls": 1575,
+            "Q_calls": 1575,
+            "bounded_draw_calls": 64,
+            "factor_verification_divisions": 1,
+            "floor_sum_calls": 3150,
+            "floor_sum_euclidean_iterations": 26284,
+            "gcd_calls": 4767,
+            "gcd_euclidean_divisions": 43665,
+            "maximum_gcd_operand_bits": 28,
+            "modular_inverse_euclidean_divisions": 609,
+            "modular_inversion_calls": 63,
+            "random_bit_trials": 64,
+            "random_fair_bits": 768,
+            "screen_complement_gcd_calls": 1563,
+            "screen_complement_gcd_euclidean_divisions": 14582,
+            "screen_q_gcd_calls": 1565,
+            "screen_q_gcd_euclidean_divisions": 13968,
+            "screen_t_gcd_calls": 1575,
+            "screen_t_gcd_euclidean_divisions": 14441,
+            "source_generation_gcd_calls": 64,
+            "source_generation_gcd_euclidean_divisions": 674,
+            "source_transform_modular_inverse_euclidean_divisions": 609,
+            "source_transform_modular_inversion_calls": 63
+          },
+          "cost_per_observed_success": {
+            "K_calls": {
+              "decimal": 1575.0,
+              "denominator": 1,
+              "numerator": 1575
+            },
+            "Q_calls": {
+              "decimal": 1575.0,
+              "denominator": 1,
+              "numerator": 1575
+            },
+            "bounded_draw_calls": {
+              "decimal": 64.0,
+              "denominator": 1,
+              "numerator": 64
+            },
+            "factor_verification_divisions": {
+              "decimal": 1.0,
+              "denominator": 1,
+              "numerator": 1
+            },
+            "floor_sum_calls": {
+              "decimal": 3150.0,
+              "denominator": 1,
+              "numerator": 3150
+            },
+            "floor_sum_euclidean_iterations": {
+              "decimal": 26284.0,
+              "denominator": 1,
+              "numerator": 26284
+            },
+            "gcd_calls": {
+              "decimal": 4767.0,
+              "denominator": 1,
+              "numerator": 4767
+            },
+            "gcd_euclidean_divisions": {
+              "decimal": 43665.0,
+              "denominator": 1,
+              "numerator": 43665
+            },
+            "modular_inverse_euclidean_divisions": {
+              "decimal": 609.0,
+              "denominator": 1,
+              "numerator": 609
+            },
+            "modular_inversion_calls": {
+              "decimal": 63.0,
+              "denominator": 1,
+              "numerator": 63
+            },
+            "random_bit_trials": {
+              "decimal": 64.0,
+              "denominator": 1,
+              "numerator": 64
+            },
+            "random_fair_bits": {
+              "decimal": 768.0,
+              "denominator": 1,
+              "numerator": 768
+            },
+            "screen_complement_gcd_calls": {
+              "decimal": 1563.0,
+              "denominator": 1,
+              "numerator": 1563
+            },
+            "screen_complement_gcd_euclidean_divisions": {
+              "decimal": 14582.0,
+              "denominator": 1,
+              "numerator": 14582
+            },
+            "screen_q_gcd_calls": {
+              "decimal": 1565.0,
+              "denominator": 1,
+              "numerator": 1565
+            },
+            "screen_q_gcd_euclidean_divisions": {
+              "decimal": 13968.0,
+              "denominator": 1,
+              "numerator": 13968
+            },
+            "screen_t_gcd_calls": {
+              "decimal": 1575.0,
+              "denominator": 1,
+              "numerator": 1575
+            },
+            "screen_t_gcd_euclidean_divisions": {
+              "decimal": 14441.0,
+              "denominator": 1,
+              "numerator": 14441
+            },
+            "source_generation_gcd_calls": {
+              "decimal": 64.0,
+              "denominator": 1,
+              "numerator": 64
+            },
+            "source_generation_gcd_euclidean_divisions": {
+              "decimal": 674.0,
+              "denominator": 1,
+              "numerator": 674
+            },
+            "source_transform_modular_inverse_euclidean_divisions": {
+              "decimal": 609.0,
+              "denominator": 1,
+              "numerator": 609
+            },
+            "source_transform_modular_inversion_calls": {
+              "decimal": 63.0,
+              "denominator": 1,
+              "numerator": 63
+            }
+          },
+          "count_factor_successes": 0,
+          "generation_factor_successes": 1,
+          "output_type_counts": {
+            "generation_factor": 1,
+            "stopping_failure": 63
+          },
+          "total_successes": 1
+        },
+        "minimum_descent_operation_totals": {
+          "K_calls": 1575,
+          "Q_calls": 1575,
+          "floor_sum_calls": 3150,
+          "floor_sum_euclidean_iterations": 26284,
+          "gcd_calls": 4703,
+          "gcd_euclidean_divisions": 42991,
+          "maximum_gcd_operand_bits": 28,
+          "screen_complement_gcd_calls": 1563,
+          "screen_complement_gcd_euclidean_divisions": 14582,
+          "screen_q_gcd_calls": 1565,
+          "screen_q_gcd_euclidean_divisions": 13968,
+          "screen_t_gcd_calls": 1575,
+          "screen_t_gcd_euclidean_divisions": 14441
+        },
+        "policy": "inverse_1_2",
+        "rows_with_anomalies": 0,
+        "source_transform_operation_totals": {
+          "bounded_draw_calls": 64,
+          "factor_verification_divisions": 1,
+          "gcd_calls": 64,
+          "gcd_euclidean_divisions": 674,
+          "modular_inverse_euclidean_divisions": 609,
+          "modular_inversion_calls": 63,
+          "random_bit_trials": 64,
+          "random_fair_bits": 768,
+          "source_generation_gcd_calls": 64,
+          "source_generation_gcd_euclidean_divisions": 674,
+          "source_transform_modular_inverse_euclidean_divisions": 609,
+          "source_transform_modular_inversion_calls": 63
+        }
+      },
+      "inverse_1_4": {
+        "attempts": 64,
+        "charged_cost_comparison": {
+          "Q_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "branch_fair_bits": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "floor_sum_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "floor_sum_euclidean_iterations": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "gcd_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "gcd_euclidean_divisions": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "modular_inverse_euclidean_divisions": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "modular_inversion_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "random_fair_bits": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          }
+        },
+        "fair": {
+          "algorithm_operation_totals": {
+            "K_calls": 1639,
+            "Q_calls": 1639,
+            "bounded_draw_calls": 64,
+            "branch_bit_draws": 1613,
+            "branch_fair_bits": 1613,
+            "floor_sum_calls": 3278,
+            "floor_sum_euclidean_iterations": 18056,
+            "gcd_calls": 4955,
+            "gcd_euclidean_divisions": 47543,
+            "maximum_gcd_operand_bits": 28,
+            "modular_inverse_euclidean_divisions": 339,
+            "modular_inversion_calls": 64,
+            "random_bit_trials": 1677,
+            "random_fair_bits": 1933,
+            "screen_complement_gcd_calls": 1624,
+            "screen_complement_gcd_euclidean_divisions": 15476,
+            "screen_q_gcd_calls": 1628,
+            "screen_q_gcd_euclidean_divisions": 15926,
+            "screen_t_gcd_calls": 1639,
+            "screen_t_gcd_euclidean_divisions": 15738,
+            "source_generation_gcd_calls": 64,
+            "source_generation_gcd_euclidean_divisions": 403,
+            "source_transform_modular_inverse_euclidean_divisions": 339,
+            "source_transform_modular_inversion_calls": 64
+          },
+          "branch_bit_draws": 1613,
+          "cost_per_observed_success": null,
+          "count_factor_successes": 0,
+          "first_hit_stage_maximum": null,
+          "first_hit_stage_mean": null,
+          "first_hit_stage_minimum": null,
+          "generation_factor_successes": 0,
+          "output_type_counts": {
+            "stopping_failure": 64
+          },
+          "stopping_reason_counts": {
+            "empty_side": 26,
+            "t_at_most_one": 38
+          },
+          "total_successes": 0
+        },
+        "fair_descent_operation_totals": {
+          "K_calls": 1639,
+          "Q_calls": 1639,
+          "branch_bit_draws": 1613,
+          "branch_fair_bits": 1613,
+          "floor_sum_calls": 3278,
+          "floor_sum_euclidean_iterations": 18056,
+          "gcd_calls": 4891,
+          "gcd_euclidean_divisions": 47140,
+          "maximum_gcd_operand_bits": 28,
+          "random_bit_trials": 1613,
+          "random_fair_bits": 1613,
+          "screen_complement_gcd_calls": 1624,
+          "screen_complement_gcd_euclidean_divisions": 15476,
+          "screen_q_gcd_calls": 1628,
+          "screen_q_gcd_euclidean_divisions": 15926,
+          "screen_t_gcd_calls": 1639,
+          "screen_t_gcd_euclidean_divisions": 15738
+        },
+        "minimum": {
+          "algorithm_operation_totals": {
+            "K_calls": 1585,
+            "Q_calls": 1585,
+            "bounded_draw_calls": 64,
+            "floor_sum_calls": 3170,
+            "floor_sum_euclidean_iterations": 17586,
+            "gcd_calls": 4789,
+            "gcd_euclidean_divisions": 46789,
+            "maximum_gcd_operand_bits": 28,
+            "modular_inverse_euclidean_divisions": 339,
+            "modular_inversion_calls": 64,
+            "random_bit_trials": 64,
+            "random_fair_bits": 320,
+            "screen_complement_gcd_calls": 1568,
+            "screen_complement_gcd_euclidean_divisions": 15570,
+            "screen_q_gcd_calls": 1572,
+            "screen_q_gcd_euclidean_divisions": 15241,
+            "screen_t_gcd_calls": 1585,
+            "screen_t_gcd_euclidean_divisions": 15575,
+            "source_generation_gcd_calls": 64,
+            "source_generation_gcd_euclidean_divisions": 403,
+            "source_transform_modular_inverse_euclidean_divisions": 339,
+            "source_transform_modular_inversion_calls": 64
+          },
+          "cost_per_observed_success": null,
+          "count_factor_successes": 0,
+          "generation_factor_successes": 0,
+          "output_type_counts": {
+            "stopping_failure": 64
+          },
+          "total_successes": 0
+        },
+        "minimum_descent_operation_totals": {
+          "K_calls": 1585,
+          "Q_calls": 1585,
+          "floor_sum_calls": 3170,
+          "floor_sum_euclidean_iterations": 17586,
+          "gcd_calls": 4725,
+          "gcd_euclidean_divisions": 46386,
+          "maximum_gcd_operand_bits": 28,
+          "screen_complement_gcd_calls": 1568,
+          "screen_complement_gcd_euclidean_divisions": 15570,
+          "screen_q_gcd_calls": 1572,
+          "screen_q_gcd_euclidean_divisions": 15241,
+          "screen_t_gcd_calls": 1585,
+          "screen_t_gcd_euclidean_divisions": 15575
+        },
+        "policy": "inverse_1_4",
+        "rows_with_anomalies": 0,
+        "source_transform_operation_totals": {
+          "bounded_draw_calls": 64,
+          "gcd_calls": 64,
+          "gcd_euclidean_divisions": 403,
+          "modular_inverse_euclidean_divisions": 339,
+          "modular_inversion_calls": 64,
+          "random_bit_trials": 64,
+          "random_fair_bits": 320,
+          "source_generation_gcd_calls": 64,
+          "source_generation_gcd_euclidean_divisions": 403,
+          "source_transform_modular_inverse_euclidean_divisions": 339,
+          "source_transform_modular_inversion_calls": 64
+        }
+      },
+      "inverse_1_8": {
+        "attempts": 64,
+        "charged_cost_comparison": {
+          "Q_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "branch_fair_bits": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "floor_sum_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "floor_sum_euclidean_iterations": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "gcd_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "gcd_euclidean_divisions": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "modular_inverse_euclidean_divisions": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "modular_inversion_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "random_fair_bits": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          }
+        },
+        "fair": {
+          "algorithm_operation_totals": {
+            "K_calls": 1641,
+            "Q_calls": 1641,
+            "bounded_draw_calls": 64,
+            "branch_bit_draws": 1641,
+            "branch_fair_bits": 1641,
+            "floor_sum_calls": 3282,
+            "floor_sum_euclidean_iterations": 9833,
+            "gcd_calls": 4987,
+            "gcd_euclidean_divisions": 42328,
+            "maximum_gcd_operand_bits": 28,
+            "modular_inverse_euclidean_divisions": 192,
+            "modular_inversion_calls": 64,
+            "random_bit_trials": 1705,
+            "random_fair_bits": 1705,
+            "screen_complement_gcd_calls": 1641,
+            "screen_complement_gcd_euclidean_divisions": 13668,
+            "screen_q_gcd_calls": 1641,
+            "screen_q_gcd_euclidean_divisions": 14335,
+            "screen_t_gcd_calls": 1641,
+            "screen_t_gcd_euclidean_divisions": 14069,
+            "source_generation_gcd_calls": 64,
+            "source_generation_gcd_euclidean_divisions": 256,
+            "source_transform_modular_inverse_euclidean_divisions": 192,
+            "source_transform_modular_inversion_calls": 64
+          },
+          "branch_bit_draws": 1641,
+          "cost_per_observed_success": null,
+          "count_factor_successes": 0,
+          "first_hit_stage_maximum": null,
+          "first_hit_stage_mean": null,
+          "first_hit_stage_minimum": null,
+          "generation_factor_successes": 0,
+          "output_type_counts": {
+            "stopping_failure": 64
+          },
+          "stopping_reason_counts": {
+            "t_at_most_one": 64
+          },
+          "total_successes": 0
+        },
+        "fair_descent_operation_totals": {
+          "K_calls": 1641,
+          "Q_calls": 1641,
+          "branch_bit_draws": 1641,
+          "branch_fair_bits": 1641,
+          "floor_sum_calls": 3282,
+          "floor_sum_euclidean_iterations": 9833,
+          "gcd_calls": 4923,
+          "gcd_euclidean_divisions": 42072,
+          "maximum_gcd_operand_bits": 28,
+          "random_bit_trials": 1641,
+          "random_fair_bits": 1641,
+          "screen_complement_gcd_calls": 1641,
+          "screen_complement_gcd_euclidean_divisions": 13668,
+          "screen_q_gcd_calls": 1641,
+          "screen_q_gcd_euclidean_divisions": 14335,
+          "screen_t_gcd_calls": 1641,
+          "screen_t_gcd_euclidean_divisions": 14069
+        },
+        "minimum": {
+          "algorithm_operation_totals": {
+            "K_calls": 1330,
+            "Q_calls": 1330,
+            "bounded_draw_calls": 64,
+            "floor_sum_calls": 2660,
+            "floor_sum_euclidean_iterations": 7944,
+            "gcd_calls": 4054,
+            "gcd_euclidean_divisions": 32229,
+            "maximum_gcd_operand_bits": 28,
+            "modular_inverse_euclidean_divisions": 192,
+            "modular_inversion_calls": 64,
+            "random_bit_trials": 64,
+            "random_fair_bits": 64,
+            "screen_complement_gcd_calls": 1330,
+            "screen_complement_gcd_euclidean_divisions": 10522,
+            "screen_q_gcd_calls": 1330,
+            "screen_q_gcd_euclidean_divisions": 10865,
+            "screen_t_gcd_calls": 1330,
+            "screen_t_gcd_euclidean_divisions": 10586,
+            "source_generation_gcd_calls": 64,
+            "source_generation_gcd_euclidean_divisions": 256,
+            "source_transform_modular_inverse_euclidean_divisions": 192,
+            "source_transform_modular_inversion_calls": 64
+          },
+          "cost_per_observed_success": null,
+          "count_factor_successes": 0,
+          "generation_factor_successes": 0,
+          "output_type_counts": {
+            "stopping_failure": 64
+          },
+          "total_successes": 0
+        },
+        "minimum_descent_operation_totals": {
+          "K_calls": 1330,
+          "Q_calls": 1330,
+          "floor_sum_calls": 2660,
+          "floor_sum_euclidean_iterations": 7944,
+          "gcd_calls": 3990,
+          "gcd_euclidean_divisions": 31973,
+          "maximum_gcd_operand_bits": 28,
+          "screen_complement_gcd_calls": 1330,
+          "screen_complement_gcd_euclidean_divisions": 10522,
+          "screen_q_gcd_calls": 1330,
+          "screen_q_gcd_euclidean_divisions": 10865,
+          "screen_t_gcd_calls": 1330,
+          "screen_t_gcd_euclidean_divisions": 10586
+        },
+        "policy": "inverse_1_8",
+        "rows_with_anomalies": 0,
+        "source_transform_operation_totals": {
+          "bounded_draw_calls": 64,
+          "gcd_calls": 64,
+          "gcd_euclidean_divisions": 256,
+          "modular_inverse_euclidean_divisions": 192,
+          "modular_inversion_calls": 64,
+          "random_bit_trials": 64,
+          "random_fair_bits": 64,
+          "source_generation_gcd_calls": 64,
+          "source_generation_gcd_euclidean_divisions": 256,
+          "source_transform_modular_inverse_euclidean_divisions": 192,
+          "source_transform_modular_inversion_calls": 64
+        }
+      },
+      "inverse_3_4": {
+        "attempts": 64,
+        "charged_cost_comparison": {
+          "Q_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "branch_fair_bits": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "floor_sum_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "floor_sum_euclidean_iterations": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "gcd_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "gcd_euclidean_divisions": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "modular_inverse_euclidean_divisions": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "modular_inversion_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "random_fair_bits": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          }
+        },
+        "fair": {
+          "algorithm_operation_totals": {
+            "K_calls": 1652,
+            "Q_calls": 1652,
+            "bounded_draw_calls": 64,
+            "branch_bit_draws": 1629,
+            "branch_fair_bits": 1629,
+            "floor_sum_calls": 3304,
+            "floor_sum_euclidean_iterations": 31133,
+            "gcd_calls": 4997,
+            "gcd_euclidean_divisions": 39711,
+            "maximum_gcd_operand_bits": 28,
+            "modular_inverse_euclidean_divisions": 855,
+            "modular_inversion_calls": 64,
+            "random_bit_trials": 1693,
+            "random_fair_bits": 2845,
+            "screen_complement_gcd_calls": 1640,
+            "screen_complement_gcd_euclidean_divisions": 12920,
+            "screen_q_gcd_calls": 1641,
+            "screen_q_gcd_euclidean_divisions": 12949,
+            "screen_t_gcd_calls": 1652,
+            "screen_t_gcd_euclidean_divisions": 12923,
+            "source_generation_gcd_calls": 64,
+            "source_generation_gcd_euclidean_divisions": 919,
+            "source_transform_modular_inverse_euclidean_divisions": 855,
+            "source_transform_modular_inversion_calls": 64
+          },
+          "branch_bit_draws": 1629,
+          "cost_per_observed_success": null,
+          "count_factor_successes": 0,
+          "first_hit_stage_maximum": null,
+          "first_hit_stage_mean": null,
+          "first_hit_stage_minimum": null,
+          "generation_factor_successes": 0,
+          "output_type_counts": {
+            "stopping_failure": 64
+          },
+          "stopping_reason_counts": {
+            "empty_side": 23,
+            "t_at_most_one": 41
+          },
+          "total_successes": 0
+        },
+        "fair_descent_operation_totals": {
+          "K_calls": 1652,
+          "Q_calls": 1652,
+          "branch_bit_draws": 1629,
+          "branch_fair_bits": 1629,
+          "floor_sum_calls": 3304,
+          "floor_sum_euclidean_iterations": 31133,
+          "gcd_calls": 4933,
+          "gcd_euclidean_divisions": 38792,
+          "maximum_gcd_operand_bits": 28,
+          "random_bit_trials": 1629,
+          "random_fair_bits": 1629,
+          "screen_complement_gcd_calls": 1640,
+          "screen_complement_gcd_euclidean_divisions": 12920,
+          "screen_q_gcd_calls": 1641,
+          "screen_q_gcd_euclidean_divisions": 12949,
+          "screen_t_gcd_calls": 1652,
+          "screen_t_gcd_euclidean_divisions": 12923
+        },
+        "minimum": {
+          "algorithm_operation_totals": {
+            "K_calls": 1597,
+            "Q_calls": 1597,
+            "bounded_draw_calls": 64,
+            "floor_sum_calls": 3194,
+            "floor_sum_euclidean_iterations": 30729,
+            "gcd_calls": 4834,
+            "gcd_euclidean_divisions": 38855,
+            "maximum_gcd_operand_bits": 28,
+            "modular_inverse_euclidean_divisions": 855,
+            "modular_inversion_calls": 64,
+            "random_bit_trials": 64,
+            "random_fair_bits": 1216,
+            "screen_complement_gcd_calls": 1587,
+            "screen_complement_gcd_euclidean_divisions": 12699,
+            "screen_q_gcd_calls": 1586,
+            "screen_q_gcd_euclidean_divisions": 12463,
+            "screen_t_gcd_calls": 1597,
+            "screen_t_gcd_euclidean_divisions": 12774,
+            "source_generation_gcd_calls": 64,
+            "source_generation_gcd_euclidean_divisions": 919,
+            "source_transform_modular_inverse_euclidean_divisions": 855,
+            "source_transform_modular_inversion_calls": 64
+          },
+          "cost_per_observed_success": null,
+          "count_factor_successes": 0,
+          "generation_factor_successes": 0,
+          "output_type_counts": {
+            "stopping_failure": 64
+          },
+          "total_successes": 0
+        },
+        "minimum_descent_operation_totals": {
+          "K_calls": 1597,
+          "Q_calls": 1597,
+          "floor_sum_calls": 3194,
+          "floor_sum_euclidean_iterations": 30729,
+          "gcd_calls": 4770,
+          "gcd_euclidean_divisions": 37936,
+          "maximum_gcd_operand_bits": 28,
+          "screen_complement_gcd_calls": 1587,
+          "screen_complement_gcd_euclidean_divisions": 12699,
+          "screen_q_gcd_calls": 1586,
+          "screen_q_gcd_euclidean_divisions": 12463,
+          "screen_t_gcd_calls": 1597,
+          "screen_t_gcd_euclidean_divisions": 12774
+        },
+        "policy": "inverse_3_4",
+        "rows_with_anomalies": 0,
+        "source_transform_operation_totals": {
+          "bounded_draw_calls": 64,
+          "gcd_calls": 64,
+          "gcd_euclidean_divisions": 919,
+          "modular_inverse_euclidean_divisions": 855,
+          "modular_inversion_calls": 64,
+          "random_bit_trials": 64,
+          "random_fair_bits": 1216,
+          "source_generation_gcd_calls": 64,
+          "source_generation_gcd_euclidean_divisions": 919,
+          "source_transform_modular_inverse_euclidean_divisions": 855,
+          "source_transform_modular_inversion_calls": 64
+        }
+      },
+      "inverse_3_8": {
+        "attempts": 64,
+        "charged_cost_comparison": {
+          "Q_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "branch_fair_bits": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "floor_sum_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "floor_sum_euclidean_iterations": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "gcd_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "gcd_euclidean_divisions": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "modular_inverse_euclidean_divisions": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "modular_inversion_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "random_fair_bits": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          }
+        },
+        "fair": {
+          "algorithm_operation_totals": {
+            "K_calls": 1655,
+            "Q_calls": 1655,
+            "bounded_draw_calls": 64,
+            "branch_bit_draws": 1633,
+            "branch_fair_bits": 1633,
+            "floor_sum_calls": 3310,
+            "floor_sum_euclidean_iterations": 22262,
+            "gcd_calls": 5007,
+            "gcd_euclidean_divisions": 46797,
+            "maximum_gcd_operand_bits": 28,
+            "modular_inverse_euclidean_divisions": 445,
+            "modular_inversion_calls": 64,
+            "random_bit_trials": 1697,
+            "random_fair_bits": 2145,
+            "screen_complement_gcd_calls": 1645,
+            "screen_complement_gcd_euclidean_divisions": 15269,
+            "screen_q_gcd_calls": 1643,
+            "screen_q_gcd_euclidean_divisions": 15516,
+            "screen_t_gcd_calls": 1655,
+            "screen_t_gcd_euclidean_divisions": 15503,
+            "source_generation_gcd_calls": 64,
+            "source_generation_gcd_euclidean_divisions": 509,
+            "source_transform_modular_inverse_euclidean_divisions": 445,
+            "source_transform_modular_inversion_calls": 64
+          },
+          "branch_bit_draws": 1633,
+          "cost_per_observed_success": null,
+          "count_factor_successes": 0,
+          "first_hit_stage_maximum": null,
+          "first_hit_stage_mean": null,
+          "first_hit_stage_minimum": null,
+          "generation_factor_successes": 0,
+          "output_type_counts": {
+            "stopping_failure": 64
+          },
+          "stopping_reason_counts": {
+            "empty_side": 22,
+            "t_at_most_one": 42
+          },
+          "total_successes": 0
+        },
+        "fair_descent_operation_totals": {
+          "K_calls": 1655,
+          "Q_calls": 1655,
+          "branch_bit_draws": 1633,
+          "branch_fair_bits": 1633,
+          "floor_sum_calls": 3310,
+          "floor_sum_euclidean_iterations": 22262,
+          "gcd_calls": 4943,
+          "gcd_euclidean_divisions": 46288,
+          "maximum_gcd_operand_bits": 28,
+          "random_bit_trials": 1633,
+          "random_fair_bits": 1633,
+          "screen_complement_gcd_calls": 1645,
+          "screen_complement_gcd_euclidean_divisions": 15269,
+          "screen_q_gcd_calls": 1643,
+          "screen_q_gcd_euclidean_divisions": 15516,
+          "screen_t_gcd_calls": 1655,
+          "screen_t_gcd_euclidean_divisions": 15503
+        },
+        "minimum": {
+          "algorithm_operation_totals": {
+            "K_calls": 1610,
+            "Q_calls": 1610,
+            "bounded_draw_calls": 64,
+            "floor_sum_calls": 3220,
+            "floor_sum_euclidean_iterations": 21890,
+            "gcd_calls": 4867,
+            "gcd_euclidean_divisions": 46534,
+            "maximum_gcd_operand_bits": 28,
+            "modular_inverse_euclidean_divisions": 445,
+            "modular_inversion_calls": 64,
+            "random_bit_trials": 64,
+            "random_fair_bits": 512,
+            "screen_complement_gcd_calls": 1597,
+            "screen_complement_gcd_euclidean_divisions": 15458,
+            "screen_q_gcd_calls": 1596,
+            "screen_q_gcd_euclidean_divisions": 15174,
+            "screen_t_gcd_calls": 1610,
+            "screen_t_gcd_euclidean_divisions": 15393,
+            "source_generation_gcd_calls": 64,
+            "source_generation_gcd_euclidean_divisions": 509,
+            "source_transform_modular_inverse_euclidean_divisions": 445,
+            "source_transform_modular_inversion_calls": 64
+          },
+          "cost_per_observed_success": null,
+          "count_factor_successes": 0,
+          "generation_factor_successes": 0,
+          "output_type_counts": {
+            "stopping_failure": 64
+          },
+          "total_successes": 0
+        },
+        "minimum_descent_operation_totals": {
+          "K_calls": 1610,
+          "Q_calls": 1610,
+          "floor_sum_calls": 3220,
+          "floor_sum_euclidean_iterations": 21890,
+          "gcd_calls": 4803,
+          "gcd_euclidean_divisions": 46025,
+          "maximum_gcd_operand_bits": 28,
+          "screen_complement_gcd_calls": 1597,
+          "screen_complement_gcd_euclidean_divisions": 15458,
+          "screen_q_gcd_calls": 1596,
+          "screen_q_gcd_euclidean_divisions": 15174,
+          "screen_t_gcd_calls": 1610,
+          "screen_t_gcd_euclidean_divisions": 15393
+        },
+        "policy": "inverse_3_8",
+        "rows_with_anomalies": 0,
+        "source_transform_operation_totals": {
+          "bounded_draw_calls": 64,
+          "gcd_calls": 64,
+          "gcd_euclidean_divisions": 509,
+          "modular_inverse_euclidean_divisions": 445,
+          "modular_inversion_calls": 64,
+          "random_bit_trials": 64,
+          "random_fair_bits": 512,
+          "source_generation_gcd_calls": 64,
+          "source_generation_gcd_euclidean_divisions": 509,
+          "source_transform_modular_inverse_euclidean_divisions": 445,
+          "source_transform_modular_inversion_calls": 64
+        }
+      },
+      "ratio_1_4": {
+        "attempts": 64,
+        "charged_cost_comparison": {
+          "Q_calls": {
+            "fair_cost_per_success": {
+              "decimal": 1585.0,
+              "denominator": 1,
+              "numerator": 1585
+            },
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "branch_fair_bits": {
+            "fair_cost_per_success": {
+              "decimal": 1554.0,
+              "denominator": 1,
+              "numerator": 1554
+            },
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "floor_sum_calls": {
+            "fair_cost_per_success": {
+              "decimal": 3170.0,
+              "denominator": 1,
+              "numerator": 3170
+            },
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "floor_sum_euclidean_iterations": {
+            "fair_cost_per_success": {
+              "decimal": 19236.0,
+              "denominator": 1,
+              "numerator": 19236
+            },
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "gcd_calls": {
+            "fair_cost_per_success": {
+              "decimal": 4917.0,
+              "denominator": 1,
+              "numerator": 4917
+            },
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "gcd_euclidean_divisions": {
+            "fair_cost_per_success": {
+              "decimal": 45275.0,
+              "denominator": 1,
+              "numerator": 45275
+            },
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "modular_inverse_euclidean_divisions": {
+            "fair_cost_per_success": {
+              "decimal": 320.0,
+              "denominator": 1,
+              "numerator": 320
+            },
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "modular_inversion_calls": {
+            "fair_cost_per_success": {
+              "decimal": 64.0,
+              "denominator": 1,
+              "numerator": 64
+            },
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "random_fair_bits": {
+            "fair_cost_per_success": {
+              "decimal": 2194.0,
+              "denominator": 1,
+              "numerator": 2194
+            },
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          }
+        },
+        "fair": {
+          "algorithm_operation_totals": {
+            "K_calls": 1585,
+            "Q_calls": 1585,
+            "bounded_draw_calls": 128,
+            "branch_bit_draws": 1554,
+            "branch_fair_bits": 1554,
+            "denominator_generation_gcd_calls": 64,
+            "denominator_generation_gcd_euclidean_divisions": 407,
+            "factor_verification_divisions": 1,
+            "floor_sum_calls": 3170,
+            "floor_sum_euclidean_iterations": 19236,
+            "gcd_calls": 4917,
+            "gcd_euclidean_divisions": 45275,
+            "maximum_gcd_operand_bits": 28,
+            "modular_inverse_euclidean_divisions": 320,
+            "modular_inversion_calls": 64,
+            "numerator_generation_gcd_calls": 64,
+            "numerator_generation_gcd_euclidean_divisions": 402,
+            "random_bit_trials": 1682,
+            "random_fair_bits": 2194,
+            "rational_reduction_gcd_calls": 64,
+            "rational_reduction_gcd_euclidean_divisions": 300,
+            "screen_complement_gcd_calls": 1569,
+            "screen_complement_gcd_euclidean_divisions": 14635,
+            "screen_q_gcd_calls": 1571,
+            "screen_q_gcd_euclidean_divisions": 14763,
+            "screen_t_gcd_calls": 1585,
+            "screen_t_gcd_euclidean_divisions": 14768,
+            "source_transform_modular_inverse_euclidean_divisions": 320,
+            "source_transform_modular_inversion_calls": 64
+          },
+          "branch_bit_draws": 1554,
+          "cost_per_observed_success": {
+            "K_calls": {
+              "decimal": 1585.0,
+              "denominator": 1,
+              "numerator": 1585
+            },
+            "Q_calls": {
+              "decimal": 1585.0,
+              "denominator": 1,
+              "numerator": 1585
+            },
+            "bounded_draw_calls": {
+              "decimal": 128.0,
+              "denominator": 1,
+              "numerator": 128
+            },
+            "branch_bit_draws": {
+              "decimal": 1554.0,
+              "denominator": 1,
+              "numerator": 1554
+            },
+            "branch_fair_bits": {
+              "decimal": 1554.0,
+              "denominator": 1,
+              "numerator": 1554
+            },
+            "denominator_generation_gcd_calls": {
+              "decimal": 64.0,
+              "denominator": 1,
+              "numerator": 64
+            },
+            "denominator_generation_gcd_euclidean_divisions": {
+              "decimal": 407.0,
+              "denominator": 1,
+              "numerator": 407
+            },
+            "factor_verification_divisions": {
+              "decimal": 1.0,
+              "denominator": 1,
+              "numerator": 1
+            },
+            "floor_sum_calls": {
+              "decimal": 3170.0,
+              "denominator": 1,
+              "numerator": 3170
+            },
+            "floor_sum_euclidean_iterations": {
+              "decimal": 19236.0,
+              "denominator": 1,
+              "numerator": 19236
+            },
+            "gcd_calls": {
+              "decimal": 4917.0,
+              "denominator": 1,
+              "numerator": 4917
+            },
+            "gcd_euclidean_divisions": {
+              "decimal": 45275.0,
+              "denominator": 1,
+              "numerator": 45275
+            },
+            "modular_inverse_euclidean_divisions": {
+              "decimal": 320.0,
+              "denominator": 1,
+              "numerator": 320
+            },
+            "modular_inversion_calls": {
+              "decimal": 64.0,
+              "denominator": 1,
+              "numerator": 64
+            },
+            "numerator_generation_gcd_calls": {
+              "decimal": 64.0,
+              "denominator": 1,
+              "numerator": 64
+            },
+            "numerator_generation_gcd_euclidean_divisions": {
+              "decimal": 402.0,
+              "denominator": 1,
+              "numerator": 402
+            },
+            "random_bit_trials": {
+              "decimal": 1682.0,
+              "denominator": 1,
+              "numerator": 1682
+            },
+            "random_fair_bits": {
+              "decimal": 2194.0,
+              "denominator": 1,
+              "numerator": 2194
+            },
+            "rational_reduction_gcd_calls": {
+              "decimal": 64.0,
+              "denominator": 1,
+              "numerator": 64
+            },
+            "rational_reduction_gcd_euclidean_divisions": {
+              "decimal": 300.0,
+              "denominator": 1,
+              "numerator": 300
+            },
+            "screen_complement_gcd_calls": {
+              "decimal": 1569.0,
+              "denominator": 1,
+              "numerator": 1569
+            },
+            "screen_complement_gcd_euclidean_divisions": {
+              "decimal": 14635.0,
+              "denominator": 1,
+              "numerator": 14635
+            },
+            "screen_q_gcd_calls": {
+              "decimal": 1571.0,
+              "denominator": 1,
+              "numerator": 1571
+            },
+            "screen_q_gcd_euclidean_divisions": {
+              "decimal": 14763.0,
+              "denominator": 1,
+              "numerator": 14763
+            },
+            "screen_t_gcd_calls": {
+              "decimal": 1585.0,
+              "denominator": 1,
+              "numerator": 1585
+            },
+            "screen_t_gcd_euclidean_divisions": {
+              "decimal": 14768.0,
+              "denominator": 1,
+              "numerator": 14768
+            },
+            "source_transform_modular_inverse_euclidean_divisions": {
+              "decimal": 320.0,
+              "denominator": 1,
+              "numerator": 320
+            },
+            "source_transform_modular_inversion_calls": {
+              "decimal": 64.0,
+              "denominator": 1,
+              "numerator": 64
+            }
+          },
+          "count_factor_successes": 1,
+          "first_hit_stage_maximum": 3,
+          "first_hit_stage_mean": 3.0,
+          "first_hit_stage_minimum": 3,
+          "generation_factor_successes": 0,
+          "output_type_counts": {
+            "count_factor": 1,
+            "stopping_failure": 63
+          },
+          "stopping_reason_counts": {
+            "empty_side": 30,
+            "factor_at_child_count": 1,
+            "t_at_most_one": 33
+          },
+          "total_successes": 1
+        },
+        "fair_descent_operation_totals": {
+          "K_calls": 1585,
+          "Q_calls": 1585,
+          "branch_bit_draws": 1554,
+          "branch_fair_bits": 1554,
+          "factor_verification_divisions": 1,
+          "floor_sum_calls": 3170,
+          "floor_sum_euclidean_iterations": 19236,
+          "gcd_calls": 4725,
+          "gcd_euclidean_divisions": 44166,
+          "maximum_gcd_operand_bits": 28,
+          "random_bit_trials": 1554,
+          "random_fair_bits": 1554,
+          "screen_complement_gcd_calls": 1569,
+          "screen_complement_gcd_euclidean_divisions": 14635,
+          "screen_q_gcd_calls": 1571,
+          "screen_q_gcd_euclidean_divisions": 14763,
+          "screen_t_gcd_calls": 1585,
+          "screen_t_gcd_euclidean_divisions": 14768
+        },
+        "minimum": {
+          "algorithm_operation_totals": {
+            "K_calls": 1543,
+            "Q_calls": 1543,
+            "bounded_draw_calls": 128,
+            "denominator_generation_gcd_calls": 64,
+            "denominator_generation_gcd_euclidean_divisions": 407,
+            "floor_sum_calls": 3086,
+            "floor_sum_euclidean_iterations": 19007,
+            "gcd_calls": 4797,
+            "gcd_euclidean_divisions": 44462,
+            "maximum_gcd_operand_bits": 28,
+            "modular_inverse_euclidean_divisions": 320,
+            "modular_inversion_calls": 64,
+            "numerator_generation_gcd_calls": 64,
+            "numerator_generation_gcd_euclidean_divisions": 402,
+            "random_bit_trials": 128,
+            "random_fair_bits": 640,
+            "rational_reduction_gcd_calls": 64,
+            "rational_reduction_gcd_euclidean_divisions": 300,
+            "screen_complement_gcd_calls": 1532,
+            "screen_complement_gcd_euclidean_divisions": 14635,
+            "screen_q_gcd_calls": 1530,
+            "screen_q_gcd_euclidean_divisions": 14078,
+            "screen_t_gcd_calls": 1543,
+            "screen_t_gcd_euclidean_divisions": 14640,
+            "source_transform_modular_inverse_euclidean_divisions": 320,
+            "source_transform_modular_inversion_calls": 64
+          },
+          "cost_per_observed_success": null,
+          "count_factor_successes": 0,
+          "generation_factor_successes": 0,
+          "output_type_counts": {
+            "stopping_failure": 64
+          },
+          "total_successes": 0
+        },
+        "minimum_descent_operation_totals": {
+          "K_calls": 1543,
+          "Q_calls": 1543,
+          "floor_sum_calls": 3086,
+          "floor_sum_euclidean_iterations": 19007,
+          "gcd_calls": 4605,
+          "gcd_euclidean_divisions": 43353,
+          "maximum_gcd_operand_bits": 28,
+          "screen_complement_gcd_calls": 1532,
+          "screen_complement_gcd_euclidean_divisions": 14635,
+          "screen_q_gcd_calls": 1530,
+          "screen_q_gcd_euclidean_divisions": 14078,
+          "screen_t_gcd_calls": 1543,
+          "screen_t_gcd_euclidean_divisions": 14640
+        },
+        "policy": "ratio_1_4",
+        "rows_with_anomalies": 0,
+        "source_transform_operation_totals": {
+          "bounded_draw_calls": 128,
+          "denominator_generation_gcd_calls": 64,
+          "denominator_generation_gcd_euclidean_divisions": 407,
+          "gcd_calls": 192,
+          "gcd_euclidean_divisions": 1109,
+          "modular_inverse_euclidean_divisions": 320,
+          "modular_inversion_calls": 64,
+          "numerator_generation_gcd_calls": 64,
+          "numerator_generation_gcd_euclidean_divisions": 402,
+          "random_bit_trials": 128,
+          "random_fair_bits": 640,
+          "rational_reduction_gcd_calls": 64,
+          "rational_reduction_gcd_euclidean_divisions": 300,
+          "source_transform_modular_inverse_euclidean_divisions": 320,
+          "source_transform_modular_inversion_calls": 64
+        }
+      },
+      "ratio_1_8": {
+        "attempts": 64,
+        "charged_cost_comparison": {
+          "Q_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "branch_fair_bits": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "floor_sum_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "floor_sum_euclidean_iterations": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "gcd_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "gcd_euclidean_divisions": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "modular_inverse_euclidean_divisions": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "modular_inversion_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "random_fair_bits": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          }
+        },
+        "fair": {
+          "algorithm_operation_totals": {
+            "K_calls": 824,
+            "Q_calls": 824,
+            "bounded_draw_calls": 128,
+            "branch_bit_draws": 780,
+            "branch_fair_bits": 780,
+            "denominator_generation_gcd_calls": 64,
+            "denominator_generation_gcd_euclidean_divisions": 256,
+            "floor_sum_calls": 1648,
+            "floor_sum_euclidean_iterations": 5108,
+            "gcd_calls": 2620,
+            "gcd_euclidean_divisions": 22678,
+            "maximum_gcd_operand_bits": 28,
+            "modular_inverse_euclidean_divisions": 126,
+            "modular_inversion_calls": 64,
+            "numerator_generation_gcd_calls": 64,
+            "numerator_generation_gcd_euclidean_divisions": 256,
+            "random_bit_trials": 908,
+            "random_fair_bits": 908,
+            "rational_reduction_gcd_calls": 64,
+            "rational_reduction_gcd_euclidean_divisions": 139,
+            "screen_complement_gcd_calls": 791,
+            "screen_complement_gcd_euclidean_divisions": 7209,
+            "screen_q_gcd_calls": 813,
+            "screen_q_gcd_euclidean_divisions": 7421,
+            "screen_t_gcd_calls": 824,
+            "screen_t_gcd_euclidean_divisions": 7397,
+            "source_transform_modular_inverse_euclidean_divisions": 126,
+            "source_transform_modular_inversion_calls": 64
+          },
+          "branch_bit_draws": 780,
+          "cost_per_observed_success": null,
+          "count_factor_successes": 0,
+          "first_hit_stage_maximum": null,
+          "first_hit_stage_mean": null,
+          "first_hit_stage_minimum": null,
+          "generation_factor_successes": 0,
+          "output_type_counts": {
+            "stopping_failure": 64
+          },
+          "stopping_reason_counts": {
+            "empty_side": 44,
+            "t_at_most_one": 20
+          },
+          "total_successes": 0
+        },
+        "fair_descent_operation_totals": {
+          "K_calls": 824,
+          "Q_calls": 824,
+          "branch_bit_draws": 780,
+          "branch_fair_bits": 780,
+          "floor_sum_calls": 1648,
+          "floor_sum_euclidean_iterations": 5108,
+          "gcd_calls": 2428,
+          "gcd_euclidean_divisions": 22027,
+          "maximum_gcd_operand_bits": 28,
+          "random_bit_trials": 780,
+          "random_fair_bits": 780,
+          "screen_complement_gcd_calls": 791,
+          "screen_complement_gcd_euclidean_divisions": 7209,
+          "screen_q_gcd_calls": 813,
+          "screen_q_gcd_euclidean_divisions": 7421,
+          "screen_t_gcd_calls": 824,
+          "screen_t_gcd_euclidean_divisions": 7397
+        },
+        "minimum": {
+          "algorithm_operation_totals": {
+            "K_calls": 697,
+            "Q_calls": 697,
+            "bounded_draw_calls": 128,
+            "denominator_generation_gcd_calls": 64,
+            "denominator_generation_gcd_euclidean_divisions": 256,
+            "floor_sum_calls": 1394,
+            "floor_sum_euclidean_iterations": 4357,
+            "gcd_calls": 2250,
+            "gcd_euclidean_divisions": 18424,
+            "maximum_gcd_operand_bits": 28,
+            "modular_inverse_euclidean_divisions": 126,
+            "modular_inversion_calls": 64,
+            "numerator_generation_gcd_calls": 64,
+            "numerator_generation_gcd_euclidean_divisions": 256,
+            "random_bit_trials": 128,
+            "random_fair_bits": 128,
+            "rational_reduction_gcd_calls": 64,
+            "rational_reduction_gcd_euclidean_divisions": 139,
+            "screen_complement_gcd_calls": 664,
+            "screen_complement_gcd_euclidean_divisions": 5731,
+            "screen_q_gcd_calls": 697,
+            "screen_q_gcd_euclidean_divisions": 6199,
+            "screen_t_gcd_calls": 697,
+            "screen_t_gcd_euclidean_divisions": 5843,
+            "source_transform_modular_inverse_euclidean_divisions": 126,
+            "source_transform_modular_inversion_calls": 64
+          },
+          "cost_per_observed_success": null,
+          "count_factor_successes": 0,
+          "generation_factor_successes": 0,
+          "output_type_counts": {
+            "stopping_failure": 64
+          },
+          "total_successes": 0
+        },
+        "minimum_descent_operation_totals": {
+          "K_calls": 697,
+          "Q_calls": 697,
+          "floor_sum_calls": 1394,
+          "floor_sum_euclidean_iterations": 4357,
+          "gcd_calls": 2058,
+          "gcd_euclidean_divisions": 17773,
+          "maximum_gcd_operand_bits": 28,
+          "screen_complement_gcd_calls": 664,
+          "screen_complement_gcd_euclidean_divisions": 5731,
+          "screen_q_gcd_calls": 697,
+          "screen_q_gcd_euclidean_divisions": 6199,
+          "screen_t_gcd_calls": 697,
+          "screen_t_gcd_euclidean_divisions": 5843
+        },
+        "policy": "ratio_1_8",
+        "rows_with_anomalies": 0,
+        "source_transform_operation_totals": {
+          "bounded_draw_calls": 128,
+          "denominator_generation_gcd_calls": 64,
+          "denominator_generation_gcd_euclidean_divisions": 256,
+          "gcd_calls": 192,
+          "gcd_euclidean_divisions": 651,
+          "modular_inverse_euclidean_divisions": 126,
+          "modular_inversion_calls": 64,
+          "numerator_generation_gcd_calls": 64,
+          "numerator_generation_gcd_euclidean_divisions": 256,
+          "random_bit_trials": 128,
+          "random_fair_bits": 128,
+          "rational_reduction_gcd_calls": 64,
+          "rational_reduction_gcd_euclidean_divisions": 139,
+          "source_transform_modular_inverse_euclidean_divisions": 126,
+          "source_transform_modular_inversion_calls": 64
+        }
+      },
+      "ratio_3_8": {
+        "attempts": 64,
+        "charged_cost_comparison": {
+          "Q_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "branch_fair_bits": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "floor_sum_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "floor_sum_euclidean_iterations": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "gcd_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "gcd_euclidean_divisions": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "modular_inverse_euclidean_divisions": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "modular_inversion_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "random_fair_bits": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          }
+        },
+        "fair": {
+          "algorithm_operation_totals": {
+            "K_calls": 1656,
+            "Q_calls": 1656,
+            "bounded_draw_calls": 128,
+            "branch_bit_draws": 1635,
+            "branch_fair_bits": 1635,
+            "denominator_generation_gcd_calls": 64,
+            "denominator_generation_gcd_euclidean_divisions": 531,
+            "floor_sum_calls": 3312,
+            "floor_sum_euclidean_iterations": 26716,
+            "gcd_calls": 5139,
+            "gcd_euclidean_divisions": 43649,
+            "maximum_gcd_operand_bits": 28,
+            "modular_inverse_euclidean_divisions": 440,
+            "modular_inversion_calls": 64,
+            "numerator_generation_gcd_calls": 64,
+            "numerator_generation_gcd_euclidean_divisions": 534,
+            "random_bit_trials": 1763,
+            "random_fair_bits": 2659,
+            "rational_reduction_gcd_calls": 64,
+            "rational_reduction_gcd_euclidean_divisions": 421,
+            "screen_complement_gcd_calls": 1643,
+            "screen_complement_gcd_euclidean_divisions": 13925,
+            "screen_q_gcd_calls": 1648,
+            "screen_q_gcd_euclidean_divisions": 14180,
+            "screen_t_gcd_calls": 1656,
+            "screen_t_gcd_euclidean_divisions": 14058,
+            "source_transform_modular_inverse_euclidean_divisions": 440,
+            "source_transform_modular_inversion_calls": 64
+          },
+          "branch_bit_draws": 1635,
+          "cost_per_observed_success": null,
+          "count_factor_successes": 0,
+          "first_hit_stage_maximum": null,
+          "first_hit_stage_mean": null,
+          "first_hit_stage_minimum": null,
+          "generation_factor_successes": 0,
+          "output_type_counts": {
+            "stopping_failure": 64
+          },
+          "stopping_reason_counts": {
+            "empty_side": 21,
+            "t_at_most_one": 43
+          },
+          "total_successes": 0
+        },
+        "fair_descent_operation_totals": {
+          "K_calls": 1656,
+          "Q_calls": 1656,
+          "branch_bit_draws": 1635,
+          "branch_fair_bits": 1635,
+          "floor_sum_calls": 3312,
+          "floor_sum_euclidean_iterations": 26716,
+          "gcd_calls": 4947,
+          "gcd_euclidean_divisions": 42163,
+          "maximum_gcd_operand_bits": 28,
+          "random_bit_trials": 1635,
+          "random_fair_bits": 1635,
+          "screen_complement_gcd_calls": 1643,
+          "screen_complement_gcd_euclidean_divisions": 13925,
+          "screen_q_gcd_calls": 1648,
+          "screen_q_gcd_euclidean_divisions": 14180,
+          "screen_t_gcd_calls": 1656,
+          "screen_t_gcd_euclidean_divisions": 14058
+        },
+        "minimum": {
+          "algorithm_operation_totals": {
+            "K_calls": 1611,
+            "Q_calls": 1611,
+            "bounded_draw_calls": 128,
+            "denominator_generation_gcd_calls": 64,
+            "denominator_generation_gcd_euclidean_divisions": 531,
+            "floor_sum_calls": 3222,
+            "floor_sum_euclidean_iterations": 26369,
+            "gcd_calls": 5005,
+            "gcd_euclidean_divisions": 42854,
+            "maximum_gcd_operand_bits": 28,
+            "modular_inverse_euclidean_divisions": 440,
+            "modular_inversion_calls": 64,
+            "numerator_generation_gcd_calls": 64,
+            "numerator_generation_gcd_euclidean_divisions": 534,
+            "random_bit_trials": 128,
+            "random_fair_bits": 1024,
+            "rational_reduction_gcd_calls": 64,
+            "rational_reduction_gcd_euclidean_divisions": 421,
+            "screen_complement_gcd_calls": 1598,
+            "screen_complement_gcd_euclidean_divisions": 13896,
+            "screen_q_gcd_calls": 1604,
+            "screen_q_gcd_euclidean_divisions": 13483,
+            "screen_t_gcd_calls": 1611,
+            "screen_t_gcd_euclidean_divisions": 13989,
+            "source_transform_modular_inverse_euclidean_divisions": 440,
+            "source_transform_modular_inversion_calls": 64
+          },
+          "cost_per_observed_success": null,
+          "count_factor_successes": 0,
+          "generation_factor_successes": 0,
+          "output_type_counts": {
+            "stopping_failure": 64
+          },
+          "total_successes": 0
+        },
+        "minimum_descent_operation_totals": {
+          "K_calls": 1611,
+          "Q_calls": 1611,
+          "floor_sum_calls": 3222,
+          "floor_sum_euclidean_iterations": 26369,
+          "gcd_calls": 4813,
+          "gcd_euclidean_divisions": 41368,
+          "maximum_gcd_operand_bits": 28,
+          "screen_complement_gcd_calls": 1598,
+          "screen_complement_gcd_euclidean_divisions": 13896,
+          "screen_q_gcd_calls": 1604,
+          "screen_q_gcd_euclidean_divisions": 13483,
+          "screen_t_gcd_calls": 1611,
+          "screen_t_gcd_euclidean_divisions": 13989
+        },
+        "policy": "ratio_3_8",
+        "rows_with_anomalies": 0,
+        "source_transform_operation_totals": {
+          "bounded_draw_calls": 128,
+          "denominator_generation_gcd_calls": 64,
+          "denominator_generation_gcd_euclidean_divisions": 531,
+          "gcd_calls": 192,
+          "gcd_euclidean_divisions": 1486,
+          "modular_inverse_euclidean_divisions": 440,
+          "modular_inversion_calls": 64,
+          "numerator_generation_gcd_calls": 64,
+          "numerator_generation_gcd_euclidean_divisions": 534,
+          "random_bit_trials": 128,
+          "random_fair_bits": 1024,
+          "rational_reduction_gcd_calls": 64,
+          "rational_reduction_gcd_euclidean_divisions": 421,
+          "source_transform_modular_inverse_euclidean_divisions": 440,
+          "source_transform_modular_inversion_calls": 64
+        }
+      },
+      "uniform": {
+        "attempts": 64,
+        "charged_cost_comparison": {
+          "Q_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "branch_fair_bits": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "floor_sum_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "floor_sum_euclidean_iterations": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "gcd_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "gcd_euclidean_divisions": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "modular_inverse_euclidean_divisions": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "modular_inversion_calls": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          },
+          "random_fair_bits": {
+            "fair_cost_per_success": null,
+            "fair_to_minimum_ratio": null,
+            "minimum_cost_per_success": null
+          }
+        },
+        "fair": {
+          "algorithm_operation_totals": {
+            "K_calls": 1638,
+            "Q_calls": 1638,
+            "bounded_draw_calls": 64,
+            "branch_bit_draws": 1610,
+            "branch_fair_bits": 1610,
+            "floor_sum_calls": 3276,
+            "floor_sum_euclidean_iterations": 32571,
+            "gcd_calls": 4950,
+            "gcd_euclidean_divisions": 39463,
+            "maximum_gcd_operand_bits": 28,
+            "random_bit_trials": 1703,
+            "random_fair_bits": 4214,
+            "random_range_rejections": 29,
+            "screen_complement_gcd_calls": 1625,
+            "screen_complement_gcd_euclidean_divisions": 12671,
+            "screen_q_gcd_calls": 1623,
+            "screen_q_gcd_euclidean_divisions": 12831,
+            "screen_t_gcd_calls": 1638,
+            "screen_t_gcd_euclidean_divisions": 12838,
+            "source_generation_gcd_calls": 64,
+            "source_generation_gcd_euclidean_divisions": 1123
+          },
+          "branch_bit_draws": 1610,
+          "cost_per_observed_success": null,
+          "count_factor_successes": 0,
+          "first_hit_stage_maximum": null,
+          "first_hit_stage_mean": null,
+          "first_hit_stage_minimum": null,
+          "generation_factor_successes": 0,
+          "output_type_counts": {
+            "stopping_failure": 64
+          },
+          "stopping_reason_counts": {
+            "empty_side": 28,
+            "t_at_most_one": 36
+          },
+          "total_successes": 0
+        },
+        "fair_descent_operation_totals": {
+          "K_calls": 1638,
+          "Q_calls": 1638,
+          "branch_bit_draws": 1610,
+          "branch_fair_bits": 1610,
+          "floor_sum_calls": 3276,
+          "floor_sum_euclidean_iterations": 32571,
+          "gcd_calls": 4886,
+          "gcd_euclidean_divisions": 38340,
+          "maximum_gcd_operand_bits": 28,
+          "random_bit_trials": 1610,
+          "random_fair_bits": 1610,
+          "screen_complement_gcd_calls": 1625,
+          "screen_complement_gcd_euclidean_divisions": 12671,
+          "screen_q_gcd_calls": 1623,
+          "screen_q_gcd_euclidean_divisions": 12831,
+          "screen_t_gcd_calls": 1638,
+          "screen_t_gcd_euclidean_divisions": 12838
+        },
+        "minimum": {
+          "algorithm_operation_totals": {
+            "K_calls": 1603,
+            "Q_calls": 1603,
+            "bounded_draw_calls": 64,
+            "floor_sum_calls": 3206,
+            "floor_sum_euclidean_iterations": 32289,
+            "gcd_calls": 4851,
+            "gcd_euclidean_divisions": 37917,
+            "maximum_gcd_operand_bits": 28,
+            "random_bit_trials": 93,
+            "random_fair_bits": 2604,
+            "random_range_rejections": 29,
+            "screen_complement_gcd_calls": 1592,
+            "screen_complement_gcd_euclidean_divisions": 12245,
+            "screen_q_gcd_calls": 1592,
+            "screen_q_gcd_euclidean_divisions": 12215,
+            "screen_t_gcd_calls": 1603,
+            "screen_t_gcd_euclidean_divisions": 12334,
+            "source_generation_gcd_calls": 64,
+            "source_generation_gcd_euclidean_divisions": 1123
+          },
+          "cost_per_observed_success": null,
+          "count_factor_successes": 0,
+          "generation_factor_successes": 0,
+          "output_type_counts": {
+            "stopping_failure": 64
+          },
+          "total_successes": 0
+        },
+        "minimum_descent_operation_totals": {
+          "K_calls": 1603,
+          "Q_calls": 1603,
+          "floor_sum_calls": 3206,
+          "floor_sum_euclidean_iterations": 32289,
+          "gcd_calls": 4787,
+          "gcd_euclidean_divisions": 36794,
+          "maximum_gcd_operand_bits": 28,
+          "screen_complement_gcd_calls": 1592,
+          "screen_complement_gcd_euclidean_divisions": 12245,
+          "screen_q_gcd_calls": 1592,
+          "screen_q_gcd_euclidean_divisions": 12215,
+          "screen_t_gcd_calls": 1603,
+          "screen_t_gcd_euclidean_divisions": 12334
+        },
+        "policy": "uniform",
+        "rows_with_anomalies": 0,
+        "source_transform_operation_totals": {
+          "bounded_draw_calls": 64,
+          "gcd_calls": 64,
+          "gcd_euclidean_divisions": 1123,
+          "random_bit_trials": 93,
+          "random_fair_bits": 2604,
+          "random_range_rejections": 29,
+          "source_generation_gcd_calls": 64,
+          "source_generation_gcd_euclidean_divisions": 1123
+        }
+      }
+    },
+    "rows_with_anomalies": 0,
+    "trial_range": [
+      64,
+      128
+    ],
+    "trials": 64
+  },
+  "counter_scope": "Source and transform operation counters are recovered by verified additive subtraction. Maximum fields are separate. Wall-clock values are never subtracted.",
+  "dependency_sha256": {
+    "F328_moduli": "acf09b285c57c39cfcb93d3cd77addce909498e224955fd0ec9d2e4d86ee0428",
+    "F334_count_descent": "cb93f160d57b2a3285551cbd268e732917e3062a90eb8ca62df843f581be1e24",
+    "F336_aggregate": "afca015f15169be06a080b1e000d02409251d73d8c5df59cbd0b269ac18b3801",
+    "F336_biased_rational_inputs": "b660db8da032e3f514dfdfc5a4183defb5392b22d4cf8bcfa4ab9eaec57c5256",
+    "active_FAIR_BRANCH": "ce8c57e5c3dbbb8cedcfa6ad6b1001cffde5ec305d6bec29d63295ca5f58f507",
+    "active_fair_branch_checker": "46ad21c1911c516ad760fa61262895499b6ebb0ca9c97943585c619be4dfcd4e",
+    "design": "d5879d6b995e85ce8d95d702b848f6c3c2dda13dc7aa24cd888c39fad66e4acb"
+  },
+  "experiment": "F338_fair_count_branches",
+  "hard_timeout_seconds": 30,
+  "internal_timeout_seconds": 28,
+  "memory_limit_bytes": 536870912,
+  "mode": "scale",
+  "peak_rss_bytes": 72220672,
+  "route": "route:F31",
+  "row_artifact": {
+    "compressed_bytes": 397042,
+    "path": "experiments/F338_fair_count_branches/scale_b28_i1_64_128_rows.jsonl.gz",
+    "rows": 896,
+    "sha256": "fb7e3929ab2a631efb3f4bfbd2523d281cf8673b920b30ba9c774789200c77cf"
+  },
+  "seed": 33820260907,
+  "source_reference": {
+    "modulus": {
+      "actual_bits": 28,
+      "balance_ratio": 1.1144427382203184,
+      "generation": {
+        "p": {
+          "candidate_stream_attempts": 1,
+          "seed": 191513160268028434093355519626466625632
+        },
+        "q": {
+          "candidate_stream_attempts": 1,
+          "seed": 60301821806340188133369980855622182390
+        }
+      },
+      "modulus_id": "b28_i1",
+      "n": 170611297,
+      "p_offline": 12373,
+      "prime_bits": [
+        14,
+        14
+      ],
+      "q_offline": 13789,
+      "target_bits": 28
+    },
+    "output_path": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F336_biased_rational_inputs/scale_b28_i1_64_128_output.json",
+    "output_sha256": "39ffbc66fdab1afd059aae7a61c7853a306f7323b94ac28999d353743ef88ad2",
+    "row_artifact": {
+      "compressed_bytes": 144227,
+      "path": "experiments/F336_biased_rational_inputs/scale_b28_i1_64_128_rows.jsonl.gz",
+      "rows": 896,
+      "sha256": "a9f5114e1f94550b0750796ae603c7846b71e1dcf7e4b820d8aa483fa32d1106"
+    }
+  },
+  "source_sha256": "a62d75ad9fce7df49124f641b7474b2534f34811c37fc785763d1b27743f1a1b",
+  "status": "passed",
+  "walltime_seconds": 0.362033125013113,
+  "witness_artifact": {
+    "compressed_bytes": 2904,
+    "path": "experiments/F338_fair_count_branches/scale_b28_i1_64_128_witnesses.jsonl.gz",
+    "rows": 3,
+    "sha256": "dd4eb99363fa57c22e833c0e08b39bd886fd010c0006bd79f341d811f5ff837e"
+  }
+}

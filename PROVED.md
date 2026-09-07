@@ -24291,9 +24291,11 @@ For graph rows \(A_e=d_ud_v\) with public roots \(y_e\), every Eulerian edge
 set is an exact square. On a simple even cycle, define
 
 \[
- P_0=\prod_{i\ {m even}}y_{e_i},
+ P_0=\prod_{i\ {
+m even}}y_{e_i},
  \qquad
- P_1=\prod_{i\ {m odd}}y_{e_i}.
+ P_1=\prod_{i\ {
+m odd}}y_{e_i}.
 \]
 
 If \(R=\prod_i d_{v_i}\) is the positive exact root and
@@ -26911,3 +26913,161 @@ Proof SHA-256:
 a9d6a0363a03ee2a9254aa99548987c5e27a862c3a48aba7fef6fb8b0a8f8961.
 Reconstruction SHA-256:
 63d19572f130b697a6df47e52103c569bd06c736a057b6636c715b2f12a85cd2.
+
+## P250 -- Uniform-source count descent has explicit rare-event bounds
+
+**Status:** promoted after fresh statement-only reconstruction, correction of
+two endpoint inequalities inside that reconstruction, and root comparison
+with the unchanged author proof.
+
+**Scope:** the exact continued-fraction, fixed-window, source-specific
+probability, and literal small-multiplier statements below. This supplies no
+factoring algorithm meeting P249, no novelty claim, and no conclusion about
+the separate rational, random-branch, shifted-window, or rank-gap mechanisms.
+
+Let \(N>1\) be odd, \(h=(N-1)/2\), and let \(U_N\) be the units represented
+in \(1,\ldots,N-1\). Put
+\[
+ J_N=\{a\in U_N:\operatorname{Jacobi}(a,N)=1\}.
+\]
+For the canonical expansion \(a/N=[0;b_1,\ldots,b_m]\), \(b_m\geq2\), write
+\[
+ S(a,N)=\sum_i b_i,\qquad
+ M_N=\frac{4NH_N^2}{\varphi(N)},\qquad
+ H_r=\sum_{j=1}^r\frac1j.
+\]
+For \(0\leq t<N\), define
+\[
+ Q_a(t)=\#\{1\leq y\leq t:1\leq ay\bmod N\leq h\},\qquad
+ E_a(t)=2Q_a(t)-t.
+\]
+Then
+\[
+ S(a,N)=S(N-a,N)=S(a^{-1}\bmod N,N),\qquad
+ |E_a(t)|\leq10S(a,N).
+\]
+For every integer \(B\geq1\), with \(H_0=0\),
+\[
+ \sum_{a\in U_N}\#\{i:b_i\geq B\}
+ \leq\frac{2N}{B}H_{\lfloor N/B\rfloor},
+ \qquad
+ \sum_{a\in U_N}S(a,N)\leq2NH_N^2.
+\]
+Consequently,
+\[
+ \mathbb E_{a\ {\rm uniform}\ J_N}S(a,N)\leq M_N
+ \leq4(1+\log_2N)(1+\ln N)^2,
+\]
+and the public cutoff
+\(S\leq8(1+\log_2N)(1+\ln N)^2\) retains at least half of \(J_N\).
+All these bounds are pointwise in the denominator \(N\).
+
+The count-descent attempt gcd-screens \(t\), then both nonzero children
+\(Q_a(t)\) and \(t-Q_a(t)\). It returns a verified proper divisor, fails on a
+zero child or \(t\leq1\), and otherwise continues from the smaller child.
+Starting from \(h\), it makes at most
+\(L_N=1+\lceil\log_2N\rceil\) queries. For an integer \(D\geq1\), set
+\[
+ W(N,D)=\left\{w\in\mathbb Z_{>0}:
+ \left|w-\frac{N-1}{2^k}\right|\leq D
+ \text{ for some }k\geq2\right\}.
+\]
+If every reached discrepancy has absolute value at most \(D\), every
+screened child lies in \(W(N,D)\), even if the multiplier changes between
+queries; the initial \(h\) is always coprime to \(N\).
+
+Let \(H\geq4\), \(1\leq D\leq H/4\), and fix an odd integer
+\(p\in[H,2H]\). Among odd integers \(q\in[H,2H]\), at most
+\[
+ 32D K(D),\qquad K(D)=1+\lfloor\log_2(8D)\rfloor,
+\]
+have a positive \(p\)-multiple in \(W(pq,D)\). Every such multiple uses a
+scale with
+\[
+ \frac{H-1}{D}\leq2^k<4H.
+\]
+If \(R_H\) is the number of primes in \([H,2H]\), at most
+\(64R_HD K(D)\) ordered pairs of distinct primes in that interval have any
+proper nonunit in the menu.
+
+There is also an exact asymmetric criterion. For odd \(p,q\), \(M=2^k\),
+\(k\geq2\), \(r=q\bmod M\), and \(D>0\), the interval
+\[
+ \left[\frac{pq-1}{M}-D,\frac{pq-1}{M}+\frac D2\right]
+\]
+contains a positive \(p\)-multiple exactly when at least one of
+\[
+ q\geq M\ \text{ and }\ pr-1\leq MD,
+ \qquad
+ 2p(M-r)+2\leq MD
+\]
+holds.
+
+Now suppose \(N=pq\) for distinct primes \(p,q\in[H,2H]\), and
+\(W(N,D)\) has no proper nonunit. A fixed-\(h\) attempt retaining one uniform
+\(a\in J_N\) has factor probability at most
+\[
+ \frac{10M_N}{D}.
+\]
+If every query instead draws a fresh multiplier conditionally uniform in
+\(J_N\) given the past, the bound is \(10L_NM_N/D\). These statements retain
+all rare large-defect attempts rather than conditioning them away.
+
+For variable starts assume \(1\leq D<\min(p,q)/2\), and put
+\[
+ \ell_v=\max\left(0,\left\lfloor
+ \log_2\frac{h}{v-D}\right\rfloor\right),\qquad
+ V(N,D)=\sum_{v\in\{p,q\}}\frac{D(4\ell_v+9)}{v}.
+\]
+If \(T\) is marginally uniform in \(1,\ldots,h\) and \(a\) is marginally
+uniform in \(J_N\), the factor probability is at most
+\[
+ \frac{10M_N}{D}+V(N,D),
+\]
+without requiring independence of \(a\) and \(T\). For
+\(T=\min(a^{-1}\bmod N,N-a^{-1}\bmod N)\), with uniform \(a\in J_N\), the
+bound is
+\[
+ \frac{10M_N}{D}+\frac{4h}{\varphi(N)}V(N,D).
+\]
+With fresh conditionally uniform multipliers, replace the first term by
+\(10L_NM_N/D\) when the start has the stated marginal law.
+
+Exact uniform-\(J_N\) rejection sampling may return a proper generation gcd
+and otherwise reject Jacobi-negative units. Its contribution is at most
+\(4L_N/(H-1)\) for the fresh policy and at most \(4/(H-1)\) for one generated
+multiplier. Thus no generation success or discarded draw is hidden.
+
+Taking \(D=\lfloor\sqrt H\rfloor\) gives
+\(O((\log N)^3/\sqrt H)\) variable-start bounds on every sufficiently large
+balanced semiprime. Using the Rosser--Schoenfeld bound
+\[
+ \pi(2H)-\pi(H)>\frac{3H}{5\ln H}\qquad(H\geq21)
+\]
+also gives infinitely many balanced distinct-prime inputs with the same
+upper bound for the fixed-\(h\) policy. Independent repetition of exactly
+these source-specific attempts therefore has expected work at least
+\(\sqrt H/\operatorname{poly}(\log N)\) on that infinite family, or never
+succeeds.
+
+Finally, for an arbitrary unit \(a\), put \(A=\min(a,N-a)\). The literal
+fixed-\(h\), fixed-\(a\), smaller-child descent makes the same unordered child
+queries as multiplier \(A\). If the least prime divisor of \(N\) exceeds
+\(5A^2\), that attempt returns no factor. This statement has no uniform-source
+assumption, and it does not cover small modular inverses, changing
+multipliers, other starts, branches, or additional screens.
+
+Statement-only input:
+experiments/F335_descent_parameter_mass/STATEMENT_ONLY.md.
+Author proof:
+experiments/F335_descent_parameter_mass/PROOF.md.
+Complete independent proof:
+experiments/F335_descent_parameter_mass/RECONSTRUCTION.md.
+Root comparison:
+experiments/F335_descent_parameter_mass/ROOT_COMPARISON.md.
+Input SHA-256:
+75c092beacf63c7dda9681be4fd54ae208d2fc0188586a80e6b2ab3b69d9e6c9.
+Author proof SHA-256:
+5a698ed631ff8fcd8ed55fc195af008284c7f42d60b83c3de405f2e671b326cc.
+Reconstruction SHA-256:
+33125e52d1c184fda0f9a8f3bb952d081daac794ce43762eb349607a6c48d6c1.

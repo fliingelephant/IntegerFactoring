@@ -9627,3 +9627,311 @@ experiments/F333_partial_facroot_mixture/STATEMENT_ONLY.md,
 experiments/F333_partial_facroot_mixture/PROOF.md,
 experiments/F333_partial_facroot_mixture/RECONSTRUCTION.md, and
 experiments/F333_partial_facroot_mixture/SHA256SUMS.txt.
+
+### C292 -- Exact count descent halved its state but supplied no scale success law
+
+**Family:** route:F31
+
+**Status:** F334 exact implementation and bounded experiment. No asymptotic
+success, lower-bound, or factoring claim. P250 separately proves
+source-specific rare-event bounds.
+
+F334 starts at `h=(N-1)/2`, gcd-screens `t,Q_a(t),t-Q_a(t)`, and continues
+from the smaller positive child. The exact identity
+`min(Q_a(t),t-Q_a(t))=(t-|2Q_a(t)-t|)/2` gives at most `O(log N)` reached
+queries. The implementation aliases P246's floor-sum methods and charges
+generation, Jacobi rejection, floor sums, gcds, inversions, failures, and
+verification.
+
+On all 547 Jacobi-positive units over the 25 odd composite inputs through
+101, fixed, one-stream fresh, and inverse-start modes returned factors on
+341, 437, and 272 inputs. The fixed and inverse figures are exhaustive on
+this finite set; fresh inner coins are one reproducible stream per unit. Its
+437 hits split into 277 count gcds and 160 fresh-generation gcds. The inverse
+hits split into 168 exact first-count `a+/-1` reproductions and 104 later
+count gcds.
+
+On twelve F328 semiprimes with 256 conditional parameters each, fixed mode
+returned 0/3,072, fresh returned 52/3,072 entirely through additional
+generation gcds, and inverse-start returned 13/3,072 entirely through later
+count children at 20 or 28 bits. A separate initial-generation draw returned
+one factor. No mode returned a count factor on either retained 44-, 60-, or
+92-bit input.
+
+The public fixed-start menus at `D=8,32,128` found only one factor, at
+`b20_i1,D=128`. The parameter-dependent inverse-start menus found 50, 209,
+and 540 successful parameter menus, but charged 1,491,330, 5,665,927, and
+21,479,687 gcds. At `D=128` they found no factor at 44 bits or above; 269
+trajectories also exceeded that defect cutoff, so their menu misses do not
+describe unrestricted descent.
+
+These data do not establish P249's cost/success contract. Their finite zeros
+do not constrain randomized, biased,
+shifted, partial, approximate-with-verification, or variable-duration
+procedures.
+
+Evidence:
+experiments/F334_count_descent/REPORT.md,
+experiments/F334_count_descent/count_descent.py,
+experiments/F334_count_descent/small_output.json,
+experiments/F334_count_descent/aggregate_output.json,
+experiments/F334_count_descent/RESOURCE.md,
+experiments/F334_count_descent/SOURCES.md, and
+experiments/F334_count_descent/SHA256SUMS.txt.
+
+### C293 -- Continued-fraction mass bounds were reconstructed and finitely checked
+
+**Family:** route:F31
+
+**Status:** F335 author proof, corrected independent reconstruction, root
+comparison, finite controls, and source retrieval. P250 promotes exactly the
+frozen statement. The separate rational-input note remains unpromoted.
+
+The reconstruction independently recovered the continued-fraction
+symmetries, the uniform discrepancy and digit-mass bounds, fixed-start
+dyadic eligibility, balanced-cofactor counts, all stated uniform/fresh/inverse
+start probability bounds including generation events, and the literal
+`p_min>5A^2` obstruction. Its first small-multiplier pass used strict endpoint
+inequalities at an empty color and the zero-error base case. The final proof
+uses weak inequalities and a simultaneous two-child induction; the author
+statement and proof did not change.
+
+The exact checker passed through odd `N<=301`. It made 18,484 digit-sum
+symmetry, 89,804 digit-triple, 22,800 large-digit-tail, 3,722,060 prefix
+discrepancy, and 150 total-digit-sum checks. It also passed 3,816 affine-error,
+3,816 child-congruence, 1,453 complement-sequence, 284 least-prime exclusion,
+6,570 positive-residual, and 2,363 quotient-halving checks. The dyadic control
+made 16,427 integer-cofactor, 18,951 ordered prime-scale, and 1,625 unordered
+prime-pair checks. These finite checks support the formulas, not their
+asymptotic proof.
+
+The KB now contains full text for arXiv `2210.14095` under cite key
+`aistleitner_2022_distribution`. DOI `10.1215/ijm/1255631807` is retained as
+metadata only under `rosser_1962_approximate`; the PDF miss is explicit, and
+no alternate fetch was substituted. The root separately checked the public
+Rosser--Schoenfeld scan for the sole prime-interval dependency. `kb_doctor`
+reported `0 FAIL, 0 WARN`.
+
+The frozen input, author proof, and final reconstruction SHA-256 values are
+`75c092be...d9e6c9`, `5a698ed6...326cc`, and `33125e52...48d6c1`.
+
+Evidence:
+experiments/F335_descent_parameter_mass/REPORT.md,
+experiments/F335_descent_parameter_mass/STATEMENT_ONLY.md,
+experiments/F335_descent_parameter_mass/PROOF.md,
+experiments/F335_descent_parameter_mass/RECONSTRUCTION.md,
+experiments/F335_descent_parameter_mass/ROOT_COMPARISON.md,
+experiments/F335_descent_parameter_mass/scale_output.json,
+experiments/F335_descent_parameter_mass/SOURCE_RETRIEVAL.md, and
+experiments/F335_descent_parameter_mass/SHA256SUMS.txt.
+
+### C294 -- Biased rational sources and fair branches changed finite hits but not the contract
+
+**Family:** route:F31
+
+**Status:** F336 frozen biased-source experiment plus separately scoped root
+fair-branch calculation and retained cap-data map. No QP success law, source
+advantage, or general obstruction.
+
+F336 used 128 trials for each of fourteen direct, inverse, ratio, and uniform
+source profiles on each of twelve F328 inputs. All 21,504 standalone policy
+rows were retained with exact parameters, duplicate counts, continued-fraction
+statistics, all defects, and charged generation/descent work. There were 48
+count-factor rows and four standalone generation-factor rows from two shared
+direct/inverse draws. The uniform control returned 0/1,536. Biased count hits
+occurred only on the two 20-bit inputs, one 28-bit input, and one 36-bit input;
+one further 28-bit input had only a shared generation factor. Every profile
+returned zero factors on both 44-, 60-, and 92-bit inputs.
+
+The inverse periodic formula passed 4,606 evaluated rows, with 3,072 larger
+denominators explicitly skipped. The triangular-wave error bound passed
+188,442 stage checks over all 4,608 ratio rows. Repeated small-source values
+account for much of the 20-bit concentration. Since the uniform cells have
+zero success, their finite cost-per-success ratios are undefined rather than
+evidence of an improvement.
+
+The separate fair-branch policy screens both positive children, then chooses
+one by an independent fair bit. Its root derivation gives expected reached
+queries at most `ceil(log_2 h)+1`, without a realized-path halving claim.
+Exact dynamic programming through `N<=301` covered 89 composites, 10,272
+units, and 53,230 memoized states. It found 818 parameters where fair branching
+has positive success while the minimum branch fails. Averaged over each
+complete unit set, fair branching had higher success on 28 inputs, lower
+success on 22, and equal success on 39; it is not uniformly better.
+
+The active DP charges both child gcds before returning, matching F334/F336.
+An earlier early-return source and outputs remain under `prior_early_return`.
+The repair changed gcd costs but not success probabilities or query counts.
+This exact small-state calculation is not a scalable policy evaluation.
+
+`PARTIAL_PATH_DATA.md` also shows that F329 reconstructs cap-specific costs at
+its original caps and F331 does so only at its recorded 16-round cap. F332 has
+one deterministic path per fixed input, so its two cap reruns do not supply an
+empirical cost-per-success denominator. No new cap or independence law is
+inferred from those archives.
+
+Evidence:
+experiments/F336_biased_rational_inputs/REPORT.md,
+experiments/F336_biased_rational_inputs/aggregate_output.json,
+experiments/F336_biased_rational_inputs/FAIR_BRANCH.md,
+experiments/F336_biased_rational_inputs/FAIR_BRANCH_RESULTS.md,
+experiments/F336_biased_rational_inputs/fair_branch_scale.json,
+experiments/F336_biased_rational_inputs/PARTIAL_PATH_DATA.md,
+experiments/F336_biased_rational_inputs/RESOURCE.md, and
+experiments/F336_biased_rational_inputs/SHA256SUMS.txt.
+
+### C295 -- Exact rank-gap energy favored the uniform-rank mean in the finite sample
+
+**Family:** route:F31
+
+**Status:** F337 exact finite energy experiment and inverse-source diagnostic.
+No large-input sampler, charged QP success law, source advantage, or general
+obstruction.
+
+For public unit `a`, threshold `1<=t<N`, and uniform
+`U` in `{0,...,N-1}`, F337 implements the exact rank count
+
+    C(U)=t+FS(t,N,a,a)-FS(t,N,a,a+N-1-U).
+
+The sorted orbit gaps give the rank law `mu_i=g_i/N`. The three successor
+classes give a second explicit law `nu`, while `U=aY mod N` supplies the
+uniform-rank control. For `N=pq`, every law was checked against
+`delta=kappa_p+kappa_q-2*kappa_same`, with exact direct-rank mass, `eta`,
+class-pair energies, and `K=2,8,32` second-moment bounds.
+
+The runs used eight attempts for each of seven source laws on
+`N=209,1333,10807`, and three `t` scales per unit. All 459 cells and 1,377
+law energies passed. Direct quadratic enumeration checked all 147 cells for
+`N=209`; larger inputs used grouped sums. No `t` or `t+1` control found a
+factor. Conditional cell-wise mean useful energies were:
+
+| N | mu | nu | uniform rank |
+|---:|---:|---:|---:|
+| 209 | 0.057719 | 0.070236 | 0.080096 |
+| 1333 | 0.027023 | 0.031287 | 0.035094 |
+| 10807 | 0.010964 | 0.011248 | 0.012409 |
+
+Both gap laws also had higher mean duplicate energy. Post hoc individual
+cells can reverse the comparison. At `N=10807,t=103,a=5`, for example,
+`delta_nu=105/21218`, which is 8.9207 times the uniform-pair delta, but the
+`K=32` lower bound is 0.13625 versus 0.15133 for uniform ranks because
+collisions share a heavy endpoint. This is an unwrapped direct case: its
+`nu` law is exactly half uniform on ranks 0 through 102 and half a point mass
+at rank 103, so the strongest observed ratio already has a direct sampler
+without floor sums.
+
+The root's inverse-gap transfer was checked on 119 eligible cells and 42,574
+half-orbit boundary pairs; four cells with `b>t+1` were explicitly skipped.
+The guard `p_min>2b^2` applied to 16 half-orbit cells and 137 pairs, none of
+which had a proper gcd. Proper boundary gcds outside the guard remain in the
+output.
+
+The lower averages do not constrain randomized, biased, shifted, partial,
+approximate-with-verification, or variable-duration rank procedures. They do
+not justify a larger-input run by themselves.
+
+Evidence:
+experiments/F337_random_rank_gaps/REPORT.md,
+experiments/F337_random_rank_gaps/random_rank_gaps.py,
+experiments/F337_random_rank_gaps/INVERSE_GAP_TRANSFER.md,
+experiments/F337_random_rank_gaps/aggregate_output.json,
+experiments/F337_random_rank_gaps/full_N209_output.json,
+experiments/F337_random_rank_gaps/full_N1333_output.json,
+experiments/F337_random_rank_gaps/full_N10807_output.json,
+experiments/F337_random_rank_gaps/RESOURCE.md, and
+experiments/F337_random_rank_gaps/SHA256SUMS.txt.
+
+### C296 -- Fair branches changed individual hits but not the finite aggregate
+
+**Family:** route:F31
+
+**Status:** F338 complete finite replay of the frozen F336 source corpus,
+accepted after root inspection. No uniform success probability, asymptotic
+advantage, or QP factoring claim.
+
+F338 reused all 21,504 F336 standalone rows without outcome selection. For
+each of 21,500 accepted units it retained the source multiplier, started at
+`h=(N-1)/2`, charged both child gcds, and used an independent seeded fair bit
+to choose a positive child. The four generation-factor rows were unchanged.
+Every frozen minimum path was replayed exactly before its additive descent
+counters were removed from the standalone operation vector; the source and
+transform remainder was then added to the fair descent. All counter remainders
+were nonnegative. Wall times were never subtracted, and nonadditive maximum
+fields are labeled conservative envelopes.
+
+Minimum branching had four generation plus 48 count factors. Fair branching
+had the same four generation plus 47 count factors. At paired-row level, fair
+branching rescued 21 minimum failures, lost 22 minimum successes, and kept 26
+count successes with the same factor. All fair count hits occurred at 20 or
+28 bits; both policies remained zero on every uniform-source cell and on all
+retained 44-, 60-, and 92-bit cells.
+
+The fair paths used 750,607 count queries, 18,100,900 floor-sum Euclidean
+iterations, 2,270,280 gcds, and 738,299 branch bits. Minimum paths used
+731,353, 17,962,599, and 2,213,824, respectively. Pooled Q/gcd/floor-iteration
+costs per observed success were 14,064.5/42,573.5/345,434.6 for minimum and
+14,717.8/44,515.3/354,919.6 for fair. These pooled ratios do not define an
+input law; every per-input/profile zero retains an undefined cost per success.
+
+The largest observed fair query counts by 20, 28, 36, 44, 60, and 92 bits
+were 23, 30, 37, 45, 61, and 93. They are finite observations, not path
+bounds. The tested fair stream has one fewer factor and higher pooled charged
+cost, but this does not constrain another fair sample, source, adaptive
+multiplier, or partial-output rule.
+
+Evidence:
+experiments/F338_fair_count_branches/REPORT.md,
+experiments/F338_fair_count_branches/DESIGN.md,
+experiments/F338_fair_count_branches/fair_count_branches.py,
+experiments/F338_fair_count_branches/aggregate_output.json,
+experiments/F338_fair_count_branches/RESOURCE.md, and
+experiments/F338_fair_count_branches/SHA256SUMS.txt.
+
+### C297 -- Coupled rank jumps reduce to deleted visits and explicit controls
+
+**Family:** route:F31
+
+**Status:** F339 author and root derivations. The proposed finite identity
+checks and nonuniform-jump search have not run. No proof promotion, numerical
+claim, or QP success law.
+
+For one F337 orbit prefix, let `m=t+1`, let `u,v` be the extremal orbit
+indices, and put `L=u+v`, `d=L-m`. Deleting the interval
+`B={m,...,L-1}` from the full rotation `k -> k+u mod L` gives exactly the
+three-class successor cycle. With `w=u^(-1) mod L`, `s(k)=wk mod L`, and
+`H(s)` the number of deleted visits before time `s`, the sorted rank is
+
+    r(k)=s(k)-H(s(k)).
+
+For a public jump `1<=q<L`, draw `k` uniformly from `A={0,...,m-1}` and set
+`k'=(k+qu) mod L`. An endpoint outside `A` is a failed attempt. Otherwise,
+if `h(k,q)` counts deleted
+visits along the jump, the forward retained-cycle displacement is `q-h`, and
+the ordinary rank difference is `q-h` or `q-h-m` according to wrap. Both
+`H` and `h` are ordinary Euclidean floor-sum differences. The exact accepted
+start count is
+
+    K(q)=max(0,m-c)+max(0,m-(L-c)),  c=qu mod L.
+
+For fixed `q`, every gcd argument lies in the direct menu
+`{q-h,q-h-m:0<=h<=d}`. It has at most `2(d+1)` entries. Thus `d=0` needs
+only two direct gcds, and bit-polynomial `d` gives a complete polynomial-cost
+control. This does not show that the menu succeeds.
+
+If `q` is uniform on `1,...,L-1`, conditional accepted endpoints are uniform
+ordered distinct elements of `A`; their ranks are uniform distinct ranks for
+every `d`. The same law can be sampled directly, so uniform jumps do not add
+a new rank geometry. A manufactured large-deletion source with adjacent
+`u=M,v=M+1` also has an affine rank map except at two points; for every fixed
+`q`, at most six direct gcds cover all its retained-pair successes.
+
+These collapses leave general large-`d`, nonuniform jump laws open. The next
+bounded task is exactly `COUPLING_SEARCH.md`: check the return-map identities,
+then evaluate its six public nonuniform `q` rules on every retained F337 cell,
+including endpoint failures, duplicate rules, setup work, direct controls, and
+small-`d` menus. No such computation has run.
+
+Evidence:
+experiments/F339_coupled_rank_sources/RETURN_MAP_JUMPS.md,
+experiments/F339_coupled_rank_sources/COUPLING_SEARCH.md, and
+experiments/F339_coupled_rank_sources/SHA256SUMS.txt.

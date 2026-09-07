@@ -1,0 +1,162 @@
+{
+  "dependency_sha256": {
+    "F334_floor_sum": "cb93f160d57b2a3285551cbd268e732917e3062a90eb8ca62df843f581be1e24",
+    "F336_sampler": "b660db8da032e3f514dfdfc5a4183defb5392b22d4cf8bcfa4ab9eaec57c5256",
+    "INVERSE_GAP_TRANSFER": "8254a944670559369014e2e984d69f61345e281fb0849f80a5c1a2becf12a51d",
+    "RANDOMIZED_WINDOWS": "421936d7e539483cfcb1dbf22302d166cd35e42d5c7bddb89921bcec1acfdb84"
+  },
+  "experiment": "F337_random_rank_gaps",
+  "hard_timeout_seconds": 30,
+  "input_artifacts": [
+    {
+      "path": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F337_random_rank_gaps/full_N209_output.json",
+      "peak_rss_bytes": 35815424,
+      "sha256": "0041fbac4fa65c00656256869eb2078757aa72f0514f6ba4e2d9c0a2e8e79bf3",
+      "walltime_seconds": 0.1392136669892352
+    },
+    {
+      "path": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F337_random_rank_gaps/full_N1333_output.json",
+      "peak_rss_bytes": 36585472,
+      "sha256": "4bd39bef4c29dccb42f16c5fc49619d7e21cc14926a8f4b1e96ad1bafa231722",
+      "walltime_seconds": 0.1974332499958109
+    },
+    {
+      "path": "/Users/zhou/autoresearch/IntegerFactoring/experiments/F337_random_rank_gaps/full_N10807_output.json",
+      "peak_rss_bytes": 41172992,
+      "sha256": "080d11ce2ab306e065c7eb07a0d7f01b838187b15c1818f2ad8618109fd36756",
+      "walltime_seconds": 1.7207420000049751
+    }
+  ],
+  "internal_timeout_seconds": 28,
+  "memory_limit_bytes": 268435456,
+  "mode": "aggregate",
+  "peak_rss_bytes": 71909376,
+  "route": "route:F31",
+  "scope": "Exact finite diagnostics for three inputs, seven source laws, eight parameter attempts per law, and three thresholds. Offline factor labels are used only in energy diagnostics and validation.",
+  "seed": 33720260907,
+  "source_sha256": "187e35a09f704ce29bdce7c42820a23551801cb835a80fc32575f4732e4e08e1",
+  "status": "passed",
+  "summary": [
+    {
+      "actual_bits": 8,
+      "anomalies": 0,
+      "diagnostic_cells": 147,
+      "energy": {
+        "mu": {
+          "mean_delta": {
+            "decimal": 0.057718708004710094,
+            "denominator": 6421107,
+            "exact": "370618/6421107",
+            "numerator": 370618
+          },
+          "positive_delta_cells": 147
+        },
+        "nu": {
+          "mean_delta": {
+            "decimal": 0.07023579825950771,
+            "denominator": 121329059684903308822071428740800,
+            "exact": "8521643359044639019316950365089/121329059684903308822071428740800",
+            "numerator": 8521643359044639019316950365089
+          },
+          "positive_delta_cells": 147
+        },
+        "uniform_rank": {
+          "mean_delta": {
+            "decimal": 0.08009555536892397,
+            "denominator": 2679075,
+            "exact": "214582/2679075",
+            "numerator": 214582
+          },
+          "positive_delta_cells": 147
+        }
+      },
+      "factor_at_t_controls": 0,
+      "factor_at_t_plus_one_controls": 0,
+      "generation_factor_attempts": 7,
+      "modulus": 209,
+      "parameter_attempts": 56,
+      "unit_parameters": 49
+    },
+    {
+      "actual_bits": 11,
+      "anomalies": 0,
+      "diagnostic_cells": 144,
+      "energy": {
+        "mu": {
+          "mean_delta": {
+            "decimal": 0.0270232286753859,
+            "denominator": 1031742,
+            "exact": "27881/1031742",
+            "numerator": 27881
+          },
+          "positive_delta_cells": 144
+        },
+        "nu": {
+          "mean_delta": {
+            "decimal": 0.03128736869724264,
+            "denominator": 2524156457273450329770117591215455996048098738235105053032491482267321942456869345413023518215121337735491033579008194472327136761593890918400000,
+            "exact": "78974213728240225883701272877342339474450310571295714831831896781184100523584555470388248781866427620894199717794195665729240497183422812506553/2524156457273450329770117591215455996048098738235105053032491482267321942456869345413023518215121337735491033579008194472327136761593890918400000",
+            "numerator": 78974213728240225883701272877342339474450310571295714831831896781184100523584555470388248781866427620894199717794195665729240497183422812506553
+          },
+          "positive_delta_cells": 144
+        },
+        "uniform_rank": {
+          "mean_delta": {
+            "decimal": 0.035094145477680964,
+            "denominator": 50957640781347,
+            "exact": "1788314858780/50957640781347",
+            "numerator": 1788314858780
+          },
+          "positive_delta_cells": 144
+        }
+      },
+      "factor_at_t_controls": 0,
+      "factor_at_t_plus_one_controls": 0,
+      "generation_factor_attempts": 8,
+      "modulus": 1333,
+      "parameter_attempts": 56,
+      "unit_parameters": 48
+    },
+    {
+      "actual_bits": 14,
+      "anomalies": 0,
+      "diagnostic_cells": 168,
+      "energy": {
+        "mu": {
+          "mean_delta": {
+            "decimal": 0.010963680306789653,
+            "denominator": 1401494988,
+            "exact": "15365543/1401494988",
+            "numerator": 15365543
+          },
+          "positive_delta_cells": 168
+        },
+        "nu": {
+          "mean_delta": {
+            "decimal": 0.011248169896326909,
+            "denominator": 4889995596101975794183819987393960278634639012932362838283167605211213785391026005631701019518503595414445677792505751999696027842797815688043266002439429068793191395377663870992680330075679699714156386415309550372063069786838221575309707811535311205989616014697122532743011687843590335638534389445345803931436958538920013986738812704317440000,
+            "exact": "55003501257245401228068971064934986889659088577520588769555344136591448375269478717888435476989776838101112073880014087543839883851368564642168055536338156634937167101024433997281523367506110776088636585999347288200745882106953952713065689624309533322814449386100018225509811614913865276887525250440917052636838980719734219819575970318696127/4889995596101975794183819987393960278634639012932362838283167605211213785391026005631701019518503595414445677792505751999696027842797815688043266002439429068793191395377663870992680330075679699714156386415309550372063069786838221575309707811535311205989616014697122532743011687843590335638534389445345803931436958538920013986738812704317440000",
+            "numerator": 55003501257245401228068971064934986889659088577520588769555344136591448375269478717888435476989776838101112073880014087543839883851368564642168055536338156634937167101024433997281523367506110776088636585999347288200745882106953952713065689624309533322814449386100018225509811614913865276887525250440917052636838980719734219819575970318696127
+          },
+          "positive_delta_cells": 168
+        },
+        "uniform_rank": {
+          "mean_delta": {
+            "decimal": 0.012408770423044498,
+            "denominator": 9870687008,
+            "exact": "122483089/9870687008",
+            "numerator": 122483089
+          },
+          "positive_delta_cells": 168
+        }
+      },
+      "factor_at_t_controls": 0,
+      "factor_at_t_plus_one_controls": 0,
+      "generation_factor_attempts": 0,
+      "modulus": 10807,
+      "parameter_attempts": 56,
+      "unit_parameters": 56
+    }
+  ],
+  "walltime_seconds": 0.0457783330057282
+}

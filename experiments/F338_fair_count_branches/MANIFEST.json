@@ -1,0 +1,79 @@
+{
+  "experiment": "F338_fair_count_branches",
+  "route": "route:F31",
+  "status": "passed",
+  "seed": 33820260907,
+  "source_sha256": "a62d75ad9fce7df49124f641b7474b2534f34811c37fc785763d1b27743f1a1b",
+  "scope": {
+    "source_policy_rows": 21504,
+    "moduli": 12,
+    "profiles_per_modulus": 14,
+    "trials_per_profile": 128,
+    "generation_factor_rows": 4,
+    "distinct_shared_generation_events": 2,
+    "minimum_count_factors": 48,
+    "fair_count_factors": 47,
+    "anomalies": 0,
+    "resource_censors": 0
+  },
+  "limits": {
+    "internal_timeout_seconds": 28,
+    "hard_timeout_seconds": 30,
+    "memory_limit_bytes": 536870912
+  },
+  "sources": [
+    "fair_count_branches.py",
+    "run_scale.sh"
+  ],
+  "documents": [
+    "DESIGN.md",
+    "REPORT.md",
+    "RESOURCE.md",
+    "SOURCES.md"
+  ],
+  "pilot_artifacts": [
+    "pilot_output.json",
+    "pilot_status.json",
+    "pilot_run.log",
+    "pilot_rows.jsonl.gz",
+    "pilot_witnesses.jsonl.gz"
+  ],
+  "aggregate_artifacts": [
+    "aggregate_output.json",
+    "aggregate_status.json",
+    "aggregate_run.log"
+  ],
+  "scale_modulus_ids": [
+    "b20_i0",
+    "b20_i1",
+    "b28_i0",
+    "b28_i1",
+    "b36_i0",
+    "b36_i1",
+    "b44_i0",
+    "b44_i1",
+    "b60_i0",
+    "b60_i1",
+    "b92_i0",
+    "b92_i1"
+  ],
+  "scale_ranges": [
+    "0_64",
+    "64_128"
+  ],
+  "scale_artifact_suffixes": [
+    "_output.json",
+    "_status.json",
+    "_run.log",
+    "_rows.jsonl.gz",
+    "_witnesses.jsonl.gz"
+  ],
+  "maximum_field_scope": "conservative envelopes; additive operation counters are exact",
+  "walltime_scope": "source wall times were never subtracted",
+  "excluded_runtime_artifacts": [
+    "__pycache__/",
+    "*.pyc",
+    "*.pyo"
+  ],
+  "hash_manifest": "SHA256SUMS.txt"
+}
