@@ -1697,6 +1697,22 @@ recorded_status = "promoted after fresh statement-only Sol reconstruction and ro
 scope = "the global canonical inverse graph modulo \\(M=2^k\\), the carry\nmoments \\(Q_j\\bmod M\\), and all mixed power moments \\(S_{ab}\\bmod M^2\\)\nthrough a requested degree bank. No modulo-\\(M^3\\) correction bank,\nArchimedean approximation, ordinary Cauchy-resolvent evaluator, rectangle\ncount, or factoring algorithm."
 
 [[records]]
+id = "P239"
+kind = "result"
+title = "Shifted binomial carry sums recover exact inverse-graph rectangle counts"
+source = { kind = "record", path = "PROVED.md", id = "P239" }
+recorded_status = "promoted after fresh statement-only Sol reconstruction and root\nverification of the algebra, endpoints, retained precision, and conditional\ncost."
+scope = "an exact reduction from arbitrary canonical inverse-graph rectangle\ncounts to four shifted binomial-carry sums modulo \\(M\\). No uniform efficient\nevaluator for those sums, independent rectangle oracle, or factoring algorithm\nis supplied."
+
+[[records]]
+id = "P240"
+kind = "result"
+title = "Canonical Möbius mixed and carry moments have a polynomial-bit constructor"
+source = { kind = "record", path = "PROVED.md", id = "P240" }
+recorded_status = "promoted after fresh statement-only reconstruction and root\nreview of the scope, precision guards, and full-input convention."
+scope = "one canonical Möbius permutation modulo a power of two. No fast\nsum over a family of maps, shifted-window statistic, rectangle count, or\nfactoring algorithm is supplied."
+
+[[records]]
 id = "X01"
 kind = "closure"
 title = "generic exact linear compression of arbitrary square classes"
@@ -4197,3 +4213,17 @@ title = "Global residue formulas expose a separate third-digit carry bank"
 source = { kind = "record", path = "notes/Progress.md", id = "C264" }
 recorded_status = "P238 promotes only the reconstructed modulo-\\(M^2\\) constructor.\nThe closed forms, higher-precision identities, finite Mahler separation,\nand exponent-derivative dependency below are root-derived exact results or\nfinite evidence and are not part of that promotion."
 scope = "F303 on the global canonical inverse graph for \\(M=2^k\\),\n\\(k\\geq3\\), and positive odd \\(N\\). This note records the direct\nmodulo-\\(M^2\\) formulas, the next \\(Q_{j,2}/2\\) precision bank, two tested\nways that do not recover it, and the primary-source overlap. No ordinary\nCauchy-resolvent accuracy, rectangle count, or factoring algorithm."
+
+[[records]]
+id = "C265"
+kind = "note"
+title = "Guarded selectors close pointwise but leave a growing Möbius family"
+source = { kind = "record", path = "notes/Progress.md", id = "C265" }
+recorded_status = "F304 exact mechanisms and finite controls outside P240. P240\npromotes only the reconstructed one-map moment constructor."
+
+[[records]]
+id = "C266"
+kind = "note"
+title = "Fixed-measure floor transport separates computable marginals from the window term"
+source = { kind = "record", path = "notes/Progress.md", id = "C266" }
+recorded_status = "F305 exact identities, a polynomial-bit marginal constructor,\nand finite controls. No evaluator for the carry-weighted floor transform or\nthe shifted binomial statistic is supplied."

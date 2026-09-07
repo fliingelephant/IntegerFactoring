@@ -1,0 +1,227 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "name": "s1_D0_zero_n",
+      "s": 1,
+      "A": -1,
+      "B": 3,
+      "C": 4,
+      "n": 0,
+      "D": 0,
+      "L": 2,
+      "requested_Q": [
+        1
+      ],
+      "moments": {
+        "0,0": 2
+      },
+      "oracle": {
+        "carry_indices": 1,
+        "series_degree": 1,
+        "guard_precision_bits": 2,
+        "universal_power_indices": 8,
+        "canonical_points_enumerated": 0
+      },
+      "checks": 2,
+      "runtime_seconds": 2.8458001906983554e-05
+    },
+    {
+      "name": "s1_D1_negative_n",
+      "s": 1,
+      "A": 5,
+      "B": -3,
+      "C": 6,
+      "n": -7,
+      "D": 1,
+      "L": 2,
+      "requested_Q": [
+        0,
+        0
+      ],
+      "moments": {
+        "0,0": 2,
+        "0,1": 1,
+        "1,0": 1,
+        "1,1": 0
+      },
+      "oracle": {
+        "carry_indices": 2,
+        "series_degree": 2,
+        "guard_precision_bits": 3,
+        "universal_power_indices": 13,
+        "canonical_points_enumerated": 0
+      },
+      "checks": 6,
+      "runtime_seconds": 3.491700044833124e-05
+    },
+    {
+      "name": "s2_D0_negative_n",
+      "s": 2,
+      "A": -5,
+      "B": -1,
+      "C": 8,
+      "n": -4,
+      "D": 0,
+      "L": 4,
+      "requested_Q": [
+        1
+      ],
+      "moments": {
+        "0,0": 4
+      },
+      "oracle": {
+        "carry_indices": 1,
+        "series_degree": 1,
+        "guard_precision_bits": 4,
+        "universal_power_indices": 10,
+        "canonical_points_enumerated": 0
+      },
+      "checks": 2,
+      "runtime_seconds": 1.6542006051167846e-05
+    },
+    {
+      "name": "s2_D1_zero_n",
+      "s": 2,
+      "A": 3,
+      "B": -7,
+      "C": 10,
+      "n": 0,
+      "D": 1,
+      "L": 4,
+      "requested_Q": [
+        1,
+        3
+      ],
+      "moments": {
+        "0,0": 4,
+        "0,1": 6,
+        "1,0": 6,
+        "1,1": 10
+      },
+      "oracle": {
+        "carry_indices": 3,
+        "series_degree": 3,
+        "guard_precision_bits": 5,
+        "universal_power_indices": 17,
+        "canonical_points_enumerated": 0
+      },
+      "checks": 6,
+      "runtime_seconds": 4.1000006604008377e-05
+    },
+    {
+      "name": "s3_D0_negative_n",
+      "s": 3,
+      "A": 7,
+      "B": -9,
+      "C": 16,
+      "n": -11,
+      "D": 0,
+      "L": 8,
+      "requested_Q": [
+        4
+      ],
+      "moments": {
+        "0,0": 8
+      },
+      "oracle": {
+        "carry_indices": 1,
+        "series_degree": 1,
+        "guard_precision_bits": 6,
+        "universal_power_indices": 12,
+        "canonical_points_enumerated": 0
+      },
+      "checks": 2,
+      "runtime_seconds": 2.0042003598064184e-05
+    },
+    {
+      "name": "s3_D1_zero_n",
+      "s": 3,
+      "A": -3,
+      "B": 5,
+      "C": 18,
+      "n": 0,
+      "D": 1,
+      "L": 8,
+      "requested_Q": [
+        0,
+        1
+      ],
+      "moments": {
+        "0,0": 8,
+        "0,1": 28,
+        "1,0": 28,
+        "1,1": 44
+      },
+      "oracle": {
+        "carry_indices": 4,
+        "series_degree": 4,
+        "guard_precision_bits": 9,
+        "universal_power_indices": 23,
+        "canonical_points_enumerated": 0
+      },
+      "checks": 6,
+      "runtime_seconds": 7.345899939537048e-05
+    },
+    {
+      "name": "s4_D0_negative_n",
+      "s": 4,
+      "A": -11,
+      "B": 3,
+      "C": 32,
+      "n": -25,
+      "D": 0,
+      "L": 16,
+      "requested_Q": [
+        15
+      ],
+      "moments": {
+        "0,0": 16
+      },
+      "oracle": {
+        "carry_indices": 1,
+        "series_degree": 1,
+        "guard_precision_bits": 8,
+        "universal_power_indices": 14,
+        "canonical_points_enumerated": 0
+      },
+      "checks": 2,
+      "runtime_seconds": 2.6416004402562976e-05
+    },
+    {
+      "name": "s4_D1_zero_n",
+      "s": 4,
+      "A": 9,
+      "B": -5,
+      "C": 34,
+      "n": 0,
+      "D": 1,
+      "L": 16,
+      "requested_Q": [
+        11,
+        15
+      ],
+      "moments": {
+        "0,0": 16,
+        "0,1": 120,
+        "1,0": 120,
+        "1,1": 104
+      },
+      "oracle": {
+        "carry_indices": 5,
+        "series_degree": 5,
+        "guard_precision_bits": 11,
+        "universal_power_indices": 27,
+        "canonical_points_enumerated": 0
+      },
+      "checks": 6,
+      "runtime_seconds": 0.0001117919891839847
+    }
+  ],
+  "exact_checks": 32,
+  "runtime_seconds": 0.00036283400550018996,
+  "peak_rss_bytes": 18513920,
+  "timeout_seconds": 30,
+  "memory_budget_bytes": 536870912,
+  "scope": "Exact enumeration only for eight edge controls with L at most 16."
+}

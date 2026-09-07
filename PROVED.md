@@ -25719,3 +25719,293 @@ primitive nor this mixed-moment construction carries a novelty claim.
 The closed-form modulo-\(M^2\) refinement, higher-precision carry
 corrections, exponent-derivative identities, and finite Mahler evidence
 are not promoted by this record.
+
+## P239 -- Shifted binomial carry sums recover exact inverse-graph rectangle counts
+
+**Status:** promoted after fresh statement-only Sol reconstruction and root
+verification of the algebra, endpoints, retained precision, and conditional
+cost.
+
+**Scope:** an exact reduction from arbitrary canonical inverse-graph rectangle
+counts to four shifted binomial-carry sums modulo \(M\). No uniform efficient
+evaluator for those sums, independent rectangle oracle, or factoring algorithm
+is supplied.
+
+**Statement.** Let \(k\geq2\), \(M=2^k\), and let \(N\) be any positive odd
+integer. For each odd \(u\in[0,M)\), let
+
+\[
+ v(u)=Nu^{-1}\bmod M
+\]
+
+be the canonical representative in \([0,M)\). For cut coordinates
+\(c,d\in[0,M]\), define
+
+\[
+\begin{aligned}
+ x_c(u)&=u+M\mathbf 1_{u<c},\\
+ y_d(u)&=v(u)+M\mathbf 1_{v(u)<d},\\
+ q_{cd}(u)&=\frac{x_c(u)y_d(u)-N}{M},\\
+ B(c,d)&=\sum_{\substack{0\leq u<M\\u\ {\rm odd}}}
+          \binom{q_{cd}(u)}2\pmod M.
+\end{aligned}
+\]
+
+The full integer \(N\) defines the carry, which may be negative. Each
+\(\binom q2=q(q-1)/2\) is an exact integer, including for negative \(q\).
+
+For arbitrary integer cuts
+
+\[
+ 0\leq a\leq b\leq M,\qquad 0\leq c\leq d\leq M,
+\]
+
+let
+
+\[
+ C=\#\{u\ {\rm odd}:a\leq u<b,\ c\leq v(u)<d\}.
+\]
+
+Then \(C\) is the canonical residue modulo \(M\) of
+
+\[
+ \left(N-\frac M2\right)^{-1}
+ \bigl(B(b,d)-B(a,d)-B(b,c)+B(a,c)\bigr). \tag{1}
+\]
+
+This includes empty intervals and endpoints \(0\) and \(M\).
+
+**Proof.** Put
+
+\[
+ r(u)=\frac{uv(u)-N}{M},\quad
+ A_s=\mathbf 1_{u<s},\quad D_t=\mathbf 1_{v(u)<t}.
+\]
+
+Integer expansion of the shifted product gives
+
+\[
+ q_{st}(u)=r(u)+uD_t+v(u)A_s+MA_sD_t. \tag{2}
+\]
+
+Take the pointwise mixed difference of \(f(q)=\binom q2\) at
+\((b,d),(a,d),(b,c),(a,c)\). If \(u\notin[a,b)\) or
+\(v(u)\notin[c,d)\), the corresponding indicator does not change and the
+mixed difference is zero. If the point lies in both intervals, the four
+carries are
+
+\[
+ r,\quad r+v,\quad r+u,\quad r+u+v+M.
+\]
+
+The integer identities
+
+\[
+ f(z+M)-f(z)=Mz+\frac{M(M-1)}2
+\]
+
+and
+
+\[
+ f(r+u+v)-f(r+u)-f(r+v)+f(r)=uv
+\]
+
+show that the mixed difference at this point is
+
+\[
+ uv+M(r+u+v)+\frac{M(M-1)}2
+ \equiv N-\frac M2\pmod M. \tag{3}
+\]
+
+Summing (3) proves the congruence in (1). Since \(k\geq2\), \(M/2\) is
+even, so \(N-M/2\) is odd and invertible modulo \(M\). There are \(M/2\)
+odd residues, hence \(0\leq C\leq M/2<M\); the recovered canonical residue
+is therefore the exact count.
+
+At cut zero the relevant indicator is always zero, and at cut \(M\) it is
+always one. Thus (2) also proves the endpoint and empty-interval cases
+without a correction.
+
+**Retained precision.** In general \(f(q)\bmod M\) is determined by
+\(q\bmod2M\), but not by \(q\bmod M\), because
+
+\[
+ f(q+M)-f(q)\equiv M/2\pmod M,\qquad
+ f(q+2M)-f(q)\equiv0\pmod M.
+\]
+
+Consequently a modular implementation must retain
+\(x_cy_d-N\bmod2M^2\) before the exact division by \(M\). Equivalently,
+\(N\bmod2M^2\) suffices to evaluate a summand modulo \(M\), but
+\(N\bmod M\) does not. The mathematical carry definition continues to use
+the full \(N\). The four completed \(B\)-values themselves need only be
+returned modulo \(M\).
+
+**Conditional consequence.** Suppose a uniform deterministic or classical
+Las Vegas algorithm evaluates every required \(B(c,d)\bmod M\) in expected
+bit cost \(T(n)\) on \(O(n)\)-bit inputs, where \(T\) is nondecreasing.
+Equation (1) implements one exact rectangle count and its emptiness test
+with four calls and polynomial additional bit work. Fresh random bits give
+the same expected bound for adaptive Las Vegas calls.
+
+Using P237's public dyadic rectangle interface, complete all-input factoring
+then has expected bit cost
+
+\[
+ O\!\left(n^2T(n)+\operatorname{poly}(n)\right),
+ \qquad n=\lceil\log_2(N+1)\rceil.
+\]
+
+A quasipolynomial \(T\) would therefore suffice. This conclusion is
+conditional: neither this record nor its finite reference program constructs
+such an evaluator.
+
+Independent proof:
+experiments/F306_shifted_carry_counts/RECONSTRUCTION.md.
+Statement-only input:
+experiments/F306_shifted_carry_counts/STATEMENT_ONLY.md.
+Input SHA-256:
+463bec85607b7bbaac1dcdb04c79b4210041285288c2b79603d2dbaade827e2a.
+Reconstruction SHA-256:
+36851132bf7d7ce095fac6979f36482c47b3ddc41645c909c1eb9b2e8444f187.
+
+Author derivation and finite evidence:
+experiments/F306_shifted_carry_counts/REPORT.md, pilot.py, output.json,
+run.log, status.json, and RESOURCE.md. The retained checks cover 1,200
+general rectangles, 175 public factor rectangles, and 21 complete reference
+inputs using 620 \(B\)-calls. The reference evaluator enumerates graph
+points; these checks support the identity but do not supply the missing
+asymptotic evaluator. No novelty claim is made.
+
+## P240 -- Canonical Möbius mixed and carry moments have a polynomial-bit constructor
+
+**Status:** promoted after fresh statement-only reconstruction and root
+review of the scope, precision guards, and full-input convention.
+
+**Scope:** one canonical Möbius permutation modulo a power of two. No fast
+sum over a family of maps, shifted-window statistic, rectangle count, or
+factoring algorithm is supplied.
+
+**Statement.** Let \(s\geq1\), \(L=2^s\), let \(A,B\) be odd integers,
+let \(C\) be a positive even integer, and let \(n\) be any integer. For
+\(0\leq x<L\), put
+
+\[
+ D(x)=B+Cx,\quad T(x)=\frac{n-Ax}{D(x)}\in\mathbb Z_2,
+ \quad y(x)=T(x)\bmod L\text{ in }[0,L),
+\]
+
+and, using the full integer \(n\),
+
+\[
+ q_x=\frac{D(x)y(x)-(n-Ax)}L.
+\]
+
+For every numerical \(d\geq0\), a uniform deterministic algorithm computes
+
+\[
+ S_{ij}=\sum_{0\leq x<L}x^iy(x)^j\pmod {L^2}
+ \quad(0\leq i,j\leq d)
+\]
+
+and
+
+\[
+ Q_j=\sum_{0\leq x<L}\frac{q_xT(x)^j}{D(x)}\pmod L
+ \quad(0\leq j\leq d)
+\]
+
+in bit complexity polynomial in \(s\), numerical \(d\), and the binary
+lengths of \(A,B,C,n\). It does not enumerate the \(L\) arguments or their
+images and receives no factors, permutation list, or precision advice.
+
+**Construction.** Cross multiplication shows that equality of two
+\(T(x)\bmod L\) values forces
+\((AB+Cn)(x_2-x_1)=0\bmod L\). The coefficient is odd, so \(y\) permutes
+\(Y=\{0,\ldots,L-1\}\). With \(u_x=q_x/D(x)\), exactly
+
+\[
+ y(x)=T(x)+Lu_x. \tag{1}
+\]
+
+All needed ordinary sums are computed from
+
+\[
+ \sum_{x=0}^{L-1}x^m=
+ \sum_{r=0}^m
+ \left\{\begin{matrix}m\\r\end{matrix}\right\}r!\binom L{r+1}. \tag{2}
+\]
+
+At precision \(P\), expand \((B+Cx)^{-j}\) as a negative-binomial
+series. If \(v\) is the 2-adic valuation of \(C\), every term after
+\(\lfloor(P-1)/v\rfloor\) vanishes. Expanding \((n-Ax)^j\) and applying
+(2) computes every required sum \(\sum x^iT(x)^j\) without enumerating
+\(x\).
+
+For the carry bank, use
+
+\[
+ J=\max\left(d,2d-1+\left\lfloor\frac{s-1}{v}\right\rfloor\right),
+ \qquad E=\min(J+1,L).
+\]
+
+Compute the elementary symmetric coefficients of \((T(x))_x\) from its
+power sums at precision \(2s+\nu_2(E!)\). At Newton step \(k\), retain the
+numerator through precision
+\(2s+\nu_2(E!)-\nu_2((k-1)!)\), divide exactly by the 2-part of \(k\), and
+invert only its odd part. Every coefficient remains known modulo \(L^2\).
+
+Let \(e_m^Y\) and \(e_m^T\) denote the two symmetric banks and set
+
+\[
+ H_m=(e_{m+1}^Y-e_{m+1}^T)/L\pmod L
+\]
+
+for \(m<L\), with \(H_m=0\) afterward. This division is guarded by the
+known \(L^2\) residue and exact divisibility. Expanding
+\(e_m(Y\setminus\{y\})\) gives a unit-triangular recurrence for
+\(U_m=\sum_xu_xy(x)^m\bmod L\). Since \(T(x)=y(x)\bmod L\), these are
+the required \(Q_m\). The recurrence continues through \(J\), including
+when \(J\geq L\), without listing roots.
+
+Finally solve \(x=(n-BT)/(A+CT)\). The denominator is odd, and its
+binomial expansion modulo \(L\) has degree at most
+\(i+j-1+\lfloor(s-1)/v\rfloor\). Thus the carry bank computes
+\(W_{i,j-1}=\sum_xx^iu_xT(x)^{j-1}\bmod L\). Equation (1) gives
+
+\[
+ S_{i0}=\sum_xx^i,\qquad
+ S_{ij}=\sum_xx^iT(x)^j+jLW_{i,j-1}\pmod {L^2}.
+\]
+
+All even divisions are exact integer divisions with the displayed guards.
+The case \(d=0\) returns \(Q_0\) and \(S_{00}=L\); it also preserves the
+convention \(0^0=1\). Every index and precision is \(O(s+d)\), which gives
+the stated polynomial bit bound. The bound is in numerical \(d\), not its
+binary length.
+
+Complete independent proof:
+experiments/F304_guarded_digit_circuits/MOBIUS_RECONSTRUCTION.md.
+Statement-only input:
+experiments/F304_guarded_digit_circuits/MOBIUS_STATEMENT_ONLY.md.
+Input SHA-256:
+19599f6d20c1fac30bfeda265dd395dcdda6d81d1786c1dacb8dd8b1f4b3165c.
+Reconstruction SHA-256:
+bc9ef597891d4b61df699975fdd1abbc3769b4a203c928397e8ada490dd762d0.
+
+Author derivation and finite evidence:
+experiments/F304_guarded_digit_circuits/ERROR_BANK.md,
+experiments/F304_guarded_digit_circuits/MOBIUS_BANK.py,
+experiments/F304_guarded_digit_circuits/MOBIUS_BANK_output.json,
+experiments/F304_guarded_digit_circuits/MOBIUS_BANK_run.log, and the
+separate edge and large-pilot artifacts. The repaired \(d=0\) interface
+passed 32 exact requested-output checks. The preserved \(s=33,65\) pilot
+is a valid generic one-map run, but not an original patch with
+\(M=2^s\);
+experiments/F304_guarded_digit_circuits/MOBIUS_LARGE_PILOT_SCOPE.md
+records that correction. The
+correctly coupled original case used \(M=2^{65}\), \(L=2^{64}\),
+\(s=64\), and \(N=9M+1\). It ran in 0.529 seconds at 18,087,936 bytes
+peak RSS and matched the universal row and column marginals. Its large
+mixed outputs were not independently verified. No novelty claim is made
+for the elementary power-sum or Newton machinery.

@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F305_input_carry_transport/input_transport.py", line 91, in <module>
+    bank,stats=marginal_bank(M,N,d)
+               ~~~~~~~~~~~~~^^^^^^^
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F305_input_carry_transport/input_transport.py", line 77, in marginal_bank
+    result+=c*F(h,power,limit//4,M,4*N,residue*N-d)
+              ~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F305_input_carry_transport/input_transport.py", line 54, in F
+    value+=c*F(p+j,h,n,m,a0,b0)
+             ~^^^^^^^^^^^^^^^^^
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F305_input_carry_transport/input_transport.py", line 63, in F
+    value-=math.comb(q,j)*c*F(j,s,H,a,m,m-b+a-1)
+                            ~^^^^^^^^^^^^^^^^^^^
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F305_input_carry_transport/input_transport.py", line 54, in F
+    value+=c*F(p+j,h,n,m,a0,b0)
+             ~^^^^^^^^^^^^^^^^^
+  File "/Users/zhou/autoresearch/IntegerFactoring/experiments/F305_input_carry_transport/input_transport.py", line 65, in F
+    assert value.denominator==1
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError

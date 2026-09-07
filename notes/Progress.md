@@ -7956,3 +7956,148 @@ UNIT_PRODUCTS.md, EXPONENT_DERIVATIVE.md, SOURCE_LEADS.md,
 MOMENT_RECONSTRUCTION.md, moment_precision.py/json/log,
 closed_form_controls.py/json/log, and
 exponent_derivative.py/json/log/status.
+
+### C265 -- Guarded selectors close pointwise but leave a growing Möbius family
+
+**Status:** F304 exact mechanisms and finite controls outside P240. P240
+promotes only the reconstructed one-map moment constructor.
+
+**Scope and mechanism.** Newton's parity lift satisfies, exactly,
+
+\[
+ E(a)=3a^2-2a^3=a+(1-2a)(a^2-a),\qquad
+ E(a)^2-E(a)=(a^2-a)^2(4(a^2-a)-3).
+\]
+
+The error valuation doubles. Moments weighted by powers of the error and
+by \(1,a\) form a finite triangular bank at fixed precision; the
+two-coordinate bank has the four sectors \(1,a,b,ab\). With exact guarded
+division by two after each recovered bit, this gives a canonical dyadic
+interval-indicator circuit with \(O(k\log k)\) gates and \(2k\) working
+bits for output modulo \(2^k\). Composing two indicators with \(u\) and
+\(N/u\) is a faithful pointwise rectangle selector. No polynomial-cost
+whole-graph trace of that circuit is known, and P240's numerical monomial
+bank does not supply one.
+
+Exact quotient branches stay in the P240 Möbius form. Splitting
+\(x=e+2X\), \(y=f+2Y\), with \(f=n-e\bmod2\), gives
+
+\[
+ A'=A+Cf,\quad B'=B+Ce,\quad C'=2C,\quad
+ n'=(n-Cef-Ae-Bf)/2.
+\]
+
+The determinant remains \(AB+Cn\), but each level has two actual maps.
+For original patches with \(C=2^r\), three map values recover the distinct
+odd residue \(B\bmod2^r\) when \(k\geq3r+1\). Hence the literal map
+representation has \(\Theta(2^{k/3})\) states at
+\(r=\lfloor(k-1)/3\rfloor\). This is not a lower bound against a different
+aggregation.
+
+**Finite evidence.** At \(k=7,10,13,16,19\), the tested patch counts were
+\(2,4,8,16,32\). The distinct degree-two mixed-moment bank counts were
+\(2,2,8,16,32\), while the carry-bank counts were \(2,4,8,16,32\).
+The first repeated moment bank prevents promotion of map distinctness as a
+claim about every truncated bank. Separate controls passed 73,696 digit
+checks, 32 rectangles, and 780 one-map moment and carry checks.
+
+The concrete missing step is a faithful non-enumerative aggregation over
+the correlated map family, such as the shifted statistic in P239.
+
+Evidence:
+experiments/F304_guarded_digit_circuits/RESULT.md, ERROR_BANK.md,
+MOBIUS_BRANCHES.py, MOBIUS_BRANCHES_output.json, MOBIUS_BRANCHES_run.log,
+MOBIUS_BANK_GROWTH.py, MOBIUS_BANK_GROWTH_output.json,
+MOBIUS_BANK_GROWTH_run.log, pilot.py, output.json, run.log, and RESOURCE.md.
+
+### C266 -- Fixed-measure floor transport separates computable marginals from the window term
+
+**Status:** F305 exact identities, a polynomial-bit marginal constructor,
+and finite controls. No evaluator for the carry-weighted floor transform or
+the shifted binomial statistic is supplied.
+
+**Scope and mechanism.** For \(M=2^k\), canonical odd \(w\), and canonical
+odd \(0<N<M\), put
+
+\[
+ u=w^{-1}\bmod M,\quad q_1=(uw-1)/M,\quad
+ \mu_M(w)=u q_1(w),\quad
+ f_{N,d}(w)=\left\lfloor\frac{Nw-d}{M}\right\rfloor.
+\]
+
+The output-shifted carry is
+
+\[
+ q_{0d}=Nq_1-u f_{N,d}.
+\]
+
+Thus all inputs use the fixed \(N=1\) measure, while the unresolved term is
+
+\[
+ T_0(N,d)=\sum_w\mu_M(w)f_{N,d}(w)\pmod M. \tag{1}
+\]
+
+In contrast, F305 constructs in polynomial bit cost the actual marginals
+
+\[
+ R_1^*(N,d)=\sum_ww^{-1}f_{N,d}(w),\qquad
+ R_2(N,d)=\sum_ww^{-2}f_{N,d}(w)^2\pmod {2M}. \tag{2}
+\]
+
+A finite reciprocal expansion on \(w=1,3\bmod4\), followed by a
+degree-preserving Euclidean floor recurrence, uses
+\(O(D^2\log M)\) memoized states for total degree \(D\). All Faulhaber
+divisions are exact rational arithmetic. This computes (2); it does not
+integrate the measure in (1).
+
+For an input cut \(c\), put \(x_c=u+M\mathbf 1_{u<c}\),
+\(q_c=(x_cw-1)/M\), and \(\mu_c=x_cq_c\bmod M\). Define
+\(H_c=\sum_wq_c\bmod M\), \(B_{c0}(1)=\sum_w\binom{q_c}{2}\bmod M\),
+and \(T_c(N,d)=\sum_w\mu_c(w)f_{N,d}(w)\bmod M\).
+The exact shifted transport is
+
+\[
+ B_{cd}(N)=N^2B_{c0}(1)+\binom N2H_c
+ +\frac{R_2(N,d)+R_1^*(N,d)}2
+ +(M/2-N)T_c(N,d)\pmod M. \tag{3}
+\]
+
+The numerator \(R_2+R_1^*\) is retained modulo \(2M\) and is even before
+division. The computable terms cancel in the mixed window difference,
+while
+
+\[
+ \Delta_c\Delta_dT_c=-C(c,d),\qquad
+ \Delta_c\Delta_dB_{cd}=(N-M/2)C(c,d)\pmod M.
+\]
+
+Thus the carry/window term contains exactly the rectangle information that
+the marginal bank lacks.
+
+**Full input and remaining scope.** If \(N=\eta+tM\), with canonical
+\(0<\eta<M\), then FULL_INPUT.md proves
+
+\[
+ B_{cd}(N)=B_{cd}(\eta)-tH_{cd}(\eta)
+ +(M/2)\binom{t+1}{2}\pmod M.
+\]
+
+The first-carry correction \(H_{cd}\) is computable from P238 and reciprocal
+prefixes, and it cancels from the four-corner difference. Individual
+\(B\)-values still change; replacing the full input by its residue without
+this correction is wrong. A dyadic reflection exposes a smaller inverse
+graph but also a carry-bit weighted floor term at the original output
+precision. No closed total-state recursion is known for those surviving
+terms.
+
+The retained pilot passed 11,352 pointwise transports, 150 shifted
+binomial identities, 450 marginal values, and 25 reflection identities.
+The non-enumerative \(M=2^{32}\) marginal run used 15,442 Euclidean states
+and about 0.36 seconds. These checks support the identities and marginal
+constructor only.
+
+Evidence:
+experiments/F305_input_carry_transport/REPORT.md, FULL_INPUT.md,
+FLOOR_MARGINALS.md, input_transport.py, input_transport.json,
+input_transport.log, and
+input_transport_setup.log.

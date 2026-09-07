@@ -1,82 +1,88 @@
 # Research State
 
-Updated 2026-09-07 after the sixth authorized Astra research cycle. The
-goal remains active. This snapshot distinguishes proved modular residue
-constructors from the ordinary-coordinate accuracy still needed for
-factoring.
+Updated 2026-09-07 after the seventh authorized Astra research cycle. The
+goal remains active. No complete factoring algorithm is established.
 
-## Target and promoted interfaces
-
-STATEMENT.md fixes the all-input classical Las Vegas quasipolynomial
-factorization target. No algorithm meeting that target is established.
+## Current proved interfaces
 
 | Record | Exact scope | Missing operation |
 | --- | --- | --- |
-| P237 | A succinct modular rectangle-emptiness oracle would completely factor every integer with \(O(n^2)\) calls and polynomial additional work. It covers primes, prime powers, repeated factors, even inputs, and unbalanced composites. | No uniform efficient implementation of the rectangle oracle. |
-| P238 | For \(M=2^k\), \(k\geq3\), positive odd \(N\), and a degree bank \(D\), all \(Q_j\bmod M\) and \(S_{ab}\bmod M^2\) are deterministically computable in bit complexity polynomial in \(k,D,\operatorname{bitlength}(N)\). The unit product \(\Pi_M\bmod2^P\) is also non-enumeratively computable. | No higher carry-precision bank and no Archimedean evaluation of the ordinary Cauchy kernel. |
+| P237 | Reduces every integer factorization input to \(O(n^2)\) public dyadic inverse-graph rectangle-emptiness calls, with polynomial additional work. It covers primes, prime powers, repeated factors, even inputs, and unbalanced composites. | A uniform efficient implementation of those rectangle calls. |
+| P239 | Recovers an exact canonical rectangle count from four shifted binomial-carry values \(B(c,d)\bmod M\), including full input, endpoints, negative carries, and the required \(2M\) carry precision. | A uniform efficient evaluator for shifted \(B(c,d)\bmod M\). |
+| P240 | Computes every bounded numerical-degree mixed moment modulo \(L^2\) and linear carry moment modulo \(L\) for one canonical Möbius map, in polynomial bit cost without enumerating its \(L\) points. | A faithful aggregation over the shifted windows or the growing family of maps. |
+| P238 | Computes the global unshifted inverse-graph low-digit bank \(S_{ab}\bmod M^2\), \(Q_j\bmod M\), and the odd-unit product in polynomial bit cost. | It does not evaluate shifted binomial carries or trace an interval circuit. |
 
-P237 remains the actual all-input conditional factoring interface. P238 is
-a global modular primitive. It does not implement P237's oracle.
+P237 is the all-input conditional factoring reduction. P239 identifies a
+smaller exact sufficient statistic for each rectangle call. P240 and P238
+are modular moment constructors. Neither supplies P239's shifted statistic.
 
-P238 passed a fresh statement-only Sol reconstruction and root scope check.
-Its input SHA-256 is
-568441f2eebe3f519c356a4d0fe3cf43ac7243ede4a0e229f18683862f1f5b95,
-and its reconstruction SHA-256 is
-604a19e1cda14356b13e6e7bdc704e7a85fc3fc448fcb842c2ed6ed08a555450.
-The full integer \(N\) is retained in the carry
-\(q_u=(u(Nu^{-1}\bmod M)-N)/M\). Reducing \(N\bmod M\) leaves
-\(S_{ab}\) unchanged but changes \(Q_j\).
+## Seventh-cycle findings
 
-## Sixth-cycle findings
+F306 proves P239's four-corner identity. For each point in both selected
+windows, the mixed shifted-carry contribution is \(N-M/2\bmod M\); it is
+zero outside. The multiplier is odd, and the count is smaller than \(M\),
+so the recovered residue is the exact count. This reduction does not
+construct the \(B\) evaluator.
 
-F301 and C262 reduce each public rectangle to polynomially many evaluations
-of
+F304 proves P240 for a general map
 
 \[
- Z_{N,M}(z,w)=
- \sum_{\substack{1\leq u<M\\u\ {\rm odd}}}
- \frac{1}{(u-z)((Nu^{-1}\bmod M)-w)}
+ T(x)=\frac{n-Ax}{B+Cx},\qquad 0\leq x<2^s,
 \]
 
-at ordinary half-integer pole coordinates and specified absolute precision.
+with odd \(A,B\), positive even \(C\), and the full integer \(n\) retained
+in the carry. Ordinary power sums, uniformly truncated 2-adic binomial
+series, guarded Newton identities, and a unit-triangular symmetric-function
+recurrence give the bank. The \(d=0\) interface is included.
 
-F302 and C263 give an exact half-modulus lift of this resolvent. Far poles
-admit a certified \(O(\log M)\)-degree Taylor bank. The public near poles
-require local boxes, whose zeroth joint moments are already the selected
-inverse-graph half-counts. The lift reorganizes this operation but does not
-compute it.
+F304 also gives succinct guarded digit selectors and a triangular Newton
+error bank. Repeated exact quotients create two Möbius branches per level.
+The literal map family has exponentially many distinct members at the
+tested depth, and finite degree-two carry banks exhibit the same growth on
+the retained cases. This is not a lower bound against another aggregation.
 
-F303 and P238 compute every bounded-degree global mixed moment through two
-base-\(M\) digits. C264 retains direct off-diagonal and diagonal formulas,
-plus the exact next correction \(Q_{j,2}/2\bmod M\). When available, that
-correction determines \(S_{11}\bmod M^3\), and the range of \(S_{11}\)
-then makes this one moment exact. One exact \(S_{11}\) is not the whole
-mixed Cauchy kernel or its required absolute-accuracy evaluation.
+F305 transports all canonical inputs to one fixed \(N=1\) carry measure.
+It gives polynomial-bit evaluators for the reciprocal-floor marginals
+\(R_1^*\) and \(R_2\bmod2M\), and FULL_INPUT.md gives the exact correction
+for every positive odd full input. The remaining term is a sharp floor
+weighted by the fixed carry measure. Its mixed cut difference is the
+rectangle count. A dyadic reflection leaves an additional carry-bit
+weighted floor term, with no proved closed total-state recursion.
 
-The tested high-input block average loses its apparent extra precision
-after correction and division. The tested order-63 input-Mahler cutoff
-fails modulo 4 at \(M=4096\). The exponent derivative obeys
-\(L'(0)=(\log_{\rm adic}(N)/2)L(0)\) and adds no independent quadratic
-carry equation. These are scoped results for those operations, not general
-lower bounds.
+## Evidence and scope controls
 
-Andreica, *The Scientific World Journal* (2013), Article 751358, already
-gives a non-enumerative power-sum/Newton algorithm for the odd unit product
-in its stated precision range. No novelty claim is made for the unit-product
-primitive or the F303 mixed-moment identities.
+All current mathematical jobs are complete. P239 was reconstructed from a
+statement-only input and checked by the root. P240 passed an independent
+statement-only reconstruction. Its input SHA-256 is
+19599f6d20c1fac30bfeda265dd395dcdda6d81d1786c1dacb8dd8b1f4b3165c,
+and its reconstruction SHA-256 is
+bc9ef597891d4b61df699975fdd1abbc3769b4a203c928397e8ada490dd762d0.
 
-## Evidence and restart point
+The repaired P240 implementation passed 32 exact edge checks for
+\(s=1,\ldots,4\) and \(d=0,1\). A correctly coupled original-input pilot at
+\(M=2^{65}\), \(L=2^{64}\), and \(N=9M+1\) completed in 0.529 seconds at
+18,087,936 bytes peak RSS and matched all degree-three universal marginals.
+Its large mixed values were computed but not independently verified. The
+earlier \(s=33,65\) runs remain valid generic one-map pilots; their retained
+scope note states that they were not original \(M=2^s\) first-quotient
+patches.
 
-All sixth-cycle jobs are complete. F302 retained 12 exact lift checks and
-eight certified far-pole bounds. F303 retained 3,248 modulo-\(M^2\) mixed
-checks, 3,248 corrected modulo-\(M^3\) checks, 2,320 weighted-carry checks,
-large non-enumerative evaluations at \(k=32,64,128\), 12 sparse closed-form
-controls, and 16 guarded exponent-derivative checks. Finite checks support
-the implementations; they do not prove an ordinary resolvent algorithm.
+F305 retained 11,352 pointwise transports, 150 shifted binomial identities,
+450 marginal checks, 25 reflection checks, and non-enumerative marginal
+runs through \(M=2^{32}\). F306 retained 1,200 general rectangles, 175
+public factor rectangles, and 21 complete enumerated reference inputs.
+Finite checks support the stated identities and implementations only.
 
-The next operation is to construct a higher-precision, window-compatible
-global aggregation for \(Z_{N,M}(z,w)\), or an equivalent evaluator at the
-F301 poles and error budget. It must retain the selected window and enough
-carry precision without enumerating graph points, local boxes, or a
-numerical family of charts. Existing congruences and global low-digit
-moments must not be counted as a solved \(Z\).
+The catalog has 521 experiment packets, 215 supported packet-to-route
+assignments, and 306 explicit unknowns. Missing mappings remain unknown.
+
+## Restart point
+
+The concrete missing operation is a uniform efficient evaluator for the
+shifted statistic \(B(c,d)\bmod M\), or an equivalent faithful aggregation
+that preserves both public cuts, the full-input carry, and the required
+division precision. Solving the entire ordinary Cauchy resolvent is not
+necessary. A proposed construction must aggregate the correlated map or
+carry/window family without enumerating graph points, residue patches, or
+window boxes. Unshifted low digits and one-map moment banks must not be
+counted as a solved shifted evaluator.
