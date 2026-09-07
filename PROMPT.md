@@ -26,6 +26,12 @@ to give such an algorithm for finding a verified nontrivial divisor of every
 composite input, together with a complete reduction to prime factorization and
 an accounting of the total expected cost.
 
+Determinism, exact counting, polynomial cost, and a worst-case bound on each
+attempt are optional route choices, not additional requirements. Randomized
+searches may fail and restart; prove correctness of accepted outputs and the
+total expected quasipolynomial cost for each input. A sufficient reduction
+does not constrain routes that bypass it.
+
 Treat an affirmative solution as the search stance. It is not a proof axiom.
 Every claimed algorithm, lemma, probability bound, and complexity bound must be
 derived.

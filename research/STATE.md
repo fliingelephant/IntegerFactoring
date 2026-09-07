@@ -4,7 +4,7 @@ Updated 2026-09-07 after the tenth authorized Astra research cycle. All
 mathematical jobs are terminal. The goal remains active, and no complete
 factoring algorithm is established.
 
-## Goal interfaces and current constructors
+## Current counting route and constructors
 
 | Record | Exact role | Remaining limit |
 | --- | --- | --- |
@@ -15,8 +15,9 @@ factoring algorithm is established.
 | P240 | Computes bounded-degree moments for one canonical Möbius map. | Does not aggregate shifted maps or windows. |
 | P238 | Computes global unshifted low-digit and odd-product banks. | Does not insert a sharp selector. |
 
-P237 and P239 remain the goal interfaces. P242 and P243 are actual new
-polynomial-bit constructors, with the displayed cut and precision limits.
+P237 and P239 are sufficient interfaces for the current counting route,
+not requirements on other routes. P237 itself allows Las Vegas oracles.
+P242 and P243 are polynomial-bit constructors with the displayed limits.
 
 ## Tenth-cycle findings
 
@@ -87,9 +88,17 @@ Missing mappings remain unknown.
 
 ## Restart point
 
-The next concrete target is a uniform evaluator for the variable diagonal
-interval count \(D(x,y)\) with its guard bit, or directly for P239's shifted
-\(B(c,d)\bmod M\). Equivalently, one may aggregate F317's moving \(q_0\)
-histogram with both endpoints or close F316's mixed cross-layer recurrence.
-Any successful route must retain P237's arbitrary short public endpoints;
-the fixed P243 half-box cannot replace them.
+The recent work overemphasized deterministic exact counting. Next investigate
+randomized discovery of a verified divisor without requiring a count or an
+emptiness certificate. For independent identical attempts at a fixed composite
+\(N\), with finite expected cost \(a(N)\) and success probability \(p(N)>0\),
+the expected cost to obtain a verified divisor is \(a(N)/p(N)\). Prove a
+uniform quasipolynomial bound on that ratio for every composite input, then
+account for complete factorization. Quasipolynomial state banks and rare
+expensive branches are allowed within the total expected bound.
+
+For continued work on the counting route, concrete targets are a variable
+diagonal interval count \(D(x,y)\) with its guard bit, P239's shifted
+\(B(c,d)\), F317's moving \(q_0\) histogram, or F316's mixed recurrence.
+A route using P237 must retain its short public endpoints; the fixed P243
+half-box cannot replace them. Other routes need not implement these oracles.
