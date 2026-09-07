@@ -1,97 +1,100 @@
 # Research State
 
-Updated 2026-09-07 after the twelfth authorized Astra cycle. All current
-mathematical and computational jobs are terminal. No expected-
-quasipolynomial factoring algorithm is established in this repository.
+Updated 2026-09-07 after the thirteenth authorized Astra cycle. All jobs are terminal. No expected-quasipolynomial factoring algorithm is established.
 
 ## Current Las Vegas interface
 
-The target is one verified divisor with a uniform expected quasipolynomial
-bit bound. Attempts may fail and restart. If an attempt has expected cost
-\(\tau(N)\) and success probability \(\delta(N)>0\), it is enough to bound
-\(\tau(N)/\delta(N)\). Deterministic completion, exact counting, and fast
-behavior on every auxiliary parameter are optional.
+The target is complete factorization of every integer with one uniform expected
+quasipolynomial bit bound. Attempts may fail and restart; deterministic
+completion, exact counting, and uniformly fast auxiliary parameters are optional.
 
-P246 gives a direct polynomial-space FacRoot path on an exactly ranked odd
-domain, but its complete traversal takes \(O(N\operatorname{poly}(\log N))\)
-bit work. P02 permits a weaker fixed-\(N\) target: privately sample a uniform
-unit \(r\), publish \(a=r^2\bmod N\), and run a procedure that receives only \(N,a\)
-and independent coins. A quasipolynomial cost/success ratio averaged over
-these random squares suffices; every Jacobi-positive \(a\) need not be fast.
-Public adaptive square-unit rescalings and filters are also allowed if the
-private root stays outside the transcript and every shaping cost and failure
-is charged.
-
-| Mechanism | Positive primitive | Missing bound |
-| --- | --- | --- |
-| P246/P02 | Exact ranked FacRoot involution and private-root decoder. | A short-attempt cost/success ratio on public square inputs. |
-| P247 | Exact lazy-uniform-matching survival, mean, endpoint, and screen laws. | Its semiprime benchmark remains least-factor scale. |
-| P245/F321 | Radical-shadow transfer for adaptive output-selected roots. | Squarefree cumulative hazard after total evaluation cost. |
-| P41 | Approximate quadratic-energy sampling implies verified success. | A factor-free quasipolynomial sampler. |
-| P244 | Discrete normals hit a divisor cone conditional on SUPPORT. | A proposal/support ratio better than \(N^{1/3}\). |
-| F320 | Pair-bank decoding costs \(\sqrt{p_{\min}}\operatorname{poly}(n)\). | A stronger compact correlated source. |
-
-P242 and P243 remain deterministic residue tools. P237/P239 remain
-conditional exact-counting interfaces. None is mandatory for a direct
-Las Vegas route.
-
-## Twelfth-cycle findings
-
-P246 promotes the exact F326 statement. The all-residue multiplication sign
-equals the Jacobi symbol. Euclidean floor sums compute the odd domain size,
-rank, and selection. The arithmetic involution fixes only decodable divisors
-or roots. Two auxiliary involutions give terminating paths of at most
-\(d\leq N\) calls. This is a rankable parity path, not a short-path theorem.
-
-P247 analyzes a uniform singleton start and a lazy uniform matching. If the
-ranked involution has \(d\) vertices and \(q\) fixed ranks, then
+P249 gives the broadest current sufficient contract. For each fixed odd
+\(N\) with at least two distinct prime divisors, run one public \(A(N,a)\)
+on uniform Jacobi-positive units.
+If its valid-output probability and mean verified cost satisfy
 \[
- S_T=\prod_{k<T}\frac{d-q-2k}{d-2k},\qquad
- \mathbb EH=\frac{d+2}{q+2}.
+ \delta_J(N)>0,\qquad
+ \tau_J(N)/\delta_J(N)\leq Q(\operatorname{bitlength}N)
 \]
-The stopped endpoint is uniform, and expected capped calls per success are
-nonincreasing with the cap for fixed \(d,q\). Random matching overhead is
-expected polylogarithmic. For F326 square inputs the exact capped factor
-probability is \((1-1/q)(1-S_T)\). A static whole-\(F\)-edge screen replaces
-\(q\) by its absorbing-set size. Uniform matching still costs
-\(\Theta(p_{\min})\) local calls on squarefree semiprimes.
+then two uncapped engines give an all-input Las Vegas algorithm. One accepts
+direct factors on the full set; the other uses private squares and P02.
+Bit-step dovetailing costs at most \(6(g+\tau_J)/\delta_J\), with no
+\(Q\) evaluation, separate square-subset mean, or cost-success independence.
 
-F322 implements Jeřábek's three-layer involution; its fractional-linear
-macros still lack actual-path sign certification. F323 shows that on the
-tested Blum family one Jacobi sheet is injective, repeated squaring adds no
-gcd event, and a common seed cancels. A succinct cross-sheet source remains
-open. F324's reflection matrices gave finite paths but no length law.
+| Mechanism | Positive primitive | Missing result |
+| --- | --- | --- |
+| P249 | Average-\(J\) FacRoot outputs suffice by uncapped two-source dovetailing. | A public procedure meeting the uniform cost/success contract. |
+| P248 | Exact count defects, rational blocks, and inverse-parity predicates for P246 paths. | A charged hitting law or another useful partial solver. |
+| P247 | Exact lazy-uniform-matching survival and endpoint law. | Its semiprime work remains least-factor scale. |
+| P245/F321 | Radical-shadow transfer for adaptive root basins. | Squarefree cumulative hazard after all evaluation cost. |
+| P41/P244/F320 | Energy sampler, hull normals, and pair-bank decoders. | Their respective factor-free sampling or numerical-power cost gaps. |
 
-F325 exactly contracts mixed-sign translation chains after changing their
-nonunit pairing. All macros matched the modified graph, but 8 of 35 endpoints
-changed. The original used 1,411 calls for 35 factors; the macro used 1,474
-explicit calls plus 77 integer programs for 34 factors. Gurobi checked only
-finite candidates, not the arbitrary-bit Lenstra implementation.
+No narrow failure below bounds other transformations, matchings, screens,
+rational maps, or partial FacRoot procedures.
 
-F326 passed all small checks and 80 public complete paths. Its first corrected
-private-root sample returned 160/160 factors, but F328's larger capped sample
-retained only 39 factors and 153 censors among 192 attempts at cap 2,048.
-Successes per 32 attempts at 20/28/36/44/60/92 bits were
-31/7/1/0/0/0. Total charged work was 336,576 \(F\)-calls and 394,405,596
-floor-sum iterations. These per-scale finite data prove no trend or zero
-probability.
+## Thirteenth-cycle findings
+
+P248 promotes F330's exact arithmetic identities. A signed remainder
+\(r=\operatorname{rep}(at)\) expresses \(2Q_a(t)-t\) using at most
+\(2|r|-1\) inverse-image tests and gives
+\(|2Q_a(t)-t|\leq|r|\). Reflection has explicit affine defects. For fixed
+\(a=-1,N=1\bmod4\), reflection has two constant matrices and adjacent
+matching has guarded positive rational blocks
+\[
+ P:(U,V)\mapsto(U+V,U),\qquad Q:(U,V)\mapsto(V,U+V).
+\]
+Consecutive \(Q,P\) blocks translate the public coordinate by two exactly
+under an alternating inverse-parity condition. All intermediate gcd, root,
+special, and range guards remain necessary; the inherited bound is only
+\(O(N)\) blocks.
+
+An unpromoted continued-fraction certificate gives
+\[
+ |2Q_a(t)-t|\leq10\sum_i b_i
+\]
+simultaneously for adaptive \(t\), where \([0;b_1,\ldots,b_m]=a/N\).
+This packet proves no Jacobi-positive mass or useful-success bound under a
+small continued-fraction cutoff.
+
+F329 found no consistent finite advantage for uniform-center reflections
+over P247's lazy benchmark. Static edge screens raised short hit counts but
+charged six gcds per edge and often worsened gcds per factor. F331 compared
+path-derived, independent-uniform, and last-coordinate square rescalings.
+They returned 16, 23, and 15 factors in 256 attempts; eight uniform factors
+came from its extra generation/screen gcds. Every policy had zero successes
+on the retained 36- and 44-bit cells. These are finite scoped results, not
+bias or impossibility theorems.
+
+F332 verified the fixed \(a=-1\) kernels but retained long paths. Both
+methods completed through the 36-bit input; at cap 262,144, reflection alone
+also completed one 44-bit input, while the remaining large cases were
+censored. The \(N=61\) lift refutes only a proposed \(2N\) norm bound:
+\((8,11)\) has norm \(185>122\), before a later root of \(-1\).
+Near-balanced finite matrix words supply no length law.
+
+P249 combines two source modes. Mode secrecy equates the root-output laws;
+private-root secrecy and independent coins give P02. A capped version has
+factor probability at least \(\delta_J/4\) after truncation, but must charge
+evaluation of its literal budget or use an efficiently evaluable
+quasipolynomial majorant. The uncapped dovetail avoids that issue entirely.
+Standard primality, even-part, perfect-power, verified-split, and recursive
+accounting supply the conditional all-input conclusion.
 
 ## Evidence and counts
 
-P246 preserves statement/reconstruction hashes d672ba5f... and 7b6bc06c....
-P247 preserves hashes 46a229a4... and cc4125ba.... C280--C286 retain
-mechanisms, source scope, finite outputs, censors, resources, and manifests.
-The Jeřábek and Lenstra papers are cached in full; KB doctor passes.
+P248 preserves statement/reconstruction hashes a1b1b87a... and eb515433....
+P249 preserves hashes 0cc27150... and 63d19572.... C287--C291 retain all
+finite outputs, repairs, censors, cost decompositions, source checks, and
+manifests for F329--F333.
 
-The catalog has 623 records, 34 routes, and 543 experiments. There are
-237 supported experiment-route assignments and 306 explicit unknowns.
+The catalog has 630 records, 34 routes, and 548 experiments, with 242 supported experiment-route assignments and 306 explicit unknowns.
 
 ## Restart point
 
-Run F327's proposed uniform-center reflections against its exact lazy-matching
-benchmark on identical private-root inputs and screens. In parallel, derive
-and test public short-path conditions suggested by F328's 7-, 25-, and
-31-call seeds and its inverse-endpoint \(Q(t)\) identity. Public square-input
-shaping is another allowed experiment if failed filters are charged. The
-acceptance criterion for each route remains a uniform quasipolynomial
-attempt-cost/success ratio for every fixed composite \(N\).
+Implement F330's unrun count descent on every small Jacobi-positive unit:
+gcd-screen \(t,Q_a(t),t-Q_a(t)\), then replace
+\(t\leftarrow\min(Q_a(t),t-Q_a(t))\). Compare one retained multiplier with
+a fresh public multiplier, the inverse-start control, and the direct public
+dyadic-window menu containing every bounded-defect child; charge every
+generation, floor sum, gcd, and failure. Its \(O(\log N)\) stage count proves
+only work. Test whether it has enough verified factor probability for P249.

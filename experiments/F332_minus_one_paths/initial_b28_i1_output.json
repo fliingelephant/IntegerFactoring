@@ -1,0 +1,2328 @@
+{
+  "adjacent_block_iteration_cap": 8192,
+  "cap_scope": "The equal numeric caps measure different coverage. Reflection is capped in fine F calls. The compressed adjacent kernel is capped in P/Q block iterations and records its equivalent fine F calls.",
+  "experiment": "F332_minus_one_paths",
+  "fine_F_call_cap": 8192,
+  "hard_timeout_seconds": 30,
+  "input_hashes": {
+    "F326_source": "7829cc45822021c64c42842a2c938b15c52df85e30ae694efcdd4171c5012f73",
+    "F328_moduli": "acf09b285c57c39cfcb93d3cd77addce909498e224955fd0ec9d2e4d86ee0428",
+    "F330_PROOF": "f7f6519ec90c7c5ce4ebf9d9916ab721194ada55f2ef6ba9edf3533da717a8df",
+    "F330_RATIONAL_PATHS": "b0d59c6344e4761572eb187d923cddb94c0f624432e08ff89ac6f9a53de021d7"
+  },
+  "internal_timeout_seconds": 28,
+  "lift_bit_limit": 4096,
+  "memory_limit_bytes": 536870912,
+  "methods_requested": [
+    "reflection",
+    "adjacent_block"
+  ],
+  "mode": "public",
+  "modulus_label": {
+    "actual_bits": 28,
+    "balance_ratio": 1.1144427382203184,
+    "generation": {
+      "p": {
+        "candidate_stream_attempts": 1,
+        "seed": 191513160268028434093355519626466625632
+      },
+      "q": {
+        "candidate_stream_attempts": 1,
+        "seed": 60301821806340188133369980855622182390
+      }
+    },
+    "modulus_id": "b28_i1",
+    "n": 170611297,
+    "offline_root_label": "possible_both_primes_1_mod_4",
+    "p_offline": 12373,
+    "prime_bits": [
+      14,
+      14
+    ],
+    "q_offline": 13789,
+    "target_bits": 28
+  },
+  "peak_rss_bytes": 28311552,
+  "process_walltime_seconds": 0.03094979200977832,
+  "public_input": {
+    "a": 170611296,
+    "n": 170611297
+  },
+  "results": {
+    "adjacent_block": {
+      "block_cap": 8192,
+      "block_iterations": 6695,
+      "block_trace_prefix": [
+        {
+          "block_iteration": 1,
+          "coordinate": 2,
+          "fine_calls_after": 2,
+          "fine_calls_before": 1,
+          "letter": "P",
+          "new_u": 85305650,
+          "new_v": 56870433,
+          "terminal": false,
+          "u": 2,
+          "v": 85305649,
+          "z": 113740865
+        },
+        {
+          "block_iteration": 2,
+          "coordinate": 85305647,
+          "fine_calls_after": 4,
+          "fine_calls_before": 2,
+          "letter": "Q",
+          "new_u": 136489038,
+          "new_v": 85305651,
+          "terminal": false,
+          "u": 85305650,
+          "v": 56870433,
+          "z": 136489038
+        },
+        {
+          "block_iteration": 3,
+          "coordinate": 34122259,
+          "fine_calls_after": 6,
+          "fine_calls_before": 4,
+          "letter": "Q",
+          "new_u": 73119128,
+          "new_v": 136489039,
+          "terminal": false,
+          "u": 136489038,
+          "v": 85305651,
+          "z": 73119128
+        },
+        {
+          "block_iteration": 4,
+          "coordinate": 73119128,
+          "fine_calls_after": 7,
+          "fine_calls_before": 6,
+          "letter": "P",
+          "new_u": 136489040,
+          "new_v": 99523257,
+          "terminal": false,
+          "u": 73119128,
+          "v": 136489039,
+          "z": 71088041
+        },
+        {
+          "block_iteration": 5,
+          "coordinate": 34122257,
+          "fine_calls_after": 9,
+          "fine_calls_before": 7,
+          "letter": "Q",
+          "new_u": 150539380,
+          "new_v": 136489041,
+          "terminal": false,
+          "u": 136489040,
+          "v": 99523257,
+          "z": 150539380
+        },
+        {
+          "block_iteration": 6,
+          "coordinate": 20071917,
+          "fine_calls_after": 10,
+          "fine_calls_before": 9,
+          "letter": "P",
+          "new_u": 136489042,
+          "new_v": 38775295,
+          "terminal": false,
+          "u": 150539380,
+          "v": 136489041,
+          "z": 131836003
+        },
+        {
+          "block_iteration": 7,
+          "coordinate": 34122255,
+          "fine_calls_after": 11,
+          "fine_calls_before": 10,
+          "letter": "P",
+          "new_u": 38775296,
+          "new_v": 69508307,
+          "terminal": false,
+          "u": 136489042,
+          "v": 38775295,
+          "z": 101102991
+        },
+        {
+          "block_iteration": 8,
+          "coordinate": 38775296,
+          "fine_calls_after": 12,
+          "fine_calls_before": 11,
+          "letter": "P",
+          "new_u": 69508308,
+          "new_v": 41782359,
+          "terminal": false,
+          "u": 38775296,
+          "v": 69508307,
+          "z": 128828939
+        },
+        {
+          "block_iteration": 9,
+          "coordinate": 69508308,
+          "fine_calls_after": 13,
+          "fine_calls_before": 12,
+          "letter": "P",
+          "new_u": 41782360,
+          "new_v": 24693741,
+          "terminal": false,
+          "u": 69508308,
+          "v": 41782359,
+          "z": 145917557
+        },
+        {
+          "block_iteration": 10,
+          "coordinate": 41782360,
+          "fine_calls_after": 14,
+          "fine_calls_before": 13,
+          "letter": "P",
+          "new_u": 24693742,
+          "new_v": 23203137,
+          "terminal": false,
+          "u": 41782360,
+          "v": 24693741,
+          "z": 147408161
+        },
+        {
+          "block_iteration": 11,
+          "coordinate": 24693742,
+          "fine_calls_after": 15,
+          "fine_calls_before": 14,
+          "letter": "P",
+          "new_u": 23203138,
+          "new_v": 28859623,
+          "terminal": false,
+          "u": 24693742,
+          "v": 23203137,
+          "z": 141751675
+        },
+        {
+          "block_iteration": 12,
+          "coordinate": 23203138,
+          "fine_calls_after": 17,
+          "fine_calls_before": 15,
+          "letter": "Q",
+          "new_u": 72745308,
+          "new_v": 23203139,
+          "terminal": false,
+          "u": 23203138,
+          "v": 28859623,
+          "z": 72745308
+        },
+        {
+          "block_iteration": 13,
+          "coordinate": 72745308,
+          "fine_calls_after": 19,
+          "fine_calls_before": 17,
+          "letter": "Q",
+          "new_u": 98356846,
+          "new_v": 72745309,
+          "terminal": false,
+          "u": 72745308,
+          "v": 23203139,
+          "z": 98356846
+        },
+        {
+          "block_iteration": 14,
+          "coordinate": 72254451,
+          "fine_calls_after": 20,
+          "fine_calls_before": 19,
+          "letter": "P",
+          "new_u": 72745310,
+          "new_v": 55552971,
+          "terminal": false,
+          "u": 98356846,
+          "v": 72745309,
+          "z": 115058327
+        },
+        {
+          "block_iteration": 15,
+          "coordinate": 72745310,
+          "fine_calls_after": 22,
+          "fine_calls_before": 20,
+          "letter": "Q",
+          "new_u": 95591824,
+          "new_v": 72745311,
+          "terminal": false,
+          "u": 72745310,
+          "v": 55552971,
+          "z": 95591824
+        },
+        {
+          "block_iteration": 16,
+          "coordinate": 75019473,
+          "fine_calls_after": 24,
+          "fine_calls_before": 22,
+          "letter": "Q",
+          "new_u": 25430516,
+          "new_v": 95591825,
+          "terminal": false,
+          "u": 95591824,
+          "v": 72745311,
+          "z": 25430516
+        },
+        {
+          "block_iteration": 17,
+          "coordinate": 25430516,
+          "fine_calls_after": 26,
+          "fine_calls_before": 24,
+          "letter": "Q",
+          "new_u": 157606566,
+          "new_v": 25430517,
+          "terminal": false,
+          "u": 25430516,
+          "v": 95591825,
+          "z": 157606566
+        },
+        {
+          "block_iteration": 18,
+          "coordinate": 13004731,
+          "fine_calls_after": 27,
+          "fine_calls_before": 26,
+          "letter": "P",
+          "new_u": 25430518,
+          "new_v": 38937797,
+          "terminal": false,
+          "u": 157606566,
+          "v": 25430517,
+          "z": 131673501
+        },
+        {
+          "block_iteration": 19,
+          "coordinate": 25430518,
+          "fine_calls_after": 29,
+          "fine_calls_before": 27,
+          "letter": "Q",
+          "new_u": 133671894,
+          "new_v": 25430519,
+          "terminal": false,
+          "u": 25430518,
+          "v": 38937797,
+          "z": 133671894
+        },
+        {
+          "block_iteration": 20,
+          "coordinate": 36939403,
+          "fine_calls_after": 30,
+          "fine_calls_before": 29,
+          "letter": "P",
+          "new_u": 25430520,
+          "new_v": 10708555,
+          "terminal": false,
+          "u": 133671894,
+          "v": 25430519,
+          "z": 159902743
+        },
+        {
+          "block_iteration": 21,
+          "coordinate": 25430520,
+          "fine_calls_after": 32,
+          "fine_calls_before": 30,
+          "letter": "Q",
+          "new_u": 17437600,
+          "new_v": 25430521,
+          "terminal": false,
+          "u": 25430520,
+          "v": 10708555,
+          "z": 17437600
+        },
+        {
+          "block_iteration": 22,
+          "coordinate": 17437600,
+          "fine_calls_after": 34,
+          "fine_calls_before": 32,
+          "letter": "Q",
+          "new_u": 21791420,
+          "new_v": 17437601,
+          "terminal": false,
+          "u": 17437600,
+          "v": 25430521,
+          "z": 21791420
+        },
+        {
+          "block_iteration": 23,
+          "coordinate": 21791420,
+          "fine_calls_after": 35,
+          "fine_calls_before": 34,
+          "letter": "P",
+          "new_u": 17437602,
+          "new_v": 71775721,
+          "terminal": false,
+          "u": 21791420,
+          "v": 17437601,
+          "z": 98835577
+        },
+        {
+          "block_iteration": 24,
+          "coordinate": 17437602,
+          "fine_calls_after": 36,
+          "fine_calls_before": 35,
+          "letter": "P",
+          "new_u": 71775722,
+          "new_v": 63034855,
+          "terminal": false,
+          "u": 17437602,
+          "v": 71775721,
+          "z": 107576443
+        },
+        {
+          "block_iteration": 25,
+          "coordinate": 71775722,
+          "fine_calls_after": 38,
+          "fine_calls_before": 36,
+          "letter": "Q",
+          "new_u": 153855038,
+          "new_v": 71775723,
+          "terminal": false,
+          "u": 71775722,
+          "v": 63034855,
+          "z": 153855038
+        },
+        {
+          "block_iteration": 26,
+          "coordinate": 16756259,
+          "fine_calls_after": 39,
+          "fine_calls_before": 38,
+          "letter": "P",
+          "new_u": 71775724,
+          "new_v": 1138821,
+          "terminal": false,
+          "u": 153855038,
+          "v": 71775723,
+          "z": 169472477
+        },
+        {
+          "block_iteration": 27,
+          "coordinate": 71775724,
+          "fine_calls_after": 41,
+          "fine_calls_before": 39,
+          "letter": "Q",
+          "new_u": 2242864,
+          "new_v": 71775725,
+          "terminal": false,
+          "u": 71775724,
+          "v": 1138821,
+          "z": 2242864
+        },
+        {
+          "block_iteration": 28,
+          "coordinate": 2242864,
+          "fine_calls_after": 42,
+          "fine_calls_before": 41,
+          "letter": "P",
+          "new_u": 71775726,
+          "new_v": 69685789,
+          "terminal": false,
+          "u": 2242864,
+          "v": 71775725,
+          "z": 100925509
+        },
+        {
+          "block_iteration": 29,
+          "coordinate": 71775726,
+          "fine_calls_after": 43,
+          "fine_calls_before": 42,
+          "letter": "P",
+          "new_u": 69685790,
+          "new_v": 34483821,
+          "terminal": false,
+          "u": 71775726,
+          "v": 69685789,
+          "z": 136127477
+        },
+        {
+          "block_iteration": 30,
+          "coordinate": 69685790,
+          "fine_calls_after": 44,
+          "fine_calls_before": 43,
+          "letter": "P",
+          "new_u": 34483822,
+          "new_v": 22845215,
+          "terminal": false,
+          "u": 69685790,
+          "v": 34483821,
+          "z": 147766083
+        },
+        {
+          "block_iteration": 31,
+          "coordinate": 34483822,
+          "fine_calls_after": 46,
+          "fine_calls_before": 44,
+          "letter": "Q",
+          "new_u": 50244706,
+          "new_v": 34483823,
+          "terminal": false,
+          "u": 34483822,
+          "v": 22845215,
+          "z": 50244706
+        },
+        {
+          "block_iteration": 32,
+          "coordinate": 50244706,
+          "fine_calls_after": 48,
+          "fine_calls_before": 46,
+          "letter": "Q",
+          "new_u": 6402326,
+          "new_v": 50244707,
+          "terminal": false,
+          "u": 50244706,
+          "v": 34483823,
+          "z": 6402326
+        },
+        {
+          "block_iteration": 33,
+          "coordinate": 6402326,
+          "fine_calls_after": 50,
+          "fine_calls_before": 48,
+          "letter": "Q",
+          "new_u": 87371520,
+          "new_v": 6402327,
+          "terminal": false,
+          "u": 6402326,
+          "v": 50244707,
+          "z": 87371520
+        },
+        {
+          "block_iteration": 34,
+          "coordinate": 83239777,
+          "fine_calls_after": 52,
+          "fine_calls_before": 50,
+          "letter": "Q",
+          "new_u": 37514256,
+          "new_v": 87371521,
+          "terminal": false,
+          "u": 87371520,
+          "v": 6402327,
+          "z": 37514256
+        },
+        {
+          "block_iteration": 35,
+          "coordinate": 37514256,
+          "fine_calls_after": 53,
+          "fine_calls_before": 52,
+          "letter": "P",
+          "new_u": 87371522,
+          "new_v": 128382085,
+          "terminal": false,
+          "u": 37514256,
+          "v": 87371521,
+          "z": 42229213
+        },
+        {
+          "block_iteration": 36,
+          "coordinate": 83239775,
+          "fine_calls_after": 54,
+          "fine_calls_before": 53,
+          "letter": "P",
+          "new_u": 128382086,
+          "new_v": 34094107,
+          "terminal": false,
+          "u": 87371522,
+          "v": 128382085,
+          "z": 136517191
+        },
+        {
+          "block_iteration": 37,
+          "coordinate": 42229211,
+          "fine_calls_after": 56,
+          "fine_calls_before": 54,
+          "letter": "Q",
+          "new_u": 80272412,
+          "new_v": 128382087,
+          "terminal": false,
+          "u": 128382086,
+          "v": 34094107,
+          "z": 80272412
+        },
+        {
+          "block_iteration": 38,
+          "coordinate": 80272412,
+          "fine_calls_after": 57,
+          "fine_calls_before": 56,
+          "letter": "P",
+          "new_u": 128382088,
+          "new_v": 58486939,
+          "terminal": false,
+          "u": 80272412,
+          "v": 128382087,
+          "z": 112124359
+        },
+        {
+          "block_iteration": 39,
+          "coordinate": 42229209,
+          "fine_calls_after": 59,
+          "fine_calls_before": 57,
+          "letter": "Q",
+          "new_u": 21082736,
+          "new_v": 128382089,
+          "terminal": false,
+          "u": 128382088,
+          "v": 58486939,
+          "z": 21082736
+        },
+        {
+          "block_iteration": 40,
+          "coordinate": 21082736,
+          "fine_calls_after": 61,
+          "fine_calls_before": 59,
+          "letter": "Q",
+          "new_u": 47093910,
+          "new_v": 21082737,
+          "terminal": false,
+          "u": 21082736,
+          "v": 128382089,
+          "z": 47093910
+        },
+        {
+          "block_iteration": 41,
+          "coordinate": 47093910,
+          "fine_calls_after": 62,
+          "fine_calls_before": 61,
+          "letter": "P",
+          "new_u": 21082738,
+          "new_v": 32549031,
+          "terminal": false,
+          "u": 47093910,
+          "v": 21082737,
+          "z": 138062267
+        },
+        {
+          "block_iteration": 42,
+          "coordinate": 21082738,
+          "fine_calls_after": 63,
+          "fine_calls_before": 62,
+          "letter": "P",
+          "new_u": 32549032,
+          "new_v": 127217809,
+          "terminal": false,
+          "u": 21082738,
+          "v": 32549031,
+          "z": 43393489
+        },
+        {
+          "block_iteration": 43,
+          "coordinate": 32549032,
+          "fine_calls_after": 64,
+          "fine_calls_before": 63,
+          "letter": "P",
+          "new_u": 127217810,
+          "new_v": 126886239,
+          "terminal": false,
+          "u": 32549032,
+          "v": 127217809,
+          "z": 43725059
+        },
+        {
+          "block_iteration": 44,
+          "coordinate": 43393487,
+          "fine_calls_after": 66,
+          "fine_calls_before": 64,
+          "letter": "Q",
+          "new_u": 69121760,
+          "new_v": 127217811,
+          "terminal": false,
+          "u": 127217810,
+          "v": 126886239,
+          "z": 69121760
+        },
+        {
+          "block_iteration": 45,
+          "coordinate": 69121760,
+          "fine_calls_after": 68,
+          "fine_calls_before": 66,
+          "letter": "Q",
+          "new_u": 161004546,
+          "new_v": 69121761,
+          "terminal": false,
+          "u": 69121760,
+          "v": 127217811,
+          "z": 161004546
+        },
+        {
+          "block_iteration": 46,
+          "coordinate": 9606751,
+          "fine_calls_after": 70,
+          "fine_calls_before": 68,
+          "letter": "Q",
+          "new_u": 93666086,
+          "new_v": 161004547,
+          "terminal": false,
+          "u": 161004546,
+          "v": 69121761,
+          "z": 93666086
+        },
+        {
+          "block_iteration": 47,
+          "coordinate": 76945211,
+          "fine_calls_after": 71,
+          "fine_calls_before": 70,
+          "letter": "P",
+          "new_u": 161004548,
+          "new_v": 76556907,
+          "terminal": false,
+          "u": 93666086,
+          "v": 161004547,
+          "z": 94054391
+        },
+        {
+          "block_iteration": 48,
+          "coordinate": 9606749,
+          "fine_calls_after": 72,
+          "fine_calls_before": 71,
+          "letter": "P",
+          "new_u": 76556908,
+          "new_v": 139788201,
+          "terminal": false,
+          "u": 161004548,
+          "v": 76556907,
+          "z": 30823097
+        },
+        {
+          "block_iteration": 49,
+          "coordinate": 76556908,
+          "fine_calls_after": 74,
+          "fine_calls_before": 72,
+          "letter": "Q",
+          "new_u": 6321406,
+          "new_v": 76556909,
+          "terminal": false,
+          "u": 76556908,
+          "v": 139788201,
+          "z": 6321406
+        },
+        {
+          "block_iteration": 50,
+          "coordinate": 6321406,
+          "fine_calls_after": 75,
+          "fine_calls_before": 74,
+          "letter": "P",
+          "new_u": 76556910,
+          "new_v": 53279577,
+          "terminal": false,
+          "u": 6321406,
+          "v": 76556909,
+          "z": 117331721
+        },
+        {
+          "block_iteration": 51,
+          "coordinate": 76556910,
+          "fine_calls_after": 76,
+          "fine_calls_before": 75,
+          "letter": "P",
+          "new_u": 53279578,
+          "new_v": 25289063,
+          "terminal": false,
+          "u": 76556910,
+          "v": 53279577,
+          "z": 145322235
+        },
+        {
+          "block_iteration": 52,
+          "coordinate": 53279578,
+          "fine_calls_after": 78,
+          "fine_calls_before": 76,
+          "letter": "Q",
+          "new_u": 141480584,
+          "new_v": 53279579,
+          "terminal": false,
+          "u": 53279578,
+          "v": 25289063,
+          "z": 141480584
+        },
+        {
+          "block_iteration": 53,
+          "coordinate": 29130713,
+          "fine_calls_after": 79,
+          "fine_calls_before": 78,
+          "letter": "P",
+          "new_u": 53279580,
+          "new_v": 73925955,
+          "terminal": false,
+          "u": 141480584,
+          "v": 53279579,
+          "z": 96685343
+        },
+        {
+          "block_iteration": 54,
+          "coordinate": 53279580,
+          "fine_calls_after": 80,
+          "fine_calls_before": 79,
+          "letter": "P",
+          "new_u": 73925956,
+          "new_v": 155757713,
+          "terminal": false,
+          "u": 53279580,
+          "v": 73925955,
+          "z": 14853585
+        },
+        {
+          "block_iteration": 55,
+          "coordinate": 73925956,
+          "fine_calls_after": 81,
+          "fine_calls_before": 80,
+          "letter": "P",
+          "new_u": 155757714,
+          "new_v": 15280351,
+          "terminal": false,
+          "u": 73925956,
+          "v": 155757713,
+          "z": 155330947
+        },
+        {
+          "block_iteration": 56,
+          "coordinate": 14853583,
+          "fine_calls_after": 82,
+          "fine_calls_before": 81,
+          "letter": "P",
+          "new_u": 15280352,
+          "new_v": 129660873,
+          "terminal": false,
+          "u": 155757714,
+          "v": 15280351,
+          "z": 40950425
+        },
+        {
+          "block_iteration": 57,
+          "coordinate": 15280352,
+          "fine_calls_after": 84,
+          "fine_calls_before": 82,
+          "letter": "Q",
+          "new_u": 96994692,
+          "new_v": 15280353,
+          "terminal": false,
+          "u": 15280352,
+          "v": 129660873,
+          "z": 96994692
+        },
+        {
+          "block_iteration": 58,
+          "coordinate": 73616605,
+          "fine_calls_after": 85,
+          "fine_calls_before": 84,
+          "letter": "P",
+          "new_u": 15280354,
+          "new_v": 132698493,
+          "terminal": false,
+          "u": 96994692,
+          "v": 15280353,
+          "z": 37912805
+        },
+        {
+          "block_iteration": 59,
+          "coordinate": 15280354,
+          "fine_calls_after": 86,
+          "fine_calls_before": 85,
+          "letter": "P",
+          "new_u": 132698494,
+          "new_v": 75127331,
+          "terminal": false,
+          "u": 15280354,
+          "v": 132698493,
+          "z": 95483967
+        },
+        {
+          "block_iteration": 60,
+          "coordinate": 37912803,
+          "fine_calls_after": 88,
+          "fine_calls_before": 86,
+          "letter": "Q",
+          "new_u": 51604366,
+          "new_v": 132698495,
+          "terminal": false,
+          "u": 132698494,
+          "v": 75127331,
+          "z": 51604366
+        },
+        {
+          "block_iteration": 61,
+          "coordinate": 51604366,
+          "fine_calls_after": 90,
+          "fine_calls_before": 88,
+          "letter": "Q",
+          "new_u": 23841688,
+          "new_v": 51604367,
+          "terminal": false,
+          "u": 51604366,
+          "v": 132698495,
+          "z": 23841688
+        },
+        {
+          "block_iteration": 62,
+          "coordinate": 23841688,
+          "fine_calls_after": 91,
+          "fine_calls_before": 90,
+          "letter": "P",
+          "new_u": 51604368,
+          "new_v": 17741911,
+          "terminal": false,
+          "u": 23841688,
+          "v": 51604367,
+          "z": 152869387
+        },
+        {
+          "block_iteration": 63,
+          "coordinate": 51604368,
+          "fine_calls_after": 93,
+          "fine_calls_before": 91,
+          "letter": "Q",
+          "new_u": 92978032,
+          "new_v": 51604369,
+          "terminal": false,
+          "u": 51604368,
+          "v": 17741911,
+          "z": 92978032
+        },
+        {
+          "block_iteration": 64,
+          "coordinate": 77633265,
+          "fine_calls_after": 94,
+          "fine_calls_before": 93,
+          "letter": "P",
+          "new_u": 51604370,
+          "new_v": 62034691,
+          "terminal": false,
+          "u": 92978032,
+          "v": 51604369,
+          "z": 108576607
+        },
+        {
+          "block_iteration": 6695,
+          "coordinate": 74176134,
+          "fine_calls_before": 9997,
+          "intermediate_u": 152237392,
+          "output": {
+            "branch": "fixed_nonunit",
+            "coordinate": 18373905,
+            "terminal_position": "intermediate_plus",
+            "type": "factor",
+            "value": 12373
+          },
+          "terminal": true,
+          "terminal_partial_letter": "P",
+          "u": 74176134,
+          "v": 152237391
+        }
+      ],
+      "block_word": {
+        "bigram_counts": {
+          "PQ": 1676,
+          "QP": 1675
+        },
+        "counts": {
+          "P": 3392,
+          "Q": 3302
+        },
+        "length": 6694,
+        "maximum_alternating_run": 12,
+        "maximum_same_run_by_letter": {
+          "P": 17,
+          "Q": 12
+        }
+      },
+      "cap_type": "block_iterations",
+      "equivalent_fine_F_calls": 9999,
+      "fine_trace_prefix": [
+        {
+          "F_branch": "swap_0_1",
+          "F_image": 1,
+          "coordinate": 0,
+          "fine_call": 1,
+          "next_coordinate": 2,
+          "terminal": false
+        },
+        {
+          "coordinate": 2,
+          "fine_call": 2,
+          "next_coordinate": 85305647,
+          "terminal": false
+        },
+        {
+          "coordinate": 85305647,
+          "fine_call": 3,
+          "next_coordinate": 56870434,
+          "terminal": false
+        },
+        {
+          "coordinate": 56870434,
+          "fine_call": 4,
+          "next_coordinate": 34122259,
+          "terminal": false
+        },
+        {
+          "coordinate": 34122259,
+          "fine_call": 5,
+          "next_coordinate": 85305645,
+          "terminal": false
+        },
+        {
+          "coordinate": 85305645,
+          "fine_call": 6,
+          "next_coordinate": 73119128,
+          "terminal": false
+        },
+        {
+          "coordinate": 73119128,
+          "fine_call": 7,
+          "next_coordinate": 34122257,
+          "terminal": false
+        },
+        {
+          "coordinate": 34122257,
+          "fine_call": 8,
+          "next_coordinate": 71088039,
+          "terminal": false
+        },
+        {
+          "coordinate": 71088039,
+          "fine_call": 9,
+          "next_coordinate": 20071917,
+          "terminal": false
+        },
+        {
+          "coordinate": 20071917,
+          "fine_call": 10,
+          "next_coordinate": 34122255,
+          "terminal": false
+        },
+        {
+          "coordinate": 34122255,
+          "fine_call": 11,
+          "next_coordinate": 38775296,
+          "terminal": false
+        },
+        {
+          "coordinate": 38775296,
+          "fine_call": 12,
+          "next_coordinate": 69508308,
+          "terminal": false
+        },
+        {
+          "coordinate": 69508308,
+          "fine_call": 13,
+          "next_coordinate": 41782360,
+          "terminal": false
+        },
+        {
+          "coordinate": 41782360,
+          "fine_call": 14,
+          "next_coordinate": 24693742,
+          "terminal": false
+        },
+        {
+          "coordinate": 24693742,
+          "fine_call": 15,
+          "next_coordinate": 23203138,
+          "terminal": false
+        },
+        {
+          "coordinate": 23203138,
+          "fine_call": 16,
+          "next_coordinate": 28859624,
+          "terminal": false
+        },
+        {
+          "coordinate": 28859624,
+          "fine_call": 17,
+          "next_coordinate": 72745308,
+          "terminal": false
+        },
+        {
+          "coordinate": 72745308,
+          "fine_call": 18,
+          "next_coordinate": 23203140,
+          "terminal": false
+        },
+        {
+          "coordinate": 23203140,
+          "fine_call": 19,
+          "next_coordinate": 72254451,
+          "terminal": false
+        },
+        {
+          "coordinate": 72254451,
+          "fine_call": 20,
+          "next_coordinate": 72745310,
+          "terminal": false
+        },
+        {
+          "coordinate": 72745310,
+          "fine_call": 21,
+          "next_coordinate": 55552972,
+          "terminal": false
+        },
+        {
+          "coordinate": 55552972,
+          "fine_call": 22,
+          "next_coordinate": 75019473,
+          "terminal": false
+        },
+        {
+          "coordinate": 75019473,
+          "fine_call": 23,
+          "next_coordinate": 72745312,
+          "terminal": false
+        },
+        {
+          "coordinate": 72745312,
+          "fine_call": 24,
+          "next_coordinate": 25430516,
+          "terminal": false
+        },
+        {
+          "coordinate": 25430516,
+          "fine_call": 25,
+          "next_coordinate": 75019471,
+          "terminal": false
+        },
+        {
+          "coordinate": 75019471,
+          "fine_call": 26,
+          "next_coordinate": 13004731,
+          "terminal": false
+        },
+        {
+          "coordinate": 13004731,
+          "fine_call": 27,
+          "next_coordinate": 25430518,
+          "terminal": false
+        },
+        {
+          "coordinate": 25430518,
+          "fine_call": 28,
+          "next_coordinate": 38937798,
+          "terminal": false
+        },
+        {
+          "coordinate": 38937798,
+          "fine_call": 29,
+          "next_coordinate": 36939403,
+          "terminal": false
+        },
+        {
+          "coordinate": 36939403,
+          "fine_call": 30,
+          "next_coordinate": 25430520,
+          "terminal": false
+        },
+        {
+          "coordinate": 25430520,
+          "fine_call": 31,
+          "next_coordinate": 10708556,
+          "terminal": false
+        },
+        {
+          "coordinate": 10708556,
+          "fine_call": 32,
+          "next_coordinate": 17437600,
+          "terminal": false
+        },
+        {
+          "coordinate": 17437600,
+          "fine_call": 33,
+          "next_coordinate": 25430522,
+          "terminal": false
+        },
+        {
+          "coordinate": 25430522,
+          "fine_call": 34,
+          "next_coordinate": 21791420,
+          "terminal": false
+        },
+        {
+          "coordinate": 21791420,
+          "fine_call": 35,
+          "next_coordinate": 17437602,
+          "terminal": false
+        },
+        {
+          "coordinate": 17437602,
+          "fine_call": 36,
+          "next_coordinate": 71775722,
+          "terminal": false
+        },
+        {
+          "coordinate": 71775722,
+          "fine_call": 37,
+          "next_coordinate": 63034856,
+          "terminal": false
+        },
+        {
+          "coordinate": 63034856,
+          "fine_call": 38,
+          "next_coordinate": 16756259,
+          "terminal": false
+        },
+        {
+          "coordinate": 16756259,
+          "fine_call": 39,
+          "next_coordinate": 71775724,
+          "terminal": false
+        },
+        {
+          "coordinate": 71775724,
+          "fine_call": 40,
+          "next_coordinate": 1138822,
+          "terminal": false
+        },
+        {
+          "coordinate": 1138822,
+          "fine_call": 41,
+          "next_coordinate": 2242864,
+          "terminal": false
+        },
+        {
+          "coordinate": 2242864,
+          "fine_call": 42,
+          "next_coordinate": 71775726,
+          "terminal": false
+        },
+        {
+          "coordinate": 71775726,
+          "fine_call": 43,
+          "next_coordinate": 69685790,
+          "terminal": false
+        },
+        {
+          "coordinate": 69685790,
+          "fine_call": 44,
+          "next_coordinate": 34483822,
+          "terminal": false
+        },
+        {
+          "coordinate": 34483822,
+          "fine_call": 45,
+          "next_coordinate": 22845216,
+          "terminal": false
+        },
+        {
+          "coordinate": 22845216,
+          "fine_call": 46,
+          "next_coordinate": 50244706,
+          "terminal": false
+        },
+        {
+          "coordinate": 50244706,
+          "fine_call": 47,
+          "next_coordinate": 34483824,
+          "terminal": false
+        },
+        {
+          "coordinate": 34483824,
+          "fine_call": 48,
+          "next_coordinate": 6402326,
+          "terminal": false
+        },
+        {
+          "coordinate": 6402326,
+          "fine_call": 49,
+          "next_coordinate": 50244708,
+          "terminal": false
+        },
+        {
+          "coordinate": 50244708,
+          "fine_call": 50,
+          "next_coordinate": 83239777,
+          "terminal": false
+        },
+        {
+          "coordinate": 83239777,
+          "fine_call": 51,
+          "next_coordinate": 6402328,
+          "terminal": false
+        },
+        {
+          "coordinate": 6402328,
+          "fine_call": 52,
+          "next_coordinate": 37514256,
+          "terminal": false
+        },
+        {
+          "coordinate": 37514256,
+          "fine_call": 53,
+          "next_coordinate": 83239775,
+          "terminal": false
+        },
+        {
+          "coordinate": 83239775,
+          "fine_call": 54,
+          "next_coordinate": 42229211,
+          "terminal": false
+        },
+        {
+          "coordinate": 42229211,
+          "fine_call": 55,
+          "next_coordinate": 34094108,
+          "terminal": false
+        },
+        {
+          "coordinate": 34094108,
+          "fine_call": 56,
+          "next_coordinate": 80272412,
+          "terminal": false
+        },
+        {
+          "coordinate": 80272412,
+          "fine_call": 57,
+          "next_coordinate": 42229209,
+          "terminal": false
+        },
+        {
+          "coordinate": 42229209,
+          "fine_call": 58,
+          "next_coordinate": 58486940,
+          "terminal": false
+        },
+        {
+          "coordinate": 58486940,
+          "fine_call": 59,
+          "next_coordinate": 21082736,
+          "terminal": false
+        },
+        {
+          "coordinate": 21082736,
+          "fine_call": 60,
+          "next_coordinate": 42229207,
+          "terminal": false
+        },
+        {
+          "coordinate": 42229207,
+          "fine_call": 61,
+          "next_coordinate": 47093910,
+          "terminal": false
+        },
+        {
+          "coordinate": 47093910,
+          "fine_call": 62,
+          "next_coordinate": 21082738,
+          "terminal": false
+        },
+        {
+          "coordinate": 21082738,
+          "fine_call": 63,
+          "next_coordinate": 32549032,
+          "terminal": false
+        },
+        {
+          "coordinate": 32549032,
+          "fine_call": 64,
+          "next_coordinate": 43393487,
+          "terminal": false
+        }
+      ],
+      "lift": {
+        "active_at_stop": true,
+        "bit_limit": 4096,
+        "first_norm_gt_2N": {
+          "U": 17925,
+          "V": 8248,
+          "letter": "P",
+          "norm": 389335129,
+          "two_N": 341222594,
+          "update_index": 23
+        },
+        "label": "adjacent_positive_blocks",
+        "last_exact_U": 4071334526239010189994797946523527637626290189050995671735651087484537943179339111439877334629949291606573439596906751626531428029405530148623382736598410909718736904624315572560171078715040189847621749601507722673242253964184189788002426796780436762663996329852772491168392411543248740257994982189258631859058384692165129192723075676048594066151912638171158271130825423198611843157030098077801425080329770851151196021439388016227656816284463403993618979214046749567539741483273915922915169198322319180280386495473478096970262871563013033575792598682806511269491084580247521607555275197225159029639576693843301054202389843754223636543851144949003007584065469161157939305780246259233511453468431242660737994112944055689663417076823372984596817361841721396766017171932654918616745984457757020537114910292846900228705204122498853193580530628768828108799090336075456721342452627700683676189714787516829049425634455799445729241520059120587931816948461353033063444012867284551884814801197919474106911544300847029806959952354594707278195481293968117612828280956784508345948200351440525215226723862034524650084473508791136301209597439464843920162110010272204099,
+        "last_exact_V": 1190569224249162278169730290184123656547400467992061779145117537591201160518879246197721668631424427889958618005928981140359165536479279607941933094135310826317496234146540409487302963014393292756211317617782114826748866192901297438645802099711749876251267962850807130753033308263802974087322868557904004197021595807408371366609117201013422927297041946528934941123448617280127290255631166488397848457608160109668985579696929058973486068049095871139513827483683920769265591011634819995241843682951411356602082706626545081312506549982870174454998247374824678530159483630526313177455231290850470186219532614351102171918323932535503161656180867665844107379724321034071796096504199881567640961026981693097770124744805223540484367350131103372545509895166334381577771914785274095109409315509987056479016307533507139571447335917079565329279798196443435870696480051356037536228843102366201021905784703422722835593195876160051758314216075148287539496353721452800238489280127267413977138972409917040639145799442166382714920836194164866323996730241205669095894442294028529010737005765982385425005342832387911891164626871466940854042903779861027841686034720120003144,
+        "maximum_bit_length_recorded": 3829,
+        "positive": true,
+        "saturation": null,
+        "state_prefix": [
+          {
+            "U": 2,
+            "V": 1,
+            "letter": "initial",
+            "update_index": 0
+          },
+          {
+            "U": 3,
+            "V": 2,
+            "letter": "P",
+            "update_index": 1
+          },
+          {
+            "U": 2,
+            "V": 5,
+            "letter": "Q",
+            "update_index": 2
+          },
+          {
+            "U": 5,
+            "V": 7,
+            "letter": "Q",
+            "update_index": 3
+          },
+          {
+            "U": 12,
+            "V": 5,
+            "letter": "P",
+            "update_index": 4
+          },
+          {
+            "U": 5,
+            "V": 17,
+            "letter": "Q",
+            "update_index": 5
+          },
+          {
+            "U": 22,
+            "V": 5,
+            "letter": "P",
+            "update_index": 6
+          },
+          {
+            "U": 27,
+            "V": 22,
+            "letter": "P",
+            "update_index": 7
+          },
+          {
+            "U": 49,
+            "V": 27,
+            "letter": "P",
+            "update_index": 8
+          },
+          {
+            "U": 76,
+            "V": 49,
+            "letter": "P",
+            "update_index": 9
+          },
+          {
+            "U": 125,
+            "V": 76,
+            "letter": "P",
+            "update_index": 10
+          },
+          {
+            "U": 201,
+            "V": 125,
+            "letter": "P",
+            "update_index": 11
+          },
+          {
+            "U": 125,
+            "V": 326,
+            "letter": "Q",
+            "update_index": 12
+          },
+          {
+            "U": 326,
+            "V": 451,
+            "letter": "Q",
+            "update_index": 13
+          },
+          {
+            "U": 777,
+            "V": 326,
+            "letter": "P",
+            "update_index": 14
+          },
+          {
+            "U": 326,
+            "V": 1103,
+            "letter": "Q",
+            "update_index": 15
+          },
+          {
+            "U": 1103,
+            "V": 1429,
+            "letter": "Q",
+            "update_index": 16
+          },
+          {
+            "U": 1429,
+            "V": 2532,
+            "letter": "Q",
+            "update_index": 17
+          },
+          {
+            "U": 3961,
+            "V": 1429,
+            "letter": "P",
+            "update_index": 18
+          },
+          {
+            "U": 1429,
+            "V": 5390,
+            "letter": "Q",
+            "update_index": 19
+          },
+          {
+            "U": 6819,
+            "V": 1429,
+            "letter": "P",
+            "update_index": 20
+          },
+          {
+            "U": 1429,
+            "V": 8248,
+            "letter": "Q",
+            "update_index": 21
+          },
+          {
+            "U": 8248,
+            "V": 9677,
+            "letter": "Q",
+            "update_index": 22
+          },
+          {
+            "U": 17925,
+            "V": 8248,
+            "letter": "P",
+            "update_index": 23
+          },
+          {
+            "U": 26173,
+            "V": 17925,
+            "letter": "P",
+            "update_index": 24
+          },
+          {
+            "U": 17925,
+            "V": 44098,
+            "letter": "Q",
+            "update_index": 25
+          },
+          {
+            "U": 62023,
+            "V": 17925,
+            "letter": "P",
+            "update_index": 26
+          },
+          {
+            "U": 17925,
+            "V": 79948,
+            "letter": "Q",
+            "update_index": 27
+          },
+          {
+            "U": 97873,
+            "V": 17925,
+            "letter": "P",
+            "update_index": 28
+          },
+          {
+            "U": 115798,
+            "V": 97873,
+            "letter": "P",
+            "update_index": 29
+          },
+          {
+            "U": 213671,
+            "V": 115798,
+            "letter": "P",
+            "update_index": 30
+          },
+          {
+            "U": 115798,
+            "V": 329469,
+            "letter": "Q",
+            "update_index": 31
+          }
+        ],
+        "updates_recorded": 6695
+      },
+      "method": "adjacent_block",
+      "moving_blocks_completed": 6694,
+      "operation_counts": {
+        "block_iterations": 6695,
+        "gcd_calls": 6695,
+        "modular_inversions": 6694,
+        "moving_blocks_completed": 6694,
+        "root_tests": 6695
+      },
+      "output": {
+        "branch": "fixed_nonunit",
+        "coordinate": 18373905,
+        "terminal_position": "intermediate_plus",
+        "type": "factor",
+        "value": 12373
+      },
+      "special_guard": null,
+      "status": "completed",
+      "walltime_seconds": 0.019071917020482942
+    },
+    "reflection": {
+      "adjacent_even_word": {
+        "bigram_counts": {},
+        "counts": {},
+        "length": 0,
+        "maximum_alternating_run": 0,
+        "maximum_same_run_by_letter": {}
+      },
+      "adjacent_matrix_word": {
+        "bigram_counts": {},
+        "counts": {},
+        "length": 0,
+        "maximum_alternating_run": 0,
+        "maximum_same_run_by_letter": {}
+      },
+      "cap": 8192,
+      "cap_type": "fine_F_calls",
+      "fine_F_calls": 4185,
+      "lift": {
+        "active_at_stop": false,
+        "bit_limit": 4096,
+        "first_norm_gt_2N": null,
+        "label": "reflection_z",
+        "last_exact_U": -526886462113173762211166939474248420168459595708197417221348197763268101000554977965900070724390536370417656343594767077545396947563064114560807466024031031597493832116868380426635581195488512449552344827087454325865412596430591702901079404433550672100749509505144547379206021423946835199938561526158394458087876141854577103078805165374163463736899970788631326016789232636253933499283799276221088133019230805507686110526036225439941680798794173540232528002031513447343128856665123077974028868882855780950048619986390359590984610668053160634869742328929296572457446126097615510524909383710077148047163043008473208910856985386003900452072428587069416099189454523183812376018694623439252375554972239807931326642449972001941536382838332288753836430690992745904055826999903482212728396023664762823863718032913624268945554900716693931046841999241279469726682981908048330882312057969660167449532628183340710549411449433756065754422152158494636451586582121481579048903271829909396172925232477956331899634447729071986928807308065638473802720713018918111890411082499943035290098661482246703710117795730189874416274101113845177048603617107222884527342658563992907333882941989899185278663195637721124430882286517064577970507331737373321094551444,
+        "last_exact_V": -337418654458815851222484846255292228873300498998758384253447538823319929929018672149371890055169762419832843837786844928660484709475057065887485592997109871492854178245925576928852771302578859061454181694041910566189352241406813923808245733624813609180633789321570487614513524317464917730577071894413148146254753470148301339431336977662968120300457386956822067108203589097993408696021947016148870128435489945185245874587940610473990981886105343632399366463261722228978277558187285736856291491985110018928227971789000808109350727707675679690772619524176342750247232816018826064768084726502659174315110980077185517510835748723642470927477673175685585088308208256528012406053955914748724948308727373796018268321124890478197227674891629238352125971291203287763431173358660005250826555843825558367116096206760297170970307764238290962488099189225056557719578978967469840334113938488967704189406516731185316484819904872712615841564258616850395256237956791265386691300346282959716058214491675947701316356059979699997007337349539150931119007500475550470752705915462945038923299512817537434538034408519574462555648400355533756372042764703080016957561997808317960799513650084312934870626725383850735734799801216451156557621081713073287220943017,
+        "maximum_bit_length_recorded": 4096,
+        "positive": false,
+        "saturation": {
+          "before_update_index": 3952,
+          "candidate_max_bit_length": 4097,
+          "last_exact_U": -526886462113173762211166939474248420168459595708197417221348197763268101000554977965900070724390536370417656343594767077545396947563064114560807466024031031597493832116868380426635581195488512449552344827087454325865412596430591702901079404433550672100749509505144547379206021423946835199938561526158394458087876141854577103078805165374163463736899970788631326016789232636253933499283799276221088133019230805507686110526036225439941680798794173540232528002031513447343128856665123077974028868882855780950048619986390359590984610668053160634869742328929296572457446126097615510524909383710077148047163043008473208910856985386003900452072428587069416099189454523183812376018694623439252375554972239807931326642449972001941536382838332288753836430690992745904055826999903482212728396023664762823863718032913624268945554900716693931046841999241279469726682981908048330882312057969660167449532628183340710549411449433756065754422152158494636451586582121481579048903271829909396172925232477956331899634447729071986928807308065638473802720713018918111890411082499943035290098661482246703710117795730189874416274101113845177048603617107222884527342658563992907333882941989899185278663195637721124430882286517064577970507331737373321094551444,
+          "last_exact_V": -337418654458815851222484846255292228873300498998758384253447538823319929929018672149371890055169762419832843837786844928660484709475057065887485592997109871492854178245925576928852771302578859061454181694041910566189352241406813923808245733624813609180633789321570487614513524317464917730577071894413148146254753470148301339431336977662968120300457386956822067108203589097993408696021947016148870128435489945185245874587940610473990981886105343632399366463261722228978277558187285736856291491985110018928227971789000808109350727707675679690772619524176342750247232816018826064768084726502659174315110980077185517510835748723642470927477673175685585088308208256528012406053955914748724948308727373796018268321124890478197227674891629238352125971291203287763431173358660005250826555843825558367116096206760297170970307764238290962488099189225056557719578978967469840334113938488967704189406516731185316484819904872712615841564258616850395256237956791265386691300346282959716058214491675947701316356059979699997007337349539150931119007500475550470752705915462945038923299512817537434538034408519574462555648400355533756372042764703080016957561997808317960799513650084312934870626725383850735734799801216451156557621081713073287220943017,
+          "letter": "+"
+        },
+        "state_prefix": [
+          {
+            "U": -2,
+            "V": 1,
+            "letter": "initial",
+            "update_index": 0
+          },
+          {
+            "U": 4,
+            "V": -1,
+            "letter": "+",
+            "update_index": 1
+          },
+          {
+            "U": -4,
+            "V": 3,
+            "letter": "+",
+            "update_index": 2
+          },
+          {
+            "U": 12,
+            "V": -1,
+            "letter": "+",
+            "update_index": 3
+          },
+          {
+            "U": -4,
+            "V": 11,
+            "letter": "+",
+            "update_index": 4
+          },
+          {
+            "U": -44,
+            "V": 7,
+            "letter": "-",
+            "update_index": 5
+          },
+          {
+            "U": 28,
+            "V": -37,
+            "letter": "+",
+            "update_index": 6
+          },
+          {
+            "U": 148,
+            "V": -9,
+            "letter": "-",
+            "update_index": 7
+          },
+          {
+            "U": 36,
+            "V": 139,
+            "letter": "-",
+            "update_index": 8
+          },
+          {
+            "U": 556,
+            "V": 175,
+            "letter": "+",
+            "update_index": 9
+          },
+          {
+            "U": -700,
+            "V": 731,
+            "letter": "-",
+            "update_index": 10
+          },
+          {
+            "U": 2924,
+            "V": 31,
+            "letter": "+",
+            "update_index": 11
+          },
+          {
+            "U": 124,
+            "V": 2955,
+            "letter": "+",
+            "update_index": 12
+          },
+          {
+            "U": -11820,
+            "V": 3079,
+            "letter": "-",
+            "update_index": 13
+          },
+          {
+            "U": 12316,
+            "V": -8741,
+            "letter": "+",
+            "update_index": 14
+          },
+          {
+            "U": -34964,
+            "V": 3575,
+            "letter": "+",
+            "update_index": 15
+          },
+          {
+            "U": 14300,
+            "V": -31389,
+            "letter": "+",
+            "update_index": 16
+          },
+          {
+            "U": -125556,
+            "V": -17089,
+            "letter": "+",
+            "update_index": 17
+          },
+          {
+            "U": -68356,
+            "V": -142645,
+            "letter": "+",
+            "update_index": 18
+          },
+          {
+            "U": 570580,
+            "V": -211001,
+            "letter": "-",
+            "update_index": 19
+          },
+          {
+            "U": -844004,
+            "V": 359579,
+            "letter": "+",
+            "update_index": 20
+          },
+          {
+            "U": 1438316,
+            "V": -484425,
+            "letter": "+",
+            "update_index": 21
+          },
+          {
+            "U": 1937700,
+            "V": 953891,
+            "letter": "-",
+            "update_index": 22
+          },
+          {
+            "U": 3815564,
+            "V": 2891591,
+            "letter": "+",
+            "update_index": 23
+          },
+          {
+            "U": -11566364,
+            "V": 6707155,
+            "letter": "-",
+            "update_index": 24
+          },
+          {
+            "U": 26828620,
+            "V": -4859209,
+            "letter": "+",
+            "update_index": 25
+          },
+          {
+            "U": -19436836,
+            "V": 21969411,
+            "letter": "+",
+            "update_index": 26
+          },
+          {
+            "U": -87877644,
+            "V": 2532575,
+            "letter": "-",
+            "update_index": 27
+          },
+          {
+            "U": -10130300,
+            "V": -85345069,
+            "letter": "-",
+            "update_index": 28
+          },
+          {
+            "U": -341380276,
+            "V": -95475369,
+            "letter": "+",
+            "update_index": 29
+          },
+          {
+            "U": -381901476,
+            "V": -436855645,
+            "letter": "+",
+            "update_index": 30
+          },
+          {
+            "U": 1747422580,
+            "V": -818757121,
+            "letter": "-",
+            "update_index": 31
+          }
+        ],
+        "updates_recorded": 3951
+      },
+      "method": "reflection",
+      "operation_counts": {
+        "gcd_calls": 4184,
+        "modular_inversions": 4183
+      },
+      "output": {
+        "branch": "fixed_nonunit",
+        "coordinate": 16077974,
+        "type": "factor",
+        "value": 13789
+      },
+      "reflection_sigma_word": {
+        "bigram_counts": {
+          "+-": 1051,
+          "-+": 1051
+        },
+        "counts": {
+          "+": 2057,
+          "-": 2126
+        },
+        "length": 4183,
+        "maximum_alternating_run": 10,
+        "maximum_same_run_by_letter": {
+          "+": 16,
+          "-": 18
+        }
+      },
+      "status": "completed",
+      "trace_prefix": [
+        {
+          "F_branch": "swap_0_1",
+          "F_image": 1,
+          "coordinate": 0,
+          "fine_call": 1,
+          "next_coordinate": 85305648,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 2,
+          "coordinate": 85305648,
+          "fine_call": 2,
+          "next_coordinate": 85305647,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 56870433,
+          "coordinate": 85305647,
+          "fine_call": 3,
+          "next_coordinate": 28435216,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 6,
+          "coordinate": 28435216,
+          "fine_call": 4,
+          "next_coordinate": 85305643,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 31020236,
+          "coordinate": 85305643,
+          "fine_call": 5,
+          "next_coordinate": 54285413,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 48746088,
+          "coordinate": 54285413,
+          "fine_call": 6,
+          "next_coordinate": 36559561,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 55333394,
+          "coordinate": 36559561,
+          "fine_call": 7,
+          "next_coordinate": 29972255,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 18956819,
+          "coordinate": 29972255,
+          "fine_call": 8,
+          "next_coordinate": 66348830,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 55233873,
+          "coordinate": 66348830,
+          "fine_call": 9,
+          "next_coordinate": 30071776,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 72144204,
+          "coordinate": 30071776,
+          "fine_call": 10,
+          "next_coordinate": 13161445,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 26840355,
+          "coordinate": 13161445,
+          "fine_call": 11,
+          "next_coordinate": 58465294,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 77050216,
+          "coordinate": 58465294,
+          "fine_call": 12,
+          "next_coordinate": 8255433,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 80311443,
+          "coordinate": 8255433,
+          "fine_call": 13,
+          "next_coordinate": 4994206,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 67601750,
+          "coordinate": 4994206,
+          "fine_call": 14,
+          "next_coordinate": 17703899,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 72862599,
+          "coordinate": 17703899,
+          "fine_call": 15,
+          "next_coordinate": 12443050,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 42664760,
+          "coordinate": 12443050,
+          "fine_call": 16,
+          "next_coordinate": 42640889,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 57865108,
+          "coordinate": 42640889,
+          "fine_call": 17,
+          "next_coordinate": 27440541,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 28483467,
+          "coordinate": 27440541,
+          "fine_call": 18,
+          "next_coordinate": 56822182,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 66672902,
+          "coordinate": 56822182,
+          "fine_call": 19,
+          "next_coordinate": 18632747,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 44671649,
+          "coordinate": 18632747,
+          "fine_call": 20,
+          "next_coordinate": 40634000,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 60166296,
+          "coordinate": 40634000,
+          "fine_call": 21,
+          "next_coordinate": 25139353,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 5709409,
+          "coordinate": 25139353,
+          "fine_call": 22,
+          "next_coordinate": 79596240,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 57129120,
+          "coordinate": 79596240,
+          "fine_call": 23,
+          "next_coordinate": 28176529,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 8237938,
+          "coordinate": 28176529,
+          "fine_call": 24,
+          "next_coordinate": 77067711,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 49271593,
+          "coordinate": 77067711,
+          "fine_call": 25,
+          "next_coordinate": 36034056,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 48218847,
+          "coordinate": 36034056,
+          "fine_call": 26,
+          "next_coordinate": 37086802,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 13856005,
+          "coordinate": 37086802,
+          "fine_call": 27,
+          "next_coordinate": 71449644,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 59476352,
+          "coordinate": 71449644,
+          "fine_call": 28,
+          "next_coordinate": 25829297,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 34151994,
+          "coordinate": 25829297,
+          "fine_call": 29,
+          "next_coordinate": 51153655,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 78087657,
+          "coordinate": 51153655,
+          "fine_call": 30,
+          "next_coordinate": 7217992,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 35232501,
+          "coordinate": 7217992,
+          "fine_call": 31,
+          "next_coordinate": 50073148,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 75944311,
+          "coordinate": 50073148,
+          "fine_call": 32,
+          "next_coordinate": 9361338,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 10584280,
+          "coordinate": 9361338,
+          "fine_call": 33,
+          "next_coordinate": 74721369,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 6080035,
+          "coordinate": 74721369,
+          "fine_call": 34,
+          "next_coordinate": 79225614,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 3768061,
+          "coordinate": 79225614,
+          "fine_call": 35,
+          "next_coordinate": 81537588,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 58769260,
+          "coordinate": 81537588,
+          "fine_call": 36,
+          "next_coordinate": 26536389,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 38619946,
+          "coordinate": 26536389,
+          "fine_call": 37,
+          "next_coordinate": 46685703,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 23765286,
+          "coordinate": 46685703,
+          "fine_call": 38,
+          "next_coordinate": 61540363,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 29160534,
+          "coordinate": 61540363,
+          "fine_call": 39,
+          "next_coordinate": 56145115,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 50967721,
+          "coordinate": 56145115,
+          "fine_call": 40,
+          "next_coordinate": 34337928,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 64784616,
+          "coordinate": 34337928,
+          "fine_call": 41,
+          "next_coordinate": 20521033,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 68892849,
+          "coordinate": 20521033,
+          "fine_call": 42,
+          "next_coordinate": 16412800,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 77139668,
+          "coordinate": 16412800,
+          "fine_call": 43,
+          "next_coordinate": 8165981,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 31037142,
+          "coordinate": 8165981,
+          "fine_call": 44,
+          "next_coordinate": 54268507,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 34129599,
+          "coordinate": 54268507,
+          "fine_call": 45,
+          "next_coordinate": 51176050,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 55532186,
+          "coordinate": 51176050,
+          "fine_call": 46,
+          "next_coordinate": 29773463,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 44954223,
+          "coordinate": 29773463,
+          "fine_call": 47,
+          "next_coordinate": 40351426,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 17690946,
+          "coordinate": 40351426,
+          "fine_call": 48,
+          "next_coordinate": 67614703,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 32793876,
+          "coordinate": 67614703,
+          "fine_call": 49,
+          "next_coordinate": 52511773,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 45156865,
+          "coordinate": 52511773,
+          "fine_call": 50,
+          "next_coordinate": 40148784,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 16179077,
+          "coordinate": 40148784,
+          "fine_call": 51,
+          "next_coordinate": 69126572,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 77209799,
+          "coordinate": 69126572,
+          "fine_call": 52,
+          "next_coordinate": 8095850,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 26958117,
+          "coordinate": 8095850,
+          "fine_call": 53,
+          "next_coordinate": 58347532,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 71414895,
+          "coordinate": 58347532,
+          "fine_call": 54,
+          "next_coordinate": 13890754,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 81395779,
+          "coordinate": 13890754,
+          "fine_call": 55,
+          "next_coordinate": 3909870,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 38350113,
+          "coordinate": 3909870,
+          "fine_call": 56,
+          "next_coordinate": 46955536,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 61271095,
+          "coordinate": 46955536,
+          "fine_call": 57,
+          "next_coordinate": 24034554,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 70484856,
+          "coordinate": 24034554,
+          "fine_call": 58,
+          "next_coordinate": 14820793,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 49866726,
+          "coordinate": 14820793,
+          "fine_call": 59,
+          "next_coordinate": 35438923,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 35812414,
+          "coordinate": 35438923,
+          "fine_call": 60,
+          "next_coordinate": 49493235,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 19259381,
+          "coordinate": 49493235,
+          "fine_call": 61,
+          "next_coordinate": 66046268,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 45325753,
+          "coordinate": 66046268,
+          "fine_call": 62,
+          "next_coordinate": 39979896,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 48001178,
+          "coordinate": 39979896,
+          "fine_call": 63,
+          "next_coordinate": 37304471,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 60909984,
+          "coordinate": 37304471,
+          "fine_call": 64,
+          "next_coordinate": 24395665,
+          "terminal": false
+        }
+      ],
+      "walltime_seconds": 0.011018041986972094
+    }
+  },
+  "root_pair_postprocessing": {
+    "reason": "both traversals did not return square roots",
+    "status": "not_applicable"
+  },
+  "route": "route:F31",
+  "solver_isolation": "Each solver receives only public N=-a mod N and its cap. Offline factor labels classify root possibility after the run and never enter a transition or stopping test.",
+  "source_sha256": "f77289e01e29a3a8df3e88a1c60230e10ef75d2b89c41874ae3821cc48e5f6ae",
+  "status": "passed"
+}

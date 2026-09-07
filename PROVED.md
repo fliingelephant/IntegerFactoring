@@ -26670,3 +26670,244 @@ Input SHA-256:
 46a229a44bf590989a00cabdadeb22e72b96bb90134a720222e352d3463e06a0.
 Reconstruction SHA-256:
 cc4125ba5bdf5c70f29faf54a9b8970bc5505404fefdf31b15cc89fcbdfc2949.
+
+## P248 -- Ranked Gauss paths have exact remainder defects and a guarded rational block kernel
+
+**Status:** promoted after fresh statement-only reconstruction and root
+comparison. All five frozen claims were recovered with their special,
+nonunit, fixed-point, intermediate, and range guards.
+
+**Scope:** exact count and coordinate identities for P246's path, including
+the fixed \(a=-1\) reflection and adjacent auxiliaries. No short-path law,
+typical small-defect claim, first-exit algorithm, novelty claim, or
+quasipolynomial factoring bound is promoted.
+
+Let \(N>1\) be odd, \(h=(N-1)/2\), \(a\) a unit, and
+\[
+ Q(t)=\#\{1\leq y\leq t:1\leq ay\bmod N\leq h\}.
+\]
+For \(1\leq t\leq h\), put \(b=a^{-1}\bmod N\),
+\[
+ C_t(u,v)=\#\{k\in[u,v]:1\leq bk\bmod N\leq t-1\},
+\]
+with empty intervals contributing zero, and let
+\(r=\operatorname{rep}(at)\ne0\). Then
+\[
+\begin{aligned}
+r>0:\quad
+2Q(t)&=t+1+C_t(1,r-1)-C_t(h+1,h+r),\\
+r=-s<0:\quad
+2Q(t)&=t-1+C_t(h+1-s,h)-C_t(N-s+1,N-1).
+\end{aligned} \tag{1}
+\]
+Consequently
+\[
+ |2Q(t)-t|\leq |r|. \tag{2}
+\]
+The cases \(r=1\) and \(r=-1\) give
+\(Q(t)=\lceil t/2\rceil\) and \(\lfloor t/2\rfloor\), respectively.
+The right side of (1) uses at most \(2|r|-1\) inverse-image membership
+tests after computing \(b\), hence
+\(O((1+|r|)\operatorname{poly}(\log N))\) bit work. Ordinary Euclidean
+floor sums already compute \(Q\) in polynomial bit time; (1) is not an
+improvement unless the signed remainder is suitably small.
+
+Now assume \(\operatorname{Jacobi}(a,N)=1\), put \(L=Q(h)\),
+\(d=L+h+1\), and let \(B=R^{-1}AR\) be P246's rank reflection in coordinate
+space. For accepted positive \(y\), define \(E(y)=2Q(y)-y\). Then
+\[
+\begin{aligned}
+B(-y)&=(y+E(y))/2,\\
+B(z)&=-2z+E(y),
+ &&1\leq z\leq L,\quad y=\min\{u:Q(u)\geq z\},\\
+B(z)&=d-z,&&L<z\leq h,\\
+B(0)&=0.
+\end{aligned} \tag{3}
+\]
+In the second line \(Q(y)=z\). These affine defects need not be small.
+
+For the fixed family \(N\equiv1\pmod4\), \(a=-1\bmod N\), one has
+\(L=0,d=(N+1)/2,D=\{0,\ldots,h\}\), and every nonspecial unit satisfies
+\[
+ F(x)=|\operatorname{rep}(x^{-1})|.
+\]
+Under reflection, after the first moving stage,
+\[
+ x'=d-|\operatorname{rep}(x^{-1})|.
+\]
+With \(z=2x-1\) and
+\(\sigma=-\operatorname{sign}(\operatorname{rep}(x^{-1}))\),
+\[
+ z'=\frac{4\sigma}{z+1},\qquad
+ M_\sigma=\begin{pmatrix}0&4\sigma\\1&1\end{pmatrix}. \tag{4}
+\]
+The primitive integer lift begins at \((-2,1)\) and updates as
+\[
+ (U,V)\mapsto(4\sigma V,U+V).
+\]
+Its height after \(T\) updates is at most \(2\cdot4^T\); this bounds
+storage per retained lift, not \(T\).
+
+For P246's adjacent auxiliary, conjugate a positive coordinate \(x\) to
+the even ordinary residue
+\[
+ u=\begin{cases}x,&x\text{ even},\\N-x,&x\text{ odd}.\end{cases}
+\]
+If \(v\) is its ordinary inverse, a nonspecial moving step is
+\[
+ u\mapsto1+v\quad(v\text{ odd}),\qquad
+ u\mapsto N+1-v\quad(v\text{ even}). \tag{5}
+\]
+The reached path, starting at \(u=2\), consists of positive rational blocks
+\[
+\begin{array}{c|c|c}
+ &\text{matrix}&(U,V)\text{ update}\\ \hline
+P&\begin{pmatrix}1&1\\1&0\end{pmatrix}&(U+V,U)\\
+Q&\begin{pmatrix}0&1\\1&1\end{pmatrix}&(V,U+V),
+\end{array} \tag{6}
+\]
+from the primitive lift \((2,1)\). Equivalently, at every block start,
+test \(u^2=-1\bmod N\), then test \(\gcd(u+1,N)\); if neither returns,
+compute \(z=(u+1)^{-1}\bmod N\) and use
+\[
+\begin{cases}
+(u,v)\leftarrow(z,u+1),&z\text{ even}\quad(Q),\\
+(u,v)\leftarrow(v+1,N+1-z),&z\text{ odd}\quad(P).
+\end{cases} \tag{7}
+\]
+The old values are used on the right. The fixed-point check precedes every
+move, a \(Q\) block preserves its intermediate terminal checks, and special
+or nonunit coordinates are never inverted. P246 gives termination and only
+an inherited \(O(N)\) block bound.
+
+Away from earlier guards, consecutive \(Q,P\) blocks send \(u\mapsto u+2\).
+They occur exactly when the ordinary inverses of \(u,u+1,u+2\) have parity
+odd, even, odd. Longer translations require the corresponding alternating
+inverse-parity pattern on every covered integer. For every unit \(t\),
+\[
+ \langle t^{-1}\rangle_N\text{ is even}
+ \iff \operatorname{rep}((2t)^{-1})>0. \tag{8}
+\]
+Thus a valid jump must locate the first inverse-parity mismatch while also
+preserving every earlier gcd, root, special, and range guard. No such
+first-exit constructor or charged randomized substitute is supplied.
+
+Statement-only input:
+experiments/F330_short_path_conditions/STATEMENT_ONLY.md.
+Author proofs:
+experiments/F330_short_path_conditions/PROOF.md and
+experiments/F330_short_path_conditions/RATIONAL_PATHS.md.
+Complete independent proof:
+experiments/F330_short_path_conditions/RECONSTRUCTION.md.
+Input SHA-256:
+a1b1b87a5b3d4ea524a24ec6bcfb3c24b666fdaace6ab115830d912a1ebd67bc.
+Reconstruction SHA-256:
+eb5154335de2680d1abae237469fa964e2a8be10bb2d53c52f7d1bd4a0ade3c3.
+
+## P249 -- A Jacobi-positive average FacRoot contract suffices by two-engine dovetailing
+
+**Status:** promoted after fresh statement-only reconstruction, a targeted
+scope correction, and root comparison with the final qualified proof.
+
+**Scope:** a conditional reduction from one verified-output cost/success
+contract on uniform Jacobi-positive units. It supplies no procedure meeting
+that contract and makes no novelty claim.
+
+Fix odd \(N\) with \(s\geq2\) distinct prime divisors, allowing arbitrary
+positive exponents. Let \(U\) be its unit group,
+\[
+ J=\{a\in U:\operatorname{Jacobi}(a,N)=1\},\qquad
+ S=\{r^2:r\in U\}.
+\]
+A single public randomized procedure \(A\) receives only \(N,a\) and
+independent coins. The same procedure and coin law are used below; neither
+the mode nor a hidden root is passed to \(A\). It returns a verified proper
+divisor, a verified square root of \(a\), or failure.
+
+For a bounded call on uniform \(a\in J\), let \(f_J,r_J\) be its disjoint
+factor and root probabilities under one fixed priority, and put
+\(\delta_J=f_J+r_J\). Since
+\[
+ \rho=\frac{|S|}{|J|}\leq2^{1-s}
+\]
+and a root output is possible only on \(S\), matching execution laws across
+the hidden modes give
+\[
+ r_J=\rho r_S. \tag{1}
+\]
+Choose the following modes fairly. In \(J\) mode, sample uniform \(a\in J\),
+call \(A\), and accept only a divisor. In \(S\) mode, retain private uniform
+\(r\in U\), publish \(a=r^2\), call \(A\), accept a divisor, and apply P02
+to a verified root. The resulting factor probability is at least
+\[
+ \frac{\delta_J}{2}. \tag{2}
+\]
+Mode secrecy is used for (1). Hidden-root privacy and coin independence
+separately give P02's conditional CRT-sign probability.
+
+Both parameter laws are implemented without factoring. Draw exact uniform
+nonzero residues by fair-bit rejection and return any proper generation gcd.
+For \(J\), reject only Jacobi-negative units; for \(S\), use the first unit
+as \(r\). Conditional on reaching \(A\), these give the exact stated laws,
+with expected polynomial bit cost and \(O(n)\) fair bits per bounded draw.
+
+Now remove the call cap. For each fixed \(N\), let
+\(\tau_J(N)\geq1\) be \(A\)'s finite expected verified bit cost and
+\(\delta_J(N)>0\) its valid-output probability on uniform \(J\). Suppose a
+uniform quasipolynomial envelope satisfies
+\[
+ \frac{\tau_J(N)}{\delta_J(N)}\leq Q(n),
+ \qquad n=\operatorname{bitlength}(N). \tag{3}
+\]
+No separate mean-cost bound on uniform \(S\) is assumed. Run two independent
+uncapped retry engines, one in each mode, store their machine configurations,
+and alternate one bit-machine step of each. If \(g(n)\) bounds expected
+generation and outer verification, then
+\[
+ \mathbb E T_{\rm dovetail}
+ \leq
+ \frac{6(g(n)+\tau_J(N))}{\delta_J(N)} \tag{4}
+\]
+up to constant machine-simulation overhead.
+
+Indeed, write \(\tau_S\) for the conditional mean cost on \(S\).
+Nonnegative costs give \(\rho\tau_S\leq\tau_J\), while (1) transfers the
+root-output mass. The \(J\) engine has expected factor time at most
+\((g+\tau_J)/f_J\), and the \(S\) engine at most
+\(2(g+\tau_J)/r_J\), with a zero denominator interpreted as infinity.
+Because \(f_J+r_J=\delta_J\), one bound is at most
+\(3(g+\tau_J)/\delta_J\). Bit-step dovetailing adds at most the factor two
+in (4). Either engine may have zero success probability, and cost may
+correlate arbitrarily with success inside a call. The algorithm need not
+know or evaluate \(Q,\tau_J,\delta_J\).
+
+A capped alternative is also valid. If an available cap is
+\(B=\lceil2Q(n)\rceil\), Markov's inequality leaves \(J\)-valid-output
+probability at least \(\delta_J/2\), and the mixture factors with probability
+at least \(\delta_J/4\). Retry work after constructing the cap is
+\[
+ O(Q(n)^2+\operatorname{poly}(n)Q(n)).
+\]
+Evaluating a literal \(Q(n)\) adds its setup cost \(E_Q(n)\). An efficiently
+evaluable quasipolynomial majorant \(R\geq Q\) instead gives
+\(O(R^2+\operatorname{poly}(n)R)\). Mere computability of \(Q\) does not
+bound the capped setup; this qualification does not affect (4).
+
+Standard primality testing, removal of powers of two, exact perfect-power
+reduction, verified splits, and recursion extend the uncapped dovetail, or
+the capped construction with its stated budget qualification, to all positive
+integer inputs under (3). The contract is uniform for every recursive
+composite, rather than averaged over input integers.
+
+Statement-only input:
+experiments/F333_partial_facroot_mixture/STATEMENT_ONLY.md.
+Author proof:
+experiments/F333_partial_facroot_mixture/PROOF.md.
+Complete independent proof:
+experiments/F333_partial_facroot_mixture/RECONSTRUCTION.md.
+Input SHA-256:
+0cc27150004a4d59380cdf50f5a413751ca997c473595268df0d0e43ec706239.
+Proof SHA-256:
+a9d6a0363a03ee2a9254aa99548987c5e27a862c3a48aba7fef6fb8b0a8f8961.
+Reconstruction SHA-256:
+63d19572f130b697a6df47e52103c569bd06c736a057b6636c715b2f12a85cd2.

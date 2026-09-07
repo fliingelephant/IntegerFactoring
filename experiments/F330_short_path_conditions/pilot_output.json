@@ -1,0 +1,2843 @@
+{
+  "experiment": "F330_short_path_conditions",
+  "family": "route:F31",
+  "frozen_paths": [
+    {
+      "L": 52351863,
+      "a": 71556651,
+      "cap": 32,
+      "d": 157055565,
+      "endpoint_call": 7,
+      "expected_endpoint_call": 7,
+      "h": 104703701,
+      "method": "rank_reflection",
+      "n": 209407403,
+      "observer_validation_operation_counts": {
+        "K_calls": 61,
+        "Q_calls": 61,
+        "floor_sum_calls": 122,
+        "floor_sum_euclidean_iterations": 1311,
+        "select_binary_iterations": 54,
+        "select_calls": 7,
+        "setup_modular_inversions": 1
+      },
+      "output": {
+        "factor": 13553,
+        "kind": "nonunit"
+      },
+      "path_operation_counts": {
+        "F_calls": 7,
+        "F_gcd_calls": 6,
+        "F_modular_inversions": 5,
+        "K_calls": 32,
+        "Q_calls": 32,
+        "decode_calls": 1,
+        "decode_gcd_calls": 1,
+        "floor_sum_calls": 64,
+        "floor_sum_euclidean_iterations": 720,
+        "rank_calls": 6,
+        "select_binary_iterations": 27,
+        "select_calls": 7
+      },
+      "setup_operation_counts": {
+        "K_calls": 1,
+        "Q_calls": 1,
+        "floor_sum_calls": 2,
+        "floor_sum_euclidean_iterations": 35,
+        "setup_modular_inversions": 1
+      },
+      "status": "completed",
+      "trace": [
+        {
+          "F_branch": "swap_0_1",
+          "F_image": 1,
+          "F_image_rank": 52351864,
+          "auxiliary_affine_rule": {
+            "Q_y": 1,
+            "case": "positive_image_at_most_L",
+            "error": 1,
+            "formula": "next=-y=-2*z+error",
+            "predicted_next_coordinate": -1,
+            "y": 1,
+            "z": 1
+          },
+          "current_coordinate": 0,
+          "current_coordinate_inverse": null,
+          "current_rank": 52351863,
+          "next_coordinate": -1,
+          "next_rank": 52351862,
+          "operation_counts_cumulative": {
+            "F_calls": 1,
+            "K_calls": 1,
+            "Q_calls": 1,
+            "floor_sum_calls": 2,
+            "floor_sum_euclidean_iterations": 35,
+            "rank_calls": 1,
+            "select_calls": 1,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 1,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": -6125939,
+          "F_image_rank": 49288893,
+          "auxiliary_affine_rule": {
+            "Q_y": 3062970,
+            "case": "negative_image",
+            "error": 1,
+            "formula": "next=Q(y)=(y+error)/2",
+            "predicted_next_coordinate": 3062970,
+            "y": 6125939
+          },
+          "current_coordinate": -1,
+          "current_coordinate_inverse": -1,
+          "current_rank": 52351862,
+          "next_coordinate": 3062970,
+          "next_rank": 55414833,
+          "operation_counts_cumulative": {
+            "F_calls": 2,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 29,
+            "Q_calls": 29,
+            "floor_sum_calls": 58,
+            "floor_sum_euclidean_iterations": 621,
+            "rank_calls": 2,
+            "select_binary_iterations": 27,
+            "select_calls": 2,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 28,
+            "Q_calls": 28,
+            "floor_sum_calls": 56,
+            "floor_sum_euclidean_iterations": 586,
+            "rank_calls": 1,
+            "select_binary_iterations": 27,
+            "select_calls": 1
+          },
+          "step": 2,
+          "terminal": false
+        },
+        {
+          "F_branch": "negate",
+          "F_image": -3062970,
+          "F_image_rank": 50820377,
+          "auxiliary_affine_rule": {
+            "Q_y": 1531486,
+            "case": "negative_image",
+            "error": 2,
+            "formula": "next=Q(y)=(y+error)/2",
+            "predicted_next_coordinate": 1531486,
+            "y": 3062970
+          },
+          "current_coordinate": 3062970,
+          "current_coordinate_inverse": -6829018,
+          "current_rank": 55414833,
+          "next_coordinate": 1531486,
+          "next_rank": 53883349,
+          "operation_counts_cumulative": {
+            "F_calls": 3,
+            "F_gcd_calls": 2,
+            "F_modular_inversions": 2,
+            "K_calls": 30,
+            "Q_calls": 30,
+            "floor_sum_calls": 60,
+            "floor_sum_euclidean_iterations": 654,
+            "rank_calls": 3,
+            "select_binary_iterations": 27,
+            "select_calls": 3,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 1,
+            "Q_calls": 1,
+            "floor_sum_calls": 2,
+            "floor_sum_euclidean_iterations": 33,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 3,
+          "terminal": false
+        },
+        {
+          "F_branch": "negate",
+          "F_image": -1531486,
+          "F_image_rank": 51586119,
+          "auxiliary_affine_rule": {
+            "Q_y": 765744,
+            "case": "negative_image",
+            "error": 2,
+            "formula": "next=Q(y)=(y+error)/2",
+            "predicted_next_coordinate": 765744,
+            "y": 1531486
+          },
+          "current_coordinate": 1531486,
+          "current_coordinate_inverse": -34767963,
+          "current_rank": 53883349,
+          "next_coordinate": 765744,
+          "next_rank": 53117607,
+          "operation_counts_cumulative": {
+            "F_calls": 4,
+            "F_gcd_calls": 3,
+            "F_modular_inversions": 3,
+            "K_calls": 31,
+            "Q_calls": 31,
+            "floor_sum_calls": 62,
+            "floor_sum_euclidean_iterations": 687,
+            "rank_calls": 4,
+            "select_binary_iterations": 27,
+            "select_calls": 4,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 1,
+            "Q_calls": 1,
+            "floor_sum_calls": 2,
+            "floor_sum_euclidean_iterations": 33,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 4,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": -49441310,
+          "F_image_rank": 27631200,
+          "auxiliary_affine_rule": {
+            "Q_y": 24720663,
+            "case": "negative_image",
+            "error": 16,
+            "formula": "next=Q(y)=(y+error)/2",
+            "predicted_next_coordinate": 24720663,
+            "y": 49441310
+          },
+          "current_coordinate": 765744,
+          "current_coordinate_inverse": -44521607,
+          "current_rank": 53117607,
+          "next_coordinate": 24720663,
+          "next_rank": 77072526,
+          "operation_counts_cumulative": {
+            "F_calls": 5,
+            "F_gcd_calls": 4,
+            "F_modular_inversions": 4,
+            "K_calls": 32,
+            "Q_calls": 32,
+            "floor_sum_calls": 64,
+            "floor_sum_euclidean_iterations": 721,
+            "rank_calls": 5,
+            "select_binary_iterations": 27,
+            "select_calls": 5,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 1,
+            "Q_calls": 1,
+            "floor_sum_calls": 2,
+            "floor_sum_euclidean_iterations": 34,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 5,
+          "terminal": false
+        },
+        {
+          "F_branch": "negate",
+          "F_image": -24720663,
+          "F_image_rank": 39991527,
+          "auxiliary_affine_rule": {
+            "Q_y": 12360336,
+            "case": "negative_image",
+            "error": 9,
+            "formula": "next=Q(y)=(y+error)/2",
+            "predicted_next_coordinate": 12360336,
+            "y": 24720663
+          },
+          "current_coordinate": 24720663,
+          "current_coordinate_inverse": -97840613,
+          "current_rank": 77072526,
+          "next_coordinate": 12360336,
+          "next_rank": 64712199,
+          "operation_counts_cumulative": {
+            "F_calls": 6,
+            "F_gcd_calls": 5,
+            "F_modular_inversions": 5,
+            "K_calls": 33,
+            "Q_calls": 33,
+            "floor_sum_calls": 66,
+            "floor_sum_euclidean_iterations": 755,
+            "rank_calls": 6,
+            "select_binary_iterations": 27,
+            "select_calls": 6,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 1,
+            "Q_calls": 1,
+            "floor_sum_calls": 2,
+            "floor_sum_euclidean_iterations": 34,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 6,
+          "terminal": false
+        },
+        {
+          "F_branch": "fixed_nonunit",
+          "F_image": 12360336,
+          "current_coordinate": 12360336,
+          "current_coordinate_inverse": null,
+          "current_rank": 64712199,
+          "endpoint_type": "factor",
+          "operation_counts_cumulative": {
+            "F_calls": 7,
+            "F_gcd_calls": 6,
+            "F_modular_inversions": 5,
+            "K_calls": 33,
+            "Q_calls": 33,
+            "decode_calls": 1,
+            "decode_gcd_calls": 1,
+            "floor_sum_calls": 66,
+            "floor_sum_euclidean_iterations": 755,
+            "rank_calls": 6,
+            "select_binary_iterations": 27,
+            "select_calls": 7,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "decode_calls": 1,
+            "decode_gcd_calls": 1,
+            "select_calls": 1
+          },
+          "output": {
+            "factor": 13553,
+            "kind": "nonunit"
+          },
+          "step": 7,
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "L": 52351851,
+      "a": 6998896,
+      "cap": 32,
+      "d": 157055553,
+      "endpoint_call": 31,
+      "expected_endpoint_call": 31,
+      "h": 104703701,
+      "method": "delete_adjacent",
+      "n": 209407403,
+      "observer_validation_operation_counts": {
+        "K_calls": 296,
+        "Q_calls": 296,
+        "floor_sum_calls": 592,
+        "floor_sum_euclidean_iterations": 8752,
+        "select_binary_iterations": 295,
+        "select_calls": 30,
+        "setup_modular_inversions": 1
+      },
+      "output": {
+        "factor": 13553,
+        "kind": "nonunit"
+      },
+      "path_operation_counts": {
+        "F_calls": 31,
+        "F_gcd_calls": 30,
+        "F_modular_inversions": 29,
+        "K_calls": 305,
+        "Q_calls": 305,
+        "decode_calls": 1,
+        "decode_gcd_calls": 1,
+        "floor_sum_calls": 610,
+        "floor_sum_euclidean_iterations": 9030,
+        "rank_calls": 30,
+        "select_binary_iterations": 295,
+        "select_calls": 31
+      },
+      "setup_operation_counts": {
+        "K_calls": 1,
+        "Q_calls": 1,
+        "floor_sum_calls": 2,
+        "floor_sum_euclidean_iterations": 34,
+        "setup_modular_inversions": 1
+      },
+      "status": "completed",
+      "trace": [
+        {
+          "F_branch": "swap_0_1",
+          "F_image": 1,
+          "F_image_rank": 52351852,
+          "auxiliary_rule": {
+            "case": "delete_rank_L_then_xor_one",
+            "compressed_image_rank": 52351851,
+            "compressed_partner": 52351850
+          },
+          "current_coordinate": 0,
+          "current_coordinate_inverse": null,
+          "current_rank": 52351851,
+          "next_coordinate": -1,
+          "next_rank": 52351850,
+          "operation_counts_cumulative": {
+            "F_calls": 1,
+            "K_calls": 1,
+            "Q_calls": 1,
+            "floor_sum_calls": 2,
+            "floor_sum_euclidean_iterations": 34,
+            "rank_calls": 1,
+            "select_calls": 1,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 1,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 98970868,
+          "F_image_rank": 151322719,
+          "auxiliary_rule": {
+            "case": "delete_rank_L_then_xor_one",
+            "compressed_image_rank": 151322718,
+            "compressed_partner": 151322719
+          },
+          "current_coordinate": -1,
+          "current_coordinate_inverse": -1,
+          "current_rank": 52351850,
+          "next_coordinate": 98970869,
+          "next_rank": 151322720,
+          "operation_counts_cumulative": {
+            "F_calls": 2,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 28,
+            "Q_calls": 28,
+            "floor_sum_calls": 56,
+            "floor_sum_euclidean_iterations": 422,
+            "rank_calls": 2,
+            "select_binary_iterations": 27,
+            "select_calls": 2,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 27,
+            "Q_calls": 27,
+            "floor_sum_calls": 54,
+            "floor_sum_euclidean_iterations": 388,
+            "rank_calls": 1,
+            "select_binary_iterations": 27,
+            "select_calls": 1
+          },
+          "step": 2,
+          "terminal": false
+        },
+        {
+          "F_branch": "negate",
+          "F_image": -98970869,
+          "F_image_rank": 2866416,
+          "auxiliary_rule": {
+            "case": "delete_rank_L_then_xor_one",
+            "compressed_image_rank": 2866416,
+            "compressed_partner": 2866417
+          },
+          "current_coordinate": 98970869,
+          "current_coordinate_inverse": -98781158,
+          "current_rank": 151322720,
+          "next_coordinate": -98970853,
+          "next_rank": 2866417,
+          "operation_counts_cumulative": {
+            "F_calls": 3,
+            "F_gcd_calls": 2,
+            "F_modular_inversions": 2,
+            "K_calls": 29,
+            "Q_calls": 29,
+            "floor_sum_calls": 58,
+            "floor_sum_euclidean_iterations": 456,
+            "rank_calls": 3,
+            "select_binary_iterations": 27,
+            "select_calls": 3,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 1,
+            "Q_calls": 1,
+            "floor_sum_calls": 2,
+            "floor_sum_euclidean_iterations": 34,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 3,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 82054477,
+          "F_image_rank": 134406328,
+          "auxiliary_rule": {
+            "case": "delete_rank_L_then_xor_one",
+            "compressed_image_rank": 134406327,
+            "compressed_partner": 134406326
+          },
+          "current_coordinate": -98970853,
+          "current_coordinate_inverse": -47351779,
+          "current_rank": 2866417,
+          "next_coordinate": 82054476,
+          "next_rank": 134406327,
+          "operation_counts_cumulative": {
+            "F_calls": 4,
+            "F_gcd_calls": 3,
+            "F_modular_inversions": 3,
+            "K_calls": 56,
+            "Q_calls": 56,
+            "floor_sum_calls": 112,
+            "floor_sum_euclidean_iterations": 1332,
+            "rank_calls": 4,
+            "select_binary_iterations": 54,
+            "select_calls": 4,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 27,
+            "Q_calls": 27,
+            "floor_sum_calls": 54,
+            "floor_sum_euclidean_iterations": 876,
+            "rank_calls": 1,
+            "select_binary_iterations": 27,
+            "select_calls": 1
+          },
+          "step": 4,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 62440031,
+          "F_image_rank": 114791882,
+          "auxiliary_rule": {
+            "case": "delete_rank_L_then_xor_one",
+            "compressed_image_rank": 114791881,
+            "compressed_partner": 114791880
+          },
+          "current_coordinate": 82054476,
+          "current_coordinate_inverse": 62440031,
+          "current_rank": 134406327,
+          "next_coordinate": 62440030,
+          "next_rank": 114791881,
+          "operation_counts_cumulative": {
+            "F_calls": 5,
+            "F_gcd_calls": 4,
+            "F_modular_inversions": 4,
+            "K_calls": 56,
+            "Q_calls": 56,
+            "floor_sum_calls": 112,
+            "floor_sum_euclidean_iterations": 1332,
+            "rank_calls": 5,
+            "select_binary_iterations": 54,
+            "select_calls": 5,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 5,
+          "terminal": false
+        },
+        {
+          "F_branch": "negate",
+          "F_image": -62440030,
+          "F_image_rank": 21131833,
+          "auxiliary_rule": {
+            "case": "delete_rank_L_then_xor_one",
+            "compressed_image_rank": 21131833,
+            "compressed_partner": 21131832
+          },
+          "current_coordinate": 62440030,
+          "current_coordinate_inverse": -39646554,
+          "current_rank": 114791881,
+          "next_coordinate": -62440031,
+          "next_rank": 21131832,
+          "operation_counts_cumulative": {
+            "F_calls": 6,
+            "F_gcd_calls": 5,
+            "F_modular_inversions": 5,
+            "K_calls": 57,
+            "Q_calls": 57,
+            "floor_sum_calls": 114,
+            "floor_sum_euclidean_iterations": 1364,
+            "rank_calls": 6,
+            "select_binary_iterations": 54,
+            "select_calls": 6,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 1,
+            "Q_calls": 1,
+            "floor_sum_calls": 2,
+            "floor_sum_euclidean_iterations": 32,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 6,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": -25627263,
+          "F_image_rank": 39538212,
+          "auxiliary_rule": {
+            "case": "delete_rank_L_then_xor_one",
+            "compressed_image_rank": 39538212,
+            "compressed_partner": 39538213
+          },
+          "current_coordinate": -62440031,
+          "current_coordinate_inverse": -82054476,
+          "current_rank": 21131832,
+          "next_coordinate": -25627262,
+          "next_rank": 39538213,
+          "operation_counts_cumulative": {
+            "F_calls": 7,
+            "F_gcd_calls": 6,
+            "F_modular_inversions": 6,
+            "K_calls": 85,
+            "Q_calls": 85,
+            "floor_sum_calls": 170,
+            "floor_sum_euclidean_iterations": 2258,
+            "rank_calls": 7,
+            "select_binary_iterations": 81,
+            "select_calls": 7,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 28,
+            "Q_calls": 28,
+            "floor_sum_calls": 56,
+            "floor_sum_euclidean_iterations": 894,
+            "rank_calls": 1,
+            "select_binary_iterations": 27,
+            "select_calls": 1
+          },
+          "step": 7,
+          "terminal": false
+        },
+        {
+          "F_branch": "negate",
+          "F_image": 25627262,
+          "F_image_rank": 77979113,
+          "auxiliary_rule": {
+            "case": "delete_rank_L_then_xor_one",
+            "compressed_image_rank": 77979112,
+            "compressed_partner": 77979113
+          },
+          "current_coordinate": -25627262,
+          "current_coordinate_inverse": 85744497,
+          "current_rank": 39538213,
+          "next_coordinate": 25627263,
+          "next_rank": 77979114,
+          "operation_counts_cumulative": {
+            "F_calls": 8,
+            "F_gcd_calls": 7,
+            "F_modular_inversions": 7,
+            "K_calls": 112,
+            "Q_calls": 112,
+            "floor_sum_calls": 224,
+            "floor_sum_euclidean_iterations": 3070,
+            "rank_calls": 8,
+            "select_binary_iterations": 108,
+            "select_calls": 8,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 27,
+            "Q_calls": 27,
+            "floor_sum_calls": 54,
+            "floor_sum_euclidean_iterations": 812,
+            "rank_calls": 1,
+            "select_binary_iterations": 27,
+            "select_calls": 1
+          },
+          "step": 8,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 20922091,
+          "F_image_rank": 73273942,
+          "auxiliary_rule": {
+            "case": "delete_rank_L_then_xor_one",
+            "compressed_image_rank": 73273941,
+            "compressed_partner": 73273940
+          },
+          "current_coordinate": 25627263,
+          "current_coordinate_inverse": 20922091,
+          "current_rank": 77979114,
+          "next_coordinate": 20922090,
+          "next_rank": 73273941,
+          "operation_counts_cumulative": {
+            "F_calls": 9,
+            "F_gcd_calls": 8,
+            "F_modular_inversions": 8,
+            "K_calls": 112,
+            "Q_calls": 112,
+            "floor_sum_calls": 224,
+            "floor_sum_euclidean_iterations": 3070,
+            "rank_calls": 9,
+            "select_binary_iterations": 108,
+            "select_calls": 9,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 9,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 85744496,
+          "F_image_rank": 138096347,
+          "auxiliary_rule": {
+            "case": "delete_rank_L_then_xor_one",
+            "compressed_image_rank": 138096346,
+            "compressed_partner": 138096347
+          },
+          "current_coordinate": 20922090,
+          "current_coordinate_inverse": 85744496,
+          "current_rank": 73273941,
+          "next_coordinate": 85744497,
+          "next_rank": 138096348,
+          "operation_counts_cumulative": {
+            "F_calls": 10,
+            "F_gcd_calls": 9,
+            "F_modular_inversions": 9,
+            "K_calls": 112,
+            "Q_calls": 112,
+            "floor_sum_calls": 224,
+            "floor_sum_euclidean_iterations": 3070,
+            "rank_calls": 10,
+            "select_binary_iterations": 108,
+            "select_calls": 10,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 10,
+          "terminal": false
+        },
+        {
+          "F_branch": "negate",
+          "F_image": -85744497,
+          "F_image_rank": 9479600,
+          "auxiliary_rule": {
+            "case": "delete_rank_L_then_xor_one",
+            "compressed_image_rank": 9479600,
+            "compressed_partner": 9479601
+          },
+          "current_coordinate": 85744497,
+          "current_coordinate_inverse": -25627262,
+          "current_rank": 138096348,
+          "next_coordinate": -85744496,
+          "next_rank": 9479601,
+          "operation_counts_cumulative": {
+            "F_calls": 11,
+            "F_gcd_calls": 10,
+            "F_modular_inversions": 10,
+            "K_calls": 113,
+            "Q_calls": 113,
+            "floor_sum_calls": 226,
+            "floor_sum_euclidean_iterations": 3102,
+            "rank_calls": 11,
+            "select_binary_iterations": 108,
+            "select_calls": 11,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 1,
+            "Q_calls": 1,
+            "floor_sum_calls": 2,
+            "floor_sum_euclidean_iterations": 32,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 11,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 47996504,
+          "F_image_rank": 100348355,
+          "auxiliary_rule": {
+            "case": "delete_rank_L_then_xor_one",
+            "compressed_image_rank": 100348354,
+            "compressed_partner": 100348355
+          },
+          "current_coordinate": -85744496,
+          "current_coordinate_inverse": -20922090,
+          "current_rank": 9479601,
+          "next_coordinate": 47996505,
+          "next_rank": 100348356,
+          "operation_counts_cumulative": {
+            "F_calls": 12,
+            "F_gcd_calls": 11,
+            "F_modular_inversions": 11,
+            "K_calls": 139,
+            "Q_calls": 139,
+            "floor_sum_calls": 278,
+            "floor_sum_euclidean_iterations": 3934,
+            "rank_calls": 12,
+            "select_binary_iterations": 134,
+            "select_calls": 12,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 26,
+            "Q_calls": 26,
+            "floor_sum_calls": 52,
+            "floor_sum_euclidean_iterations": 832,
+            "rank_calls": 1,
+            "select_binary_iterations": 26,
+            "select_calls": 1
+          },
+          "step": 12,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 69348590,
+          "F_image_rank": 121700441,
+          "auxiliary_rule": {
+            "case": "delete_rank_L_then_xor_one",
+            "compressed_image_rank": 121700440,
+            "compressed_partner": 121700441
+          },
+          "current_coordinate": 47996505,
+          "current_coordinate_inverse": -71887148,
+          "current_rank": 100348356,
+          "next_coordinate": 69348591,
+          "next_rank": 121700442,
+          "operation_counts_cumulative": {
+            "F_calls": 13,
+            "F_gcd_calls": 12,
+            "F_modular_inversions": 12,
+            "K_calls": 139,
+            "Q_calls": 139,
+            "floor_sum_calls": 278,
+            "floor_sum_euclidean_iterations": 3934,
+            "rank_calls": 13,
+            "select_binary_iterations": 134,
+            "select_calls": 13,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 13,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": -31108461,
+          "F_image_rank": 36797618,
+          "auxiliary_rule": {
+            "case": "delete_rank_L_then_xor_one",
+            "compressed_image_rank": 36797618,
+            "compressed_partner": 36797619
+          },
+          "current_coordinate": 69348591,
+          "current_coordinate_inverse": -27619299,
+          "current_rank": 121700442,
+          "next_coordinate": -31108460,
+          "next_rank": 36797619,
+          "operation_counts_cumulative": {
+            "F_calls": 14,
+            "F_gcd_calls": 13,
+            "F_modular_inversions": 13,
+            "K_calls": 140,
+            "Q_calls": 140,
+            "floor_sum_calls": 280,
+            "floor_sum_euclidean_iterations": 3964,
+            "rank_calls": 14,
+            "select_binary_iterations": 134,
+            "select_calls": 14,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 1,
+            "Q_calls": 1,
+            "floor_sum_calls": 2,
+            "floor_sum_euclidean_iterations": 30,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 14,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": -96270887,
+          "F_image_rank": 4216404,
+          "auxiliary_rule": {
+            "case": "delete_rank_L_then_xor_one",
+            "compressed_image_rank": 4216404,
+            "compressed_partner": 4216405
+          },
+          "current_coordinate": -31108460,
+          "current_coordinate_inverse": -37825743,
+          "current_rank": 36797619,
+          "next_coordinate": -96270886,
+          "next_rank": 4216405,
+          "operation_counts_cumulative": {
+            "F_calls": 15,
+            "F_gcd_calls": 14,
+            "F_modular_inversions": 14,
+            "K_calls": 168,
+            "Q_calls": 168,
+            "floor_sum_calls": 336,
+            "floor_sum_euclidean_iterations": 4808,
+            "rank_calls": 15,
+            "select_binary_iterations": 161,
+            "select_calls": 15,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 28,
+            "Q_calls": 28,
+            "floor_sum_calls": 56,
+            "floor_sum_euclidean_iterations": 844,
+            "rank_calls": 1,
+            "select_binary_iterations": 27,
+            "select_calls": 1
+          },
+          "step": 15,
+          "terminal": false
+        },
+        {
+          "F_branch": "negate",
+          "F_image": 96270886,
+          "F_image_rank": 148622737,
+          "auxiliary_rule": {
+            "case": "delete_rank_L_then_xor_one",
+            "compressed_image_rank": 148622736,
+            "compressed_partner": 148622737
+          },
+          "current_coordinate": -96270886,
+          "current_coordinate_inverse": 21980312,
+          "current_rank": 4216405,
+          "next_coordinate": 96270887,
+          "next_rank": 148622738,
+          "operation_counts_cumulative": {
+            "F_calls": 16,
+            "F_gcd_calls": 15,
+            "F_modular_inversions": 15,
+            "K_calls": 195,
+            "Q_calls": 195,
+            "floor_sum_calls": 390,
+            "floor_sum_euclidean_iterations": 5672,
+            "rank_calls": 16,
+            "select_binary_iterations": 188,
+            "select_calls": 16,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 27,
+            "Q_calls": 27,
+            "floor_sum_calls": 54,
+            "floor_sum_euclidean_iterations": 864,
+            "rank_calls": 1,
+            "select_binary_iterations": 27,
+            "select_calls": 1
+          },
+          "step": 16,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 20620403,
+          "F_image_rank": 72972254,
+          "auxiliary_rule": {
+            "case": "delete_rank_L_then_xor_one",
+            "compressed_image_rank": 72972253,
+            "compressed_partner": 72972252
+          },
+          "current_coordinate": 96270887,
+          "current_coordinate_inverse": 20620403,
+          "current_rank": 148622738,
+          "next_coordinate": 20620402,
+          "next_rank": 72972253,
+          "operation_counts_cumulative": {
+            "F_calls": 17,
+            "F_gcd_calls": 16,
+            "F_modular_inversions": 16,
+            "K_calls": 195,
+            "Q_calls": 195,
+            "floor_sum_calls": 390,
+            "floor_sum_euclidean_iterations": 5672,
+            "rank_calls": 17,
+            "select_binary_iterations": 188,
+            "select_calls": 17,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 17,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 21980311,
+          "F_image_rank": 74332162,
+          "auxiliary_rule": {
+            "case": "delete_rank_L_then_xor_one",
+            "compressed_image_rank": 74332161,
+            "compressed_partner": 74332160
+          },
+          "current_coordinate": 20620402,
+          "current_coordinate_inverse": 21980311,
+          "current_rank": 72972253,
+          "next_coordinate": 21980310,
+          "next_rank": 74332161,
+          "operation_counts_cumulative": {
+            "F_calls": 18,
+            "F_gcd_calls": 17,
+            "F_modular_inversions": 17,
+            "K_calls": 195,
+            "Q_calls": 195,
+            "floor_sum_calls": 390,
+            "floor_sum_euclidean_iterations": 5672,
+            "rank_calls": 18,
+            "select_binary_iterations": 188,
+            "select_calls": 18,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 18,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 89644854,
+          "F_image_rank": 141996705,
+          "auxiliary_rule": {
+            "case": "delete_rank_L_then_xor_one",
+            "compressed_image_rank": 141996704,
+            "compressed_partner": 141996705
+          },
+          "current_coordinate": 21980310,
+          "current_coordinate_inverse": 89644854,
+          "current_rank": 74332161,
+          "next_coordinate": 89644855,
+          "next_rank": 141996706,
+          "operation_counts_cumulative": {
+            "F_calls": 19,
+            "F_gcd_calls": 18,
+            "F_modular_inversions": 18,
+            "K_calls": 195,
+            "Q_calls": 195,
+            "floor_sum_calls": 390,
+            "floor_sum_euclidean_iterations": 5672,
+            "rank_calls": 19,
+            "select_binary_iterations": 188,
+            "select_calls": 19,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 19,
+          "terminal": false
+        },
+        {
+          "F_branch": "negate",
+          "F_image": -89644855,
+          "F_image_rank": 7529418,
+          "auxiliary_rule": {
+            "case": "delete_rank_L_then_xor_one",
+            "compressed_image_rank": 7529418,
+            "compressed_partner": 7529419
+          },
+          "current_coordinate": 89644855,
+          "current_coordinate_inverse": -20620401,
+          "current_rank": 141996706,
+          "next_coordinate": -89644854,
+          "next_rank": 7529419,
+          "operation_counts_cumulative": {
+            "F_calls": 20,
+            "F_gcd_calls": 19,
+            "F_modular_inversions": 19,
+            "K_calls": 196,
+            "Q_calls": 196,
+            "floor_sum_calls": 392,
+            "floor_sum_euclidean_iterations": 5704,
+            "rank_calls": 20,
+            "select_binary_iterations": 188,
+            "select_calls": 20,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 1,
+            "Q_calls": 1,
+            "floor_sum_calls": 2,
+            "floor_sum_euclidean_iterations": 32,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 20,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": -18604956,
+          "F_image_rank": 43049370,
+          "auxiliary_rule": {
+            "case": "delete_rank_L_then_xor_one",
+            "compressed_image_rank": 43049370,
+            "compressed_partner": 43049371
+          },
+          "current_coordinate": -89644854,
+          "current_coordinate_inverse": -21980310,
+          "current_rank": 7529419,
+          "next_coordinate": -18604955,
+          "next_rank": 43049371,
+          "operation_counts_cumulative": {
+            "F_calls": 21,
+            "F_gcd_calls": 20,
+            "F_modular_inversions": 20,
+            "K_calls": 224,
+            "Q_calls": 224,
+            "floor_sum_calls": 448,
+            "floor_sum_euclidean_iterations": 6598,
+            "rank_calls": 21,
+            "select_binary_iterations": 215,
+            "select_calls": 21,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 28,
+            "Q_calls": 28,
+            "floor_sum_calls": 56,
+            "floor_sum_euclidean_iterations": 894,
+            "rank_calls": 1,
+            "select_binary_iterations": 27,
+            "select_calls": 1
+          },
+          "step": 21,
+          "terminal": false
+        },
+        {
+          "F_branch": "negate",
+          "F_image": 18604955,
+          "F_image_rank": 70956806,
+          "auxiliary_rule": {
+            "case": "delete_rank_L_then_xor_one",
+            "compressed_image_rank": 70956805,
+            "compressed_partner": 70956804
+          },
+          "current_coordinate": -18604955,
+          "current_coordinate_inverse": 96545229,
+          "current_rank": 43049371,
+          "next_coordinate": 18604954,
+          "next_rank": 70956805,
+          "operation_counts_cumulative": {
+            "F_calls": 22,
+            "F_gcd_calls": 21,
+            "F_modular_inversions": 21,
+            "K_calls": 251,
+            "Q_calls": 251,
+            "floor_sum_calls": 502,
+            "floor_sum_euclidean_iterations": 7410,
+            "rank_calls": 22,
+            "select_binary_iterations": 242,
+            "select_calls": 22,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 27,
+            "Q_calls": 27,
+            "floor_sum_calls": 54,
+            "floor_sum_euclidean_iterations": 812,
+            "rank_calls": 1,
+            "select_binary_iterations": 27,
+            "select_calls": 1
+          },
+          "step": 22,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 94758598,
+          "F_image_rank": 147110449,
+          "auxiliary_rule": {
+            "case": "delete_rank_L_then_xor_one",
+            "compressed_image_rank": 147110448,
+            "compressed_partner": 147110449
+          },
+          "current_coordinate": 18604954,
+          "current_coordinate_inverse": 94758598,
+          "current_rank": 70956805,
+          "next_coordinate": 94758599,
+          "next_rank": 147110450,
+          "operation_counts_cumulative": {
+            "F_calls": 23,
+            "F_gcd_calls": 22,
+            "F_modular_inversions": 22,
+            "K_calls": 251,
+            "Q_calls": 251,
+            "floor_sum_calls": 502,
+            "floor_sum_euclidean_iterations": 7410,
+            "rank_calls": 23,
+            "select_binary_iterations": 242,
+            "select_calls": 23,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 23,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 96545230,
+          "F_image_rank": 148897081,
+          "auxiliary_rule": {
+            "case": "delete_rank_L_then_xor_one",
+            "compressed_image_rank": 148897080,
+            "compressed_partner": 148897081
+          },
+          "current_coordinate": 94758599,
+          "current_coordinate_inverse": 96545230,
+          "current_rank": 147110450,
+          "next_coordinate": 96545231,
+          "next_rank": 148897082,
+          "operation_counts_cumulative": {
+            "F_calls": 24,
+            "F_gcd_calls": 23,
+            "F_modular_inversions": 23,
+            "K_calls": 251,
+            "Q_calls": 251,
+            "floor_sum_calls": 502,
+            "floor_sum_euclidean_iterations": 7410,
+            "rank_calls": 24,
+            "select_binary_iterations": 242,
+            "select_calls": 24,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 24,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 103359566,
+          "F_image_rank": 155711417,
+          "auxiliary_rule": {
+            "case": "delete_rank_L_then_xor_one",
+            "compressed_image_rank": 155711416,
+            "compressed_partner": 155711417
+          },
+          "current_coordinate": 96545231,
+          "current_coordinate_inverse": 103359566,
+          "current_rank": 148897082,
+          "next_coordinate": 103359567,
+          "next_rank": 155711418,
+          "operation_counts_cumulative": {
+            "F_calls": 25,
+            "F_gcd_calls": 24,
+            "F_modular_inversions": 24,
+            "K_calls": 251,
+            "Q_calls": 251,
+            "floor_sum_calls": 502,
+            "floor_sum_euclidean_iterations": 7410,
+            "rank_calls": 25,
+            "select_binary_iterations": 242,
+            "select_calls": 25,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 25,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 14475552,
+          "F_image_rank": 66827403,
+          "auxiliary_rule": {
+            "case": "delete_rank_L_then_xor_one",
+            "compressed_image_rank": 66827402,
+            "compressed_partner": 66827403
+          },
+          "current_coordinate": 103359567,
+          "current_coordinate_inverse": 14475552,
+          "current_rank": 155711418,
+          "next_coordinate": 14475553,
+          "next_rank": 66827404,
+          "operation_counts_cumulative": {
+            "F_calls": 26,
+            "F_gcd_calls": 25,
+            "F_modular_inversions": 25,
+            "K_calls": 251,
+            "Q_calls": 251,
+            "floor_sum_calls": 502,
+            "floor_sum_euclidean_iterations": 7410,
+            "rank_calls": 26,
+            "select_binary_iterations": 242,
+            "select_calls": 26,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 26,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 80348432,
+          "F_image_rank": 132700283,
+          "auxiliary_rule": {
+            "case": "delete_rank_L_then_xor_one",
+            "compressed_image_rank": 132700282,
+            "compressed_partner": 132700283
+          },
+          "current_coordinate": 14475553,
+          "current_coordinate_inverse": -68759039,
+          "current_rank": 66827404,
+          "next_coordinate": 80348433,
+          "next_rank": 132700284,
+          "operation_counts_cumulative": {
+            "F_calls": 27,
+            "F_gcd_calls": 26,
+            "F_modular_inversions": 26,
+            "K_calls": 251,
+            "Q_calls": 251,
+            "floor_sum_calls": 502,
+            "floor_sum_euclidean_iterations": 7410,
+            "rank_calls": 27,
+            "select_binary_iterations": 242,
+            "select_calls": 27,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 27,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 16514414,
+          "F_image_rank": 68866265,
+          "auxiliary_rule": {
+            "case": "delete_rank_L_then_xor_one",
+            "compressed_image_rank": 68866264,
+            "compressed_partner": 68866265
+          },
+          "current_coordinate": 80348433,
+          "current_coordinate_inverse": 16514414,
+          "current_rank": 132700284,
+          "next_coordinate": 16514415,
+          "next_rank": 68866266,
+          "operation_counts_cumulative": {
+            "F_calls": 28,
+            "F_gcd_calls": 27,
+            "F_modular_inversions": 27,
+            "K_calls": 251,
+            "Q_calls": 251,
+            "floor_sum_calls": 502,
+            "floor_sum_euclidean_iterations": 7410,
+            "rank_calls": 28,
+            "select_binary_iterations": 242,
+            "select_calls": 28,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 28,
+          "terminal": false
+        },
+        {
+          "F_branch": "negate",
+          "F_image": -16514415,
+          "F_image_rank": 44094639,
+          "auxiliary_rule": {
+            "case": "delete_rank_L_then_xor_one",
+            "compressed_image_rank": 44094639,
+            "compressed_partner": 44094638
+          },
+          "current_coordinate": 16514415,
+          "current_coordinate_inverse": -1524512,
+          "current_rank": 68866266,
+          "next_coordinate": -16514416,
+          "next_rank": 44094638,
+          "operation_counts_cumulative": {
+            "F_calls": 29,
+            "F_gcd_calls": 28,
+            "F_modular_inversions": 28,
+            "K_calls": 252,
+            "Q_calls": 252,
+            "floor_sum_calls": 504,
+            "floor_sum_euclidean_iterations": 7440,
+            "rank_calls": 29,
+            "select_binary_iterations": 242,
+            "select_calls": 29,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 1,
+            "Q_calls": 1,
+            "floor_sum_calls": 2,
+            "floor_sum_euclidean_iterations": 30,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 29,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": -18391420,
+          "F_image_rank": 43156137,
+          "auxiliary_rule": {
+            "case": "delete_rank_L_then_xor_one",
+            "compressed_image_rank": 43156137,
+            "compressed_partner": 43156136
+          },
+          "current_coordinate": -16514416,
+          "current_coordinate_inverse": -46359265,
+          "current_rank": 44094638,
+          "next_coordinate": -18391421,
+          "next_rank": 43156136,
+          "operation_counts_cumulative": {
+            "F_calls": 30,
+            "F_gcd_calls": 29,
+            "F_modular_inversions": 29,
+            "K_calls": 279,
+            "Q_calls": 279,
+            "floor_sum_calls": 558,
+            "floor_sum_euclidean_iterations": 8252,
+            "rank_calls": 30,
+            "select_binary_iterations": 268,
+            "select_calls": 30,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 27,
+            "Q_calls": 27,
+            "floor_sum_calls": 54,
+            "floor_sum_euclidean_iterations": 812,
+            "rank_calls": 1,
+            "select_binary_iterations": 26,
+            "select_calls": 1
+          },
+          "step": 30,
+          "terminal": false
+        },
+        {
+          "F_branch": "fixed_nonunit",
+          "F_image": -18391421,
+          "current_coordinate": -18391421,
+          "current_coordinate_inverse": null,
+          "current_rank": 43156136,
+          "endpoint_type": "factor",
+          "operation_counts_cumulative": {
+            "F_calls": 31,
+            "F_gcd_calls": 30,
+            "F_modular_inversions": 29,
+            "K_calls": 306,
+            "Q_calls": 306,
+            "decode_calls": 1,
+            "decode_gcd_calls": 1,
+            "floor_sum_calls": 612,
+            "floor_sum_euclidean_iterations": 9064,
+            "rank_calls": 30,
+            "select_binary_iterations": 295,
+            "select_calls": 31,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "K_calls": 27,
+            "Q_calls": 27,
+            "decode_calls": 1,
+            "decode_gcd_calls": 1,
+            "floor_sum_calls": 54,
+            "floor_sum_euclidean_iterations": 812,
+            "select_binary_iterations": 27,
+            "select_calls": 1
+          },
+          "output": {
+            "factor": 13553,
+            "kind": "nonunit"
+          },
+          "step": 31,
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "L": 42652828,
+      "a": 49354795,
+      "cap": 32,
+      "d": 127958477,
+      "endpoint_call": 25,
+      "expected_endpoint_call": 25,
+      "h": 85305648,
+      "method": "rank_reflection",
+      "n": 170611297,
+      "observer_validation_operation_counts": {
+        "K_calls": 597,
+        "Q_calls": 597,
+        "floor_sum_calls": 1194,
+        "floor_sum_euclidean_iterations": 15308,
+        "select_binary_iterations": 578,
+        "select_calls": 35,
+        "setup_modular_inversions": 1
+      },
+      "output": {
+        "factor": 12373,
+        "kind": "nonunit"
+      },
+      "path_operation_counts": {
+        "F_calls": 25,
+        "F_gcd_calls": 24,
+        "F_modular_inversions": 23,
+        "K_calls": 296,
+        "Q_calls": 296,
+        "decode_calls": 1,
+        "decode_gcd_calls": 1,
+        "floor_sum_calls": 592,
+        "floor_sum_euclidean_iterations": 7600,
+        "rank_calls": 24,
+        "select_binary_iterations": 289,
+        "select_calls": 25
+      },
+      "setup_operation_counts": {
+        "K_calls": 1,
+        "Q_calls": 1,
+        "floor_sum_calls": 2,
+        "floor_sum_euclidean_iterations": 29,
+        "setup_modular_inversions": 1
+      },
+      "status": "completed",
+      "trace": [
+        {
+          "F_branch": "swap_0_1",
+          "F_image": 1,
+          "F_image_rank": 42652829,
+          "auxiliary_affine_rule": {
+            "Q_y": 1,
+            "case": "positive_image_at_most_L",
+            "error": 1,
+            "formula": "next=-y=-2*z+error",
+            "predicted_next_coordinate": -1,
+            "y": 1,
+            "z": 1
+          },
+          "current_coordinate": 0,
+          "current_coordinate_inverse": null,
+          "current_rank": 42652828,
+          "next_coordinate": -1,
+          "next_rank": 42652827,
+          "operation_counts_cumulative": {
+            "F_calls": 1,
+            "K_calls": 1,
+            "Q_calls": 1,
+            "floor_sum_calls": 2,
+            "floor_sum_euclidean_iterations": 29,
+            "rank_calls": 1,
+            "select_calls": 1,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 1,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 82559853,
+          "F_image_rank": 125212681,
+          "auxiliary_affine_rule": {
+            "case": "positive_image_above_L",
+            "formula": "next=d-z",
+            "predicted_next_coordinate": 45398624,
+            "z": 82559853
+          },
+          "current_coordinate": -1,
+          "current_coordinate_inverse": -1,
+          "current_rank": 42652827,
+          "next_coordinate": 45398624,
+          "next_rank": 88051452,
+          "operation_counts_cumulative": {
+            "F_calls": 2,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 28,
+            "Q_calls": 28,
+            "floor_sum_calls": 56,
+            "floor_sum_euclidean_iterations": 467,
+            "rank_calls": 2,
+            "select_binary_iterations": 27,
+            "select_calls": 2,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 27,
+            "Q_calls": 27,
+            "floor_sum_calls": 54,
+            "floor_sum_euclidean_iterations": 438,
+            "rank_calls": 1,
+            "select_binary_iterations": 27,
+            "select_calls": 1
+          },
+          "step": 2,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 40830817,
+          "F_image_rank": 83483645,
+          "auxiliary_affine_rule": {
+            "Q_y": 40830817,
+            "case": "positive_image_at_most_L",
+            "error": 4,
+            "formula": "next=-y=-2*z+error",
+            "predicted_next_coordinate": -81661630,
+            "y": 81661630,
+            "z": 40830817
+          },
+          "current_coordinate": 45398624,
+          "current_coordinate_inverse": 40830817,
+          "current_rank": 88051452,
+          "next_coordinate": -81661630,
+          "next_rank": 1822011,
+          "operation_counts_cumulative": {
+            "F_calls": 3,
+            "F_gcd_calls": 2,
+            "F_modular_inversions": 2,
+            "K_calls": 28,
+            "Q_calls": 28,
+            "floor_sum_calls": 56,
+            "floor_sum_euclidean_iterations": 467,
+            "rank_calls": 3,
+            "select_binary_iterations": 27,
+            "select_calls": 3,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 3,
+          "terminal": false
+        },
+        {
+          "F_branch": "negate",
+          "F_image": 81661630,
+          "F_image_rank": 124314458,
+          "auxiliary_affine_rule": {
+            "case": "positive_image_above_L",
+            "formula": "next=d-z",
+            "predicted_next_coordinate": 46296847,
+            "z": 81661630
+          },
+          "current_coordinate": -81661630,
+          "current_coordinate_inverse": 43232936,
+          "current_rank": 1822011,
+          "next_coordinate": 46296847,
+          "next_rank": 88949675,
+          "operation_counts_cumulative": {
+            "F_calls": 4,
+            "F_gcd_calls": 3,
+            "F_modular_inversions": 3,
+            "K_calls": 54,
+            "Q_calls": 54,
+            "floor_sum_calls": 108,
+            "floor_sum_euclidean_iterations": 1171,
+            "rank_calls": 4,
+            "select_binary_iterations": 53,
+            "select_calls": 4,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 26,
+            "Q_calls": 26,
+            "floor_sum_calls": 52,
+            "floor_sum_euclidean_iterations": 704,
+            "rank_calls": 1,
+            "select_binary_iterations": 26,
+            "select_calls": 1
+          },
+          "step": 4,
+          "terminal": false
+        },
+        {
+          "F_branch": "negate",
+          "F_image": -46296847,
+          "F_image_rank": 19504397,
+          "auxiliary_affine_rule": {
+            "Q_y": 23148431,
+            "case": "negative_image",
+            "error": 15,
+            "formula": "next=Q(y)=(y+error)/2",
+            "predicted_next_coordinate": 23148431,
+            "y": 46296847
+          },
+          "current_coordinate": 46296847,
+          "current_coordinate_inverse": -59568628,
+          "current_rank": 88949675,
+          "next_coordinate": 23148431,
+          "next_rank": 65801259,
+          "operation_counts_cumulative": {
+            "F_calls": 5,
+            "F_gcd_calls": 4,
+            "F_modular_inversions": 4,
+            "K_calls": 55,
+            "Q_calls": 55,
+            "floor_sum_calls": 110,
+            "floor_sum_euclidean_iterations": 1198,
+            "rank_calls": 5,
+            "select_binary_iterations": 53,
+            "select_calls": 5,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 1,
+            "Q_calls": 1,
+            "floor_sum_calls": 2,
+            "floor_sum_euclidean_iterations": 27,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 5,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 22312311,
+          "F_image_rank": 64965139,
+          "auxiliary_affine_rule": {
+            "Q_y": 22312311,
+            "case": "positive_image_at_most_L",
+            "error": 12,
+            "formula": "next=-y=-2*z+error",
+            "predicted_next_coordinate": -44624610,
+            "y": 44624610,
+            "z": 22312311
+          },
+          "current_coordinate": 23148431,
+          "current_coordinate_inverse": 22312311,
+          "current_rank": 65801259,
+          "next_coordinate": -44624610,
+          "next_rank": 20340517,
+          "operation_counts_cumulative": {
+            "F_calls": 6,
+            "F_gcd_calls": 5,
+            "F_modular_inversions": 5,
+            "K_calls": 55,
+            "Q_calls": 55,
+            "floor_sum_calls": 110,
+            "floor_sum_euclidean_iterations": 1198,
+            "rank_calls": 6,
+            "select_binary_iterations": 53,
+            "select_calls": 6,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 6,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 22578319,
+          "F_image_rank": 65231147,
+          "auxiliary_affine_rule": {
+            "Q_y": 22578319,
+            "case": "positive_image_at_most_L",
+            "error": 11,
+            "formula": "next=-y=-2*z+error",
+            "predicted_next_coordinate": -45156627,
+            "y": 45156627,
+            "z": 22578319
+          },
+          "current_coordinate": -44624610,
+          "current_coordinate_inverse": -63111083,
+          "current_rank": 20340517,
+          "next_coordinate": -45156627,
+          "next_rank": 20074509,
+          "operation_counts_cumulative": {
+            "F_calls": 7,
+            "F_gcd_calls": 6,
+            "F_modular_inversions": 6,
+            "K_calls": 81,
+            "Q_calls": 81,
+            "floor_sum_calls": 162,
+            "floor_sum_euclidean_iterations": 1900,
+            "rank_calls": 7,
+            "select_binary_iterations": 79,
+            "select_calls": 7,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 26,
+            "Q_calls": 26,
+            "floor_sum_calls": 52,
+            "floor_sum_euclidean_iterations": 702,
+            "rank_calls": 1,
+            "select_binary_iterations": 26,
+            "select_calls": 1
+          },
+          "step": 7,
+          "terminal": false
+        },
+        {
+          "F_branch": "negate",
+          "F_image": 45156627,
+          "F_image_rank": 87809455,
+          "auxiliary_affine_rule": {
+            "case": "positive_image_above_L",
+            "formula": "next=d-z",
+            "predicted_next_coordinate": 82801850,
+            "z": 45156627
+          },
+          "current_coordinate": -45156627,
+          "current_coordinate_inverse": 72448974,
+          "current_rank": 20074509,
+          "next_coordinate": 82801850,
+          "next_rank": 125454678,
+          "operation_counts_cumulative": {
+            "F_calls": 8,
+            "F_gcd_calls": 7,
+            "F_modular_inversions": 7,
+            "K_calls": 107,
+            "Q_calls": 107,
+            "floor_sum_calls": 214,
+            "floor_sum_euclidean_iterations": 2602,
+            "rank_calls": 8,
+            "select_binary_iterations": 105,
+            "select_calls": 8,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 26,
+            "Q_calls": 26,
+            "floor_sum_calls": 52,
+            "floor_sum_euclidean_iterations": 702,
+            "rank_calls": 1,
+            "select_binary_iterations": 26,
+            "select_calls": 1
+          },
+          "step": 8,
+          "terminal": false
+        },
+        {
+          "F_branch": "negate",
+          "F_image": -82801850,
+          "F_image_rank": 1251901,
+          "auxiliary_affine_rule": {
+            "Q_y": 41400927,
+            "case": "negative_image",
+            "error": 4,
+            "formula": "next=Q(y)=(y+error)/2",
+            "predicted_next_coordinate": 41400927,
+            "y": 82801850
+          },
+          "current_coordinate": 82801850,
+          "current_coordinate_inverse": -2886384,
+          "current_rank": 125454678,
+          "next_coordinate": 41400927,
+          "next_rank": 84053755,
+          "operation_counts_cumulative": {
+            "F_calls": 9,
+            "F_gcd_calls": 8,
+            "F_modular_inversions": 8,
+            "K_calls": 108,
+            "Q_calls": 108,
+            "floor_sum_calls": 216,
+            "floor_sum_euclidean_iterations": 2631,
+            "rank_calls": 9,
+            "select_binary_iterations": 105,
+            "select_calls": 9,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 1,
+            "Q_calls": 1,
+            "floor_sum_calls": 2,
+            "floor_sum_euclidean_iterations": 29,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 9,
+          "terminal": false
+        },
+        {
+          "F_branch": "negate",
+          "F_image": -41400927,
+          "F_image_rank": 21952359,
+          "auxiliary_affine_rule": {
+            "Q_y": 20700469,
+            "case": "negative_image",
+            "error": 11,
+            "formula": "next=Q(y)=(y+error)/2",
+            "predicted_next_coordinate": 20700469,
+            "y": 41400927
+          },
+          "current_coordinate": 41400927,
+          "current_coordinate_inverse": -83672562,
+          "current_rank": 84053755,
+          "next_coordinate": 20700469,
+          "next_rank": 63353297,
+          "operation_counts_cumulative": {
+            "F_calls": 10,
+            "F_gcd_calls": 9,
+            "F_modular_inversions": 9,
+            "K_calls": 109,
+            "Q_calls": 109,
+            "floor_sum_calls": 218,
+            "floor_sum_euclidean_iterations": 2658,
+            "rank_calls": 10,
+            "select_binary_iterations": 105,
+            "select_calls": 10,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 1,
+            "Q_calls": 1,
+            "floor_sum_calls": 2,
+            "floor_sum_euclidean_iterations": 27,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 10,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 84868741,
+          "F_image_rank": 127521569,
+          "auxiliary_affine_rule": {
+            "case": "positive_image_above_L",
+            "formula": "next=d-z",
+            "predicted_next_coordinate": 43089736,
+            "z": 84868741
+          },
+          "current_coordinate": 20700469,
+          "current_coordinate_inverse": 84868741,
+          "current_rank": 63353297,
+          "next_coordinate": 43089736,
+          "next_rank": 85742564,
+          "operation_counts_cumulative": {
+            "F_calls": 11,
+            "F_gcd_calls": 10,
+            "F_modular_inversions": 10,
+            "K_calls": 109,
+            "Q_calls": 109,
+            "floor_sum_calls": 218,
+            "floor_sum_euclidean_iterations": 2658,
+            "rank_calls": 11,
+            "select_binary_iterations": 105,
+            "select_calls": 11,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 11,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 27640415,
+          "F_image_rank": 70293243,
+          "auxiliary_affine_rule": {
+            "Q_y": 27640415,
+            "case": "positive_image_at_most_L",
+            "error": 9,
+            "formula": "next=-y=-2*z+error",
+            "predicted_next_coordinate": -55280821,
+            "y": 55280821,
+            "z": 27640415
+          },
+          "current_coordinate": 43089736,
+          "current_coordinate_inverse": 27640415,
+          "current_rank": 85742564,
+          "next_coordinate": -55280821,
+          "next_rank": 15012413,
+          "operation_counts_cumulative": {
+            "F_calls": 12,
+            "F_gcd_calls": 11,
+            "F_modular_inversions": 11,
+            "K_calls": 109,
+            "Q_calls": 109,
+            "floor_sum_calls": 218,
+            "floor_sum_euclidean_iterations": 2658,
+            "rank_calls": 12,
+            "select_binary_iterations": 105,
+            "select_calls": 12,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 12,
+          "terminal": false
+        },
+        {
+          "F_branch": "negate",
+          "F_image": 55280821,
+          "F_image_rank": 97933649,
+          "auxiliary_affine_rule": {
+            "case": "positive_image_above_L",
+            "formula": "next=d-z",
+            "predicted_next_coordinate": 72677656,
+            "z": 55280821
+          },
+          "current_coordinate": -55280821,
+          "current_coordinate_inverse": 16679883,
+          "current_rank": 15012413,
+          "next_coordinate": 72677656,
+          "next_rank": 115330484,
+          "operation_counts_cumulative": {
+            "F_calls": 13,
+            "F_gcd_calls": 12,
+            "F_modular_inversions": 12,
+            "K_calls": 136,
+            "Q_calls": 136,
+            "floor_sum_calls": 272,
+            "floor_sum_euclidean_iterations": 3387,
+            "rank_calls": 13,
+            "select_binary_iterations": 132,
+            "select_calls": 13,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 27,
+            "Q_calls": 27,
+            "floor_sum_calls": 54,
+            "floor_sum_euclidean_iterations": 729,
+            "rank_calls": 1,
+            "select_binary_iterations": 27,
+            "select_calls": 1
+          },
+          "step": 13,
+          "terminal": false
+        },
+        {
+          "F_branch": "negate",
+          "F_image": -72677656,
+          "F_image_rank": 6313996,
+          "auxiliary_affine_rule": {
+            "Q_y": 36338832,
+            "case": "negative_image",
+            "error": 8,
+            "formula": "next=Q(y)=(y+error)/2",
+            "predicted_next_coordinate": 36338832,
+            "y": 72677656
+          },
+          "current_coordinate": 72677656,
+          "current_coordinate_inverse": -25769806,
+          "current_rank": 115330484,
+          "next_coordinate": 36338832,
+          "next_rank": 78991660,
+          "operation_counts_cumulative": {
+            "F_calls": 14,
+            "F_gcd_calls": 13,
+            "F_modular_inversions": 13,
+            "K_calls": 137,
+            "Q_calls": 137,
+            "floor_sum_calls": 274,
+            "floor_sum_euclidean_iterations": 3414,
+            "rank_calls": 14,
+            "select_binary_iterations": 132,
+            "select_calls": 14,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 1,
+            "Q_calls": 1,
+            "floor_sum_calls": 2,
+            "floor_sum_euclidean_iterations": 27,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 14,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 15634164,
+          "F_image_rank": 58286992,
+          "auxiliary_affine_rule": {
+            "Q_y": 15634164,
+            "case": "positive_image_at_most_L",
+            "error": 8,
+            "formula": "next=-y=-2*z+error",
+            "predicted_next_coordinate": -31268320,
+            "y": 31268320,
+            "z": 15634164
+          },
+          "current_coordinate": 36338832,
+          "current_coordinate_inverse": 15634164,
+          "current_rank": 78991660,
+          "next_coordinate": -31268320,
+          "next_rank": 27018664,
+          "operation_counts_cumulative": {
+            "F_calls": 15,
+            "F_gcd_calls": 14,
+            "F_modular_inversions": 14,
+            "K_calls": 137,
+            "Q_calls": 137,
+            "floor_sum_calls": 274,
+            "floor_sum_euclidean_iterations": 3414,
+            "rank_calls": 15,
+            "select_binary_iterations": 132,
+            "select_calls": 15,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 15,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": -44753243,
+          "F_image_rank": 20276202,
+          "auxiliary_affine_rule": {
+            "Q_y": 22376626,
+            "case": "negative_image",
+            "error": 9,
+            "formula": "next=Q(y)=(y+error)/2",
+            "predicted_next_coordinate": 22376626,
+            "y": 44753243
+          },
+          "current_coordinate": -31268320,
+          "current_coordinate_inverse": -52163521,
+          "current_rank": 27018664,
+          "next_coordinate": 22376626,
+          "next_rank": 65029454,
+          "operation_counts_cumulative": {
+            "F_calls": 16,
+            "F_gcd_calls": 15,
+            "F_modular_inversions": 15,
+            "K_calls": 164,
+            "Q_calls": 164,
+            "floor_sum_calls": 328,
+            "floor_sum_euclidean_iterations": 4118,
+            "rank_calls": 16,
+            "select_binary_iterations": 158,
+            "select_calls": 16,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 27,
+            "Q_calls": 27,
+            "floor_sum_calls": 54,
+            "floor_sum_euclidean_iterations": 704,
+            "rank_calls": 1,
+            "select_binary_iterations": 26,
+            "select_calls": 1
+          },
+          "step": 16,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 13246244,
+          "F_image_rank": 55899072,
+          "auxiliary_affine_rule": {
+            "Q_y": 13246244,
+            "case": "positive_image_at_most_L",
+            "error": 11,
+            "formula": "next=-y=-2*z+error",
+            "predicted_next_coordinate": -26492477,
+            "y": 26492477,
+            "z": 13246244
+          },
+          "current_coordinate": 22376626,
+          "current_coordinate_inverse": 13246244,
+          "current_rank": 65029454,
+          "next_coordinate": -26492477,
+          "next_rank": 29406584,
+          "operation_counts_cumulative": {
+            "F_calls": 17,
+            "F_gcd_calls": 16,
+            "F_modular_inversions": 16,
+            "K_calls": 164,
+            "Q_calls": 164,
+            "floor_sum_calls": 328,
+            "floor_sum_euclidean_iterations": 4118,
+            "rank_calls": 17,
+            "select_binary_iterations": 158,
+            "select_calls": 17,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 17,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 18231442,
+          "F_image_rank": 60884270,
+          "auxiliary_affine_rule": {
+            "Q_y": 18231442,
+            "case": "positive_image_at_most_L",
+            "error": 9,
+            "formula": "next=-y=-2*z+error",
+            "predicted_next_coordinate": -36462875,
+            "y": 36462875,
+            "z": 18231442
+          },
+          "current_coordinate": -26492477,
+          "current_coordinate_inverse": -16252520,
+          "current_rank": 29406584,
+          "next_coordinate": -36462875,
+          "next_rank": 24421386,
+          "operation_counts_cumulative": {
+            "F_calls": 18,
+            "F_gcd_calls": 17,
+            "F_modular_inversions": 17,
+            "K_calls": 190,
+            "Q_calls": 190,
+            "floor_sum_calls": 380,
+            "floor_sum_euclidean_iterations": 4795,
+            "rank_calls": 18,
+            "select_binary_iterations": 184,
+            "select_calls": 18,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 26,
+            "Q_calls": 26,
+            "floor_sum_calls": 52,
+            "floor_sum_euclidean_iterations": 677,
+            "rank_calls": 1,
+            "select_binary_iterations": 26,
+            "select_calls": 1
+          },
+          "step": 18,
+          "terminal": false
+        },
+        {
+          "F_branch": "negate",
+          "F_image": 36462875,
+          "F_image_rank": 79115703,
+          "auxiliary_affine_rule": {
+            "Q_y": 36462875,
+            "case": "positive_image_at_most_L",
+            "error": 4,
+            "formula": "next=-y=-2*z+error",
+            "predicted_next_coordinate": -72925746,
+            "y": 72925746,
+            "z": 36462875
+          },
+          "current_coordinate": -36462875,
+          "current_coordinate_inverse": 617086,
+          "current_rank": 24421386,
+          "next_coordinate": -72925746,
+          "next_rank": 6189953,
+          "operation_counts_cumulative": {
+            "F_calls": 19,
+            "F_gcd_calls": 18,
+            "F_modular_inversions": 18,
+            "K_calls": 216,
+            "Q_calls": 216,
+            "floor_sum_calls": 432,
+            "floor_sum_euclidean_iterations": 5472,
+            "rank_calls": 19,
+            "select_binary_iterations": 210,
+            "select_calls": 19,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 26,
+            "Q_calls": 26,
+            "floor_sum_calls": 52,
+            "floor_sum_euclidean_iterations": 677,
+            "rank_calls": 1,
+            "select_binary_iterations": 26,
+            "select_calls": 1
+          },
+          "step": 19,
+          "terminal": false
+        },
+        {
+          "F_branch": "negate",
+          "F_image": 72925746,
+          "F_image_rank": 115578574,
+          "auxiliary_affine_rule": {
+            "case": "positive_image_above_L",
+            "formula": "next=d-z",
+            "predicted_next_coordinate": 55032731,
+            "z": 72925746
+          },
+          "current_coordinate": -72925746,
+          "current_coordinate_inverse": 38949219,
+          "current_rank": 6189953,
+          "next_coordinate": 55032731,
+          "next_rank": 97685559,
+          "operation_counts_cumulative": {
+            "F_calls": 20,
+            "F_gcd_calls": 19,
+            "F_modular_inversions": 19,
+            "K_calls": 242,
+            "Q_calls": 242,
+            "floor_sum_calls": 484,
+            "floor_sum_euclidean_iterations": 6174,
+            "rank_calls": 20,
+            "select_binary_iterations": 236,
+            "select_calls": 20,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 26,
+            "Q_calls": 26,
+            "floor_sum_calls": 52,
+            "floor_sum_euclidean_iterations": 702,
+            "rank_calls": 1,
+            "select_binary_iterations": 26,
+            "select_calls": 1
+          },
+          "step": 20,
+          "terminal": false
+        },
+        {
+          "F_branch": "negate",
+          "F_image": -55032731,
+          "F_image_rank": 15136459,
+          "auxiliary_affine_rule": {
+            "Q_y": 27516369,
+            "case": "negative_image",
+            "error": 7,
+            "formula": "next=Q(y)=(y+error)/2",
+            "predicted_next_coordinate": 27516369,
+            "y": 55032731
+          },
+          "current_coordinate": 55032731,
+          "current_coordinate_inverse": -74128421,
+          "current_rank": 97685559,
+          "next_coordinate": 27516369,
+          "next_rank": 70169197,
+          "operation_counts_cumulative": {
+            "F_calls": 21,
+            "F_gcd_calls": 20,
+            "F_modular_inversions": 20,
+            "K_calls": 243,
+            "Q_calls": 243,
+            "floor_sum_calls": 486,
+            "floor_sum_euclidean_iterations": 6201,
+            "rank_calls": 21,
+            "select_binary_iterations": 236,
+            "select_calls": 21,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 1,
+            "Q_calls": 1,
+            "floor_sum_calls": 2,
+            "floor_sum_euclidean_iterations": 27,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 21,
+          "terminal": false
+        },
+        {
+          "F_branch": "negate",
+          "F_image": -27516369,
+          "F_image_rank": 28894641,
+          "auxiliary_affine_rule": {
+            "Q_y": 13758187,
+            "case": "negative_image",
+            "error": 5,
+            "formula": "next=Q(y)=(y+error)/2",
+            "predicted_next_coordinate": 13758187,
+            "y": 27516369
+          },
+          "current_coordinate": 27516369,
+          "current_coordinate_inverse": -46609729,
+          "current_rank": 70169197,
+          "next_coordinate": 13758187,
+          "next_rank": 56411015,
+          "operation_counts_cumulative": {
+            "F_calls": 22,
+            "F_gcd_calls": 21,
+            "F_modular_inversions": 21,
+            "K_calls": 244,
+            "Q_calls": 244,
+            "floor_sum_calls": 488,
+            "floor_sum_euclidean_iterations": 6227,
+            "rank_calls": 22,
+            "select_binary_iterations": 236,
+            "select_calls": 22,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 1,
+            "Q_calls": 1,
+            "floor_sum_calls": 2,
+            "floor_sum_euclidean_iterations": 26,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 22,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 9858193,
+          "F_image_rank": 52511021,
+          "auxiliary_affine_rule": {
+            "Q_y": 9858193,
+            "case": "positive_image_at_most_L",
+            "error": 5,
+            "formula": "next=-y=-2*z+error",
+            "predicted_next_coordinate": -19716381,
+            "y": 19716381,
+            "z": 9858193
+          },
+          "current_coordinate": 13758187,
+          "current_coordinate_inverse": 9858193,
+          "current_rank": 56411015,
+          "next_coordinate": -19716381,
+          "next_rank": 32794635,
+          "operation_counts_cumulative": {
+            "F_calls": 23,
+            "F_gcd_calls": 22,
+            "F_modular_inversions": 22,
+            "K_calls": 244,
+            "Q_calls": 244,
+            "floor_sum_calls": 488,
+            "floor_sum_euclidean_iterations": 6227,
+            "rank_calls": 23,
+            "select_binary_iterations": 236,
+            "select_calls": 23,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "rank_calls": 1,
+            "select_calls": 1
+          },
+          "step": 23,
+          "terminal": false
+        },
+        {
+          "F_branch": "negate",
+          "F_image": 19716381,
+          "F_image_rank": 62369209,
+          "auxiliary_affine_rule": {
+            "Q_y": 19716381,
+            "case": "positive_image_at_most_L",
+            "error": 11,
+            "formula": "next=-y=-2*z+error",
+            "predicted_next_coordinate": -39432751,
+            "y": 39432751,
+            "z": 19716381
+          },
+          "current_coordinate": -19716381,
+          "current_coordinate_inverse": 57892142,
+          "current_rank": 32794635,
+          "next_coordinate": -39432751,
+          "next_rank": 22936447,
+          "operation_counts_cumulative": {
+            "F_calls": 24,
+            "F_gcd_calls": 23,
+            "F_modular_inversions": 23,
+            "K_calls": 271,
+            "Q_calls": 271,
+            "floor_sum_calls": 542,
+            "floor_sum_euclidean_iterations": 6930,
+            "rank_calls": 24,
+            "select_binary_iterations": 263,
+            "select_calls": 24,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "F_modular_inversions": 1,
+            "K_calls": 27,
+            "Q_calls": 27,
+            "floor_sum_calls": 54,
+            "floor_sum_euclidean_iterations": 703,
+            "rank_calls": 1,
+            "select_binary_iterations": 27,
+            "select_calls": 1
+          },
+          "step": 24,
+          "terminal": false
+        },
+        {
+          "F_branch": "fixed_nonunit",
+          "F_image": -39432751,
+          "current_coordinate": -39432751,
+          "current_coordinate_inverse": null,
+          "current_rank": 22936447,
+          "endpoint_type": "factor",
+          "operation_counts_cumulative": {
+            "F_calls": 25,
+            "F_gcd_calls": 24,
+            "F_modular_inversions": 23,
+            "K_calls": 297,
+            "Q_calls": 297,
+            "decode_calls": 1,
+            "decode_gcd_calls": 1,
+            "floor_sum_calls": 594,
+            "floor_sum_euclidean_iterations": 7629,
+            "rank_calls": 24,
+            "select_binary_iterations": 289,
+            "select_calls": 25,
+            "setup_modular_inversions": 1
+          },
+          "operation_delta": {
+            "F_calls": 1,
+            "F_gcd_calls": 1,
+            "K_calls": 26,
+            "Q_calls": 26,
+            "decode_calls": 1,
+            "decode_gcd_calls": 1,
+            "floor_sum_calls": 52,
+            "floor_sum_euclidean_iterations": 699,
+            "select_binary_iterations": 26,
+            "select_calls": 1
+          },
+          "output": {
+            "factor": 12373,
+            "kind": "nonunit"
+          },
+          "step": 25,
+          "terminal": true
+        }
+      ]
+    }
+  ],
+  "hard_timeout_seconds": 30,
+  "input_hashes": {
+    "DESIGN.md": "1b82a41a9bb28d50b87c27fddb8bdac53bcd5456465b77f37ef69a7250012057",
+    "F326_direct_gauss_pairing.py": "7829cc45822021c64c42842a2c938b15c52df85e30ae694efcdd4171c5012f73",
+    "F328_aggregate_output.json": "840dd677cdb49e617f87824a9d5f414869dd36e50c95e2bf01c5a80dfdb9b7b7"
+  },
+  "internal_timeout_seconds": 28,
+  "memory_limit_bytes": 268435456,
+  "peak_rss_bytes": 28065792,
+  "reciprocity": {
+    "counts": {
+      "discrepancy_bound_checks": 70620,
+      "identity_checks": 70620,
+      "interval_queries": 141240,
+      "inverse_image_updates": 68514,
+      "negative_remainder_cases": 35310,
+      "positive_remainder_cases": 35310,
+      "remainder_minus_one_cases": 1053,
+      "remainder_plus_one_cases": 1053,
+      "unit_parameters": 2106
+    },
+    "limit": 101,
+    "maximum_discrepancy": {
+      "Q_t": 50,
+      "a": 1,
+      "absolute_discrepancy": 50,
+      "centered_remainder": 50,
+      "discrepancy": 50,
+      "inverse_a": 1,
+      "n": 101,
+      "t": 50
+    },
+    "scope": "Every odd N from 3 through 101, every unit a, and every 1<=t<=(N-1)/2. Q is an independently accumulated direct residue count; interval counts use sorted inverse images.",
+    "selected_unit_remainder_examples": [
+      {
+        "Q_t": 1,
+        "a": 1,
+        "kind": "remainder_plus_one",
+        "n": 3,
+        "t": 1
+      },
+      {
+        "Q_t": 0,
+        "a": 2,
+        "kind": "remainder_minus_one",
+        "n": 3,
+        "t": 1
+      },
+      {
+        "Q_t": 1,
+        "a": 1,
+        "kind": "remainder_plus_one",
+        "n": 5,
+        "t": 1
+      },
+      {
+        "Q_t": 1,
+        "a": 2,
+        "kind": "remainder_minus_one",
+        "n": 5,
+        "t": 2
+      },
+      {
+        "Q_t": 1,
+        "a": 3,
+        "kind": "remainder_plus_one",
+        "n": 5,
+        "t": 2
+      },
+      {
+        "Q_t": 0,
+        "a": 4,
+        "kind": "remainder_minus_one",
+        "n": 5,
+        "t": 1
+      },
+      {
+        "Q_t": 1,
+        "a": 1,
+        "kind": "remainder_plus_one",
+        "n": 7,
+        "t": 1
+      },
+      {
+        "Q_t": 1,
+        "a": 2,
+        "kind": "remainder_minus_one",
+        "n": 7,
+        "t": 3
+      },
+      {
+        "Q_t": 1,
+        "a": 3,
+        "kind": "remainder_minus_one",
+        "n": 7,
+        "t": 2
+      },
+      {
+        "Q_t": 1,
+        "a": 4,
+        "kind": "remainder_plus_one",
+        "n": 7,
+        "t": 2
+      }
+    ],
+    "walltime_seconds": 0.04912716700346209
+  },
+  "scope": "Exact finite identity checks and deterministic reproduction of three already selected F328 paths. No frequency, sampling, or asymptotic path-length claim.",
+  "source_sha256": "79a69f1a2c0b91092968a6312756be2eadd145d3ef812ae67f9756190a6d7f0f",
+  "status": "passed",
+  "walltime_seconds": 0.06083904200932011
+}

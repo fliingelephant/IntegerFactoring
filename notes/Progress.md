@@ -9346,3 +9346,284 @@ experiments/F328_capped_rabin_paths/aggregate_output.json,
 experiments/F328_capped_rabin_paths/check_output.json,
 experiments/F328_capped_rabin_paths/RESOURCE.md, and
 experiments/F328_capped_rabin_paths/SHA256SUMS.txt.
+
+### C287 -- Random-center reflections fluctuate around the lazy benchmark, while static screens add gcd cost
+
+**Status:** F329 exact controls and bounded seeded comparison. P247 supplies
+the lazy-matching law. No asymptotic amplification, structured-matching
+lower bound, or quasipolynomial algorithm is claimed.
+
+F329 compares F326's rank-\(L\) reflection, four independent uniform
+reflection centers, and four lazy uniform matchings on each conditional
+unit-square input. Each trajectory has a baseline decoder and a paired
+static screen that tests six symmetric gcd arguments on every visited
+\(F\)-edge. The inner solver receives only \(N,a\), method, cap, and an
+independent seed; the hidden root remains in the outer decoder.
+
+Exact controls enumerated 15,325 paths over all small singleton
+starts/matchings and matched P247's capped survival, mean, and uniform
+endpoint law in 35 scenarios. Sparse-pool checks covered 5,913 deletion
+orders and 40,319 active sets. Eleven small F326 square inputs verified
+all reflection centers, fixed-rank counts, screens, and hidden-root-fibre
+decoding.
+
+At cap 1,024, combining the two moduli at each retained scale gives:
+\[
+\begin{array}{c|rr|rr|rr}
+ &\multicolumn{2}{c|}{\text{rank-}L}
+ &\multicolumn{2}{c|}{\text{uniform center}}
+ &\multicolumn{2}{c}{\text{lazy}}\\
+\text{bits}&\text{base}&\text{screen}&\text{base}&\text{screen}
+&\text{base}&\text{screen}\\ \hline
+20&30/32&32/32&114/128&128/128&110/128&128/128\\
+28&6/32&23/32&20/128&65/128&17/128&78/128\\
+36&0/32&2/32&1/128&7/128&4/128&6/128
+\end{array}
+\]
+All scale endpoints were factors. Uniform-center deviations changed sign
+across inputs, caps, and screens, giving no stable advantage over the exact
+lazy benchmark. The static screen often reduced \(F\)-calls but charges six
+gcds per edge. At \(b28\_i0\), for example, lazy baseline/static costs were
+6,149.9/8,128.1 gcds per factor; other cells reversed or narrowed the
+comparison.
+
+The retained implementation caches one outer root decode per trajectory.
+An earlier completed version exposed cap-dependent timing after absorption;
+the source and every exact, pilot, scale, and aggregate output were
+regenerated from the same seeds after repair. Finite zeros and four matching
+replicates per square do not estimate an asymptotic law. The open operation
+is a structured short-attempt distribution or screen with a proved charged
+cost/success gain.
+
+Evidence:
+experiments/F329_random_center_paths/REPORT.md,
+experiments/F329_random_center_paths/random_center_paths.py,
+experiments/F329_random_center_paths/exact_output.json,
+experiments/F329_random_center_paths/pilot_aggregate_output.json,
+experiments/F329_random_center_paths/scale_aggregate_output.json,
+experiments/F329_random_center_paths/RESOURCE.md,
+experiments/F329_random_center_paths/SOURCES.md, and
+experiments/F329_random_center_paths/SHA256SUMS.txt.
+
+### C288 -- Remainder reciprocity explains short prefixes but leaves inverse-parity first exit
+
+**Status:** F330 author proof, exact finite pilot, and primary-source scope
+check. P248 separately promotes the reconstructed count, affine, matrix,
+guarded-kernel, and parity identities. No path-length or probability law is
+claimed here.
+
+The direct checker covered every odd \(N\leq101\), every unit \(a\), and
+every \(1\leq t\leq(N-1)/2\). All 70,620 signed-remainder identities and
+discrepancy bounds passed over 2,106 parameter pairs; the \(r=1\) and
+\(r=-1\) cases each occurred 1,053 times.
+
+It also reproduced F328's three selected factor paths at exactly 7, 31, and
+25 \(F\)-calls. In the seven-call rank-reflection path, the successive
+affine defects were \(1,1,2,2,16,9\) before the nonunit endpoint. Three
+negation/reflection stages therefore behaved as \(x\mapsto Q(x)\), separated
+by scaled-inverse resets. These already selected traces do not give their
+public occurrence probability.
+
+The fixed \(a=-1\) interval involution is already Jeřábek Lemma 4.5,
+attributed there to Buresh-Oppenheim. F330's advance is its exact
+constant-matrix and positive rational-block traversal analysis, not a new
+FacRoot reduction. The Buresh-Oppenheim note itself was not directly read,
+and focused searches establish no broader novelty claim.
+
+The \(Q,P\) translations expose one concrete missing operation: find the
+first failure of alternating modular-inverse parity while preserving all
+earlier gcd, root, special, and range guards. A separately verified
+off-path randomized proposal with a charged success law would also suffice;
+deterministic completion of every path is not required.
+
+An unpromoted continued-fraction estimate supplies a separate uniform
+defect certificate. If
+\(a/N=[0;b_1,\ldots,b_m]\) and \(S(a,N)=\sum b_i\), then
+\[
+ |2Q_a(t)-t|\leq10S(a,N)\qquad(0\leq t<N),
+\]
+including adaptively selected \(t\). The Euclidean algorithm computes this
+bound, but \(S(a,N)\) can be large and no Jacobi-positive mass estimate is
+established in this packet for a polylogarithmic cutoff. A proposed, unrun count-descent partial
+procedure replaces \(t\) by \(\min(Q_a(t),t-Q_a(t))\), gcd-screening both
+counts at each of \(O(\log N)\) stages. Its work is polynomial; its factor
+probability, and any advantage over fresh multipliers or inverse-start
+controls, are unknown.
+If every visited defect has \(|E_j|\leq D\) from fixed start \(h\), both
+children lie in
+\([h/2^{j+1}-D,h/2^{j+1}+D/2]\); their public
+\(O(D\log N)\) dyadic-window union must be direct-gcd-screened as a control,
+because every bounded-defect success already selects from that menu.
+
+Evidence:
+experiments/F330_short_path_conditions/REPORT.md,
+experiments/F330_short_path_conditions/PROOF.md,
+experiments/F330_short_path_conditions/RATIONAL_PATHS.md,
+experiments/F330_short_path_conditions/DISCREPANCY_NOTE.md,
+experiments/F330_short_path_conditions/Q_DESCENT_DESIGN.md,
+experiments/F330_short_path_conditions/SOURCES.md,
+experiments/F330_short_path_conditions/short_path_conditions.py,
+experiments/F330_short_path_conditions/pilot_output.json, and
+experiments/F330_short_path_conditions/SHA256SUMS.txt.
+
+### C289 -- Path-derived square feedback did not beat the charged uniform control in the finite sample
+
+**Status:** F331 bounded paired-policy experiment and root-derived uniform
+control calculations. No input-bias theorem, asymptotic fit, or result
+promotion is claimed.
+
+The public controller maintains
+\(a=a_0C^2\bmod N\), probes eight F326 rank-reflection edges per round,
+and maps every returned root through \(C^{-1}\) before the outer hidden-root
+gcd. It receives no hidden root. Over at most 16 rounds, path samples up to
+four distinct absolute visited units, uniform draws four independent
+nonzero multipliers, and last uses the last nontrivial visited unit. Every
+nearest-square proposal, rejected proposal, gcd, inversion, random bit, and
+failed root decode is charged.
+
+Tiny controls passed 2,720 root-pullback identities and four exact F328
+probe comparisons. The full sample used the same 32 initial roots per
+policy on two moduli at each of 20, 28, 36, and 44 bits:
+\[
+\begin{array}{c|rrr}
+\text{bits}&\text{path}&\text{uniform}&\text{last}\\ \hline
+20&15/64&20/64&13/64\\
+28&1/64&3/64&2/64\\
+36&0/64&0/64&0/64\\
+44&0/64&0/64&0/64\\
+\text{all}&16/256&23/256&15/256.
+\end{array}
+\]
+Path used 1,959 \(F\)-calls and 2,708 gcds per observed factor; uniform
+used 1,344.74 and 2,529.65; last used 2,113.53 and 2,130.93. Uniform also
+used 31,927.8 fair bits per factor, versus 6,007.7 and 747.2. Eight of its
+23 factors came from seven multiplier-generation gcds and one proposal
+screen, not from a selected input becoming easier. Twelve pulled roots
+across the policies gave trivial outer gcds and remain recorded.
+
+For a fixed unit square \(a\), a fresh uniform unit multiplier makes
+\(ac^2\) uniform over unit squares. If \(N\) has \(s\) distinct primes,
+\(M=\lfloor\sqrt{N-1}\rfloor\), and
+\(A_M=\#\{1\leq k\leq M:\gcd(k,N)=1\}\), its exact ordinary-square probability is
+\[
+ \frac{2^sA_M}{\varphi(N)},
+\]
+and P02 turns that particular output into a factor with probability
+\((2^s-2)A_M/\varphi(N)\). For \(N=pq\) with distinct odd primes
+\(p<q\), the nonzero nearest-square screen can return only \(p\), and its
+uniform-square probability is at most
+\[
+ \min\!\left(1,\frac{4\lceil\sqrt{N-1}\rceil^2}
+ {p\varphi(N)}\right).
+\]
+In particular, a nonzero score below \(p\) cannot split \(N\). These
+calculations do not cover path, last, or the full selected-state controller;
+lowering a nonzero score alone is not demonstrated factor progress.
+
+Evidence:
+experiments/F331_square_input_feedback/REPORT.md,
+experiments/F331_square_input_feedback/UNIFORM_CONTROL.md,
+experiments/F331_square_input_feedback/square_input_feedback.py,
+experiments/F331_square_input_feedback/aggregate_feedback.py,
+experiments/F331_square_input_feedback/aggregate_output.json,
+experiments/F331_square_input_feedback/SOURCES.md,
+experiments/F331_square_input_feedback/RESOURCE.md, and
+experiments/F331_square_input_feedback/SHA256SUMS.txt.
+
+### C290 -- Fixed minus-one rational paths remain long and refute only the proposed lift-size bound
+
+**Status:** F332 exact finite comparison of F330's fixed public
+\(a=-1\) reflection and adjacent-block kernels. No random-square law,
+path-length theorem, or promotion is claimed.
+
+For every \(N\equiv1\pmod4\) through 101, 75 complete comparisons matched
+the frozen F326 path in coordinate, branch, stopping call, and verified
+output. The compressed adjacent kernel also matched terminal coordinates
+and equivalent fine calls with every intermediate guard enforced.
+
+At cap 8,192 both methods completed on the retained 20- and 28-bit inputs.
+Fresh cap-262,144 runs additionally completed both at 36 bits and reflection
+on one 44-bit input:
+\[
+\begin{array}{c|rr|rr}
+\text{input}&\text{reflection result}&F\text{-calls}
+&\text{adjacent result}&\text{blocks/equivalent calls}\\ \hline
+b20\_i1&907&632&919&700/1042\\
+b28\_i1&13789&4185&12373&6695/9999\\
+b36\_i0&218987&49481&215051&148248/222070\\
+b44\_i1&3827143&154242&\text{censor}&262144/392874.
+\end{array}
+\]
+Both methods remained censored on \(b44\_i0,b60\_i1,b92\_i0\), and adjacent
+also remained censored on \(b44\_i1\). No public run returned a square root
+of \(-1\). Equal numeric caps cover different work: one
+adjacent block can represent two fine calls.
+
+The exact \(N=61\) itinerary \(P,P,Q,Q,P,Q\) reaches lift \((8,11)\) with
+\(8^2+11^2=185>2N\), then terminates at \((8,27)\), whose norm is
+\(793=13N\) and whose residue 50 squares to \(-1\). A smaller \(N=53\)
+witness also first exceeds \(2N\) after four updates. This refutes only the
+proposed preterminal \(2N\) lift-norm bound. It does not refute the positive
+rational correspondence.
+
+Letter counts were near balanced and maximum same/alternating runs were at
+most 21 in the retained paths, but these finite statistics give no
+distributional or worst-case bound. The fixed \(a=-1\) family has no P02
+hidden-root interpretation. Its remaining operation is still a charged
+first-exit or hitting law for the guarded inverse-parity itinerary.
+
+Evidence:
+experiments/F332_minus_one_paths/REPORT.md,
+experiments/F332_minus_one_paths/minus_one_paths.py,
+experiments/F332_minus_one_paths/aggregate_output.json,
+experiments/F332_minus_one_paths/SOURCES.md,
+experiments/F332_minus_one_paths/RESOURCE.md, and
+experiments/F332_minus_one_paths/SHA256SUMS.txt.
+
+### C291 -- Two source modes remove the separate secret-square cost requirement
+
+**Status:** F333 root proof and independent reconstruction. P249 separately
+promotes the conditional reduction. No partial FacRoot solver satisfying its
+quasipolynomial contract is supplied.
+
+For odd \(N\) with \(s\geq2\) distinct prime divisors and one public
+procedure \(A(N,a)\), let
+\(\delta_J=f_J+r_J\) and \(\tau_J\) be its valid-output probability and
+mean verified bit cost on uniform Jacobi-positive units. A root output can
+occur only on the square subset \(S\), whose relative mass in \(J\) is
+\(\rho\leq2^{1-s}\). Because the same execution law is used without revealing
+the source mode, \(r_J=\rho r_S\). A fair mixture of a uniform-\(J\) factor
+attempt and a private-square P02 attempt therefore has factor probability
+at least \(\delta_J/2\).
+
+More strongly, if \(\tau_J/\delta_J\) has one uniform quasipolynomial bound,
+two uncapped retry engines can be interleaved one bit operation at a time.
+Their expected factor time is at most
+\[
+ 6(g+\tau_J)/\delta_J
+\]
+up to constant simulation overhead. No cap, evaluation of its envelope,
+or separate conditional-square mean is needed. This permits one engine to
+have zero success probability and permits arbitrary cost/success correlation
+inside a call.
+
+The capped proof remains useful when an efficient budget is available.
+Truncation at \(2Q(n)\) leaves \(J\)-valid-output probability at least
+\(\delta_J/2\) and mixed factor probability at least \(\delta_J/4\).
+Computing a literal cap contributes its evaluation cost; alternatively one
+uses an efficiently evaluable quasipolynomial majorant. This qualification
+prevents a bare computability claim for \(Q\) from hiding setup work.
+
+P249 broadens the sufficient input law from uniform secret squares to an
+average contract over the dense public set \(J\). It does not show that
+F326 paths, square feedback, count descent, or any other candidate has that
+contract. The concrete next test is F330's unrun \(Q\)-descent partial
+procedure, with every Jacobi-positive input, fresh-parameter control, output,
+failure, and cost retained.
+
+Evidence:
+experiments/F333_partial_facroot_mixture/REPORT.md,
+experiments/F333_partial_facroot_mixture/STATEMENT_ONLY.md,
+experiments/F333_partial_facroot_mixture/PROOF.md,
+experiments/F333_partial_facroot_mixture/RECONSTRUCTION.md, and
+experiments/F333_partial_facroot_mixture/SHA256SUMS.txt.

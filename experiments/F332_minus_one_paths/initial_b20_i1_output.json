@@ -1,0 +1,2322 @@
+{
+  "adjacent_block_iteration_cap": 8192,
+  "cap_scope": "The equal numeric caps measure different coverage. Reflection is capped in fine F calls. The compressed adjacent kernel is capped in P/Q block iterations and records its equivalent fine F calls.",
+  "experiment": "F332_minus_one_paths",
+  "fine_F_call_cap": 8192,
+  "hard_timeout_seconds": 30,
+  "input_hashes": {
+    "F326_source": "7829cc45822021c64c42842a2c938b15c52df85e30ae694efcdd4171c5012f73",
+    "F328_moduli": "acf09b285c57c39cfcb93d3cd77addce909498e224955fd0ec9d2e4d86ee0428",
+    "F330_PROOF": "f7f6519ec90c7c5ce4ebf9d9916ab721194ada55f2ef6ba9edf3533da717a8df",
+    "F330_RATIONAL_PATHS": "b0d59c6344e4761572eb187d923cddb94c0f624432e08ff89ac6f9a53de021d7"
+  },
+  "internal_timeout_seconds": 28,
+  "lift_bit_limit": 4096,
+  "memory_limit_bytes": 536870912,
+  "methods_requested": [
+    "reflection",
+    "adjacent_block"
+  ],
+  "mode": "public",
+  "modulus_label": {
+    "actual_bits": 20,
+    "balance_ratio": 1.0132304299889747,
+    "generation": {
+      "p": {
+        "candidate_stream_attempts": 1,
+        "seed": 22961844136044694876231544778124598340
+      },
+      "q": {
+        "candidate_stream_attempts": 1,
+        "seed": 235453619253530639399419564950120182640
+      }
+    },
+    "modulus_id": "b20_i1",
+    "n": 833533,
+    "offline_root_label": "impossible_Blum",
+    "p_offline": 907,
+    "prime_bits": [
+      10,
+      10
+    ],
+    "q_offline": 919,
+    "target_bits": 20
+  },
+  "peak_rss_bytes": 28262400,
+  "process_walltime_seconds": 0.0031837499991524965,
+  "public_input": {
+    "a": 833532,
+    "n": 833533
+  },
+  "results": {
+    "adjacent_block": {
+      "block_cap": 8192,
+      "block_iterations": 700,
+      "block_trace_prefix": [
+        {
+          "block_iteration": 1,
+          "coordinate": 2,
+          "fine_calls_after": 2,
+          "fine_calls_before": 1,
+          "letter": "P",
+          "new_u": 416768,
+          "new_v": 277845,
+          "terminal": false,
+          "u": 2,
+          "v": 416767,
+          "z": 555689
+        },
+        {
+          "block_iteration": 2,
+          "coordinate": 416765,
+          "fine_calls_after": 3,
+          "fine_calls_before": 2,
+          "letter": "P",
+          "new_u": 277846,
+          "new_v": 666827,
+          "terminal": false,
+          "u": 416768,
+          "v": 277845,
+          "z": 166707
+        },
+        {
+          "block_iteration": 3,
+          "coordinate": 277846,
+          "fine_calls_after": 5,
+          "fine_calls_before": 3,
+          "letter": "Q",
+          "new_u": 104192,
+          "new_v": 277847,
+          "terminal": false,
+          "u": 277846,
+          "v": 666827,
+          "z": 104192
+        },
+        {
+          "block_iteration": 4,
+          "coordinate": 104192,
+          "fine_calls_after": 7,
+          "fine_calls_before": 5,
+          "letter": "Q",
+          "new_u": 757758,
+          "new_v": 104193,
+          "terminal": false,
+          "u": 104192,
+          "v": 277847,
+          "z": 757758
+        },
+        {
+          "block_iteration": 5,
+          "coordinate": 75775,
+          "fine_calls_after": 9,
+          "fine_calls_before": 7,
+          "letter": "Q",
+          "new_u": 394832,
+          "new_v": 757759,
+          "terminal": false,
+          "u": 757758,
+          "v": 104193,
+          "z": 394832
+        },
+        {
+          "block_iteration": 6,
+          "coordinate": 394832,
+          "fine_calls_after": 11,
+          "fine_calls_before": 9,
+          "letter": "Q",
+          "new_u": 472336,
+          "new_v": 394833,
+          "terminal": false,
+          "u": 394832,
+          "v": 757759,
+          "z": 472336
+        },
+        {
+          "block_iteration": 7,
+          "coordinate": 361197,
+          "fine_calls_after": 12,
+          "fine_calls_before": 11,
+          "letter": "P",
+          "new_u": 394834,
+          "new_v": 748479,
+          "terminal": false,
+          "u": 472336,
+          "v": 394833,
+          "z": 85055
+        },
+        {
+          "block_iteration": 8,
+          "coordinate": 394834,
+          "fine_calls_after": 13,
+          "fine_calls_before": 12,
+          "letter": "P",
+          "new_u": 748480,
+          "new_v": 281931,
+          "terminal": false,
+          "u": 394834,
+          "v": 748479,
+          "z": 551603
+        },
+        {
+          "block_iteration": 9,
+          "coordinate": 85053,
+          "fine_calls_after": 15,
+          "fine_calls_before": 13,
+          "letter": "Q",
+          "new_u": 719546,
+          "new_v": 748481,
+          "terminal": false,
+          "u": 748480,
+          "v": 281931,
+          "z": 719546
+        },
+        {
+          "block_iteration": 10,
+          "coordinate": 113987,
+          "fine_calls_after": 17,
+          "fine_calls_before": 15,
+          "letter": "Q",
+          "new_u": 537278,
+          "new_v": 719547,
+          "terminal": false,
+          "u": 719546,
+          "v": 748481,
+          "z": 537278
+        },
+        {
+          "block_iteration": 11,
+          "coordinate": 296255,
+          "fine_calls_after": 19,
+          "fine_calls_before": 17,
+          "letter": "Q",
+          "new_u": 624414,
+          "new_v": 537279,
+          "terminal": false,
+          "u": 537278,
+          "v": 719547,
+          "z": 624414
+        },
+        {
+          "block_iteration": 12,
+          "coordinate": 209119,
+          "fine_calls_after": 20,
+          "fine_calls_before": 19,
+          "letter": "P",
+          "new_u": 537280,
+          "new_v": 20421,
+          "terminal": false,
+          "u": 624414,
+          "v": 537279,
+          "z": 813113
+        },
+        {
+          "block_iteration": 13,
+          "coordinate": 296253,
+          "fine_calls_after": 22,
+          "fine_calls_before": 20,
+          "letter": "Q",
+          "new_u": 295464,
+          "new_v": 537281,
+          "terminal": false,
+          "u": 537280,
+          "v": 20421,
+          "z": 295464
+        },
+        {
+          "block_iteration": 14,
+          "coordinate": 295464,
+          "fine_calls_after": 23,
+          "fine_calls_before": 22,
+          "letter": "P",
+          "new_u": 537282,
+          "new_v": 274287,
+          "terminal": false,
+          "u": 295464,
+          "v": 537281,
+          "z": 559247
+        },
+        {
+          "block_iteration": 15,
+          "coordinate": 296251,
+          "fine_calls_after": 25,
+          "fine_calls_before": 23,
+          "letter": "Q",
+          "new_u": 191880,
+          "new_v": 537283,
+          "terminal": false,
+          "u": 537282,
+          "v": 274287,
+          "z": 191880
+        },
+        {
+          "block_iteration": 16,
+          "coordinate": 191880,
+          "fine_calls_after": 26,
+          "fine_calls_before": 25,
+          "letter": "P",
+          "new_u": 537284,
+          "new_v": 17225,
+          "terminal": false,
+          "u": 191880,
+          "v": 537283,
+          "z": 816309
+        },
+        {
+          "block_iteration": 17,
+          "coordinate": 296249,
+          "fine_calls_after": 28,
+          "fine_calls_before": 26,
+          "letter": "Q",
+          "new_u": 658224,
+          "new_v": 537285,
+          "terminal": false,
+          "u": 537284,
+          "v": 17225,
+          "z": 658224
+        },
+        {
+          "block_iteration": 18,
+          "coordinate": 175309,
+          "fine_calls_after": 29,
+          "fine_calls_before": 28,
+          "letter": "P",
+          "new_u": 537286,
+          "new_v": 36341,
+          "terminal": false,
+          "u": 658224,
+          "v": 537285,
+          "z": 797193
+        },
+        {
+          "block_iteration": 19,
+          "coordinate": 296247,
+          "fine_calls_after": 30,
+          "fine_calls_before": 29,
+          "letter": "P",
+          "new_u": 36342,
+          "new_v": 678831,
+          "terminal": false,
+          "u": 537286,
+          "v": 36341,
+          "z": 154703
+        },
+        {
+          "block_iteration": 20,
+          "coordinate": 36342,
+          "fine_calls_after": 31,
+          "fine_calls_before": 30,
+          "letter": "P",
+          "new_u": 678832,
+          "new_v": 159561,
+          "terminal": false,
+          "u": 36342,
+          "v": 678831,
+          "z": 673973
+        },
+        {
+          "block_iteration": 21,
+          "coordinate": 154701,
+          "fine_calls_after": 33,
+          "fine_calls_before": 31,
+          "letter": "Q",
+          "new_u": 227360,
+          "new_v": 678833,
+          "terminal": false,
+          "u": 678832,
+          "v": 159561,
+          "z": 227360
+        },
+        {
+          "block_iteration": 22,
+          "coordinate": 227360,
+          "fine_calls_after": 35,
+          "fine_calls_before": 33,
+          "letter": "Q",
+          "new_u": 217346,
+          "new_v": 227361,
+          "terminal": false,
+          "u": 227360,
+          "v": 678833,
+          "z": 217346
+        },
+        {
+          "block_iteration": 23,
+          "coordinate": 217346,
+          "fine_calls_after": 36,
+          "fine_calls_before": 35,
+          "letter": "P",
+          "new_u": 227362,
+          "new_v": 113169,
+          "terminal": false,
+          "u": 217346,
+          "v": 227361,
+          "z": 720365
+        },
+        {
+          "block_iteration": 24,
+          "coordinate": 227362,
+          "fine_calls_after": 38,
+          "fine_calls_before": 36,
+          "letter": "Q",
+          "new_u": 399842,
+          "new_v": 227363,
+          "terminal": false,
+          "u": 227362,
+          "v": 113169,
+          "z": 399842
+        },
+        {
+          "block_iteration": 25,
+          "coordinate": 399842,
+          "fine_calls_after": 39,
+          "fine_calls_before": 38,
+          "letter": "P",
+          "new_u": 227364,
+          "new_v": 57627,
+          "terminal": false,
+          "u": 399842,
+          "v": 227363,
+          "z": 775907
+        },
+        {
+          "block_iteration": 26,
+          "coordinate": 227364,
+          "fine_calls_after": 41,
+          "fine_calls_before": 39,
+          "letter": "Q",
+          "new_u": 178328,
+          "new_v": 227365,
+          "terminal": false,
+          "u": 227364,
+          "v": 57627,
+          "z": 178328
+        },
+        {
+          "block_iteration": 27,
+          "coordinate": 178328,
+          "fine_calls_after": 43,
+          "fine_calls_before": 41,
+          "letter": "Q",
+          "new_u": 144454,
+          "new_v": 178329,
+          "terminal": false,
+          "u": 178328,
+          "v": 227365,
+          "z": 144454
+        },
+        {
+          "block_iteration": 28,
+          "coordinate": 144454,
+          "fine_calls_after": 44,
+          "fine_calls_before": 43,
+          "letter": "P",
+          "new_u": 178330,
+          "new_v": 784095,
+          "terminal": false,
+          "u": 144454,
+          "v": 178329,
+          "z": 49439
+        },
+        {
+          "block_iteration": 29,
+          "coordinate": 178330,
+          "fine_calls_after": 45,
+          "fine_calls_before": 44,
+          "letter": "P",
+          "new_u": 784096,
+          "new_v": 292631,
+          "terminal": false,
+          "u": 178330,
+          "v": 784095,
+          "z": 540903
+        },
+        {
+          "block_iteration": 30,
+          "coordinate": 49437,
+          "fine_calls_after": 46,
+          "fine_calls_before": 45,
+          "letter": "P",
+          "new_u": 292632,
+          "new_v": 267667,
+          "terminal": false,
+          "u": 784096,
+          "v": 292631,
+          "z": 565867
+        },
+        {
+          "block_iteration": 31,
+          "coordinate": 292632,
+          "fine_calls_after": 48,
+          "fine_calls_before": 46,
+          "letter": "Q",
+          "new_u": 604380,
+          "new_v": 292633,
+          "terminal": false,
+          "u": 292632,
+          "v": 267667,
+          "z": 604380
+        },
+        {
+          "block_iteration": 32,
+          "coordinate": 229153,
+          "fine_calls_after": 49,
+          "fine_calls_before": 48,
+          "letter": "P",
+          "new_u": 292634,
+          "new_v": 136577,
+          "terminal": false,
+          "u": 604380,
+          "v": 292633,
+          "z": 696957
+        },
+        {
+          "block_iteration": 33,
+          "coordinate": 292634,
+          "fine_calls_after": 50,
+          "fine_calls_before": 49,
+          "letter": "P",
+          "new_u": 136578,
+          "new_v": 198353,
+          "terminal": false,
+          "u": 292634,
+          "v": 136577,
+          "z": 635181
+        },
+        {
+          "block_iteration": 34,
+          "coordinate": 136578,
+          "fine_calls_after": 51,
+          "fine_calls_before": 50,
+          "letter": "P",
+          "new_u": 198354,
+          "new_v": 589563,
+          "terminal": false,
+          "u": 136578,
+          "v": 198353,
+          "z": 243971
+        },
+        {
+          "block_iteration": 35,
+          "coordinate": 198354,
+          "fine_calls_after": 53,
+          "fine_calls_before": 51,
+          "letter": "Q",
+          "new_u": 806000,
+          "new_v": 198355,
+          "terminal": false,
+          "u": 198354,
+          "v": 589563,
+          "z": 806000
+        },
+        {
+          "block_iteration": 36,
+          "coordinate": 27533,
+          "fine_calls_after": 54,
+          "fine_calls_before": 53,
+          "letter": "P",
+          "new_u": 198356,
+          "new_v": 772227,
+          "terminal": false,
+          "u": 806000,
+          "v": 198355,
+          "z": 61307
+        },
+        {
+          "block_iteration": 37,
+          "coordinate": 198356,
+          "fine_calls_after": 56,
+          "fine_calls_before": 54,
+          "letter": "Q",
+          "new_u": 138794,
+          "new_v": 198357,
+          "terminal": false,
+          "u": 198356,
+          "v": 772227,
+          "z": 138794
+        },
+        {
+          "block_iteration": 38,
+          "coordinate": 138794,
+          "fine_calls_after": 58,
+          "fine_calls_before": 56,
+          "letter": "Q",
+          "new_u": 786558,
+          "new_v": 138795,
+          "terminal": false,
+          "u": 138794,
+          "v": 198357,
+          "z": 786558
+        },
+        {
+          "block_iteration": 39,
+          "coordinate": 46975,
+          "fine_calls_after": 60,
+          "fine_calls_before": 58,
+          "letter": "Q",
+          "new_u": 811512,
+          "new_v": 786559,
+          "terminal": false,
+          "u": 786558,
+          "v": 138795,
+          "z": 811512
+        },
+        {
+          "block_iteration": 40,
+          "coordinate": 22021,
+          "fine_calls_after": 61,
+          "fine_calls_before": 60,
+          "letter": "P",
+          "new_u": 786560,
+          "new_v": 312027,
+          "terminal": false,
+          "u": 811512,
+          "v": 786559,
+          "z": 521507
+        },
+        {
+          "block_iteration": 41,
+          "coordinate": 46973,
+          "fine_calls_after": 62,
+          "fine_calls_before": 61,
+          "letter": "P",
+          "new_u": 312028,
+          "new_v": 466969,
+          "terminal": false,
+          "u": 786560,
+          "v": 312027,
+          "z": 366565
+        },
+        {
+          "block_iteration": 42,
+          "coordinate": 312028,
+          "fine_calls_after": 64,
+          "fine_calls_before": 62,
+          "letter": "Q",
+          "new_u": 413808,
+          "new_v": 312029,
+          "terminal": false,
+          "u": 312028,
+          "v": 466969,
+          "z": 413808
+        },
+        {
+          "block_iteration": 43,
+          "coordinate": 413808,
+          "fine_calls_after": 65,
+          "fine_calls_before": 64,
+          "letter": "P",
+          "new_u": 312030,
+          "new_v": 674437,
+          "terminal": false,
+          "u": 413808,
+          "v": 312029,
+          "z": 159097
+        },
+        {
+          "block_iteration": 44,
+          "coordinate": 312030,
+          "fine_calls_after": 67,
+          "fine_calls_before": 65,
+          "letter": "Q",
+          "new_u": 500388,
+          "new_v": 312031,
+          "terminal": false,
+          "u": 312030,
+          "v": 674437,
+          "z": 500388
+        },
+        {
+          "block_iteration": 45,
+          "coordinate": 333145,
+          "fine_calls_after": 69,
+          "fine_calls_before": 67,
+          "letter": "Q",
+          "new_u": 787088,
+          "new_v": 500389,
+          "terminal": false,
+          "u": 500388,
+          "v": 312031,
+          "z": 787088
+        },
+        {
+          "block_iteration": 46,
+          "coordinate": 46445,
+          "fine_calls_after": 71,
+          "fine_calls_before": 69,
+          "letter": "Q",
+          "new_u": 171520,
+          "new_v": 787089,
+          "terminal": false,
+          "u": 787088,
+          "v": 500389,
+          "z": 171520
+        },
+        {
+          "block_iteration": 47,
+          "coordinate": 171520,
+          "fine_calls_after": 72,
+          "fine_calls_before": 71,
+          "letter": "P",
+          "new_u": 787090,
+          "new_v": 91173,
+          "terminal": false,
+          "u": 171520,
+          "v": 787089,
+          "z": 742361
+        },
+        {
+          "block_iteration": 48,
+          "coordinate": 46443,
+          "fine_calls_after": 73,
+          "fine_calls_before": 72,
+          "letter": "P",
+          "new_u": 91174,
+          "new_v": 714163,
+          "terminal": false,
+          "u": 787090,
+          "v": 91173,
+          "z": 119371
+        },
+        {
+          "block_iteration": 49,
+          "coordinate": 91174,
+          "fine_calls_after": 75,
+          "fine_calls_before": 73,
+          "letter": "Q",
+          "new_u": 110190,
+          "new_v": 91175,
+          "terminal": false,
+          "u": 91174,
+          "v": 714163,
+          "z": 110190
+        },
+        {
+          "block_iteration": 50,
+          "coordinate": 110190,
+          "fine_calls_after": 76,
+          "fine_calls_before": 75,
+          "letter": "P",
+          "new_u": 91176,
+          "new_v": 201737,
+          "terminal": false,
+          "u": 110190,
+          "v": 91175,
+          "z": 631797
+        },
+        {
+          "block_iteration": 51,
+          "coordinate": 91176,
+          "fine_calls_after": 77,
+          "fine_calls_before": 76,
+          "letter": "P",
+          "new_u": 201738,
+          "new_v": 55849,
+          "terminal": false,
+          "u": 91176,
+          "v": 201737,
+          "z": 777685
+        },
+        {
+          "block_iteration": 52,
+          "coordinate": 201738,
+          "fine_calls_after": 79,
+          "fine_calls_before": 77,
+          "letter": "Q",
+          "new_u": 132038,
+          "new_v": 201739,
+          "terminal": false,
+          "u": 201738,
+          "v": 55849,
+          "z": 132038
+        },
+        {
+          "block_iteration": 53,
+          "coordinate": 132038,
+          "fine_calls_after": 80,
+          "fine_calls_before": 79,
+          "letter": "P",
+          "new_u": 201740,
+          "new_v": 24059,
+          "terminal": false,
+          "u": 132038,
+          "v": 201739,
+          "z": 809475
+        },
+        {
+          "block_iteration": 54,
+          "coordinate": 201740,
+          "fine_calls_after": 81,
+          "fine_calls_before": 80,
+          "letter": "P",
+          "new_u": 24060,
+          "new_v": 798993,
+          "terminal": false,
+          "u": 201740,
+          "v": 24059,
+          "z": 34541
+        },
+        {
+          "block_iteration": 55,
+          "coordinate": 24060,
+          "fine_calls_after": 82,
+          "fine_calls_before": 81,
+          "letter": "P",
+          "new_u": 798994,
+          "new_v": 725103,
+          "terminal": false,
+          "u": 24060,
+          "v": 798993,
+          "z": 108431
+        },
+        {
+          "block_iteration": 56,
+          "coordinate": 34539,
+          "fine_calls_after": 83,
+          "fine_calls_before": 82,
+          "letter": "P",
+          "new_u": 725104,
+          "new_v": 20925,
+          "terminal": false,
+          "u": 798994,
+          "v": 725103,
+          "z": 812609
+        },
+        {
+          "block_iteration": 57,
+          "coordinate": 108429,
+          "fine_calls_after": 84,
+          "fine_calls_before": 83,
+          "letter": "P",
+          "new_u": 20926,
+          "new_v": 524553,
+          "terminal": false,
+          "u": 725104,
+          "v": 20925,
+          "z": 308981
+        },
+        {
+          "block_iteration": 58,
+          "coordinate": 20926,
+          "fine_calls_after": 86,
+          "fine_calls_before": 84,
+          "letter": "Q",
+          "new_u": 556472,
+          "new_v": 20927,
+          "terminal": false,
+          "u": 20926,
+          "v": 524553,
+          "z": 556472
+        },
+        {
+          "block_iteration": 59,
+          "coordinate": 277061,
+          "fine_calls_after": 87,
+          "fine_calls_before": 86,
+          "letter": "P",
+          "new_u": 20928,
+          "new_v": 616029,
+          "terminal": false,
+          "u": 556472,
+          "v": 20927,
+          "z": 217505
+        },
+        {
+          "block_iteration": 60,
+          "coordinate": 20928,
+          "fine_calls_after": 88,
+          "fine_calls_before": 87,
+          "letter": "P",
+          "new_u": 616030,
+          "new_v": 785503,
+          "terminal": false,
+          "u": 20928,
+          "v": 616029,
+          "z": 48031
+        },
+        {
+          "block_iteration": 61,
+          "coordinate": 217503,
+          "fine_calls_after": 90,
+          "fine_calls_before": 88,
+          "letter": "Q",
+          "new_u": 664724,
+          "new_v": 616031,
+          "terminal": false,
+          "u": 616030,
+          "v": 785503,
+          "z": 664724
+        },
+        {
+          "block_iteration": 62,
+          "coordinate": 168809,
+          "fine_calls_after": 91,
+          "fine_calls_before": 90,
+          "letter": "P",
+          "new_u": 616032,
+          "new_v": 223953,
+          "terminal": false,
+          "u": 664724,
+          "v": 616031,
+          "z": 609581
+        },
+        {
+          "block_iteration": 63,
+          "coordinate": 217501,
+          "fine_calls_after": 93,
+          "fine_calls_before": 91,
+          "letter": "Q",
+          "new_u": 606264,
+          "new_v": 616033,
+          "terminal": false,
+          "u": 616032,
+          "v": 223953,
+          "z": 606264
+        },
+        {
+          "block_iteration": 64,
+          "coordinate": 227269,
+          "fine_calls_after": 95,
+          "fine_calls_before": 93,
+          "letter": "Q",
+          "new_u": 362350,
+          "new_v": 606265,
+          "terminal": false,
+          "u": 606264,
+          "v": 616033,
+          "z": 362350
+        },
+        {
+          "block_iteration": 700,
+          "coordinate": 108443,
+          "fine_calls_before": 1040,
+          "intermediate_u": 533020,
+          "output": {
+            "branch": "fixed_nonunit",
+            "coordinate": 300513,
+            "terminal_position": "intermediate_plus",
+            "type": "factor",
+            "value": 919
+          },
+          "terminal": true,
+          "terminal_partial_letter": "P",
+          "u": 725090,
+          "v": 533019
+        }
+      ],
+      "block_word": {
+        "bigram_counts": {
+          "PQ": 171,
+          "QP": 171
+        },
+        "counts": {
+          "P": 359,
+          "Q": 340
+        },
+        "length": 699,
+        "maximum_alternating_run": 14,
+        "maximum_same_run_by_letter": {
+          "P": 9,
+          "Q": 8
+        }
+      },
+      "cap_type": "block_iterations",
+      "equivalent_fine_F_calls": 1042,
+      "fine_trace_prefix": [
+        {
+          "F_branch": "swap_0_1",
+          "F_image": 1,
+          "coordinate": 0,
+          "fine_call": 1,
+          "next_coordinate": 2,
+          "terminal": false
+        },
+        {
+          "coordinate": 2,
+          "fine_call": 2,
+          "next_coordinate": 416765,
+          "terminal": false
+        },
+        {
+          "coordinate": 416765,
+          "fine_call": 3,
+          "next_coordinate": 277846,
+          "terminal": false
+        },
+        {
+          "coordinate": 277846,
+          "fine_call": 4,
+          "next_coordinate": 166705,
+          "terminal": false
+        },
+        {
+          "coordinate": 166705,
+          "fine_call": 5,
+          "next_coordinate": 104192,
+          "terminal": false
+        },
+        {
+          "coordinate": 104192,
+          "fine_call": 6,
+          "next_coordinate": 277848,
+          "terminal": false
+        },
+        {
+          "coordinate": 277848,
+          "fine_call": 7,
+          "next_coordinate": 75775,
+          "terminal": false
+        },
+        {
+          "coordinate": 75775,
+          "fine_call": 8,
+          "next_coordinate": 104194,
+          "terminal": false
+        },
+        {
+          "coordinate": 104194,
+          "fine_call": 9,
+          "next_coordinate": 394832,
+          "terminal": false
+        },
+        {
+          "coordinate": 394832,
+          "fine_call": 10,
+          "next_coordinate": 75773,
+          "terminal": false
+        },
+        {
+          "coordinate": 75773,
+          "fine_call": 11,
+          "next_coordinate": 361197,
+          "terminal": false
+        },
+        {
+          "coordinate": 361197,
+          "fine_call": 12,
+          "next_coordinate": 394834,
+          "terminal": false
+        },
+        {
+          "coordinate": 394834,
+          "fine_call": 13,
+          "next_coordinate": 85053,
+          "terminal": false
+        },
+        {
+          "coordinate": 85053,
+          "fine_call": 14,
+          "next_coordinate": 281932,
+          "terminal": false
+        },
+        {
+          "coordinate": 281932,
+          "fine_call": 15,
+          "next_coordinate": 113987,
+          "terminal": false
+        },
+        {
+          "coordinate": 113987,
+          "fine_call": 16,
+          "next_coordinate": 85051,
+          "terminal": false
+        },
+        {
+          "coordinate": 85051,
+          "fine_call": 17,
+          "next_coordinate": 296255,
+          "terminal": false
+        },
+        {
+          "coordinate": 296255,
+          "fine_call": 18,
+          "next_coordinate": 113985,
+          "terminal": false
+        },
+        {
+          "coordinate": 113985,
+          "fine_call": 19,
+          "next_coordinate": 209119,
+          "terminal": false
+        },
+        {
+          "coordinate": 209119,
+          "fine_call": 20,
+          "next_coordinate": 296253,
+          "terminal": false
+        },
+        {
+          "coordinate": 296253,
+          "fine_call": 21,
+          "next_coordinate": 20422,
+          "terminal": false
+        },
+        {
+          "coordinate": 20422,
+          "fine_call": 22,
+          "next_coordinate": 295464,
+          "terminal": false
+        },
+        {
+          "coordinate": 295464,
+          "fine_call": 23,
+          "next_coordinate": 296251,
+          "terminal": false
+        },
+        {
+          "coordinate": 296251,
+          "fine_call": 24,
+          "next_coordinate": 274288,
+          "terminal": false
+        },
+        {
+          "coordinate": 274288,
+          "fine_call": 25,
+          "next_coordinate": 191880,
+          "terminal": false
+        },
+        {
+          "coordinate": 191880,
+          "fine_call": 26,
+          "next_coordinate": 296249,
+          "terminal": false
+        },
+        {
+          "coordinate": 296249,
+          "fine_call": 27,
+          "next_coordinate": 17226,
+          "terminal": false
+        },
+        {
+          "coordinate": 17226,
+          "fine_call": 28,
+          "next_coordinate": 175309,
+          "terminal": false
+        },
+        {
+          "coordinate": 175309,
+          "fine_call": 29,
+          "next_coordinate": 296247,
+          "terminal": false
+        },
+        {
+          "coordinate": 296247,
+          "fine_call": 30,
+          "next_coordinate": 36342,
+          "terminal": false
+        },
+        {
+          "coordinate": 36342,
+          "fine_call": 31,
+          "next_coordinate": 154701,
+          "terminal": false
+        },
+        {
+          "coordinate": 154701,
+          "fine_call": 32,
+          "next_coordinate": 159562,
+          "terminal": false
+        },
+        {
+          "coordinate": 159562,
+          "fine_call": 33,
+          "next_coordinate": 227360,
+          "terminal": false
+        },
+        {
+          "coordinate": 227360,
+          "fine_call": 34,
+          "next_coordinate": 154699,
+          "terminal": false
+        },
+        {
+          "coordinate": 154699,
+          "fine_call": 35,
+          "next_coordinate": 217346,
+          "terminal": false
+        },
+        {
+          "coordinate": 217346,
+          "fine_call": 36,
+          "next_coordinate": 227362,
+          "terminal": false
+        },
+        {
+          "coordinate": 227362,
+          "fine_call": 37,
+          "next_coordinate": 113170,
+          "terminal": false
+        },
+        {
+          "coordinate": 113170,
+          "fine_call": 38,
+          "next_coordinate": 399842,
+          "terminal": false
+        },
+        {
+          "coordinate": 399842,
+          "fine_call": 39,
+          "next_coordinate": 227364,
+          "terminal": false
+        },
+        {
+          "coordinate": 227364,
+          "fine_call": 40,
+          "next_coordinate": 57628,
+          "terminal": false
+        },
+        {
+          "coordinate": 57628,
+          "fine_call": 41,
+          "next_coordinate": 178328,
+          "terminal": false
+        },
+        {
+          "coordinate": 178328,
+          "fine_call": 42,
+          "next_coordinate": 227366,
+          "terminal": false
+        },
+        {
+          "coordinate": 227366,
+          "fine_call": 43,
+          "next_coordinate": 144454,
+          "terminal": false
+        },
+        {
+          "coordinate": 144454,
+          "fine_call": 44,
+          "next_coordinate": 178330,
+          "terminal": false
+        },
+        {
+          "coordinate": 178330,
+          "fine_call": 45,
+          "next_coordinate": 49437,
+          "terminal": false
+        },
+        {
+          "coordinate": 49437,
+          "fine_call": 46,
+          "next_coordinate": 292632,
+          "terminal": false
+        },
+        {
+          "coordinate": 292632,
+          "fine_call": 47,
+          "next_coordinate": 267668,
+          "terminal": false
+        },
+        {
+          "coordinate": 267668,
+          "fine_call": 48,
+          "next_coordinate": 229153,
+          "terminal": false
+        },
+        {
+          "coordinate": 229153,
+          "fine_call": 49,
+          "next_coordinate": 292634,
+          "terminal": false
+        },
+        {
+          "coordinate": 292634,
+          "fine_call": 50,
+          "next_coordinate": 136578,
+          "terminal": false
+        },
+        {
+          "coordinate": 136578,
+          "fine_call": 51,
+          "next_coordinate": 198354,
+          "terminal": false
+        },
+        {
+          "coordinate": 198354,
+          "fine_call": 52,
+          "next_coordinate": 243969,
+          "terminal": false
+        },
+        {
+          "coordinate": 243969,
+          "fine_call": 53,
+          "next_coordinate": 27533,
+          "terminal": false
+        },
+        {
+          "coordinate": 27533,
+          "fine_call": 54,
+          "next_coordinate": 198356,
+          "terminal": false
+        },
+        {
+          "coordinate": 198356,
+          "fine_call": 55,
+          "next_coordinate": 61305,
+          "terminal": false
+        },
+        {
+          "coordinate": 61305,
+          "fine_call": 56,
+          "next_coordinate": 138794,
+          "terminal": false
+        },
+        {
+          "coordinate": 138794,
+          "fine_call": 57,
+          "next_coordinate": 198358,
+          "terminal": false
+        },
+        {
+          "coordinate": 198358,
+          "fine_call": 58,
+          "next_coordinate": 46975,
+          "terminal": false
+        },
+        {
+          "coordinate": 46975,
+          "fine_call": 59,
+          "next_coordinate": 138796,
+          "terminal": false
+        },
+        {
+          "coordinate": 138796,
+          "fine_call": 60,
+          "next_coordinate": 22021,
+          "terminal": false
+        },
+        {
+          "coordinate": 22021,
+          "fine_call": 61,
+          "next_coordinate": 46973,
+          "terminal": false
+        },
+        {
+          "coordinate": 46973,
+          "fine_call": 62,
+          "next_coordinate": 312028,
+          "terminal": false
+        },
+        {
+          "coordinate": 312028,
+          "fine_call": 63,
+          "next_coordinate": 366563,
+          "terminal": false
+        },
+        {
+          "coordinate": 366563,
+          "fine_call": 64,
+          "next_coordinate": 413808,
+          "terminal": false
+        }
+      ],
+      "lift": {
+        "active_at_stop": true,
+        "bit_limit": 4096,
+        "first_norm_gt_2N": {
+          "U": 1445,
+          "V": 166,
+          "letter": "P",
+          "norm": 2115581,
+          "two_N": 1667066,
+          "update_index": 18
+        },
+        "label": "adjacent_positive_blocks",
+        "last_exact_U": 28047878999615222604383988623475340041272050736104199629233412694788466503515082882371168728997707403998518453165456784409,
+        "last_exact_V": 17335598050568492928130435756593864103280893008578216263621812042029530822771720256278381380433430750940738540667544601161,
+        "maximum_bit_length_recorded": 404,
+        "positive": true,
+        "saturation": null,
+        "state_prefix": [
+          {
+            "U": 2,
+            "V": 1,
+            "letter": "initial",
+            "update_index": 0
+          },
+          {
+            "U": 3,
+            "V": 2,
+            "letter": "P",
+            "update_index": 1
+          },
+          {
+            "U": 5,
+            "V": 3,
+            "letter": "P",
+            "update_index": 2
+          },
+          {
+            "U": 3,
+            "V": 8,
+            "letter": "Q",
+            "update_index": 3
+          },
+          {
+            "U": 8,
+            "V": 11,
+            "letter": "Q",
+            "update_index": 4
+          },
+          {
+            "U": 11,
+            "V": 19,
+            "letter": "Q",
+            "update_index": 5
+          },
+          {
+            "U": 19,
+            "V": 30,
+            "letter": "Q",
+            "update_index": 6
+          },
+          {
+            "U": 49,
+            "V": 19,
+            "letter": "P",
+            "update_index": 7
+          },
+          {
+            "U": 68,
+            "V": 49,
+            "letter": "P",
+            "update_index": 8
+          },
+          {
+            "U": 49,
+            "V": 117,
+            "letter": "Q",
+            "update_index": 9
+          },
+          {
+            "U": 117,
+            "V": 166,
+            "letter": "Q",
+            "update_index": 10
+          },
+          {
+            "U": 166,
+            "V": 283,
+            "letter": "Q",
+            "update_index": 11
+          },
+          {
+            "U": 449,
+            "V": 166,
+            "letter": "P",
+            "update_index": 12
+          },
+          {
+            "U": 166,
+            "V": 615,
+            "letter": "Q",
+            "update_index": 13
+          },
+          {
+            "U": 781,
+            "V": 166,
+            "letter": "P",
+            "update_index": 14
+          },
+          {
+            "U": 166,
+            "V": 947,
+            "letter": "Q",
+            "update_index": 15
+          },
+          {
+            "U": 1113,
+            "V": 166,
+            "letter": "P",
+            "update_index": 16
+          },
+          {
+            "U": 166,
+            "V": 1279,
+            "letter": "Q",
+            "update_index": 17
+          },
+          {
+            "U": 1445,
+            "V": 166,
+            "letter": "P",
+            "update_index": 18
+          },
+          {
+            "U": 1611,
+            "V": 1445,
+            "letter": "P",
+            "update_index": 19
+          },
+          {
+            "U": 3056,
+            "V": 1611,
+            "letter": "P",
+            "update_index": 20
+          },
+          {
+            "U": 1611,
+            "V": 4667,
+            "letter": "Q",
+            "update_index": 21
+          },
+          {
+            "U": 4667,
+            "V": 6278,
+            "letter": "Q",
+            "update_index": 22
+          },
+          {
+            "U": 10945,
+            "V": 4667,
+            "letter": "P",
+            "update_index": 23
+          },
+          {
+            "U": 4667,
+            "V": 15612,
+            "letter": "Q",
+            "update_index": 24
+          },
+          {
+            "U": 20279,
+            "V": 4667,
+            "letter": "P",
+            "update_index": 25
+          },
+          {
+            "U": 4667,
+            "V": 24946,
+            "letter": "Q",
+            "update_index": 26
+          },
+          {
+            "U": 24946,
+            "V": 29613,
+            "letter": "Q",
+            "update_index": 27
+          },
+          {
+            "U": 54559,
+            "V": 24946,
+            "letter": "P",
+            "update_index": 28
+          },
+          {
+            "U": 79505,
+            "V": 54559,
+            "letter": "P",
+            "update_index": 29
+          },
+          {
+            "U": 134064,
+            "V": 79505,
+            "letter": "P",
+            "update_index": 30
+          },
+          {
+            "U": 79505,
+            "V": 213569,
+            "letter": "Q",
+            "update_index": 31
+          }
+        ],
+        "updates_recorded": 700
+      },
+      "method": "adjacent_block",
+      "moving_blocks_completed": 699,
+      "operation_counts": {
+        "block_iterations": 700,
+        "gcd_calls": 700,
+        "modular_inversions": 699,
+        "moving_blocks_completed": 699,
+        "root_tests": 700
+      },
+      "output": {
+        "branch": "fixed_nonunit",
+        "coordinate": 300513,
+        "terminal_position": "intermediate_plus",
+        "type": "factor",
+        "value": 919
+      },
+      "special_guard": null,
+      "status": "completed",
+      "walltime_seconds": 0.0014377909828908741
+    },
+    "reflection": {
+      "adjacent_even_word": {
+        "bigram_counts": {},
+        "counts": {},
+        "length": 0,
+        "maximum_alternating_run": 0,
+        "maximum_same_run_by_letter": {}
+      },
+      "adjacent_matrix_word": {
+        "bigram_counts": {},
+        "counts": {},
+        "length": 0,
+        "maximum_alternating_run": 0,
+        "maximum_same_run_by_letter": {}
+      },
+      "cap": 8192,
+      "cap_type": "fine_F_calls",
+      "fine_F_calls": 632,
+      "lift": {
+        "active_at_stop": true,
+        "bit_limit": 4096,
+        "first_norm_gt_2N": null,
+        "label": "reflection_z",
+        "last_exact_U": -11743764465895732870073016505530316390706007823802182494463668183271566940226964691097972368469674439574922804550175359167978577568549553075905978147931116878367122948050525717466646355029159045807772,
+        "last_exact_V": -2422366003595242945305989026663878318066044734044600967026938230152091090655835789523632891670059126195357392865822774733311530651389355325428147831782362163201728369800201579470167022964218710606437,
+        "maximum_bit_length_recorded": 662,
+        "positive": false,
+        "saturation": null,
+        "state_prefix": [
+          {
+            "U": -2,
+            "V": 1,
+            "letter": "initial",
+            "update_index": 0
+          },
+          {
+            "U": 4,
+            "V": -1,
+            "letter": "+",
+            "update_index": 1
+          },
+          {
+            "U": -4,
+            "V": 3,
+            "letter": "+",
+            "update_index": 2
+          },
+          {
+            "U": 12,
+            "V": -1,
+            "letter": "+",
+            "update_index": 3
+          },
+          {
+            "U": 4,
+            "V": 11,
+            "letter": "-",
+            "update_index": 4
+          },
+          {
+            "U": 44,
+            "V": 15,
+            "letter": "+",
+            "update_index": 5
+          },
+          {
+            "U": -60,
+            "V": 59,
+            "letter": "-",
+            "update_index": 6
+          },
+          {
+            "U": 236,
+            "V": -1,
+            "letter": "+",
+            "update_index": 7
+          },
+          {
+            "U": 4,
+            "V": 235,
+            "letter": "-",
+            "update_index": 8
+          },
+          {
+            "U": -940,
+            "V": 239,
+            "letter": "-",
+            "update_index": 9
+          },
+          {
+            "U": 956,
+            "V": -701,
+            "letter": "+",
+            "update_index": 10
+          },
+          {
+            "U": 2804,
+            "V": 255,
+            "letter": "-",
+            "update_index": 11
+          },
+          {
+            "U": 1020,
+            "V": 3059,
+            "letter": "+",
+            "update_index": 12
+          },
+          {
+            "U": 12236,
+            "V": 4079,
+            "letter": "+",
+            "update_index": 13
+          },
+          {
+            "U": -16316,
+            "V": 16315,
+            "letter": "-",
+            "update_index": 14
+          },
+          {
+            "U": 65260,
+            "V": -1,
+            "letter": "+",
+            "update_index": 15
+          },
+          {
+            "U": 4,
+            "V": 65259,
+            "letter": "-",
+            "update_index": 16
+          },
+          {
+            "U": 261036,
+            "V": 65263,
+            "letter": "+",
+            "update_index": 17
+          },
+          {
+            "U": 261052,
+            "V": 326299,
+            "letter": "+",
+            "update_index": 18
+          },
+          {
+            "U": 1305196,
+            "V": 587351,
+            "letter": "+",
+            "update_index": 19
+          },
+          {
+            "U": 2349404,
+            "V": 1892547,
+            "letter": "+",
+            "update_index": 20
+          },
+          {
+            "U": 7570188,
+            "V": 4241951,
+            "letter": "+",
+            "update_index": 21
+          },
+          {
+            "U": 16967804,
+            "V": 11812139,
+            "letter": "+",
+            "update_index": 22
+          },
+          {
+            "U": -47248556,
+            "V": 28779943,
+            "letter": "-",
+            "update_index": 23
+          },
+          {
+            "U": -115119772,
+            "V": -18468613,
+            "letter": "-",
+            "update_index": 24
+          },
+          {
+            "U": 73874452,
+            "V": -133588385,
+            "letter": "-",
+            "update_index": 25
+          },
+          {
+            "U": 534353540,
+            "V": -59713933,
+            "letter": "-",
+            "update_index": 26
+          },
+          {
+            "U": 238855732,
+            "V": 474639607,
+            "letter": "-",
+            "update_index": 27
+          },
+          {
+            "U": 1898558428,
+            "V": 713495339,
+            "letter": "+",
+            "update_index": 28
+          },
+          {
+            "U": -2853981356,
+            "V": 2612053767,
+            "letter": "-",
+            "update_index": 29
+          },
+          {
+            "U": -10448215068,
+            "V": -241927589,
+            "letter": "-",
+            "update_index": 30
+          },
+          {
+            "U": 967710356,
+            "V": -10690142657,
+            "letter": "-",
+            "update_index": 31
+          }
+        ],
+        "updates_recorded": 630
+      },
+      "method": "reflection",
+      "operation_counts": {
+        "gcd_calls": 631,
+        "modular_inversions": 630
+      },
+      "output": {
+        "branch": "fixed_nonunit",
+        "coordinate": 294775,
+        "type": "factor",
+        "value": 907
+      },
+      "reflection_sigma_word": {
+        "bigram_counts": {
+          "+-": 158,
+          "-+": 157
+        },
+        "counts": {
+          "+": 316,
+          "-": 314
+        },
+        "length": 630,
+        "maximum_alternating_run": 11,
+        "maximum_same_run_by_letter": {
+          "+": 10,
+          "-": 8
+        }
+      },
+      "status": "completed",
+      "trace_prefix": [
+        {
+          "F_branch": "swap_0_1",
+          "F_image": 1,
+          "coordinate": 0,
+          "fine_call": 1,
+          "next_coordinate": 416766,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 2,
+          "coordinate": 416766,
+          "fine_call": 2,
+          "next_coordinate": 416765,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 277845,
+          "coordinate": 416765,
+          "fine_call": 3,
+          "next_coordinate": 138922,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 6,
+          "coordinate": 138922,
+          "fine_call": 4,
+          "next_coordinate": 416761,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 227327,
+          "coordinate": 416761,
+          "fine_call": 5,
+          "next_coordinate": 189440,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 222274,
+          "coordinate": 189440,
+          "fine_call": 6,
+          "next_coordinate": 194493,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 197788,
+          "coordinate": 194493,
+          "fine_call": 7,
+          "next_coordinate": 218979,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 118,
+          "coordinate": 218979,
+          "fine_call": 8,
+          "next_coordinate": 416649,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 138331,
+          "coordinate": 416649,
+          "fine_call": 9,
+          "next_coordinate": 278436,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 285984,
+          "coordinate": 278436,
+          "fine_call": 10,
+          "next_coordinate": 130783,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 24971,
+          "coordinate": 130783,
+          "fine_call": 11,
+          "next_coordinate": 391796,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 356289,
+          "coordinate": 391796,
+          "fine_call": 12,
+          "next_coordinate": 60478,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 362133,
+          "coordinate": 60478,
+          "fine_call": 13,
+          "next_coordinate": 54634,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 50881,
+          "coordinate": 54634,
+          "fine_call": 14,
+          "next_coordinate": 365886,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 262041,
+          "coordinate": 365886,
+          "fine_call": 15,
+          "next_coordinate": 154726,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 32630,
+          "coordinate": 154726,
+          "fine_call": 16,
+          "next_coordinate": 384137,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 251622,
+          "coordinate": 384137,
+          "fine_call": 17,
+          "next_coordinate": 165145,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 50281,
+          "coordinate": 165145,
+          "fine_call": 18,
+          "next_coordinate": 366486,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 255039,
+          "coordinate": 366486,
+          "fine_call": 19,
+          "next_coordinate": 161728,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 108959,
+          "coordinate": 161728,
+          "fine_call": 20,
+          "next_coordinate": 307808,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 307075,
+          "coordinate": 307808,
+          "fine_call": 21,
+          "next_coordinate": 109692,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 89826,
+          "coordinate": 109692,
+          "fine_call": 22,
+          "next_coordinate": 326941,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 175665,
+          "coordinate": 326941,
+          "fine_call": 23,
+          "next_coordinate": 241102,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 82554,
+          "coordinate": 241102,
+          "fine_call": 24,
+          "next_coordinate": 334213,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 109637,
+          "coordinate": 334213,
+          "fine_call": 25,
+          "next_coordinate": 307130,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 99257,
+          "coordinate": 307130,
+          "fine_call": 26,
+          "next_coordinate": 317510,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 73724,
+          "coordinate": 317510,
+          "fine_call": 27,
+          "next_coordinate": 343043,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 374812,
+          "coordinate": 343043,
+          "fine_call": 28,
+          "next_coordinate": 41955,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 121429,
+          "coordinate": 41955,
+          "fine_call": 29,
+          "next_coordinate": 295338,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 392760,
+          "coordinate": 295338,
+          "fine_call": 30,
+          "next_coordinate": 24007,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 73642,
+          "coordinate": 24007,
+          "fine_call": 31,
+          "next_coordinate": 343125,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 175945,
+          "coordinate": 343125,
+          "fine_call": 32,
+          "next_coordinate": 240822,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 266322,
+          "coordinate": 240822,
+          "fine_call": 33,
+          "next_coordinate": 150445,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 355575,
+          "coordinate": 150445,
+          "fine_call": 34,
+          "next_coordinate": 61192,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 88663,
+          "coordinate": 61192,
+          "fine_call": 35,
+          "next_coordinate": 328104,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 29233,
+          "coordinate": 328104,
+          "fine_call": 36,
+          "next_coordinate": 387534,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 381673,
+          "coordinate": 387534,
+          "fine_call": 37,
+          "next_coordinate": 35094,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 292974,
+          "coordinate": 35094,
+          "fine_call": 38,
+          "next_coordinate": 123793,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 212637,
+          "coordinate": 123793,
+          "fine_call": 39,
+          "next_coordinate": 204130,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 96175,
+          "coordinate": 204130,
+          "fine_call": 40,
+          "next_coordinate": 320592,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 403322,
+          "coordinate": 320592,
+          "fine_call": 41,
+          "next_coordinate": 13445,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 116986,
+          "coordinate": 13445,
+          "fine_call": 42,
+          "next_coordinate": 299781,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 78287,
+          "coordinate": 299781,
+          "fine_call": 43,
+          "next_coordinate": 338480,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 381101,
+          "coordinate": 338480,
+          "fine_call": 44,
+          "next_coordinate": 35666,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 247190,
+          "coordinate": 35666,
+          "fine_call": 45,
+          "next_coordinate": 169577,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 88801,
+          "coordinate": 169577,
+          "fine_call": 46,
+          "next_coordinate": 327966,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 291810,
+          "coordinate": 327966,
+          "fine_call": 47,
+          "next_coordinate": 124957,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 262800,
+          "coordinate": 124957,
+          "fine_call": 48,
+          "next_coordinate": 153967,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 57564,
+          "coordinate": 153967,
+          "fine_call": 49,
+          "next_coordinate": 359203,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 69049,
+          "coordinate": 359203,
+          "fine_call": 50,
+          "next_coordinate": 347718,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 222904,
+          "coordinate": 347718,
+          "fine_call": 51,
+          "next_coordinate": 193863,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 293181,
+          "coordinate": 193863,
+          "fine_call": 52,
+          "next_coordinate": 123586,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 254398,
+          "coordinate": 123586,
+          "fine_call": 53,
+          "next_coordinate": 162369,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 368072,
+          "coordinate": 162369,
+          "fine_call": 54,
+          "next_coordinate": 48695,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 357874,
+          "coordinate": 48695,
+          "fine_call": 55,
+          "next_coordinate": 58893,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 150167,
+          "coordinate": 58893,
+          "fine_call": 56,
+          "next_coordinate": 266600,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 388931,
+          "coordinate": 266600,
+          "fine_call": 57,
+          "next_coordinate": 27836,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 250006,
+          "coordinate": 27836,
+          "fine_call": 58,
+          "next_coordinate": 166761,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 266608,
+          "coordinate": 166761,
+          "fine_call": 59,
+          "next_coordinate": 150159,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 413583,
+          "coordinate": 150159,
+          "fine_call": 60,
+          "next_coordinate": 3184,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 384043,
+          "coordinate": 3184,
+          "fine_call": 61,
+          "next_coordinate": 32724,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 380877,
+          "coordinate": 32724,
+          "fine_call": 62,
+          "next_coordinate": 35890,
+          "terminal": false
+        },
+        {
+          "F_branch": "scaled_inverse",
+          "F_image": 56134,
+          "coordinate": 35890,
+          "fine_call": 63,
+          "next_coordinate": 360633,
+          "terminal": false
+        },
+        {
+          "F_branch": "first_inverse",
+          "F_image": 49700,
+          "coordinate": 360633,
+          "fine_call": 64,
+          "next_coordinate": 367067,
+          "terminal": false
+        }
+      ],
+      "walltime_seconds": 0.0010374169796705246
+    }
+  },
+  "root_pair_postprocessing": {
+    "reason": "both traversals did not return square roots",
+    "status": "not_applicable"
+  },
+  "route": "route:F31",
+  "solver_isolation": "Each solver receives only public N=-a mod N and its cap. Offline factor labels classify root possibility after the run and never enter a transition or stopping test.",
+  "source_sha256": "f77289e01e29a3a8df3e88a1c60230e10ef75d2b89c41874ae3821cc48e5f6ae",
+  "status": "passed"
+}
