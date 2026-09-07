@@ -9019,3 +9019,330 @@ experiments/F321_adaptive_root_basins/RHO_WORK_REPORT.md,
 experiments/F321_adaptive_root_basins/SHA256SUMS.txt,
 experiments/F321_adaptive_root_basins/SCALE_SHA256SUMS.txt, and
 experiments/F321_adaptive_root_basins/SUPPLEMENTAL_MANIFEST.md.
+
+### C280 -- Explicit arithmetic parity paths have valid endpoints but no certified shortcut
+
+**Status:** F322 source-backed derivation and exact finite implementation.
+No independent proof reconstruction, quasipolynomial traversal bound, or
+result promotion is claimed.
+
+Jeřábek's Lemma 4.7 gives an explicit involution \(r\) on \(3N\) labeled
+residue vertices. Nonzero nonunits are fixed; every other fixed point
+decodes to a nontrivial root of one or a square root of \(a,b,\) or \(ab\).
+Composing \(r\) with the adjacent matching having one known fixed vertex
+gives an alternating path to a decoded endpoint in at most \(3N\) calls.
+Public Jacobi sampling of \(a,b\), verification, and restart turn this into
+a correct \(O(N\operatorname{poly}(\log N))\)-expected-bit factoring
+procedure, still exponential in the input length.
+
+The negation auxiliary matching keeps every nonzero path coordinate in
+\(\langle-1,a,b\rangle\), so it cannot use nonunit-coordinate endpoints.
+Generic transitions are identity transports or
+\(x\mapsto-c/x\), with
+\(c\in\{1,a^{-1},b,b^2,b/a\}\); two inverse transports compose to a
+known multiplier. This powers a prescribed word efficiently, but the
+signed branch predicates at every skipped state remain uncertified.
+
+Small checks covered 1,149 parameter pairs per matching and every state.
+On 120 labeled comparison runs, all outputs verified. The negation mean
+grew from 55.83 calls at \(N=209\) to 44,302.08 at \(N=256027\), versus
+7.33 to 372.42 for adjacent pairing. These finite values restrict only
+the named matching. The missing operation is a public matching or a
+certified actual-path macro with a quasipolynomial cost/success ratio.
+Alternatively, a randomized public short-attempt source can meet the same
+ratio without certifying the complete path.
+
+Evidence:
+experiments/F322_ppa_collision_structure/REPORT.md,
+experiments/F322_ppa_collision_structure/SOURCES.md,
+experiments/F322_ppa_collision_structure/parity_paths.py,
+experiments/F322_ppa_collision_structure/scaling.py,
+experiments/F322_ppa_collision_structure/pilot.json,
+experiments/F322_ppa_collision_structure/negation_pilot.json, and
+experiments/F322_ppa_collision_structure/scaling.json.
+
+### C281 -- WeakPigeon square collisions survive only across the tested Jacobi sheets
+
+**Status:** F323 author-derived scoped propositions and exhaustive finite
+checks. They are not independently reconstructed or promoted and do not
+give an efficient collision sampler.
+
+For \(a_0=1,a_1=a,a_2=b\), the actual source map is
+\[
+ f(i,x)=
+ \begin{cases}
+ a_ix^2\bmod N,&\gcd(x,N)=1,\\
+ x,&\text{otherwise},
+ \end{cases}
+\]
+on three copies of the positive half interval. Any collision decodes to a
+proper divisor or a root of \(a,b,\) or \(ab\). With
+\(\operatorname{Jacobi}(a,N)=1\) and
+\(\operatorname{Jacobi}(b,N)=-1\), it is a WeakFacRoot output; the
+reduction itself supplies no cheap collision source.
+
+For \(N=pq\) with \(p,q\equiv3\pmod4\), \(a=-1\), and the unit part of
+the map, every fiber has exactly two members in opposite Jacobi sheets.
+Either single Jacobi sheet is injective. On the same family,
+\[
+ \gcd(x^{2^t}-y^{2^t},N)=\gcd(x^2-y^2,N)\qquad(t\geq1),
+\]
+so further repeated squaring creates no new gcd event. A common unit seed
+also cancels exactly from every pairwise square difference. These
+statements do not cover shifted maps, adaptive histories, nonunit
+collisions, or a cross-sheet matcher.
+
+The exhaustive checker covered eight Blum inputs and three non-Blum
+controls. All Blum unit collisions crossed sheets and all tested power
+partitions were unchanged; the controls exhibited further coalescence.
+The concrete remaining operation is a succinct public cross-sheet
+correlation with a cheap collision decoder.
+
+Evidence:
+experiments/F323_weak_pigeon_sampler/REPORT.md,
+experiments/F323_weak_pigeon_sampler/probe.py,
+experiments/F323_weak_pigeon_sampler/output.json,
+experiments/F323_weak_pigeon_sampler/run.log, and
+experiments/F323_weak_pigeon_sampler/preflight.txt.
+
+### C282 -- Reflection matchings expose fractional-linear steps but no path-length law
+
+**Status:** F324 exact finite discovery and instrumentation on the unchanged
+F322 arithmetic involution. No shortcut certificate, success theorem, or
+quasipolynomial bound is claimed.
+
+For public \(C=(C_0,C_1,C_2)\), reflect layer \(e\) by
+\(x\mapsto\operatorname{rep}(C_e-x)\), join the fixed points in layers zero
+and one, and retain the layer-two fixed point as the path source. This is
+an explicit auxiliary involution with one fixed vertex. Away from swaps,
+ports, nonunits, and terminals, one arithmetic-plus-reflection step is
+\[
+ x\mapsto x+C\quad\text{or}\quad x\mapsto C-c/x.
+\]
+The corresponding translation and inverse matrices explain finite short
+runs, but were not used to skip states.
+
+Exhaustive controls checked 130,815 reflection triples over 10,033,581
+states, plus 4,016 arithmetic pairings over 295,944 states. Six public
+reflection families completed all 240 retained pilot/scale paths at
+\(N\leq256027\), always at verified factors. The negation control retained
+eleven 8,192-call censors. All 144,091 generic coordinate predictions
+passed. These samples supply neither a path distribution nor a uniform
+length bound. The missing step is a certified repeated matrix block along
+the actual sign-selected path, with all endpoint and cost effects charged;
+this is one possible shortcut. A randomized short-attempt distribution with
+a proved quasipolynomial cost/success ratio would also suffice.
+
+Evidence:
+experiments/F324_reflection_pairings/REPORT.md,
+experiments/F324_reflection_pairings/reflection_pairings.py,
+experiments/F324_reflection_pairings/pilot_output.json,
+experiments/F324_reflection_pairings/scale_output.json,
+experiments/F324_reflection_pairings/RESOURCE.md, and
+experiments/F324_reflection_pairings/SHA256SUMS.txt.
+
+### C283 -- Exact D-chain contraction changes endpoints and does not improve the tested net cost
+
+**Status:** F325 author proof, exact implementation, and finite checks.
+The modified graph and its first-exit construction are not independently
+reconstructed or promoted.
+
+In the layer-one mixed-sign set \(D^*\), including its nonunits, replace
+the source involution by \(x\leftrightarrow-x\). The complement remains
+invariant and every surviving fixed point keeps the original decoder.
+With common-one reflection, each internal \(D^*\) step translates
+\(x\mapsto x+1\). Its exact first exit is a three-variable fixed-dimensional
+integer program. Globally, deleting \(D^*\) induces an explicit matching on
+the ordered retained set
+\[
+ E=\{0\}\cup\{x\ne0:\operatorname{sgn}(x),
+ \operatorname{sgn}(ax),\operatorname{sgn}(b^{-1}x)
+ \text{ are equal}\}.
+\]
+Successor and predecessor queries use the same fixed-dimensional
+feasibility primitive without enumerating \(E\). For \(a=-1\), the whole
+layer is one known connector, but it can occur at most once on the path.
+
+All 35 macro walks exactly matched their modified micro walks and skipped
+485 expanded calls. Seventy-seven Gurobi first exits agreed with brute
+integer scans. The global matching formula passed all 224,970 retained
+states for odd \(N\leq31\). The graph change is material: original and
+modified endpoints agreed on only 27 of 35 inputs. The original used 1,411
+calls and returned 35 factors; the macro used 1,474 explicit calls plus 77
+integer programs and returned 34 factors. This finite comparison shows no
+net gain for the tested family. Gurobi supplied exactly checked finite
+candidates; it is not the arbitrary-bit Lenstra implementation used in the
+mathematical cost claim. A useful selective contraction still needs a public
+cost/success analysis and must retain any skipped endpoint effect.
+
+Evidence:
+experiments/F325_linear_patch_jumps/REPORT.md,
+experiments/F325_linear_patch_jumps/STATEMENT_ONLY.md,
+experiments/F325_linear_patch_jumps/linear_patch_jumps.py,
+experiments/F325_linear_patch_jumps/induced_matching_check.py,
+experiments/F325_linear_patch_jumps/pilot_output.json,
+experiments/F325_linear_patch_jumps/scale_output.json, and
+experiments/F325_linear_patch_jumps/SHA256SUMS.txt.
+
+### C284 -- Random-square FacRoot trials reduce the remaining requirement to an average cost-success ratio
+
+**Status:** F326 implementation and corrected finite Rabin data. P246
+separately promotes the exact Gauss-ranked involution; P02 supplies the
+hidden-root reduction. No randomized success or quasipolynomial theorem is
+claimed here.
+
+For a fixed odd \(N\) with at least two distinct prime divisors, draw
+\(r\) uniformly from \(\{1,\ldots,N-1\}\). A proper initial gcd is already
+a factor. Otherwise \(r\) is a uniform unit and \(a=r^2\bmod N\) is uniform
+over unit squares. Run a FacRoot procedure using only \(N,a\), public limits,
+and coins independent of \(r\). Verify its output; for a returned root
+\(c\), use \(\gcd(c-r,N)\).
+
+If the procedure has valid-output probability \(\delta(N)\) and expected
+bit cost \(\tau(N)\) on this random-square distribution, P02 gives attempt
+success at least \(\delta(N)/2\) and expected restart cost at most
+\[
+ \frac{2(\operatorname{poly}(\log N)+\tau(N))}{\delta(N)}. \tag{1}
+\]
+Thus one uniform quasipolynomial bound on this ratio for every fixed \(N\)
+is sufficient. The procedure need not finish quickly for every
+Jacobi-positive auxiliary \(a\). Standard preprocessing and recursive
+verification provide the all-input wrapper if (1) is proved.
+
+Uniform final square inputs are also optional. Starting from
+\(a_0=r^2\), a public adaptive procedure may choose checked units \(c_t\)
+and set \(a_{t+1}=a_tc_t^2\), while the private outer reduction retains
+\(r_t=r\prod_{j<t}c_j\). Conditional on the complete public transcript,
+the private CRT signs remain uniform among the roots of \(a_t\). Hence a
+verified returned root still yields a proper gcd with probability at least
+one half. Public filters, rescalings, failures, and root tracking must all
+be charged to \(\tau\). This root-derived extension of P02 is unpromoted
+and supplies no useful shaped distribution by itself.
+
+The exact implementation passed 625 independent Gauss-parity checks and
+all rank/select, \(F^2\), decoder, auxiliary, and path checks on 17,070
+domain points from 388 Jacobi-positive small instances. On five public
+moduli, both auxiliary matchings completed all 80 paths. The corrected
+Rabin run kept the hidden root outside path selection and used independent
+matching coins. All 160 finite trials returned verified factors: eight
+during generation, 151 directly at path endpoints, and one through the
+root-difference gcd. The 152 solver paths used 18,646 \(F\) calls and had
+no censors. This does not lower-bound \(\delta(N)\) or upper-bound
+\(\tau(N)/\delta(N)\) beyond the tested inputs.
+
+Evidence:
+experiments/F326_direct_gauss_pairing/REPORT.md,
+experiments/F326_direct_gauss_pairing/RABIN_MODE.md,
+experiments/F326_direct_gauss_pairing/RABIN_INPUT_SHAPING.md,
+experiments/F326_direct_gauss_pairing/direct_gauss_pairing.py,
+experiments/F326_direct_gauss_pairing/public_pilot_output.json,
+experiments/F326_direct_gauss_pairing/public_scale_output.json,
+experiments/F326_direct_gauss_pairing/rabin_pilot_output.json,
+experiments/F326_direct_gauss_pairing/rabin_scale_output.json,
+experiments/F326_direct_gauss_pairing/RESOURCE.md,
+experiments/F326_direct_gauss_pairing/SOURCES.md, and
+experiments/F326_direct_gauss_pairing/SHA256SUMS.txt.
+
+### C285 -- Uniform random matchings give a least-factor-scale benchmark, while structured tests remain unrun
+
+**Status:** F327 author-derived semiprime benchmark and bounded experiment
+design. P247 separately promotes the exact lazy-matching laws. No
+quasipolynomial bound or conclusion about structured matchings is claimed.
+
+Let \(M=N-\varphi(N)-1\) be the number of nonzero nonunits. For P246's
+ranked involution on a unit square \(a\), the fixed-rank and domain sizes
+satisfy
+\[
+ \frac M2+2^s-1\leq q\leq M+2^s-1,\qquad
+ \frac{N+1}{2}\leq d\leq N.
+\]
+For a squarefree semiprime \(N=p\ell\), P247 therefore gives
+\[
+ \mathbb EH=\frac{d+2}{q+2}
+ =\Theta\!\left(\frac{p\ell}{p+\ell}\right)
+ =\Theta(\min(p,\ell))
+\]
+uniformly over unit-square \(a\), while the factor probability after
+reaching a fixed endpoint lies between \(2/3\) and one. P247's fixed-input
+cap monotonicity shows that truncating this baseline cannot improve its
+local-call cost/success order. This is a conditional benchmark for the
+uniform auxiliary matching and baseline decoder. It is not a lower bound
+for structured matchings, added screens, cross-edge checks, or jumps.
+
+The retained but unrun experiment design compares F326's fixed reflection,
+uniform-center reflections \(S_j(i)=2j-i\bmod d\), and lazy uniform
+matchings on identical private-root inputs. It specifies baseline and
+static whole-edge gcd screens, exact small matching-law controls, caps
+\(4,16,64,256\), complete censor retention, and charged rank/random-bit
+costs. The generic control \(F(i)=-i\bmod d\) has one short reflection
+center and length \((d+1)/2\) at every other center; it restricts only
+generic reflection intuition. No structured F326 run was launched, so the
+next evidence must measure actual short-attempt factor probability and
+cost rather than infer it from P247.
+
+Evidence:
+experiments/F327_random_pairing_paths/REPORT.md,
+experiments/F327_random_pairing_paths/EXPERIMENT_DESIGN.md,
+experiments/F327_random_pairing_paths/STATEMENT_ONLY.md,
+experiments/F327_random_pairing_paths/RECONSTRUCTION.md, and
+experiments/F327_random_pairing_paths/SHA256SUMS.txt.
+
+### C286 -- Capped random-square paths lose observed success across the tested scales
+
+**Status:** F328 bounded seeded experiment and root-derived short-prefix
+identity. No success-probability bound, asymptotic fit, impossibility claim,
+or result promotion is made.
+
+The isolated solver receives only \(N,a\), one independent choice between
+F326's two auxiliary matchings, and a cap. It does not receive the hidden
+root or offline factors, enumerate the ranked domain, or keep a visited
+set. The experiment retained 16 private-root trials on each of two balanced
+semiprimes at target sizes 20, 28, 36, 44, 60, and 92 bits. Caps
+\(32,128,512,2048\) are exact prefixes of one path, so every shorter-cap
+success persists and every nonsuccess is charged as a censor.
+
+At cap 2,048, the factor counts and total \(F\)-calls were:
+\[
+\begin{array}{c|rrrrrr}
+\text{bits}&20&28&36&44&60&92\\ \hline
+\text{factors out of 32}&31&7&1&0&0&0\\
+F\text{-calls}&20528&54268&65172&65536&65536&65536.
+\end{array}
+\]
+Across all 192 attempts there were 39 verified factors and 153 censors,
+using 336,576 \(F\)-calls, 394,405,596 floor-sum iterations, and 130.348
+charged seconds. All successes were fixed-nonunit endpoints; this sample
+had no generation factor, root output, invalid output, or root-decoding
+failure. At caps 32, 128, and 512 the pooled success/call counts were
+\(4/6110\), \(11/23959\), and \(22/91009\). Pooling input sizes does not
+estimate a fixed-\(N\) expectation, and zero successes at the three largest
+sizes do not mean zero probability.
+
+The fair-bit sampler was emulated by separate reproducible pseudorandom
+streams; all rejection bits and matching bits were counted. Eight tiny
+solver traces agreed exactly with the validated F326 implementation.
+The 192 inputs, every batch output and censor, aggregation checks, source
+isolation, and resource measurements are retained. The longest fresh job
+took 9.870 seconds and all jobs stayed below 512 MiB.
+
+Three 28-bit trials factored by calls 7, 31, and 25. A retained elementary
+identity gives, for \(1\leq t\leq h\),
+\[
+ at\equiv1\pmod N\Rightarrow Q(t)=\lceil t/2\rceil,\qquad
+ at\equiv-1\pmod N\Rightarrow Q(t)=\lfloor t/2\rfloor.
+\]
+In particular, when \(1<a\leq h\) and
+\(t=\operatorname{rep}(a^{-1})>0\), the first two moving stages of rank
+reflection have coordinates \(0\to-1\to\lceil t/2\rceil\). This is one
+exact short prefix. It gives neither a longer path family nor a public
+occurrence probability.
+
+Evidence:
+experiments/F328_capped_rabin_paths/REPORT.md,
+experiments/F328_capped_rabin_paths/SHORT_PATHS.md,
+experiments/F328_capped_rabin_paths/capped_rabin_paths.py,
+experiments/F328_capped_rabin_paths/moduli.json,
+experiments/F328_capped_rabin_paths/aggregate_output.json,
+experiments/F328_capped_rabin_paths/check_output.json,
+experiments/F328_capped_rabin_paths/RESOURCE.md, and
+experiments/F328_capped_rabin_paths/SHA256SUMS.txt.

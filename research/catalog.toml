@@ -1752,6 +1752,22 @@ recorded_status = "promoted after fresh statement-only reconstruction and root\n
 scope = "F321's public unit-update/full-zero-rejection protocol and its\nfixed-length fiber guard. This is not a theorem about arbitrary dynamical\nalgorithms, and it proves no quasipolynomial success bound for the squarefree\nprocess."
 
 [[records]]
+id = "P246"
+kind = "result"
+title = "The all-residue Gauss domain gives a directly rankable odd FacRoot involution"
+source = { kind = "record", path = "PROVED.md", id = "P246" }
+recorded_status = "promoted after fresh statement-only reconstruction and root\ncomparison with the candidate proof. The reconstruction matches the\ncomposite and repeated-factor Gauss identity, closure, decoder, rank/select\nconstructor, division guards, and finite traversal bound."
+scope = "exactly the F326 statement for one odd \\(N>1\\) and one unit\n\\(a\\) with \\(\\operatorname{Jacobi}(a,N)=1\\). No quasipolynomial path bound,\nrandom-square success theorem, novelty claim, or factoring algorithm is\npromoted.\n\nLet \\(h=(N-1)/2\\), and let \\(\\operatorname{rep}\\) select\n\\([-h,h]\\) modulo \\(N\\). Define\n\\[\n D=\\{0,\\ldots,h\\}\\cup\n   \\{-y:1\\leq y\\leq h,\\ \\operatorname{rep}(ay)>0\\}. \\tag{1}\n\\]\nOn \\(D\\), set \\(F(0)=1,F(1)=0\\), fix every nonzero nonunit, and for a\nremaining unit \\(x\\ne1\\) put \\(w=\\operatorname{rep}(x^{-1})\\) and\n\\[\n F(x)=\n \\begin{cases}\n w,&x>0,\\ w>0,\\\\\n \\operatorname{rep}(a^{-1}w),\n   &\\operatorname{rep}(ax)<0,\\ w<0,\\\\\n -x,&\\text{otherwise}.\n \\end{cases} \\tag{2}\n\\]\nThen \\(F\\) is an involution of \\(D\\). A fixed nonunit gives\n\\(\\gcd(x,N)\\). A unit fixed in the first branch gives the proper divisor\n\\(\\gcd(x-1,N)\\). A unit fixed in the scaled-inverse branch gives\n\\(\\operatorname{rep}(x^{-1})\\), whose square is \\(a\\) modulo \\(N\\).\n\nFor \\(0\\leq t\\leq h\\), define\n\\[\n\\begin{aligned}\n K(t)&=\\sum_{y=1}^{t}\n \\left(\\left\\lfloor\\frac{ay+h}{N}\\right\\rfloor\n       -\\left\\lfloor\\frac{ay}{N}\\right\\rfloor\\right),\\\\\n Q(t)&=t-K(t),\\qquad L=Q(h),\\qquad d=L+h+1=N-K(h).\n\\end{aligned} \\tag{3}\n\\]\nMultiplication by \\(a\\) permutes all residues modulo \\(N\\). Pairing\nnonzero residues as \\(\\{y,-y\\}\\) shows that its sign is\n\\((-1)^{K(h)}\\). The prime-power permutation-sign calculation and CRT\ngive the same sign as \\(\\operatorname{Jacobi}(a,N)=1\\). Hence \\(K(h)\\)\nis even and \\(d\\) is odd.\n\nThe increasing rank \\(R:D\\to\\{0,\\ldots,d-1\\}\\) is\n\\[\n R(-y)=L-Q(y),\\qquad R(x)=L+x\\quad(x\\geq0). \\tag{4}\n\\]\nFor \\(i<L\\), binary-search the least \\(y\\) with\n\\(Q(y)\\geq L-i\\) and return \\(-y\\); for \\(i\\geq L\\), return \\(i-L\\).\nEach \\(K(t)\\) is the difference of two Euclidean floor sums\n\\[\n S(N,t,a,a+h)-S(N,t,a,a),\\qquad\n S(m,n,c,b)=\\sum_{0\\leq j<n}\n \\left\\lfloor\\frac{cj+b}{m}\\right\\rfloor. \\tag{5}\n\\]\nAfter normalization extracts quotient terms so that \\(0\\leq c,b<m\\), the\ncase \\(cn+b<m\\) is zero. When \\(c>0\\) and \\(cn+b\\geq m\\), the\nlattice-point transpose\n\\[\n S(m,n,c,b)=\n S\\!\\left(c,\\left\\lfloor\\frac{cn+b}{m}\\right\\rfloor,\n          m,(cn+b)\\bmod m\\right)\n\\]\nfollows the Euclidean algorithm; the zero-slope case terminates before\ndivision. Thus size, rank, and selection have deterministic polynomial bit\ncost without factoring \\(N\\).\n\nWrite \\(\\widehat F=RFR^{-1}\\). Two explicit involutions on the rank\ninterval have the unique fixed rank \\(L=R(0)\\):\n\n1. delete \\(L\\), pair the compressed indices by \\(j\\mapsto j\\mathbin{\\rm\n   XOR}1\\), and restore \\(L\\);\n2. set \\(A(i)=(2L-i)\\bmod d\\).\n\nStarting at \\(L\\) and alternating \\(\\widehat F\\) and either \\(A\\) reaches\nan \\(F\\)-fixed endpoint in at most \\(d\\leq N\\) calls. This gives polynomial\nspace and an \\(O(d)\\) local-evaluation bound, not a polynomial-input-length\nor quasipolynomial traversal bound.\n\nStatement-only input:\nexperiments/F326_direct_gauss_pairing/STATEMENT.md.\nCandidate proof:\nexperiments/F326_direct_gauss_pairing/PROOF.md.\nComplete independent proof:\nexperiments/F326_direct_gauss_pairing/RECONSTRUCTION.md.\nInput SHA-256:\nd672ba5f54f299aeb169692ebdcbd6e13f3690a600ec2d303344bd12a200dfa8.\nCandidate-proof SHA-256:\nf7c51e1daf31c5e8561e8cb1a81d1c5d7e88ba3e8d77cb38c2d8858f325be353.\nReconstruction SHA-256:\n7b6bc06cd895d7dceed3d8f3c4bad8de31db1d87b067d811764311e20078333b."
+
+[[records]]
+id = "P247"
+kind = "result"
+title = "Lazy uniform matching has an exact capped law for a ranked involution"
+source = { kind = "record", path = "PROVED.md", id = "P247" }
+recorded_status = "promoted after fresh statement-only reconstruction and root\ncomparison. Claim 1's random fair-bit rejection overhead is explicitly an\nexpected-time bound; it is not a deterministic per-coin-outcome bound."
+scope = "one uniformly random singleton start and a lazy uniform perfect\nmatching on the other ranks, plus F326's fixed-square application and one\nstatic whole-\\(F\\)-edge screen. No structured-matching lower bound,\nmixed-\\(a\\) cap monotonicity, or quasipolynomial cost is promoted.\n\nLet \\(F\\) be an explicitly evaluable involution on\n\\(V=\\{0,\\ldots,d-1\\}\\), where \\(d\\) is odd, and let \\(q\\) be its number\nof fixed ranks. Choose \\(j\\) uniformly, let the auxiliary involution \\(A\\)\nfix \\(j\\), and make \\(A\\) a uniform perfect matching on \\(V\\setminus\\{j\\}\\).\nStarting at \\(j\\), evaluate \\(F\\), stop when the current rank is fixed by\n\\(F\\), and otherwise follow \\(A\\). Let \\(H\\) count \\(F\\)-evaluations,\nincluding the terminal call.\n\nThe matching can be exposed lazily. Remove each current rank from the pool\nwhen it is selected, including the initial \\(j\\). After a failed call,\nremove its distinct \\(F\\)-partner, pair that partner to a fresh uniform pool\nrank, and continue there. Previously exposed failures removed\nwhole nonfixed \\(F\\)-orbits, so the partner cannot already be absent. Sparse\nforward and inverse Fisher--Yates maps with identity defaults implement the\npool in \\(O(T)\\) words through \\(T\\) calls. Balanced trees and fair-bit\nrejection give expected \\(\\operatorname{poly}(\\log d)\\) overhead per call\nand \\(O(\\log d)\\)-bit words, without depletion rejection.\n\nPut \\(m=(d-q)/2\\). After \\(k\\) failures the next stopping hazard is\n\\[\n h_k=\\frac{q}{d-2k}\\qquad(0\\leq k\\leq m).\n\\]\nWith \\(S_0=1\\),\n\\[\n S_T=\\Pr(H>T)=\n \\prod_{k=0}^{T-1}\\frac{d-q-2k}{d-2k}\n \\quad(1\\leq T\\leq m+1), \\tag{1}\n\\]\nand \\(S_T=0\\) for \\(T>m+1\\). Hence\n\\[\n \\Pr(H\\leq T)=1-S_T,\\qquad\n \\mathbb E\\min(H,T)=\\sum_{k=0}^{T-1}S_k,\\qquad\n \\mathbb EH=\\frac{d+2}{q+2}. \\tag{2}\n\\]\nConditional on \\(H\\leq T\\), the endpoint is uniform among the \\(q\\) fixed\nranks.\n\nFor fixed \\(d,q\\), the ratio\n\\[\n \\frac{\\mathbb E\\min(H,T)}{\\Pr(H\\leq T)}\n\\]\nis nonincreasing in \\(T\\). Adding one fixed nonnegative setup cost preserves\nthis monotonicity. This does not compare mixtures of input-dependent\n\\((d,q)\\), and it concerns local-call cost rather than arbitrary\npath-dependent bit costs.\n\nApply this to P246 for a fixed odd \\(N\\) with \\(s\\geq2\\) distinct prime\ndivisors and a fixed unit square \\(a\\). The unit fixed ranks consist of\n\\[\n 2^{s-1}-1\n\\]\nnontrivial positive roots of one in the first inverse branch and\n\\[\n 2^{s-1}\n\\]\nscaled-inverse points returning square roots of \\(a\\). Every other fixed\nrank is a nonunit returning a proper divisor. Conditional on \\(a\\), with a\nhidden root uniform among its \\(2^s\\) roots and independent of the matching\ncoins, P02 therefore gives the exact capped factor\nprobability\n\\[\n \\Pr(\\text{factor by }T\\mid a)\n =\\left(1-\\frac1q\\right)(1-S_T). \\tag{3}\n\\]\nNeither \\(q\\) nor the fixed ranks need be enumerated by the algorithm.\n\nMore generally, let a public history-independent screen inspect both\nendpoints of an \\(F\\)-edge. Let \\(B\\) contain all fixed ranks and both\nvertices of every nonfixed \\(F\\)-pair on which it returns a verified proper\ndivisor, and put \\(b=|B|\\). Replacing \\(q\\) by \\(b\\) in (1)--(2) gives the\nexact absorption law and uniform absorbing endpoint. The factor probability\nis at least\n\\[\n \\left(1-\\frac1b\\right)(1-S_T^{(b)}), \\tag{4}\n\\]\nwith equality when the screen does not preempt a root-producing fixed rank\nunder the specified decoder priority. Cross-edge or history-dependent\nscreens are outside this statement.\n\nStatement-only input:\nexperiments/F327_random_pairing_paths/STATEMENT_ONLY.md.\nAuthor proof and scope:\nexperiments/F327_random_pairing_paths/REPORT.md.\nComplete independent proof:\nexperiments/F327_random_pairing_paths/RECONSTRUCTION.md.\nInput SHA-256:\n46a229a44bf590989a00cabdadeb22e72b96bb90134a720222e352d3463e06a0.\nReconstruction SHA-256:\ncc4125ba5bdf5c70f29faf54a9b8970bc5505404fefdf31b15cc89fcbdfc2949."
+
+[[records]]
 id = "X01"
 kind = "closure"
 title = "generic exact linear compression of arbitrary square classes"
@@ -4360,3 +4376,52 @@ kind = "note"
 title = "Output-selected roots show finite cubic-stage behavior but lack a uniform hazard bound"
 source = { kind = "record", path = "notes/Progress.md", id = "C279" }
 recorded_status = "F321 exact public experiments, conditional field diagnostics,\nand root-derived identities. P245 separately promotes the radical-shadow\nreduction; no squarefree quasipolynomial success bound is established."
+
+[[records]]
+id = "C280"
+kind = "note"
+title = "Explicit arithmetic parity paths have valid endpoints but no certified shortcut"
+source = { kind = "record", path = "notes/Progress.md", id = "C280" }
+recorded_status = "F322 source-backed derivation and exact finite implementation.\nNo independent proof reconstruction, quasipolynomial traversal bound, or\nresult promotion is claimed."
+
+[[records]]
+id = "C281"
+kind = "note"
+title = "WeakPigeon square collisions survive only across the tested Jacobi sheets"
+source = { kind = "record", path = "notes/Progress.md", id = "C281" }
+recorded_status = "F323 author-derived scoped propositions and exhaustive finite\nchecks. They are not independently reconstructed or promoted and do not\ngive an efficient collision sampler."
+
+[[records]]
+id = "C282"
+kind = "note"
+title = "Reflection matchings expose fractional-linear steps but no path-length law"
+source = { kind = "record", path = "notes/Progress.md", id = "C282" }
+recorded_status = "F324 exact finite discovery and instrumentation on the unchanged\nF322 arithmetic involution. No shortcut certificate, success theorem, or\nquasipolynomial bound is claimed."
+
+[[records]]
+id = "C283"
+kind = "note"
+title = "Exact D-chain contraction changes endpoints and does not improve the tested net cost"
+source = { kind = "record", path = "notes/Progress.md", id = "C283" }
+recorded_status = "F325 author proof, exact implementation, and finite checks.\nThe modified graph and its first-exit construction are not independently\nreconstructed or promoted."
+
+[[records]]
+id = "C284"
+kind = "note"
+title = "Random-square FacRoot trials reduce the remaining requirement to an average cost-success ratio"
+source = { kind = "record", path = "notes/Progress.md", id = "C284" }
+recorded_status = "F326 implementation and corrected finite Rabin data. P246\nseparately promotes the exact Gauss-ranked involution; P02 supplies the\nhidden-root reduction. No randomized success or quasipolynomial theorem is\nclaimed here."
+
+[[records]]
+id = "C285"
+kind = "note"
+title = "Uniform random matchings give a least-factor-scale benchmark, while structured tests remain unrun"
+source = { kind = "record", path = "notes/Progress.md", id = "C285" }
+recorded_status = "F327 author-derived semiprime benchmark and bounded experiment\ndesign. P247 separately promotes the exact lazy-matching laws. No\nquasipolynomial bound or conclusion about structured matchings is claimed."
+
+[[records]]
+id = "C286"
+kind = "note"
+title = "Capped random-square paths lose observed success across the tested scales"
+source = { kind = "record", path = "notes/Progress.md", id = "C286" }
+recorded_status = "F328 bounded seeded experiment and root-derived short-prefix\nidentity. No success-probability bound, asymptotic fit, impossibility claim,\nor result promotion is made."

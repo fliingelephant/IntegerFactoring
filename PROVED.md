@@ -26471,3 +26471,202 @@ The matching root proof with explicit quasipolynomial envelopes and renewal
 accounting is experiments/F321_adaptive_root_basins/RADICAL_SHADOW.md.
 Focused dependency and context checks are retained in
 experiments/F321_adaptive_root_basins/SOURCE_LEADS.md.
+
+## P246 -- The all-residue Gauss domain gives a directly rankable odd FacRoot involution
+
+**Status:** promoted after fresh statement-only reconstruction and root
+comparison with the candidate proof. The reconstruction matches the
+composite and repeated-factor Gauss identity, closure, decoder, rank/select
+constructor, division guards, and finite traversal bound.
+
+**Scope:** exactly the F326 statement for one odd \(N>1\) and one unit
+\(a\) with \(\operatorname{Jacobi}(a,N)=1\). No quasipolynomial path bound,
+random-square success theorem, novelty claim, or factoring algorithm is
+promoted.
+
+Let \(h=(N-1)/2\), and let \(\operatorname{rep}\) select
+\([-h,h]\) modulo \(N\). Define
+\[
+ D=\{0,\ldots,h\}\cup
+   \{-y:1\leq y\leq h,\ \operatorname{rep}(ay)>0\}. \tag{1}
+\]
+On \(D\), set \(F(0)=1,F(1)=0\), fix every nonzero nonunit, and for a
+remaining unit \(x\ne1\) put \(w=\operatorname{rep}(x^{-1})\) and
+\[
+ F(x)=
+ \begin{cases}
+ w,&x>0,\ w>0,\\
+ \operatorname{rep}(a^{-1}w),
+   &\operatorname{rep}(ax)<0,\ w<0,\\
+ -x,&\text{otherwise}.
+ \end{cases} \tag{2}
+\]
+Then \(F\) is an involution of \(D\). A fixed nonunit gives
+\(\gcd(x,N)\). A unit fixed in the first branch gives the proper divisor
+\(\gcd(x-1,N)\). A unit fixed in the scaled-inverse branch gives
+\(\operatorname{rep}(x^{-1})\), whose square is \(a\) modulo \(N\).
+
+For \(0\leq t\leq h\), define
+\[
+\begin{aligned}
+ K(t)&=\sum_{y=1}^{t}
+ \left(\left\lfloor\frac{ay+h}{N}\right\rfloor
+       -\left\lfloor\frac{ay}{N}\right\rfloor\right),\\
+ Q(t)&=t-K(t),\qquad L=Q(h),\qquad d=L+h+1=N-K(h).
+\end{aligned} \tag{3}
+\]
+Multiplication by \(a\) permutes all residues modulo \(N\). Pairing
+nonzero residues as \(\{y,-y\}\) shows that its sign is
+\((-1)^{K(h)}\). The prime-power permutation-sign calculation and CRT
+give the same sign as \(\operatorname{Jacobi}(a,N)=1\). Hence \(K(h)\)
+is even and \(d\) is odd.
+
+The increasing rank \(R:D\to\{0,\ldots,d-1\}\) is
+\[
+ R(-y)=L-Q(y),\qquad R(x)=L+x\quad(x\geq0). \tag{4}
+\]
+For \(i<L\), binary-search the least \(y\) with
+\(Q(y)\geq L-i\) and return \(-y\); for \(i\geq L\), return \(i-L\).
+Each \(K(t)\) is the difference of two Euclidean floor sums
+\[
+ S(N,t,a,a+h)-S(N,t,a,a),\qquad
+ S(m,n,c,b)=\sum_{0\leq j<n}
+ \left\lfloor\frac{cj+b}{m}\right\rfloor. \tag{5}
+\]
+After normalization extracts quotient terms so that \(0\leq c,b<m\), the
+case \(cn+b<m\) is zero. When \(c>0\) and \(cn+b\geq m\), the
+lattice-point transpose
+\[
+ S(m,n,c,b)=
+ S\!\left(c,\left\lfloor\frac{cn+b}{m}\right\rfloor,
+          m,(cn+b)\bmod m\right)
+\]
+follows the Euclidean algorithm; the zero-slope case terminates before
+division. Thus size, rank, and selection have deterministic polynomial bit
+cost without factoring \(N\).
+
+Write \(\widehat F=RFR^{-1}\). Two explicit involutions on the rank
+interval have the unique fixed rank \(L=R(0)\):
+
+1. delete \(L\), pair the compressed indices by \(j\mapsto j\mathbin{\rm
+   XOR}1\), and restore \(L\);
+2. set \(A(i)=(2L-i)\bmod d\).
+
+Starting at \(L\) and alternating \(\widehat F\) and either \(A\) reaches
+an \(F\)-fixed endpoint in at most \(d\leq N\) calls. This gives polynomial
+space and an \(O(d)\) local-evaluation bound, not a polynomial-input-length
+or quasipolynomial traversal bound.
+
+Statement-only input:
+experiments/F326_direct_gauss_pairing/STATEMENT.md.
+Candidate proof:
+experiments/F326_direct_gauss_pairing/PROOF.md.
+Complete independent proof:
+experiments/F326_direct_gauss_pairing/RECONSTRUCTION.md.
+Input SHA-256:
+d672ba5f54f299aeb169692ebdcbd6e13f3690a600ec2d303344bd12a200dfa8.
+Candidate-proof SHA-256:
+f7c51e1daf31c5e8561e8cb1a81d1c5d7e88ba3e8d77cb38c2d8858f325be353.
+Reconstruction SHA-256:
+7b6bc06cd895d7dceed3d8f3c4bad8de31db1d87b067d811764311e20078333b.
+
+## P247 -- Lazy uniform matching has an exact capped law for a ranked involution
+
+**Status:** promoted after fresh statement-only reconstruction and root
+comparison. Claim 1's random fair-bit rejection overhead is explicitly an
+expected-time bound; it is not a deterministic per-coin-outcome bound.
+
+**Scope:** one uniformly random singleton start and a lazy uniform perfect
+matching on the other ranks, plus F326's fixed-square application and one
+static whole-\(F\)-edge screen. No structured-matching lower bound,
+mixed-\(a\) cap monotonicity, or quasipolynomial cost is promoted.
+
+Let \(F\) be an explicitly evaluable involution on
+\(V=\{0,\ldots,d-1\}\), where \(d\) is odd, and let \(q\) be its number
+of fixed ranks. Choose \(j\) uniformly, let the auxiliary involution \(A\)
+fix \(j\), and make \(A\) a uniform perfect matching on \(V\setminus\{j\}\).
+Starting at \(j\), evaluate \(F\), stop when the current rank is fixed by
+\(F\), and otherwise follow \(A\). Let \(H\) count \(F\)-evaluations,
+including the terminal call.
+
+The matching can be exposed lazily. Remove each current rank from the pool
+when it is selected, including the initial \(j\). After a failed call,
+remove its distinct \(F\)-partner, pair that partner to a fresh uniform pool
+rank, and continue there. Previously exposed failures removed
+whole nonfixed \(F\)-orbits, so the partner cannot already be absent. Sparse
+forward and inverse Fisher--Yates maps with identity defaults implement the
+pool in \(O(T)\) words through \(T\) calls. Balanced trees and fair-bit
+rejection give expected \(\operatorname{poly}(\log d)\) overhead per call
+and \(O(\log d)\)-bit words, without depletion rejection.
+
+Put \(m=(d-q)/2\). After \(k\) failures the next stopping hazard is
+\[
+ h_k=\frac{q}{d-2k}\qquad(0\leq k\leq m).
+\]
+With \(S_0=1\),
+\[
+ S_T=\Pr(H>T)=
+ \prod_{k=0}^{T-1}\frac{d-q-2k}{d-2k}
+ \quad(1\leq T\leq m+1), \tag{1}
+\]
+and \(S_T=0\) for \(T>m+1\). Hence
+\[
+ \Pr(H\leq T)=1-S_T,\qquad
+ \mathbb E\min(H,T)=\sum_{k=0}^{T-1}S_k,\qquad
+ \mathbb EH=\frac{d+2}{q+2}. \tag{2}
+\]
+Conditional on \(H\leq T\), the endpoint is uniform among the \(q\) fixed
+ranks.
+
+For fixed \(d,q\), the ratio
+\[
+ \frac{\mathbb E\min(H,T)}{\Pr(H\leq T)}
+\]
+is nonincreasing in \(T\). Adding one fixed nonnegative setup cost preserves
+this monotonicity. This does not compare mixtures of input-dependent
+\((d,q)\), and it concerns local-call cost rather than arbitrary
+path-dependent bit costs.
+
+Apply this to P246 for a fixed odd \(N\) with \(s\geq2\) distinct prime
+divisors and a fixed unit square \(a\). The unit fixed ranks consist of
+\[
+ 2^{s-1}-1
+\]
+nontrivial positive roots of one in the first inverse branch and
+\[
+ 2^{s-1}
+\]
+scaled-inverse points returning square roots of \(a\). Every other fixed
+rank is a nonunit returning a proper divisor. Conditional on \(a\), with a
+hidden root uniform among its \(2^s\) roots and independent of the matching
+coins, P02 therefore gives the exact capped factor
+probability
+\[
+ \Pr(\text{factor by }T\mid a)
+ =\left(1-\frac1q\right)(1-S_T). \tag{3}
+\]
+Neither \(q\) nor the fixed ranks need be enumerated by the algorithm.
+
+More generally, let a public history-independent screen inspect both
+endpoints of an \(F\)-edge. Let \(B\) contain all fixed ranks and both
+vertices of every nonfixed \(F\)-pair on which it returns a verified proper
+divisor, and put \(b=|B|\). Replacing \(q\) by \(b\) in (1)--(2) gives the
+exact absorption law and uniform absorbing endpoint. The factor probability
+is at least
+\[
+ \left(1-\frac1b\right)(1-S_T^{(b)}), \tag{4}
+\]
+with equality when the screen does not preempt a root-producing fixed rank
+under the specified decoder priority. Cross-edge or history-dependent
+screens are outside this statement.
+
+Statement-only input:
+experiments/F327_random_pairing_paths/STATEMENT_ONLY.md.
+Author proof and scope:
+experiments/F327_random_pairing_paths/REPORT.md.
+Complete independent proof:
+experiments/F327_random_pairing_paths/RECONSTRUCTION.md.
+Input SHA-256:
+46a229a44bf590989a00cabdadeb22e72b96bb90134a720222e352d3463e06a0.
+Reconstruction SHA-256:
+cc4125ba5bdf5c70f29faf54a9b8970bc5505404fefdf31b15cc89fcbdfc2949.

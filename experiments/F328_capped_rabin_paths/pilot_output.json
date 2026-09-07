@@ -1,0 +1,860 @@
+{
+  "caps": [
+    32,
+    128,
+    512,
+    2048
+  ],
+  "completed_trials": 2,
+  "experiment": "F328_capped_rabin_paths",
+  "f326_source_sha256": "7829cc45822021c64c42842a2c938b15c52df85e30ae694efcdd4171c5012f73",
+  "hard_timeout_seconds": 30,
+  "input_sha256": "acf09b285c57c39cfcb93d3cd77addce909498e224955fd0ec9d2e4d86ee0428",
+  "internal_timeout_seconds": 25,
+  "max_cap": 2048,
+  "memory_limit_bytes": 536870912,
+  "mode": "run",
+  "modulus": {
+    "actual_bits": 20,
+    "balance_ratio": 1.0364520048602672,
+    "generation": {
+      "p": {
+        "candidate_stream_attempts": 1,
+        "seed": 237119925569480555394708259672005125061
+      },
+      "q": {
+        "candidate_stream_attempts": 1,
+        "seed": 143541413556440442241403743489160155729
+      }
+    },
+    "modulus_id": "b20_i0",
+    "n": 702019,
+    "p_offline": 823,
+    "prime_bits": [
+      10,
+      10
+    ],
+    "q_offline": 853,
+    "target_bits": 20
+  },
+  "peak_rss_bytes": 27459584,
+  "process_walltime_seconds": 0.04930591699667275,
+  "python_version": "3.14.5",
+  "requested_trials": 2,
+  "run_label": "pilot_b20",
+  "sampling_contract": "The ideal sampler draws ceil(log2(N-1)) fair bits and rejects values outside 0..N-2, then adds one. A separate fair bit selects the matching after a unit draw. This finite run replaces the fair bits with independently seeded Python Random.getrandbits streams.",
+  "seed": 32820260907,
+  "solver_isolation": "arithmetic_walk receives only N, a, method, and cap. Hidden r remains in this outer driver. Offline p,q are retained labels only.",
+  "source_sha256": "2388f049fcd69d9cd7fd95dbaeb5b0871d14a9865c44b248258545beb272d86b",
+  "status": "passed",
+  "summary_by_cap": {
+    "128": {
+      "attempts": 2,
+      "censored_solver_attempts": 2,
+      "charged_cost_totals": {
+        "F_calls": 256,
+        "floor_sum_calls": 3186,
+        "floor_sum_euclidean_iterations": 46751,
+        "generation_gcd_calls": 2,
+        "hidden_sampling_fair_bits": 40,
+        "matching_fair_bits": 2,
+        "modular_inversion_calls": 256,
+        "root_decode_gcd_calls": 0,
+        "solver_gcd_calls": 254,
+        "total_fair_bits": 42,
+        "total_gcd_calls": 256,
+        "walltime_seconds": 0.009299708006437868
+      },
+      "generation_factor_successes": 0,
+      "matching_counts": {
+        "delete_adjacent": 1,
+        "rank_reflection": 1
+      },
+      "root_decoding_failures": 0,
+      "root_factor_successes": 0,
+      "solver_attempts": 2,
+      "total_factor_successes": 0,
+      "verified_direct_factor_outputs": 0,
+      "verified_valid_root_outputs": 0
+    },
+    "2048": {
+      "attempts": 2,
+      "censored_solver_attempts": 0,
+      "charged_cost_totals": {
+        "F_calls": 1254,
+        "floor_sum_calls": 15826,
+        "floor_sum_euclidean_iterations": 242973,
+        "generation_gcd_calls": 2,
+        "hidden_sampling_fair_bits": 40,
+        "matching_fair_bits": 2,
+        "modular_inversion_calls": 1252,
+        "root_decode_gcd_calls": 0,
+        "solver_gcd_calls": 1254,
+        "total_fair_bits": 42,
+        "total_gcd_calls": 1256,
+        "walltime_seconds": 0.04803362503298558
+      },
+      "empirical_charged_cost_per_factor": {
+        "F_calls": 627.0,
+        "floor_sum_calls": 7913.0,
+        "floor_sum_euclidean_iterations": 121486.5,
+        "generation_gcd_calls": 1.0,
+        "hidden_sampling_fair_bits": 20.0,
+        "matching_fair_bits": 1.0,
+        "modular_inversion_calls": 626.0,
+        "root_decode_gcd_calls": 0.0,
+        "solver_gcd_calls": 627.0,
+        "total_fair_bits": 21.0,
+        "total_gcd_calls": 628.0,
+        "walltime_seconds": 0.02401681251649279
+      },
+      "generation_factor_successes": 0,
+      "matching_counts": {
+        "delete_adjacent": 1,
+        "rank_reflection": 1
+      },
+      "root_decoding_failures": 0,
+      "root_factor_successes": 0,
+      "solver_attempts": 2,
+      "total_factor_successes": 2,
+      "verified_direct_factor_outputs": 2,
+      "verified_valid_root_outputs": 0
+    },
+    "32": {
+      "attempts": 2,
+      "censored_solver_attempts": 2,
+      "charged_cost_totals": {
+        "F_calls": 64,
+        "floor_sum_calls": 862,
+        "floor_sum_euclidean_iterations": 11748,
+        "generation_gcd_calls": 2,
+        "hidden_sampling_fair_bits": 40,
+        "matching_fair_bits": 2,
+        "modular_inversion_calls": 64,
+        "root_decode_gcd_calls": 0,
+        "solver_gcd_calls": 62,
+        "total_fair_bits": 42,
+        "total_gcd_calls": 64,
+        "walltime_seconds": 0.002381374011747539
+      },
+      "generation_factor_successes": 0,
+      "matching_counts": {
+        "delete_adjacent": 1,
+        "rank_reflection": 1
+      },
+      "root_decoding_failures": 0,
+      "root_factor_successes": 0,
+      "solver_attempts": 2,
+      "total_factor_successes": 0,
+      "verified_direct_factor_outputs": 0,
+      "verified_valid_root_outputs": 0
+    },
+    "512": {
+      "attempts": 2,
+      "censored_solver_attempts": 1,
+      "charged_cost_totals": {
+        "F_calls": 803,
+        "floor_sum_calls": 9922,
+        "floor_sum_euclidean_iterations": 148766,
+        "generation_gcd_calls": 2,
+        "hidden_sampling_fair_bits": 40,
+        "matching_fair_bits": 2,
+        "modular_inversion_calls": 802,
+        "root_decode_gcd_calls": 0,
+        "solver_gcd_calls": 802,
+        "total_fair_bits": 42,
+        "total_gcd_calls": 804,
+        "walltime_seconds": 0.029371250013355166
+      },
+      "empirical_charged_cost_per_factor": {
+        "F_calls": 803.0,
+        "floor_sum_calls": 9922.0,
+        "floor_sum_euclidean_iterations": 148766.0,
+        "generation_gcd_calls": 2.0,
+        "hidden_sampling_fair_bits": 40.0,
+        "matching_fair_bits": 2.0,
+        "modular_inversion_calls": 802.0,
+        "root_decode_gcd_calls": 0.0,
+        "solver_gcd_calls": 802.0,
+        "total_fair_bits": 42.0,
+        "total_gcd_calls": 804.0,
+        "walltime_seconds": 0.029371250013355166
+      },
+      "generation_factor_successes": 0,
+      "matching_counts": {
+        "delete_adjacent": 1,
+        "rank_reflection": 1
+      },
+      "root_decoding_failures": 0,
+      "root_factor_successes": 0,
+      "solver_attempts": 2,
+      "total_factor_successes": 1,
+      "verified_direct_factor_outputs": 1,
+      "verified_valid_root_outputs": 0
+    }
+  },
+  "trial_start": 0,
+  "trials": [
+    {
+      "a": 484962,
+      "accepted_factor": 853,
+      "final_status": "direct_factor",
+      "generation_factor": null,
+      "generation_gcd_calls": 1,
+      "hidden_root": 134429,
+      "hidden_sampling": {
+        "bit_width": 20,
+        "draws": 1,
+        "fair_bits": 20,
+        "rejections": 0
+      },
+      "hidden_seed": 115632093707058846112422591204587540292,
+      "matching_coin": 1,
+      "matching_fair_bits": 1,
+      "matching_seed": 326879064093027625883718318073857676287,
+      "max_cap": 2048,
+      "method": "rank_reflection",
+      "modulus_id": "b20_i0",
+      "n": 702019,
+      "offline_labels": {
+        "p_offline": 823,
+        "q_offline": 853,
+        "usage": "retained label; not supplied to arithmetic_walk"
+      },
+      "outcomes_by_cap": {
+        "128": {
+          "censored": true,
+          "costs": {
+            "F_calls": 128,
+            "floor_sum_calls": 1440,
+            "floor_sum_euclidean_iterations": 22153,
+            "generation_gcd_calls": 1,
+            "hidden_sampling_fair_bits": 20,
+            "matching_fair_bits": 1,
+            "modular_inversion_calls": 128,
+            "root_decode_gcd_calls": 0,
+            "solver_gcd_calls": 127,
+            "total_fair_bits": 21,
+            "total_gcd_calls": 128,
+            "walltime_seconds": 0.00448812497779727
+          },
+          "direct_factor": false,
+          "endpoint_step": null,
+          "factor_success": false,
+          "generation_factor": false,
+          "root_decoding_failure": false,
+          "root_factor": false,
+          "status": "censored_at_cap",
+          "unfinished_current_rank": 404564,
+          "valid_root": false
+        },
+        "2048": {
+          "censored": false,
+          "costs": {
+            "F_calls": 963,
+            "floor_sum_calls": 12174,
+            "floor_sum_euclidean_iterations": 191811,
+            "generation_gcd_calls": 1,
+            "hidden_sampling_fair_bits": 20,
+            "matching_fair_bits": 1,
+            "modular_inversion_calls": 962,
+            "root_decode_gcd_calls": 0,
+            "solver_gcd_calls": 963,
+            "total_fair_bits": 21,
+            "total_gcd_calls": 964,
+            "walltime_seconds": 0.038103750004665926
+          },
+          "direct_factor": true,
+          "endpoint_step": 963,
+          "factor_success": true,
+          "generation_factor": false,
+          "root_decoding_failure": false,
+          "root_factor": false,
+          "status": "direct_factor",
+          "unfinished_current_rank": null,
+          "valid_root": false
+        },
+        "32": {
+          "censored": true,
+          "costs": {
+            "F_calls": 32,
+            "floor_sum_calls": 436,
+            "floor_sum_euclidean_iterations": 6013,
+            "generation_gcd_calls": 1,
+            "hidden_sampling_fair_bits": 20,
+            "matching_fair_bits": 1,
+            "modular_inversion_calls": 32,
+            "root_decode_gcd_calls": 0,
+            "solver_gcd_calls": 31,
+            "total_fair_bits": 21,
+            "total_gcd_calls": 32,
+            "walltime_seconds": 0.001252040994586423
+          },
+          "direct_factor": false,
+          "endpoint_step": null,
+          "factor_success": false,
+          "generation_factor": false,
+          "root_decoding_failure": false,
+          "root_factor": false,
+          "status": "censored_at_cap",
+          "unfinished_current_rank": 133870,
+          "valid_root": false
+        },
+        "512": {
+          "censored": true,
+          "costs": {
+            "F_calls": 512,
+            "floor_sum_calls": 6270,
+            "floor_sum_euclidean_iterations": 97604,
+            "generation_gcd_calls": 1,
+            "hidden_sampling_fair_bits": 20,
+            "matching_fair_bits": 1,
+            "modular_inversion_calls": 512,
+            "root_decode_gcd_calls": 0,
+            "solver_gcd_calls": 511,
+            "total_fair_bits": 21,
+            "total_gcd_calls": 512,
+            "walltime_seconds": 0.01944137498503551
+          },
+          "direct_factor": false,
+          "endpoint_step": null,
+          "factor_success": false,
+          "generation_factor": false,
+          "root_decoding_failure": false,
+          "root_factor": false,
+          "status": "censored_at_cap",
+          "unfinished_current_rank": 427470,
+          "valid_root": false
+        }
+      },
+      "pre_solver_walltime_seconds": 2.2624997654929757e-05,
+      "root_postprocessing": null,
+      "solver": {
+        "F_calls": 963,
+        "L": 175501,
+        "a": 484962,
+        "cap": 2048,
+        "d": 526511,
+        "endpoint": {
+          "branch": "fixed_nonunit",
+          "coordinate": 252488,
+          "endpoint_type": "factor",
+          "output": {
+            "factor": 853,
+            "kind": "nonunit"
+          },
+          "rank": 427989,
+          "step": 963,
+          "verified_exactly": true
+        },
+        "final_operation_counts": {
+          "F_calls": 963,
+          "floor_sum_calls": 12174,
+          "floor_sum_euclidean_iterations": 191811,
+          "modular_inversion_calls": 962,
+          "rank_calls": 962,
+          "raw_pairing_counters": {
+            "F_calls": 963,
+            "F_gcd_calls": 962,
+            "F_modular_inversions": 961,
+            "K_calls": 6087,
+            "Q_calls": 6087,
+            "decode_calls": 1,
+            "decode_gcd_calls": 1,
+            "floor_sum_calls": 12174,
+            "floor_sum_euclidean_iterations": 191811,
+            "rank_calls": 962,
+            "select_binary_iterations": 5768,
+            "select_calls": 963,
+            "setup_modular_inversions": 1
+          },
+          "select_binary_iterations": 5768,
+          "select_calls": 963,
+          "solver_gcd_calls": 963
+        },
+        "h": 351009,
+        "method": "rank_reflection",
+        "n": 702019,
+        "prefixes": {
+          "128": {
+            "charged_F_calls": 128,
+            "current_rank_after_step": 404564,
+            "endpoint_step": null,
+            "endpoint_type": null,
+            "operation_counts": {
+              "F_calls": 128,
+              "floor_sum_calls": 1440,
+              "floor_sum_euclidean_iterations": 22153,
+              "modular_inversion_calls": 128,
+              "rank_calls": 128,
+              "raw_pairing_counters": {
+                "F_calls": 128,
+                "F_gcd_calls": 127,
+                "F_modular_inversions": 127,
+                "K_calls": 720,
+                "Q_calls": 720,
+                "floor_sum_calls": 1440,
+                "floor_sum_euclidean_iterations": 22153,
+                "rank_calls": 128,
+                "select_binary_iterations": 671,
+                "select_calls": 128,
+                "setup_modular_inversions": 1
+              },
+              "select_binary_iterations": 671,
+              "select_calls": 128,
+              "solver_gcd_calls": 127
+            },
+            "status": "censored_at_cap",
+            "walltime_seconds": 0.00446549998014234
+          },
+          "2048": {
+            "charged_F_calls": 963,
+            "current_rank_after_step": null,
+            "endpoint_step": 963,
+            "endpoint_type": "factor",
+            "operation_counts": {
+              "F_calls": 963,
+              "floor_sum_calls": 12174,
+              "floor_sum_euclidean_iterations": 191811,
+              "modular_inversion_calls": 962,
+              "rank_calls": 962,
+              "raw_pairing_counters": {
+                "F_calls": 963,
+                "F_gcd_calls": 962,
+                "F_modular_inversions": 961,
+                "K_calls": 6087,
+                "Q_calls": 6087,
+                "decode_calls": 1,
+                "decode_gcd_calls": 1,
+                "floor_sum_calls": 12174,
+                "floor_sum_euclidean_iterations": 191811,
+                "rank_calls": 962,
+                "select_binary_iterations": 5768,
+                "select_calls": 963,
+                "setup_modular_inversions": 1
+              },
+              "select_binary_iterations": 5768,
+              "select_calls": 963,
+              "solver_gcd_calls": 963
+            },
+            "status": "completed",
+            "walltime_seconds": 0.038081125007010996
+          },
+          "32": {
+            "charged_F_calls": 32,
+            "current_rank_after_step": 133870,
+            "endpoint_step": null,
+            "endpoint_type": null,
+            "operation_counts": {
+              "F_calls": 32,
+              "floor_sum_calls": 436,
+              "floor_sum_euclidean_iterations": 6013,
+              "modular_inversion_calls": 32,
+              "rank_calls": 32,
+              "raw_pairing_counters": {
+                "F_calls": 32,
+                "F_gcd_calls": 31,
+                "F_modular_inversions": 31,
+                "K_calls": 218,
+                "Q_calls": 218,
+                "floor_sum_calls": 436,
+                "floor_sum_euclidean_iterations": 6013,
+                "rank_calls": 32,
+                "select_binary_iterations": 205,
+                "select_calls": 32,
+                "setup_modular_inversions": 1
+              },
+              "select_binary_iterations": 205,
+              "select_calls": 32,
+              "solver_gcd_calls": 31
+            },
+            "status": "censored_at_cap",
+            "walltime_seconds": 0.0012294159969314933
+          },
+          "512": {
+            "charged_F_calls": 512,
+            "current_rank_after_step": 427470,
+            "endpoint_step": null,
+            "endpoint_type": null,
+            "operation_counts": {
+              "F_calls": 512,
+              "floor_sum_calls": 6270,
+              "floor_sum_euclidean_iterations": 97604,
+              "modular_inversion_calls": 512,
+              "rank_calls": 512,
+              "raw_pairing_counters": {
+                "F_calls": 512,
+                "F_gcd_calls": 511,
+                "F_modular_inversions": 511,
+                "K_calls": 3135,
+                "Q_calls": 3135,
+                "floor_sum_calls": 6270,
+                "floor_sum_euclidean_iterations": 97604,
+                "rank_calls": 512,
+                "select_binary_iterations": 2968,
+                "select_calls": 512,
+                "setup_modular_inversions": 1
+              },
+              "select_binary_iterations": 2968,
+              "select_calls": 512,
+              "solver_gcd_calls": 511
+            },
+            "status": "censored_at_cap",
+            "walltime_seconds": 0.01941874998738058
+          }
+        },
+        "setup_operation_counts": {
+          "K_calls": 1,
+          "Q_calls": 1,
+          "floor_sum_calls": 2,
+          "floor_sum_euclidean_iterations": 33,
+          "setup_modular_inversions": 1
+        },
+        "solver_interface": [
+          "n",
+          "a",
+          "method",
+          "cap"
+        ],
+        "state_scope": "The transition retains one current rank. Four fixed-size prefix snapshots are measurement output, not path-search state.",
+        "status": "completed",
+        "walltime_seconds": 0.038081125007010996
+      },
+      "target_bits": 20,
+      "trial_index": 0,
+      "walltime_seconds": 0.0381188339961227
+    },
+    {
+      "a": 270817,
+      "accepted_factor": 853,
+      "final_status": "direct_factor",
+      "generation_factor": null,
+      "generation_gcd_calls": 1,
+      "hidden_root": 531884,
+      "hidden_sampling": {
+        "bit_width": 20,
+        "draws": 1,
+        "fair_bits": 20,
+        "rejections": 0
+      },
+      "hidden_seed": 135282006760759110455298002903749134945,
+      "matching_coin": 0,
+      "matching_fair_bits": 1,
+      "matching_seed": 166835071859499479072005849696755412430,
+      "max_cap": 2048,
+      "method": "delete_adjacent",
+      "modulus_id": "b20_i0",
+      "n": 702019,
+      "offline_labels": {
+        "p_offline": 823,
+        "q_offline": 853,
+        "usage": "retained label; not supplied to arithmetic_walk"
+      },
+      "outcomes_by_cap": {
+        "128": {
+          "censored": true,
+          "costs": {
+            "F_calls": 128,
+            "floor_sum_calls": 1746,
+            "floor_sum_euclidean_iterations": 24598,
+            "generation_gcd_calls": 1,
+            "hidden_sampling_fair_bits": 20,
+            "matching_fair_bits": 1,
+            "modular_inversion_calls": 128,
+            "root_decode_gcd_calls": 0,
+            "solver_gcd_calls": 127,
+            "total_fair_bits": 21,
+            "total_gcd_calls": 128,
+            "walltime_seconds": 0.004811583028640598
+          },
+          "direct_factor": false,
+          "endpoint_step": null,
+          "factor_success": false,
+          "generation_factor": false,
+          "root_decoding_failure": false,
+          "root_factor": false,
+          "status": "censored_at_cap",
+          "unfinished_current_rank": 319586,
+          "valid_root": false
+        },
+        "2048": {
+          "censored": false,
+          "costs": {
+            "F_calls": 291,
+            "floor_sum_calls": 3652,
+            "floor_sum_euclidean_iterations": 51162,
+            "generation_gcd_calls": 1,
+            "hidden_sampling_fair_bits": 20,
+            "matching_fair_bits": 1,
+            "modular_inversion_calls": 290,
+            "root_decode_gcd_calls": 0,
+            "solver_gcd_calls": 291,
+            "total_fair_bits": 21,
+            "total_gcd_calls": 292,
+            "walltime_seconds": 0.009929875028319657
+          },
+          "direct_factor": true,
+          "endpoint_step": 291,
+          "factor_success": true,
+          "generation_factor": false,
+          "root_decoding_failure": false,
+          "root_factor": false,
+          "status": "direct_factor",
+          "unfinished_current_rank": null,
+          "valid_root": false
+        },
+        "32": {
+          "censored": true,
+          "costs": {
+            "F_calls": 32,
+            "floor_sum_calls": 426,
+            "floor_sum_euclidean_iterations": 5735,
+            "generation_gcd_calls": 1,
+            "hidden_sampling_fair_bits": 20,
+            "matching_fair_bits": 1,
+            "modular_inversion_calls": 32,
+            "root_decode_gcd_calls": 0,
+            "solver_gcd_calls": 31,
+            "total_fair_bits": 21,
+            "total_gcd_calls": 32,
+            "walltime_seconds": 0.001129333017161116
+          },
+          "direct_factor": false,
+          "endpoint_step": null,
+          "factor_success": false,
+          "generation_factor": false,
+          "root_decoding_failure": false,
+          "root_factor": false,
+          "status": "censored_at_cap",
+          "unfinished_current_rank": 210241,
+          "valid_root": false
+        },
+        "512": {
+          "censored": false,
+          "costs": {
+            "F_calls": 291,
+            "floor_sum_calls": 3652,
+            "floor_sum_euclidean_iterations": 51162,
+            "generation_gcd_calls": 1,
+            "hidden_sampling_fair_bits": 20,
+            "matching_fair_bits": 1,
+            "modular_inversion_calls": 290,
+            "root_decode_gcd_calls": 0,
+            "solver_gcd_calls": 291,
+            "total_fair_bits": 21,
+            "total_gcd_calls": 292,
+            "walltime_seconds": 0.009929875028319657
+          },
+          "direct_factor": true,
+          "endpoint_step": 291,
+          "factor_success": true,
+          "generation_factor": false,
+          "root_decoding_failure": false,
+          "root_factor": false,
+          "status": "direct_factor",
+          "unfinished_current_rank": null,
+          "valid_root": false
+        }
+      },
+      "pre_solver_walltime_seconds": 2.3792003048583865e-05,
+      "root_postprocessing": null,
+      "solver": {
+        "F_calls": 291,
+        "L": 175505,
+        "a": 270817,
+        "cap": 2048,
+        "d": 526515,
+        "endpoint": {
+          "branch": "fixed_nonunit",
+          "coordinate": 11089,
+          "endpoint_type": "factor",
+          "output": {
+            "factor": 853,
+            "kind": "nonunit"
+          },
+          "rank": 186594,
+          "step": 291,
+          "verified_exactly": true
+        },
+        "final_operation_counts": {
+          "F_calls": 291,
+          "floor_sum_calls": 3652,
+          "floor_sum_euclidean_iterations": 51162,
+          "modular_inversion_calls": 290,
+          "rank_calls": 290,
+          "raw_pairing_counters": {
+            "F_calls": 291,
+            "F_gcd_calls": 290,
+            "F_modular_inversions": 289,
+            "K_calls": 1826,
+            "Q_calls": 1826,
+            "decode_calls": 1,
+            "decode_gcd_calls": 1,
+            "floor_sum_calls": 3652,
+            "floor_sum_euclidean_iterations": 51162,
+            "rank_calls": 290,
+            "select_binary_iterations": 1732,
+            "select_calls": 291,
+            "setup_modular_inversions": 1
+          },
+          "select_binary_iterations": 1732,
+          "select_calls": 291,
+          "solver_gcd_calls": 291
+        },
+        "h": 351009,
+        "method": "delete_adjacent",
+        "n": 702019,
+        "prefixes": {
+          "128": {
+            "charged_F_calls": 128,
+            "current_rank_after_step": 319586,
+            "endpoint_step": null,
+            "endpoint_type": null,
+            "operation_counts": {
+              "F_calls": 128,
+              "floor_sum_calls": 1746,
+              "floor_sum_euclidean_iterations": 24598,
+              "modular_inversion_calls": 128,
+              "rank_calls": 128,
+              "raw_pairing_counters": {
+                "F_calls": 128,
+                "F_gcd_calls": 127,
+                "F_modular_inversions": 127,
+                "K_calls": 873,
+                "Q_calls": 873,
+                "floor_sum_calls": 1746,
+                "floor_sum_euclidean_iterations": 24598,
+                "rank_calls": 128,
+                "select_binary_iterations": 828,
+                "select_calls": 128,
+                "setup_modular_inversions": 1
+              },
+              "select_binary_iterations": 828,
+              "select_calls": 128,
+              "solver_gcd_calls": 127
+            },
+            "status": "censored_at_cap",
+            "walltime_seconds": 0.004787791025592014
+          },
+          "2048": {
+            "charged_F_calls": 291,
+            "current_rank_after_step": null,
+            "endpoint_step": 291,
+            "endpoint_type": "factor",
+            "operation_counts": {
+              "F_calls": 291,
+              "floor_sum_calls": 3652,
+              "floor_sum_euclidean_iterations": 51162,
+              "modular_inversion_calls": 290,
+              "rank_calls": 290,
+              "raw_pairing_counters": {
+                "F_calls": 291,
+                "F_gcd_calls": 290,
+                "F_modular_inversions": 289,
+                "K_calls": 1826,
+                "Q_calls": 1826,
+                "decode_calls": 1,
+                "decode_gcd_calls": 1,
+                "floor_sum_calls": 3652,
+                "floor_sum_euclidean_iterations": 51162,
+                "rank_calls": 290,
+                "select_binary_iterations": 1732,
+                "select_calls": 291,
+                "setup_modular_inversions": 1
+              },
+              "select_binary_iterations": 1732,
+              "select_calls": 291,
+              "solver_gcd_calls": 291
+            },
+            "status": "completed",
+            "walltime_seconds": 0.009906083025271073
+          },
+          "32": {
+            "charged_F_calls": 32,
+            "current_rank_after_step": 210241,
+            "endpoint_step": null,
+            "endpoint_type": null,
+            "operation_counts": {
+              "F_calls": 32,
+              "floor_sum_calls": 426,
+              "floor_sum_euclidean_iterations": 5735,
+              "modular_inversion_calls": 32,
+              "rank_calls": 32,
+              "raw_pairing_counters": {
+                "F_calls": 32,
+                "F_gcd_calls": 31,
+                "F_modular_inversions": 31,
+                "K_calls": 213,
+                "Q_calls": 213,
+                "floor_sum_calls": 426,
+                "floor_sum_euclidean_iterations": 5735,
+                "rank_calls": 32,
+                "select_binary_iterations": 202,
+                "select_calls": 32,
+                "setup_modular_inversions": 1
+              },
+              "select_binary_iterations": 202,
+              "select_calls": 32,
+              "solver_gcd_calls": 31
+            },
+            "status": "censored_at_cap",
+            "walltime_seconds": 0.0011055410141125321
+          },
+          "512": {
+            "charged_F_calls": 291,
+            "current_rank_after_step": null,
+            "endpoint_step": 291,
+            "endpoint_type": "factor",
+            "operation_counts": {
+              "F_calls": 291,
+              "floor_sum_calls": 3652,
+              "floor_sum_euclidean_iterations": 51162,
+              "modular_inversion_calls": 290,
+              "rank_calls": 290,
+              "raw_pairing_counters": {
+                "F_calls": 291,
+                "F_gcd_calls": 290,
+                "F_modular_inversions": 289,
+                "K_calls": 1826,
+                "Q_calls": 1826,
+                "decode_calls": 1,
+                "decode_gcd_calls": 1,
+                "floor_sum_calls": 3652,
+                "floor_sum_euclidean_iterations": 51162,
+                "rank_calls": 290,
+                "select_binary_iterations": 1732,
+                "select_calls": 291,
+                "setup_modular_inversions": 1
+              },
+              "select_binary_iterations": 1732,
+              "select_calls": 291,
+              "solver_gcd_calls": 291
+            },
+            "status": "completed",
+            "walltime_seconds": 0.009906083025271073
+          }
+        },
+        "setup_operation_counts": {
+          "K_calls": 1,
+          "Q_calls": 1,
+          "floor_sum_calls": 2,
+          "floor_sum_euclidean_iterations": 30,
+          "setup_modular_inversions": 1
+        },
+        "solver_interface": [
+          "n",
+          "a",
+          "method",
+          "cap"
+        ],
+        "state_scope": "The transition retains one current rank. Four fixed-size prefix snapshots are measurement output, not path-search state.",
+        "status": "completed",
+        "walltime_seconds": 0.009906083025271073
+      },
+      "target_bits": 20,
+      "trial_index": 1,
+      "walltime_seconds": 0.009940499992808327
+    }
+  ],
+  "walltime_seconds": 0.04884979099733755
+}

@@ -1,0 +1,50 @@
+F322 how-to-download-ref run
+Date: 2026-09-07 Asia/Hong_Kong
+Skill resolved path: /Users/zhou/autoresearch/IntegerFactoring/skills/how-to-download-ref
+KB: /Users/zhou/autoresearch/IntegerFactoring/.knowledge
+Input: arXiv 1207.5220
+Format: default PDF
+
+Preflight:
+- python3 pymupdf4llm: ok 1.27.2.3
+- host memory: 16 GiB; 67 percent free
+- swapins/swapouts: 0/0
+- load averages: 1.97, 1.97, 1.92
+
+Identity check before fetch:
+- exit 1: missing
+
+Fetch attempt 1 (sandboxed):
+- helper exit 0, but metadata and PDF both reported DNS failure and MISS/FAIL.
+
+Fetch attempt 2 (documented helper with approved network access):
+- HTTP 429 retry slept 5 seconds.
+- metadata: ok; abstract and open-access fields present.
+- PDF: ok.
+
+Render:
+- render.py --only-missing completed; existing papers were skipped.
+- rendered 1207.5220_integer-factoring-and-modular-square-roots.md.
+
+Citation:
+- generated key proposed and accepted: jebek_2012_integer.
+- append_bibtex.py appended the entry.
+- INDEX.md regenerated with the existing title and source note unchanged.
+
+Doctor attempt 1:
+- 2 FAIL, 0 WARN.
+- The S2-provided BibTeX omitted both arXiv and DOI identity fields, so the
+  new BibTeX entry and rendered Markdown could not be paired.
+- Explicit repair: copied eprint, archivePrefix, and DOI from the fetched
+  metadata/rendered frontmatter into this new BibTeX entry only.
+
+INDEX parameter repair:
+- The index helper adds its own generated-date prefix. The first invocation
+  supplied that prefix inside source-note and duplicated it.
+- Regenerated with canonical title "Integer Factoring references" and the
+  exact source-note argument "Research literature and full text.".
+- Final displayed line matches the pre-run canonical line exactly apart from
+  the expected regenerated entry table.
+
+Doctor attempt 2:
+- exit 0: 0 FAIL, 0 WARN.
