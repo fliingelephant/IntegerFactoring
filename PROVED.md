@@ -25467,3 +25467,255 @@ Reconstruction SHA-256:
 The numerical reference oracle and finite F301 tests are evidence for the
 implementation only. No efficient `Empty` oracle, rational-filter identity,
 or adjacent F298--F300 candidate is promoted here.
+
+## P238 -- Global dyadic inverse moments modulo M squared have a polynomial-bit residue constructor
+
+**Status:** promoted after fresh statement-only Sol reconstruction and root
+verification of the precision schedule, formal division, and full-input
+\(N\) handling.
+
+**Scope:** the global canonical inverse graph modulo \(M=2^k\), the carry
+moments \(Q_j\bmod M\), and all mixed power moments \(S_{ab}\bmod M^2\)
+through a requested degree bank. No modulo-\(M^3\) correction bank,
+Archimedean approximation, ordinary Cauchy-resolvent evaluator, rectangle
+count, or factoring algorithm.
+
+**Statement.** Let \(k\geq3\), \(M=2^k\), \(D\geq0\), and let \(N\) be
+any positive odd integer. Put
+
+\[
+ U_M=\{1,3,\ldots,M-1\},\qquad
+ v_N(u)=Nu^{-1}\bmod M\ \text{in }[1,M-1],
+\]
+
+and define, using the full integer \(N\),
+
+\[
+ q_u=\frac{u\,v_N(u)-N}{M},\qquad
+ Q_j=\sum_{u\in U_M}u^jq_u,\qquad
+ S_{ab}=\sum_{u\in U_M}u^av_N(u)^b.
+\]
+
+There is a deterministic algorithm that computes
+
+\[
+ Q_j\bmod M\quad(0\leq j\leq D),\qquad
+ S_{ab}\bmod M^2\quad(0\leq a,b\leq D)
+\]
+
+in bit complexity polynomial in \(k\), the numerical degree bound \(D\),
+and the ordinary binary length of \(N\). It does not enumerate \(U_M\) or
+the inverse graph, receive factors of \(N\), or receive a numerical-length
+unit list.
+
+The construction also includes the following uniform primitive: for every
+precision \(P\geq1\),
+
+\[
+ \Pi_M=\prod_{u\in U_M}u\pmod {2^P}
+\]
+
+is computable in bit complexity polynomial in \(k\) and \(P\), without
+enumerating \(U_M\).
+
+**Proof.** Write \(h=M/2\). For \(s\geq3\) and \(r\geq1\), put
+
+\[
+ H_r^{(s)}=\sum_{u\in U_{2^s}}u^{-r}\in\mathbb Z_2.
+\]
+
+The decomposition
+\(U_{2^{s+1}}=U_{2^s}\mathbin{\dot\cup}(U_{2^s}+2^s)\) gives
+
+\[
+ H_r^{(s+1)}
+ =2H_r^{(s)}
+ +\sum_{t\geq1}(-1)^t
+   {r+t-1\choose t}2^{st}H_{r+t}^{(s)}. \tag{1}
+\]
+
+Modulo \(2^W\), only
+\(t\leq\lfloor(W-1)/s\rfloor\) contributes. To request indices through
+\(R\) at level \(s\), set \(R_s=R\) and, backwards,
+
+\[
+ R_\ell=R_{\ell+1}+\lfloor(W-1)/\ell\rfloor
+ \quad(\ell=s-1,\ldots,3).
+\]
+
+Compute the four base inverses in \(U_8\) modulo \(2^W\), their powers
+through \(R_3\), and apply (1) forwards. The largest required index is
+polynomial in \(s,R,W\), so this computes all requested inverse power sums
+without listing a growing unit set.
+
+For power sums \(p_j=\sum_i x_i^j\) and elementary symmetric functions
+\(e_t\), Newton's identity is
+
+\[
+ t e_t=\sum_{j=1}^t(-1)^{j-1}e_{t-j}p_j. \tag{2}
+\]
+
+To obtain \(e_1,\ldots,e_T\bmod2^L\), compute the \(p_j\) modulo
+\(2^{L+\nu_2(T!)}\), and compute \(e_t\) at precision
+
+\[
+ \lambda_t=L+\nu_2(T!/t!).
+\]
+
+At step \(t\), the right side of (2) is known modulo
+\(2^{\lambda_t+\nu_2(t)}=2^{\lambda_{t-1}}\). Divide its canonical
+representative exactly by the 2-part of \(t\), then invert only the odd
+part modulo \(2^{\lambda_t}\). Thus no even integer is inverted in a
+power-of-two residue ring.
+
+Let \(G_s=\prod_{u\in U_{2^s}}u\). The same two-lift decomposition gives
+
+\[
+ G_{s+1}=G_s^2C_s,\qquad
+ C_s=\prod_{u\in U_{2^s}}(1+2^s/u). \tag{3}
+\]
+
+If \(e_t^{(s)}\) is the \(t\)-th elementary symmetric function of the
+inverse units, then modulo \(2^P\),
+
+\[
+ C_s=\sum_{t=0}^{T_s}2^{st}e_t^{(s)},\qquad
+ T_s=\min\!\left(2^{s-1},\left\lfloor\frac{P-1}{s}\right\rfloor\right).
+ \tag{4}
+\]
+
+Equations (1), (2), and (4), at precision
+\(P+\nu_2(T_s!)\), compute each correction. Starting from
+\(G_3=105\), equation (3) gives \(\Pi_M\bmod2^P\). Here
+\(T_s\leq P\), the precision is at most \(2P\), and only polynomially
+many modular operations and coefficient bits occur. This proves the unit
+product primitive.
+
+For \(n\geq1\), let \(B_j(n)=\sum_{x=0}^{n-1}x^j\). Telescoping gives
+the exact integer recurrence
+
+\[
+ B_j(n)=
+ \frac{n^{j+1}-\sum_{r=0}^{j-1}{j+1\choose r}B_r(n)}{j+1}. \tag{5}
+\]
+
+Consequently the ordinary unit power sums are
+
+\[
+ A_j=\sum_{u\in U_M}u^j=B_j(M)-2^jB_j(h). \tag{6}
+\]
+
+Apply exact integer Newton identities to \(A_j\) to obtain
+\(\alpha_t=e_t((u)_{u\in U_M})\) through
+\(E=\min(D,h)\). Apply (1) and guarded Newton identities at precision
+\(2k+\nu_2(E!)\) to obtain
+
+\[
+ \beta_t=e_t((u^{-1})_{u\in U_M})\pmod {M^2}
+ \quad(0\leq t\leq E).
+\]
+
+Set \(\alpha_0=\beta_0=1\) and both coefficient families to zero beyond
+the number \(h\) of units.
+
+Let \(\eta=N^{-1}\pmod {M^2}\), compute
+\(\pi=\Pi_M\bmod M^2\), and put
+
+\[
+\begin{aligned}
+ c&=\pi^2\eta^h\pmod {M^2},\\
+ X(T)&=\sum_{t=0}^{E}\beta_tT^t,\\
+ Y(T)&=\sum_{t=0}^{E}\alpha_t\eta^tT^t.
+\end{aligned}
+\]
+
+Since \(Y(0)=1\), formal division is valid in
+\(\mathbb Z_2[[T]]\). For
+
+\[
+ R(T)=
+ \Pi_M\frac{\prod_{u\in U_M}(T+u)}
+              {\prod_{u\in U_M}(N+Tu)}
+ \equiv\frac{cX(T)}{Y(T)}\pmod {M^2},
+\]
+
+its coefficients \(r_n=[T^n]R(T)\) through \(D\) satisfy
+
+\[
+ r_0=c,\qquad
+ r_n=c\beta_n-
+ \sum_{t=1}^{\min(n,E)}\alpha_t\eta^t r_{n-t}
+ \pmod {M^2}. \tag{7}
+\]
+
+This remains a polynomial-size truncated computation when \(D>h\).
+
+The map \(u\mapsto v_N(u)\) permutes \(U_M\) and is an involution. The
+definition of \(q_u\) gives
+
+\[
+ 1+\frac{Mq_u}{N+Tu}
+ =\frac{u(T+v_N(u))}{N+Tu}.
+\]
+
+Multiplying over \(U_M\) proves the displayed product formula for \(R\).
+Modulo \(M^2\), products of two correction terms vanish, hence
+
+\[
+ R(T)-1\equiv
+ M\sum_{u\in U_M}\frac{q_u}{N+Tu}\pmod {M^2}. \tag{8}
+\]
+
+Let \(d_0=(r_0-1)\bmod M^2\), and let \(d_j=r_j\) for \(j\geq1\),
+using representatives in \([0,M^2-1]\). Coefficient extraction in (8)
+shows that each \(d_j\) is divisible by \(M\) and gives
+
+\[
+ Q_j=(-1)^jN^{j+1}(d_j/M)\pmod M. \tag{9}
+\]
+
+This is exact integer division, not inversion of \(M\).
+
+For \(a\geq b\geq1\), put \(j=a-b\). The identity
+\(uv_N(u)=N+Mq_u\) gives
+
+\[
+ S_{ab}=N^bA_j+bMN^{b-1}Q_j\pmod {M^2}. \tag{10}
+\]
+
+The involution gives \(S_{ab}=S_{ba}\), while an exponent zero gives
+\(S_{a0}=A_a\) and \(S_{0b}=A_b\). This includes \(D=0\).
+
+The full \(N\) in \(q_u\) is essential: replacing \(N\) by \(N-cM\)
+leaves \(v_N(u)\) and every \(S_{ab}\) unchanged, but changes \(q_u\)
+by \(c\) and \(Q_j\) by \(cA_j\). The construction retains \(N\bmod
+M^2\), which is sufficient for \(Q_j\bmod M\); it does not silently
+replace the carry definition by one using only \(N\bmod M\).
+
+The exact ordinary coefficients have \(O(Dk)\)-bit size. The reciprocal
+precision is at most \(2k+E\), the inverse-sum index bank is polynomial in
+\(k,D\), and (7) and (10) use \(O(D^2)\) modular operations. The exponent
+\(h=2^{k-1}\) has \(k\) bits. Reducing the binary input \(N\) modulo the
+needed powers of two, inversion, and modular powering all have polynomial
+bit cost. This proves the stated uniform bound.
+
+Independent proof:
+experiments/F303_global_moment_precision/MOMENT_RECONSTRUCTION.md.
+Statement-only input:
+experiments/F303_global_moment_precision/MOMENT_STATEMENT_ONLY.md.
+Input SHA-256:
+568441f2eebe3f519c356a4d0fe3cf43ac7243ede4a0e229f18683862f1f5b95.
+Reconstruction SHA-256:
+604a19e1cda14356b13e6e7bdc704e7a85fc3fc448fcb842c2ed6ed08a555450.
+
+Author derivation and finite evidence:
+experiments/F303_global_moment_precision/REPORT.md, UNIT_PRODUCTS.md,
+moment_precision.py, moment_precision.json, and moment_precision.log.
+
+Andreica, *The Scientific World Journal* (2013), Article 751358,
+already gives a non-enumerative power-sum/Newton algorithm for the odd
+unit product in its stated precision range. Neither the unit-product
+primitive nor this mixed-moment construction carries a novelty claim.
+The closed-form modulo-\(M^2\) refinement, higher-precision carry
+corrections, exponent-derivative identities, and finite Mahler evidence
+are not promoted by this record.

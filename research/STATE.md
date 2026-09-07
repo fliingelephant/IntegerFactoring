@@ -1,88 +1,82 @@
 # Research State
 
-Updated 2026-09-07 during the fifth authorized Astra research cycle. The
-goal is active. The root read notes/Zhihu.md and notes/Inspirations.md in full
-at launch; their claims remain motivation, not assumptions.
+Updated 2026-09-07 after the sixth authorized Astra research cycle. The
+goal remains active. This snapshot distinguishes proved modular residue
+constructors from the ordinary-coordinate accuracy still needed for
+factoring.
 
-## Target
+## Target and promoted interfaces
 
 STATEMENT.md fixes the all-input classical Las Vegas quasipolynomial
-bit-complexity target. No algorithm meeting that target is established.
-P232--P237 are scoped supporting results. P237 is the current all-input
-conditional interface; C259--C262 retain adjacent author-derived claims and
-finite evidence.
+factorization target. No algorithm meeting that target is established.
 
-## Current results
-
-| Packet / record | Result and scope | Remaining question |
+| Record | Exact scope | Missing operation |
 | --- | --- | --- |
-| F288--F292, P235--P236 | A succinct 1.01-relative dyadic support optimizer would factor odd composites, and one rational-root quadratic-Gauss/exponential-Cauchy kernel has an output-sensitive polynomial-bit algorithm conditional on Hiary 2011, Theorem 1.1. | Neither result supplies an all-input support or rectangle oracle. P236 covers no whole outer family or ordinary-coordinate mixed resolvent. |
-| F298, C259, route:F31 | The global quadratic two-window family has an exact four-child parity recurrence with cheap boundary corrections. | Bound the number of distinct signed child states; closure of the family alone gives no QP cost. |
-| F299, C260, route:F31 | The common-conductor all-frequency identity is exact, but every faithful halfbox class collapses to one affine half-window and the full class family is exactly P235's existing cover. | No new asymptotic class aggregation or public short-window interface results; Barvinok is unnecessary. |
-| F300, C261, route:F31 | A complete Gauss-weighted Salié sum is polynomial-bit evaluable. Adding one or two exponential Cauchy denominators leaves a Fourier-weighted quadratic digit, with only a partial parity descent. | Evaluate the retained odd-frequency triangular digit and still assemble the original chart/window geometry. |
-| F301, P237, C262, route:F31 | A succinct modular rectangle-emptiness oracle of cost \(T(n)\) would completely factor every integer with \(O(n^2)\) calls and cost \(O(n^2T(n)+\operatorname{poly}(n))\). Bounded rational windows reduce each public rectangle to polynomially many calls to one global mixed ordinary-Cauchy kernel. | Construct a uniform QP evaluator for that kernel; the numerical Empty oracle and rational filters do not supply one. |
+| P237 | A succinct modular rectangle-emptiness oracle would completely factor every integer with \(O(n^2)\) calls and polynomial additional work. It covers primes, prime powers, repeated factors, even inputs, and unbalanced composites. | No uniform efficient implementation of the rectangle oracle. |
+| P238 | For \(M=2^k\), \(k\geq3\), positive odd \(N\), and a degree bank \(D\), all \(Q_j\bmod M\) and \(S_{ab}\bmod M^2\) are deterministically computable in bit complexity polynomial in \(k,D,\operatorname{bitlength}(N)\). The unit product \(\Pi_M\bmod2^P\) is also non-enumeratively computable. | No higher carry-precision bank and no Archimedean evaluation of the ordinary Cauchy kernel. |
 
-P237 passed a fresh statement-only Sol reconstruction and root scope check.
-The statement SHA-256 is
-e6a68b51f1dc7f0820741b290c916f4318a126d4932ae3a12da3cab28777623d,
-and the reconstruction SHA-256 is
-76aea453f4c0e5cbdb759982afe78939d0c6dfcc7c7fcc7cec0999e700975fa7.
-It covers primes, prime powers, repeated factors, even inputs, and unbalanced
-composites. It promotes no efficient Empty implementation or rational
-filter theorem.
+P237 remains the actual all-input conditional factoring interface. P238 is
+a global modular primitive. It does not implement P237's oracle.
 
-## Actual bottleneck
+P238 passed a fresh statement-only Sol reconstruction and root scope check.
+Its input SHA-256 is
+568441f2eebe3f519c356a4d0fe3cf43ac7243ede4a0e229f18683862f1f5b95,
+and its reconstruction SHA-256 is
+604a19e1cda14356b13e6e7bdc704e7a85fc3fc448fcb842c2ed6ed08a555450.
+The full integer \(N\) is retained in the carry
+\(q_u=(u(Nu^{-1}\bmod M)-N)/M\). Reducing \(N\bmod M\) leaves
+\(S_{ab}\) unchanged but changes \(Q_j\).
 
-For the current rectangle route, the missing operation is a uniform
-quasipolynomial-bit evaluator for
+## Sixth-cycle findings
+
+F301 and C262 reduce each public rectangle to polynomially many evaluations
+of
 
 \[
  Z_{N,M}(z,w)=
  \sum_{\substack{1\leq u<M\\u\ {\rm odd}}}
- \frac{1}{(u-z)((Nu^{-1}\bmod M)-w)},
+ \frac{1}{(u-z)((Nu^{-1}\bmod M)-w)}
 \]
 
-where \(M\) is the largest power of two at most \(N/8\). F301's interval
-filters have degree \(O(n^2)\), half-integer real pole coordinates, explicit
-polynomial-size conditioning, and rigorous count error at most \(1/8\).
-Their pole expansion needs \(O(n^4)\) mixed calls per rectangle, hence
-\(O(n^6)\) calls over P237's complete factorization, up to fixed polynomial
-factors. No fast evaluator for \(Z_{N,M}\) is known in this work.
+at ordinary half-integer pole coordinates and specified absolute precision.
 
-This is a sum over the whole original inverse graph with ordinary coordinate
-denominators. P236 instead treats a quadratic exponential phase and a
-root-of-unity denominator; applying it here requires a new proved
-transformation.
+F302 and C263 give an exact half-modulus lift of this resolvent. Far poles
+admit a certified \(O(\log M)\)-degree Taylor bank. The public near poles
+require local boxes, whose zeroth joint moments are already the selected
+inverse-graph half-counts. The lift reorganizes this operation but does not
+compute it.
 
-The older chart route retains two separate scope gaps. F294, F298, and F300
-work inside one odd \(u_0\)-chart for original modulus \(m^3\), with
-\(q=m^2\) internal and full cyclic half-windows. Summing internal frequencies
-still leaves \(m/2\) chart classes and the change to the factor-isolating
-short windows. F299 reorganizes the faithful classes but proves that they
-are exactly P235's existing affine cover. F301 reaches the actual
-\(M=\Theta(N)\) public rectangles directly; only their global mixed kernel
-remains unimplemented.
+F303 and P238 compute every bounded-degree global mixed moment through two
+base-\(M\) digits. C264 retains direct off-diagonal and diagonal formulas,
+plus the exact next correction \(Q_{j,2}/2\bmod M\). When available, that
+correction determines \(S_{11}\bmod M^3\), and the range of \(S_{11}\)
+then makes this one moment exact. One exact \(S_{11}\) is not the whole
+mixed Cauchy kernel or its required absolute-accuracy evaluation.
 
-## Verification and resources
+The tested high-input block average loses its apparent extra precision
+after correction and division. The tested order-63 input-Mahler cutoff
+fails modulo 4 at \(M=4096\). The exponent derivative obeys
+\(L'(0)=(\log_{\rm adic}(N)/2)L(0)\) and adds no independent quadratic
+carry equation. These are scoped results for those operations, not general
+lower bounds.
 
-All F298--F301 numerical jobs are complete and retain sources, outputs, logs,
-timeouts, and resource measurements. F301's reference implementation matched trial
-division on 4,095 consecutive and 120 seeded inputs. Its rational filters
-passed 131,064 exact integer checks and 67 certified original rectangles;
-the pole pilot isolated 93 positive roots and passed 24 partial-fraction
-checks. These are finite evidence, not asymptotic algorithms.
+Andreica, *The Scientific World Journal* (2013), Article 751358, already
+gives a non-enumerative power-sum/Newton algorithm for the odd unit product
+in its stated precision range. No novelty claim is made for the unit-product
+primitive or the F303 mixed-moment identities.
 
-The retained F289 scaling JSON reports 16 exact and 8 budget-exhausted
-queries. An earlier 15/9 run has no surviving full JSON and was not
-reconstructed. P232--P237 have independent statement-only reconstructions
-and root scope checks. No graph relation follows from a textual mention.
+## Evidence and restart point
 
-Use the Rust reader for older heads and bodies. Creative route work belongs
-to Astra; blind reconstruction uses fresh Sol contexts. Follow PROMPT.md.
+All sixth-cycle jobs are complete. F302 retained 12 exact lift checks and
+eight certified far-pole bounds. F303 retained 3,248 modulo-\(M^2\) mixed
+checks, 3,248 corrected modulo-\(M^3\) checks, 2,320 weighted-carry checks,
+large non-enumerative evaluations at \(k=32,64,128\), 12 sparse closed-form
+controls, and 16 guarded exponent-derivative checks. Finite checks support
+the implementations; they do not prove an ordinary resolvent algorithm.
 
-## Next operation
-
-Construct and verify one uniform recurrence or evaluator for \(Z_{N,M}(z,w)\)
-at F301's pole locations and required precision. It must group all odd
-\(u<M\) without enumerating graph points or a numerical family of local
-charts.
+The next operation is to construct a higher-precision, window-compatible
+global aggregation for \(Z_{N,M}(z,w)\), or an equivalent evaluator at the
+F301 poles and error budget. It must retain the selected window and enough
+carry precision without enumerating graph points, local boxes, or a
+numerical family of charts. Existing congruences and global low-digit
+moments must not be counted as a solved \(Z\).

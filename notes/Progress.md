@@ -7765,3 +7765,194 @@ experiments/F301_factor_rectangles/REPORT.md, RATIONAL_FILTERS.md,
 factor_rectangles.py, output.json, run.log, rational_filters.py/json/log,
 rational_filters.status.json, rational_poles.py/json,
 rational_poles_fixed.log, and rational_poles_fixed.status.json.
+
+### C263 -- The ordinary-resolvent lift gives a Taylor bank but retains the selected half-count
+
+**Status:** root-derived exact lift, certified rational error bounds, and
+finite exact checks. Independent reconstruction is pending.
+
+**Scope:** the F302 original dyadic inverse graph, its ordinary Cauchy
+resolvent lift to half modulus, the far-pole Taylor bank, and the first
+retained signed and unsigned moments. No constructor for the local moment
+banks, public near-pole evaluator, global resolvent, or factoring algorithm.
+
+**Discussion.** Write \(M=2L\), with \(L\) even. For each odd
+\(1\leq a<L\), let \(b=Na^{-1}\bmod L\) and
+\(c=(N-ab)/L\bmod2\). The two lifts to the graph modulo \(M\) are
+
+\[
+ (a+Lr,\ b+L(r\mathbin{\mathsf{xor}}c)),\qquad r\in\{0,1\}.
+\]
+
+With \(\sigma=(-1)^c\),
+
+\[
+ S_z(a)=\frac1{a-z}+\frac1{a+L-z},\qquad
+ D_z(a)=\frac1{a-z}-\frac1{a+L-z},
+\]
+
+the original ordinary-coordinate resolvent satisfies
+
+\[
+ Z_{N,2L}(z,w)
+ =\frac12\sum_a
+ \left(S_z(a)S_w(b)+\sigma D_z(a)D_w(b)\right). \tag{1}
+\]
+
+Thus the lift produces four ordinary and four signed lower-modulus
+resolvents. The signed object keeps \(N\bmod2L\); lowering only the point
+coordinates to modulus \(L\) does not remove the carry character.
+
+Center the lower coordinates at \(L/2\), with radius \(R=L/2\). If the
+imaginary pole heights satisfy \(y_z,y_w>R\), a \(K\)-term reciprocal
+expansion has errors
+
+\[
+ E_z=\frac{(R/y_z)^K}{y_z(1-R/y_z)},\qquad
+ E_w=\frac{(R/y_w)^K}{y_w(1-R/y_w)}.
+\]
+
+The complete lifted resolvent error is at most
+
+\[
+ B_K=L\left(\frac{E_z}{y_w}
+ +\frac{E_w}{y_z(1-R/y_z)}\right). \tag{2}
+\]
+
+Consequently, heights at least \(M\) and \(K=O(\log M)\) reduce the
+evaluation to \(2K^2\) ordinary and signed scalar moments. This is an
+evaluation statement given those moments. It does not construct them.
+The public F301 poles also have heights of order \(1/\log M\), where this
+global expansion does not contract. Local geometric partitions restore
+Taylor convergence, but their zeroth joint moments are the original
+inverse-graph rectangle counts.
+
+The first signed moment already retains the selected half-count:
+
+\[
+ \tau_{00}=2C_M(N)-L/2. \tag{3}
+\]
+
+The first uncentered unsigned mixed moment retains the same count:
+
+\[
+ \mu_{11}(M)=2\mu_{11}(L)+L^3/2+L^2C_M(N). \tag{4}
+\]
+
+For \(M=32\), the inputs \(N=481\) and \(N=497\) have identical lower
+graphs but selected counts \(6\) and \(2\), giving
+\(\tau_{00}=4\) and \(-4\). This is the remaining operation in this
+specific Taylor-bank lift, not a lower bound on other global methods.
+
+The exact pilot passed 12 lift identities and eight far-pole
+\(M^{-6}\) bounds. Its four probes of F301 pole intervals retain exact
+rational midpoints; they do not identify those midpoints with the
+algebraic poles. Evidence:
+experiments/F302_resolvent_lift/RESULT.md, pilot.py, output.json, run.log,
+and RESOURCE.md.
+
+### C264 -- Global residue formulas expose a separate third-digit carry bank
+
+**Status:** P238 promotes only the reconstructed modulo-\(M^2\) constructor.
+The closed forms, higher-precision identities, finite Mahler separation,
+and exponent-derivative dependency below are root-derived exact results or
+finite evidence and are not part of that promotion.
+
+**Scope:** F303 on the global canonical inverse graph for \(M=2^k\),
+\(k\geq3\), and positive odd \(N\). This note records the direct
+modulo-\(M^2\) formulas, the next \(Q_{j,2}/2\) precision bank, two tested
+ways that do not recover it, and the primary-source overlap. No ordinary
+Cauchy-resolvent accuracy, rectangle count, or factoring algorithm.
+
+**Discussion.** Put
+
+\[
+ A_j=\sum_{u\ {\rm odd}<M}u^j,\quad
+ \Pi_M=\prod_{u\ {\rm odd}<M}u,\quad
+ q_u=\frac{u(Nu^{-1}\bmod M)-N}{M}.
+\]
+
+The full integer \(N\) is retained in \(q_u\). Replacing \(N\) by
+\(N-cM\) leaves the canonical inverse points and every \(S_{ab}\)
+unchanged, but sends \(q_u\) to \(q_u+c\) and changes the carry moments.
+
+P238 uses the reconstructed truncated-product proof. A separate
+simplification gives direct formulas. For \(a>b\geq0\), \(j=a-b\),
+
+\[
+ S_{ab}=
+ \frac{aN^bA_j-bN^aA_{-j}}{j}\pmod {M^2}, \tag{1}
+\]
+
+where the numerator must be computed modulo
+\(2^{2k+\nu_2(j)}\) before exact division by the 2-part of \(j\).
+For \(a=b=t\geq0\),
+
+\[
+ S_{tt}=(M/2-t)N^t+t\Pi_M^2N^{t-M/2}\pmod {M^2}. \tag{2}
+\]
+
+These formulas use the same universal unit power sums and unit product.
+They do not supply higher digits.
+
+For \(a\geq b\geq1\), \(j=a-b\), the exact next correction is
+
+\[
+ S_{ab}=N^bA_j+bMN^{b-1}L_j
+ +\frac{abM^2}{2}N^{b-2}Q_{j,2}\pmod {M^3}, \tag{3}
+\]
+
+where \(Q_{j,2}=\sum_u u^jq_u^2\) is even. When \(ab\) is odd, the
+needed datum is \(Q_{j,2}/2\bmod M\), equivalently
+\(Q_{j,2}\bmod2M\). Knowing only \(Q_{j,2}\bmod M\) loses one bit.
+For \(S_{11}\), this correction would give the full residue modulo
+\(M^3\); since \(0\leq S_{11}<M^3/2\), that residue would determine
+\(S_{11}\) exactly. This single exact moment is still not the whole
+ordinary Cauchy kernel or its required absolute-accuracy evaluation.
+
+For a power of two \(R\), the exact high-input average
+
+\[
+ \sum_{t=0}^{R-1}S_{11}(MR,N+Mt)
+ =R^2S_{11}(M,N)+M^3R^2(R^2-1)/8 \tag{4}
+\]
+
+does not gain a base-\(M\) digit: reduction modulo \((MR)^2\), correction,
+and division by \(R^2\) return only \(S_{11}\bmod M^2\).
+
+The retained input-Mahler test also does not justify a fixed cutoff. At
+\(M=4096\), the order-64 coefficients of \(E_2\) and the normalized
+residual have 2-adic valuation \(1\), so truncation at order 63 fails even
+modulo 4 at the tested next input. This is a finite separation for that
+cutoff, not a lower bound on other representations.
+
+The exponent variation supplies no independent quadratic-carry equation.
+With the 2-adic unit logarithm, \(\lambda=\log_{\rm adic}(N)\), the
+computable family obeys
+
+\[
+ L(-t)=\exp(-t\lambda)L(t),\qquad
+ L'(0)=\frac{\lambda}{2}L(0). \tag{5}
+\]
+
+All 16 guarded finite-difference checks passed while
+\(Q_{0,2}/2\bmod M\) and \(e_2\bmod M\) were nonzero on 15 inputs.
+For \(M=32,N=289\), the derivative residual is zero, but
+\(Q_{0,1}=2\), \(Q_{0,2}=1090\), \(e_2=1\bmod32\), and
+\(S_{11}=4688\).
+Dropping the quadratic correction gives 3664; its contribution 1024
+recovers 4688.
+
+Andreica, *The Scientific World Journal* (2013), Article 751358, already
+gives a non-enumerative power-sum/Newton algorithm for the odd unit product
+in its stated precision range. F303 makes no novelty claim for that
+primitive or for its mixed-moment identities. The checked Cochrane and
+higher-Wilson sources identify related congruences but do not state P238's
+full uniform mixed-moment algorithm.
+
+Evidence:
+experiments/F303_global_moment_precision/REPORT.md, CLOSED_FORM.md,
+UNIT_PRODUCTS.md, EXPONENT_DERIVATIVE.md, SOURCE_LEADS.md,
+MOMENT_RECONSTRUCTION.md, moment_precision.py/json/log,
+closed_form_controls.py/json/log, and
+exponent_derivative.py/json/log/status.

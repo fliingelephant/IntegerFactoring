@@ -1689,6 +1689,14 @@ recorded_status = "promoted after fresh statement-only Sol reconstruction and ro
 scope = "a conditional all-input reduction from complete integer\nfactorization to the stated succinct modular rectangle-emptiness oracle. No\nefficient implementation of that oracle, support optimizer, or rational-filter\nevaluation theorem."
 
 [[records]]
+id = "P238"
+kind = "result"
+title = "Global dyadic inverse moments modulo M squared have a polynomial-bit residue constructor"
+source = { kind = "record", path = "PROVED.md", id = "P238" }
+recorded_status = "promoted after fresh statement-only Sol reconstruction and root\nverification of the precision schedule, formal division, and full-input\n\\(N\\) handling."
+scope = "the global canonical inverse graph modulo \\(M=2^k\\), the carry\nmoments \\(Q_j\\bmod M\\), and all mixed power moments \\(S_{ab}\\bmod M^2\\)\nthrough a requested degree bank. No modulo-\\(M^3\\) correction bank,\nArchimedean approximation, ordinary Cauchy-resolvent evaluator, rectangle\ncount, or factoring algorithm."
+
+[[records]]
 id = "X01"
 kind = "closure"
 title = "generic exact linear compression of arbitrary square classes"
@@ -4173,3 +4181,19 @@ title = "Bounded rational windows reduce rectangle emptiness to a global mixed C
 source = { kind = "record", path = "notes/Progress.md", id = "C262" }
 recorded_status = "root-derived construction and bit-cost arguments, with exact\ninteger and certified interval checks. Independent statement-only\nreconstruction is pending. This claim is not promoted by P237."
 scope = "the F301 public reference implementation, bounded-degree rational\ninterval filters, their pole representation and error budget, and the\nresulting whole-graph mixed resolvent. No fast resolvent evaluator or\nunconditional factoring algorithm."
+
+[[records]]
+id = "C263"
+kind = "note"
+title = "The ordinary-resolvent lift gives a Taylor bank but retains the selected half-count"
+source = { kind = "record", path = "notes/Progress.md", id = "C263" }
+recorded_status = "root-derived exact lift, certified rational error bounds, and\nfinite exact checks. Independent reconstruction is pending."
+scope = "the F302 original dyadic inverse graph, its ordinary Cauchy\nresolvent lift to half modulus, the far-pole Taylor bank, and the first\nretained signed and unsigned moments. No constructor for the local moment\nbanks, public near-pole evaluator, global resolvent, or factoring algorithm."
+
+[[records]]
+id = "C264"
+kind = "note"
+title = "Global residue formulas expose a separate third-digit carry bank"
+source = { kind = "record", path = "notes/Progress.md", id = "C264" }
+recorded_status = "P238 promotes only the reconstructed modulo-\\(M^2\\) constructor.\nThe closed forms, higher-precision identities, finite Mahler separation,\nand exponent-derivative dependency below are root-derived exact results or\nfinite evidence and are not part of that promotion."
+scope = "F303 on the global canonical inverse graph for \\(M=2^k\\),\n\\(k\\geq3\\), and positive odd \\(N\\). This note records the direct\nmodulo-\\(M^2\\) formulas, the next \\(Q_{j,2}/2\\) precision bank, two tested\nways that do not recover it, and the primary-source overlap. No ordinary\nCauchy-resolvent accuracy, rectangle count, or factoring algorithm."
