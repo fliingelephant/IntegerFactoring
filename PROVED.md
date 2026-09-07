@@ -26009,3 +26009,73 @@ correctly coupled original case used \(M=2^{65}\), \(L=2^{64}\),
 peak RSS and matched the universal row and column marginals. Its large
 mixed outputs were not independently verified. No novelty claim is made
 for the elementary power-sum or Newton machinery.
+
+## P241 -- Sign-inversion quadratic corrections need only two fewer value bits
+
+**Status:** promoted after fresh statement-only reconstruction and root
+review of every exceptional orbit, the \(p=3\) boundary, negative values,
+and arbitrary odd \(\epsilon\).
+
+**Statement.** Let \(M=2^k\) with \(k\geq3\), let \(\epsilon\) be any odd
+integer, and let \(U\) be the odd canonical residues modulo \(M\). Define
+\[
+ s(w)=M-w,\qquad i(w)=\epsilon w^{-1}\bmod M,
+\]
+and, for integer-valued \(f\) on \(U\),
+\[
+ Q_\epsilon(f)=\sum_{w\in U}
+ \bigl(f(w)f(i(w))-f(w)^2\bigr).
+\]
+For every integer \(p\geq3\), if
+\(r(s(w))=-r(w)\), \(g(s(w))=-g(w)\), and
+\(r(w)\equiv g(w)\pmod {2^{p-2}}\) pointwise, then
+\[
+ Q_\epsilon(r)\equiv Q_\epsilon(g)\pmod {2^p}. \tag{1}
+\]
+This includes roots of both \(\epsilon\) and \(-\epsilon\) modulo \(M\).
+
+For canonical odd \(0<A<M\), put
+\(f(w)=\lfloor Aw/M\rfloor\), \(h=(A-1)/2\), and
+\(r=f-h\). On \(w<M/2\), let \(g(w)\) be the canonical residue of
+\(r(w)\) modulo \(2^{p-2}\), and extend by \(g(M-w)=-g(w)\). Then
+\[
+ H_\epsilon(f)\equiv U_2(f)+H_\epsilon(g)-U_2(g)
+ \pmod {2^p}, \tag{2}
+\]
+where \(H_\epsilon(x)=\sum_wx(w)x(i(w))\) and
+\(U_2(x)=\sum_wx(w)^2\). At \(p=3\), \(g\) takes values in
+\(\{-1,0,1\}\).
+
+**Proof.** The commuting involutions \(s\) and \(i\) split \(U\) into
+inversion-fixed sign pairs, sign-inversion pairs, and four-point orbits.
+For a sign-antisymmetric function with representative values \(a,b\),
+their respective contributions to \(Q_\epsilon\) are
+\[
+ 0,\qquad -4a^2,\qquad -2(a-b)^2. \tag{3}
+\]
+Put \(q=2^{p-2}\). On a sign-inversion pair, replacing \(a\) by a
+congruent value modulo \(q\) changes (3) by a multiple of \(4q\). On a
+four-point orbit, the two differences are congruent modulo the even number
+\(q\), so their sum is even; their squared difference is therefore a
+multiple of \(2q\), and the last expression in (3) changes by a multiple
+of \(4q=2^p\). This proves (1), including \(p=3\).
+
+The identity \(f(M-w)=A-1-f(w)\) makes \(r=f-h\)
+sign-antisymmetric, and the stated lower-half construction makes \(g\)
+pointwise congruent to \(r\). Finally, translating a function by a constant
+does not change \(Q_\epsilon\), because \(i\) is a permutation. Equation
+(2) follows by applying (1) and expanding \(Q_\epsilon\).
+
+This result compresses only the value alphabet. It does not reduce the
+inverse-graph modulus, the number of summands, or the requested output
+precision, and it does not evaluate \(H_\epsilon(g)\) or give a runtime or
+factoring bound.
+
+Complete independent proof:
+experiments/F312_orbit_precision/RECONSTRUCTION.md.
+Statement-only input:
+experiments/F312_orbit_precision/STATEMENT_ONLY.md.
+Input SHA-256:
+5214d1c68cd48eeeff1e746974d2c9600535c43ea512bf9da5b35d14f5303878.
+Reconstruction SHA-256:
+44b3c0853041be1c75cb82a8c35de08f7872d61f15b7bc7a06a2d8c1e08d83b6.

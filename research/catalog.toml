@@ -1713,6 +1713,13 @@ recorded_status = "promoted after fresh statement-only reconstruction and root\n
 scope = "one canonical Möbius permutation modulo a power of two. No fast\nsum over a family of maps, shifted-window statistic, rectangle count, or\nfactoring algorithm is supplied."
 
 [[records]]
+id = "P241"
+kind = "result"
+title = "Sign-inversion quadratic corrections need only two fewer value bits"
+source = { kind = "record", path = "PROVED.md", id = "P241" }
+recorded_status = "promoted after fresh statement-only reconstruction and root\nreview of every exceptional orbit, the \\(p=3\\) boundary, negative values,\nand arbitrary odd \\(\\epsilon\\)."
+
+[[records]]
 id = "X01"
 kind = "closure"
 title = "generic exact linear compression of arbitrary square classes"
@@ -4258,3 +4265,17 @@ title = "Fixed-order Walsh phase matrices have high finite rank but may have eas
 source = { kind = "record", path = "notes/Progress.md", id = "C270" }
 recorded_status = "F310 exact finite rank and nullspace evidence. No asymptotic rank\nformula, scalar-summation lower bound, or promoted theorem."
 scope = "For odd \\(N\\), \\(M=2L\\), and \\(L=2^s\\) with \\(s\\geq1\\), define\n\\[\n F_N(x)=\\frac{(N-1)/2-x}{1+2x}\\pmod L,\\qquad\n \\epsilon_N(x)=(-1)^{\\operatorname{bit}_{s-1}(x)+\n \\operatorname{bit}_{s-1}(F_N(x))}.\n\\]\nExactly \\(\\epsilon_N(x+L/2)=\\epsilon_N(x)\\). With\n\\(r=\\lfloor(s-1)/2\\rfloor\\), F310 tests the single ordering\n\\[\n A[a,b]=\\epsilon_N(a+2^rb),\\quad\n 0\\leq a<2^r,\\quad 0\\leq b<2^{s-1-r}.\n\\]\n\nOver \\(\\mathbb F_{65521}\\), the structured inputs \\(N=9M+1\\) had ranks\n\\(R-3\\) for matrix orders \\(R=8,16,32,64,128,256\\). Inputs \\(9M+3\\) and\n\\(9M+5\\) had rank \\(R-2\\) for the tested orders 64, 128, and 256; seeded\ninputs had varied deficiencies. Every rank has retained independent rows,\npivot columns, and a nonzero full-rank minor certificate.\n\nA nonzero minor modulo 65521 is nonzero over characteristic zero. For\n\\(N=9M+1\\), direct rational nullspaces at orders 8, 16, 32, and 64 also had\nnullity three. Therefore a fixed-cut decomposition\n\\[\n A[a,b]=\\sum_{j=1}^t p_j(a)q_j(b)\n\\]\nover characteristic zero needs \\(t\\) at least the displayed finite rank.\nThis constrains this variable order and linear signed-state representation.\n\nIt does not bound the cost of the scalar sum. The Hadamard matrix\n\\((-1)^{a\\cdot b}\\) has full rank but total sum \\(2^r\\) by character\ncancellation. Thus the practical conclusion is only that this fixed\nlow/high linear separation does not show a small state in the tested range;\nnonlinear, algebraic, or direct total-sum mechanisms remain open.\n\nThe 18 finite-field cases took 0.366 seconds at 258,392,064 bytes peak RSS.\nThe four rational nullspaces took 0.0354 seconds at 257,556,480 bytes.\nAll complete vectors, supports, minors, the setup-failure note, timeout\ncontrols, and resource records are retained.\n\nEvidence:\nexperiments/F310_walsh_phase_rank/RESULT.md,\nexperiments/F310_walsh_phase_rank/NULLSPACE_RESULT.md,\nexperiments/F310_walsh_phase_rank/walsh_phase_rank.sage,\nexperiments/F310_walsh_phase_rank/walsh_phase_rank.json,\nexperiments/F310_walsh_phase_rank/walsh_phase_rank.log,\nexperiments/F310_walsh_phase_rank/walsh_phase_nullspace.sage,\nexperiments/F310_walsh_phase_rank/walsh_phase_nullspace.json,\nexperiments/F310_walsh_phase_rank/walsh_phase_nullspace.log,\nexperiments/F310_walsh_phase_rank/RESOURCE.md,\nexperiments/F310_walsh_phase_rank/NULLSPACE_RESOURCE.md, and\nexperiments/F310_walsh_phase_rank/SOURCE_LEADS.md."
+
+[[records]]
+id = "C271"
+kind = "note"
+title = "Finite-field phase models give exact small cases and scoped exclusions"
+source = { kind = "record", path = "notes/Progress.md", id = "C271" }
+recorded_status = "F311 exact exploratory constructions and nonmembership\ncertificates. They do not give a uniform selected-window evaluator or a\nfactoring algorithm."
+
+[[records]]
+id = "C272"
+kind = "note"
+title = "Orbit precision leaves a signed binary overlap and exact cut terms"
+source = { kind = "record", path = "notes/Progress.md", id = "C272" }
+recorded_status = "F312 author-derived identities with exact finite controls. The\ncore value-precision theorem is separately promoted as P241; this record\ndoes not construct the remaining overlap."

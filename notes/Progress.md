@@ -8395,3 +8395,158 @@ experiments/F310_walsh_phase_rank/walsh_phase_nullspace.log,
 experiments/F310_walsh_phase_rank/RESOURCE.md,
 experiments/F310_walsh_phase_rank/NULLSPACE_RESOURCE.md, and
 experiments/F310_walsh_phase_rank/SOURCE_LEADS.md.
+
+### C271 -- Finite-field phase models give exact small cases and scoped exclusions
+
+**Status:** F311 exact exploratory constructions and nonmembership
+certificates. They do not give a uniform selected-window evaluator or a
+factoring algorithm.
+
+For the complete ring-inverse half-period phase, with
+\(M=2^k\), \(L=M/2\), and \(q=L/2\), F311 first tested Artin--Schreier
+trace models over \(\mathbb F_q\). The input \(N=527\), \(M=64\),
+\(q=16\) has complete signed total 12. This exceeds the genus-one bound
+\(2\sqrt q+1=9\) for \(\operatorname{Tr}(aX+b/X)+\epsilon\), and also
+the bound 11 after allowing two filled finite poles and regular infinity.
+In sign/log coordinates the same phase nevertheless has the exact
+genus-two model
+\[
+ \operatorname{Tr}\!\left(\alpha^3+(1+\alpha)X+
+       \frac{\alpha^2}{X(X+1)}\right),
+ \qquad \alpha^4+\alpha+1=0,
+\]
+away from \(X=0,1\), with both actual pole bits zero. Its smooth curve has
+27 points and Frobenius trace \(-10\), giving the required total 12 after
+the two filled values.
+
+For fixed poles at zero and infinity of prescribed odd orders, every Walsh
+coefficient obeys the corresponding \(2g\sqrt q+1\) envelope, including
+one filled finite-pole value. This is only a discriminator for that fixed
+pole family. At \(N=8193\), \(M=1024\), ordinary coordinates, a retained
+256-bit dual vector annihilates all 258 columns of the symmetric order-31
+family but pairs to one with the target; the column rank is 210. This is an
+exact nonmembership certificate for that finite family, not a lower bound
+for scalar summation.
+
+The nonlinear bijections \(X\mapsto X^{-1}+a\), with inverse zero defined
+as zero, make four tested ordinary-coordinate phases at \(q=16\) exactly
+quadratic. Their totals are then computed by exact quadratic elimination;
+no tested case at \(q\geq32\) became quadratic. These bounded coordinate
+pullbacks do not transport integer interval masks for free.
+
+A final bounded moving-pole search tested
+\[
+ \epsilon+\operatorname{Tr}\!\left(aX+\frac b{X-r}+
+                                      \frac c{X-s}\right),
+ \quad r\ne s,\quad b,c\ne0,
+\]
+with both pole bits freely filled. The exact prescreen rejects this
+at-most-genus-two family when
+\(W_{\max}>2\) and \((W_{\max}-2)^2>16q\). Coverage at
+\(q=32,64,128\) is exhaustive over original residues up to complement in
+both ordinary and sign/log coordinates. At \(q=32\), 18 of 64 targets
+fit, with 20 complete models retained. At \(q=64\), all 128 targets were
+covered by 12 prescreen rejections and 116 full searches, with no model;
+at \(q=128\), the corresponding counts were 74 and 182 among 256 targets,
+again with no model. At \(q=256\) only 16 seeded original residues in each
+of the two encodings were tested: 17 were rejected and 15 fully searched,
+with no model. The \(q=256\) result is not exhaustive.
+
+All searches enumerate finite truth tables or coefficient families. Even a
+complete scalar phase model would not implement P239's arbitrary cuts.
+
+Evidence:
+experiments/F311_finite_field_phase/RESULT.md,
+experiments/F311_finite_field_phase/PRIMARY_SOURCES.md,
+experiments/F311_finite_field_phase/pilot.py,
+experiments/F311_finite_field_phase/output.json,
+experiments/F311_finite_field_phase/run.log,
+experiments/F311_finite_field_phase/CERTIFICATES.py,
+experiments/F311_finite_field_phase/CERTIFICATES_output.json,
+experiments/F311_finite_field_phase/CERTIFICATES_run.log,
+experiments/F311_finite_field_phase/QUADRATIC_PULLBACK.py,
+experiments/F311_finite_field_phase/QUADRATIC_PULLBACK_output.json,
+experiments/F311_finite_field_phase/QUADRATIC_PULLBACK_run.log,
+experiments/F311_finite_field_phase/MOVING_POLES.py,
+experiments/F311_finite_field_phase/MOVING_POLES_output.json,
+experiments/F311_finite_field_phase/MOVING_POLES_run.log,
+experiments/F311_finite_field_phase/MOVING_POLES.md,
+experiments/F311_finite_field_phase/MOVING_POLES_RESOURCE.md, and
+experiments/F311_finite_field_phase/RESOURCE.md.
+
+### C272 -- Orbit precision leaves a signed binary overlap and exact cut terms
+
+**Status:** F312 author-derived identities with exact finite controls. The
+core value-precision theorem is separately promoted as P241; this record
+does not construct the remaining overlap.
+
+For \(k\geq3\), canonical odd \(0<A<M=2^k\), and odd \(\epsilon\), let
+\(i(w)=\epsilon w^{-1}\bmod M\),
+\(H_\epsilon(f)=\sum_w f(w)f(i(w))\), and
+\(U(f)=\sum_w f(w)^2\) over odd \(w<M=2^k\). Applying F312's two-bit value
+compression to the centered floor \(f(w)=\lfloor Aw/M\rfloor\) reduces the
+modulo-eight correction to a signed one-bit function. Equivalently, with
+\(a(w)=f(w)\bmod2\), \(h=(A-1)/2\),
+\(C_\epsilon=\sum_w a(w)a(i(w))\), and
+\(n_a=\sum_w a(w)\),
+\[
+ H_\epsilon(f)=U(f)-n_a+C_\epsilon
+ -4\!\sum_{\substack{w<M/2\\w^2=-\epsilon\ (\bmod M)}}
+          (f(w)-h\bmod2) \pmod8. \tag{1}
+\]
+The ordinary terms and the at most four exceptional roots have
+polynomial-bit dyadic constructors. The root sum is empty for
+\(\epsilon=1,3,5\) and must be retained for \(\epsilon=7\). The binary
+overlap \(C_\epsilon\bmod8\) remains unknown.
+
+Half-translation does not add automatic orbit-size divisibility. With
+\(L=M/2\), \(h_M(w)=w+L\bmod M\), and
+\(f_{A,d}(w)=\lfloor(Aw-d)/M\rfloor\) for integer \(d\),
+the exact increment, including both boundaries, is
+\[
+ f_{A,d}(h_M(w))-f_{A,d}(w)=\frac{A-1}{2}
+ +\mathbf1_{(Aw-d)\bmod M\geq L}-A\mathbf1_{w\geq L}. \tag{2}
+\]
+On a generic eight-element sign/inversion/translation orbit, put
+\(\delta=f(w)-f(i(w))\) and
+\(e=f(h_M(w))-f(w)-f(h_M(i(w)))+f(i(w))\).
+Its contribution to \(H-U\) is
+\(-2[\delta^2+(\delta+e)^2]\), hence modulo eight it is
+\(-2[(\delta\bmod2)+((\delta+e)\bmod2)]\). On the same orbit modulo 32,
+the tested floors with \(A=3\) and \(A=5\) contribute respectively 4 and
+6 modulo eight. Thus generic orbits need not vanish; bounded exceptional
+orbits do not remove the remaining generic binary weights.
+
+The exact quotient by the two lifts retains intercepts and interval masks.
+For odd \(a<L\), put \(b=\epsilon a^{-1}\bmod L\) and
+\(c=(\epsilon-ab)/L\bmod2\). The inverse pairs are
+\((a,b+Lc)\) and \((a+L,b+L(1-c))\). For arbitrary functions \(x,y\),
+define \(P_x(a)=x(a)+x(a+L)\) and
+\(Q_x(a)=x(a)-x(a+L)\). Their contribution is exactly
+\[
+ \frac{P_x(a)P_y(b)+(-1)^cQ_x(a)Q_y(b)}2. \tag{3}
+\]
+For \(x(w)=\lfloor(Aw-d)/M\rfloor\),
+\[
+ P_x(a)=\left\lfloor\frac{Aa-d}{L}\right\rfloor+\frac{A-1}{2},
+ \qquad
+ Q_x(a)=-\frac{A-1}{2}-\mathbf1_{(Aa-d)\bmod M\geq L}. \tag{4}
+\]
+Multiply each lift value by its actual source or image mask before forming
+\(P\) and \(Q\). To recover a result modulo \(2^p\), the numerator in (3) must be retained modulo
+\(2^{p+1}\), proved even, and divided in the integers. This halves the
+inverse-graph modulus but does not lower the requested output precision;
+it leaves a carry-signed product. Literal orbit enumeration remains
+exponential.
+
+The pilot checked 43 ordinary dyadic quotients, 43 with both cuts, 43
+parity reductions, 172 square-class formulas, 716 precision-compression
+instances, and 538 complete orbits. It retains the nonzero generic norms
+and a shifted-cut counterexample where the actual value is 6 modulo eight
+but the boundary-free parity formula gives 2.
+
+Evidence:
+experiments/F312_orbit_precision/REPORT.md,
+experiments/F312_orbit_precision/pilot.py,
+experiments/F312_orbit_precision/pilot.json, and
+experiments/F312_orbit_precision/pilot.log.
