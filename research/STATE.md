@@ -1,88 +1,97 @@
 # Research State
 
-Updated 2026-09-07 after the seventh authorized Astra research cycle. The
-goal remains active. No complete factoring algorithm is established.
+Updated 2026-09-07 after the eighth authorized Astra research cycle. All
+current mathematical jobs are terminal. The goal remains active, and no
+complete factoring algorithm is established.
 
-## Current proved interfaces
+## Goal interfaces and current tools
 
-| Record | Exact scope | Missing operation |
+| Record | Exact role | Missing operation |
 | --- | --- | --- |
-| P237 | Reduces every integer factorization input to \(O(n^2)\) public dyadic inverse-graph rectangle-emptiness calls, with polynomial additional work. It covers primes, prime powers, repeated factors, even inputs, and unbalanced composites. | A uniform efficient implementation of those rectangle calls. |
-| P239 | Recovers an exact canonical rectangle count from four shifted binomial-carry values \(B(c,d)\bmod M\), including full input, endpoints, negative carries, and the required \(2M\) carry precision. | A uniform efficient evaluator for shifted \(B(c,d)\bmod M\). |
-| P240 | Computes every bounded numerical-degree mixed moment modulo \(L^2\) and linear carry moment modulo \(L\) for one canonical Möbius map, in polynomial bit cost without enumerating its \(L\) points. | A faithful aggregation over the shifted windows or the growing family of maps. |
-| P238 | Computes the global unshifted inverse-graph low-digit bank \(S_{ab}\bmod M^2\), \(Q_j\bmod M\), and the odd-unit product in polynomial bit cost. | It does not evaluate shifted binomial carries or trace an interval circuit. |
+| P237 | Reduces every integer factorization input to \(O(n^2)\) public dyadic inverse-graph rectangle-emptiness calls, with polynomial additional work. | A uniform efficient implementation of those rectangle calls. |
+| P239 | Recovers one exact rectangle count from four shifted binomial-carry values \(B(c,d)\bmod M\), with full-input and division precision retained. | A uniform efficient evaluator for shifted \(B(c,d)\bmod M\). |
+| P240 | Computes bounded numerical-degree mixed and linear-carry moments for one canonical Möbius map in polynomial bit cost. | It does not aggregate the shifted map or window family. |
+| P238 | Computes the global unshifted inverse-graph low-digit bank and odd-unit product in polynomial bit cost. | It does not evaluate shifted binomial carries or a sharp selector trace. |
 
-P237 is the all-input conditional factoring reduction. P239 identifies a
-smaller exact sufficient statistic for each rectangle call. P240 and P238
-are modular moment constructors. Neither supplies P239's shifted statistic.
+P237 and P239 remain the goal interfaces. P240 and P238 are reusable modular
+tools. No eighth-cycle claim is promoted because no complete new claim
+received a fresh statement-only reconstruction.
 
-## Seventh-cycle findings
+## Eighth-cycle findings
 
-F306 proves P239's four-corner identity. For each point in both selected
-windows, the mixed shifted-carry contribution is \(N-M/2\bmod M\); it is
-zero outside. The multiplier is odd, and the count is smaller than \(M\),
-so the recovered residue is the exact count. This reduction does not
-construct the \(B\) evaluator.
-
-F304 proves P240 for a general map
-
+F307 computes the whole shifted norm
 \[
- T(x)=\frac{n-Ax}{B+Cx},\qquad 0\leq x<2^s,
+ \prod_u(1+Mq_u/N)\pmod {M^3}
 \]
+without enumerating graph points or Möbius branches. Its second residual
+satisfies
+\[
+ B(c,d)=(N-M/2)h(c,d)-E(c,d)\pmod M,
+\]
+where \(h\) is the next digit of the total linear carry. The norm cancels
+explicit quadratic cross-branch terms, but the selected window remains in
+\(h\). Exact carry composition retains a weighted cross term. Summed
+\(h_c\)-doubling reduces to an existing P240 moment identity and supplies
+no independent precision. The tested norm reduction still needs the third
+digit of that moment.
 
-with odd \(A,B\), positive even \(C\), and the full integer \(n\) retained
-in the carry. Ordinary power sums, uniformly truncated 2-adic binomial
-series, guarded Newton identities, and a unit-triangular symmetric-function
-recurrence give the bank. The \(d=0\) interface is included.
+F308 gives the main positive advance. For
+\[
+ V(A,d)=\sum_{w\ {\rm odd}<M}w^{-2}
+ \left\lfloor\frac{Aw-d}{M}\right\rfloor^2\pmod {2M},
+\]
+three existing polynomial-bit marginal calls compute the complete ordinary
+remainder:
+\[
+ 2A R_d(A,B)=V(AB,d)-A^2V(B,0)-B^2V(A,d)\pmod {2M}.
+\]
+The even residue is divided by two with one guard bit, and only odd \(A\)
+is inverted. After subtracting this ordinary term, the corrected cocycle
+retains only the inverse-floor term \(K_d(A,B)\); an input cut also adds an
+affine-window pullback. For square inputs, a separate orbit argument
+computes unshifted \(T(N,0)\bmod4\), not modulo \(M\).
 
-F304 also gives succinct guarded digit selectors and a triangular Newton
-error bank. Repeated exact quotients create two Möbius branches per level.
-The literal map family has exponentially many distinct members at the
-tested depth, and finite degree-two carry banks exhibit the same growth on
-the retained cases. This is not a lower bound against another aggregation.
+F309 computes the complete pair-difference product at every dyadic
+separation scale. One progression product gives the first band and every
+other band is its \(2^{r-1}\)-st power. The two-source/two-target mixed
+contrast is identically one. This is a complete non-enumerative product
+constructor, but its separable cut dependence loses the selected rectangle.
 
-F305 transports all canonical inputs to one fixed \(N=1\) carry measure.
-It gives polynomial-bit evaluators for the reciprocal-floor marginals
-\(R_1^*\) and \(R_2\bmod2M\), and FULL_INPUT.md gives the exact correction
-for every positive odd full input. The remaining term is a sharp floor
-weighted by the fixed carry measure. Its mixed cut difference is the
-rectangle count. A dyadic reflection leaves an additional carry-bit
-weighted floor term, with no proved closed total-state recursion.
+F310 tests one fixed low-bit/high-bit linear representation of the inverse
+top-bit phase. The \(N=9M+1\) matrices have finite-field rank \(R-3\) for
+\(R=8,\ldots,256\), with certified nonzero minors. Their rational nullity is
+three through \(R=64\). These ranks constrain that fixed characteristic-zero
+separable representation only. A full-rank Hadamard matrix has an elementary
+total sum, so high matrix rank does not imply that this scalar phase sum is
+hard. Nonlinear and algebraic totals remain open.
 
 ## Evidence and scope controls
 
-All current mathematical jobs are complete. P239 was reconstructed from a
-statement-only input and checked by the root. P240 passed an independent
-statement-only reconstruction. Its input SHA-256 is
-19599f6d20c1fac30bfeda265dd395dcdda6d81d1786c1dacb8dd8b1f4b3165c,
-and its reconstruction SHA-256 is
-bc9ef597891d4b61df699975fdd1abbc3769b4a203c928397e8ada490dd762d0.
+C267–C270 retain the exact equations, scope, and evidence paths. F307 passed
+its norm, regrouping, composition, and third-digit controls; dropping the
+unknown digit failed every relevant norm control. F308 passed 84 full
+\(R_d\) residues and 28 corrected cocycles. Its non-enumerative \(k=64\)
+general case took 1.55 seconds. The balanced \(k=128\) general case reached
+the retained 30-second timeout and produced no result; the distinct
+square-input modulo-four evaluator did complete through \(k=128\).
 
-The repaired P240 implementation passed 32 exact edge checks for
-\(s=1,\ldots,4\) and \(d=0,1\). A correctly coupled original-input pilot at
-\(M=2^{65}\), \(L=2^{64}\), and \(N=9M+1\) completed in 0.529 seconds at
-18,087,936 bytes peak RSS and matched all degree-three universal marginals.
-Its large mixed values were computed but not independently verified. The
-earlier \(s=33,65\) runs remain valid generic one-map pilots; their retained
-scope note states that they were not original \(M=2^s\) first-quotient
-patches.
+F309 passed 324 band identities and retained a correctly coupled
+\(M=2^{65}\), \(L=2^{64}\) non-enumerative run. F310 retained all rank
+minors and primitive rational nullspace vectors. Finite checks support only
+their stated implementations and identities.
 
-F305 retained 11,352 pointwise transports, 150 shifted binomial identities,
-450 marginal checks, 25 reflection checks, and non-enumerative marginal
-runs through \(M=2^{32}\). F306 retained 1,200 general rectangles, 175
-public factor rectangles, and 21 complete enumerated reference inputs.
-Finite checks support the stated identities and implementations only.
-
-The catalog has 521 experiment packets, 215 supported packet-to-route
-assignments, and 306 explicit unknowns. Missing mappings remain unknown.
+The catalog has 600 records, 34 routes, and 525 experiment packets. There
+are 219 supported packet-to-route assignments and 306 explicit unknowns.
+Missing mappings remain unknown.
 
 ## Restart point
 
-The concrete missing operation is a uniform efficient evaluator for the
-shifted statistic \(B(c,d)\bmod M\), or an equivalent faithful aggregation
-that preserves both public cuts, the full-input carry, and the required
-division precision. Solving the entire ordinary Cauchy resolvent is not
-necessary. A proposed construction must aggregate the correlated map or
-carry/window family without enumerating graph points, residue patches, or
-window boxes. Unshifted low digits and one-map moment banks must not be
-counted as a solved shifted evaluator.
+The concrete missing operation is now the inverse-floor term
+\(K_d(A,B)\) together with its affine input-cut pullback, or a direct
+uniform evaluator for shifted \(B(c,d)\bmod M\). F308 has completely removed
+the ordinary remainder \(R_d\). A successful next construction must retain
+both public cuts and the full-input carry while aggregating this remaining
+correlation without graph, patch, or window enumeration. The complete pair
+product and tested composition norms provide no extra digit. High rank in
+one linear variable order must not be treated as a lower bound against a
+nonlinear or direct scalar aggregation.

@@ -8101,3 +8101,297 @@ experiments/F305_input_carry_transport/REPORT.md, FULL_INPUT.md,
 FLOOR_MARGINALS.md, input_transport.py, input_transport.json,
 input_transport.log, and
 input_transport_setup.log.
+
+### C267 -- Whole-family norms expose one higher carry digit without contracting precision
+
+**Status:** F307 author-derived exact identities and finite controls. No
+complete claim received a fresh statement-only reconstruction, so no P record
+is promoted.
+
+**Scope.** Let \(M=2^k\), \(H=M/2\), and use P239's shifted representatives
+with carry \(q=(xy-N)/M\). Put \(Q=\sum q\), \(B=\sum\binom q2\), and let
+\(P_c,P_d\) be the two shifted odd progression products. The exact norm
+
+\[
+ R_{cd}=\frac{P_cP_d}{N^H}
+       =\prod_{u\ {\rm odd}<M}\left(1+\frac MNq_u\right)
+\]
+
+is computable modulo \(M^3\) in polynomial bit cost from ordinary power sums
+and a truncated progression product, without enumerating graph points or
+Möbius branches.
+
+Let \(\bar Q=Q\bmod M\) be recovered from the linear term, put
+\(h=(Q-\bar Q)/M\), and let \(E_{cd}\) be the computable second residual
+obtained after subtracting the \(\bar Q\) terms and exactly dividing by
+\(M^2\). Expansion gives
+
+\[
+ E_{cd}=(N-M/2)h-B,\qquad B=(N-M/2)h-E_{cd}\pmod M. \tag{1}
+\]
+
+Thus the global norm removes explicit quadratic cross-branch sums, but
+retains one higher digit of the total linear carry. Its four-corner
+difference contains the rectangle count; it is not a marginal correction.
+
+For \(f(x)=(ax+b)/(cx+d)\) and
+\(g(y)=(ey+f_0)/(\ell y+i)\), with even \(c,\ell\) and odd
+\(a,d,e,i\), exact carry composition is
+
+\[
+ q_{g\circ f}=(cx+d)q_g+(e-\ell z)q_f. \tag{2}
+\]
+
+Consequently \(\binom{q_{g\circ f}}2\) contains two weighted binomial sums,
+two weighted linear sums, and the unit-weighted cross term
+\((cx+d)(e-\ell z)q_fq_g\). The retained controls show that this summed cross
+term need not vanish.
+
+For \(h_c(x)=x/(1+cx)\) on \(0\leq x<L=2^s\), let
+\(q_c=((1+cx)h_c(x)-x)/L\), \(S_c=\sum_xxh_c(x)\),
+\(Q_c=\sum_xq_c\), and \(B_c=\sum_x\binom{q_c}{2}\), using canonical
+\(h_c(x)\bmod L\). Summed doubling simplifies exactly to
+
+\[
+ Q_{2c}-2Q_c=\frac{2c}{L}(S_{2c}-S_c). \tag{3}
+\]
+
+At P240's \(L^2\) precision this is the same information as
+\(Q_c=cS_c/L\); backwards doubling supplies no independent digit. A separate
+non-enumerative norm for \(c=2^r\), \(1\leq r\leq s\), computes a
+residual \(E_c\). With \(\bar S_c=S_c\bmod L^2\) canonical, however,
+
+\[
+ B_c=-t_c-E_c\pmod L,\qquad
+ t_c=(S_c-\bar S_c)/L^2,
+\]
+
+still needs the third \(L\)-adic digit of \(S_c\). Dropping \(t_c\) failed
+all 52 retained controls. These results reject this precision-contraction
+ansatz, not composition or aggregate functionals in general.
+
+Evidence:
+experiments/F307_global_second_product/RESULT.md,
+experiments/F307_global_second_product/COMPOSITION.md,
+experiments/F307_global_second_product/pilot.py,
+experiments/F307_global_second_product/output.json,
+experiments/F307_global_second_product/run.log,
+experiments/F307_global_second_product/H_C_NORM.py,
+experiments/F307_global_second_product/H_C_NORM_output.json,
+experiments/F307_global_second_product/H_C_NORM_run.log,
+experiments/F307_global_second_product/COMPOSITION.py,
+experiments/F307_global_second_product/COMPOSITION_output.json,
+experiments/F307_global_second_product/COMPOSITION_run.log,
+experiments/F307_global_second_product/EXPLORATORY.py,
+experiments/F307_global_second_product/EXPLORATORY_output.json,
+experiments/F307_global_second_product/EXPLORATORY_run.log,
+experiments/F307_global_second_product/RESOURCE.md, and
+experiments/F307_global_second_product/COMPOSITION_RESOURCE.md.
+
+### C268 -- Three reciprocal-square marginals evaluate the full ordinary cocycle remainder
+
+**Status:** F308 author and root-derived exact identities with finite controls.
+The general ordinary remainder is constructed, but the inverse-floor and
+input-cut terms remain. No P record is promoted.
+
+**Scope and cocycle.** For \(k\geq3\) and odd canonical \(w<M=2^k\), let
+\(u=w^{-1}\bmod M\), \(\mu(w)=u(uw-1)/M\), and
+\(f_{A,d}(w)=\lfloor(Aw-d)/M\rfloor\). Define
+
+\[
+\begin{aligned}
+T(A,d)&=\sum_w\mu(w)f_{A,d}(w),\\
+K_d(A,B)&=\sum_w f_{A,d}(w)f_B(w^{-1}\bmod M),\\
+R_d(A,B)&=\sum_wu^2f_B(w)f_{A,d}(Bw\bmod M).
+\end{aligned}
+\]
+
+For raw positive odd \(A,B\), signed \(d\), and
+\(b=B^{-1}\bmod M\), exact transport gives
+
+\[
+ T(AB,d)=BT(A,d)+AT(B,0)-K_d(A,B)+bR_d(A,B)\pmod M. \tag{1}
+\]
+
+The shifted measure adds the explicit affine-window pullback
+\[
+ C_{c,d}(A,B)=
+ \sum_w\bigl(\mathbf1_{Bu\bmod M<c}-B\mathbf1_{u<c}\bigr)f_{A,d}(w).
+\]
+
+**Positive construction.** Put
+
+\[
+ V(A,d)=\sum_{w\ {\rm odd}<M}w^{-2}f_{A,d}(w)^2\pmod {2M}.
+\]
+
+Squaring the exact floor composition and retaining the inverse-square lift
+modulo \(2M\) proves
+
+\[
+ 2A R_d(A,B)=V(AB,d)-A^2V(B,0)-B^2V(A,d)\pmod {2M}. \tag{2}
+\]
+
+The right side is even. Divide its even canonical residue by two in the
+integers, then invert the odd \(A\) modulo \(M\). Thus three calls to F305's
+polynomial-bit \(V\) evaluator compute the general \(R_d\bmod M\), with no
+unit enumeration. This removes the ordinary remainder completely.
+
+For \(d=0\), set
+\[
+ W(A)=A^{-1}V(A,0)/2,\qquad S(A)=T(A,0)-W(A).
+\]
+The corrected cocycle is
+\[
+ S(AB)=BS(A)+AS(B)-K_0(A,B)\pmod M. \tag{3}
+\]
+
+For canonical odd \(0<A<M\) and square input \(N=A^2\bmod M\),
+sign and inversion orbits give
+\[
+ K_0(A,A)=2\left\lfloor\frac{A(M/2-1)}M\right\rfloor\pmod4.
+\]
+Together with an exact ordinary floor-square identity, this constructs
+\(T(N,0)\bmod4\) for \(N=1\bmod8\). It does not give \(T\bmod M\).
+
+The remaining unknowns are \(K_d(A,B)\) and, with an input cut, the affine
+pullback \(C_{c,d}(A,B)\). No closed descent for either is proved.
+
+The retained small refinement checked 84 full \(R_d\) residues and 28
+corrected \(S\) cocycles. A non-enumerative \(k=64\) general \(R_d\) case
+used three banks of at most 11,596 states and 1.55 seconds. The balanced
+\(k=128\) attempt reached the 30-second timeout before producing a result;
+its empty named log is preserved and no value is claimed. Separately, the
+square-input modulo-four evaluator completed through \(k=128\).
+
+Evidence:
+experiments/F308_carry_floor_cocycle/REPORT.md,
+experiments/F308_carry_floor_cocycle/FULL_R.md,
+experiments/F308_carry_floor_cocycle/pilot.py,
+experiments/F308_carry_floor_cocycle/pilot.json,
+experiments/F308_carry_floor_cocycle/pilot.log,
+experiments/F308_carry_floor_cocycle/refinement.py,
+experiments/F308_carry_floor_cocycle/refinement_small.json,
+experiments/F308_carry_floor_cocycle/refinement_small.log,
+experiments/F308_carry_floor_cocycle/refinement_k64.json,
+experiments/F308_carry_floor_cocycle/refinement_k64.log,
+experiments/F308_carry_floor_cocycle/refinement_k128.log, and
+experiments/F308_carry_floor_cocycle/PREFLIGHT.md.
+
+### C269 -- Complete dyadic pair products collapse to powers of one band
+
+**Status:** F309 root-derived exact identity and non-enumerative constructor.
+It is not a shifted carry evaluator and received no independent complete
+reconstruction.
+
+**Scope.** For a P240 Möbius map modulo \(L=2^s\) with \(s\geq2\), put
+\(K=AB+Cn\). For cuts \(c,d\in[0,L]\), set \(x_i=c+i\),
+\(0\leq i<L\), and let \(y_i\) be the representative of \(T(x_i)\bmod L\)
+in \([d,d+L)\). For \(1\leq r\leq s\), let
+
+\[
+ V_r(c,d)=
+ \prod_{\substack{i<j\\v_2(j-i)=s-r}}
+ \frac{y_j-y_i}{T(x_j)-T(x_i)}.
+\]
+
+The map is a 2-adic isometry, so each quotient is a unit after cancelling
+the common power of two. If
+\(\Pi_D(c)=\prod_{i=0}^{L-1}(B+C(c+i))\), then
+
+\[
+\begin{aligned}
+V_1(c,d)&=
+ \frac{\sigma(c,d)\Pi_D(c)}{(-K)^{L/2}},\\
+V_r(c,d)&=V_1(c,d)^{\,2^{r-1}}\quad(r\geq2),\\
+\sigma(c,d)&=(-1)^{n+c+d+(-K-1)/2+C/2}. \tag{1}
+\end{aligned}
+\]
+
+The progression product \(\Pi_D(c)\) has a uniformly truncated
+power-sum/Newton constructor at any requested precision. Hence every band
+product is computable in polynomial bit cost without enumerating pairs or
+graph points. All bands are powers of the first value and supply no
+independent parameters.
+
+For any two source and target cuts, equation (1) gives identically
+
+\[
+ \frac{V_r(b,d)V_r(a,c)}{V_r(a,d)V_r(b,c)}=1. \tag{2}
+\]
+
+The source progression factor and separable target sign cancel. Thus this
+complete unweighted pair product loses the mixed window contrast and cannot
+replace P239's shifted binomial statistic. Weighted or restricted products
+remain outside this result.
+
+The pilot passed 324 exact band comparisons on 72 maps and 129,528 reference
+pairs. All mixed contrasts were one on test rectangles with counts 1, 0, and
+16. A correctly coupled \(M=2^{65}\), \(L=2^{64}\) case computed all 64
+bands at 128-bit precision in 0.062 seconds without graph enumeration; its
+large values were not independently pair-enumerated.
+
+Evidence:
+experiments/F309_pair_product_scales/REPORT.md,
+experiments/F309_pair_product_scales/pilot.py,
+experiments/F309_pair_product_scales/output.json,
+experiments/F309_pair_product_scales/run.log,
+experiments/F309_pair_product_scales/status.json, and
+experiments/F309_pair_product_scales/RESOURCE.md.
+
+### C270 -- Fixed-order Walsh phase matrices have high finite rank but may have easy totals
+
+**Status:** F310 exact finite rank and nullspace evidence. No asymptotic rank
+formula, scalar-summation lower bound, or promoted theorem.
+
+**Scope.** For odd \(N\), \(M=2L\), and \(L=2^s\) with \(s\geq1\), define
+\[
+ F_N(x)=\frac{(N-1)/2-x}{1+2x}\pmod L,\qquad
+ \epsilon_N(x)=(-1)^{\operatorname{bit}_{s-1}(x)+
+ \operatorname{bit}_{s-1}(F_N(x))}.
+\]
+Exactly \(\epsilon_N(x+L/2)=\epsilon_N(x)\). With
+\(r=\lfloor(s-1)/2\rfloor\), F310 tests the single ordering
+\[
+ A[a,b]=\epsilon_N(a+2^rb),\quad
+ 0\leq a<2^r,\quad 0\leq b<2^{s-1-r}.
+\]
+
+Over \(\mathbb F_{65521}\), the structured inputs \(N=9M+1\) had ranks
+\(R-3\) for matrix orders \(R=8,16,32,64,128,256\). Inputs \(9M+3\) and
+\(9M+5\) had rank \(R-2\) for the tested orders 64, 128, and 256; seeded
+inputs had varied deficiencies. Every rank has retained independent rows,
+pivot columns, and a nonzero full-rank minor certificate.
+
+A nonzero minor modulo 65521 is nonzero over characteristic zero. For
+\(N=9M+1\), direct rational nullspaces at orders 8, 16, 32, and 64 also had
+nullity three. Therefore a fixed-cut decomposition
+\[
+ A[a,b]=\sum_{j=1}^t p_j(a)q_j(b)
+\]
+over characteristic zero needs \(t\) at least the displayed finite rank.
+This constrains this variable order and linear signed-state representation.
+
+It does not bound the cost of the scalar sum. The Hadamard matrix
+\((-1)^{a\cdot b}\) has full rank but total sum \(2^r\) by character
+cancellation. Thus the practical conclusion is only that this fixed
+low/high linear separation does not show a small state in the tested range;
+nonlinear, algebraic, or direct total-sum mechanisms remain open.
+
+The 18 finite-field cases took 0.366 seconds at 258,392,064 bytes peak RSS.
+The four rational nullspaces took 0.0354 seconds at 257,556,480 bytes.
+All complete vectors, supports, minors, the setup-failure note, timeout
+controls, and resource records are retained.
+
+Evidence:
+experiments/F310_walsh_phase_rank/RESULT.md,
+experiments/F310_walsh_phase_rank/NULLSPACE_RESULT.md,
+experiments/F310_walsh_phase_rank/walsh_phase_rank.sage,
+experiments/F310_walsh_phase_rank/walsh_phase_rank.json,
+experiments/F310_walsh_phase_rank/walsh_phase_rank.log,
+experiments/F310_walsh_phase_rank/walsh_phase_nullspace.sage,
+experiments/F310_walsh_phase_rank/walsh_phase_nullspace.json,
+experiments/F310_walsh_phase_rank/walsh_phase_nullspace.log,
+experiments/F310_walsh_phase_rank/RESOURCE.md,
+experiments/F310_walsh_phase_rank/NULLSPACE_RESOURCE.md, and
+experiments/F310_walsh_phase_rank/SOURCE_LEADS.md.
